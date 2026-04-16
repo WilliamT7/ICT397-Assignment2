@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui.cpp" />
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_demo.cpp" />
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_draw.cpp" />
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_tables.cpp" />
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_widgets.cpp" />
+    <ClCompile Include="..\glad.c" />
+    <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
+    <ClCompile Include="..\src\ecs\Entity.cpp" />
+    <ClCompile Include="..\src\ecs\LightingComponent.cpp" />
+    <ClCompile Include="..\src\ecs\MeshRendererComponent.cpp" />
+    <ClCompile Include="..\src\ecs\PhysicsComponent.cpp" />
+    <ClCompile Include="..\src\ecs\Scene.cpp" />
+    <ClCompile Include="..\src\ecs\SceneLoader.cpp" />
+    <ClCompile Include="..\src\ecs\ScriptComponent.cpp" />
+    <ClCompile Include="..\src\ecs\TerrainComponent.cpp" />
+    <ClCompile Include="..\src\ecs\TextureRendererComponent.cpp" />
+    <ClCompile Include="..\src\ecs\TransformComponent.cpp" />
+    <ClCompile Include="..\src\graphics\Graphics.cpp" />
+    <ClCompile Include="..\src\graphics\GraphicsFactory.cpp" />
+    <ClCompile Include="..\src\graphics\Graphics_OpenGL.cpp" />
+    <ClCompile Include="..\src\graphics\HardCodedModels.cpp" />
+    <ClCompile Include="..\src\graphics\HardCodedTextures.cpp" />
+    <ClCompile Include="..\src\graphics\Mesh.cpp" />
+    <ClCompile Include="..\src\graphics\Model.cpp" />
+    <ClCompile Include="..\src\graphics\Shader_OpenGL.cpp" />
+    <ClCompile Include="..\src\graphics\Texture_OpenGL.cpp" />
+    <ClCompile Include="..\src\graphics\Window.cpp" />
+    <ClCompile Include="..\src\graphics\WindowFactory.cpp" />
+    <ClCompile Include="..\src\graphics\Window_GLFW.cpp" />
+    <ClCompile Include="..\src\luaReader\LuaExposedEngineFunctionality.cpp" />
+    <ClCompile Include="..\src\luaReader\luaFunctionIO.cpp" />
+    <ClCompile Include="..\src\luaReader\luaIO.cpp" />
+    <ClCompile Include="..\src\luaReader\luaScriptManager.cpp" />
+    <ClCompile Include="..\src\luaReader\ScriptFile.cpp" />
+    <ClCompile Include="..\src\luaReader\ScriptFunction.cpp" />
+    <ClCompile Include="..\src\luaReader\scriptGlobalsIO.cpp" />
+    <ClCompile Include="..\src\luaReader\SolScripting.cpp" />
+    <ClCompile Include="..\src\other\fileIO.cpp" />
+    <ClCompile Include="..\src\other\stringTools.cpp" />
+    <ClCompile Include="..\src\physics\BulletPhysicsBody.cpp" />
+    <ClCompile Include="..\src\physics\BulletPhysicsWorld.cpp" />
+    <ClCompile Include="..\src\Task 1.cpp" />
+    <ClCompile Include="..\src\terrain\ColourTerrain.cpp" />
+    <ClCompile Include="..\src\terrain\FaultFormationTerrainStrategy.cpp" />
+    <ClCompile Include="..\src\terrain\HeightmapTerrainStrategy.cpp" />
+    <ClCompile Include="..\src\terrain\MultiTextureTerrain.cpp" />
+    <ClCompile Include="..\src\terrain\Terrain.cpp" />
+    <ClCompile Include="..\src\terrain\TerrainLighting.cpp" />
+    <ClCompile Include="..\src\terrain\TextureTerrain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\external\imgui-1.92.6\imconfig.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imgui.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_impl_glfw.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_internal.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imstb_rectpack.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imstb_textedit.h" />
+    <ClInclude Include="..\external\imgui-1.92.6\imstb_truetype.h" />
+    <ClInclude Include="..\include\ecs\AllComponentsInclude.h" />
+    <ClInclude Include="..\include\ecs\CameraComponent.h" />
+    <ClInclude Include="..\include\ecs\Component.h" />
+    <ClInclude Include="..\include\ecs\Entity.h" />
+    <ClInclude Include="..\include\ecs\LightingComponent.h" />
+    <ClInclude Include="..\include\ecs\MeshRendererComponent.h" />
+    <ClInclude Include="..\include\ecs\PhysicsComponent.h" />
+    <ClInclude Include="..\include\ecs\Scene.h" />
+    <ClInclude Include="..\include\ecs\SceneLoader.h" />
+    <ClInclude Include="..\include\ecs\ScriptComponent.h" />
+    <ClInclude Include="..\include\ecs\TerrainComponent.h" />
+    <ClInclude Include="..\include\ecs\TextureRendererComponent.h" />
+    <ClInclude Include="..\include\ecs\TransformComponent.h" />
+    <ClInclude Include="..\include\graphics\Colour.h" />
+    <ClInclude Include="..\include\graphics\Graphics.h" />
+    <ClInclude Include="..\include\graphics\GraphicsFactory.h" />
+    <ClInclude Include="..\include\graphics\Graphics_OpenGL.h" />
+    <ClInclude Include="..\include\graphics\HardCodedModels.h" />
+    <ClInclude Include="..\include\graphics\HardCodedTextures.h" />
+    <ClInclude Include="..\include\graphics\InputHandler.h" />
+    <ClInclude Include="..\include\graphics\Mesh.h" />
+    <ClInclude Include="..\include\graphics\Model.h" />
+    <ClInclude Include="..\include\graphics\Shader.h" />
+    <ClInclude Include="..\include\graphics\ShaderType.h" />
+    <ClInclude Include="..\include\graphics\Shader_OpenGL.h" />
+    <ClInclude Include="..\include\graphics\Texture.h" />
+    <ClInclude Include="..\include\graphics\Texture_OpenGL.h" />
+    <ClInclude Include="..\include\graphics\Vector2.h" />
+    <ClInclude Include="..\include\graphics\Vector3.h" />
+    <ClInclude Include="..\include\graphics\Vector4.h" />
+    <ClInclude Include="..\include\graphics\Vertex.h" />
+    <ClInclude Include="..\include\graphics\Window.h" />
+    <ClInclude Include="..\include\graphics\WindowFactory.h" />
+    <ClInclude Include="..\include\graphics\Window_GLFW.h" />
+    <ClInclude Include="..\include\luaReader\LuaExposedEngineFunctionality.h" />
+    <ClInclude Include="..\include\luaReader\luaFunctionIO.h" />
+    <ClInclude Include="..\include\luaReader\luaIO.h" />
+    <ClInclude Include="..\include\luaReader\luaScriptManager.h" />
+    <ClInclude Include="..\include\luaReader\ScriptFacade.h" />
+    <ClInclude Include="..\include\luaReader\ScriptFile.h" />
+    <ClInclude Include="..\include\luaReader\ScriptFunction.h" />
+    <ClInclude Include="..\include\luaReader\scriptGlobals.h" />
+    <ClInclude Include="..\include\luaReader\scriptGlobalsIO.h" />
+    <ClInclude Include="..\include\luaReader\SolScripting.h" />
+    <ClInclude Include="..\include\luaReader\supportedDatatypes.h" />
+    <ClInclude Include="..\include\other\fileIO.h" />
+    <ClInclude Include="..\include\other\singleton.h" />
+    <ClInclude Include="..\include\other\stringTools.h" />
+    <ClInclude Include="..\include\physics\BulletPhysicsBody.h" />
+    <ClInclude Include="..\include\physics\BulletPhysicsWorld.h" />
+    <ClInclude Include="..\include\physics\IPhysicsBody.h" />
+    <ClInclude Include="..\include\physics\IPhysicsWorld.h" />
+    <ClInclude Include="..\include\physics\PhysicsTypes.h" />
+    <ClInclude Include="..\include\terrain\ColourTerrain.h" />
+    <ClInclude Include="..\include\terrain\FaultFormationTerrainStrategy.h" />
+    <ClInclude Include="..\include\terrain\HeightmapTerrainStrategy.h" />
+    <ClInclude Include="..\include\terrain\MultiTextureTerrain.h" />
+    <ClInclude Include="..\include\terrain\Terrain.h" />
+    <ClInclude Include="..\include\terrain\TerrainLighting.h" />
+    <ClInclude Include="..\include\terrain\TerrainStrategy.h" />
+    <ClInclude Include="..\include\terrain\TextureTerrain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\data\shaders\2dtextures.frag.glsl" />
+    <None Include="..\data\shaders\2dtransform.vert.glsl" />
+    <None Include="..\data\shaders\terrain_multitexture.frag.glsl" />
+    <None Include="..\data\shaders\texturesandlight.frag.glsl" />
+    <None Include="..\data\shaders\texturesnolight.frag.glsl" />
+    <None Include="..\data\shaders\transform.vert.glsl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b90309e3-820a-4d85-9f7b-29f142f83584}</ProjectGuid>
+    <RootNamespace>ICT397</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(SolutionDir)external\glad\include;$(ProjectDir)..\external\bullet3\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64;$(SolutionDir)external\glad\src;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(SolutionDir)external\glad\include;$(SolutionDir)external\Lua-Sol\Lua\include;$(SolutionDir)external\Lua-Sol\sol;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64;$(SolutionDir)external\glad\src;$(SolutionDir)external\Lua-Sol\Lua\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\external\glm-1.0.3;$(ProjectDir)..\external\stb_image;$(ProjectDir)..\external\glad\include;$(ProjectDir)..\external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(ProjectDir)..\include\;$(ProjectDir)..\external\assimp\include;$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\imgui-1.92.6;$(ProjectDir)..\external\Lua-Sol\sol;$(ProjectDir)..\external\Lua-Sol\Lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;assimp-vc143-mtd.lib;BulletDynamics_Debug.lib;BulletCollision_Debug.lib;LinearMath_Debug.lib;Lua54.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\bullet3\lib;$(ProjectDir)..\external\Lua-Sol\Lua\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>lua54.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

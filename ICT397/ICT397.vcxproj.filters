@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{447552d2-8f7b-4fb1-b737-e32f15433c62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{56f8ceb2-752d-4059-8237-094233ae3fd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{19b13f93-36fe-451c-9143-ca6194b1b70d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ImGui">
+      <UniqueIdentifier>{8ede48b2-5b72-4ec9-8b09-83174ac708ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ImGui">
+      <UniqueIdentifier>{a3158905-da30-45ec-b433-c17e3e784c49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\API">
+      <UniqueIdentifier>{14eb1766-a820-479c-af9c-0e6572ebc586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Data">
+      <UniqueIdentifier>{3e619a66-656d-4d2f-b630-5cbd3edeb343}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ECS">
+      <UniqueIdentifier>{7fc460ee-74cd-4f39-ac43-ff41c30c35bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ECS">
+      <UniqueIdentifier>{30b9b9e8-3d3d-4e87-80e1-72f8688c969f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\API">
+      <UniqueIdentifier>{fe2aac9a-36e1-411a-a4a3-97e7032e78db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\Data">
+      <UniqueIdentifier>{6f977514-0b3f-42de-9ba6-4c88f9d4b559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{563951c7-6e44-44e9-931f-c539fc817da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{ced2f2a2-5731-42a8-88e8-989f9f7c87c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Other">
+      <UniqueIdentifier>{57dec7bd-0949-466c-a090-cd4d940f50cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lua-reader">
+      <UniqueIdentifier>{1071fb96-0cd5-443a-ae33-3576d9ca9791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lua-reader">
+      <UniqueIdentifier>{95a01fcb-f29b-457b-ad46-ffddc31b9d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Other">
+      <UniqueIdentifier>{6a294e9c-4f4a-4849-bcf5-43ef6d504102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Terrain">
+      <UniqueIdentifier>{b779da02-35a5-4b21-8c05-f53c72c83535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Terrain">
+      <UniqueIdentifier>{536e63d2-862a-4f71-bb4e-a2d0e8735c3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Task 1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glad.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_demo.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_draw.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_impl_glfw.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_impl_opengl3.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_tables.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui-1.92.6\imgui_widgets.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\Entity.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\MeshRendererComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\TransformComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\Scene.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Graphics.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Graphics_OpenGL.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\GraphicsFactory.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Mesh.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Model.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Shader_OpenGL.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Texture_OpenGL.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Window_GLFW.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\WindowFactory.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\HardCodedModels.cpp">
+      <Filter>Source Files\Graphics\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Window.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\CameraComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\LightingComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\physics\BulletPhysicsBody.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\physics\BulletPhysicsWorld.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\ScriptComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\other\fileIO.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\other\stringTools.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\luaFunctionIO.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\luaIO.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\luaScriptManager.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\ScriptFile.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\ScriptFunction.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\SolScripting.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain\FaultFormationTerrainStrategy.cpp">
+      <Filter>Source Files\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain\ColourTerrain.cpp">
+      <Filter>Source Files\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain\HeightmapTerrainStrategy.cpp">
+      <Filter>Source Files\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain\MultiTextureTerrain.cpp">
+      <Filter>Source Files\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain\Terrain.cpp">
+      <Filter>Source Files\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain\TextureTerrain.cpp">
+      <Filter>Source Files\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\SceneLoader.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain\TerrainLighting.cpp">
+      <Filter>Source Files\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\PhysicsComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\PlayerMovementComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\TerrainComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\scriptGlobalsIO.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\HardCodedTextures.cpp">
+      <Filter>Source Files\Graphics\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\TextureRendererComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\LuaExposedEngineFunctionality.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\external\imgui-1.92.6\imconfig.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imgui.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_impl_glfw.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_impl_opengl3.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_impl_opengl3_loader.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imgui_internal.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imstb_rectpack.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imstb_textedit.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui-1.92.6\imstb_truetype.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\Component.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\Entity.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\MeshRendererComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\TransformComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\Scene.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\LightingComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\CameraComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Colour.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Graphics.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Graphics_OpenGL.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\GraphicsFactory.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Mesh.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Model.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Shader.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Shader_OpenGL.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Texture.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Texture_OpenGL.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Vector2.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Vector3.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Vector4.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Window.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Window_GLFW.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\WindowFactory.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\HardCodedModels.h">
+      <Filter>Header Files\Graphics\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\ShaderType.h">
+      <Filter>Header Files\Graphics\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\InputHandler.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\physics\BulletPhysicsBody.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\physics\BulletPhysicsWorld.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\physics\IPhysicsBody.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\physics\IPhysicsWorld.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\physics\PhysicsTypes.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Vertex.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\ScriptComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\luaFunctionIO.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\luaIO.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\luaScriptManager.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\ScriptFacade.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\ScriptFile.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\ScriptFunction.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\SolScripting.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\supportedDatatypes.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\other\fileIO.h">
+      <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\other\singleton.h">
+      <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\other\stringTools.h">
+      <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\ColourTerrain.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\FaultFormationTerrainStrategy.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\HeightmapTerrainStrategy.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\Terrain.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\TerrainStrategy.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\TextureTerrain.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\MultiTextureTerrain.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\SceneLoader.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\PhysicsComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\PlayerMovementComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\TerrainComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\scriptGlobals.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\scriptGlobalsIO.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\terrain\TerrainLighting.h">
+      <Filter>Header Files\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\HardCodedTextures.h">
+      <Filter>Header Files\Graphics\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\TextureRendererComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\LuaExposedEngineFunctionality.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\data\shaders\transform.vert.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\texturesandlight.frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\terrain_multitexture.frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\texturesnolight.frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\2dtransform.vert.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\2dtextures.frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
