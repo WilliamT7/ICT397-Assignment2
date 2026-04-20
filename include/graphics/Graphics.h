@@ -256,6 +256,10 @@ namespace Graphics
 		**/
 		virtual void Set2DMode(bool enabled) = 0;
 
+		virtual void BeginRender() = 0;
+
+		virtual void EndRender() = 0;
+
 	protected:
 		struct LightAndPos
 		{

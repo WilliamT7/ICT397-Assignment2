@@ -236,9 +236,18 @@ namespace Graphics
 		**/
 		void Set2DMode(bool enabled);
 
+		void BeginRender();
+
+		void EndRender();
+
 	private:
 		glm::mat4 m_model, m_view, m_projection2D, m_projection3D;
 		bool m_3DMode = true;
+
+		// post processing stuff
+		unsigned int framebuffer;
+		unsigned int textureColourbuffer;
+		unsigned int rbo; // render buffer object
 
 		std::unordered_map<ShaderType, ShaderOpenGL*> m_shaders;
 		std::unordered_map<std::string, TextureOpenGL*> m_textures;

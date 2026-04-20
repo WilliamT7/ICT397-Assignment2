@@ -20,6 +20,7 @@ enum class ShaderType
 	NOLIGHT,
 	PSX,
 	TWODIMENSION,
+	CRTFILTER,
 	TERRAIN,
 };
 

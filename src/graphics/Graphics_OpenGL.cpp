@@ -74,7 +74,8 @@ namespace Graphics
 		CreateShader(ShaderType::TWODIMENSION, "2dtransform.vert.glsl", "2dtextures.frag.glsl");
 		CreateShader(ShaderType::PSX, "psx.vert.glsl", "texturesandlight.frag.glsl");
 		CreateShader(ShaderType::TERRAIN, "psx.vert.glsl", "terrain_multitexture.frag.glsl");
-		CreateShader(ShaderType::NOLIGHT, "transform.vert.glsl", "texturesnolight.frag.glsl");		
+		CreateShader(ShaderType::NOLIGHT, "transform.vert.glsl", "texturesnolight.frag.glsl");	
+		CreateShader(ShaderType::CRTFILTER, "quad.vert.glsl", "crtfilter.frag.glsl");
 
 		ImGui_ImplOpenGL3_Init("#version 330");
 
@@ -92,6 +93,31 @@ namespace Graphics
 		glEnableVertexAttribArray(1);
 		glBindVertexArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+
+		// init the post-processing buffers
+		glGenFramebuffers(1, &framebuffer);
+		glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+
+		glGenTextures(1, &textureColourbuffer);
+		glBindTexture(GL_TEXTURE_2D, textureColourbuffer);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glBindTexture(GL_TEXTURE_2D, 0);
+		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColourbuffer, 0);
+
+		glGenRenderbuffers(1, &rbo);
+		glBindRenderbuffer(GL_RENDERBUFFER, rbo);
+		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, m_width, m_height);
+		glBindRenderbuffer(GL_RENDERBUFFER, 0);
+		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
+
+		if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+			std::cout << "[C++]: ERROR: OpenGL: Framebuffer is not complete!\n";
+		else
+			std::cout << "[C++]: Notice: OpenGL: Successfully loaded in framebuffer!\n";
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	}
 
 	//----------------------------------------------
@@ -104,6 +130,12 @@ namespace Graphics
 		glViewport(0, 0, width, height);
 		m_projection2D = glm::ortho(0.0f, 1.0f, 0.0f, 1.0f, -1.0f, 1.0f);
 		m_projection3D = glm::perspective<float>(glm::radians(45.0f), static_cast<float>(width) / static_cast<float>(height), 0.1f, 1000.0f);
+
+		// resizing frame buffers to match new width and height ><
+		glBindTexture(GL_TEXTURE_2D, textureColourbuffer);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+		glBindRenderbuffer(GL_RENDERBUFFER, rbo);
+		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
 	}
 
 	//----------------------------------------------
@@ -497,6 +529,35 @@ namespace Graphics
 			glEnable(GL_DEPTH_TEST);
 		}
 	}
+
+	//----------------------------------------------
+
+	void GraphicsOpenGL::BeginRender()
+	{
+		glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+		glViewport(0, 0, m_width, m_height);
+		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glEnable(GL_DEPTH_TEST);
+	}
+
+	//----------------------------------------------
+
+	void GraphicsOpenGL::EndRender()
+	{
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+		glViewport(0, 0, m_width, m_height);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		GetShader(ShaderType::CRTFILTER)->Use();
+		glBindVertexArray(quadVAO);
+		glDisable(GL_DEPTH_TEST);
+		glBindTexture(GL_TEXTURE_2D, textureColourbuffer);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+	}
+
+	//----------------------------------------------
 
 }
 

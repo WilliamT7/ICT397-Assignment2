@@ -95,8 +95,11 @@ void Update()
 void Display()
 {
     graphicsHandler->ClearBuffers();
+    graphicsHandler->BeginRender();
 
     scene->Render(graphicsHandler);
+
+    graphicsHandler->EndRender();
 
     if (imGuiToggle)
         ImGuiRender();    

@@ -460,7 +460,10 @@
     <None Include="..\data\shaders\psx.vert.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </None>
-    <None Include="..\data\shaders\psx.frag.glsl">
+    <None Include="..\data\shaders\quad.vert.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\crtfilter.frag.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </None>
   </ItemGroup>
