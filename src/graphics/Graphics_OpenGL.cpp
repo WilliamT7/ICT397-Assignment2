@@ -73,7 +73,7 @@ namespace Graphics
 		CreateShader(ShaderType::DEFAULT, "transform.vert.glsl", "texturesandlight.frag.glsl");
 		CreateShader(ShaderType::TWODIMENSION, "2dtransform.vert.glsl", "2dtextures.frag.glsl");
 		CreateShader(ShaderType::PSX, "psx.vert.glsl", "texturesandlight.frag.glsl");
-		CreateShader(ShaderType::TERRAIN, "psx.vert.glsl", "terrain_multitexture.frag.glsl");
+		CreateShader(ShaderType::TERRAIN, "transform.vert.glsl", "terrain_multitexture.frag.glsl");
 		CreateShader(ShaderType::NOLIGHT, "transform.vert.glsl", "texturesnolight.frag.glsl");	
 		CreateShader(ShaderType::CRTFILTER, "quad.vert.glsl", "crtfilter.frag.glsl");
 
