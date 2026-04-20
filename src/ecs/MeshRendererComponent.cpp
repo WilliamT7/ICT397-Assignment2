@@ -58,7 +58,7 @@ void ECS::MeshRendererComponent::Render(Graphics::Graphics* graphics)
     }
 
     // Draw the model using the entity's transform
-    graphics->DrawModel(model, graphics->GetShader(ShaderType::DEFAULT), *transform);
+    graphics->DrawModel(model, graphics->GetShader(ShaderID), *transform);
 }
 
 //----------------------------------------------
@@ -112,8 +112,9 @@ void ECS::MeshRendererComponent::ImGui()
 	{
 		"DEFAULT",
 		"NOLIGHT",
+		"PSX",
 	};
-	static int shaderSelectedItem = 0;
+	int shaderSelectedItem = (int)ShaderID;
 
 	if (ImGui::CollapsingHeader("Mesh Renderer", ImGuiTreeNodeFlags_None))
 	{
@@ -133,6 +134,7 @@ void ECS::MeshRendererComponent::ImGui()
 void ECS::MeshRendererComponent::DeserialiseComponentTable(sol::table& data)
 {
 	ModelID = data["ModelID"];
+	ShaderID = (ShaderType)data["ShaderID"];
 }
 
 //----------------------------------------------
@@ -144,6 +146,8 @@ sol::table ECS::MeshRendererComponent::SerialiseComponent(sol::state& lua) const
 	t["Name"] = "MeshRenderer";
 
 	t["ModelID"] = ModelID;
+
+	t["ShaderID"] = (int)ShaderID;
 
 	return t;
 }

@@ -210,9 +210,6 @@
     <ClCompile Include="..\src\ecs\PhysicsComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ecs\PlayerMovementComponent.cpp">
-      <Filter>Source Files\ECS</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ecs\TerrainComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
@@ -419,9 +416,6 @@
     <ClInclude Include="..\include\ecs\PhysicsComponent.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\ecs\PlayerMovementComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\ecs\TerrainComponent.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
@@ -461,6 +455,12 @@
       <Filter>Resource Files\Shaders</Filter>
     </None>
     <None Include="..\data\shaders\2dtextures.frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\psx.vert.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\psx.frag.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </None>
   </ItemGroup>

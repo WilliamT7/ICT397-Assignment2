@@ -146,6 +146,8 @@
   <ItemGroup>
     <None Include="..\data\shaders\2dtextures.frag.glsl" />
     <None Include="..\data\shaders\2dtransform.vert.glsl" />
+    <None Include="..\data\shaders\psx.frag.glsl" />
+    <None Include="..\data\shaders\psx.vert.glsl" />
     <None Include="..\data\shaders\terrain_multitexture.frag.glsl" />
     <None Include="..\data\shaders\texturesandlight.frag.glsl" />
     <None Include="..\data\shaders\texturesnolight.frag.glsl" />

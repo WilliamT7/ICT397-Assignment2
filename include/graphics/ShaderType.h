@@ -17,9 +17,10 @@
 enum class ShaderType
 {
 	DEFAULT,
-	TERRAIN,
 	NOLIGHT,
+	PSX,
 	TWODIMENSION,
+	TERRAIN,
 };
 
 //----------------------------------------------
