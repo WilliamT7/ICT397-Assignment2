@@ -22,6 +22,7 @@
 #include <memory>
 #include <stdexcept>
 #include "Component.h"
+#include "ScriptComponent.h"
 #include "graphics/Graphics.h"
 
 //----------------------------------------------
@@ -170,8 +171,14 @@ namespace ECS
 		**/
 		void ImGui();
 
+		ScriptComponent& AddScriptComponent(std::string filePath);
+		ScriptComponent& GetScriptComponent(std::string scriptName);
+		bool HasScriptComponent(std::string scriptName) const;
+		std::string static GetScriptName(std::string filePath);
+
 	private:
 		std::unordered_map<std::type_index, std::unique_ptr<Component>> components;
+		std::unordered_map<std::string, ScriptComponent> scripts;
 		std::string name = "Object";
 	};
 }
@@ -181,6 +188,13 @@ namespace ECS
 template <typename T>
 T* ECS::Entity::AddComponent()
 {
+	// if T is script component, add to Scripts instead
+	if (typeid(T) == typeid(ScriptComponent))
+	{
+		std::cout << "[C++]: Notice: ECS: Cannot add Script via AddComponent()";
+		return nullptr;
+	}
+
 	if (!HasComponent<T>())
 	{
 		auto component = std::make_unique<T>();
