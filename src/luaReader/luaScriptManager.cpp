@@ -29,7 +29,7 @@ const int LuaScriptManager::totalFiles() const {
 	return luaFiles.size();
 }
 //--------------------------------------
-
+//Possibly change this to specify filename
 ScriptFile* const LuaScriptManager::searchForFile(const string& const filePath) {
 
 	bool found = false;
@@ -38,6 +38,7 @@ ScriptFile* const LuaScriptManager::searchForFile(const string& const filePath) 
 	for (int curFile = 0; curFile < totalFiles() && !found; curFile++) {
 
 		const ScriptFile curScript = luaFiles[curFile];
+
 
 		bool samePath = filePath == curScript.getPathName() + curScript.getFileName();
 

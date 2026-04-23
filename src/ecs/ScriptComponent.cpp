@@ -145,7 +145,7 @@ scriptGlobal& const ECS::ScriptComponent::operator[](const string& const globalN
 	}
 	
 	if (foundIndex == -1) {
-		throw std::domain_error("Cannot find global: " + globalName + " in " + luaFile->getFileName());
+		throw std::domain_error("[C++] Cannot find global: " + globalName + " in " + luaFile->getFileName());
 	}
 	
 	return luaFile->getGlobal(foundIndex);

@@ -2,6 +2,7 @@
 function update()
 	
 	print("Excuse me, have you got a moment?")
-	--run("crossScriptTest2", "introduceSelf", obj)
+	crossScript = luaScript.new()
+	crossScript:run("..\\data\\luaScripts\\crossScriptTest2.lua", "introduceSelf", obj)
 
 end

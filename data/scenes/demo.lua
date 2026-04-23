@@ -91,11 +91,6 @@ scene = {
 		filePath = "..\\data\\luaScripts\\"
 	  },
       {
-        Name = "Script",
-        fileName = "Spam.lua";
-        filePath = "..\\data\\luaScripts\\"
-      },
-      {
         Name = "Physics",
         halfExtents_x = 1,
         halfExtents_y = 0.69999998807907104,

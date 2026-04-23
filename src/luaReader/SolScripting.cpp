@@ -150,6 +150,7 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 
 void SolScripting::runByFileName(string fileName, string functionName, ECS::Entity* entity) {
 
+
 	LuaScriptManager* scriptManager = Singleton<LuaScriptManager>::getInstance();
 
 	ScriptFile* foundScript = scriptManager->searchForFile(fileName);
@@ -157,22 +158,12 @@ void SolScripting::runByFileName(string fileName, string functionName, ECS::Enti
 	if (foundScript != nullptr) {
 
 		ScriptFile fileToRun = *foundScript;
-		const int totalFunctions = fileToRun.totalFunctions();
-		bool found = false;
+		run(fileToRun, functionName, entity);
+		
 
-		for (int curFunction = 0; curFunction < totalFunctions && !found; curFunction++) {
-
-			found = fileToRun[curFunction].getName() == functionName;
-
-		}
-
-		if (found) {
-			run(fileToRun, functionName, entity);
-		}
-		else {
-			cout << "Unable to find " << functionName;
-		}
-
+	}
+	else {
+		cout << "[C++] Cannot find " << fileName << "\n";
 	}
 
 
@@ -201,6 +192,17 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 		solView.set_function("SetMouseVisible", &Window::SetMouseVisible, luaEngineLink->getWindowPointer());
 		solView.set_function("GetMouseVisible", &Window::GetMouseVisible, luaEngineLink->getWindowPointer());
 	}
+
+
+	//Expose solScripting (very meta)
+	solView.new_usertype <SolScripting >(
+		"luaScript",
+		sol::constructors<SolScripting>(),
+
+		"run",
+		&SolScripting::runByFileName
+
+	);
 
 
 	solView.set_function("run", &SolScripting::runByFileName);
