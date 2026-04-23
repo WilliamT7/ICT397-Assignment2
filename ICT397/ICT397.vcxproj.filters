@@ -210,9 +210,6 @@
     <ClCompile Include="..\src\ecs\PhysicsComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ecs\PlayerMovementComponent.cpp">
-      <Filter>Source Files\ECS</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ecs\TerrainComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
@@ -226,6 +223,9 @@
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
     <ClCompile Include="..\src\luaReader\LuaExposedEngineFunctionality.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\functionSearch.cpp">
       <Filter>Source Files\Lua-reader</Filter>
     </ClCompile>
   </ItemGroup>
@@ -419,9 +419,6 @@
     <ClInclude Include="..\include\ecs\PhysicsComponent.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\ecs\PlayerMovementComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\ecs\TerrainComponent.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
@@ -441,6 +438,9 @@
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="..\include\luaReader\LuaExposedEngineFunctionality.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\functionSearch.h">
       <Filter>Header Files\Lua-reader</Filter>
     </ClInclude>
   </ItemGroup>

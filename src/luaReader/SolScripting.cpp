@@ -6,6 +6,8 @@
 #include "Luareader\LuaExposedEngineFunctionality.h"
 #include "other\singleton.h"
 #include "graphics\Window.h"
+#include "LuaReader\luaScriptManager.h"
+#include "LuaReader\functionSearch.h"
 
 #include "ECS\PhysicsComponent.h"
 #include "ECS\MeshRendererComponent.h"
@@ -53,7 +55,7 @@ const SolScripting& SolScripting::operator=(const SolScripting& otherSolFacade) 
 
 void SolScripting::run(ScriptFile& const file, string functionName) {
 	
-	bool canRunFunction = file.isValid() && foundFunction(file, functionName);
+	bool canRunFunction = file.isValid() && findFunction(file, functionName);
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 	
 	if (canRunFunction && validFunctionParameters) {
@@ -107,18 +109,17 @@ void SolScripting::run(ScriptFile& const file) {
 }
 
 
-
+//-----------------------------------------------------------------------------------------
 
 void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity* entity) {
 
-	bool canRunFunction = file.isValid() && foundFunction(file, functionName);
+	bool canRunFunction = file.isValid() && findFunction(file, functionName);
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 
 	if (canRunFunction && validFunctionParameters) {
 		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
 		luaL_openlibs(LuaState);
-
 
 		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
 		lua_getglobal(LuaState, functionName.c_str());
@@ -131,6 +132,7 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 		lua_call(LuaState, 0, 0); //TODO CHANGE TO REFLECT PARAMETER PASSING/ RETURN VALUES
 
 		//Probaly do the lua stack instead later for parameter passing
+
 		
 	}
 	else {
@@ -138,7 +140,41 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
 	}
 
-	lua_close(LuaState);
+	if (LuaState != nullptr) {
+		lua_close(LuaState);
+	}
+
+}
+
+//----------------------------------------------
+
+void SolScripting::runByFileName(string fileName, string functionName, ECS::Entity* entity) {
+
+	LuaScriptManager* scriptManager = Singleton<LuaScriptManager>::getInstance();
+
+	ScriptFile* foundScript = scriptManager->searchForFile(fileName);
+
+	if (foundScript != nullptr) {
+
+		ScriptFile fileToRun = *foundScript;
+		const int totalFunctions = fileToRun.totalFunctions();
+		bool found = false;
+
+		for (int curFunction = 0; curFunction < totalFunctions && !found; curFunction++) {
+
+			found = fileToRun[curFunction].getName() == functionName;
+
+		}
+
+		if (found) {
+			run(fileToRun, functionName, entity);
+		}
+		else {
+			cout << "Unable to find " << functionName;
+		}
+
+	}
+
 
 }
 
@@ -167,25 +203,12 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 	}
 
 
+	solView.set_function("run", &SolScripting::runByFileName);
+
 }
 
 //-------------------------------------------------------------------
 
-bool SolScripting::foundFunction(const ScriptFile& const file, string& const functionName) {
-
-	bool found = false;
-	const int TOTAL_FUNCTIONS = file.totalFunctions();
-
-	for (int curFunction = 0; curFunction < TOTAL_FUNCTIONS && !found; curFunction++) {
-
-		found = file[curFunction].getName() == functionName;
-	}
-
-	return found;
-
-}
-
-//-----------------------------------------
 void SolScripting::updateGlobals(sol::state_view& solView, ScriptFile& const file) const {
 
 	const int totalGlobals = file.totalGlobals();
@@ -206,11 +229,11 @@ void SolScripting::updateGlobals(sol::state_view& solView, ScriptFile& const fil
 		}
 	}
 }
+
 //-----------------------------------------
 
+//TODO split me up i hate this
 void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity* entity) {
-
-	
 
 	solView.new_usertype <ECS::Entity >(
 		"Entity",

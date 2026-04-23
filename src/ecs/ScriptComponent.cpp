@@ -42,7 +42,6 @@ void ECS::ScriptComponent::setScript(string filePath) {
 
 	LuaScriptManager* scriptManager = Singleton<LuaScriptManager>::getInstance();
 
-	bool found = false;
 	ScriptFile* const foundScript = scriptManager->searchForFile(filePath);
 
 	if (foundScript != nullptr) {

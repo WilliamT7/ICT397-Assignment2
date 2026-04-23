@@ -50,6 +50,7 @@
     <ClCompile Include="..\src\graphics\Window.cpp" />
     <ClCompile Include="..\src\graphics\WindowFactory.cpp" />
     <ClCompile Include="..\src\graphics\Window_GLFW.cpp" />
+    <ClCompile Include="..\src\luaReader\functionSearch.cpp" />
     <ClCompile Include="..\src\luaReader\LuaExposedEngineFunctionality.cpp" />
     <ClCompile Include="..\src\luaReader\luaFunctionIO.cpp" />
     <ClCompile Include="..\src\luaReader\luaIO.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="..\include\graphics\Window.h" />
     <ClInclude Include="..\include\graphics\WindowFactory.h" />
     <ClInclude Include="..\include\graphics\Window_GLFW.h" />
+    <ClInclude Include="..\include\luaReader\functionSearch.h" />
     <ClInclude Include="..\include\luaReader\LuaExposedEngineFunctionality.h" />
     <ClInclude Include="..\include\luaReader\luaFunctionIO.h" />
     <ClInclude Include="..\include\luaReader\luaIO.h" />

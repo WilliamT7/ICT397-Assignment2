@@ -85,6 +85,11 @@ scene = {
         fileName = "playerInput.lua",
         filePath = "..\\data\\luaScripts\\"
       } --[[table: 000001EE2719E6D0]],
+	  {
+		Name = "Script",
+		fileName = "crossScriptTest1.lua",
+		filePath = "..\\data\\luaScripts\\"
+	  },
       {
         Name = "Script",
         fileName = "Spam.lua";
