@@ -117,14 +117,11 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 		{
 			auto mesh = entity->GetComponent<MeshRendererComponent>();
 			mesh->Render(graphics);
+		}
 
-			// if it has animationcomponent, apply that
-
-			// then
-			// mesh->FinalRender(graphics)
-			// FinalRender is to ensure that the uniforms set in
-			// animationcomponent is applied before drawing
-			// because mesh renderer should not be coupled to animation		
+		if (entity->HasComponent<TerrainComponent>())
+		{
+			entity->GetComponent<TerrainComponent>()->Render(graphics);
 		}
 	}
 

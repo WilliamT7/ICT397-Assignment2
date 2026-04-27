@@ -179,6 +179,13 @@ namespace Graphics
 	}
 
 	//----------------------------------------------
+	
+	void ShaderOpenGL::SetMat4(const std::string& name, glm::mat4 value) const
+	{
+		glUniformMatrix4fv(glGetUniformLocation(m_ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
+	}
+
+	//----------------------------------------------
 
 	void ShaderOpenGL::SetWorldView(const glm::mat4& m, const glm::mat4& v,	const glm::mat4& p) const
 	{

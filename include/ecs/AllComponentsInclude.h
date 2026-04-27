@@ -10,5 +10,6 @@
 #include "ecs/TerrainComponent.h"
 #include "ecs/PhysicsComponent.h"
 #include "ecs/TextureRendererComponent.h"
+#include "ecs/AnimationComponent.h"
 
 //----------------------------------------------

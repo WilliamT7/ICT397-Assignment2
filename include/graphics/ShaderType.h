@@ -19,6 +19,7 @@ enum class ShaderType
 	DEFAULT,
 	NOLIGHT,
 	PSX,
+	PSXANIM,
 	TWODIMENSION,
 	CRTFILTER,
 	TERRAIN,

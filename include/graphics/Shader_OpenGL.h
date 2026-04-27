@@ -148,6 +148,8 @@ namespace Graphics
 		**/
 		void SetVector4(const std::string& name, const Vector4& value) const override;
 
+		void SetMat4(const std::string& name, glm::mat4 value) const override;
+
 		/** Set Transform
 		* @author - Kay Bradsell
 		* @brief - Applies glm::mat4 transform to shader

@@ -1,4 +1,5 @@
 #include "graphics/Animator.h"
+#include <iostream>
 
 //----------------------------------------------
 
@@ -8,11 +9,10 @@ namespace Graphics
 	{
 		m_currentTime = 0.0f;
 		m_currentAnimation = animation;
+		m_deltaTime = 0;
 
-		m_finalBoneMatrices.reserve(100);
-
-		for (int i = 0; i < 100; i++)
-			m_finalBoneMatrices.push_back(glm::mat4(1.0f));
+		m_finalBoneMatrices.clear();
+		m_finalBoneMatrices.resize(m_currentAnimation->GetBoneIDMap().size(), glm::mat4(1.0f));
 	}
 
 	void Animator::UpdateAnimation(float deltaTime)
@@ -22,6 +22,7 @@ namespace Graphics
 		{
 			m_currentTime += m_currentAnimation->GetTicksPerSecond() * deltaTime;
 			m_currentTime = fmod(m_currentTime, m_currentAnimation->GetDuration());
+
 			CalculateBoneTransform(&m_currentAnimation->GetRootNode(), glm::mat4(1.0f));
 		}
 	}
@@ -47,16 +48,25 @@ namespace Graphics
 
 		glm::mat4 globalTransform = parentTransform * nodeTransform;
 
-		auto boneInfoMap = m_currentAnimation->GetBoneIDMap();
-		if (boneInfoMap.find(nodeName) != boneInfoMap.end())
+		auto& boneMap = m_currentAnimation->GetBoneIDMap();
+
+		auto it = boneMap.find(nodeName);
+		if (it != boneMap.end())
 		{
-			int index = boneInfoMap[nodeName].id;
-			glm::mat4 offset = boneInfoMap[nodeName].offset;
-			m_finalBoneMatrices[index] = globalTransform * offset;
+			std::cout << nodeName << " -> " << it->second.id << std::endl;
+
+			int index = it->second.id;
+
+			if (index >= 0 && index < m_finalBoneMatrices.size())
+			{
+				glm::mat4 offset = it->second.offset;
+				m_finalBoneMatrices[index] = globalTransform * offset;
+			}
 		}
 
 		for (int i = 0; i < node->childrenCount; i++)
 			CalculateBoneTransform(&node->children[i], globalTransform);
+
 	}
 
 	std::vector<glm::mat4> Animator::GetFinalBoneMatrices()

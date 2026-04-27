@@ -1,7 +1,11 @@
 #include "graphics/Bone.h"
+#define GLM_ENABLE_EXPERIMENTAL
 #include "glm/gtx/quaternion.hpp"
+#include <iostream>
 
 //----------------------------------------------
+
+// took a lot from https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation
 
 namespace Graphics
 {
@@ -93,7 +97,7 @@ namespace Graphics
 	{
 		for (int index = 0; index < m_numScales - 1; ++index)
 		{
-			if (animationTime < m_rotations[index + 1].timestamp)
+			if (animationTime < m_scales[index + 1].timestamp)
 				return index;
 		}
 		assert(0);

@@ -73,6 +73,7 @@ namespace Graphics
 		CreateShader(ShaderType::DEFAULT, "transform.vert.glsl", "texturesandlight.frag.glsl");
 		CreateShader(ShaderType::TWODIMENSION, "2dtransform.vert.glsl", "2dtextures.frag.glsl");
 		CreateShader(ShaderType::PSX, "psx.vert.glsl", "texturesandlight.frag.glsl");
+		CreateShader(ShaderType::PSXANIM, "psxanim.vert.glsl", "texturesandlight.frag.glsl");
 		CreateShader(ShaderType::TERRAIN, "transform.vert.glsl", "terrain_multitexture.frag.glsl");
 		CreateShader(ShaderType::NOLIGHT, "transform.vert.glsl", "texturesnolight.frag.glsl");	
 		CreateShader(ShaderType::CRTFILTER, "quad.vert.glsl", "crtfilter.frag.glsl");
@@ -207,6 +208,7 @@ namespace Graphics
 
 		Model* model = new Model(file, this);
 
+		model->SetName(modelName);
 		m_models[modelName] = model;
 
 		if (model->GetMeshes().empty())
@@ -228,11 +230,11 @@ namespace Graphics
 
 	//----------------------------------------------
 
-	void GraphicsOpenGL::DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform)
+	void GraphicsOpenGL::DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform, Animator* animator)
 	{
 		for (auto& mesh : model->GetMeshes())
 		{
-			DrawMesh(&mesh, shader, transform);
+			DrawMesh(&mesh, shader, transform, animator);
 		}
 	}
 	
@@ -270,7 +272,7 @@ namespace Graphics
 
 		// ids
 		glEnableVertexAttribArray(3);
-		glVertexAttribPointer(3, 4, GL_INT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, boneIDs));
+		glVertexAttribIPointer(3, 4, GL_INT, sizeof(Vertex), (void*)offsetof(Vertex, boneIDs));
 
 		// weights
 		glEnableVertexAttribArray(4);
@@ -282,13 +284,22 @@ namespace Graphics
 
 	//----------------------------------------------
 
-	void GraphicsOpenGL::DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform)
+	void GraphicsOpenGL::DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform, Animator* animator)
 	{
 		ShaderOpenGL* s = static_cast<ShaderOpenGL*>(shader);
 		if (!s) return;
 
 		s->Use();
 		s->SetTransform(GetTransformation(transform));
+
+		if (animator) // if animation passed
+		{
+			auto bones = animator->GetFinalBoneMatrices();
+			for (int i = 0; i < bones.size(); i++)
+			{
+				s->SetMat4("finalBonesMatrices[" + std::to_string(i) + "]", bones[i]);
+			}
+		}
 		
 		if (m_3DMode)
 			s->SetWorldView(m_model, m_view, m_projection3D);

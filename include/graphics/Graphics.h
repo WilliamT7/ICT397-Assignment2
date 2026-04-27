@@ -32,6 +32,7 @@
 #include "ecs/LightingComponent.h"
 #include "ecs/TransformComponent.h"
 #include "ecs/CameraComponent.h"
+#include "graphics/Animator.h"
 #include "graphics/Shader.h"
 #include "graphics/ShaderType.h"
 #include "graphics/Texture.h"
@@ -140,7 +141,7 @@ namespace Graphics
 		* @pre - Model and Shader have been loaded, Graphics object has been constructed, and transform has valid data
 		* @post - Draws model to world
 		**/
-		virtual void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform) = 0;
+		virtual void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform, Animator* animator) = 0;
 
 		/** Draw 2D Texture
 		* @author - Kay Bradsell

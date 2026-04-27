@@ -1,13 +1,39 @@
-#include "Animation.h"
+#include "graphics/Animation.h"
+#include <iostream>
 
 namespace Graphics
 {
 	Animation::Animation(const std::string& animationPath, Model* model)
 	{
+		std::cout << "[C++]: Notice: Assimp: Reading in animation " << animationPath << " for model " << model->GetName() << "\n";
+
 		Assimp::Importer importer;
 		const aiScene* scene = importer.ReadFile(animationPath, aiProcess_Triangulate);
-		assert(scene && scene->mRootNode);
+
+		std::cout << "Animations: " << scene->mNumAnimations << std::endl;
+		
+		if (!scene)
+		{
+			std::cout << "[C++]: ERROR: Assimp: " << importer.GetErrorString() << std::endl;
+			assert(false);
+		}
+
+		if (!scene->mRootNode)
+		{
+			std::cout << "[C++]: ERROR: Assimp: No root node :(" << std::endl;
+			std::cout << "[C++]: ERROR: Assimp: Animations: " << scene->mNumAnimations << std::endl;
+			std::cout << "[C++]: ERROR: Assimp: Meshes: " << scene->mNumMeshes << std::endl;
+			assert(false);
+		}
+
+		if (!scene || scene->mNumAnimations == 0)
+		{
+			std::cout << "[C++]: ERROR: Assimp: No animations found in file: " << animationPath << std::endl;
+			assert(false);
+		}
+
 		auto animation = scene->mAnimations[0];
+		m_model = model;
 		m_duration = animation->mDuration;
 		m_ticksPerSecond = animation->mTicksPerSecond;
 		ReadHierarchyData(m_rootNode, scene->mRootNode);
@@ -57,7 +83,7 @@ namespace Graphics
 
 	const std::map<std::string, BoneInfo>& Animation::GetBoneIDMap() const
 	{
-		return m_boneInfoMap;
+		return m_model->GetBoneInfoMap();
 	}
 
 	//----------------------------------------------
@@ -66,20 +92,27 @@ namespace Graphics
 	{
 		int size = animation->mNumChannels;
 		auto& boneInfoMap = model.GetBoneInfoMap();
-		int& boneCount = model.GetBoneCount();
+		int boneCount = model.GetBoneCount();
 
 		for (int i = 0; i < size; i++)
 		{
+
 			auto channel = animation->mChannels[i];
 			std::string boneName = channel->mNodeName.data;
 
 			if (boneInfoMap.find(boneName) == boneInfoMap.end())
 			{
-				boneInfoMap[boneName].id = boneCount;
-				boneCount++;
+				std::cout << "Ignoring unknown bone in animation: " << boneName << std::endl;
 			}
 
-			m_bones.push_back(Bone(channel->mNodeName.data, boneInfoMap[channel->mNodeName.data].id, channel));
+			if (boneName == "Armature")
+				continue;
+
+			auto& info = boneInfoMap[boneName];
+			m_bones.push_back(Bone(boneName, info.id, channel));
+
+			std::cout << "ANIM BONE: " << boneName
+				<< " -> " << info.id << std::endl;
 		}
 
 		m_boneInfoMap = boneInfoMap;
@@ -107,7 +140,7 @@ namespace Graphics
 
 	glm::mat4 Animation::ConvertAssimpMatrixToGLM(const aiMatrix4x4& m)
 	{
-		// this fucking sucked to type omfg.
+		// i should make this a helper
 		return glm::mat4(m.a1, m.b1, m.c1, m.d1, m.a2, m.b2, m.c2, m.d2, m.a3, m.b3, m.c3, m.d3, m.a4, m.b4, m.c4, m.d4);
 	}
 }

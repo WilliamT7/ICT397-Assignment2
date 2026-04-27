@@ -42,6 +42,8 @@ ECS::Component* ECS::Entity::AddComponentByName(std::string name)
 		return AddComponent<TerrainComponent>();
 	if (name == "TextureRenderer")
 		return AddComponent<TextureRendererComponent>();
+	if (name == "Animation")
+		return AddComponent<AnimationComponent>();
 
 	return nullptr;
 }

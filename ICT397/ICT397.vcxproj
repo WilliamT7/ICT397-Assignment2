@@ -27,6 +27,7 @@
     <ClCompile Include="..\external\imgui-1.92.6\imgui_tables.cpp" />
     <ClCompile Include="..\external\imgui-1.92.6\imgui_widgets.cpp" />
     <ClCompile Include="..\glad.c" />
+    <ClCompile Include="..\src\ecs\AnimationComponent.cpp" />
     <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
     <ClCompile Include="..\src\ecs\Entity.cpp" />
     <ClCompile Include="..\src\ecs\LightingComponent.cpp" />
@@ -38,6 +39,9 @@
     <ClCompile Include="..\src\ecs\TerrainComponent.cpp" />
     <ClCompile Include="..\src\ecs\TextureRendererComponent.cpp" />
     <ClCompile Include="..\src\ecs\TransformComponent.cpp" />
+    <ClCompile Include="..\src\graphics\Animation.cpp" />
+    <ClCompile Include="..\src\graphics\AnimationManager.cpp" />
+    <ClCompile Include="..\src\graphics\Animator.cpp" />
     <ClCompile Include="..\src\graphics\Bone.cpp" />
     <ClCompile Include="..\src\graphics\Graphics.cpp" />
     <ClCompile Include="..\src\graphics\GraphicsFactory.cpp" />
@@ -83,6 +87,7 @@
     <ClInclude Include="..\external\imgui-1.92.6\imstb_textedit.h" />
     <ClInclude Include="..\external\imgui-1.92.6\imstb_truetype.h" />
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h" />
+    <ClInclude Include="..\include\ecs\AnimationComponent.h" />
     <ClInclude Include="..\include\ecs\CameraComponent.h" />
     <ClInclude Include="..\include\ecs\Component.h" />
     <ClInclude Include="..\include\ecs\Entity.h" />
@@ -95,6 +100,9 @@
     <ClInclude Include="..\include\ecs\TerrainComponent.h" />
     <ClInclude Include="..\include\ecs\TextureRendererComponent.h" />
     <ClInclude Include="..\include\ecs\TransformComponent.h" />
+    <ClInclude Include="..\include\graphics\Animation.h" />
+    <ClInclude Include="..\include\graphics\AnimationManager.h" />
+    <ClInclude Include="..\include\graphics\Animator.h" />
     <ClInclude Include="..\include\graphics\Bone.h" />
     <ClInclude Include="..\include\graphics\Colour.h" />
     <ClInclude Include="..\include\graphics\Graphics.h" />

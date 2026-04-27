@@ -104,12 +104,15 @@ namespace Graphics
 		**/
 		Model(const std::vector<Mesh>& meshes);
 
+		const std::string& GetName() const;
+		void SetName(const std::string& name);
 		std::map<std::string, BoneInfo>& GetBoneInfoMap();
-		int& GetBoneCount();
+		int GetBoneCount() const;
 
 	private:
 		std::vector<Mesh> m_meshes;
 		std::string m_directory;
+		std::string m_name;
 		std::string m_path;
 		std::map<std::string, BoneInfo> m_boneInfoMap;
 		int m_boneCounter = 0;

@@ -26,6 +26,7 @@ namespace Graphics
 		const AssimpNodeData& GetRootNode() const;
 		const std::map<std::string, BoneInfo>& GetBoneIDMap() const;
 	private:
+		Model* m_model = nullptr;
 		float m_duration;
 		int m_ticksPerSecond;
 		std::vector<Bone> m_bones;

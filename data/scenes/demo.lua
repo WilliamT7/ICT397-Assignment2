@@ -677,7 +677,7 @@ scene = {
       {
         ModelID = "MINT",
         Name = "MeshRenderer",
-        ShaderID = 2
+        ShaderID = 3
       } --[[table: 0000021755631250]],
       {
         Name = "Physics",
@@ -687,7 +687,15 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box"
-      } --[[table: 0000021755630BD0]]
+      } --[[table: 0000021755630BD0]],
+      {
+        Name = "Animation"
+      },
+      {
+        Name = "Script",
+        fileName = "animationTest.lua",
+        filePath = "..\\data\\luaScripts\\"
+      }
     } --[[table: 000002175562FB50]],
     EntityName = "Mint 1"
   } --[[table: 0000021755630AD0]],

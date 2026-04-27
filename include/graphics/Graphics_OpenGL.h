@@ -140,7 +140,7 @@ namespace Graphics
 		* @pre - Model and Shader have been loaded, Graphics object has been constructed, and transform has valid data
 		* @post - Draws model to world
 		**/
-		void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform) override;
+		void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform, Animator* animator) override;
 
 		/** Draw 2D Texture
 		* @author - Kay Bradsell
@@ -275,7 +275,7 @@ namespace Graphics
 		* @pre - Mesh, Shader, and Transform all have valid data, Graphics has been constructed
 		* @post - Draws the Mesh to world.
 		**/
-		void DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform);
+		void DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform, Animator* animator);
 
 		/** Set Lighting
 		* @author - Kay Bradsell

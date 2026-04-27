@@ -134,13 +134,27 @@ namespace Graphics
             // Ask Graphics facade if texture already exists
             Texture* tex = m_graphics->GetTexture(str.C_Str());
             if (!tex) {
-                tex = m_graphics->CreateTexture(str.C_Str(), typeName, m_directory + "/" + str.C_Str());
+                tex = m_graphics->CreateTexture(str.C_Str(), typeName, m_directory + "\\..\\" + str.C_Str());
             }
 
             if (tex)
                 textures.push_back(tex);
         }
         return textures;
+    }
+
+    //----------------------------------------------
+
+    const std::string& Model::GetName() const
+    {
+        return m_name;
+    }
+
+    //----------------------------------------------
+
+    void Model::SetName(const std::string& name)
+    {
+        m_name = name;
     }
 
     //----------------------------------------------
@@ -152,9 +166,9 @@ namespace Graphics
 
     //----------------------------------------------
 
-    int& Model::GetBoneCount()
+    int Model::GetBoneCount() const
     {
-        return m_boneCounter;
+        return m_boneInfoMap.size();
     }
 
     //----------------------------------------------
@@ -178,6 +192,7 @@ namespace Graphics
             {
                 vertex.weights[i] = weight;
                 vertex.boneIDs[i] = boneID;
+                return;
             }
         }
     }
@@ -193,17 +208,17 @@ namespace Graphics
             if (m_boneInfoMap.find(boneName) == m_boneInfoMap.end())
             {
                 BoneInfo newBoneInfo;
-                newBoneInfo.id = m_boneCounter;
+                newBoneInfo.id = m_boneCounter++;
                 newBoneInfo.offset = ConvertAssimpMatrixToGLM(mesh->mBones[boneIndex]->mOffsetMatrix);
+
                 m_boneInfoMap[boneName] = newBoneInfo;
-                boneID = m_boneCounter++;
+                boneID = newBoneInfo.id;
             }
             else
             {
                 boneID = m_boneInfoMap[boneName].id;
             }
 
-            assert(boneID != 1);
             auto weights = mesh->mBones[boneIndex]->mWeights;
             int numWeights = mesh->mBones[boneIndex]->mNumWeights;
 
