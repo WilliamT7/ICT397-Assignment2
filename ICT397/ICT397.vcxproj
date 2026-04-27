@@ -38,6 +38,7 @@
     <ClCompile Include="..\src\ecs\TerrainComponent.cpp" />
     <ClCompile Include="..\src\ecs\TextureRendererComponent.cpp" />
     <ClCompile Include="..\src\ecs\TransformComponent.cpp" />
+    <ClCompile Include="..\src\graphics\Bone.cpp" />
     <ClCompile Include="..\src\graphics\Graphics.cpp" />
     <ClCompile Include="..\src\graphics\GraphicsFactory.cpp" />
     <ClCompile Include="..\src\graphics\Graphics_OpenGL.cpp" />
@@ -94,6 +95,7 @@
     <ClInclude Include="..\include\ecs\TerrainComponent.h" />
     <ClInclude Include="..\include\ecs\TextureRendererComponent.h" />
     <ClInclude Include="..\include\ecs\TransformComponent.h" />
+    <ClInclude Include="..\include\graphics\Bone.h" />
     <ClInclude Include="..\include\graphics\Colour.h" />
     <ClInclude Include="..\include\graphics\Graphics.h" />
     <ClInclude Include="..\include\graphics\GraphicsFactory.h" />
@@ -148,6 +150,7 @@
     <None Include="..\data\shaders\2dtransform.vert.glsl" />
     <None Include="..\data\shaders\crtfilter.frag.glsl" />
     <None Include="..\data\shaders\psx.vert.glsl" />
+    <None Include="..\data\shaders\psxanim.vert.glsl" />
     <None Include="..\data\shaders\quad.vert.glsl" />
     <None Include="..\data\shaders\terrain_multitexture.frag.glsl" />
     <None Include="..\data\shaders\texturesandlight.frag.glsl" />

@@ -104,6 +104,9 @@ namespace Graphics
 		**/
 		Model(const std::vector<Mesh>& meshes);
 
+		std::map<std::string, BoneInfo>& GetBoneInfoMap();
+		int& GetBoneCount();
+
 	private:
 		std::vector<Mesh> m_meshes;
 		std::string m_directory;
@@ -152,9 +155,6 @@ namespace Graphics
 		* @post - Loads in all information from .mtl file into vector of Textures
 		**/
 		std::vector<Texture*> LoadMaterialTextures(aiMaterial* mat, aiTextureType type, const std::string& typeName);
-
-		std::map<std::string, BoneInfo>& GetBoneInfoMap();
-		int& GetBoneCount();
 
 		void SetVertexBoneDataToDefault(Vertex& vertex);
 		void SetVertexBoneData(Vertex& vertex, int boneID, float weight);

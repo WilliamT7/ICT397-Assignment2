@@ -10,7 +10,7 @@ namespace Graphics
 {
 	struct KeyPosition
 	{
-		Vector3 position;
+		glm::vec3 position;
 		float timestamp;
 	};
 
@@ -22,7 +22,7 @@ namespace Graphics
 
 	struct KeyScale
 	{
-		Vector3 scale;
+		glm::vec3 scale;
 		float timestamp;
 	};
 
@@ -53,8 +53,8 @@ namespace Graphics
 		std::string m_name;
 		int m_ID;
 
-		float GetScalefactor(float lastTime, float nextTime, float animationTime);
-		glm::mat4 InterpoplatePosition(float animationTime);
+		float GetScaleFactor(float lastTime, float nextTime, float animationTime);
+		glm::mat4 InterpolatePosition(float animationTime);
 		glm::mat4 InterpolateRotation(float animationTime);
 		glm::mat4 InterpolateScale(float animationTime);
 	};

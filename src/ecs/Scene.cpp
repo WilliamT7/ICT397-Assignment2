@@ -113,7 +113,26 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 	// get meshes
 	for (auto& entity : entities)
 	{
-		entity->Render(graphics);
+		if (entity->HasComponent<MeshRendererComponent>())
+		{
+			auto mesh = entity->GetComponent<MeshRendererComponent>();
+			mesh->Render(graphics);
+
+			// if it has animationcomponent, apply that
+
+			// then
+			// mesh->FinalRender(graphics)
+			// FinalRender is to ensure that the uniforms set in
+			// animationcomponent is applied before drawing
+			// because mesh renderer should not be coupled to animation		
+		}
+	}
+
+	// get 2D stuff to draw because it must be on top of everything else
+	for (auto& entity : entities)
+	{
+		if (entity->HasComponent<TextureRendererComponent>())
+			entity->GetComponent<TextureRendererComponent>()->Render(graphics);
 	}
 }
 
