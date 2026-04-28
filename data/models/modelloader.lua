@@ -13,7 +13,7 @@ models = {
     },
     {
         Name = "MINT",
-        File = "mint\\mint.fbx"
+        File = "mint\\mint.gltf"
     },
     {
         Name = "ROCK",

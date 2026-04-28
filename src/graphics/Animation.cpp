@@ -102,17 +102,22 @@ namespace Graphics
 
 			if (boneInfoMap.find(boneName) == boneInfoMap.end())
 			{
-				std::cout << "Ignoring unknown bone in animation: " << boneName << std::endl;
+				boneInfoMap[boneName].id = boneCount;
+				boneCount++;
 			}
 
-			if (boneName == "Armature")
-				continue;
+			m_bones.push_back(Bone(channel->mNodeName.data,	boneInfoMap[channel->mNodeName.data].id, channel));
 
-			auto& info = boneInfoMap[boneName];
-			m_bones.push_back(Bone(boneName, info.id, channel));
+			//if (boneInfoMap.find(boneName) == boneInfoMap.end())
+			//{
+			//	std::cout << "Ignoring unknown bone in animation: " << boneName << std::endl;
+			//}
 
-			std::cout << "ANIM BONE: " << boneName
-				<< " -> " << info.id << std::endl;
+			//if (boneName == "Armature")
+			//	continue;
+
+			//auto& info = boneInfoMap[boneName];
+			//m_bones.push_back(Bone(boneName, info.id, channel));
 		}
 
 		m_boneInfoMap = boneInfoMap;

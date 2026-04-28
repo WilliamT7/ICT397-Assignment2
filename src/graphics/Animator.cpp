@@ -53,8 +53,6 @@ namespace Graphics
 		auto it = boneMap.find(nodeName);
 		if (it != boneMap.end())
 		{
-			std::cout << nodeName << " -> " << it->second.id << std::endl;
-
 			int index = it->second.id;
 
 			if (index >= 0 && index < m_finalBoneMatrices.size())

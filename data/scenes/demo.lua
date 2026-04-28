@@ -39,28 +39,6 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = 0,
-        position_y = 0,
-        position_z = 0,
-        rotation_x = 0,
-        rotation_y = 0,
-        rotation_z = 0,
-        scale_x = 45,
-        scale_y = 45,
-        scale_z = 45
-      } --[[table: 000002175562BCD0]],
-      {
-        ModelID = "SKY BOX",
-        Name = "MeshRenderer",
-        ShaderID = 1
-      } --[[table: 000002175562BD50]]
-    } --[[table: 000002175562C9D0]],
-    EntityName = "Skybox"
-  } --[[table: 000002175562BAD0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
         position_x = 37.866565704345703,
         position_y = -7.4636411666870117,
         position_z = -64.309341430664062,
