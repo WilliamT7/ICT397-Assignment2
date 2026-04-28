@@ -82,7 +82,7 @@ public:
 	* @param index - index to access a lua file in this object
 	* @return - ScriptFile: scriptFile at index (index)
 	*/
-	const ScriptFile& const operator[](const int index) const;
+	const ScriptFile const operator[](const int index) const;
 
 
 
@@ -94,7 +94,7 @@ public:
 	* @param name - name of file to search for
 	* @return - ScriptFile: Non-modifiable pointer to a scriptFile in scriptManager
 	*/
-	ScriptFile* const searchForFile(const string& const name);
+	ScriptFile const searchForFile(const string& const name);
 	
 
 private:

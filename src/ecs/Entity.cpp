@@ -5,6 +5,10 @@
 #include <filesystem>
 #include "ecs/AllComponentsInclude.h"
 
+//DELETE
+#include <iostream>
+using std::cout;
+
 //----------------------------------------------
 
 ECS::Entity::Entity()
@@ -112,7 +116,7 @@ sol::table ECS::Entity::SerialiseComponents(sol::state& lua) const
 	// serialise scripts
 	for (auto& pair : scripts)
 	{
-		auto& script = pair.second;
+		auto script = pair.second;
 		comps.add(script.SerialiseComponent(lua));
 	}
 
@@ -154,6 +158,15 @@ void ECS::Entity::ImGui()
 		auto& component = pair.second;
 		component->ImGui();
 	}
+	int id = 0;
+	for (auto& pair : scripts) {
+		auto& script = pair.second;
+		ImGui::PushID(id);
+		script.ImGui();
+		ImGui::PopID();
+		id++;
+	}
+
 }
 
 //----------------------------------------------
@@ -189,7 +202,7 @@ ECS::ScriptComponent& ECS::Entity::GetScriptComponent(std::string scriptName)
 //----------------------------------------------
 
 bool ECS::Entity::HasScriptComponent(std::string scriptName) const
-{
+{	
 	return scripts.find(scriptName) != scripts.end();
 }
 

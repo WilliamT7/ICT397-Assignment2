@@ -113,7 +113,7 @@ public:
 	* @return - scriptGlobal: script global that can be modifed
 	*
 	**/
-	scriptGlobal& const getGlobal(const int index);
+	scriptGlobal getGlobal(const int index) const;
 
 	/** addGlobal
 	* @author - Seb D'Alessandro

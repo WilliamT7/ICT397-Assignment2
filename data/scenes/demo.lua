@@ -90,6 +90,11 @@ scene = {
 		fileName = "crossScriptTest1.lua",
 		filePath = "..\\data\\luaScripts\\"
 	  },
+	  {
+		Name = "Script",
+		fileName = "crossScriptTest2.lua",
+		filePath = "..\\data\\luaScripts\\"
+	  },
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -129,7 +134,12 @@ scene = {
         Name = "Script",
         fileName = "terraintoggle.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000001EE2719EFD0]]
+      }, --[[table: 000001EE2719EFD0]]
+	  {
+		Name = "Script",
+		fileName = "crossScriptTest1.lua",
+		filePath = "..\\data\\luaScripts\\"
+	  },
     } --[[table: 000001EE2719E9D0]],
     EntityName = "Terrain"
   } --[[table: 000001EE2719E250]],

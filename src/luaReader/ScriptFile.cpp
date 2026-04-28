@@ -77,7 +77,7 @@ const int ScriptFile::totalGlobals() const {
 
 //---------------------------------------------------
 
-scriptGlobal& const ScriptFile::getGlobal(const int index) {
+scriptGlobal ScriptFile::getGlobal(const int index) const {
 
 	return globals[index];
 

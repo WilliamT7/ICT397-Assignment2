@@ -116,6 +116,10 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 	bool canRunFunction = file.isValid() && findFunction(file, functionName);
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 
+
+	cout << "scriptName: " << file.getFileName() << "\n";
+	cout << "scriptFile Address: " << &file << "\n";
+
 	if (canRunFunction && validFunctionParameters) {
 		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
@@ -151,22 +155,15 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 void SolScripting::runByFileName(string fileName, string functionName, ECS::Entity* entity) {
 
 
-	LuaScriptManager* scriptManager = Singleton<LuaScriptManager>::getInstance();
+	if (entity->HasScriptComponent(fileName)) {
 
-	ScriptFile* foundScript = scriptManager->searchForFile(fileName);
-
-	if (foundScript != nullptr) {
-
-		ScriptFile fileToRun = *foundScript;
+		ScriptFile fileToRun = entity->GetScriptComponent(fileName).getScript();
 		run(fileToRun, functionName, entity);
-		
 
 	}
 	else {
-		cout << "[C++] Cannot find " << fileName << "\n";
+		cout << "[C++] Unable to find " << fileName << "\n";
 	}
-
-
 }
 
 //----------------------------------------------
@@ -234,7 +231,7 @@ void SolScripting::updateGlobals(sol::state_view& solView, ScriptFile& const fil
 
 //-----------------------------------------
 
-//TODO split me up i hate this
+//TODO split me up i hate my own creation
 void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity* entity) {
 
 	solView.new_usertype <ECS::Entity >(
@@ -433,7 +430,21 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 }
 
 
-//---------------------------------------------------------------
+
+
+
+
+
+
+
+
+//Iterate through each scripts file in scriptManager, expose each global
+
+
+
+
+
+//-------------------------------------------------------------------
 
 string SolScripting::getString(int returnNo)  {
 
