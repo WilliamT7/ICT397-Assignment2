@@ -228,6 +228,9 @@
     <ClCompile Include="..\src\luaReader\functionSearch.cpp">
       <Filter>Source Files\Lua-reader</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\luaReader\solExposedFunctionality.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\imgui-1.92.6\imconfig.h">
@@ -443,7 +446,7 @@
     <ClInclude Include="..\include\luaReader\functionSearch.h">
       <Filter>Header Files\Lua-reader</Filter>
     </ClInclude>
-    <ClInclude Include="SolScriptingExposedFunctionality.h">
+    <ClInclude Include="..\include\luaReader\solExposedFunctionality.h">
       <Filter>Header Files\Lua-reader</Filter>
     </ClInclude>
   </ItemGroup>
