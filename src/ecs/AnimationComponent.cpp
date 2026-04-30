@@ -33,7 +33,7 @@ namespace ECS
 	void AnimationComponent::Play(const std::string& animationName)
 	{
 		Graphics::Model * model = mesh->model;
-		auto anim = Graphics::AnimationManager::Get().GetAnimation("walk", model);
+		auto anim = Graphics::AnimationManager::Get().GetAnimation(animationName, model);
 		m_animator = Graphics::Animator(anim.get());
 		m_animator.PlayAnimation(anim.get());
 	}

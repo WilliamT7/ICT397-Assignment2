@@ -7,6 +7,7 @@
 #include "physics/BulletPhysicsWorld.h"
 #include "graphics/HardCodedModels.h"
 #include "graphics/HardCodedTextures.h"
+#include "graphics/AnimationManager.h";
 #include "luareader/LuaExposedEngineFunctionality.h"
 
 void Update();
@@ -67,6 +68,7 @@ int main(int argc, char **argv)
 
     LoadModelFiles(lua);
     LoadTextureFiles(lua, graphicsHandler);
+    Graphics::AnimationManager::Get().LoadInAnimations(lua);
     scene = ECS::SceneLoader::CreateScene(lua, physicsWorld, sceneName.c_str());
 
     // Main Loop :D

@@ -8,8 +8,43 @@ namespace Graphics
 		return instance;
 	}
 
-	bool AnimationManager::LoadInAnimations()
+	bool AnimationManager::LoadInAnimations(sol::state& lua)
 	{
+		std::string file = "..\\data\\models\\animationloader.lua";
+		std::cout << "[C++]: Notice: AnimationManager: Reading in animationloader.lua\n";
+
+		try
+		{
+			lua.script_file(file);
+		}
+		catch (const sol::error& e)
+		{
+			throw new std::runtime_error("[C++]: Error: SOL: Unable to open " + file);
+		}
+
+		sol::table data = lua["animations"];
+
+		std::string path = "..\\data\\models\\";
+
+		for (auto& animPair : data)
+		{
+			std::string modelName = animPair.first.as<std::string>();
+			sol::table animData = animPair.second;
+
+			for (auto& anim : animData)
+			{
+				std::string animName = anim.first.as<std::string>();
+				std::string fileName = anim.second.as<std::string>();
+
+				std::string key = animName + ":" + modelName;
+				std::string fullPath = path + fileName;
+
+				m_animationPaths[key] = fullPath;
+			}
+		}
+
+		std::cout << "[C++]: Notice: Finished reading in animationloader.lua";
+
 		return true; // for now
 	}
 
@@ -35,22 +70,17 @@ namespace Graphics
 		std::string modelName = model->GetName();
 		std::string newKey = MakeKey(name, model);
 
-		/*
-		* since the animation only stores one animation (.fbx) per model
-		* I need the lua thingy to go
-		* Slime = {
-		* walk = "slime_walk.fbx"
-		* }
-		* etc. and grab it from there.
-		*/
+		auto it = m_animationPaths.find(newKey);
+		if (it == m_animationPaths.end())
+		{
+			throw new std::runtime_error("[C++]: ERROR: AnimationManager: Animation " + name + " for model " + modelName);
+		}
 
-		//std::string filePath = data.GetFilePath(modelName, name);
-		// TODO: data is an AnimationDatabase that stores the lua shit
-		// which gives the filepath via modelname and animationame
-		// for now, hardcode
-		std::string filePath = "../data/models/mint/mint_walk.fbx";
+		std::string filePath = it->second;
+
 		auto anim = std::make_shared<Animation>(filePath, model);
 		m_animations[newKey] = anim;
+
 		return anim;
 	}
 }
