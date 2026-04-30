@@ -19,6 +19,7 @@ namespace ECS
 
 	void AnimationComponent::Start()
 	{
+		m_currentAnimationName = "";
 		mesh = entity->GetComponent<ECS::MeshRendererComponent>();
 	}
 
@@ -32,6 +33,10 @@ namespace ECS
 
 	void AnimationComponent::Play(const std::string& animationName)
 	{
+		if (m_currentAnimationName == animationName)
+			return;
+
+		m_currentAnimationName = animationName;
 		Graphics::Model * model = mesh->model;
 		auto anim = Graphics::AnimationManager::Get().GetAnimation(animationName, model);
 		m_animator = Graphics::Animator(anim.get());

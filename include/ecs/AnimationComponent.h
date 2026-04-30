@@ -31,5 +31,6 @@ namespace ECS
 		MeshRendererComponent* mesh = nullptr; // grab model and shader from here i presume
 		//std::shared_ptr<Graphics::Animation> currentAnimation = nullptr;
 		Graphics::Animator m_animator;
+		std::string m_currentAnimationName;
 	};
 }
