@@ -8,7 +8,6 @@
 #include "other\singleton.h"
 #include "luaReader\luaScriptManager.h"
 
-
 #include "luaReader\luaIO.h";
 
 //Namespaces----------------------------------------------------

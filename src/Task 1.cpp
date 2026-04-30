@@ -42,7 +42,7 @@ int main(int argc, char **argv)
     graphicsHandler = Graphics::GraphicsFactory::Create(Graphics::OPENGL);
 
     // Make Window
-    window->CreateWindow(width, height, "TEST", graphicsHandler);
+    window->CreateWindow(width, height, "ICT397 Engine", graphicsHandler);
     graphicsHandler->Init(width, height);
   
     //Load scripts into scriptManager singleton

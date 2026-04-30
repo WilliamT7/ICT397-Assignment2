@@ -156,13 +156,23 @@ void ECS::Scene::ImGui()
 		"Physics",
 		"Terrain",
 		"Texture Renderer",
+		"Script"
 	};
 
 	// add component to entity
 	auto& entity = entities[selectedEntity];
 	if (ImGui::TreeNode("Add Component"))
 	{
+		static char ScriptFileBuffer[32];
+		const string scriptPath = "..\\data\\luaScripts\\";
+
+		if (items[selectedItem] == "Script") {
+			ImGui::Text(("Default path: " + scriptPath).c_str()); //nothing to see here
+			ImGui::InputText("Script Name", ScriptFileBuffer, IM_COUNTOF(ScriptFileBuffer));
+		}
+
 		ImGui::Combo("Component", &selectedItem, items, IM_ARRAYSIZE(items));
+
 
 		if (ImGui::Button("Add"))
 		{
@@ -211,7 +221,15 @@ void ECS::Scene::ImGui()
 			case 6:
 				entity->AddComponent<TextureRendererComponent>();
 				break;
+
+			case 7:
+				
+				entity->AddScriptComponent("..\\data\\luaScripts\\" + string(ScriptFileBuffer));
+				break;
+
 			}
+
+			
 		}
 		ImGui::TreePop();
 	}

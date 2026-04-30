@@ -161,12 +161,7 @@ void SolScripting::runByFileName(string fileName, string functionName, ECS::Enti
 	}
 }
 
-//----------------------------------------------
-
-void exposeGlobalsInEntity(ECS::Entity* entity) {
-
-}
-
+//--------------------------------------------------------------------------
 
 void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 

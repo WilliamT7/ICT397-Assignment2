@@ -220,13 +220,6 @@ private:
 	*/
 	void exposeEntityComponents(sol::state_view& solView, ECS::Entity* entity);
 
-	/*
-	* 
-	* 
-	* 
-	*/
-
-
 
 	///Lua state
 	lua_State* LuaState;
