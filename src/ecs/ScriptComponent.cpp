@@ -116,15 +116,26 @@ sol::table ECS::ScriptComponent::SerialiseComponent(sol::state& lua) const
 }
 
 //-----------------------------------------------------------
+void ECS::ScriptComponent::setGlobal(const string& const globalName, const string& const newValue) {
+
+	bool changedGlobal = luaFile.changeGlobal(globalName, newValue);
+
+	if (!changedGlobal) {
+		cout << "[C++] Unable to change Lua global " << globalName << " to " << newValue << "\n";
+	}
+
+};
 
 
+
+//-----------------------------------------------------------
 scriptGlobal const ECS::ScriptComponent::operator[](const string& const globalName) {
 
 	const int totalGlobals = luaFile.totalGlobals();
 	bool found = false;
 	int foundIndex = -1;
 
-	for (int curGlobal = 0; curGlobal < totalGlobals && foundIndex != -1; curGlobal++) {
+	for (int curGlobal = 0; curGlobal < totalGlobals && foundIndex == -1; curGlobal++) {
 
 		const scriptGlobal& const global = luaFile.getGlobal(curGlobal);
 		if (global.name == globalName) {
@@ -142,10 +153,6 @@ scriptGlobal const ECS::ScriptComponent::operator[](const string& const globalNa
 
 //-------------------------------------------------------------------------
 void ECS::ScriptComponent::ImGui() {
-
-	string fileName = luaFile.getFileName();
-	int fileID = sizeof(fileName);
-
 
 	if (ImGui::CollapsingHeader("Script", ImGuiTreeNodeFlags_None)) {
 		

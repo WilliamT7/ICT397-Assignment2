@@ -53,6 +53,9 @@ namespace ECS {
 		ScriptFile const getScript();
 
 
+		void setGlobal(const string& const globalName, const string& const newValue);
+
+
 		/** setScript
 		* @author - Seb D'Alessandro
 		* @brief - Sets the script for the scriptComponent to run

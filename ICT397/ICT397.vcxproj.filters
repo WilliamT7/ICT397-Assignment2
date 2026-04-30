@@ -443,6 +443,9 @@
     <ClInclude Include="..\include\luaReader\functionSearch.h">
       <Filter>Header Files\Lua-reader</Filter>
     </ClInclude>
+    <ClInclude Include="SolScriptingExposedFunctionality.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\shaders\transform.vert.glsl">

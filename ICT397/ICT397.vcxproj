@@ -144,6 +144,7 @@
     <ClInclude Include="..\include\terrain\TerrainLighting.h" />
     <ClInclude Include="..\include\terrain\TerrainStrategy.h" />
     <ClInclude Include="..\include\terrain\TextureTerrain.h" />
+    <ClInclude Include="SolScriptingExposedFunctionality.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\shaders\2dtextures.frag.glsl" />

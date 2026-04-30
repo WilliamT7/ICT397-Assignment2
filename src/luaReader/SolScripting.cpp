@@ -116,10 +116,6 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 	bool canRunFunction = file.isValid() && findFunction(file, functionName);
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 
-
-	cout << "scriptName: " << file.getFileName() << "\n";
-	cout << "scriptFile Address: " << &file << "\n";
-
 	if (canRunFunction && validFunctionParameters) {
 		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
@@ -140,8 +136,8 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 		
 	}
 	else {
-		cout << "!!!SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
-		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
+		//cout << "!!!SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
+		//cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
 	}
 
 	if (LuaState != nullptr) {
@@ -168,12 +164,19 @@ void SolScripting::runByFileName(string fileName, string functionName, ECS::Enti
 
 //----------------------------------------------
 
+void exposeGlobalsInEntity(ECS::Entity* entity) {
+
+}
+
+
 void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	LuaEngineFunctionality* luaEngineLink = Singleton<LuaEngineFunctionality>::getInstance();
 
 	bool assigned = luaEngineLink->windowFuncAssigned();
 
+
+	//Window functionality------------------------------
 	if (luaEngineLink->windowFuncAssigned()) {
 		solView.set_function("GetKeyPress", &Window::GetKeyPress, luaEngineLink->getWindowPointer());
 		solView.set_function("GetKeyDown", &Window::GetKeyDown, luaEngineLink->getWindowPointer());
@@ -191,7 +194,7 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 	}
 
 
-	//Expose solScripting (very meta)
+	//Expose solScripting (very meta)--------------------
 	solView.new_usertype <SolScripting >(
 		"luaScript",
 		sol::constructors<SolScripting>(),
@@ -201,8 +204,10 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	);
 
-
 	solView.set_function("run", &SolScripting::runByFileName);
+
+	
+
 
 }
 
@@ -234,11 +239,32 @@ void SolScripting::updateGlobals(sol::state_view& solView, ScriptFile& const fil
 //TODO split me up i hate my own creation
 void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity* entity) {
 
+	//Entity specfic stuff-----------------------------
 	solView.new_usertype <ECS::Entity >(
 		"Entity",
-		sol::constructors<ECS::Entity>()
+		sol::constructors<ECS::Entity>(),
+		"getScriptComponent",
+		&ECS::Entity::GetScriptComponent,
+		"hasScript",
+		&ECS::Entity::HasScriptComponent,
+		"addComponent",
+		&ECS::Entity::AddComponentByName
 	);
 
+	solView.set_function("getScriptComponent", &ECS::Entity::GetScriptComponent);
+	solView.set_function("hasScript", &ECS::Entity::HasScriptComponent);
+	solView.set_function("addComponent", &ECS::Entity::AddComponentByName);
+
+	//Script global-------------------------------
+	solView.new_usertype <scriptGlobal>(
+		"scriptGlobal",
+		sol::constructors <scriptGlobal>(),
+		"value",
+		&scriptGlobal::value
+	);
+
+
+	//general datatypes------------------------------
 	solView.new_usertype<Vector3>(
 		"Vector3",
 		sol::constructors<
@@ -264,6 +290,19 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		"normalize", &Vector2::Normalize
 	);
 
+	//Script component--------------------------------------
+	solView.new_usertype<ECS::ScriptComponent>(
+		"ScriptComponent",
+		sol::constructors<ECS::ScriptComponent>(),
+		"getGlobal",
+		&ECS::ScriptComponent::operator[],
+		"setGlobal",
+		&ECS::ScriptComponent::setGlobal
+	);
+
+	solView.set_function("getGlobal", &ECS::ScriptComponent::operator[]);
+	solView.set_function("setGlobal", &ECS::ScriptComponent::setGlobal);
+	//---------------------------------------------------
 
 	if (entity->HasComponent<ECS::TransformComponent>()) {
 
@@ -422,24 +461,8 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		solView.set_function("setEnabled", &ECS::TextureRendererComponent::setEnabled);
 
 	}
-	
 
-	
-	
-	//TODO how the heck is script component going to work?
 }
-
-
-
-
-
-
-
-
-
-
-//Iterate through each scripts file in scriptManager, expose each global
-
 
 
 

@@ -5,9 +5,6 @@
 #include <filesystem>
 #include "ecs/AllComponentsInclude.h"
 
-//DELETE
-#include <iostream>
-using std::cout;
 
 //----------------------------------------------
 
