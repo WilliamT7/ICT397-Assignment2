@@ -11,5 +11,6 @@
 #include "ecs/PhysicsComponent.h"
 #include "ecs/TextureRendererComponent.h"
 #include "ecs/AnimationComponent.h"
+#include "ecs/PhysicsTriggerComponent.h"
 
 //----------------------------------------------

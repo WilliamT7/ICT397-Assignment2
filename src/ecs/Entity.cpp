@@ -53,6 +53,8 @@ ECS::Component* ECS::Entity::AddComponentByName(std::string name)
 		return AddComponent<TextureRendererComponent>();
 	if (name == "Animation")
 		return AddComponent<AnimationComponent>();
+	if (name == "PhysicsTrigger")
+		return AddComponent<PhysicsTriggerComponent>();
 
 	return nullptr;
 }

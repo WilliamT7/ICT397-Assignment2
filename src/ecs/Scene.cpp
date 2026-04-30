@@ -6,6 +6,7 @@
 #include "ecs/Entity.h"
 #include "graphics/ShaderType.h"
 #include "physics/BulletPhysicsWorld.h"
+#include <ecs/PhysicsTriggerComponent.h>
 
 #include "ecs/SceneLoader.h"
 #include "imgui_impl_opengl3.h" // for now
@@ -31,6 +32,8 @@ void ECS::Scene::Update(float deltaTime)
 	{
 		entity->Update(deltaTime);
 	}
+
+	ProcessTriggers();
 }
 
 //----------------------------------------------
@@ -92,6 +95,8 @@ void ECS::Scene::InjectPhysicsWorld(Entity* entity)
 		terrain->SetPhysicsWorld(m_physicsWorld);
 	}
 }
+
+
 
 
 //----------------------------------------------
@@ -173,6 +178,7 @@ void ECS::Scene::ImGui()
 		"Terrain",
 		"Texture Renderer",
 		"Script"
+		"Physics Trigger"
 	};
 
 	// add component to entity
@@ -244,6 +250,9 @@ void ECS::Scene::ImGui()
 				entity->AddScriptComponent("..\\data\\luaScripts\\" + string(ScriptFileBuffer) + ".lua");
 				break;
 
+			case 7:
+				entity->AddComponent<PhysicsTriggerComponent>();
+				break;
 			}
 
 			
@@ -265,3 +274,25 @@ void ECS::Scene::ImGui()
 }
 
 //----------------------------------------------
+//i couldnt think of a better place to put this?
+// since it needs to be called after each physics step and then checks the entities easier so idk.
+void ECS::Scene::ProcessTriggers()
+{
+	for (auto& triggerEntity : entities)
+	{
+		if (!triggerEntity->HasComponent<PhysicsTriggerComponent>())
+			continue;
+
+		PhysicsTriggerComponent* trigger =
+			triggerEntity->GetComponent<PhysicsTriggerComponent>();
+
+		trigger->BeginTriggerCheck();
+
+		for (auto& otherEntity : entities)
+		{
+			trigger->CheckAgainst(otherEntity.get());
+		}
+
+		trigger->EndTriggerCheck();
+	}
+}
