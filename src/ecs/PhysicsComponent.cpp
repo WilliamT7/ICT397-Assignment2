@@ -184,11 +184,6 @@ void ECS::PhysicsComponent::ClearForces()
         physicsBody->ClearForces();
 }
 
-Vector3 ECS::PhysicsComponent::GetHalfExtents() const
-{
-    return m_halfExtents;
-}
-
 void ECS::PhysicsComponent::DeserialiseComponentTable(sol::table& data)
 {
     m_shape = data["shape"];

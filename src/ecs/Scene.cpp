@@ -9,7 +9,6 @@
 
 #include "ecs/SceneLoader.h"
 #include "imgui_impl_opengl3.h" // for now
-#include <ecs/PhysicsTriggerComponent.h>
 
 //----------------------------------------------
 
@@ -32,8 +31,6 @@ void ECS::Scene::Update(float deltaTime)
 	{
 		entity->Update(deltaTime);
 	}
-
-	ProcessTriggers();
 }
 
 //----------------------------------------------
@@ -175,7 +172,6 @@ void ECS::Scene::ImGui()
 		"Physics",
 		"Terrain",
 		"Texture Renderer",
-		"Physics Trigger"
 	};
 
 	// add component to entity
@@ -231,9 +227,6 @@ void ECS::Scene::ImGui()
 			case 6:
 				entity->AddComponent<TextureRendererComponent>();
 				break;
-			case 7:
-				entity->AddComponent<PhysicsTriggerComponent>();
-				break;
 			}
 		}
 		ImGui::TreePop();
@@ -253,26 +246,3 @@ void ECS::Scene::ImGui()
 }
 
 //----------------------------------------------
-
-//i couldnt think of a better place to put this?
-// since it needs to be called after each physics step and then checks the entities easier so idk.
-void ECS::Scene::ProcessTriggers()
-{
-	for (auto& triggerEntity : entities)
-	{
-		if (!triggerEntity->HasComponent<PhysicsTriggerComponent>())
-			continue;
-
-		PhysicsTriggerComponent* trigger =
-			triggerEntity->GetComponent<PhysicsTriggerComponent>();
-
-		trigger->BeginTriggerCheck();
-
-		for (auto& otherEntity : entities)
-		{
-			trigger->CheckAgainst(otherEntity.get());
-		}
-
-		trigger->EndTriggerCheck();
-	}
-}
