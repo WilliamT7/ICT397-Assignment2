@@ -107,6 +107,16 @@ namespace ECS
 		**/
 		void InjectPhysicsWorld(Entity* entity);
 
+		/** ProcessTriggers
+		* @author - William Thorpe
+		* @brief - Processes physics trigger checks for all entities in the scene, handling trigger
+		* @param - None
+		* @pre - Scene has been updated and entities have potentially moved, physics trigger components
+		* @post - Checks all entities for trigger components and processes any trigger events that have occurred
+		* @return - None
+		**/
+		void ProcessTriggers();
+
 	private:
 		std::vector<std::unique_ptr<Entity>> entities;
 
