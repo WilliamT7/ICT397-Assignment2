@@ -230,6 +230,20 @@
     </ClCompile>
     <ClCompile Include="..\src\luaReader\solExposedFunctionality.cpp">
       <Filter>Source Files\Lua-reader</Filter>
+    <ClCompile Include="..\src\graphics\Bone.cpp">
+      <Filter>Source Files\Graphics\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Animation.cpp">
+      <Filter>Source Files\Graphics\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Animator.cpp">
+      <Filter>Source Files\Graphics\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\AnimationComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\AnimationManager.cpp">
+      <Filter>Source Files\Graphics\Data</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -448,6 +462,20 @@
     </ClInclude>
     <ClInclude Include="..\include\luaReader\solExposedFunctionality.h">
       <Filter>Header Files\Lua-reader</Filter>
+    <ClInclude Include="..\include\graphics\Animation.h">
+      <Filter>Header Files\Graphics\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Bone.h">
+      <Filter>Header Files\Graphics\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\Animator.h">
+      <Filter>Header Files\Graphics\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\AnimationComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\AnimationManager.h">
+      <Filter>Header Files\Graphics\Data</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -467,6 +495,18 @@
       <Filter>Resource Files\Shaders</Filter>
     </None>
     <None Include="..\data\shaders\2dtextures.frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\psx.vert.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\quad.vert.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\crtfilter.frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\data\shaders\psxanim.vert.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </None>
   </ItemGroup>

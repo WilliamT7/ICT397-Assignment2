@@ -11,7 +11,7 @@ std::vector<std::string> ModelNameList;
 
 void LoadModelFiles(sol::state& lua)
 {
-	std::string file = "../data/models/modelloader.lua";
+	std::string file = "..\\data\\models\\modelloader.lua";
 
 	try
 	{
@@ -25,7 +25,7 @@ void LoadModelFiles(sol::state& lua)
 
 	sol::table models = lua["models"];
 
-	std::string path = "../data/models/";
+	std::string path = "..\\data\\models\\";
 
 	for (auto& pair : models) // so for every table in the table.
 	{

@@ -113,7 +113,23 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 	// get meshes
 	for (auto& entity : entities)
 	{
-		entity->Render(graphics);
+		if (entity->HasComponent<MeshRendererComponent>())
+		{
+			auto mesh = entity->GetComponent<MeshRendererComponent>();
+			mesh->Render(graphics);
+		}
+
+		if (entity->HasComponent<TerrainComponent>())
+		{
+			entity->GetComponent<TerrainComponent>()->Render(graphics);
+		}
+	}
+
+	// get 2D stuff to draw because it must be on top of everything else
+	for (auto& entity : entities)
+	{
+		if (entity->HasComponent<TextureRendererComponent>())
+			entity->GetComponent<TextureRendererComponent>()->Render(graphics);
 	}
 }
 

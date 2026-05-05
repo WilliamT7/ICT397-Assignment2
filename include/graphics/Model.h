@@ -6,11 +6,13 @@
  *			this is the only time assimp is used.
  *			Most of this code is from Learn OpenGL
  *
- * @version 1.1
+ * @version 1.2
  * @date 25/02/2026 Kay Bradsell
  *				1.0 Creation
  * @date 30/03/2026 Kay Bradsell
  *				1.1 Updated for the Graphics refactor
+ * @date 25/04/2026 Kay Bradsell
+ *				1.2 Added Animation
 *********************************************/
 
 #pragma once
@@ -22,14 +24,32 @@
 #include "assimp/Importer.hpp"
 #include "assimp/scene.h"
 #include "assimp/postprocess.h"
+#include "glm/glm.hpp"
 #include <string>
 #include <vector>
+#include <map>
 
 //----------------------------------------------
 
 namespace Graphics
 {
+	/** Bone Info
+	 * @author - Kay Bradsell
+	 * @brief - stores index and matrice transformations from model space to bone space
+	 */
+	struct BoneInfo
+	{
+		int id;
+
+		// since i cant use glm::mat4s here, we use Vector3s and conver tot glm::mat4 later??? i think?
+		glm::mat4 offset;
+	};
+
+	//----------------------------------------------
+
 	class Graphics;
+
+	//----------------------------------------------
 
 	class Model
 	{
@@ -84,10 +104,18 @@ namespace Graphics
 		**/
 		Model(const std::vector<Mesh>& meshes);
 
+		const std::string& GetName() const;
+		void SetName(const std::string& name);
+		std::map<std::string, BoneInfo>& GetBoneInfoMap();
+		int GetBoneCount() const;
+
 	private:
 		std::vector<Mesh> m_meshes;
 		std::string m_directory;
+		std::string m_name;
 		std::string m_path;
+		std::map<std::string, BoneInfo> m_boneInfoMap;
+		int m_boneCounter = 0;
 		Graphics* m_graphics = nullptr;
 
 		// Ngl from this point onwards its LearnOpenGL code because I don't understand Assimp
@@ -130,6 +158,12 @@ namespace Graphics
 		* @post - Loads in all information from .mtl file into vector of Textures
 		**/
 		std::vector<Texture*> LoadMaterialTextures(aiMaterial* mat, aiTextureType type, const std::string& typeName);
+
+		void SetVertexBoneDataToDefault(Vertex& vertex);
+		void SetVertexBoneData(Vertex& vertex, int boneID, float weight);
+		void ExtractBoneWeightForVertices(std::vector<Vertex>& vertices, aiMesh* mesh, const aiScene* scene);
+
+		static glm::mat4 ConvertAssimpMatrixToGLM(const aiMatrix4x4& m);
 	};
 }
 

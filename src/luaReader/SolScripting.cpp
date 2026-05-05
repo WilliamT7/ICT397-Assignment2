@@ -7,10 +7,7 @@
 #include "LuaReader\luaScriptManager.h"
 #include "LuaReader\functionSearch.h"
 
-#include "ECS\PhysicsComponent.h"
-#include "ECS\MeshRendererComponent.h"
-#include "ECS\TerrainComponent.h"
-#include "ecs\TextureRendererComponent.h"
+#include "ecs/AllComponentsInclude.h"
 
 
 //Namespaces----------------------------------------
@@ -216,6 +213,20 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 	if (entity->HasComponent<ECS::TransformComponent>()) {
 
 		exposeTransform(solView);
+
+	}
+
+	if (entity->HasComponent<ECS::AnimationComponent>()) {
+
+		solView.new_usertype <ECS::AnimationComponent >(
+			"AnimationComponent",
+			sol::constructors<ECS::AnimationComponent>(),
+			"play",
+			&ECS::AnimationComponent::Play
+		);
+
+		solView.set_function("getAnimation", &ECS::Entity::GetComponent<ECS::AnimationComponent>);
+		solView.set_function("play", &ECS::AnimationComponent::Play);
 
 	}
 	
