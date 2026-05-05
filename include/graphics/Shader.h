@@ -27,6 +27,8 @@
 #include "Vector3.h"
 #include "Vector4.h"
 
+#include "glm/glm.hpp"
+
 //----------------------------------------------
 
 namespace Graphics
@@ -126,6 +128,8 @@ namespace Graphics
 		* @post - Applies Vector4 to uniform from name
 		**/
 		virtual void SetVector4(const std::string& name, const Vector4& value) const = 0;
+
+		virtual void SetMat4(const std::string& name, glm::mat4 value) const = 0;
 	};
 }
 

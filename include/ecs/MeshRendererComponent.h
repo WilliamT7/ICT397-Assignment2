@@ -27,6 +27,7 @@
 namespace ECS
 {
 	class TransformComponent;
+	class AnimationComponent;
 
 	class MeshRendererComponent : public Component
 	{
@@ -136,6 +137,7 @@ namespace ECS
 	private:
 		std::string ModelID = "AMYROSE"; // reference to model
 		TransformComponent* transform = nullptr;
+		AnimationComponent* animator = nullptr;
 		Graphics::Graphics* g = nullptr;
 	};
 }

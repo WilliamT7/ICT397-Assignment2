@@ -140,7 +140,7 @@ namespace Graphics
 		* @pre - Model and Shader have been loaded, Graphics object has been constructed, and transform has valid data
 		* @post - Draws model to world
 		**/
-		void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform) override;
+		void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform, Animator* animator) override;
 
 		/** Draw 2D Texture
 		* @author - Kay Bradsell
@@ -236,9 +236,18 @@ namespace Graphics
 		**/
 		void Set2DMode(bool enabled);
 
+		void BeginRender();
+
+		void EndRender();
+
 	private:
 		glm::mat4 m_model, m_view, m_projection2D, m_projection3D;
 		bool m_3DMode = true;
+
+		// post processing stuff
+		unsigned int framebuffer;
+		unsigned int textureColourbuffer;
+		unsigned int rbo; // render buffer object
 
 		std::unordered_map<ShaderType, ShaderOpenGL*> m_shaders;
 		std::unordered_map<std::string, TextureOpenGL*> m_textures;
@@ -266,7 +275,7 @@ namespace Graphics
 		* @pre - Mesh, Shader, and Transform all have valid data, Graphics has been constructed
 		* @post - Draws the Mesh to world.
 		**/
-		void DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform);
+		void DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform, Animator* animator);
 
 		/** Set Lighting
 		* @author - Kay Bradsell
