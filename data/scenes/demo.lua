@@ -63,7 +63,18 @@ scene = {
         Name = "Script",
         fileName = "playerInput.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002175562CAD0]],
+      } --[[table: 000001EE2719E6D0]],
+	  {
+        Name = "Script",
+        fileName = "incrementTimer.lua",
+        filePath = "..\\data\\luaScripts\\"
+      },
+	  {
+        Name = "Script",
+        fileName = "timer.lua",
+        filePath = "..\\data\\luaScripts\\",
+		timer = "0"
+      },
       {
         Name = "Physics",
         halfExtents_x = 1,

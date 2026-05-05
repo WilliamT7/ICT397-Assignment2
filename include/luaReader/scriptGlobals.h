@@ -27,10 +27,10 @@ using std::string;
 typedef struct scriptGlobal {
 	
 	///Name of the global 
-	const string name;
+	string name;
 
 	///Data type that this global represents
-	const supportedDatatypes dataType;
+	supportedDatatypes dataType;
 
 	///Value of the global in string form
 	string value;

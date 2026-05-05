@@ -1,6 +1,9 @@
 //Project files-------------------------
 #include "luaReader\luaScriptManager.h";
 
+//Built-in files------------------------
+#include <stdexcept>
+
 //--------------------------------------
 
 LuaScriptManager::LuaScriptManager() {
@@ -17,7 +20,7 @@ void LuaScriptManager::addLuaFile(const ScriptFile newFile) {
 //--------------------------------------
 
 
-const ScriptFile& const LuaScriptManager::operator[](const int index) const {
+const ScriptFile const LuaScriptManager::operator[](const int index) const {
 
 	return luaFiles[index];
 	
@@ -29,8 +32,8 @@ const int LuaScriptManager::totalFiles() const {
 	return luaFiles.size();
 }
 //--------------------------------------
-
-ScriptFile* const LuaScriptManager::searchForFile(const string& const filePath) {
+//Possibly change this to specify filename
+ScriptFile const LuaScriptManager::searchForFile(const string& const filePath) {
 
 	bool found = false;
 	int foundIndex = -1;
@@ -41,7 +44,6 @@ ScriptFile* const LuaScriptManager::searchForFile(const string& const filePath) 
 
 		bool samePath = filePath == curScript.getPathName() + curScript.getFileName();
 
-
 		if (samePath) {
 			found = true;
 			foundIndex = curFile;
@@ -49,10 +51,10 @@ ScriptFile* const LuaScriptManager::searchForFile(const string& const filePath) 
 	}
 
 	if (found) {
-		return &luaFiles[foundIndex];
+		return luaFiles[foundIndex];
 	}
 	else {
-		return nullptr;
+		throw std::domain_error("[C++] Lua script manager cannot find file");
 	}
 
 

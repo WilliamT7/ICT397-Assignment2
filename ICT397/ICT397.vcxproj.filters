@@ -225,6 +225,11 @@
     <ClCompile Include="..\src\luaReader\LuaExposedEngineFunctionality.cpp">
       <Filter>Source Files\Lua-reader</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\luaReader\functionSearch.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\luaReader\solExposedFunctionality.cpp">
+      <Filter>Source Files\Lua-reader</Filter>
     <ClCompile Include="..\src\graphics\Bone.cpp">
       <Filter>Source Files\Graphics\Data</Filter>
     </ClCompile>
@@ -452,6 +457,11 @@
     <ClInclude Include="..\include\luaReader\LuaExposedEngineFunctionality.h">
       <Filter>Header Files\Lua-reader</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\luaReader\functionSearch.h">
+      <Filter>Header Files\Lua-reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\solExposedFunctionality.h">
+      <Filter>Header Files\Lua-reader</Filter>
     <ClInclude Include="..\include\graphics\Animation.h">
       <Filter>Header Files\Graphics\Data</Filter>
     </ClInclude>

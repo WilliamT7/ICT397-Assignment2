@@ -49,6 +49,13 @@ namespace ECS {
 		**/
 		void Update(float deltaTime);
 
+
+		ScriptFile const getScript();
+
+
+		void setGlobal(const string& const globalName, const string& const newValue);
+
+
 		/** setScript
 		* @author - Seb D'Alessandro
 		* @brief - Sets the script for the scriptComponent to run
@@ -93,7 +100,7 @@ namespace ECS {
 		*
 		* @note Will throw a domain error if the name doesn't exist in this scriptcomponent's scriptfile attribute
 		**/
-		scriptGlobal& const operator[](const string& const globalName) const;
+		scriptGlobal const operator[](const string& const globalName);
 
 		/** ImGui
 		* @author - Seb D'Alessandro
@@ -105,10 +112,13 @@ namespace ECS {
 		**/
 		void ImGui();
 
+
+
+
 	private:
 
 		///Script to run
-		ScriptFile* luaFile;
+		ScriptFile luaFile = ScriptFile("Unassigned", "unassigned");
 
 		
 		///Inidcates if a script has/hasn't been assigned to this component

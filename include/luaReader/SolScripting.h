@@ -114,6 +114,11 @@ public:
 	*/
 	void run(ScriptFile& const file, string functionName, ECS::Entity* entity);
 
+
+
+
+	void runByFileName(string fileName, string functionName, ECS::Entity* entity);
+
 	//Parameter passing-----------------------------------
 
 	/* passString
@@ -183,18 +188,6 @@ public:
 
 private:
 
-	/* foundFunction
-	* @author - Seb D'Alessandro
-	* @brief - Checks if the function exists in file
-	* @pre - file is constructed, presumably has/hasn't the functionName 
-	* @post - Function is found (or not)
-	* @param file - script file to search for function with the name functionName
-	* @param functionName - name of the function to search for
-	* @return bool - true if function was found, false if not
-	*/
-	bool foundFunction(const ScriptFile& const file, string& const functionName);
-
-
 	/* exposeEngineFunctions
 	* @author - Seb D'Alessandro
 	* @brief - Exposes engine functions to lua/sol for use
@@ -226,6 +219,7 @@ private:
 	* @return - void
 	*/
 	void exposeEntityComponents(sol::state_view& solView, ECS::Entity* entity);
+
 
 	///Lua state
 	lua_State* LuaState;

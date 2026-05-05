@@ -2,19 +2,28 @@
 
 #include "ECS/Entity.h"
 #include <iostream>
+#include <filesystem>
 #include "ecs/AllComponentsInclude.h"
+
 
 //----------------------------------------------
 
 ECS::Entity::Entity()
 {
 	// nothing ig
+	scripts = std::unordered_map<std::string, ScriptComponent>();
 }
 
 //----------------------------------------------
 
 void ECS::Entity::Update(float deltaTime)
 {
+	for (auto& pair : scripts)
+	{
+		auto& script = pair.second;
+		script.Update(deltaTime);
+	}
+
 	for (auto& pair : components)
 	{
 		auto& component = pair.second;
@@ -68,12 +77,22 @@ void ECS::Entity::DeserialiseComponentTable(sol::table& components)
 		std::string componentName = componentData["Name"];
 
 		// add the component
-		Component* comp = AddComponentByName(componentName);
-
-		if (!comp)
-			std::cout << "[C++]: ERROR: Component name doesn't exist";
+		if (componentName == "Script")
+		{
+			string filePath = componentData["filePath"];
+			string name = componentData["fileName"];
+			AddScriptComponent(filePath + name);
+			GetScriptComponent(name).DeserialiseComponentTable(componentData);
+		}
 		else
-			comp->DeserialiseComponentTable(componentData);
+		{
+			Component* comp = AddComponentByName(componentName);
+
+			if (!comp)
+				std::cout << "[C++]: ERROR: Component name doesn't exist";
+			else
+				comp->DeserialiseComponentTable(componentData);
+		}
 	}
 }
 
@@ -91,6 +110,13 @@ sol::table ECS::Entity::SerialiseComponents(sol::state& lua) const
 	{
 		auto& component = pair.second;
 		comps.add(component.get()->SerialiseComponent(lua));
+	}
+
+	// serialise scripts
+	for (auto& pair : scripts)
+	{
+		auto script = pair.second;
+		comps.add(script.SerialiseComponent(lua));
 	}
 
 	t["Components"] = comps;
@@ -131,6 +157,60 @@ void ECS::Entity::ImGui()
 		auto& component = pair.second;
 		component->ImGui();
 	}
+	int id = 0;
+	for (auto& pair : scripts) {
+		auto& script = pair.second;
+		ImGui::PushID(id);
+		script.ImGui();
+		ImGui::PopID();
+		id++;
+	}
+
+}
+
+//----------------------------------------------
+
+ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
+{
+	std::string scriptName = GetScriptName(filePath);
+	if (!HasScriptComponent(scriptName))
+	{
+		ScriptComponent comp = ScriptComponent();
+		comp.entity = this;
+		comp.setScript(filePath);
+
+		scripts[scriptName] = std::move(comp);
+	}
+
+	return GetScriptComponent(scriptName);
+}
+
+//----------------------------------------------
+
+ECS::ScriptComponent& ECS::Entity::GetScriptComponent(std::string scriptName)
+{
+	std::string name = GetScriptName(scriptName); // trim .lua
+	auto it = scripts.find(name);
+
+	if (it != scripts.end())
+		return it->second;
+
+	throw std::runtime_error("[C++]: ERROR: ECS: Trying to grab Script Component that hasn't been added");
+}
+
+//----------------------------------------------
+
+bool ECS::Entity::HasScriptComponent(std::string scriptName) const
+{	
+	return scripts.find(scriptName) != scripts.end();
+}
+
+//----------------------------------------------
+
+std::string ECS::Entity::GetScriptName(std::string filePath)
+{
+	std::filesystem::path path(filePath);
+	return path.stem().string();
 }
 
 //----------------------------------------------
