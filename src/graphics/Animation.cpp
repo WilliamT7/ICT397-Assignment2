@@ -42,13 +42,6 @@ namespace Graphics
 
 	//----------------------------------------------
 
-	Animation::~Animation()
-	{
-
-	}
-
-	//----------------------------------------------
-
 	Bone* Animation::FindBone(const std::string& name)
 	{
 		auto iter = std::find_if(m_bones.begin(), m_bones.end(), [&](const Bone& Bone) { return Bone.GetBoneName() == name;});
