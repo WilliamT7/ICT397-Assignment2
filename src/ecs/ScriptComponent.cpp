@@ -7,6 +7,7 @@
 #include "LuaReader\SolScripting.h"
 #include "other\singleton.h"
 #include "luaReader\luaScriptManager.h"
+#include "luaReader\functionSearch.h"
 
 #include "luaReader\luaIO.h";
 
@@ -24,14 +25,12 @@ ECS::ScriptComponent::ScriptComponent() {
 void ECS::ScriptComponent::Update(float deltaTime) {
 
 
-	if (scriptAssigned) {
+	if (scriptAssigned && hasUpdate) {
 		SolScripting scripting;
 		scripting.run(luaFile, "update", entity);
 
 	}
-	else {
-		cout << "ScriptComponent.cpp: Script unassigned when attempting to run Update()\n";
-	}
+
 }
 //------------------------------------------------------------
 
@@ -49,7 +48,16 @@ void ECS::ScriptComponent::setScript(string filePath) {
 	ScriptFile foundScript = scriptManager->searchForFile(filePath);
 
 	luaFile = foundScript;
+
 	scriptAssigned = true;
+
+	hasUpdate = findFunction(luaFile, "update");
+
+	if (!hasUpdate) {
+
+		cout << "[C++] ScriptComponent.cpp: Warning: script " << luaFile.getFileName() << " does not have an update(), it will not be run every frame\n";
+
+	}
 
 }
 

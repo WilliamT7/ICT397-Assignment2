@@ -120,9 +120,12 @@ namespace ECS {
 		///Script to run
 		ScriptFile luaFile = ScriptFile("Unassigned", "unassigned");
 
-		
 		///Inidcates if a script has/hasn't been assigned to this component
 		bool scriptAssigned = false;
+
+		//Indicates if this script component runs every frame
+		bool hasUpdate = false;
+
 
 	};
 }
