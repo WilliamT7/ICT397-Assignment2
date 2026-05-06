@@ -175,6 +175,15 @@
     <ClCompile Include="..\glad.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\FSM\ScriptState.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FSM\State.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\FSMComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
@@ -408,6 +417,18 @@
     <ClInclude Include="..\include\luaReader\functionSearch.h">
       <Filter>Header Files\Lua</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\ecs\FSMComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FSM\FSM.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FSM\ScriptState.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FSM\State.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\shaders\2dtextures.frag.glsl">
@@ -492,6 +513,12 @@
     </Filter>
     <Filter Include="Source Files\Terrain">
       <UniqueIdentifier>{f55278c6-3782-400e-8c20-6ff802f4f43f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FSM">
+      <UniqueIdentifier>{25921c37-2dca-4446-b285-deb53819c430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FSM">
+      <UniqueIdentifier>{46e33651-664c-44cc-a5ff-51d066034940}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

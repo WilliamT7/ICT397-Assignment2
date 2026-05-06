@@ -30,6 +30,7 @@
     <ClCompile Include="..\src\ecs\AnimationComponent.cpp" />
     <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
     <ClCompile Include="..\src\ecs\Entity.cpp" />
+    <ClCompile Include="..\src\ecs\FSMComponent.cpp" />
     <ClCompile Include="..\src\ecs\LightingComponent.cpp" />
     <ClCompile Include="..\src\ecs\MeshRendererComponent.cpp" />
     <ClCompile Include="..\src\ecs\PhysicsComponent.cpp" />
@@ -39,6 +40,8 @@
     <ClCompile Include="..\src\ecs\TerrainComponent.cpp" />
     <ClCompile Include="..\src\ecs\TextureRendererComponent.cpp" />
     <ClCompile Include="..\src\ecs\TransformComponent.cpp" />
+    <ClCompile Include="..\src\FSM\ScriptState.cpp" />
+    <ClCompile Include="..\src\FSM\State.cpp" />
     <ClCompile Include="..\src\graphics\Animation.cpp" />
     <ClCompile Include="..\src\graphics\AnimationManager.cpp" />
     <ClCompile Include="..\src\graphics\Animator.cpp" />
@@ -93,6 +96,7 @@
     <ClInclude Include="..\include\ecs\CameraComponent.h" />
     <ClInclude Include="..\include\ecs\Component.h" />
     <ClInclude Include="..\include\ecs\Entity.h" />
+    <ClInclude Include="..\include\ecs\FSMComponent.h" />
     <ClInclude Include="..\include\ecs\LightingComponent.h" />
     <ClInclude Include="..\include\ecs\MeshRendererComponent.h" />
     <ClInclude Include="..\include\ecs\PhysicsComponent.h" />
@@ -102,6 +106,9 @@
     <ClInclude Include="..\include\ecs\TerrainComponent.h" />
     <ClInclude Include="..\include\ecs\TextureRendererComponent.h" />
     <ClInclude Include="..\include\ecs\TransformComponent.h" />
+    <ClInclude Include="..\include\FSM\FSM.h" />
+    <ClInclude Include="..\include\FSM\ScriptState.h" />
+    <ClInclude Include="..\include\FSM\State.h" />
     <ClInclude Include="..\include\graphics\Animation.h" />
     <ClInclude Include="..\include\graphics\AnimationManager.h" />
     <ClInclude Include="..\include\graphics\Animator.h" />

@@ -79,6 +79,7 @@ namespace ECS {
 		**/
 		void DeserialiseComponentTable(sol::table& data);
 
+
 		/** SerialiseComponent
 		* @author - Seb D'Alessandro
 		* @brief - Deseralises the contents of this script component for use with a scene file
@@ -89,6 +90,7 @@ namespace ECS {
 		*
 		**/
 		sol::table SerialiseComponent(sol::state& lua) const;
+
 
 		/** operator[] overload
 		* @author - Seb D'Alessandro
@@ -101,6 +103,7 @@ namespace ECS {
 		* @note Will throw a domain error if the name doesn't exist in this scriptcomponent's scriptfile attribute
 		**/
 		scriptGlobal const operator[](const string& const globalName);
+
 
 		/** ImGui
 		* @author - Seb D'Alessandro
