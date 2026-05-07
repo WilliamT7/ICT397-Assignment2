@@ -301,3 +301,20 @@ void exposeScriptGlobal(sol::state_view& solView) {
 		&scriptGlobal::value
 	);
 }
+
+//------------------------------------------------------------------------------------------
+
+void exposeSceneFunctionality(sol::state_view& solView)
+{
+	LuaEngineFunctionality* luaEngineLink = Singleton<LuaEngineFunctionality>::getInstance();
+
+	bool assigned = luaEngineLink->sceneFuncAssigned();
+
+	//Scene functionality------------------------------
+	if (assigned) {
+		// cool functions
+		solView.set_function("Spawn", &ECS::Scene::Spawn, luaEngineLink->getScenePointer());
+	}
+}
+
+//------------------------------------------------------------------------------------------

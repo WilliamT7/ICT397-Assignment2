@@ -88,6 +88,9 @@ namespace ECS
 		**/
 		sol::table SerialiseScene(sol::state& lua) const;
 
+		// TODO: Comment
+		bool Spawn(std::string prefabName);
+
 		/** InjectPhysicsWorld
 		* @author - William Thorpe
 		* @brief - Injects the physics world into the scene
