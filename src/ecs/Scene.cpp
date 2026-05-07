@@ -28,12 +28,12 @@ void ECS::Scene::Update(float deltaTime)
 		m_physicsWorld->Step(deltaTime);
 	}
 
+	ProcessTriggers();
+
 	for (auto& entity : entities)
 	{
 		entity->Update(deltaTime);
 	}
-
-	ProcessTriggers();
 }
 
 //----------------------------------------------
@@ -177,7 +177,7 @@ void ECS::Scene::ImGui()
 		"Physics",
 		"Terrain",
 		"Texture Renderer",
-		"Script"
+		"Script",
 		"Physics Trigger"
 	};
 
@@ -250,7 +250,7 @@ void ECS::Scene::ImGui()
 				entity->AddScriptComponent("..\\data\\luaScripts\\" + string(ScriptFileBuffer) + ".lua");
 				break;
 
-			case 7:
+			case 8:
 				entity->AddComponent<PhysicsTriggerComponent>();
 				break;
 			}

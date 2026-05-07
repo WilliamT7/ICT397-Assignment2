@@ -30,6 +30,7 @@ void ECS::PhysicsTriggerComponent::Start()
 
 void ECS::PhysicsTriggerComponent::BeginTriggerCheck()
 {
+	m_previousOverlaps = m_currentOverlaps;
 	m_currentOverlaps.clear();
 }
 
@@ -65,8 +66,6 @@ void ECS::PhysicsTriggerComponent::EndTriggerCheck()
 			OnTriggerExit(previous);
 		}
 	}
-
-	m_previousOverlaps = m_currentOverlaps;
 }
 
 void ECS::PhysicsTriggerComponent::SetHalfExtents(const Vector3& halfExtents)
@@ -103,29 +102,119 @@ bool ECS::PhysicsTriggerComponent::IsOverlapping(Entity* other) const
 
 void ECS::PhysicsTriggerComponent::OnTriggerEnter(Entity* other)
 {
-	std::cout << "[Trigger Enter]: "
-		<< entity->GetName()
-		<< " entered by "
-		<< other->GetName()
-		<< std::endl;
 }
 
 void ECS::PhysicsTriggerComponent::OnTriggerStay(Entity* other)
 {
-	//std::cout << "[Trigger Stay]: "
-	//	<< entity->GetName()
-	//	<< " touching "
-	//	<< other->GetName()
-	//	<< std::endl;
 }
 
 void ECS::PhysicsTriggerComponent::OnTriggerExit(Entity* other)
 {
-	std::cout << "[Trigger Exit]: "
-		<< entity->GetName()
-		<< " exited by "
-		<< other->GetName()
-		<< std::endl;
+}
+
+int ECS::PhysicsTriggerComponent::GetEnterCount() const
+{
+	int count = 0;
+
+	for (Entity* current : m_currentOverlaps)
+	{
+		if (!Contains(m_previousOverlaps, current))
+		{
+			count++;
+		}
+	}
+
+	return count;
+}
+
+int ECS::PhysicsTriggerComponent::GetStayCount() const
+{
+	int count = 0;
+
+	for (Entity* current : m_currentOverlaps)
+	{
+		if (Contains(m_previousOverlaps, current))
+		{
+			count++;
+		}
+	}
+
+	return count;
+}
+
+int ECS::PhysicsTriggerComponent::GetExitCount() const
+{
+	int count = 0;
+
+	for (Entity* previous : m_previousOverlaps)
+	{
+		if (!Contains(m_currentOverlaps, previous))
+		{
+			count++;
+		}
+	}
+
+	return count;
+}
+
+std::string ECS::PhysicsTriggerComponent::GetEnterName(int index) const
+{
+	int currentIndex = 0;
+
+	for (Entity* current : m_currentOverlaps)
+	{
+		if (!Contains(m_previousOverlaps, current))
+		{
+			if (currentIndex == index)
+			{
+				return current != nullptr ? current->GetName() : "";
+			}
+
+			currentIndex++;
+		}
+	}
+
+	return "";
+}
+
+std::string ECS::PhysicsTriggerComponent::GetStayName(int index) const
+{
+	int currentIndex = 0;
+
+	for (Entity* current : m_currentOverlaps)
+	{
+		if (Contains(m_previousOverlaps, current))
+		{
+			if (currentIndex == index)
+			{
+				return current != nullptr ? current->GetName() : "";
+			}
+
+			currentIndex++;
+		}
+	}
+
+	return "";
+}
+
+std::string ECS::PhysicsTriggerComponent::GetExitName(int index) const
+{
+	int currentIndex = 0;
+
+	for (Entity* previous : m_previousOverlaps)
+	{
+		if (!Contains(m_currentOverlaps, previous))
+		{
+			if (currentIndex == index)
+			{
+				return previous != nullptr ? previous->GetName() : "";
+			}
+
+			currentIndex++;
+		}
+	}
+
+	return "";
 }
 
 void ECS::PhysicsTriggerComponent::ImGui()
@@ -139,11 +228,11 @@ void ECS::PhysicsTriggerComponent::ImGui()
 
 void ECS::PhysicsTriggerComponent::DeserialiseComponentTable(sol::table& data)
 {
-	m_enabled = data["enabled"].get_or(true);
+	m_enabled = data["enabled"];
 
-	m_halfExtents.x = data["halfExtents_x"].get_or(1.0f);
-	m_halfExtents.y = data["halfExtents_y"].get_or(1.0f);
-	m_halfExtents.z = data["halfExtents_z"].get_or(1.0f);
+	m_halfExtents.x = data["halfExtents_x"];
+	m_halfExtents.y = data["halfExtents_y"];
+	m_halfExtents.z = data["halfExtents_z"];
 }
 
 sol::table ECS::PhysicsTriggerComponent::SerialiseComponent(sol::state& lua) const

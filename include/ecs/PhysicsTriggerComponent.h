@@ -27,6 +27,14 @@ namespace ECS
 
 		void SetHalfExtents(const Vector3& halfExtents);
 
+		int GetEnterCount() const;
+		int GetStayCount() const;
+		int GetExitCount() const;
+
+		std::string GetEnterName(int index) const;
+		std::string GetStayName(int index) const;
+		std::string GetExitName(int index) const;
+
 	private:
 		bool IsOverlapping(Entity* other) const;
 
