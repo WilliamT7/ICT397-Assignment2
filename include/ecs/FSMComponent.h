@@ -19,29 +19,35 @@ namespace ECS {
 
 	public:
 
-		FSMComponent() = default;
+		void Start() override;
 
-		void Update(float deltaTime);
+		FSMComponent();
+
+		void Update(float deltaTime) override;
 
 		//State stuff----------------------------------------
 
-		void setState(string StateName);
+		void setCurrentState(string StateName);
 
-		string getCurrentStateName() const;
+		string getCurrentState() const;
 
-		string getPreviousStateName() const;
+		string getPreviousState() const;
+
+		ScriptState& createState(string stateName);
+
+		void saveCreatedState();
 
 		//Serialisation/Deserialisation-------------------
-		void DeserialiseComponentTable(sol::table& data);
+		void DeserialiseComponentTable(sol::table& data) override;
 
-		sol::table SerialiseComponent(sol::state& lua) const;
+		sol::table SerialiseComponent(sol::state& lua) const override;
+
+		//Imgui------------------------------------------
+
+		void ImGui() override;
 
 	private:
 
 		FSM<ScriptState> Fsm;
-
-
 	};
-
-
 }

@@ -26,7 +26,7 @@ class FSM {
 
 public:
 
-	FSM() = delete;
+	FSM() = default;
 
 	FSM(ECS::Entity* entity);
 
@@ -34,7 +34,7 @@ public:
 
 	void setState(string stateName);
 
-	StateType& addState(string stateName);
+	StateType& createState(string stateName);
 
 	ECS::Entity* const getEntity();
 
@@ -42,11 +42,19 @@ public:
 
 	string getPreviousStateName() const;
 
+	StateType getRegisteredState(const int index) const;
+
+	int totalRegiseredStates() const;
+
+	void saveCreatedState();
+
 private:
+
 
 	ECS::Entity* entityAssociated;
 	StateType* currentState = nullptr;
 	StateType* previousState = nullptr;
+	StateType* newestCreatedState = nullptr;
 	vector<StateType> registeredStates;
 
 };
@@ -58,7 +66,21 @@ template <class StateType>
 FSM<StateType>::FSM(ECS::Entity* entity) {
 	entityAssociated = entity;
 }
+//-------------------------------------------------
 
+template <class StateType>
+int FSM<StateType>::totalRegiseredStates() const {
+
+	return registeredStates.size();
+
+}
+//-------------------------------------------------
+template <class StateType>
+StateType FSM<StateType>::getRegisteredState(const int index) const {
+
+	return registeredStates[index];
+
+}
 //-------------------------------------------------
 
 template <class StateType>
@@ -69,19 +91,36 @@ ECS::Entity* const FSM<StateType>::getEntity() {
 //------------------------------------------------
 
 template <class StateType>
-StateType& FSM<StateType>::addState(string stateName) {
+StateType& FSM<StateType>::createState(string stateName) {
 
-	currentState = StateType(stateName);
-	return currentState;
+	if (newestCreatedState != nullptr) {
+		delete newestCreatedState;
+		newestCreatedState == nullptr;
+	}
+
+	newestCreatedState = new StateType(stateName, entityAssociated);
+	return *newestCreatedState;
+}
+
+//------------------------------------------------
+
+template <class StateType>
+void FSM<StateType>::saveCreatedState() {
+
+	if (newestCreatedState != nullptr) {
+		registeredStates.push_back(*newestCreatedState);
+		delete newestCreatedState;
+		newestCreatedState = nullptr;
+	}
+
 }
 //------------------------------------------------
 
 template <class StateType>
 string FSM<StateType>::getCurrentStateName() const {
 
-	if (currentState == nullptr) {
-		cout << "[C++] Attempted to get the name of an unassigned curreent state from an FSM\n";
-		throw std::domain_error("[C++] Attempted to get the name of an unassigned state from an FSM");
+	if (currentState == nullptr) {;
+		return "NONE";
 	}
 
 	return currentState->getStateName();
@@ -92,8 +131,7 @@ template <class StateType>
 string FSM<StateType>::getPreviousStateName() const {
 
 	if (previousState == nullptr) {
-		cout << "[C++] Attempted to get the name of an unassigned curreent state from an FSM\n";
-		throw std::domain_error("[C++] Attempted to get the name of an unassigned state from an FSM");
+		return "NONE";
 	}
 
 
@@ -105,12 +143,11 @@ string FSM<StateType>::getPreviousStateName() const {
 template <class StateType>
 void FSM<StateType>::setState(string stateName) {
 
-	
 	int foundIndex = -1;
 
-	for (int curState = 0; curState < registeredStates && foundIndex == -1; curState++) {
+	for (int curState = 0; curState < registeredStates.size() && foundIndex == -1; curState++) {
 
-		if (stateName == curState.getStateName()) {
+		if (stateName == registeredStates[curState].getStateName()) {
 			foundIndex = curState;
 		}
 	}
@@ -118,12 +155,12 @@ void FSM<StateType>::setState(string stateName) {
 	if (foundIndex != -1) {
 		
 		if (currentState != nullptr) {
-			currentState.exit();
+			currentState->exit();
 			previousState = currentState;
 		}
 
 		currentState = &registeredStates[foundIndex];
-		currentState.enter();
+		currentState->enter();
 			
 	}
 	else {
@@ -137,7 +174,7 @@ template <class StateType>
 void FSM<StateType>::update() {
 
 	if (currentState != nullptr) {
-		currentState.update();
+		currentState->update();
 	}
 }
 //---------------------------------------------------

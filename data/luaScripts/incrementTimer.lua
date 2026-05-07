@@ -1,4 +1,12 @@
 
+function start()
+
+	print("starting timer....")
+
+
+end
+
+
 function update()
 
 	--Check if the script exists in the entity

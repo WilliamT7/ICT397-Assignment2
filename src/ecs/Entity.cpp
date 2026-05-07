@@ -53,6 +53,8 @@ ECS::Component* ECS::Entity::AddComponentByName(std::string name)
 		return AddComponent<TextureRendererComponent>();
 	if (name == "Animation")
 		return AddComponent<AnimationComponent>();
+	if (name == "FSM")
+		return AddComponent<FSMComponent>();
 
 	return nullptr;
 }
@@ -178,8 +180,10 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 		ScriptComponent comp = ScriptComponent();
 		comp.entity = this;
 		comp.setScript(filePath);
+		
 
 		scripts[scriptName] = std::move(comp);
+		scripts[scriptName].Start();
 	}
 
 	return GetScriptComponent(scriptName);

@@ -23,13 +23,9 @@ class State {
 
 public:
 
-	State() = delete;
-
-	State(string nStateName, ECS::Entity* entity);
-
 	virtual string getStateName() const = 0;
 
-	virtual void update() const = 0;
+	virtual void update() = 0;
 
 	virtual void enter() = 0;
 

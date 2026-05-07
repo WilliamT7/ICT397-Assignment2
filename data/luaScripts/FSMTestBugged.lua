@@ -47,7 +47,6 @@ end
 function runAway()
 
 	print("I am running away because i am afriad")
-	
 end
 
 function die()

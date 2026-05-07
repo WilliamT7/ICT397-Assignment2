@@ -49,8 +49,12 @@ namespace ECS {
 		**/
 		void Update(float deltaTime);
 
+		void Start();
+
 
 		ScriptFile const getScript();
+
+		ScriptFile* getScriptPointer();
 
 
 		void setGlobal(const string& const globalName, const string& const newValue);
@@ -116,8 +120,6 @@ namespace ECS {
 		void ImGui();
 
 
-
-
 	private:
 
 		///Script to run
@@ -126,9 +128,11 @@ namespace ECS {
 		///Inidcates if a script has/hasn't been assigned to this component
 		bool scriptAssigned = false;
 
-		//Indicates if this script component runs every frame
+		///Indicates if this script component runs every frame
 		bool hasUpdate = false;
 
+		///Indicates if a script has a start function
+		bool hasStart = false;
 
 	};
 }

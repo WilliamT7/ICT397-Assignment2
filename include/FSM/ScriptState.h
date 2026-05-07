@@ -24,7 +24,12 @@ using std::string;
 
 class ScriptState : public State {
 
-	
+public:
+
+	ScriptState() = delete;
+
+	ScriptState(string nStateName, ECS::Entity* entity);
+
 	//Rule of three compliance-------------- TODO
 	//~ScriptState();
 
@@ -38,11 +43,11 @@ class ScriptState : public State {
 
 	//State updates and transitions-------------
 
-	void update() const;
+	void update() override;
 
-	void enter();
+	void enter() override;
 
-	void exit();
+	void exit() override;
 
 	//Setting code------------------------------
 	//setUpdate, setExit and setEnter search the entity 
@@ -57,14 +62,17 @@ class ScriptState : public State {
 	void setEnterCode(string fileName, string functionName);
 
 
+
+
 private:
 	
 	ScriptFile* updateScript = nullptr;
 	ScriptFile* exitScript = nullptr;
 	ScriptFile* enterScript = nullptr;
 
-	bool setCodeFlags[3] = { 0, 0, 0 };
-
+	string updateFunctionName = "";
+	string exitFunctionName = "";
+	string enterFunctionName = "";
 
 };
 

@@ -21,6 +21,15 @@ ECS::ScriptComponent::ScriptComponent() {
 
 //-----------------------------------------------------------
 
+void ECS::ScriptComponent::Start() {
+	
+	if (hasStart) {
+		SolScripting scripting;
+		scripting.run(luaFile, "start", entity);
+	}
+	
+}
+
 
 void ECS::ScriptComponent::Update(float deltaTime) {
 
@@ -38,6 +47,12 @@ ScriptFile const ECS::ScriptComponent::getScript() {
 	return luaFile;
 }
 
+//------------------------------------------------------------
+
+ScriptFile* ECS::ScriptComponent::getScriptPointer() {
+	return &luaFile;
+}
+
 //-----------------------------------------------------------
 
 
@@ -52,6 +67,7 @@ void ECS::ScriptComponent::setScript(string filePath) {
 	scriptAssigned = true;
 
 	hasUpdate = findFunction(luaFile, "update");
+	hasStart = findFunction(luaFile, "start");
 
 	if (!hasUpdate) {
 
@@ -123,6 +139,7 @@ sol::table ECS::ScriptComponent::SerialiseComponent(sol::state& lua) const
 }
 
 //-----------------------------------------------------------
+
 void ECS::ScriptComponent::setGlobal(const string& const globalName, const string& const newValue) {
 
 	bool changedGlobal = luaFile.changeGlobal(globalName, newValue);
@@ -163,7 +180,6 @@ void ECS::ScriptComponent::ImGui() {
 
 	if (ImGui::CollapsingHeader("Script", ImGuiTreeNodeFlags_None)) {
 		
-	
 		if (scriptAssigned) {
 
 			if (ImGui::TreeNode("Directory Infomation"))

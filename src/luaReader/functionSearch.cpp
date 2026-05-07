@@ -17,7 +17,8 @@ bool findFunction(ScriptFile& const file, const string& functionName) {
 
 	for (int curFunction = 0; curFunction < TOTAL_FUNCTIONS && !found; curFunction++) {
 
-		found = file[curFunction].getName() == functionName;
+		string currentName = file[curFunction].getName();
+		found = currentName == functionName;
 	}
 
 	return found;
