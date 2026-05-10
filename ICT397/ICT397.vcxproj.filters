@@ -178,9 +178,6 @@
     <ClCompile Include="..\src\FSM\ScriptState.cpp">
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\FSM\State.cpp">
-      <Filter>Source Files\FSM</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ecs\FSMComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>

@@ -1,13 +1,6 @@
 //Project files-----------------------
 #include "luaReader\functionSearch.h"
 
-
-
-//DELETE
-// 
-#include <iostream>
-using std::cout;
-
 //-------------------------------------------------
 
 bool findFunction(ScriptFile& const file, const string& functionName) {

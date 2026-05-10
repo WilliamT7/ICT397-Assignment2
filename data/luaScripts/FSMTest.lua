@@ -5,18 +5,16 @@ function start()
 	fsm = getFSM(obj)
 	
 	chaseState = fsm:createState("Chase")
-	chaseState:setUpdateCode("FSMTest", "cry")
+	chaseState:setEnterCode("FSMTest", "scream")
+	chaseState:setExitCode("FSMTest", "die")
 	fsm:saveState()
 	
 	runState = fsm:createState("Run")
-	runState:setUpdateCode("FSMTest", "runAway")
 	runState:setEnterCode("FSMTest", "cry")
 	runState:setExitCode("FSMTest", "die")
 	fsm:saveState()
 	
-	idleState = fsm:createState("Idle")
-	idleState:setUpdateCode("FSMTest", "scream")
-	fsm:saveState()
+
 	
 
 
@@ -30,8 +28,6 @@ function update()
 	--KEY-9
 	if (GetKeyPress(37)) then
 		fsm:setState("Run")
-	elseif (GetKeyPress(38)) then 	--KEY-0
-		fsm:setState("Idle")
 	elseif (GetKeyPress(36)) then --KEY-8
 		fsm:setState("Chase")
 	end

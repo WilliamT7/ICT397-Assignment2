@@ -16,11 +16,6 @@ void ScriptState::update() {
 		SolScripting scripting;
 		scripting.run(*updateScript, updateFunctionName, entityAssociated);
 	}
-	else {
-		cout << "nope nothing :(\n";
-	}
-
-
 }
 
 //---------------------------------
@@ -44,7 +39,6 @@ void ScriptState::enter() {
 //---------------------------------
 
 void ScriptState::exit() {
-
 
 	if (exitScript != nullptr) {
 		SolScripting scripting;

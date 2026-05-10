@@ -41,7 +41,6 @@
     <ClCompile Include="..\src\ecs\TextureRendererComponent.cpp" />
     <ClCompile Include="..\src\ecs\TransformComponent.cpp" />
     <ClCompile Include="..\src\FSM\ScriptState.cpp" />
-    <ClCompile Include="..\src\FSM\State.cpp" />
     <ClCompile Include="..\src\graphics\Animation.cpp" />
     <ClCompile Include="..\src\graphics\AnimationManager.cpp" />
     <ClCompile Include="..\src\graphics\Animator.cpp" />
