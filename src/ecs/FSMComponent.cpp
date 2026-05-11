@@ -124,7 +124,7 @@ void ECS::FSMComponent::ImGui() {
 		ImGui::Text(("Previous State: " + prevStateName).c_str());
 
 		//Display registered states in the FSM
-		int totalStates = Fsm.totalRegiseredStates();
+		int totalStates = Fsm.totalRegisteredStates();
 		string registeredStatesString = "Registered States(" + to_string(totalStates) + ")";
 		ImGui::Text(registeredStatesString.c_str());
 

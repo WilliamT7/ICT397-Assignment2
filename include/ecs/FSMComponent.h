@@ -102,10 +102,12 @@ namespace ECS {
 
 		/** saveCreatedState
 		* @author - Seb D'Alessandro
-		* @brief - Registers the newest created state in FSM
-		* @pre - FSM is attached to an entity, createState was previously called
-		* @post - Registers the newest created State in FSM
+		* @brief - Adds the newest created state to registered states in FSM
+		* @pre - N/A
+		* @post - saves the the newest created state in FSM
 		* @return - void
+		* 
+		* @note Does nothing if there was no previously created state
 		**/
 		void saveCreatedState();
 
