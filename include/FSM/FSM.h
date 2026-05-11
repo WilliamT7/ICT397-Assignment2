@@ -51,7 +51,7 @@ public:
 private:
 
 
-	ECS::Entity* entityAssociated;
+	ECS::Entity* entityAssociated = nullptr;
 	StateType* currentState = nullptr;
 	StateType* previousState = nullptr;
 	StateType* newestCreatedState = nullptr;

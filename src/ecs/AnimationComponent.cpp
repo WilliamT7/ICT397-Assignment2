@@ -20,13 +20,14 @@ namespace ECS
 	void AnimationComponent::Start()
 	{
 		m_currentAnimationName = "";
-		mesh = entity->GetComponent<ECS::MeshRendererComponent>();
+		//mesh = entity->GetComponent<ECS::MeshRendererComponent>();
 	}
 
 	void AnimationComponent::Update(float deltaTime)
 	{
 		if (!entity->HasComponent<MeshRendererComponent>())
 			throw std::runtime_error("[C++]: ERROR: ECS: No Mesh Renderer Component in Entity!");
+		mesh = entity->GetComponent<ECS::MeshRendererComponent>();
 
 		m_animator.UpdateAnimation(deltaTime);
 	}

@@ -15,7 +15,6 @@ ECS::FSMComponent::FSMComponent() {
 
 }
 
-
 //-----------------------------------
 void ECS::FSMComponent::Update(float deltaTime) {
 
@@ -26,38 +25,58 @@ void ECS::FSMComponent::Update(float deltaTime) {
 
 ScriptState& ECS::FSMComponent::createState(string stateName) {
 
-	return Fsm.createState(stateName);
+	if (entity != nullptr) {
+		return Fsm.createState(stateName);
+	}
+	else {
+		cout << "[C++] Entity not assigned to FSM in createState(), Please call start() first\n";
+		throw std::domain_error("[C++] Entity not assigned to FSM in createState(), Please call start() first\n");
+
+	}
 }
 
 //----------------------------------------------
 
 void ECS::FSMComponent::saveCreatedState() {
-	Fsm.saveCreatedState();
+
+	if (entity != nullptr) {
+		Fsm.saveCreatedState();
+	}
+	else {
+		cout << "[C++] Entity not assigned to FSM in saveCreatedState(), Please call start() first\n";
+		throw std::domain_error("[C++] Entity not assigned to FSM in saveCreatedState(), Please call start() first\n");
+
+	}
 }
 
 //----------------------------------------------
 
 void ECS::FSMComponent::setCurrentState(string stateName) {
 	
-	Fsm.setState(stateName);
+	if (entity != nullptr) {
+		Fsm.setState(stateName);
+	}
+	else {
+		cout << "[C++] Entity not assigned to FSM in setCurrentState(), Please call start() first\n";
+		throw std::domain_error("[C++] Entity not assigned to FSM in setCurrentState(), Please call start() first\n");
 
-
+	}
 }
 
 //----------------------------------------------
 
 void ECS::FSMComponent::DeserialiseComponentTable(sol::table& data) {
 
-
-	//TODO
+	
 }
 
 //----------------------------------------------
 
 sol::table ECS::FSMComponent::SerialiseComponent(sol::state& lua) const {
 
-	//TODO
-	return {};
+	sol::table t = lua.create_table();
+	t["Name"] = "FSM";
+	return t;
 }
 
 
@@ -65,7 +84,14 @@ sol::table ECS::FSMComponent::SerialiseComponent(sol::state& lua) const {
 
 string ECS::FSMComponent::getCurrentState() const {
 
-	return Fsm.getCurrentStateName();
+	if (entity != nullptr) {
+		return Fsm.getCurrentStateName();
+	}
+	else {
+		cout << "[C++] Entity not assigned to FSM in getCurretState(), Please call start() first\n";
+		throw std::domain_error("[C++] Entity not assigned to FSM in getCurretState(), Please call start() first\n");
+
+	}
 
 }
 
@@ -73,7 +99,14 @@ string ECS::FSMComponent::getCurrentState() const {
 
 string ECS::FSMComponent::getPreviousState() const {
 
-	return Fsm.getPreviousStateName();
+	if (entity != nullptr) {
+		return Fsm.getPreviousStateName();
+	}
+	else {
+		cout << "[C++] Entity not assigned to FSM in getPreviousState(), Please call start() first\n";
+		throw std::domain_error("[C++] Entity not assigned to FSM in getPreviousState(), Please call start() first\n");
+
+	}
 
 }
 
