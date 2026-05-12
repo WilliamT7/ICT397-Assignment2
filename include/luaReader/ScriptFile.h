@@ -148,6 +148,7 @@ public:
 	**/
 	const int totalGlobals() const;
 
+
 	//File Validity-------------------------------------------
 
 	/** markInvalid

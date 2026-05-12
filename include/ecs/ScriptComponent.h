@@ -41,7 +41,7 @@ namespace ECS {
 		/** Update
 		* @author - Seb D'Alessandro
 		* @brief - Runs a script's update() function
-		* @pre - Script is assigned to scriptComponet
+		* @pre - Script is assigned to scriptComponent
 		* @post - Function is executed
 		* @param deltaTime - time elasped since the last frame
 		* @return - void
@@ -50,9 +50,50 @@ namespace ECS {
 		void Update(float deltaTime);
 
 
+		/** Start
+		* @author - Seb D'Alessandro
+		* @brief - Runs a script's Start() function (if any)
+		* @pre - Script is assigned to scriptComponent
+		* @post - Function is executed
+		* @return - void
+		*
+		**/
+		void Start();
+
+
+		/** getScript
+		* @author - Seb D'Alessandro
+		* @brief - Gets a copy of the script
+		* @pre - Script is assigned to scriptComponent
+		* @post - Copy of the scriptFile object is returned
+		* @return - scriptFile: scriptFile object
+		*
+		**/
 		ScriptFile const getScript();
 
 
+
+		/** getScriptPointer
+		* @author - Seb D'Alessandro
+		* @brief - Gets the memory location of where the scriptFile in this comp
+		* @pre - Script is assigned to scriptComponent
+		* @post - memory location of the scriptFile is returned
+		* @return - scriptFile*: memory location of the scriptFile
+		*
+		**/
+		ScriptFile* getScriptPointer();
+
+
+		/** setGlobal
+		* @author - Seb D'Alessandro
+		* @brief - Sets a global in scriptFile to a new value
+		* @pre - Script is assigned to scriptComponent
+		* @post - global is modified
+		* @param globalName - name of the global to modify
+		* @param newValue - value to change (In string form)
+		* @return - void
+		*
+		**/
 		void setGlobal(const string& const globalName, const string& const newValue);
 
 
@@ -79,16 +120,18 @@ namespace ECS {
 		**/
 		void DeserialiseComponentTable(sol::table& data);
 
+
 		/** SerialiseComponent
 		* @author - Seb D'Alessandro
 		* @brief - Deseralises the contents of this script component for use with a scene file
 		* @pre - Script is assigned to this component
 		* @post - Contents of the script component are serialised and returned as a sol::table
 		* @param data: an initalised sol state
-		* @return - sol::table: table of 
+		* @return - sol::table: table of serialised script component, including file name, path and global values
 		*
 		**/
 		sol::table SerialiseComponent(sol::state& lua) const;
+
 
 		/** operator[] overload
 		* @author - Seb D'Alessandro
@@ -102,6 +145,7 @@ namespace ECS {
 		**/
 		scriptGlobal const operator[](const string& const globalName);
 
+
 		/** ImGui
 		* @author - Seb D'Alessandro
 		* @brief - Imgui UI for displaying scriptComponet (displaying directory infomation, globals and functions)
@@ -113,16 +157,19 @@ namespace ECS {
 		void ImGui();
 
 
-
-
 	private:
 
 		///Script to run
 		ScriptFile luaFile = ScriptFile("Unassigned", "unassigned");
 
-		
 		///Inidcates if a script has/hasn't been assigned to this component
 		bool scriptAssigned = false;
+
+		///Indicates if this script component runs every frame
+		bool hasUpdate = false;
+
+		///Indicates if a script has a start function
+		bool hasStart = false;
 
 	};
 }

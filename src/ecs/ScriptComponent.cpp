@@ -7,6 +7,7 @@
 #include "LuaReader\SolScripting.h"
 #include "other\singleton.h"
 #include "luaReader\luaScriptManager.h"
+#include "luaReader\functionSearch.h"
 
 #include "luaReader\luaIO.h";
 
@@ -20,23 +21,36 @@ ECS::ScriptComponent::ScriptComponent() {
 
 //-----------------------------------------------------------
 
+void ECS::ScriptComponent::Start() {
+	
+	if (hasStart) {
+		SolScripting scripting;
+		scripting.run(luaFile, "start", entity);
+	}
+	
+}
+
 
 void ECS::ScriptComponent::Update(float deltaTime) {
 
 
-	if (scriptAssigned) {
+	if (scriptAssigned && hasUpdate) {
 		SolScripting scripting;
 		scripting.run(luaFile, "update", entity);
 
 	}
-	else {
-		cout << "ScriptComponent.cpp: Script unassigned when attempting to run Update()\n";
-	}
+
 }
 //------------------------------------------------------------
 
 ScriptFile const ECS::ScriptComponent::getScript() {
 	return luaFile;
+}
+
+//------------------------------------------------------------
+
+ScriptFile* ECS::ScriptComponent::getScriptPointer() {
+	return &luaFile;
 }
 
 //-----------------------------------------------------------
@@ -49,7 +63,17 @@ void ECS::ScriptComponent::setScript(string filePath) {
 	ScriptFile foundScript = scriptManager->searchForFile(filePath);
 
 	luaFile = foundScript;
+
 	scriptAssigned = true;
+
+	hasUpdate = findFunction(luaFile, "update");
+	hasStart = findFunction(luaFile, "start");
+
+	if (!hasUpdate) {
+
+		cout << "[C++] ScriptComponent.cpp: Warning: script " << luaFile.getFileName() << " does not have an update(), it will not be run every frame\n";
+
+	}
 
 }
 
@@ -115,6 +139,7 @@ sol::table ECS::ScriptComponent::SerialiseComponent(sol::state& lua) const
 }
 
 //-----------------------------------------------------------
+
 void ECS::ScriptComponent::setGlobal(const string& const globalName, const string& const newValue) {
 
 	bool changedGlobal = luaFile.changeGlobal(globalName, newValue);
@@ -155,7 +180,6 @@ void ECS::ScriptComponent::ImGui() {
 
 	if (ImGui::CollapsingHeader("Script", ImGuiTreeNodeFlags_None)) {
 		
-	
 		if (scriptAssigned) {
 
 			if (ImGui::TreeNode("Directory Infomation"))
