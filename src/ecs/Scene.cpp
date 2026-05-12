@@ -202,7 +202,8 @@ void ECS::Scene::ImGui()
 		"Physics",
 		"Terrain",
 		"Texture Renderer",
-		"Script"
+		"Script",
+		"FSM"
 	};
 
 	// add component to entity
@@ -270,11 +271,17 @@ void ECS::Scene::ImGui()
 				break;
 
 			case 7:
-				
 				entity->AddScriptComponent("..\\data\\luaScripts\\" + string(ScriptFileBuffer) + ".lua");
 				break;
 
+			case 8:
+				entity->AddComponent<FSMComponent>();
+				break;
+
 			}
+
+
+
 
 			
 		}

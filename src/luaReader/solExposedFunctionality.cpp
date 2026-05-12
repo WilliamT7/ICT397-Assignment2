@@ -1,13 +1,11 @@
 //Project files-----------------------------
 #include "luaReader\solExposedFunctionality.h"
 #include "luaReader\LuaExposedEngineFunctionality.h"
-#include "ECS\PhysicsComponent.h"
-#include "ECS\MeshRendererComponent.h"
-#include "ECS\TerrainComponent.h"
-#include "ecs\TextureRendererComponent.h"
 #include "luaReader\SolScripting.h"
 #include "ECS/Entity.h"
 #include "other/singleton.h"
+#include "ECS/AllComponentsInclude.h"
+#include "FSM/ScriptState.h"
 
 
 //--------------------------------------
@@ -304,6 +302,51 @@ void exposeScriptGlobal(sol::state_view& solView) {
 
 //------------------------------------------------------------------------------------------
 
+void exposeFSM(sol::state_view& solView) {
+
+
+	//FSM Component--------------------------------
+
+	solView.new_usertype<ECS::FSMComponent>(
+		"FSM",
+		sol::constructors<ECS::FSMComponent>(),
+		"getCurrentState",
+		&ECS::FSMComponent::getCurrentState,
+		"getPreviousState",
+		&ECS::FSMComponent::getPreviousState,
+		"createState",
+		&ECS::FSMComponent::createState,
+		"setState",
+		&ECS::FSMComponent::setCurrentState,
+		"saveState",
+		&ECS::FSMComponent::saveCreatedState
+	);
+
+	solView.set_function("getFSM", &ECS::Entity::GetComponent<ECS::FSMComponent>);
+	solView.set_function("getCurrentState", &ECS::FSMComponent::getCurrentState);
+	solView.set_function("getPreviousState", &ECS::FSMComponent::getPreviousState);
+	solView.set_function("createState", &ECS::FSMComponent::createState);
+	solView.set_function("setState", &ECS::FSMComponent::setCurrentState);
+	solView.set_function("saveState", &ECS::FSMComponent::saveCreatedState);
+
+
+	//Script state--------------------
+
+	solView.new_usertype<ScriptState>(
+		"ScriptState",
+		sol::constructors<ScriptState(string nStateName, ECS::Entity* entity)>(),
+		"setUpdateCode",
+		&ScriptState::setUpdateCode,
+		"setEnterCode",
+		&ScriptState::setEnterCode,
+		"setExitCode",
+		&ScriptState::setExitCode
+	);
+	solView.set_function("setUpdateCode", &ScriptState::setUpdateCode);
+	solView.set_function("setEnterCode", &ScriptState::setEnterCode);
+	solView.set_function("setExitCode", &ScriptState::setExitCode);
+
+}
 void exposeSceneFunctionality(sol::state_view& solView)
 {
 	LuaEngineFunctionality* luaEngineLink = Singleton<LuaEngineFunctionality>::getInstance();
