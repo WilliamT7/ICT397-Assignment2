@@ -60,7 +60,7 @@ void main()
 
     mat4 modelMatrix = model * transform;
 
-	vec4 worldPos = totalPosition + modelMatrix;
+	vec4 worldPos = modelMatrix * totalPosition;
 
     TexCoord = aTexCoord;
     Normal = mat3(transpose(inverse(modelMatrix))) * totalNormal;
