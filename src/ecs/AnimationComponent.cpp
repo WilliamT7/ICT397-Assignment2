@@ -34,7 +34,7 @@ namespace ECS
 
 	void AnimationComponent::Play(const std::string& animationName)
 	{
-		if (m_currentAnimationName == animationName)
+		if (m_currentAnimationName == animationName || mesh == nullptr)
 			return;
 
 		m_currentAnimationName = animationName;

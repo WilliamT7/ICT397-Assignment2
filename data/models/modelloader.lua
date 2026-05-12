@@ -30,5 +30,9 @@ models = {
     {
         Name = "AKALI",
         File = "Akali\\Akali.obj"
+    },
+    {
+        Name = "SPIKY",
+        File = "spiky\\spiky.gltf"
     }
 }
