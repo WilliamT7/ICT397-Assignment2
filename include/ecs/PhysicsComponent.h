@@ -216,6 +216,15 @@ namespace ECS
 		**/
 		void ClearForces();
 
+		/** GetHalfExtents
+		* @author - William Thorpe
+		* @brief - Retrieves the half extents of the physics body, which represent half
+		* @param - None.
+		* @pre - The physics body should be valid and linked to this component.
+		* @post - Returns the half extents of the physics body, which can be
+		**/
+		Vector3 GetHalfExtents() const;
+
 	private:
 		std::shared_ptr<IPhysicsBody> physicsBody = nullptr;
 		TransformComponent* transform = nullptr;

@@ -35,6 +35,8 @@ void exposeTerrain(sol::state_view& solView);
 
 void exposePhysics(sol::state_view& solView);
 
+void exposePhysicsTrigger(sol::state_view& solView);
+
 void exposeScriptGlobal(sol::state_view& solView);
 
 void exposeFSM(sol::state_view& solView);

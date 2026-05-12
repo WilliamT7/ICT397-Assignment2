@@ -264,6 +264,11 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		exposeTextureRenderer(solView);
 	}
 
+	if(entity->HasComponent<ECS::PhysicsTriggerComponent>())
+	{
+		exposePhysicsTrigger(solView);
+  }
+    
 	if (entity->HasComponent<ECS::FSMComponent>())
 	{
 		exposeFSM(solView);

@@ -4,6 +4,7 @@
 #include "luaReader\SolScripting.h"
 #include "ECS/Entity.h"
 #include "other/singleton.h"
+#include "ECS/PhysicsTriggerComponent.h"
 #include "ECS/AllComponentsInclude.h"
 #include "FSM/ScriptState.h"
 
@@ -289,6 +290,33 @@ void exposePhysics(sol::state_view& solView) {
 
 }
 //------------------------------------------------------------------------------------------
+
+void exposePhysicsTrigger(sol::state_view& solView) {
+	solView.new_usertype<ECS::PhysicsTriggerComponent>(
+		"PhysicsTriggerComponent",
+		sol::constructors<ECS::PhysicsTriggerComponent>(),
+
+		"setHalfExtents",
+		&ECS::PhysicsTriggerComponent::SetHalfExtents,
+
+		"getEnterCount",
+		&ECS::PhysicsTriggerComponent::GetEnterCount,
+		"getStayCount",
+		&ECS::PhysicsTriggerComponent::GetStayCount,
+		"getExitCount",
+		&ECS::PhysicsTriggerComponent::GetExitCount,
+
+		"getEnterName",
+		&ECS::PhysicsTriggerComponent::GetEnterName,
+		"getStayName",
+		&ECS::PhysicsTriggerComponent::GetStayName,
+		"getExitName",
+		&ECS::PhysicsTriggerComponent::GetExitName
+	);
+
+	solView.set_function("getPhysicsTrigger", &ECS::Entity::GetComponent<ECS::PhysicsTriggerComponent>);
+	solView.set_function("setTriggerHalfExtents", &ECS::PhysicsTriggerComponent::SetHalfExtents);
+}
 
 void exposeScriptGlobal(sol::state_view& solView) {
 	
