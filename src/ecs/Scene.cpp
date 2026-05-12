@@ -27,9 +27,11 @@ void ECS::Scene::Update(float deltaTime)
 		m_physicsWorld->Step(deltaTime);
 	}
 
-	for (auto& entity : entities)
+	int size = entities.size();
+
+	for (int i = 0; i < size; i++)
 	{
-		entity->Update(deltaTime);
+		entities[i].get()->Update(deltaTime);
 	}
 }
 
@@ -64,6 +66,33 @@ sol::table ECS::Scene::SerialiseScene(sol::state& lua) const
 }
 
 //----------------------------------------------
+
+bool ECS::Scene::Spawn(std::string prefabName)
+{
+	sol::state lua;
+	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
+
+	std::string path = "../data/prefabs/";
+	std::string fullPath = path + prefabName;
+
+	try {
+		lua.script_file(fullPath);
+	}
+	catch (const sol::error& e) {
+		std::cout << "[C++]: Error: SOL: Unable to open" << fullPath << ".\n";
+		return false;
+	}
+
+	sol::table entityData = lua["entity"];
+
+	entities.push_back(std::make_unique<Entity>());
+	auto& entity = entities.back();
+
+	entity.get()->DeserialiseComponentTable(entityData);
+}
+
+//----------------------------------------------
+
 void ECS::Scene::InjectPhysicsWorld()
 {
 	for (auto& entity : entities)
@@ -73,6 +102,7 @@ void ECS::Scene::InjectPhysicsWorld()
 }
 
 //------------------------------
+
 void ECS::Scene::InjectPhysicsWorld(Entity* entity)
 {
 	if (entity == nullptr)

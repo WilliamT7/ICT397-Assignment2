@@ -347,3 +347,17 @@ void exposeFSM(sol::state_view& solView) {
 	solView.set_function("setExitCode", &ScriptState::setExitCode);
 
 }
+void exposeSceneFunctionality(sol::state_view& solView)
+{
+	LuaEngineFunctionality* luaEngineLink = Singleton<LuaEngineFunctionality>::getInstance();
+
+	bool assigned = luaEngineLink->sceneFuncAssigned();
+
+	//Scene functionality------------------------------
+	if (assigned) {
+		// cool functions
+		solView.set_function("Spawn", &ECS::Scene::Spawn, luaEngineLink->getScenePointer());
+	}
+}
+
+//------------------------------------------------------------------------------------------

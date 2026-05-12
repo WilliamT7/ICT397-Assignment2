@@ -12,6 +12,7 @@
 
 //Project files--------------------
 #include "graphics\Window.h"
+#include "ecs\Scene.h"
 
 //----------------------------------
 
@@ -80,11 +81,18 @@ public:
 	*/
 	Window* const getWindowPointer() const;
 
+	void passSceneFunctionality(ECS::Scene* scenePointer);
+
+	bool sceneFuncAssigned() const;
+
+	ECS::Scene* const getScenePointer() const;
+
 
 private:
 
 	///Pointer to an initalised window object
 	Window* windowFunctionlity = nullptr;
+	ECS::Scene* sceneFunctionality = nullptr;
 };
 
 
@@ -96,4 +104,4 @@ private:
 * @param windowFunctionlity - pointer to a window object
 * @return - void
 */
-void initaliseLuaEngineLinks(Window* windowFunctionality);
+void initaliseLuaEngineLinks(Window* windowFunctionality, ECS::Scene* sceneFunctionality);
