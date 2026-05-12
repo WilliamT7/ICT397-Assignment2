@@ -173,6 +173,9 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	exposeSolScripting(solView);
 
+	// Scene functions like spawn prefabs
+	exposeSceneFunctionality(solView);
+
 }
 
 //-------------------------------------------------------------------

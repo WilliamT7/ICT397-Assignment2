@@ -49,9 +49,6 @@ int main(int argc, char **argv)
     //Load scripts into scriptManager singleton
     loadScripts("..\\data\\luaScripts\\", 3);
 
-    //Link Engine functionality with lua
-    initaliseLuaEngineLinks(window);
-
     physicsWorld = new BulletPhysicsWorld();
 
     // TODO: get rid of this
@@ -70,6 +67,9 @@ int main(int argc, char **argv)
     LoadTextureFiles(lua, graphicsHandler);
     Graphics::AnimationManager::Get().LoadInAnimations(lua);
     scene = ECS::SceneLoader::CreateScene(lua, physicsWorld, sceneName.c_str());
+
+    //Link Engine functionality with lua
+    initaliseLuaEngineLinks(window, scene);
 
     // Main Loop :D
     window->MainLoop(Update, Display);
