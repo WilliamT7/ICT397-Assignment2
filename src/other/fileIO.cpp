@@ -5,12 +5,6 @@
 //Namespaces -----------------------------
 using std::ifstream;
 
-
-//DELETE
-#include <iostream>
-using std::cout;
-
-
 //----------------------------------------
 bool pathExists(const string& const path) {
 
@@ -134,6 +128,7 @@ ostream& operator <<(ostream& os, const directoryInfomation& const dirInfo) {
 
 	os << "Directories-------------------------------------------------------------\n";
 	os << "Directories that exist in " << dirInfo.path << ":\n";
+
 
 	for (int curDir = 0; curDir < dirInfo.directories.size(); curDir++) {
 		os << dirInfo.directories[curDir] << "\n";
