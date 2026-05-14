@@ -4,6 +4,7 @@
 *
 * @version 1.0
 * @date 13/05/2026 Seb D'Alessandro
+*		1.0 Creation
 *********************************************/
 #pragma once
 
@@ -17,20 +18,23 @@ using std::vector;
 
 //--------------------------------
 
-class messageList {
+class MessageList {
 
 public:
 
-	messageList();
+	MessageList() = default;
 
 
-	bool addMessage(const string message);
+	void addMessage(const string message);
 
 
 	int getMessageID(const string& const message) const;
 
 
-	string getMessage(const int message);
+	string getMessage(int messageIndex) const;
+
+
+	const int totalMessages() const;
 
 
 private:

@@ -72,10 +72,11 @@ int main(int argc, char **argv)
     initaliseLuaEngineLinks(window, scene);
 
     //Read in messages that scripts can send to eachother
-    readMessages("../data/messaging/messages.txt");
+    bool messagesRead = readMessages("../data/messaging/messages.txt");
+
 
     // Main Loop :D
-    window->MainLoop(Update, Display);
+    //window->MainLoop(Update, Display);
 
     delete scene;
     delete physicsWorld;
