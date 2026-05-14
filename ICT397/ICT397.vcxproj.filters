@@ -182,6 +182,12 @@
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ecs\PhysicsTriggerComponent.cpp" />
+    <ClCompile Include="..\src\messaging\messageIO.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messaging\messageList.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
@@ -431,6 +437,12 @@
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ecs\PhysicsTriggerComponent.h" />
+    <ClInclude Include="..\include\Messaging\messageIO.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Messaging\messageList.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\shaders\2dtextures.frag.glsl">
@@ -521,6 +533,18 @@
     </Filter>
     <Filter Include="Source Files\FSM">
       <UniqueIdentifier>{46e33651-664c-44cc-a5ff-51d066034940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Messaging">
+      <UniqueIdentifier>{1a15be32-cfdf-40f4-a27b-b70c872e9a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Messaging">
+      <UniqueIdentifier>{26ca0653-f03a-44ed-b925-cc6d06471978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI">
+      <UniqueIdentifier>{79a7a421-ff63-4bf7-959c-451dc99d6741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI">
+      <UniqueIdentifier>{25c1a287-4ed7-49b9-a131-5fd583a96c30}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

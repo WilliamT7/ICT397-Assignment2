@@ -4,7 +4,6 @@
 #include "luaReader\SolScripting.h"
 #include "ECS/Entity.h"
 #include "other/singleton.h"
-#include "ECS/PhysicsTriggerComponent.h"
 #include "ECS/AllComponentsInclude.h"
 #include "FSM/ScriptState.h"
 

@@ -68,6 +68,8 @@
     <ClCompile Include="..\src\luaReader\scriptGlobalsIO.cpp" />
     <ClCompile Include="..\src\luaReader\solExposedFunctionality.cpp" />
     <ClCompile Include="..\src\luaReader\SolScripting.cpp" />
+    <ClCompile Include="..\src\messaging\messageIO.cpp" />
+    <ClCompile Include="..\src\messaging\messageList.cpp" />
     <ClCompile Include="..\src\other\fileIO.cpp" />
     <ClCompile Include="..\src\other\stringTools.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsBody.cpp" />
@@ -148,6 +150,8 @@
     <ClInclude Include="..\include\luaReader\solExposedFunctionality.h" />
     <ClInclude Include="..\include\luaReader\SolScripting.h" />
     <ClInclude Include="..\include\luaReader\supportedDatatypes.h" />
+    <ClInclude Include="..\include\Messaging\messageIO.h" />
+    <ClInclude Include="..\include\Messaging\messageList.h" />
     <ClInclude Include="..\include\other\fileIO.h" />
     <ClInclude Include="..\include\other\singleton.h" />
     <ClInclude Include="..\include\other\stringTools.h" />
