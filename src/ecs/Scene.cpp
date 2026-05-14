@@ -6,7 +6,8 @@
 #include "ecs/Entity.h"
 #include "graphics/ShaderType.h"
 #include "physics/BulletPhysicsWorld.h"
-#include <ecs/PhysicsTriggerComponent.h>
+#include "messaging/MessageDispatcher.h"
+#include <ecs/PhysicsTriggerComponent.h> //woah <> thats cool
 
 #include "ecs/SceneLoader.h"
 #include "imgui_impl_opengl3.h" // for now
@@ -29,6 +30,9 @@ void ECS::Scene::Update(float deltaTime)
 	}
 
 	ProcessTriggers();
+
+
+	updateMessageDispatcher(deltaTime);
 
 	int size = entities.size();
 
@@ -283,7 +287,8 @@ void ECS::Scene::ImGui()
 			case 8:
 				entity->AddComponent<PhysicsTriggerComponent>();
 				break;
-      case 9:
+
+			case 9:
 				entity->AddComponent<FSMComponent>();
 				break;
 

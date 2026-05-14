@@ -181,11 +181,22 @@
     <ClCompile Include="..\src\ecs\FSMComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ecs\PhysicsTriggerComponent.cpp" />
     <ClCompile Include="..\src\messaging\messageIO.cpp">
       <Filter>Source Files\Messaging</Filter>
     </ClCompile>
     <ClCompile Include="..\src\messaging\messageList.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messaging\telegram.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messaging\MessageDispatcher.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\PhysicsTriggerComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messaging\messageDisLua.cpp">
       <Filter>Source Files\Messaging</Filter>
     </ClCompile>
   </ItemGroup>
@@ -385,9 +396,6 @@
     <ClInclude Include="..\include\other\fileIO.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\luaReader\functionSearch.h">
-      <Filter>Header Files\Other</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\other\singleton.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
@@ -436,11 +444,25 @@
     <ClInclude Include="..\include\FSM\State.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\ecs\PhysicsTriggerComponent.h" />
     <ClInclude Include="..\include\Messaging\messageIO.h">
       <Filter>Header Files\Messaging</Filter>
     </ClInclude>
     <ClInclude Include="..\include\Messaging\messageList.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\messaging\telegram.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\messaging\MessageDispatcher.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\PhysicsTriggerComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\functionSearch.h">
+      <Filter>Header Files\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\messaging\messageDisLua.h">
       <Filter>Header Files\Messaging</Filter>
     </ClInclude>
   </ItemGroup>
