@@ -76,8 +76,6 @@ bool readLuaFile(ScriptFile& const luaFileOutput) {
     string currentLine;
     const string FUNCTION_STR_PATTERN = "function ";
 
-    int totalLines = 0;
-
     while (validFile && !file.eof()) {
 
         getline(file, currentLine);
@@ -96,8 +94,7 @@ bool readLuaFile(ScriptFile& const luaFileOutput) {
 
             luaFileOutput.addFunction(newFunction);
 
-            //Search for the end keyword in file, mark file as invalid if cannot find
-            getline(file, currentLine);
+            //Search for the end keyword in file, mark file as invalid if cannot find      
             validFile = scanFunction(file);
         }
 
@@ -106,11 +103,9 @@ bool readLuaFile(ScriptFile& const luaFileOutput) {
             extractGlobal(currentLine, luaFileOutput);
         }
         
-        totalLines++;
     }
 
     file.close();
-
 
     return validFile;
 
