@@ -9,6 +9,7 @@
 #include "graphics/HardCodedTextures.h"
 #include "graphics/AnimationManager.h";
 #include "luareader/LuaExposedEngineFunctionality.h"
+#include "messaging/messageIO.h"
 
 void Update();
 void Display();
@@ -72,6 +73,9 @@ int main(int argc, char **argv)
 
     //Link Engine functionality with lua
     initaliseLuaEngineLinks(window, scene);
+
+    //Read in messages that scripts can send to eachother
+    readMessages("../data/messaging/messages.txt");
 
     // Main Loop :D
     window->MainLoop(Update, Display);
