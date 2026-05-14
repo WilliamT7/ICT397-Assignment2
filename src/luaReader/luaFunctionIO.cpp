@@ -1,6 +1,11 @@
 //Built-in libaries-----------------------------
 #include <sstream>
 
+
+//TEMP
+#include <iostream>
+using std::cout;
+
 //Project files-------------------------------------
 #include "luaReader\luaFunctionIO.h"
 #include "other\stringTools.h"
