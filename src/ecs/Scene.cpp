@@ -28,14 +28,14 @@ void ECS::Scene::Update(float deltaTime)
 		m_physicsWorld->Step(deltaTime);
 	}
 
-	ProcessTriggers();
-
 	int size = entities.size();
 
 	for (int i = 0; i < size; i++)
 	{
 		entities[i].get()->Update(deltaTime);
 	}
+
+	ProcessTriggers();
 }
 
 //----------------------------------------------
@@ -89,9 +89,11 @@ bool ECS::Scene::Spawn(std::string prefabName)
 	sol::table entityData = lua["entity"];
 
 	entities.push_back(std::make_unique<Entity>());
-	auto& entity = entities.back();
+	Entity* spawnedEntity = entities.back().get();
 
-	entity.get()->DeserialiseComponentTable(entityData);
+	spawnedEntity->DeserialiseComponentTable(entityData); //this section fixed the physics not being created 0 0
+
+	InjectPhysicsWorld(spawnedEntity);
 }
 
 //----------------------------------------------

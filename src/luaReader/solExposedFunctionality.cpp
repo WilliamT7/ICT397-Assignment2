@@ -4,7 +4,6 @@
 #include "luaReader\SolScripting.h"
 #include "ECS/Entity.h"
 #include "other/singleton.h"
-#include "ECS/PhysicsTriggerComponent.h"
 #include "ECS/AllComponentsInclude.h"
 #include "FSM/ScriptState.h"
 
@@ -311,7 +310,9 @@ void exposePhysicsTrigger(sol::state_view& solView) {
 		"getStayName",
 		&ECS::PhysicsTriggerComponent::GetStayName,
 		"getExitName",
-		&ECS::PhysicsTriggerComponent::GetExitName
+		&ECS::PhysicsTriggerComponent::GetExitName,
+		"getEnterEntity",
+		ECS::PhysicsTriggerComponent::GetEnterEntity
 	);
 
 	solView.set_function("getPhysicsTrigger", &ECS::Entity::GetComponent<ECS::PhysicsTriggerComponent>);

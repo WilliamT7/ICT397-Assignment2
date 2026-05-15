@@ -31,7 +31,6 @@ void ECS::PhysicsComponent::Update(float deltaTime)
 	transform->position = Vector3(physicsPos.x, physicsPos.y, physicsPos.z);
 }
 
-
 void ECS::PhysicsComponent::ImGui()
 {
     if (ImGui::CollapsingHeader("Physics", ImGuiTreeNodeFlags_None))
@@ -40,6 +39,7 @@ void ECS::PhysicsComponent::ImGui()
 
         ImGui::InputFloat("Mass", &m_mass);
         ImGui::Checkbox("Is Static", &m_isStatic);
+        ImGui::Checkbox("Use Gravity", &m_useGravity);
         ImGui::InputFloat("Half Extents X", &m_halfExtents.x);
         ImGui::InputFloat("Half Extents Y", &m_halfExtents.y);
         ImGui::InputFloat("Half Extents Z", &m_halfExtents.z);
@@ -75,11 +75,6 @@ void ECS::PhysicsComponent::ImGui()
 void ECS::PhysicsComponent::SetPhysicsWorld(IPhysicsWorld* world)
 {
     physicsWorld = world;
-
-    if (physicsWorld != nullptr && physicsBody == nullptr)
-    {
-        CreateBodyFromSettings();
-    }
 }
 
 void ECS::PhysicsComponent::SetPhysicsBody(std::shared_ptr<IPhysicsBody> body)
@@ -111,11 +106,6 @@ void ECS::PhysicsComponent::ClearBody()
     physicsBody.reset();
 }
 
-void ECS::PhysicsComponent::SetPhysicsWorld(BulletPhysicsWorld* world)
-{
-    physicsWorld = world;
-}
-
 void ECS::PhysicsComponent::AddForce(const Vector3& force)
 {
     if (physicsBody == nullptr)
@@ -142,6 +132,7 @@ bool ECS::PhysicsComponent::CreateBodyFromSettings()
         desc.mass = m_isStatic ? 0.0f : m_mass;
         desc.isStatic = m_isStatic;
         desc.position = { transform->position.x, transform->position.y, transform->position.z };
+		desc.useGravity = m_useGravity;
 
         physicsBody = physicsWorld->CreateBoxBody(
             desc,
@@ -194,12 +185,11 @@ void ECS::PhysicsComponent::DeserialiseComponentTable(sol::table& data)
     m_shape = data["shape"];
     m_mass = data["mass"];
     m_isStatic = data["isStatic"];
+    m_useGravity = data["useGravity"].get_or(true);
 
     m_halfExtents.x = data["halfExtents_x"];
     m_halfExtents.y = data["halfExtents_y"];
     m_halfExtents.z = data["halfExtents_z"];
-
-    CreateBodyFromSettings();
 }
 
 sol::table ECS::PhysicsComponent::SerialiseComponent(sol::state& lua) const
@@ -210,6 +200,7 @@ sol::table ECS::PhysicsComponent::SerialiseComponent(sol::state& lua) const
     t["shape"] = m_shape;
     t["mass"] = m_mass;
     t["isStatic"] = m_isStatic;
+    t["useGravity"] = m_useGravity;
     t["halfExtents_x"] = m_halfExtents.x;
     t["halfExtents_y"] = m_halfExtents.y;
     t["halfExtents_z"] = m_halfExtents.z;

@@ -156,16 +156,6 @@ namespace ECS
 		**/
 		void ClearBody();
 
-		/** SetPhysicsWorld
-		* @author - William Thorpe
-		* @brief - Links the physics world to this component for potential future use
-		* @param - IPhysicsWorld* world - The physics world to link
-		* @pre - The physics world should be valid and properly initialized.
-		* @post - Sets the physics world for this component.
-		* @return - None.
-		**/
-		void SetPhysicsWorld(BulletPhysicsWorld* world);
-
 		/** AddForce
 		* @author - William Thorpe
 		* @brief - Applies a force to the linked physics body, affecting its motion according to the physics simulation.
@@ -234,5 +224,6 @@ namespace ECS
 		float m_mass = 1.0f;
 		bool m_isStatic = false;
 		Vector3 m_halfExtents = Vector3(1.0f, 1.0f, 1.0f); // Using halfExtents matches how box sizes are commonly represented in physics systems and simplifies calculations from the center, the more you know = )
+		bool m_useGravity = true;
 	};
 }

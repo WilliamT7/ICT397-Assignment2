@@ -16,7 +16,7 @@ function update()
 	if script ~= nil then
 		timer = script:getGlobal("timer")
 		value = timer.value
-		print("timer: " .. value)
+		--print("timer: " .. value)
 		script:setGlobal("timer", tostring(value + 1))
 		
 		

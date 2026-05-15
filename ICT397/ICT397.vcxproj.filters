@@ -181,6 +181,9 @@
     <ClCompile Include="..\src\ecs\FSMComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\ecs\PhysicsTriggerComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
@@ -428,6 +431,9 @@
     </ClInclude>
     <ClInclude Include="..\include\FSM\State.h">
       <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\PhysicsTriggerComponent.h">
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

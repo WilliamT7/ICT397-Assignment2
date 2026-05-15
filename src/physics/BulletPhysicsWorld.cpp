@@ -79,9 +79,7 @@ void BulletPhysicsWorld::Step(float deltaTime)
     m_world->stepSimulation(deltaTime);
 }
 
-std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateBoxBody(
-    const RigidBodyDesc& desc,
-    const Vector3& halfExtents)
+std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateBoxBody(const RigidBodyDesc& desc, const Vector3& halfExtents)
 {
     if (m_world == nullptr)
         return nullptr;
@@ -112,6 +110,19 @@ std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateBoxBody(
 
     btRigidBody* body = new btRigidBody(rigidBodyInfo);
     m_world->addRigidBody(body);
+
+
+    if (!desc.useGravity)
+    {
+        body->setGravity(btVector3(0.0f, 0.0f, 0.0f));
+        body->clearForces();
+
+        body->setActivationState(DISABLE_DEACTIVATION);
+        body->activate(true); //so it doesnt sleep (makes it not be interactable or anything)
+
+
+        body->setAngularFactor(btVector3(0.0f, 0.0f, 0.0f)); // if something doesnt use gravity, it wont rotate either
+    }
 
     return std::make_shared<BulletPhysicsBody>(body);
 }

@@ -84,11 +84,10 @@ bool ECS::PhysicsTriggerComponent::IsOverlapping(Entity* other) const
 	if (!other->HasComponent<PhysicsComponent>())
 		return false;
 
-	TransformComponent* otherTransform = other->GetComponent<TransformComponent>();
 	PhysicsComponent* otherPhysics = other->GetComponent<PhysicsComponent>();
 
 	Vector3 aPos = transform->position;
-	Vector3 bPos = otherTransform->position;
+	Vector3 bPos = otherPhysics->GetPosition();
 
 	Vector3 aHalf = m_halfExtents;
 	Vector3 bHalf = otherPhysics->GetHalfExtents();

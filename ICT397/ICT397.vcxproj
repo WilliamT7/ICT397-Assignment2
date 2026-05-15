@@ -272,6 +272,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)..\external\glm-1.0.3;$(ProjectDir)..\external\stb_image;$(ProjectDir)..\external\glad\include;$(ProjectDir)..\external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(ProjectDir)..\include\;$(ProjectDir)..\external\assimp\include;$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\imgui-1.92.6;$(ProjectDir)..\external\Lua-Sol\sol;$(ProjectDir)..\external\Lua-Sol\Lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

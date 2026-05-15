@@ -22,4 +22,5 @@ struct RigidBodyDesc
     float mass = 1.0f;
     Vector3 position;
     bool isStatic = false;
+	bool useGravity = true;
 };
