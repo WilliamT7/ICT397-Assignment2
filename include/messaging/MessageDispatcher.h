@@ -7,6 +7,7 @@
  *				1.0 Creation
  *
 *********************************************/
+#pragma once
 //Project files--------------------
 #include "messaging/telegram.h"
 #include "ECS/Entity.h"
@@ -63,8 +64,12 @@ public:
 	void dispatchDelayedMessages();
 
 
+	void linkEntityList(vector<std::unique_ptr<ECS::Entity>>* entityList);
+
+
 private:
 
+	vector<std::unique_ptr<ECS::Entity>>* entityList;
 
 	///Current frame the scene is on
 	float currentTime;

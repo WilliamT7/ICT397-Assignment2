@@ -199,6 +199,12 @@
     <ClCompile Include="..\src\messaging\messageDisLua.cpp">
       <Filter>Source Files\Messaging</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\AI\AIMovement.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
@@ -464,6 +470,9 @@
     </ClInclude>
     <ClInclude Include="..\include\messaging\messageDisLua.h">
       <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="AIMovement.h">
+      <Filter>Header Files\AI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

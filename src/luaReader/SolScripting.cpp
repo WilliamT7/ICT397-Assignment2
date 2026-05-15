@@ -240,6 +240,8 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	exposeSolScripting(solView);
 
+	exposeAIBehaviours(solView);
+
 	// Scene functions like spawn prefabs
 	exposeSceneFunctionality(solView);
 

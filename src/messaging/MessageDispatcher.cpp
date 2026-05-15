@@ -52,3 +52,31 @@ void MessageDispatcher::dispatchMessage(double delay, int sender, int reciever, 
 }
 
 //------------------------------------------------------
+
+void MessageDispatcher::dispatchDelayedMessages() {
+
+}
+
+
+//------------------------------------------------------
+
+void MessageDispatcher::linkEntityList(vector<std::unique_ptr<ECS::Entity>>* nEntityList) {
+
+
+	entityList = nEntityList;
+}
+
+//------------------------------------------------------
+
+void MessageDispatcher::broadcastMessage(const telegram& message) {
+
+
+
+}
+
+//------------------------------------------------------
+
+void MessageDispatcher::sendMessage(ECS::Entity* recciever, const telegram& message) {
+
+
+}
