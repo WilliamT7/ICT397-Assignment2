@@ -2,9 +2,11 @@
  * @file - Vector3
  * @brief - Struct for Vector3
  *
- * @version
+ * @version 2.0
  * @date 20/02/2026 Kay Bradsell
  *				1.0 Creation
+ * @date 15/05/2026 Seb D'Alessandro
+ *				2.0 Added operator overloads and various other features
 *********************************************/
 
 #pragma once
@@ -70,6 +72,23 @@ struct Vector3
 		y = y / mag;
 		z = z / mag;
 	}
+
+	const float length() const;
+
+	bool isZero() const;
+
+
+	//Operator overloads--------------- omg i love them so much
+	Vector3 operator-(const Vector3& const otherVector) const;
+
+	Vector3 operator*(const float& number) const;
+
+	Vector3 operator-() const;
+
+	bool operator==(const Vector3& const otherVector) const;
+
+	Vector3 operator+=(const Vector3& const otherVector) const;
+
 };
 
 //----------------------------------------------
@@ -114,3 +133,4 @@ struct Vector3Int
 };
 
 //----------------------------------------------
+

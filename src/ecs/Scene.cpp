@@ -7,7 +7,8 @@
 #include "graphics/ShaderType.h"
 #include "physics/BulletPhysicsWorld.h"
 #include "messaging/MessageDispatcher.h"
-#include <ecs/PhysicsTriggerComponent.h> //woah <> thats cool
+#include <ecs/PhysicsTriggerComponent.h> //woah <> thats cool it works
+#include "other/singleton.h"
 
 #include "ecs/SceneLoader.h"
 #include "imgui_impl_opengl3.h" // for now
@@ -18,8 +19,14 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 {
 	//PHYSICS AGAIN :D
 	m_physicsWorld = physicsWorld;
+
 	LoadSceneScene(fileName);
 	m_running = true;
+
+	//Link message disptacher with entity list
+	MessageDispatcher* messageManager = Singleton<MessageDispatcher>::getInstance();
+	messageManager->linkEntityList(&entities);
+
 }
 
 //----------------------------------------------
