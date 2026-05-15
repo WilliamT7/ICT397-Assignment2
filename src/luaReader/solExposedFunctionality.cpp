@@ -310,9 +310,7 @@ void exposePhysicsTrigger(sol::state_view& solView) {
 		"getStayName",
 		&ECS::PhysicsTriggerComponent::GetStayName,
 		"getExitName",
-		&ECS::PhysicsTriggerComponent::GetExitName,
-		"getEnterEntity",
-		ECS::PhysicsTriggerComponent::GetEnterEntity
+		&ECS::PhysicsTriggerComponent::GetExitName
 	);
 
 	solView.set_function("getPhysicsTrigger", &ECS::Entity::GetComponent<ECS::PhysicsTriggerComponent>);
