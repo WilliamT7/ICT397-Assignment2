@@ -173,6 +173,8 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	exposeSolScripting(solView);
 
+	exposeAIBehaviours(solView);
+
 	// Scene functions like spawn prefabs
 	exposeSceneFunctionality(solView);
 
@@ -207,7 +209,6 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 
 	//Entity specfic stuff-----------------------------
 	exposeEntity(solView);
-
 
 	//Script component
 	exposeScriptComponent(solView);
@@ -267,7 +268,7 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 	if(entity->HasComponent<ECS::PhysicsTriggerComponent>())
 	{
 		exposePhysicsTrigger(solView);
-  }
+	}
     
 	if (entity->HasComponent<ECS::FSMComponent>())
 	{

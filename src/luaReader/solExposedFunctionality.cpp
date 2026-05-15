@@ -6,6 +6,7 @@
 #include "other/singleton.h"
 #include "ECS/AllComponentsInclude.h"
 #include "FSM/ScriptState.h"
+#include "AI/AIMovement.h"
 
 
 //--------------------------------------
@@ -153,6 +154,7 @@ void exposeScriptComponent(sol::state_view& solView) {
 }
 
 //-----------------------------------------------------------------------------------------------
+
 void exposeTransform(sol::state_view& solView) {
 
 	solView.new_usertype <ECS::TransformComponent >(
@@ -288,6 +290,7 @@ void exposePhysics(sol::state_view& solView) {
 	solView.set_function("setAngularVelocity", &ECS::PhysicsComponent::SetAngularVelocity);
 
 }
+
 //------------------------------------------------------------------------------------------
 
 void exposePhysicsTrigger(sol::state_view& solView) {
@@ -316,6 +319,8 @@ void exposePhysicsTrigger(sol::state_view& solView) {
 	solView.set_function("getPhysicsTrigger", &ECS::Entity::GetComponent<ECS::PhysicsTriggerComponent>);
 	solView.set_function("setTriggerHalfExtents", &ECS::PhysicsTriggerComponent::SetHalfExtents);
 }
+
+//------------------------------------------------------------------------------------------
 
 void exposeScriptGlobal(sol::state_view& solView) {
 	
@@ -374,6 +379,9 @@ void exposeFSM(sol::state_view& solView) {
 	solView.set_function("setExitCode", &ScriptState::setExitCode);
 
 }
+
+//------------------------------------------------------------------------------------------
+
 void exposeSceneFunctionality(sol::state_view& solView)
 {
 	LuaEngineFunctionality* luaEngineLink = Singleton<LuaEngineFunctionality>::getInstance();
@@ -388,3 +396,10 @@ void exposeSceneFunctionality(sol::state_view& solView)
 }
 
 //------------------------------------------------------------------------------------------
+
+void exposeAIBehaviours(sol::state_view& solView) {
+
+	
+	solView.set_function("moveTo", &moveTo);
+
+}

@@ -27,6 +27,7 @@
     <ClCompile Include="..\external\imgui-1.92.6\imgui_tables.cpp" />
     <ClCompile Include="..\external\imgui-1.92.6\imgui_widgets.cpp" />
     <ClCompile Include="..\glad.c" />
+    <ClCompile Include="..\src\AI\AIMovement.cpp" />
     <ClCompile Include="..\src\ecs\AnimationComponent.cpp" />
     <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
     <ClCompile Include="..\src\ecs\Entity.cpp" />
@@ -85,6 +86,7 @@
     <ClCompile Include="..\src\terrain\Terrain.cpp" />
     <ClCompile Include="..\src\terrain\TerrainLighting.cpp" />
     <ClCompile Include="..\src\terrain\TextureTerrain.cpp" />
+    <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\imgui-1.92.6\imconfig.h" />
@@ -174,6 +176,7 @@
     <ClInclude Include="..\include\terrain\TerrainLighting.h" />
     <ClInclude Include="..\include\terrain\TerrainStrategy.h" />
     <ClInclude Include="..\include\terrain\TextureTerrain.h" />
+    <ClInclude Include="AIMovement.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\shaders\2dtextures.frag.glsl" />
