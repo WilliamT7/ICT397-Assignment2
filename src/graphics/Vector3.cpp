@@ -1,5 +1,5 @@
 //Project files------------------------------
-#include "Graphics/Vector3.h"
+#include "graphics/Vector3.h"
 
 //------------------------------------------
 
