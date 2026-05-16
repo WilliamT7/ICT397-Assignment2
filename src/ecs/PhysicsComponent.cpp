@@ -189,6 +189,14 @@ Vector3 ECS::PhysicsComponent::GetHalfExtents() const
     return m_halfExtents;
 }
 
+void ECS::PhysicsComponent::SetPosition(const Vector3& position)
+{
+    if (physicsBody == nullptr)
+        return;
+
+    physicsBody->SetPosition(position);
+}
+
 void ECS::PhysicsComponent::DeserialiseComponentTable(sol::table& data)
 {
     m_shape = data["shape"];
