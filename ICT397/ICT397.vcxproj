@@ -27,6 +27,7 @@
     <ClCompile Include="..\external\imgui-1.92.6\imgui_tables.cpp" />
     <ClCompile Include="..\external\imgui-1.92.6\imgui_widgets.cpp" />
     <ClCompile Include="..\glad.c" />
+    <ClCompile Include="..\src\AI\AIHelper.cpp" />
     <ClCompile Include="..\src\AI\AIMovement.cpp" />
     <ClCompile Include="..\src\ecs\AnimationComponent.cpp" />
     <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
@@ -56,6 +57,7 @@
     <ClCompile Include="..\src\graphics\Model.cpp" />
     <ClCompile Include="..\src\graphics\Shader_OpenGL.cpp" />
     <ClCompile Include="..\src\graphics\Texture_OpenGL.cpp" />
+    <ClCompile Include="..\src\graphics\Vector3.cpp" />
     <ClCompile Include="..\src\graphics\Window.cpp" />
     <ClCompile Include="..\src\graphics\WindowFactory.cpp" />
     <ClCompile Include="..\src\graphics\Window_GLFW.cpp" />
@@ -86,7 +88,6 @@
     <ClCompile Include="..\src\terrain\Terrain.cpp" />
     <ClCompile Include="..\src\terrain\TerrainLighting.cpp" />
     <ClCompile Include="..\src\terrain\TextureTerrain.cpp" />
-    <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\imgui-1.92.6\imconfig.h" />
@@ -98,6 +99,8 @@
     <ClInclude Include="..\external\imgui-1.92.6\imstb_rectpack.h" />
     <ClInclude Include="..\external\imgui-1.92.6\imstb_textedit.h" />
     <ClInclude Include="..\external\imgui-1.92.6\imstb_truetype.h" />
+    <ClInclude Include="..\include\AI\AIHelper.h" />
+    <ClInclude Include="..\include\AI\AIMovement.h" />
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h" />
     <ClInclude Include="..\include\ecs\AnimationComponent.h" />
     <ClInclude Include="..\include\ecs\CameraComponent.h" />
@@ -176,7 +179,6 @@
     <ClInclude Include="..\include\terrain\TerrainLighting.h" />
     <ClInclude Include="..\include\terrain\TerrainStrategy.h" />
     <ClInclude Include="..\include\terrain\TextureTerrain.h" />
-    <ClInclude Include="AIMovement.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\shaders\2dtextures.frag.glsl" />

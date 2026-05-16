@@ -13,9 +13,6 @@
     <ClCompile Include="..\src\graphics\Bone.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\graphics\Graphics.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\graphics\Graphics_OpenGL.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
@@ -202,8 +199,14 @@
     <ClCompile Include="..\src\AI\AIMovement.cpp">
       <Filter>Source Files\AI</Filter>
     </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Source Files\ECS</Filter>
+    <ClCompile Include="..\src\AI\AIHelper.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Graphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Vector3.cpp">
+      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -471,7 +474,10 @@
     <ClInclude Include="..\include\messaging\messageDisLua.h">
       <Filter>Header Files\Messaging</Filter>
     </ClInclude>
-    <ClInclude Include="AIMovement.h">
+    <ClInclude Include="..\include\AI\AIHelper.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AI\AIMovement.h">
       <Filter>Header Files\AI</Filter>
     </ClInclude>
   </ItemGroup>
