@@ -165,7 +165,9 @@ void exposeTransform(sol::state_view& solView) {
 		"setRotation",
 		&ECS::TransformComponent::setRotation,
 		"setScale",
-		&ECS::TransformComponent::setScale
+		&ECS::TransformComponent::setScale,
+		"position",
+		&ECS::TransformComponent::position
 	);
 
 	solView.set_function("getTransform", &ECS::Entity::GetComponent<ECS::TransformComponent>);

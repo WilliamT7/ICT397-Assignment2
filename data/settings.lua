@@ -1,5 +1,5 @@
 settings = {
-    scene = "demo.lua",
+    scene = "AITest.lua",
     mouseVisible = true,
     imGuiVisible = true
 }
