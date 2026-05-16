@@ -15,4 +15,4 @@
 
 //-----------------------------------------------------
 
-bool moveTo(Vector3& curPos, const Vector3& targetPos, Vector3& curVelocity, double timeElapsed, double offset);
+bool moveTo(Vector3& curPos, Vector3& targetPos, Vector3& curVelocity, double timeElapsed, double offset);
