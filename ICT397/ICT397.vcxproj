@@ -78,6 +78,7 @@
     <ClCompile Include="..\src\messaging\telegram.cpp" />
     <ClCompile Include="..\src\other\fileIO.cpp" />
     <ClCompile Include="..\src\other\stringTools.cpp" />
+    <ClCompile Include="..\src\other\time.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsBody.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsWorld.cpp" />
     <ClCompile Include="..\src\Task 1.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="..\include\other\fileIO.h" />
     <ClInclude Include="..\include\other\singleton.h" />
     <ClInclude Include="..\include\other\stringTools.h" />
+    <ClInclude Include="..\include\other\time.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsBody.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsWorld.h" />
     <ClInclude Include="..\include\physics\IPhysicsBody.h" />

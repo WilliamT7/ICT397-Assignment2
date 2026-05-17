@@ -8,7 +8,7 @@
 #include "FSM/ScriptState.h"
 #include "graphics/GUI.h"
 #include "AI/AIMovement.h"
-
+#include "other/time.h"
 
 //--------------------------------------
 
@@ -412,5 +412,17 @@ void exposeAIBehaviours(sol::state_view& solView) {
 
 	
 	solView.set_function("moveTo", &moveTo);
+	solView.set_function("moveEntityTo", &moveEntityTo);
+
+}
+
+//------------------------------------------------------------------------------------------
+
+void exposeTime(sol::state_view& solView) {
+
+
+	solView.set_function("getDeltaTime", &getDeltatime);
+	solView.set_function("getCurrentFrame", &getCurrentFrame);
+	solView.set_function("getPreviousFrame", &getPreviousFrame);
 
 }

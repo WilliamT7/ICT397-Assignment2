@@ -56,11 +56,37 @@ bool Vector3::operator==(const Vector3& const otherVector) const {
 
 //------------------------------------------
 
-Vector3 Vector3::operator+=(const Vector3& const otherVector) const {
+void Vector3::operator+=(const Vector3& const otherVector) {
 
-	float nX = x + otherVector.x;
-	float nY = y + otherVector.y;
-	float nZ = z + otherVector.z;
+	x = x + otherVector.x;
+	y = y + otherVector.y;
+	z = z + otherVector.z;
+
+
+
+}
+
+//------------------------------------------
+
+ostream& operator <<(ostream& os, Vector3& const vector) {
+
+
+	os << "X: " << vector.x << "\n";
+	os << "Y: " << vector.y << "\n";
+	os << "Z: " << vector.z << "\n";
+
+
+	return os;
+
+
+}
+
+
+Vector3 Vector3::operator*(const Vector3& const otherVector) const {
+
+	float nX = x * otherVector.x;
+	float nY = y * otherVector.y;
+	float nZ = z * otherVector.z;
 
 	return Vector3(nX, nY, nZ);
 

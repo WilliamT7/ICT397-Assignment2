@@ -182,8 +182,12 @@ Vector3 ECS::PhysicsComponent::GetHalfExtents() const
 
 void ECS::PhysicsComponent::SetPosition(const Vector3& position)
 {
-    if (physicsBody == nullptr)
+    if (physicsBody == nullptr) {
+        std::cout << "================im over here!====================\n";
         return;
+
+    }
+
 
     physicsBody->SetPosition(position);
 }

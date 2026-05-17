@@ -1,5 +1,8 @@
 #include "../include/physics/BulletPhysicsBody.h"
 #include <btBulletDynamicsCommon.h>
+
+#include <iostream>
+
 namespace
 {
     btVector3 ToBtVector3(const Vector3& v)
@@ -43,8 +46,11 @@ Vector3 BulletPhysicsBody::GetPosition() const
 
 void BulletPhysicsBody::SetPosition(const Vector3& position)
 {
-    if (m_body == nullptr)
+    if (m_body == nullptr) {
+        std::cout << "================im over here!====================??????\n";
         return;
+    }
+
 
     btTransform transform = m_body->getWorldTransform();
     transform.setOrigin(ToBtVector3(position));

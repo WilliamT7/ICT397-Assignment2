@@ -14,6 +14,11 @@
 //----------------------------------------------
 
 #include <math.h>
+#include <fstream>
+
+
+//Namespaces-----------------------------------
+using std::ostream;
 
 //----------------------------------------------
 
@@ -87,11 +92,19 @@ struct Vector3
 
 	bool operator==(const Vector3& const otherVector) const;
 
-	Vector3 operator+=(const Vector3& const otherVector) const;
+	void operator+=(const Vector3& const otherVector);
+
+	Vector3 operator*(const Vector3& const otherVector) const;
 
 };
 
 //----------------------------------------------
+
+ostream& operator <<(ostream& os, Vector3& const vector);
+
+
+
+//------------------------------------------------
 
 // in case you want a vector3 that forces ints. Cuz why not?
 struct Vector3Int
@@ -133,4 +146,3 @@ struct Vector3Int
 };
 
 //----------------------------------------------
-
