@@ -1,9 +1,6 @@
 //Project files-----------------------
 #include "AI/AIHelper.h"
 
-
-#include <iostream>
-using std::cout;
 //-----------------------------------
 
 bool arrived(Vector3& currentPosition, Vector3& targetPostion, Vector3& newCurrentPosition) {
