@@ -410,8 +410,6 @@ void exposeSceneFunctionality(sol::state_view& solView)
 
 void exposeAIBehaviours(sol::state_view& solView) {
 
-	
-	solView.set_function("moveTo", &moveTo);
 	solView.set_function("moveEntityTo", &moveEntityTo);
 
 }

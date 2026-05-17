@@ -11,25 +11,7 @@ function update()
 	deltaTime = getDeltaTime()
 	
 	physicsPos = physics:getPosition()
-	
-	print("I AM MOVING! I AM CURRENTLY AT")
-	print("TRANS-------------------------")
-	print("x: " .. position.x)
-	print("y: " .. position.y)
-	print("z: " .. position.z)
-	
-	print("PHYSICS---------------------")
-	print("x: " .. physicsPos.x)
-	print("y: " .. physicsPos.y)
-	print("z: " .. physicsPos.z)
-	
-	
-	print("========================")
- 
 
-	
-	
-	
 	moved = moveEntityTo(obj, targetPosition, deltaTime, 1, 10)
 	
 

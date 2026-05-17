@@ -19,7 +19,6 @@ bool arrived(Vector3& currentPosition, Vector3& targetPostion, Vector3& newCurre
 	}
 	else {
 		currentPosition += newCurrentPosition;
-		cout << "adding targetPos to curPos ( " << currentPosition << "\n+\n" << targetPostion;
 		return false;
 	}
 
