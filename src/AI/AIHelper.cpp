@@ -1,6 +1,9 @@
 //Project files-----------------------
 #include "AI/AIHelper.h"
 
+
+#include <iostream>
+using std::cout;
 //-----------------------------------
 
 bool arrived(Vector3& currentPosition, Vector3& targetPostion, Vector3& newCurrentPosition) {
@@ -11,11 +14,12 @@ bool arrived(Vector3& currentPosition, Vector3& targetPostion, Vector3& newCurre
 
 	if (xDone && yDone && zDone)
 	{
-		currentPosition = targetPostion;
+		currentPosition = newCurrentPosition;
 		return true;
 	}
 	else {
 		currentPosition += newCurrentPosition;
+		cout << "adding targetPos to curPos ( " << currentPosition << "\n+\n" << targetPostion;
 		return false;
 	}
 

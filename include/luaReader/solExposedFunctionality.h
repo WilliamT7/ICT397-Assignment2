@@ -169,3 +169,14 @@ void exposeSceneFunctionality(sol::state_view& solView);
 * @return - void
 */
 void exposeAIBehaviours(sol::state_view& solView);
+
+
+/* exposeTime
+* @author - Seb D'Alessandro
+* @brief - 
+* @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
+* @post -
+* @param solView -
+* @return - void
+*/
+void exposeTime(sol::state_view& solView);

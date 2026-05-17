@@ -11,8 +11,12 @@
 
 //Project files-----------
 #include "Graphics/Vector3.h"
+#include "ECS/Entity.h"
 
 
 //-----------------------------------------------------
 
 bool moveTo(Vector3& curPos, Vector3& targetPos, Vector3& curVelocity, double timeElapsed, double offset);
+
+
+bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int updateFrequency);
