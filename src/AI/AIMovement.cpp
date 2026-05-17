@@ -45,9 +45,9 @@ bool moveTo(Vector3& curPos, Vector3& targetPos, Vector3& curVelocity, double ti
 //---------------------------------------------------------
 
 bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int updateFrequency) {
-
+	
 	bool atDestination = false;
-
+	
 	if (entity.HasComponent<ECS::PhysicsComponent>()) {
 
 		//Grab the velocity, position shit from component
@@ -55,20 +55,14 @@ bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElap
 
 		Vector3 curVelocity = physics->GetLinearVelocity();
 		Vector3 curPos = physics->GetPosition();
-		cout << "[C++] curPos:\n" << curPos << "\n";
-		cout << "[C++] curVelocity:n" << curVelocity << "\n";
 
 		Vector3 newPos;
 
 		//vector between current position and target
-		Vector3 toTarget = targetPos - curPos; 
-		cout << "[C++] TO TARGET: \n" << toTarget << "\n";
+		Vector3 toTarget = targetPos - curPos;
 		toTarget.Normalize();                       //get heading
 
-
-		cout << "[C++] TO TARGET (normal): \n" << toTarget << "\n";
 		Vector3 pos = targetPos;
-		//cout << "[C++] pos:\n" << pos << "\n";
 
 		bool noVelocity = curVelocity.isZero();
 
@@ -80,32 +74,29 @@ bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElap
 		if (curPos == pos)
 		{
 			atDestination = true;
-			cout << "I HAVE ARRIVED FEAR ME\n";
 		}
 
 
 		if (!atDestination) {
 
-			curVelocity = toTarget * curVelocity.length();  //new velocity
-			cout << "[C++] NEW VELOCITY: \n" << curVelocity << "\n";
+			float moveSpeed = 15.0f;
+			curVelocity = toTarget * moveSpeed;  //new velocity
 
 			newPos = curVelocity * timeElapsed;
-			cout << "[C++] NEW POS: \n" << newPos << "\n";
 
-
-			cout << "[C++] CUR POS:\n" << curPos << "\n";
 			//No, I would not like a 30 line if-else chain thanks
 			atDestination = arrived(curPos, pos, newPos);
-			cout << "[C++] CUR POS (AFTER):\n" << curPos << "\n";
 
-			physics->SetLinearVelocity(curVelocity);
-			physics->SetPosition(curPos);
+			if (atDestination)
+			{
+				physics->SetLinearVelocity(Vector3(0.0f, 0.0f, 0.0f));
+				physics->SetPosition(pos);
+			}
+			else
+			{
+				physics->SetLinearVelocity(curVelocity);
+			}
 		}
-
-
-
-
-		cout << "I HAVE PHYSICS\N";
 	}
 
 	return atDestination;

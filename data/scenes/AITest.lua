@@ -143,7 +143,7 @@ scene = {
         halfExtents_x = 1,
         halfExtents_y = 1,
         halfExtents_z = 1,
-        isStatic = true,
+        isStatic = false,
         mass = 1,
         shape = "box"
       } --[[table: 000001F0759873E0]],
