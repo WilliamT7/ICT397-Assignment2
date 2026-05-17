@@ -16,9 +16,9 @@
 /* exposeEntity
 * @author - Seb D'Alessandro
 * @brief - Exposes entity object to a solView for Lua to use
-* @pre - 
-* @post -
-* @param solView - 
+* @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
+* @post - Entity object is usable in Lua
+* @param solView -  lua context to add solscripting to
 * @return - void
 */
 void exposeEntity(sol::state_view& solView);
@@ -29,7 +29,7 @@ void exposeEntity(sol::state_view& solView);
 * @brief - Exposes Solscripting object for solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
 * @post - Solscripting object is exposed to lua
-* @param solView - lua context to add solscripting too
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeSolScripting(sol::state_view& solView);
@@ -40,7 +40,7 @@ void exposeSolScripting(sol::state_view& solView);
 * @brief - Exposes general window functionality to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
 * @post -
-* @param solView -
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeWindowFunctionality(sol::state_view& solView);
@@ -50,8 +50,8 @@ void exposeWindowFunctionality(sol::state_view& solView);
 * @author - Seb D'Alessandro
 * @brief - Exposes vector struct to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - vector struct is exposed to lua
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeVectors(sol::state_view& solView);
@@ -61,8 +61,8 @@ void exposeVectors(sol::state_view& solView);
 * @author - Seb D'Alessandro
 * @brief - Exposes textureRenderer component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - texture renderer component is exposed to lua
+* @param solView -lua context to add solscripting to
 * @return - void
 */
 void exposeTextureRenderer(sol::state_view& solView);
@@ -73,7 +73,7 @@ void exposeTextureRenderer(sol::state_view& solView);
 * @brief - Exposes script component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
 * @post -
-* @param solView -
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeScriptComponent(sol::state_view& solView);
@@ -84,7 +84,7 @@ void exposeScriptComponent(sol::state_view& solView);
 * @brief - Exposes transform component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
 * @post -
-* @param solView -
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeTransform(sol::state_view& solView);
@@ -94,8 +94,8 @@ void exposeTransform(sol::state_view& solView);
 * @author - Seb D'Alessandro
 * @brief - Exposes camera component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - camera component is exposed to Lua
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeCamera(sol::state_view& solView);
@@ -103,10 +103,10 @@ void exposeCamera(sol::state_view& solView);
 
 /* exposeLighting
 * @author - Seb D'Alessandro
-* @brief -
+* @brief - exposes lighting component to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - lighting component is exposed to Lua
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeLighting(sol::state_view& solView);
@@ -114,21 +114,21 @@ void exposeLighting(sol::state_view& solView);
 
 /* exposeTerrain
 * @author - Seb D'Alessandro
-* @brief -
+* @brief - Exposes terrain component to Lua	
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - terrain component is exposed to Lua
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeTerrain(sol::state_view& solView);
 
 
 /* exposePhysics
-* @author - Seb D'Alessandro
-* @brief -
+* @author - 
+* @brief - exposes physics component to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - physics component is exposed to Lua
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposePhysics(sol::state_view& solView);
@@ -138,10 +138,10 @@ void exposePhysicsTrigger(sol::state_view& solView);
 
 /* exposeScriptGlobal
 * @author - Seb D'Alessandro
-* @brief -
+* @brief - exposes a script global to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - script global data type is exposed to lua
+* @param solView - lua context to add solscripting to
 * @return - void
 */
 void exposeScriptGlobal(sol::state_view& solView);
@@ -149,10 +149,10 @@ void exposeScriptGlobal(sol::state_view& solView);
 
 /* exposeFSM
 * @author - Seb D'Alessandro
-* @brief -
+* @brief - exposes FSM to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - FSM component is exposed to Lua
+* @param solView lua context to add solscripting to
 * @return - void
 */
 void exposeFSM(sol::state_view& solView);
@@ -164,8 +164,8 @@ void exposeSceneFunctionality(sol::state_view& solView);
 * @author - Seb D'Alessandro
 * @brief - Exposes a range of AI behaviours to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - General AI functions are exposed to Lua (i.e. moveTo() )
+* @param solView - lua context to add solscripting too
 * @return - void
 */
 void exposeAIBehaviours(sol::state_view& solView);

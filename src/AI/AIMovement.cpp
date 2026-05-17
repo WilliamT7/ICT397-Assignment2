@@ -2,12 +2,6 @@
 #include "AI/AIMovement.h"
 #include "AI/AIHelper.h"
 #include "ECS/PhysicsComponent.h"
-//----------------------------
-
-
-//TEMPORARY
-#include <iostream>
-using std::cout;
 
 //---------------------------------------------------------
 
