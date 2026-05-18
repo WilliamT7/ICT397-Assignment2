@@ -72,3 +72,4 @@ void ECS::TransformComponent::setScale(float x, float y, float z) {
 void ECS::TransformComponent::setRotation(float x, float y, float z) {
 	rotation = { x, y, z };
 }
+

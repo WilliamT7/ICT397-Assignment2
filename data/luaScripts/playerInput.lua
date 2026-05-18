@@ -1,6 +1,6 @@
-local maxSpeed = 50.0
+local maxSpeed = 20.0
 local camSensitivity = 0.1
-local playerHeight = 20
+local playerHeight = 10
 
 function update()
 	--toggle mouse

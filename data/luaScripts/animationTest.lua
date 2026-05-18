@@ -1,10 +1,6 @@
 function update()
     anim = getAnimation(obj)
 
-    if (GetKeyPress(3)) then
-        anim:play("idle")
-    end
-
     if (GetKeyPress(1)) then
         anim:play("walk")
     end
