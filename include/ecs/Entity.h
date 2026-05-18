@@ -120,6 +120,8 @@ namespace ECS
 		**/
 		Component* AddComponentByName(std::string name);
 
+		void Start();
+
 		/** Update
 		* @author - Kay Bradsell
 		* @brief - For every component in this Entity, call their update

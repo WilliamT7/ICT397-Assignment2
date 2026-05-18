@@ -97,6 +97,8 @@ bool ECS::Scene::Spawn(std::string prefabName)
 	spawnedEntity->DeserialiseComponentTable(entityData); //this section fixed the physics not being created 0 0
 
 	InjectPhysicsWorld(spawnedEntity);
+
+	spawnedEntity->Start();
 }
 
 //----------------------------------------------

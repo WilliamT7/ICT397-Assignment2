@@ -1,15 +1,22 @@
 local speed = 1
 
-function update()
-    -- pick a direction Vector2().normalize so x and y are rand  1-10
-    --local randomX = math.random(-5,5)
-    --local randomZ = math.random(-5,5)
-    --local randomDir = Vector3.new(randomX, 0, randomZ)
-    local randomDir = Vector3.new(0, 0, 1)
 
+function start()
+-- pick a direction Vector2().normalize so x and y are rand  1-10
+    local randomX = math.random(-5,5)
+    local randomZ = math.random(-5,5)
+    local randomDir = Vector3.new(randomX, 0, randomZ)
+    randomDir:normalize()
+    obj:setGlobal("x", tostring(randomDir.x))
+    setGlobal("z", tostring(randomDir.z))
+    print("SETUP")
+end
+
+function update()
     -- increase transform for that x/z by 1
     local transform = getTransform(obj)
     local animation = getAnimation(obj)
+    local randomDir = Vector3.new(getGlobal("x"), 0, getGlobal("z"))
 
     if transform ~= nil then
         local currentPos = transform.position
@@ -21,10 +28,5 @@ function update()
         else
             animation:play("idle")
         end
-    end
-
-    -- despawn if press F (6)
-    if GetKeyPress(6) then
-        destroy(obj)
     end
 end

@@ -16,6 +16,23 @@ ECS::Entity::Entity()
 
 //----------------------------------------------
 
+void ECS::Entity::Start()
+{
+	for (auto& pair : scripts)
+	{
+		auto& script = pair.second;
+		script.Start();
+	}
+
+	for (auto& pair : components)
+	{
+		auto& component = pair.second;
+		component->Start();
+	}
+}
+
+//----------------------------------------------
+
 void ECS::Entity::Update(float deltaTime)
 {
 	for (auto& pair : scripts)
