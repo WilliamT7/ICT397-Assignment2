@@ -1,5 +1,5 @@
 settings = {
-    scene = "demo.lua",
+    scene = "animationTest.lua",
     mouseVisible = true,
-    imGuiVisible = true
+    imGuiVisible = false
 }
