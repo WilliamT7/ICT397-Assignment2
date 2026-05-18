@@ -220,3 +220,17 @@ std::string ECS::Entity::GetScriptName(std::string filePath)
 }
 
 //----------------------------------------------
+
+void ECS::Entity::Destroy()
+{
+	m_deleteFlag = true;
+}
+
+//----------------------------------------------
+
+bool ECS::Entity::isDestroy()
+{
+	return m_deleteFlag;
+}
+
+//----------------------------------------------
