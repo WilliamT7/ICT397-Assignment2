@@ -171,6 +171,10 @@ namespace ECS
 		**/
 		void ImGui();
 
+		void Destroy();
+
+		bool isDestroy();
+
 		ScriptComponent& AddScriptComponent(std::string filePath);
 		ScriptComponent& GetScriptComponent(std::string scriptName);
 		bool HasScriptComponent(std::string scriptName) const;
@@ -180,6 +184,7 @@ namespace ECS
 		std::unordered_map<std::type_index, std::unique_ptr<Component>> components;
 		std::unordered_map<std::string, ScriptComponent> scripts;
 		std::string name = "Object";
+		bool m_deleteFlag = false;
 	};
 }
 

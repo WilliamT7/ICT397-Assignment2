@@ -30,9 +30,12 @@ void ECS::Scene::Update(float deltaTime)
 
 	int size = entities.size();
 
-	for (int i = 0; i < size; i++)
+	for (int i = size-1; i >= 0; i--)
 	{
 		entities[i].get()->Update(deltaTime);
+
+		if (entities[i].get()->isDestroy())
+			entities.erase(entities.begin() + i);
 	}
 
 	ProcessTriggers();

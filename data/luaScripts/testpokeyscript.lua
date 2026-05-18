@@ -24,5 +24,7 @@ function update()
     end
 
     -- despawn if press F (6)
-    
+    if GetKeyPress(6) then
+        destroy(obj)
+    end
 end

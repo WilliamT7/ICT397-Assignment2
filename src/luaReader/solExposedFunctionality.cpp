@@ -21,13 +21,15 @@ void exposeEntity(sol::state_view& solView) {
 		"hasScript",
 		&ECS::Entity::HasScriptComponent,
 		"addComponent",
-		&ECS::Entity::AddComponentByName
+		&ECS::Entity::AddComponentByName,
+		"destroy",
+		&ECS::Entity::Destroy
 	);
 
 	solView.set_function("getScriptComponent", &ECS::Entity::GetScriptComponent);
 	solView.set_function("hasScript", &ECS::Entity::HasScriptComponent);
 	solView.set_function("addComponent", &ECS::Entity::AddComponentByName);
-
+	solView.set_function("destroy", &ECS::Entity::Destroy);
 }
 
 //---------------------------------------------
