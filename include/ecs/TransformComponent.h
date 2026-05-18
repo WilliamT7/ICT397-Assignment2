@@ -76,6 +76,7 @@ namespace ECS
 		void setScale(float x, float y, float z);
 
 		void setRotation(float x, float y, float z);
+
 	};
 }
 
