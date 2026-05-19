@@ -70,6 +70,7 @@
     <ClCompile Include="..\src\luaReader\SolScripting.cpp" />
     <ClCompile Include="..\src\other\fileIO.cpp" />
     <ClCompile Include="..\src\other\stringTools.cpp" />
+    <ClCompile Include="..\src\other\ThreadPool.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsBody.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsWorld.cpp" />
     <ClCompile Include="..\src\Task 1.cpp" />
@@ -148,9 +149,11 @@
     <ClInclude Include="..\include\luaReader\solExposedFunctionality.h" />
     <ClInclude Include="..\include\luaReader\SolScripting.h" />
     <ClInclude Include="..\include\luaReader\supportedDatatypes.h" />
+    <ClInclude Include="..\include\other\ctpl_stl.h" />
     <ClInclude Include="..\include\other\fileIO.h" />
     <ClInclude Include="..\include\other\singleton.h" />
     <ClInclude Include="..\include\other\stringTools.h" />
+    <ClInclude Include="..\include\other\ThreadPool.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsBody.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsWorld.h" />
     <ClInclude Include="..\include\physics\IPhysicsBody.h" />
@@ -270,7 +273,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\external\glm-1.0.3;$(ProjectDir)..\external\stb_image;$(ProjectDir)..\external\glad\include;$(ProjectDir)..\external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(ProjectDir)..\include\;$(ProjectDir)..\external\assimp\include;$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\imgui-1.92.6;$(ProjectDir)..\external\Lua-Sol\sol;$(ProjectDir)..\external\Lua-Sol\Lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\external\glm-1.0.3;$(ProjectDir)..\external\stb_image;$(ProjectDir)..\external\glad\include;$(ProjectDir)..\external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(ProjectDir)..\include\;$(ProjectDir)..\external\assimp\include;$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\imgui-1.92.6;$(ProjectDir)..\external\Lua-Sol\sol;$(ProjectDir)..\external\Lua-Sol\Lua\include;($ProjectDir)..\external\ctpl\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>

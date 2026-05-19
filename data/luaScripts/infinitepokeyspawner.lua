@@ -1,4 +1,4 @@
-local totalSpawn = 50
+local totalSpawn = 100
 
 function update()
     print("E")

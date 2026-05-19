@@ -32,7 +32,7 @@ function update()
     local animation = getAnimation(obj)
     vars = getScriptComponent(obj, "testpokeyvars")
 
-    if transform ~= nil then
+    if transform ~= nil and animation ~= nil then
         local currentPos = transform.position
 
         if currentPos ~= nil then

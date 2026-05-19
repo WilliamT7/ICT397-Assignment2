@@ -20,6 +20,8 @@
 #include <graphics/Graphics.h>
 #include <physics/BulletPhysicsWorld.h>
 #include <vector>
+#include <thread>
+#include "other/ThreadPool.h"
 
 //----------------------------------------------
 
@@ -28,6 +30,9 @@ namespace ECS
 	class Scene
 	{
 	public:
+		Scene() :
+			m_pool(thread::hardware_concurrency()) { }
+
 		/** Init
 		* @author - Kay Bradsell
 		* @brief - Initialises Scene given physicsWorld
@@ -126,8 +131,9 @@ namespace ECS
 		//physic things
 		BulletPhysicsWorld* m_physicsWorld = nullptr;
 		bool m_physicsEnabled = true;
+		ThreadPool m_pool;
 
-		static void UpdateChunk(std::vector<std::unique_ptr<Entity>>& ent, size_t start, size_t end, float deltaTime);
+		static void UpdateEntity(std::unique_ptr<Entity>& entity, float deltaTime);
 	};
 }
 
