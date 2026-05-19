@@ -131,6 +131,11 @@ scene = {
       },
       {
         Name = "Script",
+        fileName = "testpokeyvars.lua",
+        filePath = "..\\data\\luaScripts\\"
+      },
+      {
+        Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\"
       }

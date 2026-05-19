@@ -5,6 +5,9 @@
 #include <filesystem>
 #include "ecs/AllComponentsInclude.h"
 
+using namespace ECS;
+
+int Entity::m_entityCount = 0;
 
 //----------------------------------------------
 
@@ -12,6 +15,24 @@ ECS::Entity::Entity()
 {
 	// nothing ig
 	scripts = std::unordered_map<std::string, ScriptComponent>();
+	m_entityID = m_entityCount++;
+}
+
+//----------------------------------------------
+
+void ECS::Entity::Start()
+{
+	for (auto& pair : scripts)
+	{
+		auto& script = pair.second;
+		script.Start();
+	}
+
+	for (auto& pair : components)
+	{
+		auto& component = pair.second;
+		component->Start();
+	}
 }
 
 //----------------------------------------------
@@ -231,6 +252,13 @@ void ECS::Entity::Destroy()
 bool ECS::Entity::isDestroy()
 {
 	return m_deleteFlag;
+}
+
+//----------------------------------------------
+
+int Entity::GetID() const
+{
+	return m_entityID;
 }
 
 //----------------------------------------------
