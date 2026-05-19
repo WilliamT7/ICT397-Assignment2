@@ -39,22 +39,19 @@ void ECS::PhysicsTriggerComponent::CheckAgainst(Entity* other)
 	if (!m_enabled || other == nullptr || other == entity)
 		return;
 
-	if (IsOverlapping(other))
-	{
-		if (!Contains(m_currentOverlaps, other))
-		{
-			m_currentOverlaps.push_back(other);
-		}
+	if (!IsOverlapping(other))
+		return;
 
-		if (!Contains(m_previousOverlaps, other))
-		{
-			OnTriggerEnter(other);
-		}
-		else
-		{
-			OnTriggerStay(other);
-		}
-	}
+	bool wasCurrent = Contains(m_currentOverlaps, other);
+	bool wasPrevious = Contains(m_previousOverlaps, other);
+
+	if (!wasCurrent)
+		m_currentOverlaps.push_back(other);
+
+	if (!wasPrevious)
+		OnTriggerEnter(other);
+	else
+		OnTriggerStay(other);
 }
 
 void ECS::PhysicsTriggerComponent::EndTriggerCheck()

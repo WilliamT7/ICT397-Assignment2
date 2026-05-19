@@ -458,19 +458,36 @@ void ECS::Scene::ImGui()
 // since it needs to be called after each physics step and then checks the entities easier so idk.
 void ECS::Scene::ProcessTriggers()
 {
-	for (auto& triggerEntity : entities)
-	{
-		if (!triggerEntity->HasComponent<PhysicsTriggerComponent>())
-			continue;
+	std::vector<Entity*> triggerEntities;
+	std::vector<Entity*> physicsEntities;
 
+	triggerEntities.reserve(entities.size());
+	physicsEntities.reserve(entities.size());
+
+	for (auto& entity : entities)
+	{
+		Entity* e = entity.get();
+
+		if (e->HasComponent<PhysicsTriggerComponent>())
+			triggerEntities.push_back(e);
+
+		if (e->HasComponent<PhysicsComponent>())
+			physicsEntities.push_back(e);
+	}
+
+	for (Entity* triggerEntity : triggerEntities)
+	{
 		PhysicsTriggerComponent* trigger =
 			triggerEntity->GetComponent<PhysicsTriggerComponent>();
 
 		trigger->BeginTriggerCheck();
 
-		for (auto& otherEntity : entities)
+		for (Entity* otherEntity : physicsEntities)
 		{
-			trigger->CheckAgainst(otherEntity.get());
+			if (otherEntity == triggerEntity)
+				continue;
+
+			trigger->CheckAgainst(otherEntity);
 		}
 
 		trigger->EndTriggerCheck();
