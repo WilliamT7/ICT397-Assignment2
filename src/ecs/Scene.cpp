@@ -35,7 +35,10 @@ void ECS::Scene::Update(float deltaTime)
 		entities[i].get()->Update(deltaTime);
 
 		if (entities[i].get()->isDestroy())
-			entities.erase(entities.begin() + i);
+		{
+			entities[i] = std::move(entities.back());
+			entities.pop_back();
+		}
 	}
 
 	ProcessTriggers();

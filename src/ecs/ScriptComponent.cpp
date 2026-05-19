@@ -23,7 +23,7 @@ ECS::ScriptComponent::ScriptComponent() {
 
 void ECS::ScriptComponent::Start() {
 	
-	if (hasStart) {
+	if (scriptAssigned && hasStart) {
 		SolScripting scripting;
 		scripting.run(luaFile, "start", entity);
 	}

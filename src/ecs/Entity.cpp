@@ -22,16 +22,16 @@ ECS::Entity::Entity()
 
 void ECS::Entity::Start()
 {
-	for (auto& pair : scripts)
-	{
-		auto& script = pair.second;
-		script.Start();
-	}
-
 	for (auto& pair : components)
 	{
 		auto& component = pair.second;
 		component->Start();
+	}
+
+	for (auto& pair : scripts)
+	{
+		auto& script = pair.second;
+		script.Start();
 	}
 }
 
@@ -140,7 +140,7 @@ sol::table ECS::Entity::SerialiseComponents(sol::state& lua) const
 	// serialise scripts
 	for (auto& pair : scripts)
 	{
-		auto script = pair.second;
+		auto& script = pair.second;
 		comps.add(script.SerialiseComponent(lua));
 	}
 
@@ -206,7 +206,7 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 		
 
 		scripts[scriptName] = std::move(comp);
-		scripts[scriptName].Start();
+		//scripts[scriptName].Start();
 	}
 
 	return GetScriptComponent(scriptName);

@@ -23,6 +23,14 @@ entity =
       },
       {
         Name = "Script",
+        fileName = "testpokeyvars.lua",
+        filePath = "..\\data\\luaScripts\\",
+        moveX = "0",
+        moveZ = "0",
+        liveTime = "0"
+      },
+      {
+        Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\"
       }

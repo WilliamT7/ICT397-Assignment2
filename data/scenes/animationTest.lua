@@ -111,9 +111,9 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = 0.60000002384185791,
+        position_x = 0,
         position_y = 0,
-        position_z = -4.8000001907348633,
+        position_z = 0,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -122,24 +122,18 @@ scene = {
         scale_z = 2
       } --[[table: 0000021755630250]],
       {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000021755631250]],
-      {
-        Name = "Animation"
+        Name = "Script",
+        fileName = "infinitepokeyspawnervars.lua",
+        filePath = "..\\data\\luaScripts\\",
+        amountSpawned = "0",
+        elapsedTime = "0.0"
       },
       {
         Name = "Script",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\"
-      },
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
+        fileName = "infinitepokeyspawner.lua",
         filePath = "..\\data\\luaScripts\\"
       }
     } --[[table: 000002175562FB50]],
-    EntityName = "Spiky"
+    EntityName = "SpikySpawner"
   }
 }
