@@ -177,6 +177,8 @@ namespace ECS
 
 		bool isDestroy();
 
+		int GetID() const;
+
 		ScriptComponent& AddScriptComponent(std::string filePath);
 		ScriptComponent& GetScriptComponent(std::string scriptName);
 		bool HasScriptComponent(std::string scriptName) const;
@@ -187,6 +189,9 @@ namespace ECS
 		std::unordered_map<std::string, ScriptComponent> scripts;
 		std::string name = "Object";
 		bool m_deleteFlag = false;
+
+		static int m_entityCount;
+		int m_entityID;
 	};
 }
 

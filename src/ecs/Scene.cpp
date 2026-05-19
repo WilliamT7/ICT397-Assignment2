@@ -52,6 +52,7 @@ void ECS::Scene::DeserialiseScene(sol::table& sceneData)
 		auto& entity = entities.back();
 
 		entity.get()->DeserialiseComponentTable(entityData);
+		std::cout << "ID: " << entity.get()->GetID() << std::endl;
 	}
 
 	InjectPhysicsWorld(); 
