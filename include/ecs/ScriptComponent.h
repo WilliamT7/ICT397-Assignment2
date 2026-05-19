@@ -10,6 +10,7 @@
 #pragma once
 
 //Built-in files---------------------------------
+#include <memory>
 #include <string>
 
 //Project files----------------------------------
@@ -21,6 +22,8 @@
 using std::string;
 
 //--------------------------------------------------
+
+class SolScripting;
 
 namespace ECS {
 	
@@ -37,6 +40,12 @@ namespace ECS {
 		*
 		**/
 		ScriptComponent();
+		~ScriptComponent();
+
+		ScriptComponent(const ScriptComponent&) = delete;
+		ScriptComponent& operator=(const ScriptComponent&) = delete;
+		ScriptComponent(ScriptComponent&&) noexcept;
+		ScriptComponent& operator=(ScriptComponent&&) noexcept;
 
 		/** Update
 		* @author - Seb D'Alessandro
@@ -170,6 +179,9 @@ namespace ECS {
 
 		///Indicates if a script has a start function
 		bool hasStart = false;
+
+		///Persistent Lua runtime for this component.
+		std::unique_ptr<SolScripting> scripting;
 
 	};
 }

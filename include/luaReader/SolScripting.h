@@ -114,6 +114,10 @@ public:
 	*/
 	void run(ScriptFile& const file, string functionName, ECS::Entity* entity);
 
+	bool load(ScriptFile& const file, ECS::Entity* entity);
+
+	void runLoaded(ScriptFile& const file, string functionName, ECS::Entity* entity);
+
 
 
 
@@ -223,5 +227,7 @@ private:
 
 	///Lua state
 	lua_State* LuaState;
+
+	bool loaded = false;
 
 };

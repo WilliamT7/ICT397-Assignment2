@@ -16,28 +16,32 @@ using std::cout;
 
 //-----------------------------------------------------------
 ECS::ScriptComponent::ScriptComponent() {
-
+	scripting = std::make_unique<SolScripting>();
 }
+
+ECS::ScriptComponent::~ScriptComponent() = default;
+
+ECS::ScriptComponent::ScriptComponent(ScriptComponent&&) noexcept = default;
+
+ECS::ScriptComponent& ECS::ScriptComponent::operator=(ScriptComponent&&) noexcept = default;
 
 //-----------------------------------------------------------
 
 void ECS::ScriptComponent::Start() {
-	
+
 	if (scriptAssigned && hasStart) {
-		SolScripting scripting;
-		scripting.run(luaFile, "start", entity);
+		scripting->runLoaded(luaFile, "start", entity);
 	}
-	
 }
+
+//-----------------------------------------------------------
 
 
 void ECS::ScriptComponent::Update(float deltaTime) {
 
 
 	if (scriptAssigned && hasUpdate) {
-		SolScripting scripting;
-		scripting.run(luaFile, "update", entity);
-
+		scripting->runLoaded(luaFile, "update", entity);
 	}
 
 }
@@ -107,6 +111,9 @@ void ECS::ScriptComponent::DeserialiseComponentTable(sol::table& data)
 		}
 
 	}
+
+	hasUpdate = findFunction(luaFile, "update");
+	hasStart = findFunction(luaFile, "start");
 
 }
 

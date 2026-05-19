@@ -1,7 +1,6 @@
-local totalSpawn = 100
+local totalSpawn = 300
 
 function update()
-    print("E")
     spawnEntity()
 end
 
