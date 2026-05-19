@@ -30,6 +30,7 @@ namespace ECS
 		mesh = entity->GetComponent<ECS::MeshRendererComponent>();
 
 		m_animator.UpdateAnimation(deltaTime);
+		Play("idle");
 	}
 
 	void AnimationComponent::Play(const std::string& animationName)

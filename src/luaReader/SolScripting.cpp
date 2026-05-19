@@ -18,14 +18,6 @@ using std::stof;
 using std::cout;
 
 //--------------------------------------------------
-
-SolScripting::SolScripting()
-{
-	LuaState = luaL_newstate();
-	luaL_openlibs(LuaState);
-}
-
-//--------------------------------------------------
 SolScripting::SolScripting(SolScripting& otherSolFacade) {
 
 	LuaState = nullptr;
@@ -34,7 +26,7 @@ SolScripting::SolScripting(SolScripting& otherSolFacade) {
 //--------------------------------------------------------
 
 SolScripting::~SolScripting() {
-	lua_close(LuaState);
+
 	LuaState = nullptr;
 	delete LuaState;
 }
@@ -58,12 +50,14 @@ const SolScripting& SolScripting::operator=(const SolScripting& otherSolFacade) 
 
 void SolScripting::run(ScriptFile& const file, string functionName) {
 	
-	bool canRunFunction = file.isValid();
+	bool canRunFunction = file.isValid() && findFunction(file, functionName);
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 	
 	if (canRunFunction && validFunctionParameters) {
 		
+		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
+		luaL_openlibs(LuaState);
 
 		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
 		lua_getglobal(LuaState, functionName.c_str());
@@ -78,6 +72,7 @@ void SolScripting::run(ScriptFile& const file, string functionName) {
 		cout << "!!!SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
 		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
 	}
+	lua_close(LuaState);
 
 	//Check parameters and see if we need to pass anything to Sol
 		//Parameter count = 0 we skip this
@@ -95,7 +90,9 @@ void SolScripting::run(ScriptFile& const file) {
 
 	if (file.isValid()) {
 
+		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
+		luaL_openlibs(LuaState);
 
 		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
 		updateGlobals(lua, file);
@@ -103,6 +100,7 @@ void SolScripting::run(ScriptFile& const file) {
 		lua_call(LuaState, 0, 0);
 
 	}
+	lua_close(LuaState);
 }
 
 
@@ -110,11 +108,13 @@ void SolScripting::run(ScriptFile& const file) {
 
 void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity* entity) {
 
-	bool canRunFunction = file.isValid();
+	bool canRunFunction = file.isValid() && findFunction(file, functionName);
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 
 	if (canRunFunction && validFunctionParameters) {
+		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
+		luaL_openlibs(LuaState);
 
 		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
 		lua_getglobal(LuaState, functionName.c_str());
@@ -134,6 +134,10 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 		cout << "[C++] SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
 		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
 
+	}
+
+	if (LuaState != nullptr) {
+		lua_close(LuaState);
 	}
 
 }

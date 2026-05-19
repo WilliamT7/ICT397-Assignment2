@@ -1,8 +1,22 @@
-local totalSpawn = 50
+local totalSpawn = 100
+local coolDown = 0.00
+local deltaTime = 0.01 -- for now
 
 function update()
-    print("E")
-    spawnEntity()
+    local vars = getScriptComponent(obj, "infinitepokeyspawnervars")
+
+    if vars ~= nil then
+        local elapsedTime = vars:getGlobal("elapsedTime").value
+        elapsedTime = tonumber(elapsedTime)
+
+        vars:setGlobal("elapsedTime", tostring(elapsedTime + deltaTime))
+
+        if elapsedTime > coolDown then
+            vars:setGlobal("elapsedTime", tostring(0.0))
+            spawnEntity()
+        end
+
+    end
 end
 
 function spawnEntity()
