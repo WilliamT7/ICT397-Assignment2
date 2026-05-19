@@ -35,10 +35,11 @@ void ECS::Scene::Update(float deltaTime)
 	// update was here
 	for (int i = 0; i < size; i++)
 	{
-		m_pool.Enqueue(UpdateEntity, entities[i].get(), deltaTime);
+		//m_pool.Enqueue(UpdateEntity, entities[i].get(), deltaTime);
+		entities[i].get()->Update(deltaTime);
 	}
 
-	m_pool.Wait();
+	//m_pool.Wait();
 
 	for (int i = size - 1; i >= 0; i--)
 	{

@@ -1,4 +1,4 @@
-local totalSpawn = 300
+local totalSpawn = 200
 
 function update()
     spawnEntity()
