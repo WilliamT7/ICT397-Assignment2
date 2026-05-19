@@ -133,7 +133,7 @@ namespace ECS
 		bool m_physicsEnabled = true;
 		ThreadPool m_pool;
 
-		static void UpdateEntity(std::unique_ptr<Entity>& entity, float deltaTime);
+		static void UpdateEntity(Entity* entity, float deltaTime);
 	};
 }
 

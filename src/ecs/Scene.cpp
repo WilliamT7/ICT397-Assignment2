@@ -35,8 +35,10 @@ void ECS::Scene::Update(float deltaTime)
 	// update was here
 	for (int i = 0; i < size; i++)
 	{
-		m_pool.Enqueue(UpdateEntity, ref(entities[i]), deltaTime);
+		m_pool.Enqueue(UpdateEntity, entities[i].get(), deltaTime);
 	}
+
+	m_pool.Wait();
 
 	for (int i = size - 1; i >= 0; i--)
 	{
@@ -48,13 +50,14 @@ void ECS::Scene::Update(float deltaTime)
 	}
 
 	ProcessTriggers();
+	
 }
 
 //----------------------------------------------
 
-void ECS::Scene::UpdateEntity(std::unique_ptr<Entity>& entity, float deltaTime)
+void ECS::Scene::UpdateEntity(Entity* entity, float deltaTime)
 {
-	entity.get()->Update(deltaTime);
+	entity->Update(deltaTime);
 }
 
 //----------------------------------------------
@@ -357,3 +360,5 @@ void ECS::Scene::ProcessTriggers()
 		trigger->EndTriggerCheck();
 	}
 }
+
+

@@ -22,6 +22,13 @@ ThreadPool::ThreadPool(size_t num_threads)
 				}
 
 				task();
+
+				// Decrement active tasks after completion
+				{
+					unique_lock<mutex> lock(m_queueMutex);
+					m_activeTasks--;
+					m_cvWait.notify_all();
+				}
 			}
 		});
 	}
@@ -45,7 +52,15 @@ void ThreadPool::Enqueue(function<void()> task)
 {
 	{
 		unique_lock<std::mutex> lock(m_queueMutex);
+		m_activeTasks++;
 		m_tasks.emplace(move(task));
 	}
 	m_cv.notify_one();
 }
+
+void ThreadPool::Wait()
+{
+	unique_lock<std::mutex> lock(m_queueMutex);
+	m_cvWait.wait(lock, [this] { return m_activeTasks == 0; });
+}
+

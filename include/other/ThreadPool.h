@@ -15,6 +15,7 @@ public:
 	ThreadPool(size_t num_threads = thread::hardware_concurrency());
 	~ThreadPool();
 	void Enqueue(function<void()> task);
+	void Wait();
 
 	// taken from
 	// https://stackoverflow.com/questions/40322860/c-pass-function-to-thread-pool
@@ -26,15 +27,17 @@ private:
 	queue<function<void()>> m_tasks;
 	mutex m_queueMutex;
 	condition_variable m_cv;
+	condition_variable m_cvWait;
 	bool m_stop = false;
+	int m_activeTasks = 0;
 };
 
 template <class Task, class ...Args>
 void ThreadPool::Enqueue(Task&& task, Args&& ... args)
 {
 	{
-		std::cout << "Enqueued!";
 		unique_lock<std::mutex> lock(m_queueMutex);
+		m_activeTasks++;
 		m_tasks.emplace(std::bind(std::forward<Task>(task), std::forward<Args>(args)...));
 	}
 	m_cv.notify_one();
