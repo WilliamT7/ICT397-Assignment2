@@ -126,6 +126,8 @@ namespace ECS
 		//physic things
 		BulletPhysicsWorld* m_physicsWorld = nullptr;
 		bool m_physicsEnabled = true;
+
+		static void UpdateChunk(std::vector<std::unique_ptr<Entity>>& ent, size_t start, size_t end, float deltaTime);
 	};
 }
 

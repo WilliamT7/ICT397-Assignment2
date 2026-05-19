@@ -21,6 +21,8 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld)
 
 //----------------------------------------------
 
+#include <thread>
+
 void ECS::Scene::Update(float deltaTime)
 {
 	if (m_physicsWorld != nullptr && m_physicsEnabled)
@@ -29,7 +31,7 @@ void ECS::Scene::Update(float deltaTime)
 	}
 
 	int size = entities.size();
-
+	/*
 	for (int i = size-1; i >= 0; i--)
 	{
 		entities[i].get()->Update(deltaTime);
@@ -40,8 +42,42 @@ void ECS::Scene::Update(float deltaTime)
 			entities.pop_back();
 		}
 	}
+	*/
+
+	unsigned int num_threads = std::thread::hardware_concurrency();
+	std::vector<std::thread> threads;
+	size_t chunk_size = size / num_threads;
+
+	for (unsigned int i = 0; i < num_threads; ++i)
+	{
+		size_t start = i * chunk_size;
+		size_t end = (i == num_threads - 1) ? size : start + chunk_size;
+		threads.emplace_back(std::thread(ECS::Scene::UpdateChunk, std::ref(entities), start, end, deltaTime));
+	}
+
+	for (auto& t : threads)
+		t.join();
+
+	for (int i = size - 1; i >= 0; i--)
+	{
+		if (entities[i].get()->isDestroy())
+		{
+			entities[i] = std::move(entities.back());
+			entities.pop_back();
+		}
+	}
 
 	ProcessTriggers();
+}
+
+//----------------------------------------------
+
+void ECS::Scene::UpdateChunk(std::vector<std::unique_ptr<Entity>>& ent, size_t start, size_t end, float deltaTime)
+{
+	for (size_t i = start; i < end; ++i)
+	{
+		ent[i].get()->Update(deltaTime);
+	}
 }
 
 //----------------------------------------------

@@ -34,7 +34,7 @@ public:
 	* @post - Object is constructed
 	* @return - void
 	*/
-	SolScripting() = default;
+	SolScripting();
 
 	/* SolScripting Copy constructor
 	* @author - Seb D'Alessandro
@@ -214,7 +214,7 @@ private:
 	* @brief - Updates globals in a lua file, if they are modifed in scriptFile
 	* @pre - run() is executed (and no code has been run yet), sol/lua is initalised
 	* @post - Globals are updated to match global data stored in file
-	* @param solView - initalised sol state
+	* @param solView - initalised sol state,
 	* @param entity - entity that has this script componet
 	* @return - void
 	*/

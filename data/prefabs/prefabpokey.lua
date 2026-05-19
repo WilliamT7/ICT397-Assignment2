@@ -9,9 +9,9 @@ entity =
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
-        scale_x = 2,
-        scale_y = 2,
-        scale_z = 2
+        scale_x = 10,
+        scale_y = 10,
+        scale_z = 10
       } --[[table: 0000021755630250]],
       {
         ModelID = "SPIKY",
@@ -26,6 +26,7 @@ entity =
         fileName = "testpokeyvars.lua",
         filePath = "..\\data\\luaScripts\\",
         moveX = "0",
+        moveY = "0",
         moveZ = "0",
         liveTime = "0"
       },
