@@ -21,6 +21,8 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld)
 
 //----------------------------------------------
 
+#include <thread>
+
 void ECS::Scene::Update(float deltaTime)
 {
 	if (m_physicsWorld != nullptr && m_physicsEnabled)
@@ -29,16 +31,34 @@ void ECS::Scene::Update(float deltaTime)
 	}
 
 	int size = entities.size();
-
-	for (int i = size-1; i >= 0; i--)
+	
+	// update was here
+	for (int i = 0; i < size; i++)
 	{
+		//m_pool.Enqueue(UpdateEntity, entities[i].get(), deltaTime);
 		entities[i].get()->Update(deltaTime);
+	}
 
+	//m_pool.Wait();
+
+	for (int i = size - 1; i >= 0; i--)
+	{
 		if (entities[i].get()->isDestroy())
-			entities.erase(entities.begin() + i);
+		{
+			entities[i] = std::move(entities.back());
+			entities.pop_back();
+		}
 	}
 
 	ProcessTriggers();
+	
+}
+
+//----------------------------------------------
+
+void ECS::Scene::UpdateEntity(Entity* entity, float deltaTime)
+{
+	entity->Update(deltaTime);
 }
 
 //----------------------------------------------
@@ -52,6 +72,7 @@ void ECS::Scene::DeserialiseScene(sol::table& sceneData)
 		auto& entity = entities.back();
 
 		entity.get()->DeserialiseComponentTable(entityData);
+		std::cout << "ID: " << entity.get()->GetID() << std::endl;
 	}
 
 	InjectPhysicsWorld(); 
@@ -97,6 +118,8 @@ bool ECS::Scene::Spawn(std::string prefabName)
 	spawnedEntity->DeserialiseComponentTable(entityData); //this section fixed the physics not being created 0 0
 
 	InjectPhysicsWorld(spawnedEntity);
+
+	spawnedEntity->Start();
 }
 
 //----------------------------------------------
@@ -170,6 +193,8 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 	{
 		if (entity->HasComponent<TextureRendererComponent>())
 			entity->GetComponent<TextureRendererComponent>()->Render(graphics);
+
+		entity->RenderScripts(graphics);
 	}
 }
 
@@ -338,3 +363,5 @@ void ECS::Scene::ProcessTriggers()
 		trigger->EndTriggerCheck();
 	}
 }
+
+

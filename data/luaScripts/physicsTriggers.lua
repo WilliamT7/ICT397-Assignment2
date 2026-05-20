@@ -8,6 +8,10 @@ function update()
 	for i = 0, trigger:getEnterCount() - 1 do
 		local otherName = trigger:getEnterName(i)
 		print("[Lua Trigger Enter]: Player entered by " .. otherName)
+
+		if otherName == "Bullet" then
+			destroy(obj)
+		end
 	end
 
 	for i = 0, trigger:getStayCount() - 1 do

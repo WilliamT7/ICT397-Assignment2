@@ -16,30 +16,41 @@ using std::cout;
 
 //-----------------------------------------------------------
 ECS::ScriptComponent::ScriptComponent() {
-
+	scripting = std::make_unique<SolScripting>();
 }
+
+ECS::ScriptComponent::~ScriptComponent() = default;
+
+ECS::ScriptComponent::ScriptComponent(ScriptComponent&&) noexcept = default;
+
+ECS::ScriptComponent& ECS::ScriptComponent::operator=(ScriptComponent&&) noexcept = default;
 
 //-----------------------------------------------------------
 
 void ECS::ScriptComponent::Start() {
-	
-	if (hasStart) {
-		SolScripting scripting;
-		scripting.run(luaFile, "start", entity);
+
+	if (scriptAssigned && hasStart) {
+		scripting->runLoaded(luaFile, "start", entity);
 	}
-	
 }
+
+//-----------------------------------------------------------
 
 
 void ECS::ScriptComponent::Update(float deltaTime) {
 
 
 	if (scriptAssigned && hasUpdate) {
-		SolScripting scripting;
-		scripting.run(luaFile, "update", entity);
-
+		scripting->runLoaded(luaFile, "update", entity);
 	}
 
+}
+
+void ECS::ScriptComponent::Render(Graphics::Graphics* graphics)
+{
+	if (scriptAssigned && hasRender) {
+		scripting->runLoaded(luaFile, "render", entity);
+	}
 }
 //------------------------------------------------------------
 
@@ -68,10 +79,11 @@ void ECS::ScriptComponent::setScript(string filePath) {
 
 	hasUpdate = findFunction(luaFile, "update");
 	hasStart = findFunction(luaFile, "start");
+	hasRender = findFunction(luaFile, "render");
 
 	if (!hasUpdate) {
 
-		cout << "[C++] ScriptComponent.cpp: Warning: script " << luaFile.getFileName() << " does not have an update(), it will not be run every frame\n";
+		//cout << "[C++] ScriptComponent.cpp: Warning: script " << luaFile.getFileName() << " does not have an update(), it will not be run every frame\n";
 
 	}
 
@@ -88,7 +100,7 @@ void ECS::ScriptComponent::DeserialiseComponentTable(sol::table& data)
 
 	//Check if the script exists in scriptManager
 	LuaScriptManager* scriptManager = Singleton<LuaScriptManager>::getInstance();
-	cout << filePath + fileName << "\n";
+	//cout << filePath + fileName << "\n";
 	luaFile = scriptManager->searchForFile(filePath + fileName);
 
 	scriptAssigned = true;
@@ -107,6 +119,9 @@ void ECS::ScriptComponent::DeserialiseComponentTable(sol::table& data)
 		}
 
 	}
+
+	hasUpdate = findFunction(luaFile, "update");
+	hasStart = findFunction(luaFile, "start");
 
 }
 

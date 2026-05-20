@@ -12,7 +12,6 @@
 
 void Update();
 void Display();
-void ImGuiRender();
 
 BulletPhysicsWorld* physicsWorld = nullptr;
 
@@ -94,8 +93,11 @@ void Update()
 
 }
 
+#include "graphics/GUI.h"
+
 void Display()
 {
+    ImGui::NewFrame();
     graphicsHandler->ClearBuffers();
     graphicsHandler->BeginRender();
 
@@ -104,15 +106,12 @@ void Display()
     graphicsHandler->EndRender();
 
     if (imGuiToggle)
-        ImGuiRender();    
-}
-
-void ImGuiRender()
-{
-    ImGui::NewFrame();
-    ECS::SceneLoader::ImGui(scene, physicsWorld);
-    scene->ImGui();
+    {
+        ECS::SceneLoader::ImGui(scene, physicsWorld);
+        scene->ImGui();
+    }
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    
 }

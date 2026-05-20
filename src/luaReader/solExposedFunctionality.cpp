@@ -6,6 +6,7 @@
 #include "other/singleton.h"
 #include "ECS/AllComponentsInclude.h"
 #include "FSM/ScriptState.h"
+#include "graphics/GUI.h"
 
 
 //--------------------------------------
@@ -75,6 +76,12 @@ void exposeWindowFunctionality(sol::state_view& solView) {
 		solView.set_function("SetMouseVisible", &Window::SetMouseVisible, luaEngineLink->getWindowPointer());
 		solView.set_function("GetMouseVisible", &Window::GetMouseVisible, luaEngineLink->getWindowPointer());
 	}
+
+	//GUI functionality------------------------------------
+	solView.set_function("GUIBegin", &Graphics::GUI::Begin);
+	solView.set_function("GUIWriteText", &Graphics::GUI::WriteText);
+	solView.set_function("GUIMakeButton", [](std::string name, sol::function f, sol::variadic_args args) { Graphics::GUI::MakeButton(name, f, args); });
+	solView.set_function("GUIEnd", &Graphics::GUI::End);
 
 }
 

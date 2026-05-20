@@ -120,6 +120,8 @@ namespace ECS
 		**/
 		Component* AddComponentByName(std::string name);
 
+		void Start();
+
 		/** Update
 		* @author - Kay Bradsell
 		* @brief - For every component in this Entity, call their update
@@ -139,6 +141,8 @@ namespace ECS
 		* @post - Propagates Render to all components within this Entity
 		**/
 		void Render(Graphics::Graphics* graphics);
+
+		void RenderScripts(Graphics::Graphics* graphics);
 
 		/** Get Name
 		* @author - Kay Bradsell
@@ -175,16 +179,24 @@ namespace ECS
 
 		bool isDestroy();
 
+		int GetID() const;
+
 		ScriptComponent& AddScriptComponent(std::string filePath);
 		ScriptComponent& GetScriptComponent(std::string scriptName);
 		bool HasScriptComponent(std::string scriptName) const;
 		std::string static GetScriptName(std::string filePath);
 
 	private:
-		std::unordered_map<std::type_index, std::unique_ptr<Component>> components;
-		std::unordered_map<std::string, ScriptComponent> scripts;
+		std::vector<Component*> m_components;
+		std::map<std::type_index, size_t> m_componentsMap;
+		std::vector<ScriptComponent> m_scripts;
+		std::map<std::string, size_t> m_scriptsMap;
+
 		std::string name = "Object";
 		bool m_deleteFlag = false;
+
+		static int m_entityCount;
+		int m_entityID;
 	};
 }
 
@@ -202,12 +214,12 @@ T* ECS::Entity::AddComponent()
 
 	if (!HasComponent<T>())
 	{
-		auto component = std::make_unique<T>();
-		component->entity = this;
-		component->Start();
-		components[typeid(T)] = std::move(component);
+		m_components.push_back(new T());
+		auto& comp = m_components.back();
+		comp->entity = this;
+		m_componentsMap[typeid(T)] = m_components.size() - 1;
 
-		return static_cast<T*>(components[typeid(T)].get());
+		return static_cast<T*>(comp);
 	}
 
 	return GetComponent<T>();
@@ -220,8 +232,8 @@ T* ECS::Entity::GetComponent()
 {
 	if (HasComponent<T>())
 	{
-		auto it = components.find(typeid(T));
-		return static_cast<T*>(it->second.get());
+		auto it = m_componentsMap.find(typeid(T));
+		return static_cast<T*>(m_components[it->second]);
 	}
 	else
 	{
@@ -236,7 +248,10 @@ void ECS::Entity::RemoveComponent()
 {
 	if (HasComponent<T>())
 	{
-		components.erase(typeid(T));
+		auto it = m_componentsMap.find(typeid(T));
+		m_components[it->second] = std::move(m_components.back());
+		m_components.pop_back();
+		m_componentsMap.erase(typeid(T));
 	}
 }
 
@@ -245,8 +260,8 @@ void ECS::Entity::RemoveComponent()
 template <typename T>
 bool ECS::Entity::HasComponent() const
 {
-	auto it = components.find(typeid(T));
-	return it != components.end();
+	auto it = m_componentsMap.find(typeid(T));
+	return it != m_componentsMap.end();
 }
 
 //----------------------------------------------

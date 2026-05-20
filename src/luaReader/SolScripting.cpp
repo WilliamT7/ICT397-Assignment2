@@ -18,6 +18,14 @@ using std::stof;
 using std::cout;
 
 //--------------------------------------------------
+
+SolScripting::SolScripting()
+{
+	LuaState = luaL_newstate();
+	luaL_openlibs(LuaState);
+}
+
+//--------------------------------------------------
 SolScripting::SolScripting(SolScripting& otherSolFacade) {
 
 	LuaState = nullptr;
@@ -26,9 +34,10 @@ SolScripting::SolScripting(SolScripting& otherSolFacade) {
 //--------------------------------------------------------
 
 SolScripting::~SolScripting() {
-
-	LuaState = nullptr;
-	delete LuaState;
+	if (LuaState != nullptr) {
+		lua_close(LuaState);
+		LuaState = nullptr;
+	}
 }
 
 //--------------------------------------------------
@@ -50,14 +59,12 @@ const SolScripting& SolScripting::operator=(const SolScripting& otherSolFacade) 
 
 void SolScripting::run(ScriptFile& const file, string functionName) {
 	
-	bool canRunFunction = file.isValid() && findFunction(file, functionName);
+	bool canRunFunction = file.isValid();
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 	
 	if (canRunFunction && validFunctionParameters) {
 		
-		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
-		luaL_openlibs(LuaState);
 
 		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
 		lua_getglobal(LuaState, functionName.c_str());
@@ -72,7 +79,6 @@ void SolScripting::run(ScriptFile& const file, string functionName) {
 		cout << "!!!SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
 		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
 	}
-	lua_close(LuaState);
 
 	//Check parameters and see if we need to pass anything to Sol
 		//Parameter count = 0 we skip this
@@ -85,14 +91,82 @@ void SolScripting::run(ScriptFile& const file, string functionName) {
 }
 
 //----------------------------------------------
+bool SolScripting::load(ScriptFile& const file, ECS::Entity* entity) {
+
+	if (!file.isValid()) {
+		cout << "[C++] SolScripting.cpp: Cannot load invalid script " << file.getFileName() << "\n";
+		return false;
+	}
+
+	sol::state_view lua(LuaState);
+
+	exposeEngineFunctions(lua);
+
+	if (entity != nullptr) {
+		exposeEntityComponents(lua, entity);
+		lua.set("obj", entity);
+	}
+
+	const string filePath = file.getPathName() + file.getFileName();
+	const int loadResult = luaL_dofile(LuaState, filePath.c_str());
+
+	if (loadResult != LUA_OK) {
+		cout << "[C++] SolScripting.cpp: Error loading " << filePath << ": " << lua_tostring(LuaState, -1) << "\n";
+		lua_pop(LuaState, 1);
+		return false;
+	}
+
+	updateGlobals(lua, file);
+
+	loaded = true;
+
+	return true;
+}
+
+//--------------------------------------------------
+
+void SolScripting::runLoaded(ScriptFile& const file, string functionName, ECS::Entity* entity) {
+
+	if (!file.isValid()) {
+		cout << "[C++] SolScripting.cpp: Can't run invalid script " << file.getFileName() << "\n";
+		return;
+	}
+
+	if (!loaded && !load(file, entity)) {
+		return;
+	}
+
+	sol::state_view lua(LuaState);
+
+	if (entity != nullptr) {
+		lua.set("obj", entity);
+	}
+
+	updateGlobals(lua, file);
+
+	lua_getglobal(LuaState, functionName.c_str());
+
+	if (!lua_isfunction(LuaState, -1)) {
+		cout << "[C++] SolScripting.cpp: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
+		lua_pop(LuaState, 1);
+		return;
+	}
+
+	const int callResult = lua_pcall(LuaState, 0, 0, 0);
+
+	if (callResult != LUA_OK) {
+		cout << "[C++] SolScripting.cpp: Error running " << functionName << " in " << file.getFileName() << ": " << lua_tostring(LuaState, -1) << "\n";
+		lua_pop(LuaState, 1);
+	}
+}
+
+//----------------------------------------------
 
 void SolScripting::run(ScriptFile& const file) {
 
 	if (file.isValid()) {
 
-		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
-		luaL_openlibs(LuaState);
 
 		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
 		updateGlobals(lua, file);
@@ -100,7 +174,6 @@ void SolScripting::run(ScriptFile& const file) {
 		lua_call(LuaState, 0, 0);
 
 	}
-	lua_close(LuaState);
 }
 
 
@@ -108,13 +181,11 @@ void SolScripting::run(ScriptFile& const file) {
 
 void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity* entity) {
 
-	bool canRunFunction = file.isValid() && findFunction(file, functionName);
+	bool canRunFunction = file.isValid();
 	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
 
 	if (canRunFunction && validFunctionParameters) {
-		LuaState = luaL_newstate();
 		sol::state_view lua(LuaState);
-		luaL_openlibs(LuaState);
 
 		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
 		lua_getglobal(LuaState, functionName.c_str());
@@ -134,10 +205,6 @@ void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity*
 		cout << "[C++] SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
 		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
 
-	}
-
-	if (LuaState != nullptr) {
-		lua_close(LuaState);
 	}
 
 }
@@ -208,10 +275,8 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 	//Entity specfic stuff-----------------------------
 	exposeEntity(solView);
 
-
 	//Script component
 	exposeScriptComponent(solView);
-
 
 	if (entity->HasComponent<ECS::TransformComponent>()) {
 
@@ -232,27 +297,27 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		solView.set_function("play", &ECS::AnimationComponent::Play);
 
 	}
-	
+
 	if (entity->HasComponent<ECS::CameraComponent>()) {
 
 		exposeCamera(solView);
 	}
-	
-	
+
+
 	if (entity->HasComponent<ECS::LightingComponent>()) {
 
 		exposeLighting(solView);
 	}
-	
 
-	
+
+
 	if (entity->HasComponent<ECS::PhysicsComponent>()) {
 
 		exposePhysics(solView);
 
 	}
-	
-	
+
+
 	if (entity->HasComponent<ECS::TerrainComponent>()) {
 
 		exposeTerrain(solView);
@@ -264,11 +329,11 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		exposeTextureRenderer(solView);
 	}
 
-	if(entity->HasComponent<ECS::PhysicsTriggerComponent>())
+	if (entity->HasComponent<ECS::PhysicsTriggerComponent>())
 	{
 		exposePhysicsTrigger(solView);
-  }
-    
+	}
+
 	if (entity->HasComponent<ECS::FSMComponent>())
 	{
 		exposeFSM(solView);

@@ -5,29 +5,45 @@
 #include <filesystem>
 #include "ecs/AllComponentsInclude.h"
 
+using namespace ECS;
+
+int Entity::m_entityCount = 0;
 
 //----------------------------------------------
 
 ECS::Entity::Entity()
 {
 	// nothing ig
-	scripts = std::unordered_map<std::string, ScriptComponent>();
+	m_entityID = m_entityCount++;
+}
+
+//----------------------------------------------
+
+void ECS::Entity::Start()
+{
+	for (auto& comp : m_components)
+	{
+		comp->Start();
+	}
+
+	for (auto& script : m_scripts)
+	{
+		script.Start();
+	}
 }
 
 //----------------------------------------------
 
 void ECS::Entity::Update(float deltaTime)
 {
-	for (auto& pair : scripts)
+	for (auto& comp : m_components)
 	{
-		auto& script = pair.second;
-		script.Update(deltaTime);
+		comp->Update(deltaTime);
 	}
 
-	for (auto& pair : components)
+	for (auto& script : m_scripts)
 	{
-		auto& component = pair.second;
-		component->Update(deltaTime);
+		script.Update(deltaTime);
 	}
 }
 
@@ -110,16 +126,14 @@ sol::table ECS::Entity::SerialiseComponents(sol::state& lua) const
 
 	sol::table comps = lua.create_table();
 
-	for (auto& pair : components)
+	for (auto& comp : m_components)
 	{
-		auto& component = pair.second;
-		comps.add(component.get()->SerialiseComponent(lua));
+		comps.add(comp->SerialiseComponent(lua));
 	}
 
 	// serialise scripts
-	for (auto& pair : scripts)
+	for (auto& script : m_scripts)
 	{
-		auto script = pair.second;
 		comps.add(script.SerialiseComponent(lua));
 	}
 
@@ -132,10 +146,19 @@ sol::table ECS::Entity::SerialiseComponents(sol::state& lua) const
 
 void ECS::Entity::Render(Graphics::Graphics* graphics)
 {
-	for (auto& pair : components)
+	for (auto& comp : m_components)
 	{
-		auto& component = pair.second;
-		component->Render(graphics);
+		comp->Render(graphics);
+	}
+}
+
+//----------------------------------------------
+
+void ECS::Entity::RenderScripts(Graphics::Graphics* graphics)
+{
+	for (auto& script : m_scripts)
+	{
+		script.Render(graphics);
 	}
 }
 
@@ -156,14 +179,12 @@ void ECS::Entity::ImGui()
 	if (ImGui::Button("Set Name"))
 		name = buf;
 
-	for (auto& pair : components)
+	for (auto& comp : m_components)
 	{
-		auto& component = pair.second;
-		component->ImGui();
+		comp->ImGui();
 	}
 	int id = 0;
-	for (auto& pair : scripts) {
-		auto& script = pair.second;
+	for (auto& script : m_scripts) {
 		ImGui::PushID(id);
 		script.ImGui();
 		ImGui::PopID();
@@ -179,13 +200,13 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 	std::string scriptName = GetScriptName(filePath);
 	if (!HasScriptComponent(scriptName))
 	{
-		ScriptComponent comp = ScriptComponent();
+		m_scripts.push_back(ScriptComponent());
+		auto& comp = m_scripts.back();
 		comp.entity = this;
 		comp.setScript(filePath);
 		
-
-		scripts[scriptName] = std::move(comp);
-		scripts[scriptName].Start();
+		m_scriptsMap[scriptName] = m_scripts.size() - 1;
+		//scripts[scriptName].Start();
 	}
 
 	return GetScriptComponent(scriptName);
@@ -196,10 +217,10 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 ECS::ScriptComponent& ECS::Entity::GetScriptComponent(std::string scriptName)
 {
 	std::string name = GetScriptName(scriptName); // trim .lua
-	auto it = scripts.find(name);
+	auto it = m_scriptsMap.find(name);
 
-	if (it != scripts.end())
-		return it->second;
+	if (it != m_scriptsMap.end())
+		return m_scripts[it->second];
 
 	throw std::runtime_error("[C++]: ERROR: ECS: Trying to grab Script Component that hasn't been added");
 }
@@ -208,7 +229,7 @@ ECS::ScriptComponent& ECS::Entity::GetScriptComponent(std::string scriptName)
 
 bool ECS::Entity::HasScriptComponent(std::string scriptName) const
 {	
-	return scripts.find(scriptName) != scripts.end();
+	return m_scriptsMap.find(scriptName) != m_scriptsMap.end();
 }
 
 //----------------------------------------------
@@ -231,6 +252,13 @@ void ECS::Entity::Destroy()
 bool ECS::Entity::isDestroy()
 {
 	return m_deleteFlag;
+}
+
+//----------------------------------------------
+
+int Entity::GetID() const
+{
+	return m_entityID;
 }
 
 //----------------------------------------------
