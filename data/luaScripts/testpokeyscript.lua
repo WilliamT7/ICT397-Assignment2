@@ -44,7 +44,7 @@ function update()
 
                 transform:setPosition(currentPos.x + x * speed, currentPos.y + y * speed, currentPos.z + z * speed)
             end
-
+            
             animation:play("walk")
         else
             animation:play("idle")
