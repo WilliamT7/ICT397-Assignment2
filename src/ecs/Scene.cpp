@@ -13,10 +13,11 @@
 
 //----------------------------------------------
 
-void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld)
+void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 {
 	//PHYSICS AGAIN :D
 	m_physicsWorld = physicsWorld;
+	LoadScene(fileName);
 	m_running = true;
 }
 
@@ -24,20 +25,76 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld)
 
 void ECS::Scene::Clear()
 {
-	m_running = false;
 	//for (int i = 0; i < entities.size(); i++)
 	//{
 	//	std::cout << "DESTROYING ENTITY " << i << std::endl;
 	//	entities[i].get()->Destroy();
 	//}
-
 	entities.clear();
 	entities.shrink_to_fit();
+	//m_physicsWorld = new BulletPhysicsWorld();
 }
 
 //----------------------------------------------
 
-#include <thread>
+void ECS::Scene::LoadScene(std::string fileName)
+{
+	sol::state lua;
+	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
+
+	SetRunning(false);
+	Clear();
+
+	std::string path = "../data/scenes/";
+	std::string fullpath = path + fileName;
+
+	std::cout << "Reading in " << fullpath << ".\n";
+
+	// read in file from fileName
+	try
+	{
+		lua.script_file(fullpath);
+	}
+	catch (const sol::error& e)
+	{
+		std::cout << e.what() << "\n";
+		std::cout << "[C++]: Error: SOL: Unable to open " << fullpath << std::endl;
+		return;
+	}
+
+	// grab the scene table
+	sol::table sceneTable = lua["scene"];
+
+	// load it into the scene
+	DeserialiseScene(sceneTable);
+	SetRunning(true);
+}
+
+//----------------------------------------------
+
+void ECS::Scene::SaveScene(const char* fileName)
+{
+	sol::state lua;
+	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
+
+	std::string path = "../data/scenes/";
+	std::string fullpath = path + fileName;
+
+	// create new table from scene
+	sol::table t = SerialiseScene(lua);
+
+	// open the serialiser script file
+	lua.script_file("../data/luaScripts/sceneserialiser/serialiser.lua");
+	// get the function SerialiseTable from serialiser.lua
+	sol::function serialise = lua["SerialiseTable"];
+
+	// serialise it into the fileName :D
+	serialise(fullpath, t);
+
+	std::cout << "Created file " << fileName << " as " << fullpath << std::endl;
+}
+
+//----------------------------------------------
 
 void ECS::Scene::Update(float deltaTime)
 {

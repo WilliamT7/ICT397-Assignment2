@@ -20,7 +20,7 @@ ECS::ScriptComponent::ScriptComponent() {
 }
 
 ECS::ScriptComponent::~ScriptComponent() {
-	scripting.release();
+	scripting.reset();
 }
 
 ECS::ScriptComponent::ScriptComponent(ScriptComponent&&) noexcept = default;

@@ -1,18 +1,18 @@
 scene = {
-  {
+    {
     Components = {
       {
         Name = "Transform",
-        position_x = 20.397708892822266,
-        position_y = -1.9402357339859009,
-        position_z = -17.779130935668945,
+        position_x = 20.286624908447266,
+        position_y = -1.7360454797744751,
+        position_z = -17.667163848876953,
         rotation_x = 0,
         rotation_y = -90,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000023EE8821490]],
+      } --[[table: 00000224784F0C20]],
       {
         Name = "Camera",
         far_plane = 2000,
@@ -22,7 +22,7 @@ scene = {
         position_y = 1.2639545202255249,
         position_z = -17.667163848876953,
         yaw = 858.0013427734375
-      } --[[table: 0000023EE8821510]],
+      } --[[table: 00000224784F12A0]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -30,12 +30,16 @@ scene = {
         halfExtents_z = 1,
         isStatic = false,
         mass = 1,
-        shape = "box",
-        useGravity = true
-      } --[[table: 0000023EE8821610]]
-    } --[[table: 0000023EE8821090]],
+        shape = "box"
+      } --[[table: 00000224784F1420]],
+      {
+        Name = "Script",
+        fileName = "scenesaveload.lua",
+        filePath = "..\\data\\luaScripts\\"
+      }
+    } --[[table: 00000224784F13A0]],
     EntityName = "Player"
-  } --[[table: 0000023EE8820D90]],
+  } --[[table: 00000224784F0320]],
   {
     Components = {
       {
@@ -49,7 +53,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000023EE881A890]],
+      } --[[table: 000002175562D6D0]],
       {
         Name = "Terrain",
         is_wireframe = false,
@@ -58,8 +62,8 @@ scene = {
         scale_y = 1,
         scale_z = 10,
         seed = 0
-      } --[[table: 0000023EE881B490]]
-    } --[[table: 0000023EE881B110]],
+      } --[[table: 000002175562BDD0]]
+    } --[[table: 000002175562D2D0]],
     EntityName = "Terrain"
-  } --[[table: 0000023EE881BD90]]
-} --[[table: 0000023EE8821A10]]
+  } --[[table: 000002175562C0D0]]
+}

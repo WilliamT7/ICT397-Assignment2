@@ -27,6 +27,7 @@ namespace ECS
         m_terrain = nullptr;
         m_model = nullptr;
         m_transform = nullptr;
+        m_physicsWorld = nullptr;
     }
 
     void TerrainComponent::Start()

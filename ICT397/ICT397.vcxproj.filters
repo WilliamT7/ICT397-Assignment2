@@ -387,9 +387,6 @@
     <ClInclude Include="..\include\other\fileIO.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\luaReader\functionSearch.h">
-      <Filter>Header Files\Other</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\other\singleton.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
@@ -449,6 +446,9 @@
     </ClInclude>
     <ClInclude Include="..\include\graphics\GUI.h">
       <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\luaReader\functionSearch.h">
+      <Filter>Header Files\Lua</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -46,8 +46,8 @@ namespace ECS
 		Entity(const Entity&) = delete;
 		Entity& operator=(const Entity&) = delete;
 
-		Entity(Entity&&) noexcept = default;
-		Entity& operator=(Entity&&) noexcept = default;
+		Entity(Entity&&) = delete;
+		Entity& operator=(Entity&&) = delete;
 
 		~Entity();
 
@@ -250,6 +250,7 @@ void ECS::Entity::RemoveComponent()
 {
 	if (HasComponent<T>())
 	{
+		//TODO: FIX!!!!
 		auto it = m_componentsMap.find(typeid(T));
 		m_components[it->second] = std::move(m_components.back());
 		m_components.pop_back();

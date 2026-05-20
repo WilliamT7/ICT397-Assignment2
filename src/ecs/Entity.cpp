@@ -27,7 +27,10 @@ ECS::Entity::~Entity()
 		delete m_components[i];
 	}
 
-	m_components.shrink_to_fit();
+	m_components.clear();
+	m_componentsMap.clear();
+	m_scripts.clear();
+	m_scriptsMap.clear();
 }
 
 //----------------------------------------------
