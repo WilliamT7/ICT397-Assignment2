@@ -1,5 +1,5 @@
 settings = {
-    scene = "blankscenewterrain.lua",
+    scene = "animationTest.lua",
     mouseVisible = true,
     imGuiVisible = true
 }

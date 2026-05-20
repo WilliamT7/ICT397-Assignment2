@@ -65,6 +65,11 @@ scene = {
         filePath = "..\\data\\luaScripts\\"
       } --[[table: 00000224784F16A0]],
       {
+        Name = "Script",
+        fileName = "scenesaveload.lua",
+        filePath = "..\\data\\luaScripts\\"
+      },
+      {
         Name = "Physics",
         halfExtents_x = 1,
         halfExtents_y = 0.69999998807907104,

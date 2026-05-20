@@ -75,6 +75,7 @@ namespace ECS
 
 		void SetRunning(bool running);
 		void LoadScene(std::string fileName);
+		void LoadSceneScene(std::string fileName);
 		void SaveScene(const char* fileName);
 
 		/** Deserialise Scene
@@ -139,7 +140,12 @@ namespace ECS
 		ThreadPool m_pool;
 		bool m_running = false;
 
+		bool m_mustLoad = false;
+		std::string m_sceneToLoad;
+
 		static void UpdateEntity(Entity* entity, float deltaTime);
+
+		void ProcessSceneLoad();
 	};
 }
 

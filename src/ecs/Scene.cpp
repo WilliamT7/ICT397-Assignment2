@@ -17,7 +17,7 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 {
 	//PHYSICS AGAIN :D
 	m_physicsWorld = physicsWorld;
-	LoadScene(fileName);
+	LoadSceneScene(fileName);
 	m_running = true;
 }
 
@@ -37,7 +37,29 @@ void ECS::Scene::Clear()
 
 //----------------------------------------------
 
+void ECS::Scene::ProcessSceneLoad()
+{
+	if (!m_mustLoad)
+		return;
+
+	std::string fileName = m_sceneToLoad;
+	m_mustLoad = false;
+	m_sceneToLoad = "";
+	LoadSceneScene(fileName);
+}
+
+//----------------------------------------------
+
 void ECS::Scene::LoadScene(std::string fileName)
+{
+	m_mustLoad = true;
+	m_sceneToLoad = fileName;
+	m_running = false;
+}
+
+//----------------------------------------------
+
+void ECS::Scene::LoadSceneScene(std::string fileName)
 {
 	sol::state lua;
 	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
@@ -98,6 +120,8 @@ void ECS::Scene::SaveScene(const char* fileName)
 
 void ECS::Scene::Update(float deltaTime)
 {
+	ProcessSceneLoad();
+
 	if (!m_running)
 		return;
 
