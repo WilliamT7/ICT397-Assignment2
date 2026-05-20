@@ -3,6 +3,7 @@
 
 #include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
 #include <btBulletDynamicsCommon.h>
+#include <algorithm>
 
 namespace
 {
@@ -76,7 +77,8 @@ void BulletPhysicsWorld::Step(float deltaTime)
     if (m_world == nullptr)
         return;
 
-    m_world->stepSimulation(deltaTime);
+    const btScalar clampedDeltaTime = std::min(deltaTime, 0.25f);
+    m_world->stepSimulation(clampedDeltaTime, 10, 1.0f / 60.0f);
 }
 
 std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateBoxBody(const RigidBodyDesc& desc, const Vector3& halfExtents)
@@ -109,6 +111,20 @@ std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateBoxBody(const RigidBodyD
     );
 
     btRigidBody* body = new btRigidBody(rigidBodyInfo);
+    body->setFriction(0.8f);
+    body->setRestitution(0.0f);
+
+    if (mass > 0.0f)
+    {
+        const float smallestHalfExtent = std::max(
+            0.01f,
+            std::min(halfExtents.x, std::min(halfExtents.y, halfExtents.z))
+        );
+
+        body->setCcdMotionThreshold(smallestHalfExtent);
+        body->setCcdSweptSphereRadius(smallestHalfExtent * 0.8f);
+    }
+
     m_world->addRigidBody(body);
 
 

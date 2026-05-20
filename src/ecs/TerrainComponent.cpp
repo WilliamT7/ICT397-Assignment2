@@ -366,6 +366,11 @@ namespace ECS
 
     void TerrainComponent::ClearPhysics()
     {
+        if (m_physicsWorld != nullptr && m_physicsBody != nullptr)
+        {
+            m_physicsWorld->RemoveBody(m_physicsBody);
+        }
+
         m_physicsBody.reset();
     }
 
