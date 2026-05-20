@@ -1,18 +1,18 @@
 scene = {
-    {
+  {
     Components = {
       {
         Name = "Transform",
-        position_x = 20.286624908447266,
-        position_y = -1.7360454797744751,
-        position_z = -17.667163848876953,
+        position_x = 20.397262573242188,
+        position_y = -1.9395051002502441,
+        position_z = -17.772279739379883,
         rotation_x = 0,
         rotation_y = -90,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000224784F0C20]],
+      } --[[table: 0000022190E95BA0]],
       {
         Name = "Camera",
         far_plane = 2000,
@@ -22,7 +22,7 @@ scene = {
         position_y = 1.2639545202255249,
         position_z = -17.667163848876953,
         yaw = 858.0013427734375
-      } --[[table: 00000224784F12A0]],
+      } --[[table: 0000022190E96FA0]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -30,16 +30,17 @@ scene = {
         halfExtents_z = 1,
         isStatic = false,
         mass = 1,
-        shape = "box"
-      } --[[table: 00000224784F1420]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000022190E961A0]],
       {
         Name = "Script",
         fileName = "scenesaveload.lua",
         filePath = "..\\data\\luaScripts\\"
-      }
-    } --[[table: 00000224784F13A0]],
+      } --[[table: 0000022190E96420]]
+    } --[[table: 0000022190E95820]],
     EntityName = "Player"
-  } --[[table: 00000224784F0320]],
+  } --[[table: 0000022190E972A0]],
   {
     Components = {
       {
@@ -53,7 +54,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002175562D6D0]],
+      } --[[table: 0000022190E95E20]],
       {
         Name = "Terrain",
         is_wireframe = false,
@@ -62,8 +63,8 @@ scene = {
         scale_y = 1,
         scale_z = 10,
         seed = 0
-      } --[[table: 000002175562BDD0]]
-    } --[[table: 000002175562D2D0]],
+      } --[[table: 0000022190E95F20]]
+    } --[[table: 0000022190E95DA0]],
     EntityName = "Terrain"
-  } --[[table: 000002175562C0D0]]
-}
+  } --[[table: 0000022190E95D20]]
+} --[[table: 0000022190E95EA0]]

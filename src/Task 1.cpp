@@ -2,7 +2,7 @@
 
 #include "graphics/GraphicsFactory.h"
 #include "graphics/WindowFactory.h"
-#include "ecs/SceneLoader.h"
+#include "ecs/Scene.h"
 #include "luaReader\luaIO.h"
 #include "physics/BulletPhysicsWorld.h"
 #include "graphics/HardCodedModels.h"
@@ -65,7 +65,10 @@ int main(int argc, char **argv)
     LoadModelFiles(lua);
     LoadTextureFiles(lua, graphicsHandler);
     Graphics::AnimationManager::Get().LoadInAnimations(lua);
-    scene = ECS::SceneLoader::CreateScene(lua, physicsWorld, sceneName.c_str());
+    //scene = ECS::SceneLoader::CreateScene(lua, physicsWorld, sceneName.c_str());
+    scene = new ECS::Scene();
+    scene->Init(physicsWorld, sceneName.c_str());
+
 
     //Link Engine functionality with lua
     initaliseLuaEngineLinks(window, scene);
@@ -74,7 +77,7 @@ int main(int argc, char **argv)
     window->MainLoop(Update, Display);
 
     delete scene;
-    delete physicsWorld;
+    //delete physicsWorld;
 
     return 0;
 }
@@ -107,7 +110,6 @@ void Display()
 
     if (imGuiToggle)
     {
-        ECS::SceneLoader::ImGui(scene, physicsWorld);
         scene->ImGui();
     }
 

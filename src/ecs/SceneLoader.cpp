@@ -14,7 +14,7 @@ namespace ECS
 
 		// make new scene
 		Scene* sc = new Scene();
-		sc->Init(phys);
+		sc->Init(phys, fileName);
 
 		// read in file from fileName
 		try

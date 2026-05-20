@@ -30,8 +30,7 @@ namespace ECS
 	class Scene
 	{
 	public:
-		Scene() :
-			m_pool(thread::hardware_concurrency()) { }
+		Scene() = default;
 
 		void Clear();
 
@@ -43,7 +42,7 @@ namespace ECS
 		* @pre - BulletPhysicsWorld exists? idk
 		* @post - Creates Scene
 		**/
-		void Init(BulletPhysicsWorld* physicsWorld);
+		void Init(BulletPhysicsWorld* physicsWorld, const char* fileName);
 
 		/** Update
 		* @author - Kay Bradsell
@@ -75,6 +74,8 @@ namespace ECS
 		void ImGui();
 
 		void SetRunning(bool running);
+		void LoadScene(std::string fileName);
+		void SaveScene(const char* fileName);
 
 		/** Deserialise Scene
 		* @author - Kay Bradsell

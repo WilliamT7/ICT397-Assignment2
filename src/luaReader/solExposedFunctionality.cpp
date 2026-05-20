@@ -395,6 +395,8 @@ void exposeSceneFunctionality(sol::state_view& solView)
 	if (assigned) {
 		// cool functions
 		solView.set_function("Spawn", &ECS::Scene::Spawn, luaEngineLink->getScenePointer());
+		solView.set_function("SaveScene", &ECS::Scene::SaveScene, luaEngineLink->getScenePointer());
+		solView.set_function("LoadScene", &ECS::Scene::LoadScene, luaEngineLink->getScenePointer());
 	}
 }
 
