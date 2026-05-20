@@ -38,5 +38,9 @@ models = {
     {
         Name = "BULLET",
         File = "bullet\\bullet.obj"
+    },
+    {
+        Name = "POOL",
+        File = "kiddypool\\kiddypool.obj"
     }
 }

@@ -9,8 +9,8 @@ function update()
 		local otherName = trigger:getEnterName(i)
 		print("[Lua Trigger Enter]: Player entered by " .. otherName)
 
-		if otherName == "Bullet" then
-			destroy(obj)
+		if otherName == "KiddyPool" then
+			print("YOUVE ACTIVATED MY TRAP CARD")
 		end
 	end
 
