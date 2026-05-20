@@ -202,6 +202,16 @@ namespace Graphics
 		* @return - The created model, or nullptr if creation failed.
 		**/
 		Model* CreateRuntimeModel(const std::string& modelName, const std::vector<Mesh>& meshes) override;
+		
+		/** DestroyRuntimeModel
+		* @author - William Thorpe
+		* @brief - Destroys the runtime model
+		* @param - const std::string& modelName
+		* @pre - model created at runtime with a name exists
+		* @post - Destroys that model and frees it from this world
+		* @return none
+		 **/
+		void DestroyRuntimeModel(const std::string& modelName) override;
 
 		/** CreateRuntimeLightingTexture
 		* @author William Thorpe
@@ -215,6 +225,16 @@ namespace Graphics
 		* @return - The created texture, or nullptr if creation failed.
 		**/
 		Texture* CreateRuntimeLightingTexture(const unsigned char* data, int width, int height, int channels) override;
+		
+		/** DestroyRuntimeTexture
+		* @author - William Thorpe
+		* @brief - Destroys the runtime texture
+		* @param - const std::string& textureName
+		* @pre - texture created at runtime with a name exists
+		* @post - Destroys that texture and frees it from this world
+		* @return none
+		 **/
+		void DestroyRuntimeTexture(const std::string& textureName) override;
 
 		/** SetWireframeMode
 		* @author William Thorpe
@@ -252,7 +272,15 @@ namespace Graphics
 		std::unordered_map<ShaderType, ShaderOpenGL*> m_shaders;
 		std::unordered_map<std::string, TextureOpenGL*> m_textures;
 		std::unordered_map<std::string, Model*> m_models;
-		std::unordered_map<Mesh*, unsigned int> m_meshVAOs;
+
+		struct MeshBuffers
+		{
+			unsigned int VAO = 0;
+			unsigned int VBO = 0;
+			unsigned int EBO = 0;
+		};
+
+		std::unordered_map<Mesh*, MeshBuffers> m_meshBuffers;
 
 		/** Setup Mesh
 		* @author - Kay Bradsell

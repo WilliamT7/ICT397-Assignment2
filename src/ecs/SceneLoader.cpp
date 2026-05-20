@@ -76,7 +76,7 @@ namespace ECS
 		}
 		if (ImGui::Button("Load Scene"))
 		{
-			std::string fileName = "asd.lua";
+			std::string fileName = "demo.lua";
 
 			scene->Clear();
 
