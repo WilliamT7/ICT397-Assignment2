@@ -142,6 +142,8 @@ namespace ECS
 		**/
 		void Render(Graphics::Graphics* graphics);
 
+		void RenderScripts(Graphics::Graphics* graphics);
+
 		/** Get Name
 		* @author - Kay Bradsell
 		* @brief - Get the name of this entity

@@ -69,6 +69,8 @@ namespace ECS {
 		**/
 		void Start();
 
+		void Render(Graphics::Graphics* graphics);
+
 
 		/** getScript
 		* @author - Seb D'Alessandro
@@ -179,6 +181,8 @@ namespace ECS {
 
 		///Indicates if a script has a start function
 		bool hasStart = false;
+
+		bool hasRender = false;
 
 		///Persistent Lua runtime for this component.
 		std::unique_ptr<SolScripting> scripting;

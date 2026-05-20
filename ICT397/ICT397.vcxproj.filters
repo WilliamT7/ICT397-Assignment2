@@ -187,6 +187,9 @@
     <ClCompile Include="..\src\other\ThreadPool.cpp">
       <Filter>Source Files\Other</Filter>
     </ClCompile>
+    <ClCompile Include="..\include\graphics\GUI.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
@@ -443,6 +446,9 @@
     </ClInclude>
     <ClInclude Include="..\include\other\ThreadPool.h">
       <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\GUI.h">
+      <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

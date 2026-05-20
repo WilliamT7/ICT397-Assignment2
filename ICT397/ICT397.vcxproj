@@ -27,6 +27,7 @@
     <ClCompile Include="..\external\imgui-1.92.6\imgui_tables.cpp" />
     <ClCompile Include="..\external\imgui-1.92.6\imgui_widgets.cpp" />
     <ClCompile Include="..\glad.c" />
+    <ClCompile Include="..\include\graphics\GUI.cpp" />
     <ClCompile Include="..\src\ecs\AnimationComponent.cpp" />
     <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
     <ClCompile Include="..\src\ecs\Entity.cpp" />
@@ -119,6 +120,7 @@
     <ClInclude Include="..\include\graphics\Graphics.h" />
     <ClInclude Include="..\include\graphics\GraphicsFactory.h" />
     <ClInclude Include="..\include\graphics\Graphics_OpenGL.h" />
+    <ClInclude Include="..\include\graphics\GUI.h" />
     <ClInclude Include="..\include\graphics\HardCodedModels.h" />
     <ClInclude Include="..\include\graphics\HardCodedTextures.h" />
     <ClInclude Include="..\include\graphics\InputHandler.h" />

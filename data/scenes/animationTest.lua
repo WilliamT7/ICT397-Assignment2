@@ -51,7 +51,7 @@ scene = {
       } --[[table: 00000224784F0C20]],
       {
         Name = "Camera",
-        far_plane = 2000,
+        far_plane = 5000,
         near_plane = 0.10000000149011612,
         pitch = 0.10044071078300476,
         position_x = 20.286624908447266,

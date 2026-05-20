@@ -45,6 +45,13 @@ void ECS::ScriptComponent::Update(float deltaTime) {
 	}
 
 }
+
+void ECS::ScriptComponent::Render(Graphics::Graphics* graphics)
+{
+	if (scriptAssigned && hasRender) {
+		scripting->runLoaded(luaFile, "render", entity);
+	}
+}
 //------------------------------------------------------------
 
 ScriptFile const ECS::ScriptComponent::getScript() {
@@ -72,10 +79,11 @@ void ECS::ScriptComponent::setScript(string filePath) {
 
 	hasUpdate = findFunction(luaFile, "update");
 	hasStart = findFunction(luaFile, "start");
+	hasRender = findFunction(luaFile, "render");
 
 	if (!hasUpdate) {
 
-		cout << "[C++] ScriptComponent.cpp: Warning: script " << luaFile.getFileName() << " does not have an update(), it will not be run every frame\n";
+		//cout << "[C++] ScriptComponent.cpp: Warning: script " << luaFile.getFileName() << " does not have an update(), it will not be run every frame\n";
 
 	}
 
@@ -92,7 +100,7 @@ void ECS::ScriptComponent::DeserialiseComponentTable(sol::table& data)
 
 	//Check if the script exists in scriptManager
 	LuaScriptManager* scriptManager = Singleton<LuaScriptManager>::getInstance();
-	cout << filePath + fileName << "\n";
+	//cout << filePath + fileName << "\n";
 	luaFile = scriptManager->searchForFile(filePath + fileName);
 
 	scriptAssigned = true;

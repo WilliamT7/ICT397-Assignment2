@@ -193,6 +193,8 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 	{
 		if (entity->HasComponent<TextureRendererComponent>())
 			entity->GetComponent<TextureRendererComponent>()->Render(graphics);
+
+		entity->RenderScripts(graphics);
 	}
 }
 

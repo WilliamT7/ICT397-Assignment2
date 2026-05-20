@@ -154,6 +154,16 @@ void ECS::Entity::Render(Graphics::Graphics* graphics)
 
 //----------------------------------------------
 
+void ECS::Entity::RenderScripts(Graphics::Graphics* graphics)
+{
+	for (auto& script : m_scripts)
+	{
+		script.Render(graphics);
+	}
+}
+
+//----------------------------------------------
+
 std::string ECS::Entity::GetName() const
 {
 	return name;
