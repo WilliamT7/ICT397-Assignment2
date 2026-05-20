@@ -33,6 +33,8 @@ namespace ECS
 		Scene() :
 			m_pool(thread::hardware_concurrency()) { }
 
+		void Clear();
+
 		/** Init
 		* @author - Kay Bradsell
 		* @brief - Initialises Scene given physicsWorld
@@ -71,6 +73,8 @@ namespace ECS
 		* @post - Adds Scenes and Entities to ImGui
 		**/
 		void ImGui();
+
+		void SetRunning(bool running);
 
 		/** Deserialise Scene
 		* @author - Kay Bradsell
@@ -132,6 +136,7 @@ namespace ECS
 		BulletPhysicsWorld* m_physicsWorld = nullptr;
 		bool m_physicsEnabled = true;
 		ThreadPool m_pool;
+		bool m_running = false;
 
 		static void UpdateEntity(Entity* entity, float deltaTime);
 	};

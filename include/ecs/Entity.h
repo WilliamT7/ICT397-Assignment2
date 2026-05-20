@@ -49,6 +49,8 @@ namespace ECS
 		Entity(Entity&&) noexcept = default;
 		Entity& operator=(Entity&&) noexcept = default;
 
+		~Entity();
+
 		/** Add Component
 		* @author - Kay Bradsell
 		* @brief - Template function to add a Component to an Entity

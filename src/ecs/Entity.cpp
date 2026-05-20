@@ -19,6 +19,19 @@ ECS::Entity::Entity()
 
 //----------------------------------------------
 
+ECS::Entity::~Entity()
+{
+	int size = m_components.size();
+	for (int i = size - 1; i >= 0; i--)
+	{
+		delete m_components[i];
+	}
+
+	m_components.shrink_to_fit();
+}
+
+//----------------------------------------------
+
 void ECS::Entity::Start()
 {
 	for (auto& comp : m_components)

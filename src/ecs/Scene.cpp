@@ -17,6 +17,22 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld)
 {
 	//PHYSICS AGAIN :D
 	m_physicsWorld = physicsWorld;
+	m_running = true;
+}
+
+//----------------------------------------------
+
+void ECS::Scene::Clear()
+{
+	m_running = false;
+	//for (int i = 0; i < entities.size(); i++)
+	//{
+	//	std::cout << "DESTROYING ENTITY " << i << std::endl;
+	//	entities[i].get()->Destroy();
+	//}
+
+	entities.clear();
+	entities.shrink_to_fit();
 }
 
 //----------------------------------------------
@@ -25,6 +41,9 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld)
 
 void ECS::Scene::Update(float deltaTime)
 {
+	if (!m_running)
+		return;
+
 	if (m_physicsWorld != nullptr && m_physicsEnabled)
 	{
 		m_physicsWorld->Step(deltaTime);
@@ -52,6 +71,13 @@ void ECS::Scene::Update(float deltaTime)
 
 	ProcessTriggers();
 	
+}
+
+//----------------------------------------------
+
+void ECS::Scene::SetRunning(bool running)
+{
+	m_running = running;
 }
 
 //----------------------------------------------
@@ -161,6 +187,9 @@ void ECS::Scene::InjectPhysicsWorld(Entity* entity)
 
 void ECS::Scene::Render(Graphics::Graphics* graphics)
 {
+	if (!m_running)
+		return;
+
 	graphics->ClearLights();
 
 	// get camera
@@ -205,6 +234,9 @@ void ECS::Scene::ImGui()
 	// IGNORE HOW LONG THIS FUNCTION IS, IT'S FOR DEBUGGING AND EDITTING
 	// THE SCENE AND ENTITIES!!!!
 	static int selectedEntity = 0;
+
+	if (!m_running)
+		return;
 
 	// SCENE
 	ImGui::Begin("Scene");

@@ -19,7 +19,9 @@ ECS::ScriptComponent::ScriptComponent() {
 	scripting = std::make_unique<SolScripting>();
 }
 
-ECS::ScriptComponent::~ScriptComponent() = default;
+ECS::ScriptComponent::~ScriptComponent() {
+	scripting.release();
+}
 
 ECS::ScriptComponent::ScriptComponent(ScriptComponent&&) noexcept = default;
 

@@ -9,7 +9,7 @@ function update()
     vars:setGlobal("elapsedTime", tostring(elapsedTime + deltaTime))
 
     if elapsedTime > coolDown then
-        spawnEntity()
+        --spawnEntity()
         vars:setGlobal("elapsedTime", tostring(0))
     end
 end

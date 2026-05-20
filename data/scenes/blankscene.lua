@@ -24,16 +24,6 @@ scene = {
         yaw = 858.0013427734375
       } --[[table: 00000224784F12A0]],
       {
-        Name = "Script",
-        fileName = "playerInput.lua",
-        filePath = "..\\data\\luaScripts\\"
-      } --[[table: 00000224784F16A0]],
-      {
-        Name = "Script",
-        fileName = "prefabTest.lua",
-        filePath = "..\\data\\luaScripts\\"
-      } --[[table: 00000224784F16A0]],
-      {
         Name = "Physics",
         halfExtents_x = 1,
         halfExtents_y = 0.69999998807907104,
@@ -58,21 +48,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002175562D6D0]],
-      {
-        Name = "Terrain",
-        is_wireframe = false,
-        mode = "fault",
-        scale_x = 10,
-        scale_y = 1,
-        scale_z = 10,
-        seed = 0
-      } --[[table: 000002175562BDD0]],
-      {
-        Name = "Script",
-        fileName = "terraintoggle.lua",
-        filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002175562BE50]]
+      } --[[table: 000002175562D6D0]]
     } --[[table: 000002175562D2D0]],
     EntityName = "Terrain"
   } --[[table: 000002175562C0D0]]

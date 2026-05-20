@@ -74,6 +74,34 @@ namespace ECS
 		{
 			SceneLoader::GenerateSceneFile(scene, lua, buf);
 		}
+		if (ImGui::Button("Load Scene"))
+		{
+			std::string fileName = "asd.lua";
+
+			scene->Clear();
+
+			std::string path = "../data/scenes/";
+			std::string fullpath = path + fileName;
+
+
+			// read in file from fileName
+			try
+			{
+				lua.script_file(fullpath);
+			}
+			catch (const sol::error& e)
+			{
+				std::cout << "[C++]: Error: SOL: Unable to open " << fullpath << std::endl;
+				return;
+			}
+
+			// grab the scene table
+			sol::table sceneTable = lua["scene"];
+
+			// load it into the scene
+			scene->DeserialiseScene(sceneTable);
+			scene->SetRunning(true);
+		}
 
 		ImGui::End();
 	}

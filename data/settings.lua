@@ -1,5 +1,5 @@
 settings = {
-    scene = "asd.lua",
+    scene = "noterrain.lua",
     mouseVisible = true,
     imGuiVisible = true
 }
