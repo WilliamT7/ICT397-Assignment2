@@ -31,6 +31,10 @@ ECS::ScriptComponent& ECS::ScriptComponent::operator=(ScriptComponent&&) noexcep
 
 void ECS::ScriptComponent::Start() {
 
+	cout << "Attempinting to run start() on " << luaFile.getFileName() << "\n";
+	cout << scriptAssigned << "\n";
+	cout << hasStart << "\n";
+
 	if (scriptAssigned && hasStart) {
 		scripting->runLoaded(luaFile, "start", entity);
 	}
@@ -82,6 +86,7 @@ void ECS::ScriptComponent::setScript(string filePath) {
 	hasUpdate = findFunction(luaFile, "update");
 	hasStart = findFunction(luaFile, "start");
 	hasRender = findFunction(luaFile, "render");
+	Start();
 
 	if (!hasUpdate) {
 

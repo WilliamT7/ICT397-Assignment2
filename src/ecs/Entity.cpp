@@ -37,6 +37,7 @@ ECS::Entity::~Entity()
 
 void ECS::Entity::Start()
 {
+	cout << "ENTITY STARTED\n";
 	for (auto& comp : m_components)
 	{
 		comp->Start();
@@ -222,7 +223,7 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 		comp.setScript(filePath);
 		
 		m_scriptsMap[scriptName] = m_scripts.size() - 1;
-		//scripts[scriptName].Start();
+
 	}
 
 	return GetScriptComponent(scriptName);
@@ -278,3 +279,12 @@ int Entity::GetID() const
 }
 
 //----------------------------------------------
+
+void Entity::handleMessage(telegram message) {
+
+	recievedMessage = message;
+
+	//Check for scriptcomponet of name from telegram, if it exists, run that shit
+	//if (has)
+
+}

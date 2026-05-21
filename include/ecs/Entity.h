@@ -24,6 +24,7 @@
 #include "Component.h"
 #include "ScriptComponent.h"
 #include "graphics/Graphics.h"
+#include "messaging/telegram.h"
 
 //----------------------------------------------
 
@@ -183,6 +184,8 @@ namespace ECS
 
 		int GetID() const;
 
+		void handleMessage(telegram message);
+
 		ScriptComponent& AddScriptComponent(std::string filePath);
 		ScriptComponent& GetScriptComponent(std::string scriptName);
 		bool HasScriptComponent(std::string scriptName) const;
@@ -196,6 +199,8 @@ namespace ECS
 
 		std::string name = "Object";
 		bool m_deleteFlag = false;
+
+		telegram recievedMessage; //im sorry kay :(
 
 		static int m_entityCount;
 		int m_entityID;

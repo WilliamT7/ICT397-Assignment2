@@ -9,6 +9,15 @@
 *********************************************/
 #pragma once
 
+//Built-in libaries-------------------
+#include <string>
+
+//Namespaces----------------------
+using std::string;
+
+
+//----------------------------------
+
 /** telegram
 * @author - Seb D'Alessandro
 * @brief - message format for scripts to send
@@ -29,6 +38,11 @@ typedef struct telegram {
 
 	///What message is being sent (messages being stored in messageList singleton)
 	int messageID = -1;
+
+	string scriptCompName = "";
+
+	string scriptFunctionName = "";
+
 
 	///Addtional infomation that may accompy the message (a component, value, etc)
 	void* extraInfo = nullptr;

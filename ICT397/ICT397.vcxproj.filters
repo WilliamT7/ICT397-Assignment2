@@ -211,6 +211,12 @@
     <ClCompile Include="..\src\other\time.cpp">
       <Filter>Source Files\Other</Filter>
     </ClCompile>
+    <ClCompile Include="..\include\graphics\GUI.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\EntitySearch.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
@@ -485,6 +491,12 @@
     </ClInclude>
     <ClInclude Include="..\include\other\time.h">
       <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\graphics\GUI.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\EntitySearch.h">
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

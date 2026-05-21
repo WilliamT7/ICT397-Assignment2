@@ -24,6 +24,7 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 	m_running = true;
 
 	//Link message disptacher with entity list
+	//TODO deal with cases to do with loading a new scene
 	MessageDispatcher* messageManager = Singleton<MessageDispatcher>::getInstance();
 	messageManager->linkEntityList(&entities);
 

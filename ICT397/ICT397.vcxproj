@@ -33,6 +33,7 @@
     <ClCompile Include="..\src\ecs\AnimationComponent.cpp" />
     <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
     <ClCompile Include="..\src\ecs\Entity.cpp" />
+    <ClCompile Include="..\src\ecs\EntitySearch.cpp" />
     <ClCompile Include="..\src\ecs\FSMComponent.cpp" />
     <ClCompile Include="..\src\ecs\LightingComponent.cpp" />
     <ClCompile Include="..\src\ecs\MeshRendererComponent.cpp" />
@@ -79,7 +80,6 @@
     <ClCompile Include="..\src\messaging\telegram.cpp" />
     <ClCompile Include="..\src\other\fileIO.cpp" />
     <ClCompile Include="..\src\other\stringTools.cpp" />
-    <ClCompile Include="..\src\other\ThreadPool.cpp" />
     <ClCompile Include="..\src\other\time.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsBody.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsWorld.cpp" />
@@ -109,6 +109,7 @@
     <ClInclude Include="..\include\ecs\CameraComponent.h" />
     <ClInclude Include="..\include\ecs\Component.h" />
     <ClInclude Include="..\include\ecs\Entity.h" />
+    <ClInclude Include="..\include\ecs\EntitySearch.h" />
     <ClInclude Include="..\include\ecs\FSMComponent.h" />
     <ClInclude Include="..\include\ecs\LightingComponent.h" />
     <ClInclude Include="..\include\ecs\MeshRendererComponent.h" />
@@ -170,7 +171,6 @@
     <ClInclude Include="..\include\other\fileIO.h" />
     <ClInclude Include="..\include\other\singleton.h" />
     <ClInclude Include="..\include\other\stringTools.h" />
-    <ClInclude Include="..\include\other\ThreadPool.h" />
     <ClInclude Include="..\include\other\time.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsBody.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsWorld.h" />

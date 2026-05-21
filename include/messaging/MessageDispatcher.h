@@ -28,6 +28,8 @@ class MessageDispatcher {
 
 public:
 
+	MessageDispatcher() = default;
+
 	/* dispatchMessage
 	* @author - Seb D'Alessandro
 	* @brief -
@@ -40,7 +42,7 @@ public:
 	* @param
 	* @return - void
 	*/
-	void dispatchMessage(double delay, int sender, int reciever, int messageID, void* extraInfo);
+	void dispatchMessage(double delay, int sender, int reciever, int messageID, string scriptCompName, string scriptFuncName, void* extraInfo);
 
 	/* updateTime
 	* @author - Seb D'Alessandro
@@ -69,7 +71,7 @@ public:
 
 private:
 
-	vector<std::unique_ptr<ECS::Entity>>* entityList;
+	vector<std::unique_ptr<ECS::Entity>>* entityList = nullptr;
 
 	///Current frame the scene is on
 	float currentTime;
@@ -87,7 +89,7 @@ private:
 	* @param 
 	* @return - void
 	*/
-	void sendMessage(ECS::Entity* recciever, const telegram& message);
+	void sendMessage(const int recieverIndex, const telegram& message);
 
 
 	/* sendMessage
