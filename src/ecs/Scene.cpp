@@ -130,6 +130,8 @@ void ECS::Scene::Update(float deltaTime)
 		m_physicsWorld->Step(deltaTime);
 	}
 
+	ProcessTriggers();
+
 	int size = entities.size();
 	
 	// update was here
@@ -145,27 +147,14 @@ void ECS::Scene::Update(float deltaTime)
 	{
 		if (entities[i].get()->isDestroy())
 		{
-			entities[i] = std::move(entities.back());
-			entities.pop_back();
+			Entity* destroyedEntity = entities[i].get();
+
+			PhysicsTriggerComponent::RemoveEntityFromAllTriggers(destroyedEntity, entities);
+
+			entities.erase(entities.begin() + i);
 		}
+			
 	}
-
-	ProcessTriggers();
-	
-}
-
-//----------------------------------------------
-
-void ECS::Scene::SetRunning(bool running)
-{
-	m_running = running;
-}
-
-//----------------------------------------------
-
-void ECS::Scene::UpdateEntity(Entity* entity, float deltaTime)
-{
-	entity->Update(deltaTime);
 }
 
 //----------------------------------------------

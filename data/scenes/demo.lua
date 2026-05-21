@@ -72,9 +72,9 @@ scene = {
       {
         Name = "PhysicsTrigger",
         enabled = true,
-        halfExtents_x = 1,
-        halfExtents_y = 2.5,
-        halfExtents_z = 1
+        halfExtents_x = 1.2,
+        halfExtents_y = 10.0,
+        halfExtents_z = 1.2
       } --[[table: 00000295FD6520B0]],
       {
         Name = "Script",

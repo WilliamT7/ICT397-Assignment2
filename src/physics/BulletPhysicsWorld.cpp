@@ -226,6 +226,8 @@ void BulletPhysicsWorld::RemoveBody(std::shared_ptr<IPhysicsBody> body)
     if (rigidBody == nullptr)
         return;
 
+    btCollisionShape* collisionShape = rigidBody->getCollisionShape();
+
     if (rigidBody->getMotionState() != nullptr)
     {
         delete rigidBody->getMotionState();
@@ -233,4 +235,14 @@ void BulletPhysicsWorld::RemoveBody(std::shared_ptr<IPhysicsBody> body)
 
     m_world->removeRigidBody(rigidBody);
     delete rigidBody;
+
+    if (collisionShape != nullptr)
+    {
+        auto shapeIt = std::find(m_collisionShapes.begin(), m_collisionShapes.end(), collisionShape);
+        if (shapeIt != m_collisionShapes.end())
+        {
+            m_collisionShapes.erase(shapeIt);
+            delete collisionShape;
+        }
+    }
 }

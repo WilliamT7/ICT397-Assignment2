@@ -78,16 +78,42 @@ bool ECS::PhysicsTriggerComponent::IsOverlapping(Entity* other) const
 	if (!other->HasComponent<TransformComponent>())
 		return false;
 
-	if (!other->HasComponent<PhysicsComponent>())
-		return false;
-
-	PhysicsComponent* otherPhysics = other->GetComponent<PhysicsComponent>();
-
 	Vector3 aPos = transform->position;
-	Vector3 bPos = otherPhysics->GetPosition();
-
 	Vector3 aHalf = m_halfExtents;
-	Vector3 bHalf = otherPhysics->GetHalfExtents();
+
+	if (entity != nullptr && entity->HasComponent<PhysicsComponent>())
+	{
+		aPos = entity->GetComponent<PhysicsComponent>()->GetPosition();
+	}
+
+	Vector3 bPos;
+	Vector3 bHalf;
+
+	if (other->HasComponent<PhysicsTriggerComponent>())
+	{
+		PhysicsTriggerComponent* otherTrigger = other->GetComponent<PhysicsTriggerComponent>();
+		if (otherTrigger == nullptr || !otherTrigger->m_enabled)
+			return false;
+
+		TransformComponent* otherTransform = other->GetComponent<TransformComponent>();
+		bPos = otherTransform->position;
+		bHalf = otherTrigger->m_halfExtents;
+
+		if (other->HasComponent<PhysicsComponent>())
+		{
+			bPos = other->GetComponent<PhysicsComponent>()->GetPosition();
+		}
+	}
+	else if (other->HasComponent<PhysicsComponent>())
+	{
+		PhysicsComponent* otherPhysics = other->GetComponent<PhysicsComponent>();
+		bPos = otherPhysics->GetPosition();
+		bHalf = otherPhysics->GetHalfExtents();
+	}
+	else
+	{
+		return false;
+	}
 
 	bool overlapX = std::abs(aPos.x - bPos.x) <= aHalf.x + bHalf.x;
 	bool overlapY = std::abs(aPos.y - bPos.y) <= aHalf.y + bHalf.y;
@@ -106,6 +132,39 @@ void ECS::PhysicsTriggerComponent::OnTriggerStay(Entity* other)
 
 void ECS::PhysicsTriggerComponent::OnTriggerExit(Entity* other)
 {
+}
+
+void ECS::PhysicsTriggerComponent::RemoveOverlap(Entity* entityToRemove)
+{
+	m_previousOverlaps.erase(
+		std::remove(m_previousOverlaps.begin(), m_previousOverlaps.end(), entityToRemove),
+		m_previousOverlaps.end()
+	);
+
+	m_currentOverlaps.erase(
+		std::remove(m_currentOverlaps.begin(), m_currentOverlaps.end(), entityToRemove),
+		m_currentOverlaps.end()
+	);
+}
+
+void ECS::PhysicsTriggerComponent::RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<std::unique_ptr<Entity>>& entities)
+{
+	if (entityToRemove == nullptr)
+		return;
+
+	for (auto& entity : entities)
+	{
+		if (entity.get() == nullptr)
+			continue;
+
+		if (entity.get() == entityToRemove)
+			continue;
+
+		if (entity->HasComponent<PhysicsTriggerComponent>())
+		{
+			entity->GetComponent<PhysicsTriggerComponent>()->RemoveOverlap(entityToRemove);
+		}
+	}
 }
 
 int ECS::PhysicsTriggerComponent::GetEnterCount() const
