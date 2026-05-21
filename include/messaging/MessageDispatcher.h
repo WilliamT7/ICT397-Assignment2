@@ -63,7 +63,7 @@ public:
 	* @param
 	* @return - void
 	*/
-	void dispatchDelayedMessages();
+	void dispatchDelayedMessages(const int recieverIndex);
 
 
 	void linkEntityList(vector<std::unique_ptr<ECS::Entity>>* entityList);
@@ -101,6 +101,10 @@ private:
 	* @return - void
 	*/
 	void broadcastMessage(const telegram& message);
+
+
+
+	const int IDExist(const int IDToSearch) const;
 
 
 };

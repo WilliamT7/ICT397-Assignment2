@@ -9,6 +9,7 @@
 #include "graphics/GUI.h"
 #include "AI/AIMovement.h"
 #include "other/time.h"
+#include "messaging/messageDisLua.h"
 
 //--------------------------------------
 
@@ -424,5 +425,34 @@ void exposeTime(sol::state_view& solView) {
 	solView.set_function("getDeltaTime", &getDeltatime);
 	solView.set_function("getCurrentFrame", &getCurrentFrame);
 	solView.set_function("getPreviousFrame", &getPreviousFrame);
+
+}
+
+//------------------------------------------------------------------------------------------
+
+void exposeMessageDispatcher(sol::state_view& solView) {
+
+
+	solView.new_usertype <telegram>(
+		"scriptGlobal",
+		sol::constructors <telegram>(),
+		"dispatchTime",
+		&telegram::dispatchTime,
+		"sender",
+		&telegram::sender,
+		"receiver",
+		&telegram::reciever,
+		"messageID",
+		&telegram::messageID,
+		"scriptName",
+		&telegram::scriptCompName,
+		"functionName",
+		&telegram::scriptFunctionName,
+		"extra",
+		&telegram::extraInfo
+
+	);
+
+	solView.set_function("sendMessage", &sendMessage);
 
 }

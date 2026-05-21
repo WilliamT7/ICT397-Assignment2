@@ -242,7 +242,11 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	exposeAIBehaviours(solView);
 
+	//Singleton accessors
+
 	exposeTime(solView);
+
+	exposeMessageDispatcher(solView);
 
 	// Scene functions like spawn prefabs
 	exposeSceneFunctionality(solView);

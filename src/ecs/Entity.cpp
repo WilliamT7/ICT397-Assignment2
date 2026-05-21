@@ -5,7 +5,9 @@
 #include <filesystem>
 #include "ecs/AllComponentsInclude.h"
 
+
 using namespace ECS;
+using std::to_string;
 
 int Entity::m_entityCount = 0;
 
@@ -21,6 +23,7 @@ ECS::Entity::Entity()
 
 ECS::Entity::~Entity()
 {
+
 	int size = m_components.size();
 	for (int i = size - 1; i >= 0; i--)
 	{
@@ -53,6 +56,8 @@ void ECS::Entity::Start()
 
 void ECS::Entity::Update(float deltaTime)
 {
+
+	cout << "MY ID (update) " << GetID() << "=============\n";
 	for (auto& comp : m_components)
 	{
 		comp->Update(deltaTime);
@@ -190,8 +195,15 @@ std::string ECS::Entity::GetName() const
 
 void ECS::Entity::ImGui()
 {
+	cout << "MY ID " << GetID() << "=============\n";
+	static const string EntityIDStr = "Entity ID: " + to_string((GetID()) );
+	//cout << EntityIDStr << "\n";
+
+	ImGui::Text(EntityIDStr.c_str());
+
 	static char buf[32];
 	ImGui::InputText("Name", buf, IM_COUNTOF(buf));
+
 
 	if (ImGui::Button("Set Name"))
 		name = buf;
@@ -283,8 +295,13 @@ int Entity::GetID() const
 void Entity::handleMessage(telegram message) {
 
 	recievedMessage = message;
+	cout << "I HAVE RECIEVED MESSAGE! I AM " << GetName() << " with ID " << GetID() << "\n";
 
 	//Check for scriptcomponet of name from telegram, if it exists, run that shit
-	//if (has)
+	/*if (hasScriptComponent of name in message)
+	*	get the script component
+	*	check if it has the function of interest, if it does, run it
+	* 
+	*/
 
 }

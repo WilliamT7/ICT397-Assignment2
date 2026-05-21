@@ -10,8 +10,12 @@
 *********************************************/
 #pragma once
 
+//Built-in libaries-------------------------------
+#include <string>
+using std::string;
 
-void constructMessage(double delay, int sender, int reciever, int message, void* extraInfo);
+
+void sendMessage(double delay, int sender, int reciever, int message, string scriptName, string scriptFunctionName, void* extraInfo);
 
 
 //-------------------------------------------------

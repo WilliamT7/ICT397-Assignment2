@@ -180,3 +180,6 @@ void exposeAIBehaviours(sol::state_view& solView);
 * @return - void
 */
 void exposeTime(sol::state_view& solView);
+
+
+void exposeMessageDispatcher(sol::state_view& solView);

@@ -52,3 +52,5 @@ bool LuaEngineFunctionality::sceneFuncAssigned() const
 ECS::Scene* const LuaEngineFunctionality::getScenePointer() const {
 	return sceneFunctionality;
 }
+
+//---------------------------------------------------------------

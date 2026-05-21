@@ -32,30 +32,13 @@ void MessageDispatcher::updateTime(float nTime) {
 void MessageDispatcher::dispatchMessage(double delay, int sender, int reciever, int messageID, string scriptCompName, string scriptFuncName, void* extraInfo) {
 
 	telegram message = { delay, sender, reciever, messageID, scriptCompName, scriptFuncName, extraInfo };
-
-
-	if (delay <= 0.0) {
-		//Discharge message immeditaley
-
-
-	}
-	else {
-		//Calculate the time in which to send the message
-		engineTime* engineClock = Singleton<engineTime>::getInstance();
-		float currentTime = engineClock->currentFrame;
-		message.dispatchTime = currentTime + message.dispatchTime;
-		messageQueue.insert(message);
-
-
-	}
-
-	/*
-	//Broadcast a message across all entites
-	if (reciever == -1) {
+	const int recieverIndex = IDExist(message.sender);
+	
+	if (recieverIndex != -1) {
 
 		if (delay <= 0.0) {
 			//Discharge message immeditaley
-
+			sendMessage(recieverIndex, message);
 
 		}
 		else {
@@ -65,40 +48,20 @@ void MessageDispatcher::dispatchMessage(double delay, int sender, int reciever, 
 			message.dispatchTime = currentTime + message.dispatchTime;
 			messageQueue.insert(message);
 
-		}
-
-	}
-	//Send a message to a single entity only
-	else {
-		
-		if (delay <= 0.0) {
-			//Discharge message immeditaley
-			
-
-		}
-		else {
-			//Calculate the time in which to send the message
-			engineTime* engineClock = Singleton<engineTime>::getInstance();
-			float currentTime = engineClock->currentFrame;			
-			message.dispatchTime = currentTime + message.dispatchTime;
-			messageQueue.insert(message);
-
 
 		}
 	}
-	*/
 }
 
 //------------------------------------------------------
 
-void MessageDispatcher::dispatchDelayedMessages() {
+void MessageDispatcher::dispatchDelayedMessages(const int recieverIndex) {
 
 	engineTime* engineClock = Singleton<engineTime>::getInstance();
 	float currentTime = engineClock->currentFrame;
 
 	while (!messageQueue.empty() && (messageQueue.begin()->dispatchTime < currentTime ) && (messageQueue.end()->dispatchTime > 0) ) {
 		const telegram message = *messageQueue.begin();
-		const int recieverIndex = searchForEntityByID(*entityList, message.sender);
 		sendMessage(recieverIndex, message);
 		messageQueue.erase(messageQueue.begin());
 	}
@@ -116,7 +79,7 @@ void MessageDispatcher::linkEntityList(vector<std::unique_ptr<ECS::Entity>>* nEn
 
 void MessageDispatcher::broadcastMessage(const telegram& message) {
 
-
+	//Consider doing this maybe? i dont need it for testing :L
 
 }
 
@@ -135,6 +98,24 @@ void MessageDispatcher::sendMessage(const int recieverIndex, const telegram& mes
 		cout << "[C++] WARNING: message from " << message.sender << " attempted to send a message for an entity that doesn't exist" << "\n";
 	}
 
+
+
+}
+
+//------------------------------------------------------
+
+
+const int MessageDispatcher::IDExist(const int IDToSearch) const {
+
+	const int recieverIndex = searchForEntityByID(*entityList, IDToSearch);
+
+	if (recieverIndex == -1) {
+
+		cout << "[C++] Unable to find entity of ID " << IDToSearch << "\n";
+
+	}
+
+	return recieverIndex;
 
 
 }
