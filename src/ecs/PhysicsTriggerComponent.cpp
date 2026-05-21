@@ -72,13 +72,14 @@ void ECS::PhysicsTriggerComponent::SetHalfExtents(const Vector3& halfExtents)
 
 bool ECS::PhysicsTriggerComponent::IsOverlapping(Entity* other) const
 {
-	if (transform == nullptr)
+	if (entity == nullptr || !entity->HasComponent<TransformComponent>())
 		return false;
 
 	if (!other->HasComponent<TransformComponent>())
 		return false;
 
-	Vector3 aPos = transform->position;
+	TransformComponent* triggerTransform = entity->GetComponent<TransformComponent>();
+	Vector3 aPos = triggerTransform->position;
 	Vector3 aHalf = m_halfExtents;
 
 	if (entity != nullptr && entity->HasComponent<PhysicsComponent>())
