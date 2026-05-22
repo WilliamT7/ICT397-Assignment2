@@ -239,7 +239,8 @@ T* ECS::Entity::GetComponent()
 	}
 	else
 	{
-		throw std::runtime_error("[C++]: ERROR: ECS: Trying to grab Component that does not exist");
+		return nullptr;
+		//throw std::runtime_error("[C++]: ERROR: ECS: Trying to grab Component that does not exist");
 	}
 }
 

@@ -1,6 +1,6 @@
 local deltaTime = 0.01
 local coolDown = 0.05
-local totalSpawn = 100
+local totalSpawn = 150
 
 function update()
     local vars = getScriptComponent(obj, "infinitepokeyspawnervars")

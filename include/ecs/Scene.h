@@ -17,6 +17,7 @@
 
 #include <ecs/Entity.h>
 #include <ecs/Component.h>
+#include <ecs/AllComponentsInclude.h>
 #include <graphics/Graphics.h>
 #include <physics/BulletPhysicsWorld.h>
 #include <vector>
@@ -142,6 +143,13 @@ namespace ECS
 
 		bool m_mustLoad = false;
 		std::string m_sceneToLoad;
+
+		std::vector<ECS::LightingComponent*> m_lights;
+		std::vector<ECS::TransformComponent*> m_lighttransforms;
+		ECS::CameraComponent* m_camera = nullptr;
+		std::vector<MeshRendererComponent*> m_meshes;
+		std::vector<TerrainComponent*> m_terrains;
+		std::vector<TextureRendererComponent*> m_textures;
 
 		static void UpdateEntity(Entity* entity, float deltaTime);
 
