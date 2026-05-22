@@ -29,14 +29,13 @@ void MessageDispatcher::updateTime(float nTime) {
 
 //-----------------------------------------------------
 
-void MessageDispatcher::dispatchMessage(double delay, int sender, int reciever, int messageID, string scriptCompName, string scriptFuncName, void* extraInfo) {
+void MessageDispatcher::dispatchMessage(telegram message) {
 
-	telegram message = { delay, sender, reciever, messageID, scriptCompName, scriptFuncName, extraInfo };
-	const int recieverIndex = IDExist(message.sender);
+	const int recieverIndex = IDExist(message.reciever);
 	
 	if (recieverIndex != -1) {
 
-		if (delay <= 0.0) {
+		if (message.dispatchTime <= 0.0) {
 			//Discharge message immeditaley
 			sendMessage(recieverIndex, message);
 

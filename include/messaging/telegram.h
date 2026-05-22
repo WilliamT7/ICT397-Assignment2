@@ -32,7 +32,7 @@ typedef struct telegram {
 	///What entity ID is sending the message
 	int sender = -1;
 
-	///What entity ID is reciving the message (-1 means its sent to all entities)
+	///What entity ID is reciving the message 
 	int reciever = -1;
 
 

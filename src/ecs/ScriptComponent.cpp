@@ -42,6 +42,21 @@ void ECS::ScriptComponent::Start() {
 
 //-----------------------------------------------------------
 
+void ECS::ScriptComponent::runFunction(const string& const functionName) {
+
+	bool hasFunction = findFunction(luaFile, functionName);
+
+	if (hasFunction) {
+		scripting->runLoaded(luaFile, functionName, entity);
+	}
+	else {
+		cout << "I dont have " << functionName << " sorry :(\n";
+	}
+
+
+
+}
+//-----------------------------------------------------------
 
 void ECS::ScriptComponent::Update(float deltaTime) {
 
@@ -51,6 +66,8 @@ void ECS::ScriptComponent::Update(float deltaTime) {
 	}
 
 }
+
+//------------------------------------------------------------
 
 void ECS::ScriptComponent::Render(Graphics::Graphics* graphics)
 {

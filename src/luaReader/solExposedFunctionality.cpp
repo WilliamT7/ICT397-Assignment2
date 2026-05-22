@@ -28,7 +28,9 @@ void exposeEntity(sol::state_view& solView) {
 		"destroy",
 		&ECS::Entity::Destroy,
 		"getName",
-		&ECS::Entity::GetName
+		&ECS::Entity::GetName,
+		"getID",
+		&ECS::Entity::GetID
 	);
 
 	solView.set_function("getScriptComponent", &ECS::Entity::GetScriptComponent);
@@ -36,6 +38,7 @@ void exposeEntity(sol::state_view& solView) {
 	solView.set_function("addComponent", &ECS::Entity::AddComponentByName);
 	solView.set_function("destroy", &ECS::Entity::Destroy);
 	solView.set_function("getName", &ECS::Entity::GetName);
+	solView.set_function("getID", &ECS::Entity::GetID);
 }
 
 //---------------------------------------------
@@ -449,20 +452,27 @@ void exposeMessageDispatcher(sol::state_view& solView) {
 
 
 	solView.new_usertype <telegram>(
-		"scriptGlobal",
+		"telegram",
 		sol::constructors <telegram>(),
+
 		"dispatchTime",
 		&telegram::dispatchTime,
+
 		"sender",
 		&telegram::sender,
+
 		"receiver",
 		&telegram::reciever,
+
 		"messageID",
 		&telegram::messageID,
+
 		"scriptName",
 		&telegram::scriptCompName,
+
 		"functionName",
 		&telegram::scriptFunctionName,
+
 		"extra",
 		&telegram::extraInfo
 

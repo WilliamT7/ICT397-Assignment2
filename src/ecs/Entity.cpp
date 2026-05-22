@@ -57,7 +57,6 @@ void ECS::Entity::Start()
 void ECS::Entity::Update(float deltaTime)
 {
 
-	//cout << "MY ID (update) " << GetID() << "=============\n";
 	for (auto& comp : m_components)
 	{
 		comp->Update(deltaTime);
@@ -195,11 +194,7 @@ std::string ECS::Entity::GetName() const
 
 void ECS::Entity::ImGui()
 {
-	cout << "MY ID " << GetID() << "=============\n";
-	//static const string EntityIDStr = "Entity ID: " + to_string((GetID()) );
-	//cout << EntityIDStr << "\n";
 
-	//ImGui::Text(EntityIDStr.c_str());
 	ImGui::Text("Entity ID: %d", GetID());
 
 	static char buf[32];
@@ -308,6 +303,17 @@ void Entity::handleMessage(telegram message) {
 
 	recievedMessage = message;
 	cout << "I HAVE RECIEVED MESSAGE! I AM " << GetName() << " with ID " << GetID() << "\n";
+
+	if (HasScriptComponent(message.scriptCompName)) {
+		
+		ScriptComponent& const scriptComponent = GetScriptComponent(message.scriptCompName);
+		scriptComponent.runFunction(message.scriptFunctionName);
+
+	}
+	else {
+		cout << " sorry i dont have " << message.scriptCompName << "\n";
+	}
+
 
 	//Check for scriptcomponet of name from telegram, if it exists, run that shit
 	/*if (hasScriptComponent of name in message)

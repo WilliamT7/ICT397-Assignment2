@@ -6,10 +6,10 @@
 
 //------------------------------
 
-void sendMessage(double delay, int sender, int reciever, int message, string scriptName, string scriptFunctionName, void* extraInfo) {
+void sendMessage(telegram message) {
 
 	MessageDispatcher* messageManager = Singleton<MessageDispatcher>::getInstance();
-	messageManager->dispatchMessage(delay, sender, reciever, message, scriptName, scriptFunctionName, extraInfo);
+	messageManager->dispatchMessage(message);
 
 }
 

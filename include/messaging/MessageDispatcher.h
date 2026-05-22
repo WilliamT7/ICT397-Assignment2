@@ -42,7 +42,7 @@ public:
 	* @param
 	* @return - void
 	*/
-	void dispatchMessage(double delay, int sender, int reciever, int messageID, string scriptCompName, string scriptFuncName, void* extraInfo);
+	void dispatchMessage(telegram message);
 
 	/* updateTime
 	* @author - Seb D'Alessandro

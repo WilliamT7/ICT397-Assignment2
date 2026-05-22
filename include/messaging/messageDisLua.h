@@ -10,12 +10,14 @@
 *********************************************/
 #pragma once
 
+#include "messaging/telegram.h"
+
 //Built-in libaries-------------------------------
 #include <string>
 using std::string;
 
 
-void sendMessage(double delay, int sender, int reciever, int message, string scriptName, string scriptFunctionName, void* extraInfo);
+void sendMessage(telegram message);
 
 
 //-------------------------------------------------
