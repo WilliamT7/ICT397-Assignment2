@@ -30,7 +30,9 @@ void exposeEntity(sol::state_view& solView) {
 		"getName",
 		&ECS::Entity::GetName,
 		"getID",
-		&ECS::Entity::GetID
+		&ECS::Entity::GetID,
+		"retrieveMessage",
+		&ECS::Entity::retreiveMessage
 	);
 
 	solView.set_function("getScriptComponent", &ECS::Entity::GetScriptComponent);
@@ -39,6 +41,8 @@ void exposeEntity(sol::state_view& solView) {
 	solView.set_function("destroy", &ECS::Entity::Destroy);
 	solView.set_function("getName", &ECS::Entity::GetName);
 	solView.set_function("getID", &ECS::Entity::GetID);
+	solView.set_function("retrieveMessage", &ECS::Entity::retreiveMessage);
+	
 }
 
 //---------------------------------------------
@@ -473,7 +477,7 @@ void exposeMessageDispatcher(sol::state_view& solView) {
 		"functionName",
 		&telegram::scriptFunctionName,
 
-		"extra",
+		"extraInfo",
 		&telegram::extraInfo
 
 	);

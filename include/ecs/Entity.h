@@ -184,7 +184,9 @@ namespace ECS
 
 		int GetID() const;
 
-		void handleMessage(telegram message);
+		telegram retreiveMessage();
+
+		void handleMessage(telegram& message);
 
 		ScriptComponent& AddScriptComponent(std::string filePath);
 		ScriptComponent& GetScriptComponent(std::string scriptName);

@@ -42,7 +42,7 @@ public:
 	* @param
 	* @return - void
 	*/
-	void dispatchMessage(telegram message);
+	void dispatchMessage(telegram& message);
 
 	/* updateTime
 	* @author - Seb D'Alessandro
@@ -89,7 +89,7 @@ private:
 	* @param 
 	* @return - void
 	*/
-	void sendMessage(const int recieverIndex, const telegram& message);
+	void sendMessage(const int recieverIndex,  telegram& message);
 
 
 	/* sendMessage

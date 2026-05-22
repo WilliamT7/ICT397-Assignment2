@@ -299,10 +299,12 @@ void Entity::ResetIDCounter()
 
 //----------------------------------------------
 
-void Entity::handleMessage(telegram message) {
+void Entity::handleMessage(telegram& message) {
 
+
+	cout << "MESSAGE INFO POINTER " << message.extraInfo << "\n";
 	recievedMessage = message;
-	cout << "I HAVE RECIEVED MESSAGE! I AM " << GetName() << " with ID " << GetID() << "\n";
+	cout << "MESSAGE INFO POINTER IN ENTITY " << recievedMessage.extraInfo << "\n";
 
 	if (HasScriptComponent(message.scriptCompName)) {
 		
@@ -314,12 +316,12 @@ void Entity::handleMessage(telegram message) {
 		cout << " sorry i dont have " << message.scriptCompName << "\n";
 	}
 
+}
+//----------------------------------------------
 
-	//Check for scriptcomponet of name from telegram, if it exists, run that shit
-	/*if (hasScriptComponent of name in message)
-	*	get the script component
-	*	check if it has the function of interest, if it does, run it
-	* 
-	*/
+telegram Entity::retreiveMessage() {
+	telegram message = recievedMessage;
+	recievedMessage = telegram();
+	return message;
 
 }

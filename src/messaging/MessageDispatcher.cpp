@@ -29,7 +29,7 @@ void MessageDispatcher::updateTime(float nTime) {
 
 //-----------------------------------------------------
 
-void MessageDispatcher::dispatchMessage(telegram message) {
+void MessageDispatcher::dispatchMessage(telegram& message) {
 
 	const int recieverIndex = IDExist(message.reciever);
 	
@@ -60,7 +60,7 @@ void MessageDispatcher::dispatchDelayedMessages(const int recieverIndex) {
 	float currentTime = engineClock->currentFrame;
 
 	while (!messageQueue.empty() && (messageQueue.begin()->dispatchTime < currentTime ) && (messageQueue.end()->dispatchTime > 0) ) {
-		const telegram message = *messageQueue.begin();
+		telegram message = *messageQueue.begin();
 		sendMessage(recieverIndex, message);
 		messageQueue.erase(messageQueue.begin());
 	}
@@ -84,7 +84,7 @@ void MessageDispatcher::broadcastMessage(const telegram& message) {
 
 //------------------------------------------------------
 
-void MessageDispatcher::sendMessage(const int recieverIndex, const telegram& message) {
+void MessageDispatcher::sendMessage(const int recieverIndex, telegram& message) {
 
 
 	if (recieverIndex >= 0) {

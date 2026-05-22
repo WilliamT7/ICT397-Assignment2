@@ -47,6 +47,8 @@ typedef struct telegram {
 	///Addtional infomation that may accompy the message (a component, value, etc)
 	void* extraInfo = nullptr;
 
+	telegram() = default;
+
 }telegram;
 
 
