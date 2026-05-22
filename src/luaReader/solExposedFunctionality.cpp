@@ -26,13 +26,16 @@ void exposeEntity(sol::state_view& solView) {
 		"addComponent",
 		&ECS::Entity::AddComponentByName,
 		"destroy",
-		&ECS::Entity::Destroy
+		&ECS::Entity::Destroy,
+		"getName",
+		&ECS::Entity::GetName
 	);
 
 	solView.set_function("getScriptComponent", &ECS::Entity::GetScriptComponent);
 	solView.set_function("hasScript", &ECS::Entity::HasScriptComponent);
 	solView.set_function("addComponent", &ECS::Entity::AddComponentByName);
 	solView.set_function("destroy", &ECS::Entity::Destroy);
+	solView.set_function("getName", &ECS::Entity::GetName);
 }
 
 //---------------------------------------------
@@ -113,6 +116,17 @@ void exposeVectors(sol::state_view& solView) {
 		"y", &Vector2::y,
 
 		"normalize", &Vector2::Normalize
+	);
+
+	solView.new_usertype<Colour>(
+		"Colour",
+		sol::constructors<
+		Colour(),
+		Colour(float, float, float)
+		>(),
+		"r", &Colour::r,
+		"g", &Colour::g,
+		"b", &Colour::b
 	);
 }
 
@@ -406,6 +420,7 @@ void exposeSceneFunctionality(sol::state_view& solView)
 		solView.set_function("Spawn", &ECS::Scene::Spawn, luaEngineLink->getScenePointer());
 		solView.set_function("SaveScene", &ECS::Scene::SaveScene, luaEngineLink->getScenePointer());
 		solView.set_function("LoadScene", &ECS::Scene::LoadScene, luaEngineLink->getScenePointer());
+		solView.set_function("GetEntity", &ECS::Scene::GetEntity, luaEngineLink->getScenePointer());
 	}
 }
 

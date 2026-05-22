@@ -41,6 +41,7 @@ void ECS::Scene::Clear()
 	//}
 	entities.clear();
 	entities.shrink_to_fit();
+	ECS::Entity::ResetIDCounter();
 	//m_physicsWorld = new BulletPhysicsWorld();
 }
 
@@ -278,6 +279,19 @@ void ECS::Scene::InjectPhysicsWorld(Entity* entity)
 
 
 
+
+//----------------------------------------------
+
+ECS::Entity* ECS::Scene::GetEntity(int ID)
+{
+	for (auto& entity : entities)
+	{
+		if (entity->GetID() == ID)
+			return entity.get();
+	}
+
+	return nullptr;
+}
 
 //----------------------------------------------
 

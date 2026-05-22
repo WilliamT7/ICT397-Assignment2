@@ -297,6 +297,13 @@ int Entity::GetID() const
 
 //----------------------------------------------
 
+void Entity::ResetIDCounter()
+{
+	m_entityCount = 0;
+}
+
+//----------------------------------------------
+
 void Entity::handleMessage(telegram message) {
 
 	recievedMessage = message;

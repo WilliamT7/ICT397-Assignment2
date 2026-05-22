@@ -191,6 +191,8 @@ namespace ECS
 		bool HasScriptComponent(std::string scriptName) const;
 		std::string static GetScriptName(std::string filePath);
 
+		static void ResetIDCounter();
+
 	private:
 		std::vector<Component*> m_components;
 		std::map<std::type_index, size_t> m_componentsMap;

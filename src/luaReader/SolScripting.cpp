@@ -311,7 +311,7 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		exposeCamera(solView);
 	}
 
-
+	exposeLighting(solView);
 	if (entity->HasComponent<ECS::LightingComponent>()) {
 
 		exposeLighting(solView);
