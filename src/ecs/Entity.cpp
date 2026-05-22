@@ -57,7 +57,7 @@ void ECS::Entity::Start()
 void ECS::Entity::Update(float deltaTime)
 {
 
-	cout << "MY ID (update) " << GetID() << "=============\n";
+	//cout << "MY ID (update) " << GetID() << "=============\n";
 	for (auto& comp : m_components)
 	{
 		comp->Update(deltaTime);
@@ -196,10 +196,11 @@ std::string ECS::Entity::GetName() const
 void ECS::Entity::ImGui()
 {
 	cout << "MY ID " << GetID() << "=============\n";
-	static const string EntityIDStr = "Entity ID: " + to_string((GetID()) );
+	//static const string EntityIDStr = "Entity ID: " + to_string((GetID()) );
 	//cout << EntityIDStr << "\n";
 
-	ImGui::Text(EntityIDStr.c_str());
+	//ImGui::Text(EntityIDStr.c_str());
+	ImGui::Text("Entity ID: %d", GetID());
 
 	static char buf[32];
 	ImGui::InputText("Name", buf, IM_COUNTOF(buf));
@@ -208,11 +209,15 @@ void ECS::Entity::ImGui()
 	if (ImGui::Button("Set Name"))
 		name = buf;
 
+	int id = 0;
 	for (auto& comp : m_components)
 	{
+		ImGui::PushID(id);
 		comp->ImGui();
+		ImGui::PopID();
+		id++;
 	}
-	int id = 0;
+	
 	for (auto& script : m_scripts) {
 		ImGui::PushID(id);
 		script.ImGui();
