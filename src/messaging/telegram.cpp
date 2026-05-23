@@ -3,7 +3,7 @@
 
 //Project files------------------
 #include "Messaging/telegram.h"
-
+#include "ECS/TransformComponent.h"
 //------------------------------
 
 

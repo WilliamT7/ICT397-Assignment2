@@ -15,9 +15,8 @@ function update()
 	myMessage.messageID = 1
 	myMessage.scriptName = "IhearEverything"
 	myMessage.functionName = "ihear"
-	myMessage.extraInfo = getTransform(obj)
-	--myMessage.extraInfo:y = 2
-	--myMessage.extraInfo:z = 3
+	myMessage.extraInfo = Vector3.new(10, 9, 8)
+
 	
 	sendMessage(myMessage)
 

@@ -302,9 +302,9 @@ void Entity::ResetIDCounter()
 void Entity::handleMessage(telegram& message) {
 
 
-	cout << "MESSAGE INFO POINTER " << message.extraInfo << "\n";
+	
 	recievedMessage = message;
-	cout << "MESSAGE INFO POINTER IN ENTITY " << recievedMessage.extraInfo << "\n";
+
 
 	if (HasScriptComponent(message.scriptCompName)) {
 		

@@ -11,6 +11,8 @@
 
 //Built-in libaries-------------------
 #include <string>
+#include <vector>
+#include "ECS/TransformComponent.h"
 
 //Namespaces----------------------
 using std::string;
@@ -24,6 +26,8 @@ using std::string;
 */
 typedef struct telegram {
 
+	///Addtional infomation that may accompy the message (a component, value, etc)
+	void* extraInfo = nullptr;
 
 	///Amount of time to take to send the message
 	double dispatchTime = -1;
@@ -43,13 +47,24 @@ typedef struct telegram {
 
 	string scriptFunctionName = "";
 
-
-	///Addtional infomation that may accompy the message (a component, value, etc)
-	void* extraInfo = nullptr;
-
 	telegram() = default;
 
+
+	
+
 }telegram;
+
+#include <iostream>
+using std::cout;
+
+template <class t>
+t extractExtraInfo(telegram& message) {
+
+	cout << "T SIZE, i want T sometimes man: " << sizeof(message.extraInfo) << "\n";
+	return *(static_cast<t*>(message.extraInfo) - 1);
+
+}
+
 
 
 /* operator== overload

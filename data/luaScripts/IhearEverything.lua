@@ -3,11 +3,14 @@
 function ihear()
 
 	receivedMessage = obj:retrieveMessage()
-	transform = receivedMessage.extraInfo
+	vector = vectorFromMessage(receivedMessage)
 	
-	print("yes I hear you loud in clear in Lua")
+	print("----------------------")
 	print("Sender: " .. receivedMessage.sender)
-	print(transform.data)
+	print("VX: " .. vector.x)
+	print("VY: " .. vector.y)
+	print("VZ: " .. vector.z)
+	print("----------------------")
 	--print(transform.x)
 
 end
