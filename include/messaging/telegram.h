@@ -8,14 +8,32 @@
  *
 *********************************************/
 #pragma once
-
+//TODO deal with #include header loop
+#include "ecs/CameraComponent.h"
+#include "ecs/LightingComponent.h"
+#include "ecs/MeshRendererComponent.h"
+#include "ecs/TransformComponent.h"
+#include "ecs/ScriptComponent.h"
+#include "ecs/TerrainComponent.h"
+#include "ecs/PhysicsComponent.h"
+#include "ecs/TextureRendererComponent.h"
+#include "ecs/AnimationComponent.h"
+#include "ecs/PhysicsTriggerComponent.h"
 //Built-in libaries-------------------
 #include <string>
 #include <vector>
-#include "ECS/TransformComponent.h"
+#include <variant>
+
+
 
 //Namespaces----------------------
 using std::string;
+
+
+//Delete
+#include <typeinfo>
+#include <iostream>
+using std::cout;
 
 
 //----------------------------------
@@ -26,7 +44,7 @@ using std::string;
 */
 typedef struct telegram {
 
-	///Addtional infomation that may accompy the message (a component, value, etc)
+
 	void* extraInfo = nullptr;
 
 	///Amount of time to take to send the message
@@ -50,19 +68,40 @@ typedef struct telegram {
 	telegram() = default;
 
 
+	///Addtional infomation that may accompy the message (a component, value, etc)
+	std::variant<
+		Vector3,
+		ECS::TransformComponent,
+		ECS::LightingComponent,
+		ECS::CameraComponent,
+		ECS::AnimationComponent,
+		ECS::PhysicsComponent,
+		ECS::PhysicsTriggerComponent,
+		ECS::TerrainComponent,
+		ECS::TextureRendererComponent,
+		int,
+		string,
+		float,
+		double
+		> data;
+
+
 	
 
 }telegram;
 
-#include <iostream>
-using std::cout;
-
 template <class t>
 t extractExtraInfo(telegram& message) {
 
-	cout << "T SIZE, i want T sometimes man: " << sizeof(message.extraInfo) << "\n";
-	return *(static_cast<t*>(message.extraInfo) - 1);
+	cout << "Type SIZE, i want T sometimes man: " << sizeof(t) << "\n";
+	cout << "size of item comin in" << sizeof(message.extraInfo) << "\n";
+	cout << typeid(t).name() << "\n";
+	void* extraInfo = message.extraInfo;
 
+	//return *(reinterpret_cast<t*>(extraInfo));
+	return *(static_cast<t*>(extraInfo));
+	//return *((t*) ((char*)(extraInfo) + sizeof(extraInfo)));
+	//return *(t*)message.extraInfo;
 }
 
 

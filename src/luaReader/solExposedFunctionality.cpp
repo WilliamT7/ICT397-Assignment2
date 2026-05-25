@@ -479,17 +479,14 @@ void exposeMessageDispatcher(sol::state_view& solView) {
 		&telegram::scriptFunctionName,
 
 		"extraInfo",
-		&telegram::extraInfo
+		&telegram::extraInfo,
+
+		"data",
+		&telegram::data
 
 	);
 
 	solView.set_function("sendMessage", &sendMessage);
-
-
-	solView["transformFromMessage"] = extractExtraInfo<ECS::TransformComponent>;
-	solView["vectorFromMessage"] = extractExtraInfo<Vector3>;
-	
-	//solView.set_function("workDipshit", &telegram::extractExtraInfo<ECS::FSMComponent>);
 }
 
 
@@ -498,5 +495,7 @@ void exposeMessageDispatcher(sol::state_view& solView) {
 void messageExtractionTypecasts(sol::state_view& solView) {
 
 
+	solView["transformFromMessage"] = extractExtraInfo<ECS::TransformComponent>;
+	solView["vectorFromMessage"] = extractExtraInfo<Vector3>;
 	
 }

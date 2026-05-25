@@ -13,9 +13,14 @@ function update()
 	myMessage.receiver = 3
 	myMessage.dispatchTime = 0.0
 	myMessage.messageID = 1
-	myMessage.scriptName = "IhearEverything"
+	myMessage.scriptName = "IHE"
 	myMessage.functionName = "ihear"
-	myMessage.extraInfo = Vector3.new(10, 9, 8)
+	
+	--transform = transform.new()
+	--transform.position = Vector3.new(1, 2, 3)
+	--print(Vector3.new(1, 2, 3))
+	--myMessage.extraInfo = transform
+	myMessage.data = getTransform(obj)
 
 	
 	sendMessage(myMessage)

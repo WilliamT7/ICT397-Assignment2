@@ -250,7 +250,7 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	exposeMessageDispatcher(solView);
 
-	//messageExtractionTypecasts(solView);
+	messageExtractionTypecasts(solView);
 
 	// Scene functions like spawn prefabs
 	exposeSceneFunctionality(solView);
@@ -315,7 +315,7 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		exposeCamera(solView);
 	}
 
-	exposeLighting(solView);
+	exposeLighting(solView); //Why?
 	if (entity->HasComponent<ECS::LightingComponent>()) {
 
 		exposeLighting(solView);
