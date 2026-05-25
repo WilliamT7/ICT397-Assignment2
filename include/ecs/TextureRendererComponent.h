@@ -84,8 +84,38 @@ namespace ECS
 		Vector2 size = Vector2(1, 1);
 		bool enabled = true;
 
+		/** Set Position
+		* @author - Seb D'alessandro
+		* @brief - Sets the position of the texture
+		* @param - float x
+		* @param - float y
+		* @note - uses 0-1 based off of window size
+		*
+		* @pre - texture component exists
+		* @post - modifies the position of the texture component
+		**/
 		void setPosition(float x, float y);
+
+		/** Set Size
+		* @author - Seb D'alessandro
+		* @brief - sets the size of the texture
+		* @param - float w
+		* @param - float h
+		* @note - uses 0-1 based off of window size
+		*
+		* @pre - texture component exists
+		* @post - modifies the size of the texture component
+		**/
 		void setSize(float w, float h);
+
+		/** Set Enabled
+		* @author - Seb D'alessandro
+		* @brief - Toggles whether the texture is visible
+		* @param - bool 
+		*
+		* @pre - texture component exists
+		* @post - toggles whether it is visible
+		**/
 		void setEnabled(bool enalbe);
 
 	private:
