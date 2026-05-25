@@ -65,7 +65,6 @@ int main(int argc, char **argv)
     LoadModelFiles(lua);
     LoadTextureFiles(lua, graphicsHandler);
     Graphics::AnimationManager::Get().LoadInAnimations(lua);
-    //scene = ECS::SceneLoader::CreateScene(lua, physicsWorld, sceneName.c_str());
     scene = new ECS::Scene();
     scene->Init(physicsWorld, sceneName.c_str());
 
