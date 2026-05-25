@@ -9,13 +9,17 @@
  * @note - I win the funniest file name award in this assignment
 *********************************************/
 #pragma once
-
+//Project files---------------------------------
 #include "messaging/telegram.h"
 
 //Built-in libaries-------------------------------
 #include <string>
+
+//Namespaces----------------------------------------
+
 using std::string;
 
+//-------------------------------------------------
 
 void sendMessage(telegram message);
 

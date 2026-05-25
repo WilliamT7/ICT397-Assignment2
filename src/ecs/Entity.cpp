@@ -303,16 +303,13 @@ void Entity::handleMessage(telegram& message) {
 
 	recievedMessage = message;
 
-
 	if (HasScriptComponent(message.scriptCompName)) {
 		
 		ScriptComponent& const scriptComponent = GetScriptComponent(message.scriptCompName);
 		scriptComponent.runFunction(message.scriptFunctionName);
 
 	}
-	else {
-		cout << " sorry i dont have " << message.scriptCompName << "\n";
-	}
+
 
 }
 //----------------------------------------------

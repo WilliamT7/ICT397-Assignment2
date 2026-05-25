@@ -74,13 +74,6 @@ void MessageDispatcher::linkEntityList(vector<std::unique_ptr<ECS::Entity>>* nEn
 	entityList = nEntityList;
 }
 
-//------------------------------------------------------
-
-void MessageDispatcher::broadcastMessage(const telegram& message) {
-
-	//Consider doing this maybe? i dont need it for testing :L
-
-}
 
 //------------------------------------------------------
 

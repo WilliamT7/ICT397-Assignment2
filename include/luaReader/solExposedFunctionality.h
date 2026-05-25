@@ -173,14 +173,21 @@ void exposeAIBehaviours(sol::state_view& solView);
 
 /* exposeTime
 * @author - Seb D'Alessandro
-* @brief - 
+* @brief - Exposes functions to get the time from the engine
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
-* @post -
-* @param solView -
+* @post - Exposes functions to get the time from the engine
+* @param solView - lua context to add solscripting too
 * @return - void
 */
 void exposeTime(sol::state_view& solView);
 
-
+/* exposeMessageDispatcher
+* @author - Seb D'Alessandro
+* @brief - Exposes functionality to send messages
+* @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
+* @post - Exposes telegram and the ability to send messages to Lua
+* @param solView - lua context to add solscripting too
+* @return - void
+*/
 void exposeMessageDispatcher(sol::state_view& solView);
 

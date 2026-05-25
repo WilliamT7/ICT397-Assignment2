@@ -46,14 +46,23 @@ typedef struct telegram {
 	///What entity ID is reciving the message 
 	int reciever = -1;
 
-
 	///What message is being sent (messages being stored in messageList singleton)
 	int messageID = -1;
 
+	///Name of the script to look for when sending message
 	string scriptCompName = "";
-
+	
+	///Function to run within scriptCompName when the recipient recieves the message
 	string scriptFunctionName = "";
 
+
+	/* telegram
+	* @author - Seb D'Alessandro
+	* @brief - default constructor
+	* @pre - N/A
+	* @post - constructs a telegram
+	* @return - void
+	*/
 	telegram() = default;
 
 

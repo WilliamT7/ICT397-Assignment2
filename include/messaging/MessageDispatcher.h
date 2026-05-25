@@ -35,11 +35,7 @@ public:
 	* @brief -
 	* @pre -
 	* @post -
-	* @param
-	* @param
-	* @param
-	* @param
-	* @param
+	* @param - message
 	* @return - void
 	*/
 	void dispatchMessage(telegram& message);
@@ -65,12 +61,21 @@ public:
 	*/
 	void dispatchDelayedMessages(const int recieverIndex);
 
-
+	/* linkEnitityList
+	* @author - Seb D'Alessandro
+	* @brief -
+	* @pre -
+	* @post - messageDispatcher becomes assosciated with a given entityList
+	* @param entityList - list of entities to link
+	* @return - void
+	*/
 	void linkEntityList(vector<std::unique_ptr<ECS::Entity>>* entityList);
 
 
 private:
 
+
+	///List of entities to reference when sending a message to a specfic entity
 	vector<std::unique_ptr<ECS::Entity>>* entityList = nullptr;
 
 	///Current frame the scene is on
@@ -92,18 +97,14 @@ private:
 	void sendMessage(const int recieverIndex,  telegram& message);
 
 
-	/* sendMessage
+	/* IDExist
 	* @author - Seb D'Alessandro
-	* @brief -
+	* @brief - 
 	* @pre -
 	* @post -
-	* @param
+	* @param IDToSearch - ID to look for from entityList
 	* @return - void
 	*/
-	void broadcastMessage(const telegram& message);
-
-
-
 	const int IDExist(const int IDToSearch) const;
 
 
@@ -115,10 +116,10 @@ private:
 
 /* updateMessageDispatcher
 * @author - Seb D'Alessandro
-* @brief - 
-* @pre - 
-* @post - 
-* @param time - 
+* @brief - Updates a messageDispatcher singleton's time
+* @pre - N/A
+* @post - Time from the messageDispatcher is updated
+* @param time - time to update the messageDispatcher
 * @return - void
 */
 void updateMessageDispatcher(float time);
