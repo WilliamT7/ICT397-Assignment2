@@ -70,11 +70,40 @@ namespace ECS
 		**/
 		sol::table SerialiseComponent(sol::state& lua) const;
 
-
+		/** Set Position
+		* @author - Seb D'alessandro
+		* @brief - sets the position for this transform component
+		* @param - float x
+		* @param - float y
+		* @param - float z
+		*
+		* @pre - transform component exists
+		* @post - sets the position to the new position
+		**/
 		void setPosition(float x, float y, float z);
 
+		/** Set Scale
+		* @author - Seb D'alessandro
+		* @brief - Sets the scale of this component
+		* @param - float x
+		* @param - float y
+		* @param - float z
+		*
+		* @pre - transform component exists
+		* @post - sets the scale to the new scale
+		**/
 		void setScale(float x, float y, float z);
 
+		/** Set Rotation
+		* @author - Seb D'alessandro
+		* @brief - Sets the rotation of this component
+		* @param - float x
+		* @param - float y
+		* @param - float z
+		*
+		* @pre - transform component exists
+		* @post - sets the rotation to the new rotation
+		**/
 		void setRotation(float x, float y, float z);
 	};
 }
