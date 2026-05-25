@@ -8,7 +8,7 @@
  *
 *********************************************/
 #pragma once
-//TODO deal with #include header loop
+//TODO deal with #include header loop when including FSM component/ all comps include
 #include "ecs/CameraComponent.h"
 #include "ecs/LightingComponent.h"
 #include "ecs/MeshRendererComponent.h"
@@ -29,13 +29,6 @@
 //Namespaces----------------------
 using std::string;
 
-
-//Delete
-#include <typeinfo>
-#include <iostream>
-using std::cout;
-
-
 //----------------------------------
 
 /** telegram
@@ -44,12 +37,8 @@ using std::cout;
 */
 typedef struct telegram {
 
-
-	void* extraInfo = nullptr;
-
 	///Amount of time to take to send the message
 	double dispatchTime = -1;
-
 
 	///What entity ID is sending the message
 	int sender = -1;
@@ -90,20 +79,13 @@ typedef struct telegram {
 
 }telegram;
 
-template <class t>
-t extractExtraInfo(telegram& message) {
+/*
+Known Incompatiable data types to attach to a telegram
 
-	cout << "Type SIZE, i want T sometimes man: " << sizeof(t) << "\n";
-	cout << "size of item comin in" << sizeof(message.extraInfo) << "\n";
-	cout << typeid(t).name() << "\n";
-	void* extraInfo = message.extraInfo;
+	- Script component (attempted to access a deleted =operator overload)
+	- FSM componet (header loop)
 
-	//return *(reinterpret_cast<t*>(extraInfo));
-	return *(static_cast<t*>(extraInfo));
-	//return *((t*) ((char*)(extraInfo) + sizeof(extraInfo)));
-	//return *(t*)message.extraInfo;
-}
-
+*/
 
 
 /* operator== overload

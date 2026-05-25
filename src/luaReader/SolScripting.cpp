@@ -246,11 +246,7 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	exposeTime(solView);
 
-	//Messaging yay 
-
 	exposeMessageDispatcher(solView);
-
-	messageExtractionTypecasts(solView);
 
 	// Scene functions like spawn prefabs
 	exposeSceneFunctionality(solView);

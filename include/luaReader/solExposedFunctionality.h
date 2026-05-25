@@ -184,6 +184,3 @@ void exposeTime(sol::state_view& solView);
 
 void exposeMessageDispatcher(sol::state_view& solView);
 
-
-
-void messageExtractionTypecasts(sol::state_view& solView);

@@ -15,13 +15,10 @@ function update()
 	myMessage.messageID = 1
 	myMessage.scriptName = "IHE"
 	myMessage.functionName = "ihear"
-	
-	--transform = transform.new()
-	--transform.position = Vector3.new(1, 2, 3)
-	--print(Vector3.new(1, 2, 3))
-	--myMessage.extraInfo = transform
-	myMessage.data = getTransform(obj)
 
+	--myMessage.data = getTransform(obj)
+	--myMessage.data = "HELLO from " .. obj:getName()
+	myMessage.data = 420
 	
 	sendMessage(myMessage)
 

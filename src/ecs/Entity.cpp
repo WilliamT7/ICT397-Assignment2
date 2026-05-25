@@ -301,8 +301,6 @@ void Entity::ResetIDCounter()
 
 void Entity::handleMessage(telegram& message) {
 
-
-	
 	recievedMessage = message;
 
 

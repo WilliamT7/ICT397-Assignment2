@@ -478,9 +478,6 @@ void exposeMessageDispatcher(sol::state_view& solView) {
 		"functionName",
 		&telegram::scriptFunctionName,
 
-		"extraInfo",
-		&telegram::extraInfo,
-
 		"data",
 		&telegram::data
 
@@ -491,11 +488,3 @@ void exposeMessageDispatcher(sol::state_view& solView) {
 
 
 //------------------------------------------------------------------------------------------
-
-void messageExtractionTypecasts(sol::state_view& solView) {
-
-
-	solView["transformFromMessage"] = extractExtraInfo<ECS::TransformComponent>;
-	solView["vectorFromMessage"] = extractExtraInfo<Vector3>;
-	
-}
