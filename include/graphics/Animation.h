@@ -133,12 +133,12 @@ namespace Graphics
 
 		/** Convert Assimp Matrix to GLM
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Converts an assimp matrix to a glm mat4
+		* @param - aiMatrix4&4
+		* @return - glm::mat4
 		*
-		* @pre -
-		* @post -
+		* @pre - m is a valid assimp matrix
+		* @post - returns a glm::mat4 of m converted
 		**/
 		glm::mat4 static ConvertAssimpMatrixToGLM(const aiMatrix4x4& m);
 	};
