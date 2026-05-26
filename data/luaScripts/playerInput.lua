@@ -29,13 +29,14 @@ function update()
 end
 
 function KillPlayer()
+	SetMouseVisible(true)
 	killmsg = telegram.new()
 	killmsg.sender = obj:getID()
 	killmsg.receiver = 0
 	killmsg.dispatchTime = 0.0
 	killmsg.messageID = 2
 	killmsg.scriptName = "gamemanager"
-	killmsg.functionName = "playerDied"
+	killmsg.functionName = "PlayerDied"
 	sendMessage(killmsg)
 end
 

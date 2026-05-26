@@ -1,5 +1,5 @@
 local speed = 5
-local lifeTime = 2000.00
+local lifeTime = 5.00
 local deltaTime = 0.01
 
 function start() 
@@ -56,6 +56,14 @@ function update()
         local lt = tonumber(liveTime)
 
         if lt > lifeTime then
+            killmsg = telegram.new()
+            killmsg.sender = obj:getID()
+            killmsg.receiver = 0
+            killmsg.dispatchTime = 0.0
+            killmsg.messageID = 3
+            killmsg.scriptName = "gamemanager"
+            killmsg.functionName = "EnemyDied"
+            sendMessage(killmsg)
             destroy(obj)
         end
 

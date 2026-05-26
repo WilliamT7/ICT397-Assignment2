@@ -719,7 +719,7 @@ scene = {
       {
         ModelID = "MINT",
         Name = "MeshRenderer",
-        ShaderID = 3
+        ShaderID = 2
       } --[[table: 00000295FCAC1360]],
       {
         Name = "Physics",

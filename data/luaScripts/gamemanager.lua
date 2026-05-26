@@ -14,7 +14,7 @@ function update()
 	end
 end
 
-function playerDied()
+function PlayerDied()
 	LoadScene("GameOver.lua")
 end
 
@@ -32,4 +32,11 @@ function SpawnEnemy(vars)
 	
 	local numLeft = tonumber(vars:getGlobal("numEnemiesLeft").value)
 	vars:setGlobal("numEnemiesLeft", tostring(numLeft + 1))
+end
+
+function EnemyDied()
+	print("enemy died!")
+	local vars = getScriptComponent(obj, "gamemanagervars")
+	local numEnemiesLeft = tonumber(vars:getGlobal("numEnemiesLeft").value)
+	vars:setGlobal("numEnemiesLeft", tostring(numEnemiesLeft - 1))
 end
