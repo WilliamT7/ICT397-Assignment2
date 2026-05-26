@@ -20,36 +20,36 @@ namespace Graphics
 	class AnimationManager
 	{
 	public:
-		/**
+		/** Animation Manager
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Returns the singleton for the animation manager
+		* @return - AnimationManager&
 		*
-		* @pre -
-		* @post -
+		* @pre - none
+		* @post - returns the singleton
 		**/
 		static AnimationManager& Get(); // singleton
 		
-		/**
+		/** Load in Animations
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Loads in all animation names from sol lua state
+		* @param - sol::state&
+		* @return - bool if successful
 		*
-		* @pre -
-		* @post -
+		* @pre - lua is open and has all libraries pertaining to io and tables open
+		* @post - loads in all file names and animation names to animation manager
 		**/
 		bool LoadInAnimations(sol::state& lua);
 
-		/**
+		/** Get Animation
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Given a name and a model, return the shared pointer to animation data
+		* @param - std::string name
+		* @param - Model* model
+		* @return - std::shared_ptr<Animation>
 		*
-		* @pre -
-		* @post -
+		* @pre - name is a valid animation name for the model given, and model is a valid model
+		* @post - returns the Animation object for that model+animationName combination
 		**/
 		std::shared_ptr<Animation> GetAnimation(const std::string& name, Model* model);
 
