@@ -1,4 +1,4 @@
-local file = "coolscene.lua"
+local file = "gameover.lua"
 
 function render()
     GUIBegin("Scene Handler")

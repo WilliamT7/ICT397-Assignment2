@@ -11,6 +11,8 @@
  *				1.1 Added Serialisation and Deserialisation
  * @date 09/04/2026 Kay Bradsell
  *				1.2 Removed Tags, and replaced them with Names
+ * @date 19/05/2026 Kay Bradsell
+ *				1.3 Changed to components and script components.
 *********************************************/
 
 #pragma once
@@ -123,6 +125,13 @@ namespace ECS
 		**/
 		Component* AddComponentByName(std::string name);
 
+		/** Start
+		* @author - Kay Bradsell
+		* @brief - For every component in this Entity, call their Start
+		*
+		* @pre - Entity exists
+		* @post - Propagates Start to all components within this Entity
+		**/
 		void Start();
 
 		/** Update
@@ -145,6 +154,14 @@ namespace ECS
 		**/
 		void Render(Graphics::Graphics* graphics);
 
+		/** Render Scripts
+		* @author - Kay Bradsell
+		* @brief - Calls render for script components
+		* @param - Graphics* graphics
+		*
+		* @pre - entity exists
+		* @post - propagates the Render call to script components
+		**/
 		void RenderScripts(Graphics::Graphics* graphics);
 
 		/** Get Name
@@ -178,19 +195,84 @@ namespace ECS
 		**/
 		void ImGui();
 
+		/** Destroy
+		* @author - Kay Bradsell
+		* @brief - marks this entity for deletion
+		*
+		* @pre - entity exists
+		* @post - marks the entity for deletion
+		**/
 		void Destroy();
 
+		/** is Destroy?
+		* @author - Kay Bradsell
+		* @brief - Checks and returns if the entity is marked for deletion
+		* @return - bool
+		*
+		* @pre - entity exists
+		* @post - returns if the entity is marked for deletion or not
+		**/
 		bool isDestroy();
 
+		/** Get ID
+		* @author - Kay Bradsell
+		* @brief - Returns the unique ID
+		* @return - int ID
+		* @note - const so it cannot be modified
+		*
+		* @pre - entity exists
+		* @post - returns the ID of this entity
+		**/
 		int GetID() const;
 
+		
 		telegram retreiveMessage();
 
 		void handleMessage(telegram& message);
-
+    /** Add Script Component
+		* @author - Kay Bradsell
+		* @brief - Adds a script to this entity given it doesn't already exist
+		* @param - std::string filePath
+		* @return - ScriptComponent&
+		*
+		* @pre - Entity exists and filePath is a valid lua file
+		* @post - Adds the lua script as a component to this entity
+		**/
 		ScriptComponent& AddScriptComponent(std::string filePath);
+
+		/** Get Script Component
+		* @author - Kay Bradsell
+		* @brief - Returns reference to script component if it exists based off of name
+		* @param - std::string scriptName
+		* @return - ScriptComponent*
+		* @note - scriptName does not include .lua
+		*
+		* @pre - entity exists
+		* @post - returns reference to component if it exists, else not.
+		**/
 		ScriptComponent& GetScriptComponent(std::string scriptName);
+
+		/** Has Script Component
+		* @author - Kay Bradsell
+		* @brief - Checks and returns if this entity has that script
+		* @param - std::string scriptName
+		* @return - bool
+		*
+		* @pre - entity exists
+		* @post - returns if the entity has that script
+		**/
 		bool HasScriptComponent(std::string scriptName) const;
+
+		/** Get Script Name
+		* @author - Kay Bradsell
+		* @brief - Returns the name of a script based off of filePath
+		* @param - std::string filePath
+		* @return - std::string
+		* @note - static. just removes .lua lmao
+		*
+		* @pre - filePath is a valid .lua file
+		* @post - returns the string but without .lu
+		**/
 		std::string static GetScriptName(std::string filePath);
 
 		static void ResetIDCounter();
@@ -248,7 +330,8 @@ T* ECS::Entity::GetComponent()
 	}
 	else
 	{
-		throw std::runtime_error("[C++]: ERROR: ECS: Trying to grab Component that does not exist");
+		return nullptr;
+		//throw std::runtime_error("[C++]: ERROR: ECS: Trying to grab Component that does not exist");
 	}
 }
 

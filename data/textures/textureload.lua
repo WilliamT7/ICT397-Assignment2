@@ -6,5 +6,13 @@ textures = {
     {
         Name = "Help Manual",
         File = "HelpManual.png"
+    },
+    {
+        Name = "Game Over",
+        File = "GameOver.png"
+    },
+    {
+        Name = "Main Menu",
+        File = "MainMenu.png"
     }
 }

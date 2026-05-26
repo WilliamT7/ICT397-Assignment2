@@ -177,7 +177,6 @@ namespace ECS
 		**/
 		std::string GetExitName(int index) const;
 
-	private:
 		/** Check if this component is overlapping with another entity
 		* @author - William Thorpe
 		* @brief - Checks if this component is overlapping with another entity
@@ -218,6 +217,10 @@ namespace ECS
 		**/
 		void OnTriggerExit(Entity* other);
 
+		void RemoveOverlap(Entity* entityToRemove);
+
+		static void RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<std::unique_ptr<Entity>>& entities);
+
 	private:
 		TransformComponent* transform = nullptr;
 
@@ -226,5 +229,7 @@ namespace ECS
 
 		std::vector<Entity*> m_previousOverlaps;
 		std::vector<Entity*> m_currentOverlaps;
+
+
 	};
 }

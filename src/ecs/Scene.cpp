@@ -161,27 +161,14 @@ void ECS::Scene::Update(float deltaTime)
 	{
 		if (entities[i].get()->isDestroy())
 		{
-			entities[i] = std::move(entities.back());
-			entities.pop_back();
+			Entity* destroyedEntity = entities[i].get();
+
+			PhysicsTriggerComponent::RemoveEntityFromAllTriggers(destroyedEntity, entities);
+
+			entities.erase(entities.begin() + i);
 		}
+			
 	}
-
-	ProcessTriggers();
-	
-}
-
-//----------------------------------------------
-
-void ECS::Scene::SetRunning(bool running)
-{
-	m_running = running;
-}
-
-//----------------------------------------------
-
-void ECS::Scene::UpdateEntity(Entity* entity, float deltaTime)
-{
-	entity->Update(deltaTime);
 }
 
 //----------------------------------------------
@@ -300,41 +287,52 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 	if (!m_running)
 		return;
 
+	m_lights.clear();
+	m_meshes.clear();
+	m_terrains.clear();
+	m_textures.clear();
+	m_lighttransforms.clear();
+	m_camera = nullptr;
+
 	graphics->ClearLights();
 
-	// get camera
 	for (auto& entity : entities)
 	{
-		if (entity->HasComponent<CameraComponent>())
-			graphics->UseCamera(*entity->GetComponent<CameraComponent>());
+		if (auto* cam = entity->GetComponent<CameraComponent>())
+			m_camera = cam;
 
-		if (entity->HasComponent<LightingComponent>())
-			graphics->AddLight(*entity->GetComponent<LightingComponent>(), *entity->GetComponent<TransformComponent>());
-	}
-
-	// get meshes
-	for (auto& entity : entities)
-	{
-		if (entity->HasComponent<MeshRendererComponent>())
+		if (auto* light = entity->GetComponent<LightingComponent>())
 		{
-			auto mesh = entity->GetComponent<MeshRendererComponent>();
-			mesh->Render(graphics);
+			m_lights.push_back(light);
+			m_lighttransforms.push_back(entity->GetComponent<TransformComponent>());
 		}
 
-		if (entity->HasComponent<TerrainComponent>())
-		{
-			entity->GetComponent<TerrainComponent>()->Render(graphics);
-		}
-	}
+		if (auto* mesh = entity->GetComponent<MeshRendererComponent>())
+			m_meshes.push_back(mesh);
 
-	// get 2D stuff to draw because it must be on top of everything else
-	for (auto& entity : entities)
-	{
-		if (entity->HasComponent<TextureRendererComponent>())
-			entity->GetComponent<TextureRendererComponent>()->Render(graphics);
+		if (auto* terrain = entity->GetComponent<TerrainComponent>())
+			m_terrains.push_back(terrain);
+
+		if (auto* texture = entity->GetComponent<TextureRendererComponent>())
+			m_textures.push_back(texture);
 
 		entity->RenderScripts(graphics);
 	}
+
+	if (m_camera)
+		graphics->UseCamera(*m_camera);
+
+	for (int i = 0; i < m_lights.size(); i++)
+		graphics->AddLight(*m_lights[i], *m_lighttransforms[i]);
+
+	for (auto* mesh : m_meshes)
+		mesh->Render(graphics);
+
+	for (auto* terrain : m_terrains)
+		terrain->Render(graphics);
+
+	for (auto* texture : m_textures)
+		texture->Render(graphics);
 }
 
 //----------------------------------------------
@@ -488,19 +486,36 @@ void ECS::Scene::ImGui()
 // since it needs to be called after each physics step and then checks the entities easier so idk.
 void ECS::Scene::ProcessTriggers()
 {
-	for (auto& triggerEntity : entities)
-	{
-		if (!triggerEntity->HasComponent<PhysicsTriggerComponent>())
-			continue;
+	std::vector<Entity*> triggerEntities;
+	std::vector<Entity*> physicsEntities;
 
+	triggerEntities.reserve(entities.size());
+	physicsEntities.reserve(entities.size());
+
+	for (auto& entity : entities)
+	{
+		Entity* e = entity.get();
+
+		if (e->HasComponent<PhysicsTriggerComponent>())
+			triggerEntities.push_back(e);
+
+		if (e->HasComponent<PhysicsComponent>())
+			physicsEntities.push_back(e);
+	}
+
+	for (Entity* triggerEntity : triggerEntities)
+	{
 		PhysicsTriggerComponent* trigger =
 			triggerEntity->GetComponent<PhysicsTriggerComponent>();
 
 		trigger->BeginTriggerCheck();
 
-		for (auto& otherEntity : entities)
+		for (Entity* otherEntity : physicsEntities)
 		{
-			trigger->CheckAgainst(otherEntity.get());
+			if (otherEntity == triggerEntity)
+				continue;
+
+			trigger->CheckAgainst(otherEntity);
 		}
 
 		trigger->EndTriggerCheck();

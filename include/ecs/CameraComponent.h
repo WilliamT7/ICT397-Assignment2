@@ -59,17 +59,46 @@ namespace ECS
 		**/
 		void ImGui();
 
+		/** Set Position
+		* @author - Seb D'Alessandro
+		* @brief - modifies the position of the camera
+		* @param - float x
+		* @param - float y
+		* @param - float z
+		*
+		* @pre - camera has been constructed
+		* @post - modifies the position to the new position
+		**/
+		void setPosition(float x, float y, float z);
+
+		/** Set Yaw
+		* @author - Seb D'alessandro
+		* @brief - modififes the yaw of the camera
+		* @param - float yaw
+		*
+		* @pre - camera has been constructed
+		* @post - modifies the yaw to the new position
+		**/
+		void setYaw(float nYaw);
+
+		/** Set Pitch
+		* @author - Seb D'alessandro
+		* @brief - modifies the pitch of the camera
+		* @param - float pitch
+		*
+		* @pre - camera has been constructed
+		* @post - modifies the yaw to the new position
+		**/
+		void setPitch(float nPitch);
+
+
 		Vector3 position;
 		float yaw;
 		float pitch;
 
 		float near_plane = 0.1;
 		float far_plane = 1000;
-		void setPosition(float x, float y, float z);
-
-		void setYaw(float nYaw);
-
-		void setPitch(float nPitch);
+		
 	};
 }
 

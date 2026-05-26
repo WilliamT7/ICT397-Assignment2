@@ -1,0 +1,9 @@
+local start = "FSMTest.lua"
+local load = "performancecheck.lua"
+
+function render()
+    GUIBegin("Super Goober Bros World 2 HD")
+    GUIMakeButton("START GAME", LoadScene, start)
+    GUIMakeButton("LOAD GAME", LoadScene, load)
+    GUIEnd()
+end

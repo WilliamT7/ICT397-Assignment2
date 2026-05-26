@@ -109,3 +109,8 @@ namespace ECS
 }
 
 //----------------------------------------------
+
+void ECS::Scene::SetRunning(bool running)
+{
+	m_running = running;
+}

@@ -4,11 +4,15 @@
  *			Stores every entity, and propagates functions
  *			to every entity.
  *
- * @version 1.1
+ * @version 1.3
  * @date 20/03/2026 Kay Bradsell
  *				1.0 Creation
  * @date 08/04/2026 Kay Bradsell
  *				1.1 Added Serialising and Deserialising
+ * @date 12/05/2026 Kay Bradsell
+ *				1.2 Added Spawning prefabs
+ * @date 20/05/2026 Kay Bradsell
+ *				1.3 Added saving and loading scene
 *********************************************/
 
 #pragma once
@@ -17,6 +21,7 @@
 
 #include <ecs/Entity.h>
 #include <ecs/Component.h>
+#include <ecs/AllComponentsInclude.h>
 #include <graphics/Graphics.h>
 #include <physics/BulletPhysicsWorld.h>
 #include <vector>
@@ -32,6 +37,13 @@ namespace ECS
 	public:
 		Scene() = default;
 
+		/** Clear
+		* @author - Kay Bradsell
+		* @brief - Deletes and resets everything in scene 
+		*
+		* @pre - scene exists
+		* @post - clears all data in scene
+		**/
 		void Clear();
 
 		/** Init
@@ -73,9 +85,44 @@ namespace ECS
 		**/
 		void ImGui();
 
+		/** Set Running
+		* @author - Kay Bradsell
+		* @brief - Toggles if the scene is running updates or not
+		* @param - bool
+		*
+		* @pre - scene exists
+		* @post - pauses or resumes scene
+		**/
 		void SetRunning(bool running);
+
+		/** Load Scene
+		* @author - Kay Bradsell
+		* @brief - Sets up scene to load a new scene at start of update
+		* @param - std::string fileName
+		*
+		* @pre - fileName is a valid lua file with scene data
+		* @post - flags this scene to be overwritten with new scene data
+		**/
 		void LoadScene(std::string fileName);
+
+		/** Load Scene Scene
+		* @author - Kay Bradsell
+		* @brief - Loads in data from stored scene into this scene and replaces everything
+		* @param - std::string fileName
+		*
+		* @pre - fileName is a valid lua file with scene data
+		* @post - deletes and writes new data into this scene given the scene lua file parameter
+		**/
 		void LoadSceneScene(std::string fileName);
+
+		/** Save Scene
+		* @author - Kay Bradsell
+		* @brief - Serialises all scene data (entities) into a lua file and outputs.
+		* @param - const char* fileName
+		*
+		* @pre - Scene has been initialised
+		* @post - Writes all scene data into a file
+		**/
 		void SaveScene(const char* fileName);
 
 		/** Deserialise Scene
@@ -99,7 +146,15 @@ namespace ECS
 		**/
 		sol::table SerialiseScene(sol::state& lua) const;
 
-		// TODO: Comment
+		/** Spawn
+		* @author - Kay Bradsell
+		* @brief - Spawns a prefab into the scene given the name
+		* @param - std::string prefabName
+		* @return - bool
+		*
+		* @pre - prefabName points to a valid prefab and scene has been initialised
+		* @post - Spawns a new entity with the data in the prefab
+		**/
 		bool Spawn(std::string prefabName);
 
 		/** InjectPhysicsWorld
@@ -145,8 +200,20 @@ namespace ECS
 		bool m_mustLoad = false;
 		std::string m_sceneToLoad;
 
-		static void UpdateEntity(Entity* entity, float deltaTime);
+		std::vector<ECS::LightingComponent*> m_lights;
+		std::vector<ECS::TransformComponent*> m_lighttransforms;
+		ECS::CameraComponent* m_camera = nullptr;
+		std::vector<MeshRendererComponent*> m_meshes;
+		std::vector<TerrainComponent*> m_terrains;
+		std::vector<TextureRendererComponent*> m_textures;
 
+		/** Process Scene Load
+		* @author - Kay Bradsell
+		* @brief - Given the scene has been marked to load a new one, process that
+		*
+		* @pre - scene is marked to load, has stored the new scene name
+		* @post - loads in the new scene
+		**/
 		void ProcessSceneLoad();
 	};
 }

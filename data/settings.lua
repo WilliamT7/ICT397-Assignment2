@@ -1,5 +1,5 @@
 settings = {
-    scene = "FSMTest.lua",
+    scene = "MainMenu.lua",
     mouseVisible = true,
-    imGuiVisible = true
+    imGuiVisible = false
 }
