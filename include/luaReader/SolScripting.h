@@ -120,7 +120,16 @@ public:
 
 
 
-
+	/* runByFileName
+	* @author - 
+	* @brief -
+	* @pre -
+	* @post -
+	* @param filename -
+	* @param functionName -
+	* @param entity
+	* @return bool -
+	*/
 	void runByFileName(string fileName, string functionName, ECS::Entity* entity);
 
 	//Parameter passing-----------------------------------
