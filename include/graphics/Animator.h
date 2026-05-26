@@ -20,58 +20,55 @@ namespace Graphics
 	public:
 		Animator() = default;
 
-		/**
+		/** Animator constructor
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Creatrs an Animator for an animation object
+		* @param - Animation*
 		*
-		* @pre -
-		* @post -
+		* @pre - animation is a valid animation object
+		* @post - Creates animator for that animation
 		**/
 		Animator(Animation* animation);
 
-		/**
+		/** Update Animation
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Given deltaTime, update the animation
+		* @param - float deltaTime
 		*
-		* @pre -
-		* @post -
+		* @pre - animation has been loaded into animator
+		* @post - updates the animation by deltaTime
 		**/
 		void UpdateAnimation(float deltaTime);
 
-		/**
+		/** Play Animation
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Sets the animation to start playing
+		* @param - Animation*
 		*
-		* @pre -
-		* @post -
+		* @pre - animation is a valid animation
+		* @post - begins the animation
 		**/
 		void PlayAnimation(Animation* animation);
 
-		/**
+		/** Calculate Bone Transforms
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Given assimpnodedata and the parent transformation, calculate the new transformation for time
+		* @param - AssimpNodeData*
+		* @param - glm::matr4
+		* @note - is a recursive function
 		*
-		* @pre -
-		* @post -
+		* @pre - all parameters and this animator are valid
+		* @post - Calculates the transformations
 		**/
 		void CalculateBoneTransform(const AssimpNodeData* node, glm::mat4 parentTransform);
 
-		/**
+		/** Get Final Bone Matrices
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - returns the current bone matrices for current time
+		* @return - std:::vector<glm::mat4>
 		*
-		* @pre -
-		* @post -
+		* @pre - Animation has been set, is playing, and is being updated
+		* @post - Returns the transformation data for the bones for the current time
 		**/
 		std::vector<glm::mat4> GetFinalBoneMatrices();
 
