@@ -12,16 +12,16 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB80D0]],
+      } --[[table: 0000019D08956990]],
       {
         Name = "Lighting",
         ambient_b = 0.33333331346511841,
         ambient_g = 0.080065347254276276,
         ambient_r = 0.2215973436832428,
         constant = 1,
-        diffuse_b = 0.58080047369003296,
-        diffuse_g = 0.18502499163150787,
-        diffuse_r = 0.85784316062927246,
+        diffuse_b = 0.42076048254966736,
+        diffuse_g = 0.26506173610687256,
+        diffuse_r = 0.77780652046203613,
         direction_x = -2.2999999523162842,
         direction_y = -3.4000000953674316,
         direction_z = 1.2000000476837158,
@@ -31,34 +31,34 @@ scene = {
         specular_g = 0.67786425352096558,
         specular_r = 0.7598038911819458,
         type = "DIRECTIONAL"
-      } --[[table: 000002A776AB7650]]
-    } --[[table: 000002A776AB7750]],
+      } --[[table: 0000019D08957510]]
+    } --[[table: 0000019D08957A10]],
     EntityName = "Directional Lighting"
-  } --[[table: 000002A776AB8350]],
+  } --[[table: 0000019D08957F10]],
   {
     Components = {
       {
         Name = "Transform",
         position_x = 35.861629486083984,
-        position_y = -7.9907407760620117,
-        position_z = -69.569305419921875,
+        position_y = -7.9904870986938477,
+        position_z = -69.569320678710938,
         rotation_x = 0,
         rotation_y = -90,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB8B50]],
+      } --[[table: 0000019D08956490]],
       {
         Name = "Camera",
         far_plane = 2000,
         near_plane = 0.10000000149011612,
-        pitch = -72.000045776367188,
+        pitch = -77.800186157226562,
         position_x = 35.861629486083984,
-        position_y = 2.0092592239379883,
-        position_z = -69.569305419921875,
-        yaw = 1502.6121826171875
-      } --[[table: 000002A776AB8F50]],
+        position_y = 2.0095129013061523,
+        position_z = -69.569320678710938,
+        yaw = 1480.911376953125
+      } --[[table: 0000019D08957910]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -66,24 +66,25 @@ scene = {
         halfExtents_z = 1,
         isStatic = false,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB88D0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08956410]],
       {
         Name = "FSM"
-      } --[[table: 000002A776AB8850]],
+      } --[[table: 0000019D08956F10]],
       {
         Name = "Script",
         fileName = "playerInput.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776AB70D0]],
+      } --[[table: 0000019D08956A90]],
       {
         Name = "Script",
         fileName = "bulletSpawner.lua",
         filePath = "..\\data\\luaScripts\\"
       }
-    } --[[table: 000002A776AB7FD0]],
+    } --[[table: 0000019D08957190]],
     EntityName = "Player"
-  } --[[table: 000002A776AB76D0]],
+  } --[[table: 0000019D08957C90]],
   {
     Components = {
       {
@@ -97,7 +98,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB71D0]],
+      } --[[table: 0000019D08957610]],
       {
         Name = "Terrain",
         is_wireframe = false,
@@ -106,15 +107,15 @@ scene = {
         scale_y = 1,
         scale_z = 10,
         seed = 0
-      } --[[table: 000002A776AB7950]],
+      } --[[table: 0000019D08957690]],
       {
         Name = "Script",
         fileName = "terraintoggle.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776AB7A50]]
-    } --[[table: 000002A776AB8950]],
+      } --[[table: 0000019D08957990]]
+    } --[[table: 0000019D08956D10]],
     EntityName = "Terrain"
-  } --[[table: 000002A776AB7850]],
+  } --[[table: 0000019D08956310]],
   {
     Components = {
       {
@@ -128,12 +129,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB7ED0]],
+      } --[[table: 0000019D08956E10]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB89D0]],
+      } --[[table: 0000019D08956B10]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -141,21 +142,22 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB86D0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08956E90]],
       {
         Name = "Script",
         fileName = "IHE.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776AB70D0]],
+      } --[[table: 0000019D08957010]],
       {
         Name = "Script",
         fileName = "scenesaveload.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776AB7050]]
-    } --[[table: 000002A776AB7BD0]],
+      } --[[table: 0000019D08957B90]]
+    } --[[table: 0000019D08956510]],
     EntityName = "Palm Tree"
-  } --[[table: 000002A776AB7B50]],
+  } --[[table: 0000019D08956D90]],
   {
     Components = {
       {
@@ -169,12 +171,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB7F50]],
+      } --[[table: 0000019D08959390]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB8050]],
+      } --[[table: 0000019D08958290]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -182,16 +184,17 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB8A50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08958E10]],
       {
         Name = "Script",
         fileName = "messageTest.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776AB7050]]
-    },
+      } --[[table: 0000019D08958690]]
+    } --[[table: 0000019D08957110]],
     EntityName = "Palm Tree"
-  } --[[table: 000002A776AB8550]],
+  } --[[table: 0000019D08956F90]],
   {
     Components = {
       {
@@ -205,12 +208,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB72D0]],
+      } --[[table: 0000019D08958710]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB85D0]],
+      } --[[table: 0000019D08958D90]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -218,11 +221,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB87D0]]
-    } --[[table: 000002A776AB7250]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08958E90]]
+    } --[[table: 0000019D08959B10]],
     EntityName = "Palm Tree"
-  } --[[table: 000002A776AB8450]],
+  } --[[table: 0000019D08956390]],
   {
     Components = {
       {
@@ -236,12 +240,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB8C50]],
+      } --[[table: 0000019D08958890]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB73D0]],
+      } --[[table: 0000019D08958390]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -249,11 +253,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB7450]]
-    } --[[table: 000002A776AB7D50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08959C90]]
+    } --[[table: 0000019D08959A10]],
     EntityName = "Palm Tree"
-  } --[[table: 000002A776AB8BD0]],
+  } --[[table: 0000019D08959D90]],
   {
     Components = {
       {
@@ -267,12 +272,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABA0D0]],
+      } --[[table: 0000019D08959790]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB9650]],
+      } --[[table: 0000019D08958910]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -280,11 +285,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABAFD0]]
-    } --[[table: 000002A776ABA050]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08958C10]]
+    } --[[table: 0000019D08958510]],
     EntityName = "Palm Tree"
-  } --[[table: 000002A776ABAED0]],
+  } --[[table: 0000019D08958B90]],
   {
     Components = {
       {
@@ -298,12 +304,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABA7D0]],
+      } --[[table: 0000019D08958490]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB97D0]],
+      } --[[table: 0000019D08959D10]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -311,11 +317,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB9C50]]
-    } --[[table: 000002A776ABA3D0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08958C90]]
+    } --[[table: 0000019D08959290]],
     EntityName = "Palm Tree"
-  } --[[table: 000002A776AB9050]],
+  } --[[table: 0000019D08959190]],
   {
     Components = {
       {
@@ -329,12 +336,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABA250]],
+      } --[[table: 0000019D08959010]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB9DD0]],
+      } --[[table: 0000019D08959F10]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -342,11 +349,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABA8D0]]
-    } --[[table: 000002A776AB9150]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08959410]]
+    } --[[table: 0000019D0895A090]],
     EntityName = "Palm Tree"
-  } --[[table: 000002A776ABA5D0]],
+  } --[[table: 0000019D08958810]],
   {
     Components = {
       {
@@ -360,12 +368,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB96D0]],
+      } --[[table: 0000019D08959B90]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB9ED0]],
+      } --[[table: 0000019D08959610]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -373,11 +381,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB92D0]]
-    } --[[table: 000002A776ABA850]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08958D10]]
+    } --[[table: 0000019D08958A10]],
     EntityName = "Rock"
-  } --[[table: 000002A776AB9250]],
+  } --[[table: 0000019D08958410]],
   {
     Components = {
       {
@@ -391,12 +400,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABA9D0]],
+      } --[[table: 0000019D08959990]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABAB50]],
+      } --[[table: 0000019D08958990]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -404,11 +413,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB99D0]]
-    } --[[table: 000002A776ABA2D0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08958610]]
+    } --[[table: 0000019D08958590]],
     EntityName = "Rock"
-  } --[[table: 000002A776ABA550]],
+  } --[[table: 0000019D08958190]],
   {
     Components = {
       {
@@ -422,12 +432,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB9350]],
+      } --[[table: 0000019D0895A010]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB9850]],
+      } --[[table: 0000019D08958F90]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -435,11 +445,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABADD0]]
-    } --[[table: 000002A776AB9AD0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08959090]]
+    } --[[table: 0000019D08958F10]],
     EntityName = "Rock"
-  } --[[table: 000002A776ABAAD0]],
+  } --[[table: 0000019D08958A90]],
   {
     Components = {
       {
@@ -453,12 +464,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB9450]],
+      } --[[table: 0000019D08959490]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABA150]],
+      } --[[table: 0000019D08959590]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -466,11 +477,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB9B50]]
-    } --[[table: 000002A776ABAE50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08959690]]
+    } --[[table: 0000019D08959310]],
     EntityName = "Rock"
-  } --[[table: 000002A776ABACD0]],
+  } --[[table: 0000019D08959210]],
   {
     Components = {
       {
@@ -484,12 +496,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABA1D0]],
+      } --[[table: 0000019D08958110]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB98D0]],
+      } --[[table: 0000019D08959910]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -497,11 +509,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB9BD0]]
-    } --[[table: 000002A776AB94D0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D08959A90]]
+    } --[[table: 0000019D08959890]],
     EntityName = "Rock"
-  } --[[table: 000002A776ABAD50]],
+  } --[[table: 0000019D08959810]],
   {
     Components = {
       {
@@ -515,12 +528,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776AB95D0]],
+      } --[[table: 0000019D0895A310]],
       {
         ModelID = "AMYROSE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776AB9F50]],
+      } --[[table: 0000019D0895AA10]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -528,11 +541,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776AB9750]]
-    } --[[table: 000002A776ABA450]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0895A390]]
+    } --[[table: 0000019D0895A290]],
     EntityName = "Amy Rose 1"
-  } --[[table: 000002A776AB9550]],
+  } --[[table: 0000019D0895A210]],
   {
     Components = {
       {
@@ -546,12 +560,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABA750]],
+      } --[[table: 0000019D0895AD90]],
       {
         ModelID = "AMYROSE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABC150]],
+      } --[[table: 0000019D0895AE90]],
       {
         Name = "Physics",
         halfExtents_x = 2,
@@ -559,11 +573,12 @@ scene = {
         halfExtents_z = 2,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABC1D0]]
-    } --[[table: 000002A776ABA6D0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0895A590]]
+    } --[[table: 0000019D0895AE10]],
     EntityName = "Amy Rose 2"
-  } --[[table: 000002A776ABA650]],
+  } --[[table: 0000019D0895A510]],
   {
     Components = {
       {
@@ -577,12 +592,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABBAD0]],
+      } --[[table: 0000019D0895A490]],
       {
         ModelID = "AMYROSE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABCFD0]],
+      } --[[table: 0000019D0895A610]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -590,11 +605,12 @@ scene = {
         halfExtents_z = 3,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABB950]]
-    } --[[table: 000002A776ABCA50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0895A190]]
+    } --[[table: 0000019D0895AD10]],
     EntityName = "Amy Rose 3"
-  } --[[table: 000002A776ABC5D0]],
+  } --[[table: 0000019D0895AC90]],
   {
     Components = {
       {
@@ -608,15 +624,15 @@ scene = {
         scale_x = 20,
         scale_y = 20,
         scale_z = 20
-      } --[[table: 000002A776ABB650]],
+      } --[[table: 0000019D0895AF10]],
       {
         ModelID = "BLAHAJ",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABB9D0]]
-    } --[[table: 000002A776ABB150]],
+      } --[[table: 0000019D0895A890]]
+    } --[[table: 0000019D0895A990]],
     EntityName = "Blahaj 1"
-  } --[[table: 000002A776ABC6D0]],
+  } --[[table: 0000019D0895A810]],
   {
     Components = {
       {
@@ -630,15 +646,15 @@ scene = {
         scale_x = 10,
         scale_y = 10,
         scale_z = 10
-      } --[[table: 000002A776ABB050]],
+      } --[[table: 0000019D0895A790]],
       {
         ModelID = "BLAHAJ",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABB7D0]]
-    } --[[table: 000002A776ABBA50]],
+      } --[[table: 0000019D0895A710]]
+    } --[[table: 0000019D0895AF90]],
     EntityName = "Blahaj 2"
-  } --[[table: 000002A776ABCB50]],
+  } --[[table: 0000019D0895A690]],
   {
     Components = {
       {
@@ -652,20 +668,20 @@ scene = {
         scale_x = 0.20000000298023224,
         scale_y = 0.20000000298023224,
         scale_z = 0.20000000298023224
-      } --[[table: 000002A776ABC8D0]],
+      } --[[table: 0000019D0895AB10]],
       {
         ModelID = "BLAHAJ",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABB5D0]]
-    } --[[table: 000002A776ABBF50]],
+      } --[[table: 0000019D0895AC10]]
+    } --[[table: 0000019D0895AA90]],
     EntityName = "Blahaj 3"
-  } --[[table: 000002A776ABC450]],
+  } --[[table: 0000019D0895A910]],
   {
     Components = {
       {
         Name = "Animation"
-      } --[[table: 000002A776ABBB50]],
+      } --[[table: 0000019D0893B610]],
       {
         Name = "Transform",
         position_x = 0.60000002384185791,
@@ -677,12 +693,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABB0D0]],
+      } --[[table: 0000019D0893A410]],
       {
         ModelID = "MINT",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002A776ABB6D0]],
+      } --[[table: 0000019D0893BC10]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -690,16 +706,17 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABBBD0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893B110]],
       {
         Name = "Script",
         fileName = "animationTest.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776ABCBD0]]
-    } --[[table: 000002A776ABBFD0]],
+      } --[[table: 0000019D0893A690]]
+    } --[[table: 0000019D0893B890]],
     EntityName = "Mint 1"
-  } --[[table: 000002A776ABC4D0]],
+  } --[[table: 0000019D0893B090]],
   {
     Components = {
       {
@@ -713,15 +730,15 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABCE50]],
+      } --[[table: 0000019D0893AA10]],
       {
         ModelID = "MINT",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABC950]]
-    } --[[table: 000002A776ABC0D0]],
+      } --[[table: 0000019D0893A710]]
+    } --[[table: 0000019D0893B290]],
     EntityName = "Mint 2"
-  } --[[table: 000002A776ABC050]],
+  } --[[table: 0000019D0893BF90]],
   {
     Components = {
       {
@@ -735,15 +752,15 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABB1D0]],
+      } --[[table: 0000019D0893B410]],
       {
         ModelID = "MINT",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABC250]]
-    } --[[table: 000002A776ABCED0]],
+      } --[[table: 0000019D0893BE10]]
+    } --[[table: 0000019D0893A590]],
     EntityName = "Mint 3"
-  } --[[table: 000002A776ABC650]],
+  } --[[table: 0000019D0893A790]],
   {
     Components = {
       {
@@ -757,12 +774,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABB2D0]],
+      } --[[table: 0000019D0893BB10]],
       {
         ModelID = "HUMAN",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABC350]],
+      } --[[table: 0000019D0893BD10]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -770,11 +787,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABCDD0]]
-    } --[[table: 000002A776ABB350]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893AB10]]
+    } --[[table: 0000019D0893BC90]],
     EntityName = "Human 1"
-  } --[[table: 000002A776ABC2D0]],
+  } --[[table: 0000019D0893B310]],
   {
     Components = {
       {
@@ -788,12 +806,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABB8D0]],
+      } --[[table: 0000019D0893A810]],
       {
         ModelID = "HUMAN",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABB250]],
+      } --[[table: 0000019D0893A290]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -801,11 +819,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABC550]]
-    } --[[table: 000002A776ABCD50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893B710]]
+    } --[[table: 0000019D0893AE90]],
     EntityName = "Human 2"
-  } --[[table: 000002A776ABC3D0]],
+  } --[[table: 0000019D0893A610]],
   {
     Components = {
       {
@@ -819,12 +838,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABB3D0]],
+      } --[[table: 0000019D0893AF90]],
       {
         ModelID = "HUMAN",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABB450]],
+      } --[[table: 0000019D0893A510]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -832,11 +851,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABC7D0]]
-    } --[[table: 000002A776ABBD50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893A910]]
+    } --[[table: 0000019D0893A490]],
     EntityName = "Human 3"
-  } --[[table: 000002A776ABBC50]],
+  } --[[table: 0000019D0893AF10]],
   {
     Components = {
       {
@@ -850,12 +870,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABB4D0]],
+      } --[[table: 0000019D0893AC10]],
       {
         ModelID = "AKALI",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABB550]],
+      } --[[table: 0000019D0893A990]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -863,11 +883,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABC9D0]]
-    } --[[table: 000002A776ABBDD0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893AA90]]
+    } --[[table: 0000019D0893AE10]],
     EntityName = "Akali 1"
-  } --[[table: 000002A776ABBCD0]],
+  } --[[table: 0000019D0893BA90]],
   {
     Components = {
       {
@@ -881,12 +902,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABC750]],
+      } --[[table: 0000019D0893AD10]],
       {
         ModelID = "AKALI",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABCAD0]],
+      } --[[table: 0000019D0893BB90]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -894,11 +915,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABD550]]
-    } --[[table: 000002A776ABBED0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893B190]]
+    } --[[table: 0000019D0893AC90]],
     EntityName = "Akali 2"
-  } --[[table: 000002A776ABBE50]],
+  } --[[table: 0000019D0893A210]],
   {
     Components = {
       {
@@ -912,12 +934,12 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABEDD0]],
+      } --[[table: 0000019D0893B490]],
       {
         ModelID = "AKALI",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002A776ABE950]],
+      } --[[table: 0000019D0893B510]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -925,11 +947,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABD5D0]]
-    } --[[table: 000002A776ABE350]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893B590]]
+    } --[[table: 0000019D0893B390]],
     EntityName = "Akali 3"
-  } --[[table: 000002A776ABECD0]],
+  } --[[table: 0000019D0893B210]],
   {
     Components = {
       {
@@ -943,7 +966,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABE4D0]],
+      } --[[table: 0000019D0893A310]],
       {
         Name = "TextureRenderer",
         TextureID = "Help Manual",
@@ -952,15 +975,15 @@ scene = {
         position_y = 0.2199999988079071,
         size_x = 0.5,
         size_y = 0.5
-      } --[[table: 000002A776ABEB50]],
+      } --[[table: 0000019D0893A390]],
       {
         Name = "Script",
         fileName = "displayTexture.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776ABD7D0]]
-    } --[[table: 000002A776ABD9D0]],
+      } --[[table: 0000019D0893B810]]
+    } --[[table: 0000019D0893BD90]],
     EntityName = "Help Manual"
-  } --[[table: 000002A776ABE5D0]],
+  } --[[table: 0000019D0893B790]],
   {
     Components = {
       {
@@ -974,7 +997,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABE3D0]],
+      } --[[table: 0000019D0893B990]],
       {
         Name = "TextureRenderer",
         TextureID = "End Screen",
@@ -983,15 +1006,15 @@ scene = {
         position_y = 0,
         size_x = 1,
         size_y = 1
-      } --[[table: 000002A776ABD850]],
+      } --[[table: 0000019D0893BA10]],
       {
         Name = "Script",
         fileName = "endScreen.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 000002A776ABDC50]]
-    } --[[table: 000002A776ABDF50]],
+      } --[[table: 0000019D0893A110]]
+    } --[[table: 0000019D0893B910]],
     EntityName = "End Screen"
-  } --[[table: 000002A776ABE9D0]],
+  } --[[table: 0000019D0893C010]],
   {
     Components = {
       {
@@ -1005,7 +1028,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABEBD0]],
+      } --[[table: 0000019D0893C410]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -1013,11 +1036,12 @@ scene = {
         halfExtents_z = 300,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABD8D0]]
-    } --[[table: 000002A776ABDA50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893D010]]
+    } --[[table: 0000019D0893DC90]],
     EntityName = "Wall Left"
-  } --[[table: 000002A776ABDCD0]],
+  } --[[table: 0000019D0893BF10]],
   {
     Components = {
       {
@@ -1031,7 +1055,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABD0D0]],
+      } --[[table: 0000019D0893D110]],
       {
         Name = "Physics",
         halfExtents_x = 1,
@@ -1039,11 +1063,12 @@ scene = {
         halfExtents_z = 300,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABED50]]
-    } --[[table: 000002A776ABD1D0]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893C710]]
+    } --[[table: 0000019D0893C610]],
     EntityName = "Wall Right"
-  } --[[table: 000002A776ABEE50]],
+  } --[[table: 0000019D0893D390]],
   {
     Components = {
       {
@@ -1057,7 +1082,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABD6D0]],
+      } --[[table: 0000019D0893D410]],
       {
         Name = "Physics",
         halfExtents_x = 300,
@@ -1065,11 +1090,12 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABD3D0]]
-    } --[[table: 000002A776ABD950]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893C290]]
+    } --[[table: 0000019D0893DC10]],
     EntityName = "Wall Front"
-  } --[[table: 000002A776ABDAD0]],
+  } --[[table: 0000019D0893D590]],
   {
     Components = {
       {
@@ -1083,7 +1109,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002A776ABDD50]],
+      } --[[table: 0000019D0893C690]],
       {
         Name = "Physics",
         halfExtents_x = 300,
@@ -1091,9 +1117,10 @@ scene = {
         halfExtents_z = 1,
         isStatic = true,
         mass = 1,
-        shape = "box"
-      } --[[table: 000002A776ABD150]]
-    } --[[table: 000002A776ABDB50]],
+        shape = "box",
+        useGravity = true
+      } --[[table: 0000019D0893D310]]
+    } --[[table: 0000019D0893DE10]],
     EntityName = "Wall Back"
-  } --[[table: 000002A776ABE450]]
-} --[[table: 000002A776AB8ED0]]
+  } --[[table: 0000019D0893D090]]
+} --[[table: 0000019D08956790]]
