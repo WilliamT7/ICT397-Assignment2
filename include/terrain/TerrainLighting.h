@@ -66,7 +66,7 @@ namespace Terrain
 		* @brief - Sets the softness of the light, which controls how quickly brightness changes with slope.
 		* @param softness - The softness value (higher values result in softer lighting).
 		* @pre - None.
-		* @post - Sets the softness of the light, affecting how brightness transitions across the
+		* @post - Sets the softness of the light, affecting how brightness transitions across the terrain based on slope and height differences.
 		* @return - None.
         **/
         void SetSoftness(float softness);

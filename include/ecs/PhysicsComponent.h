@@ -211,7 +211,8 @@ namespace ECS
 		* @brief - Retrieves the half extents of the physics body, which represent half
 		* @param - None.
 		* @pre - The physics body should be valid and linked to this component.
-		* @post - Returns the half extents of the physics body, which can be
+		* @post - Returns the half extents of the physics body, which can be\
+		* @return - the half extents of the physics body as Vector3
 		**/
 		Vector3 GetHalfExtents() const;
 

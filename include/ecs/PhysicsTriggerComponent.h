@@ -217,8 +217,26 @@ namespace ECS
 		**/
 		void OnTriggerExit(Entity* other);
 
+
+		/** RemoveOverlap
+		* @author - William Thorpe
+		* @brief - Removes an entity from the current overlaps
+		* @param - Entity* entityToRemove
+		* @pre - None.
+		* @post - The specified entity is removed from the current overlaps.
+		* @return - None.
+		**/
 		void RemoveOverlap(Entity* entityToRemove);
 
+
+		/** RemoveEntityFromAllTriggers
+		* @author - William Thorpe
+		* @brief - Static helper function to remove an entity from all triggers in the scene
+		* @param - Entity* entityToRemove, std::vector<std::unique_ptr<Entity>>& entities
+		* @pre - None.
+		* @post - The specified entity is removed from all triggers in the provided list of entities.
+		* @return - None.
+		**/
 		static void RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<std::unique_ptr<Entity>>& entities);
 
 	private:
