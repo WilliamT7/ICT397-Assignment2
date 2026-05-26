@@ -1,4 +1,14 @@
+local lifeTime = 8.0
+local age = 0.0
+
 function update()
+    age = age + getDeltaTime()
+
+    if age >= lifeTime then
+        destroy(obj)
+        return
+    end
+
     local trigger = getPhysicsTrigger(obj)
 
     if trigger == nil then

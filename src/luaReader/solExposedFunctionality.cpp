@@ -310,7 +310,9 @@ void exposePhysics(sol::state_view& solView) {
 		"clearForces",
 		&ECS::PhysicsComponent::ClearForces,
 		"setAngularVelocity",
-		&ECS::PhysicsComponent::SetAngularVelocity
+		&ECS::PhysicsComponent::SetAngularVelocity,
+		"setPosition",
+		&ECS::PhysicsComponent::SetPosition
 
 	);
 
@@ -322,6 +324,7 @@ void exposePhysics(sol::state_view& solView) {
 	solView.set_function("getPosition", &ECS::PhysicsComponent::GetPosition);
 	solView.set_function("clearForces", &ECS::PhysicsComponent::ClearForces);
 	solView.set_function("setAngularVelocity", &ECS::PhysicsComponent::SetAngularVelocity);
+	solView.set_function("setPosition", &ECS::PhysicsComponent::SetPosition);
 
 }
 
