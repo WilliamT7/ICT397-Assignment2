@@ -121,7 +121,18 @@ scene = {
         Name = "Script",
         fileName = "physicsTriggers.lua",
         filePath = "..\\data\\luaScripts\\"
-      } --[[table: 00000295FD6524B0]]
+      } --[[table: 00000295FD6524B0]],
+      {
+        Name = "Script",
+        fileName = "playerstatsvars.lua",
+        filePath = "..\\data\\luaScripts\\",
+        hp = "10"
+      },
+      {
+        Name = "Script",
+        fileName = "playerstats.lua",
+        filePath = "..\\data\\luaScripts\\"
+      }
     } --[[table: 00000295FD652F30]],
     EntityName = "Player"
   } --[[table: 00000295FD6536B0]],

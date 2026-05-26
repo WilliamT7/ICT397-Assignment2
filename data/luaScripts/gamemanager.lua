@@ -23,6 +23,12 @@ function NewWave(vars)
 	currentWave = currentWave + 1
 	vars:setGlobal("currentWave", tostring(currentWave))
 	vars:setGlobal("numEnemiesSpawned", tostring(0))
+
+	if currentWave > 20 then
+		SetMouseVisible(true)
+		LoadScene("YouWin.lua")
+	end
+
 end
 
 function SpawnEnemy(vars)
