@@ -14,5 +14,9 @@ textures = {
     {
         Name = "Main Menu",
         File = "MainMenu.png"
+    },
+    {
+        Name = "You Win",
+        File = "YouWin.png"
     }
 }
