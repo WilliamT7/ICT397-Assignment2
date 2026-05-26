@@ -37,11 +37,16 @@ namespace ECS
 		if (m_currentAnimationName == animationName || mesh == nullptr)
 			return;
 
-		m_currentAnimationName = animationName;
 		Graphics::Model * model = mesh->model;
+
+		if (!model)
+			return;
+
 		auto anim = Graphics::AnimationManager::Get().GetAnimation(animationName, model);
 		m_animator = Graphics::Animator(anim.get());
 		m_animator.PlayAnimation(anim.get());
+
+		m_currentAnimationName = animationName;
 	}
 
 	Graphics::Animator* AnimationComponent::GetAnimator()

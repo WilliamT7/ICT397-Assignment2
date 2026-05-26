@@ -3,6 +3,28 @@ local coolDown = 0.05
 local totalSpawn = 100
 
 function update()
+    local entity = GetEntity(0)
+    local entitylighting = getLighting(entity)
+    local diffuse = entitylighting.diffuse
+
+    local red = diffuse.r + 0.01
+    local green = diffuse.g - 0.01
+    local blue = diffuse.b + 0.02
+
+    if red > 1 then
+        red = red - 1
+    end
+    if green < 0 then
+        green = green + 1
+    end
+    if blue > 1 then
+        blue = blue - 1
+    end
+
+    entitylighting:setDiffuse(red, green, blue)
+
+    print(entitylighting)
+
     local vars = getScriptComponent(obj, "infinitepokeyspawnervars")
     local elapsedTime = vars:getGlobal("elapsedTime").value
     elapsedTime = tonumber(elapsedTime)

@@ -21,7 +21,7 @@
 #include <physics/BulletPhysicsWorld.h>
 #include <vector>
 #include <thread>
-#include "other/ThreadPool.h"
+
 
 //----------------------------------------------
 
@@ -30,8 +30,9 @@ namespace ECS
 	class Scene
 	{
 	public:
-		Scene() :
-			m_pool(thread::hardware_concurrency()) { }
+		Scene() = default;
+
+		void Clear();
 
 		/** Init
 		* @author - Kay Bradsell
@@ -41,7 +42,7 @@ namespace ECS
 		* @pre - BulletPhysicsWorld exists? idk
 		* @post - Creates Scene
 		**/
-		void Init(BulletPhysicsWorld* physicsWorld);
+		void Init(BulletPhysicsWorld* physicsWorld, const char* fileName);
 
 		/** Update
 		* @author - Kay Bradsell
@@ -71,6 +72,11 @@ namespace ECS
 		* @post - Adds Scenes and Entities to ImGui
 		**/
 		void ImGui();
+
+		void SetRunning(bool running);
+		void LoadScene(std::string fileName);
+		void LoadSceneScene(std::string fileName);
+		void SaveScene(const char* fileName);
 
 		/** Deserialise Scene
 		* @author - Kay Bradsell
@@ -125,15 +131,23 @@ namespace ECS
 		**/
 		void ProcessTriggers();
 
+		Entity* GetEntity(int ID);
+
 	private:
 		std::vector<std::unique_ptr<Entity>> entities;
 
 		//physic things
 		BulletPhysicsWorld* m_physicsWorld = nullptr;
 		bool m_physicsEnabled = true;
-		ThreadPool m_pool;
+
+		bool m_running = false;
+
+		bool m_mustLoad = false;
+		std::string m_sceneToLoad;
 
 		static void UpdateEntity(Entity* entity, float deltaTime);
+
+		void ProcessSceneLoad();
 	};
 }
 

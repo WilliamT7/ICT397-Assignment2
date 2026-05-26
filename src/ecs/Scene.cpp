@@ -6,29 +6,145 @@
 #include "ecs/Entity.h"
 #include "graphics/ShaderType.h"
 #include "physics/BulletPhysicsWorld.h"
-#include <ecs/PhysicsTriggerComponent.h>
+#include "messaging/MessageDispatcher.h"
+#include <ecs/PhysicsTriggerComponent.h> //woah <> thats cool it works
+#include "other/singleton.h"
 
 #include "ecs/SceneLoader.h"
 #include "imgui_impl_opengl3.h" // for now
 
 //----------------------------------------------
 
-void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld)
+void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 {
 	//PHYSICS AGAIN :D
 	m_physicsWorld = physicsWorld;
+
+	LoadSceneScene(fileName);
+	m_running = true;
+
+	//Link message disptacher with entity list
+	//TODO deal with cases to do with loading a new scene
+	MessageDispatcher* messageManager = Singleton<MessageDispatcher>::getInstance();
+	messageManager->linkEntityList(&entities);
+
 }
 
 //----------------------------------------------
 
-#include <thread>
+void ECS::Scene::Clear()
+{
+	//for (int i = 0; i < entities.size(); i++)
+	//{
+	//	std::cout << "DESTROYING ENTITY " << i << std::endl;
+	//	entities[i].get()->Destroy();
+	//}
+	entities.clear();
+	entities.shrink_to_fit();
+	ECS::Entity::ResetIDCounter();
+	//m_physicsWorld = new BulletPhysicsWorld();
+}
+
+//----------------------------------------------
+
+void ECS::Scene::ProcessSceneLoad()
+{
+	if (!m_mustLoad)
+		return;
+
+	std::string fileName = m_sceneToLoad;
+	m_mustLoad = false;
+	m_sceneToLoad = "";
+	LoadSceneScene(fileName);
+}
+
+//----------------------------------------------
+
+void ECS::Scene::LoadScene(std::string fileName)
+{
+	m_mustLoad = true;
+	m_sceneToLoad = fileName;
+	m_running = false;
+}
+
+//----------------------------------------------
+
+void ECS::Scene::LoadSceneScene(std::string fileName)
+{
+	sol::state lua;
+	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
+
+	SetRunning(false);
+	Clear();
+
+	std::string path = "../data/scenes/";
+	std::string fullpath = path + fileName;
+
+	std::cout << "Reading in " << fullpath << ".\n";
+
+	// read in file from fileName
+	try
+	{
+		lua.script_file(fullpath);
+	}
+	catch (const sol::error& e)
+	{
+		std::cout << e.what() << "\n";
+		std::cout << "[C++]: Error: SOL: Unable to open " << fullpath << std::endl;
+		return;
+	}
+
+	// grab the scene table
+	sol::table sceneTable = lua["scene"];
+
+	// load it into the scene
+	DeserialiseScene(sceneTable);
+	SetRunning(true);
+}
+
+//----------------------------------------------
+
+void ECS::Scene::SaveScene(const char* fileName)
+{
+	sol::state lua;
+	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
+
+	std::string path = "../data/scenes/";
+	std::string fullpath = path + fileName;
+
+	// create new table from scene
+	sol::table t = SerialiseScene(lua);
+
+	// open the serialiser script file
+	lua.script_file("../data/luaScripts/sceneserialiser/serialiser.lua");
+	// get the function SerialiseTable from serialiser.lua
+	sol::function serialise = lua["SerialiseTable"];
+
+	// serialise it into the fileName :D
+	serialise(fullpath, t);
+
+	std::cout << "Created file " << fileName << " as " << fullpath << std::endl;
+}
+
+//----------------------------------------------
 
 void ECS::Scene::Update(float deltaTime)
 {
+	ProcessSceneLoad();
+
+	if (!m_running)
+		return;
+
 	if (m_physicsWorld != nullptr && m_physicsEnabled)
 	{
 		m_physicsWorld->Step(deltaTime);
 	}
+
+
+	ProcessTriggers();
+
+
+	updateMessageDispatcher(deltaTime);
 
 	int size = entities.size();
 	
@@ -52,6 +168,13 @@ void ECS::Scene::Update(float deltaTime)
 
 	ProcessTriggers();
 	
+}
+
+//----------------------------------------------
+
+void ECS::Scene::SetRunning(bool running)
+{
+	m_running = running;
 }
 
 //----------------------------------------------
@@ -159,8 +282,24 @@ void ECS::Scene::InjectPhysicsWorld(Entity* entity)
 
 //----------------------------------------------
 
+ECS::Entity* ECS::Scene::GetEntity(int ID)
+{
+	for (auto& entity : entities)
+	{
+		if (entity->GetID() == ID)
+			return entity.get();
+	}
+
+	return nullptr;
+}
+
+//----------------------------------------------
+
 void ECS::Scene::Render(Graphics::Graphics* graphics)
 {
+	if (!m_running)
+		return;
+
 	graphics->ClearLights();
 
 	// get camera
@@ -205,6 +344,9 @@ void ECS::Scene::ImGui()
 	// IGNORE HOW LONG THIS FUNCTION IS, IT'S FOR DEBUGGING AND EDITTING
 	// THE SCENE AND ENTITIES!!!!
 	static int selectedEntity = 0;
+
+	if (!m_running)
+		return;
 
 	// SCENE
 	ImGui::Begin("Scene");
@@ -313,7 +455,8 @@ void ECS::Scene::ImGui()
 			case 8:
 				entity->AddComponent<PhysicsTriggerComponent>();
 				break;
-      case 9:
+
+			case 9:
 				entity->AddComponent<FSMComponent>();
 				break;
 

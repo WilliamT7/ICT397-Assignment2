@@ -28,9 +28,12 @@
     <ClCompile Include="..\external\imgui-1.92.6\imgui_widgets.cpp" />
     <ClCompile Include="..\glad.c" />
     <ClCompile Include="..\include\graphics\GUI.cpp" />
+    <ClCompile Include="..\src\AI\AIHelper.cpp" />
+    <ClCompile Include="..\src\AI\AIMovement.cpp" />
     <ClCompile Include="..\src\ecs\AnimationComponent.cpp" />
     <ClCompile Include="..\src\ecs\CameraComponent.cpp" />
     <ClCompile Include="..\src\ecs\Entity.cpp" />
+    <ClCompile Include="..\src\ecs\EntitySearch.cpp" />
     <ClCompile Include="..\src\ecs\FSMComponent.cpp" />
     <ClCompile Include="..\src\ecs\LightingComponent.cpp" />
     <ClCompile Include="..\src\ecs\MeshRendererComponent.cpp" />
@@ -56,6 +59,7 @@
     <ClCompile Include="..\src\graphics\Model.cpp" />
     <ClCompile Include="..\src\graphics\Shader_OpenGL.cpp" />
     <ClCompile Include="..\src\graphics\Texture_OpenGL.cpp" />
+    <ClCompile Include="..\src\graphics\Vector3.cpp" />
     <ClCompile Include="..\src\graphics\Window.cpp" />
     <ClCompile Include="..\src\graphics\WindowFactory.cpp" />
     <ClCompile Include="..\src\graphics\Window_GLFW.cpp" />
@@ -69,9 +73,14 @@
     <ClCompile Include="..\src\luaReader\scriptGlobalsIO.cpp" />
     <ClCompile Include="..\src\luaReader\solExposedFunctionality.cpp" />
     <ClCompile Include="..\src\luaReader\SolScripting.cpp" />
+    <ClCompile Include="..\src\messaging\messageDisLua.cpp" />
+    <ClCompile Include="..\src\messaging\MessageDispatcher.cpp" />
+    <ClCompile Include="..\src\messaging\messageIO.cpp" />
+    <ClCompile Include="..\src\messaging\messageList.cpp" />
+    <ClCompile Include="..\src\messaging\telegram.cpp" />
     <ClCompile Include="..\src\other\fileIO.cpp" />
     <ClCompile Include="..\src\other\stringTools.cpp" />
-    <ClCompile Include="..\src\other\ThreadPool.cpp" />
+    <ClCompile Include="..\src\other\time.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsBody.cpp" />
     <ClCompile Include="..\src\physics\BulletPhysicsWorld.cpp" />
     <ClCompile Include="..\src\Task 1.cpp" />
@@ -93,11 +102,14 @@
     <ClInclude Include="..\external\imgui-1.92.6\imstb_rectpack.h" />
     <ClInclude Include="..\external\imgui-1.92.6\imstb_textedit.h" />
     <ClInclude Include="..\external\imgui-1.92.6\imstb_truetype.h" />
+    <ClInclude Include="..\include\AI\AIHelper.h" />
+    <ClInclude Include="..\include\AI\AIMovement.h" />
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h" />
     <ClInclude Include="..\include\ecs\AnimationComponent.h" />
     <ClInclude Include="..\include\ecs\CameraComponent.h" />
     <ClInclude Include="..\include\ecs\Component.h" />
     <ClInclude Include="..\include\ecs\Entity.h" />
+    <ClInclude Include="..\include\ecs\EntitySearch.h" />
     <ClInclude Include="..\include\ecs\FSMComponent.h" />
     <ClInclude Include="..\include\ecs\LightingComponent.h" />
     <ClInclude Include="..\include\ecs\MeshRendererComponent.h" />
@@ -151,11 +163,15 @@
     <ClInclude Include="..\include\luaReader\solExposedFunctionality.h" />
     <ClInclude Include="..\include\luaReader\SolScripting.h" />
     <ClInclude Include="..\include\luaReader\supportedDatatypes.h" />
-    <ClInclude Include="..\include\other\ctpl_stl.h" />
+    <ClInclude Include="..\include\messaging\messageDisLua.h" />
+    <ClInclude Include="..\include\messaging\MessageDispatcher.h" />
+    <ClInclude Include="..\include\Messaging\messageIO.h" />
+    <ClInclude Include="..\include\Messaging\messageList.h" />
+    <ClInclude Include="..\include\messaging\telegram.h" />
     <ClInclude Include="..\include\other\fileIO.h" />
     <ClInclude Include="..\include\other\singleton.h" />
     <ClInclude Include="..\include\other\stringTools.h" />
-    <ClInclude Include="..\include\other\ThreadPool.h" />
+    <ClInclude Include="..\include\other\time.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsBody.h" />
     <ClInclude Include="..\include\physics\BulletPhysicsWorld.h" />
     <ClInclude Include="..\include\physics\IPhysicsBody.h" />
@@ -275,7 +291,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\external\glm-1.0.3;$(ProjectDir)..\external\stb_image;$(ProjectDir)..\external\glad\include;$(ProjectDir)..\external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(ProjectDir)..\include\;$(ProjectDir)..\external\assimp\include;$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\imgui-1.92.6;$(ProjectDir)..\external\Lua-Sol\sol;$(ProjectDir)..\external\Lua-Sol\Lua\include;($ProjectDir)..\external\ctpl\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\external\glm-1.0.3;$(ProjectDir)..\external\stb_image;$(ProjectDir)..\external\glad\include;$(ProjectDir)..\external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(ProjectDir)..\include\;$(ProjectDir)..\external\assimp\include;$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\imgui-1.92.6;$(ProjectDir)..\external\Lua-Sol\sol;$(ProjectDir)..\external\Lua-Sol\Lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -295,6 +311,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

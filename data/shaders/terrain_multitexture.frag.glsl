@@ -1,5 +1,15 @@
 #version 330 core
 
+struct DirLight {
+	vec3 direction;
+
+	vec3 ambient;
+	vec3 diffuse;
+	vec3 specular;
+};
+
+uniform DirLight dirLight;
+
 in vec3 FragPos;
 in vec2 TexCoord;
 
@@ -88,7 +98,8 @@ void main()
     if (u_hasLightMap)
     {
         float lightValue = texture(u_lightMap, TexCoord).r;
-        baseColor.rgb *= (u_lightMapColor * lightValue);
+        vec3 light = dirLight.diffuse * 0.2;
+        baseColor.rgb *= (u_lightMapColor * lightValue) + light;
     }
 
     FragColor = vec4(baseColor.rgb, 1.0);

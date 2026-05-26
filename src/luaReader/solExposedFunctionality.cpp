@@ -7,7 +7,10 @@
 #include "ECS/AllComponentsInclude.h"
 #include "FSM/ScriptState.h"
 #include "graphics/GUI.h"
-
+#include "AI/AIMovement.h"
+#include "other/time.h"
+#include "messaging/messageDisLua.h"
+#include "messaging/telegram.h"
 
 //--------------------------------------
 
@@ -24,13 +27,23 @@ void exposeEntity(sol::state_view& solView) {
 		"addComponent",
 		&ECS::Entity::AddComponentByName,
 		"destroy",
-		&ECS::Entity::Destroy
+		&ECS::Entity::Destroy,
+		"getName",
+		&ECS::Entity::GetName,
+		"getID",
+		&ECS::Entity::GetID,
+		"retrieveMessage",
+		&ECS::Entity::retreiveMessage
 	);
 
 	solView.set_function("getScriptComponent", &ECS::Entity::GetScriptComponent);
 	solView.set_function("hasScript", &ECS::Entity::HasScriptComponent);
 	solView.set_function("addComponent", &ECS::Entity::AddComponentByName);
 	solView.set_function("destroy", &ECS::Entity::Destroy);
+	solView.set_function("getName", &ECS::Entity::GetName);
+	solView.set_function("getID", &ECS::Entity::GetID);
+	solView.set_function("retrieveMessage", &ECS::Entity::retreiveMessage);
+	
 }
 
 //---------------------------------------------
@@ -112,6 +125,17 @@ void exposeVectors(sol::state_view& solView) {
 
 		"normalize", &Vector2::Normalize
 	);
+
+	solView.new_usertype<Colour>(
+		"Colour",
+		sol::constructors<
+		Colour(),
+		Colour(float, float, float)
+		>(),
+		"r", &Colour::r,
+		"g", &Colour::g,
+		"b", &Colour::b
+	);
 }
 
 //-------------------------------------------------
@@ -162,6 +186,7 @@ void exposeScriptComponent(sol::state_view& solView) {
 }
 
 //-----------------------------------------------------------------------------------------------
+
 void exposeTransform(sol::state_view& solView) {
 
 	solView.new_usertype <ECS::TransformComponent >(
@@ -299,6 +324,7 @@ void exposePhysics(sol::state_view& solView) {
 	solView.set_function("setAngularVelocity", &ECS::PhysicsComponent::SetAngularVelocity);
 
 }
+
 //------------------------------------------------------------------------------------------
 
 void exposePhysicsTrigger(sol::state_view& solView) {
@@ -327,6 +353,8 @@ void exposePhysicsTrigger(sol::state_view& solView) {
 	solView.set_function("getPhysicsTrigger", &ECS::Entity::GetComponent<ECS::PhysicsTriggerComponent>);
 	solView.set_function("setTriggerHalfExtents", &ECS::PhysicsTriggerComponent::SetHalfExtents);
 }
+
+//------------------------------------------------------------------------------------------
 
 void exposeScriptGlobal(sol::state_view& solView) {
 	
@@ -385,6 +413,9 @@ void exposeFSM(sol::state_view& solView) {
 	solView.set_function("setExitCode", &ScriptState::setExitCode);
 
 }
+
+//------------------------------------------------------------------------------------------
+
 void exposeSceneFunctionality(sol::state_view& solView)
 {
 	LuaEngineFunctionality* luaEngineLink = Singleton<LuaEngineFunctionality>::getInstance();
@@ -395,7 +426,65 @@ void exposeSceneFunctionality(sol::state_view& solView)
 	if (assigned) {
 		// cool functions
 		solView.set_function("Spawn", &ECS::Scene::Spawn, luaEngineLink->getScenePointer());
+		solView.set_function("SaveScene", &ECS::Scene::SaveScene, luaEngineLink->getScenePointer());
+		solView.set_function("LoadScene", &ECS::Scene::LoadScene, luaEngineLink->getScenePointer());
+		solView.set_function("GetEntity", &ECS::Scene::GetEntity, luaEngineLink->getScenePointer());
 	}
 }
+
+//------------------------------------------------------------------------------------------
+
+void exposeAIBehaviours(sol::state_view& solView) {
+
+	solView.set_function("moveEntityTo", &moveEntityTo);
+
+}
+
+//------------------------------------------------------------------------------------------
+
+void exposeTime(sol::state_view& solView) {
+
+
+	solView.set_function("getDeltaTime", &getDeltatime);
+	solView.set_function("getCurrentFrame", &getCurrentFrame);
+	solView.set_function("getPreviousFrame", &getPreviousFrame);
+
+}
+
+//------------------------------------------------------------------------------------------
+
+void exposeMessageDispatcher(sol::state_view& solView) {
+
+
+	solView.new_usertype <telegram>(
+		"telegram",
+		sol::constructors <telegram>(),
+
+		"dispatchTime",
+		&telegram::dispatchTime,
+
+		"sender",
+		&telegram::sender,
+
+		"receiver",
+		&telegram::reciever,
+
+		"messageID",
+		&telegram::messageID,
+
+		"scriptName",
+		&telegram::scriptCompName,
+
+		"functionName",
+		&telegram::scriptFunctionName,
+
+		"data",
+		&telegram::data
+
+	);
+
+	solView.set_function("sendMessage", &sendMessage);
+}
+
 
 //------------------------------------------------------------------------------------------

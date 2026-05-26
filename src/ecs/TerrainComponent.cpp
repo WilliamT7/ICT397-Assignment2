@@ -27,6 +27,7 @@ namespace ECS
         m_terrain = nullptr;
         m_model = nullptr;
         m_transform = nullptr;
+        m_physicsWorld = nullptr;
     }
 
     void TerrainComponent::Start()
@@ -142,8 +143,6 @@ namespace ECS
 
         MakeTerrainTexture(graphics);
 
-        static int terrainModelCounter = 0;
-
         if (!m_model)
         {
             std::vector<Graphics::Mesh> meshes;
@@ -154,7 +153,7 @@ namespace ECS
                 return;
             }
 
-            std::string modelName = "TERRAIN_" + std::to_string(terrainModelCounter++);
+            const std::string modelName = "TERRAIN";
             m_model = graphics->CreateRuntimeModel(modelName, meshes);
 
             if (!m_model)

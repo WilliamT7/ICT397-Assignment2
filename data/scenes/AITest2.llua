@@ -1,0 +1,1093 @@
+scene = {
+  {
+    Components = {
+      {
+        Name = "Lighting",
+        ambient_b = 0.33333331346511841,
+        ambient_g = 0.080065347254276276,
+        ambient_r = 0.2215973436832428,
+        constant = 1,
+        diffuse_b = 0.58080047369003296,
+        diffuse_g = 0.18502499163150787,
+        diffuse_r = 0.85784316062927246,
+        direction_x = -2.2999999523162842,
+        direction_y = -3.4000000953674316,
+        direction_z = 1.2000000476837158,
+        linear = 0.090000003576278687,
+        quadratic = 0.032000001519918442,
+        specular_b = 0.70678412914276123,
+        specular_g = 0.67786425352096558,
+        specular_r = 0.7598038911819458,
+        type = "DIRECTIONAL"
+      } --[[table: 0000019BC7DA49C0]],
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 0,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA6940]]
+    } --[[table: 0000019BC7DA6440]],
+    EntityName = "Directional Lighting"
+  } --[[table: 0000019BC7DA5340]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -35.411026000976562,
+        position_y = -7.5500383377075195,
+        position_z = -120.4166259765625,
+        rotation_x = 0,
+        rotation_y = -90,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA5F40]],
+      {
+        Name = "Camera",
+        far_plane = 2000,
+        near_plane = 0.10000000149011612,
+        pitch = -58.300003051757812,
+        position_x = -35.411026000976562,
+        position_y = 2.4499616622924805,
+        position_z = -120.4166259765625,
+        yaw = 1709.1221923828125
+      } --[[table: 0000019BC7DA5740]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 0.69999998807907104,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = false,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA59C0]],
+      {
+        Name = "PhysicsTrigger",
+        enabled = true,
+        halfExtents_x = 1,
+        halfExtents_y = 1,
+        halfExtents_z = 1
+      } --[[table: 0000019BC7DA4DC0]],
+      {
+        Name = "Script",
+        fileName = "playerInput.lua",
+        filePath = "..\\data\\luaScripts\\"
+      } --[[table: 0000019BC7DA5B40]],
+      {
+        Name = "Script",
+        fileName = "physicsTriggers.lua",
+        filePath = "..\\data\\luaScripts\\"
+      } --[[table: 0000019BC7DA5C40]]
+    } --[[table: 0000019BC7DA4D40]],
+    EntityName = "Player"
+  } --[[table: 0000019BC7DA5FC0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -800,
+        position_y = -167.69999694824219,
+        position_z = -548.20001220703125,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA6540]],
+      {
+        Name = "Terrain",
+        is_wireframe = false,
+        mode = "fault",
+        scale_x = 10,
+        scale_y = 1,
+        scale_z = 10,
+        seed = 0
+      } --[[table: 0000019BC7DA5540]],
+      {
+        Name = "Script",
+        fileName = "terraintoggle.lua",
+        filePath = "..\\data\\luaScripts\\"
+      } --[[table: 0000019BC7DA6140]]
+    } --[[table: 0000019BC7DA64C0]],
+    EntityName = "Terrain"
+  } --[[table: 0000019BC7DA53C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 10.752108573913574,
+        position_y = -8.3827896118164062,
+        position_z = -94.879234313964844,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 2,
+        scale_y = 2,
+        scale_z = 2
+      } --[[table: 0000019BC7DA5640]],
+      {
+        ModelID = "PALM TREE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA51C0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 1,
+        halfExtents_y = 1,
+        halfExtents_z = 1,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA56C0]],
+      {
+        Name = "Script",
+        fileName = "AITest.lua",
+        filePath = "..\\data\\luaScripts\\"
+      } --[[table: 0000019BC7DA5A40]]
+    } --[[table: 0000019BC7DA50C0]],
+    EntityName = "VERY SMART TREE"
+  } --[[table: 0000019BC7DA4E40]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 13.359000205993652,
+        position_y = -0.37099999189376831,
+        position_z = 5.8429999351501465,
+        rotation_x = 0,
+        rotation_y = 44.400001525878906,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA5CC0]],
+      {
+        ModelID = "PALM TREE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA62C0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.5,
+        halfExtents_y = 2.7999999523162842,
+        halfExtents_z = 0.5,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA5D40]]
+    } --[[table: 0000019BC7DA6240]],
+    EntityName = "Palm Tree"
+  } --[[table: 0000019BC7DA5240]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 13.659000396728516,
+        position_y = -1.1710000038146973,
+        position_z = -6.0570001602172852,
+        rotation_x = 0,
+        rotation_y = -39.200000762939453,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA6640]],
+      {
+        ModelID = "PALM TREE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA4EC0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.5,
+        halfExtents_y = 2.7999999523162842,
+        halfExtents_z = 0.5,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA66C0]]
+    } --[[table: 0000019BC7DA65C0]],
+    EntityName = "Palm Tree"
+  } --[[table: 0000019BC7DA5E40]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 27.559000015258789,
+        position_y = -1.4709999561309814,
+        position_z = 6.1430001258850098,
+        rotation_x = 0,
+        rotation_y = 135.89999389648438,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA6840]],
+      {
+        ModelID = "PALM TREE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA68C0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.5,
+        halfExtents_y = 2.7999999523162842,
+        halfExtents_z = 0.5,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA4A40]]
+    } --[[table: 0000019BC7DA67C0]],
+    EntityName = "Palm Tree"
+  } --[[table: 0000019BC7DA4FC0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0.55900001525878906,
+        position_y = 0.42899999022483826,
+        position_z = 8.6429996490478516,
+        rotation_x = 0,
+        rotation_y = 16.200000762939453,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA6A40]],
+      {
+        ModelID = "PALM TREE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA6AC0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.5,
+        halfExtents_y = 2.7999999523162842,
+        halfExtents_z = 0.5,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA72C0]]
+    } --[[table: 0000019BC7DA81C0]],
+    EntityName = "Palm Tree"
+  } --[[table: 0000019BC7DA4B40]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 9.2589998245239258,
+        position_y = 0.82899999618530273,
+        position_z = 19.443000793457031,
+        rotation_x = 0,
+        rotation_y = -82.099998474121094,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA6F40]],
+      {
+        ModelID = "PALM TREE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA6B40]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.5,
+        halfExtents_y = 2.7999999523162842,
+        halfExtents_z = 0.5,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA85C0]]
+    } --[[table: 0000019BC7DA76C0]],
+    EntityName = "Palm Tree"
+  } --[[table: 0000019BC7DA8740]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 17.358999252319336,
+        position_y = 0,
+        position_z = 23.243000030517578,
+        rotation_x = 0,
+        rotation_y = 30.600000381469727,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA88C0]],
+      {
+        ModelID = "PALM TREE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA80C0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.5,
+        halfExtents_y = 2.7999999523162842,
+        halfExtents_z = 0.5,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA6D40]]
+    } --[[table: 0000019BC7DA8540]],
+    EntityName = "Palm Tree"
+  } --[[table: 0000019BC7DA82C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 4.1380000114440918,
+        position_y = 0.89999997615814209,
+        position_z = 9.9304676055908203,
+        rotation_x = 0,
+        rotation_y = 26.399999618530273,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA7040]],
+      {
+        ModelID = "ROCK",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA8640]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.89999997615814209,
+        halfExtents_y = 0.69999998807907104,
+        halfExtents_z = 0.89999997615814209,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA6C40]]
+    } --[[table: 0000019BC7DA6DC0]],
+    EntityName = "Rock"
+  } --[[table: 0000019BC7DA87C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -7.4000000953674316,
+        position_y = 0.89999997615814209,
+        position_z = -1.2000000476837158,
+        rotation_x = 0,
+        rotation_y = 141.80000305175781,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA6EC0]],
+      {
+        ModelID = "ROCK",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA7140]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.89999997615814209,
+        halfExtents_y = 0.69999998807907104,
+        halfExtents_z = 0.89999997615814209,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA8140]]
+    } --[[table: 0000019BC7DA6CC0]],
+    EntityName = "Rock"
+  } --[[table: 0000019BC7DA8040]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 11.300000190734863,
+        position_y = 1.1000000238418579,
+        position_z = 22.799999237060547,
+        rotation_x = 0,
+        rotation_y = -35.5,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA7740]],
+      {
+        ModelID = "ROCK",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA8340]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.89999997615814209,
+        halfExtents_y = 0.69999998807907104,
+        halfExtents_z = 0.89999997615814209,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA71C0]]
+    } --[[table: 0000019BC7DA6E40]],
+    EntityName = "Rock"
+  } --[[table: 0000019BC7DA8240]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 27.100000381469727,
+        position_y = -1,
+        position_z = 4.1999998092651367,
+        rotation_x = 0,
+        rotation_y = 31.299999237060547,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA75C0]],
+      {
+        ModelID = "ROCK",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA8840]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.89999997615814209,
+        halfExtents_y = 0.69999998807907104,
+        halfExtents_z = 0.89999997615814209,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA8440]]
+    } --[[table: 0000019BC7DA83C0]],
+    EntityName = "Rock"
+  } --[[table: 0000019BC7DA78C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -6,
+        position_y = 1.7999999523162842,
+        position_z = 9.8999996185302734,
+        rotation_x = 0,
+        rotation_y = 116.59999847412109,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA7340]],
+      {
+        ModelID = "ROCK",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA7F40]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.89999997615814209,
+        halfExtents_y = 0.69999998807907104,
+        halfExtents_z = 0.89999997615814209,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA8940]]
+    } --[[table: 0000019BC7DA86C0]],
+    EntityName = "Rock"
+  } --[[table: 0000019BC7DA77C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = -1.1000000238418579,
+        position_z = -11.399999618530273,
+        rotation_x = 0,
+        rotation_y = -122.59999847412109,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA74C0]],
+      {
+        ModelID = "AMYROSE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA7540]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA7A40]]
+    } --[[table: 0000019BC7DA69C0]],
+    EntityName = "Amy Rose 1"
+  } --[[table: 0000019BC7DA7440]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -6.3000001907348633,
+        position_y = 3,
+        position_z = -1.2999999523162842,
+        rotation_x = -54.700000762939453,
+        rotation_y = 0,
+        rotation_z = 0.10000000149011612,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA7AC0]],
+      {
+        ModelID = "AMYROSE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA7B40]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA7FC0]]
+    } --[[table: 0000019BC7DA79C0]],
+    EntityName = "Amy Rose 2"
+  } --[[table: 0000019BC7DA7940]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 4,
+        position_y = 1.3999999761581421,
+        position_z = 0.69999998807907104,
+        rotation_x = 66,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA7D40]],
+      {
+        ModelID = "AMYROSE",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA7DC0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA7EC0]]
+    } --[[table: 0000019BC7DA7CC0]],
+    EntityName = "Amy Rose 3"
+  } --[[table: 0000019BC7DA7C40]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 3.5999999046325684,
+        position_y = 64,
+        position_z = -82.300003051757812,
+        rotation_x = -15.800000190734863,
+        rotation_y = 0,
+        rotation_z = 11.5,
+        scale_x = 20,
+        scale_y = 20,
+        scale_z = 20
+      } --[[table: 0000019BC7DAA540]],
+      {
+        ModelID = "BLAHAJ",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DAA640]]
+    } --[[table: 0000019BC7DA9BC0]],
+    EntityName = "Blahaj 1"
+  } --[[table: 0000019BC7DA90C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 33.900001525878906,
+        position_z = 38.5,
+        rotation_x = -14.600000381469727,
+        rotation_y = -123.90000152587891,
+        rotation_z = 4.8000001907348633,
+        scale_x = 10,
+        scale_y = 2.2000000476837158,
+        scale_z = 10
+      } --[[table: 0000019BC7DA9340]],
+      {
+        ModelID = "BLAHAJ",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA9440]]
+    } --[[table: 0000019BC7DAA5C0]],
+    EntityName = "Blahaj 2"
+  } --[[table: 0000019BC7DA9C40]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 3.7999999523162842,
+        position_y = 3.2999999523162842,
+        position_z = 2.4000000953674316,
+        rotation_x = -20.200000762939453,
+        rotation_y = 180,
+        rotation_z = 0,
+        scale_x = 0.20000000298023224,
+        scale_y = 0.20000000298023224,
+        scale_z = 0.20000000298023224
+      } --[[table: 0000019BC7DA9EC0]],
+      {
+        ModelID = "BLAHAJ",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA8CC0]]
+    } --[[table: 0000019BC7DAA440]],
+    EntityName = "Blahaj 3"
+  } --[[table: 0000019BC7DAA840]],
+  {
+    Components = {
+      {
+        Name = "Animation"
+      } --[[table: 0000019BC7DA9040]],
+      {
+        Name = "Transform",
+        position_x = 0.60000002384185791,
+        position_y = -0.30000001192092896,
+        position_z = -4.8000001907348633,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA89C0]],
+      {
+        ModelID = "MINT",
+        Name = "MeshRenderer",
+        ShaderID = 3
+      } --[[table: 0000019BC7DA94C0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 1,
+        halfExtents_y = 1,
+        halfExtents_z = 1,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DAA8C0]],
+      {
+        Name = "Script",
+        fileName = "animationTest.lua",
+        filePath = "..\\data\\luaScripts\\"
+      } --[[table: 0000019BC7DA92C0]]
+    } --[[table: 0000019BC7DA93C0]],
+    EntityName = "Mint 1"
+  } --[[table: 0000019BC7DAA740]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 27.700000762939453,
+        position_y = 1.2000000476837158,
+        position_z = 4.1999998092651367,
+        rotation_x = 0,
+        rotation_y = 159.80000305175781,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAA3C0]],
+      {
+        ModelID = "MINT",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DAA6C0]]
+    } --[[table: 0000019BC7DA96C0]],
+    EntityName = "Mint 2"
+  } --[[table: 0000019BC7DAA340]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 6.8000001907348633,
+        position_y = 9.1000003814697266,
+        position_z = 0.20000000298023224,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA9D40]],
+      {
+        ModelID = "MINT",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA8B40]]
+    } --[[table: 0000019BC7DAA7C0]],
+    EntityName = "Mint 3"
+  } --[[table: 0000019BC7DAA940]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -33.299999237060547,
+        position_y = 3.2999999523162842,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = -79.5,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA8AC0]],
+      {
+        ModelID = "HUMAN",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA8DC0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA9F40]]
+    } --[[table: 0000019BC7DA91C0]],
+    EntityName = "Human 1"
+  } --[[table: 0000019BC7DA8A40]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 53.599998474121094,
+        position_y = 0.60000002384185791,
+        position_z = 44.400001525878906,
+        rotation_x = 0,
+        rotation_y = 10.600000381469727,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAA040]],
+      {
+        ModelID = "HUMAN",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA9240]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA9540]]
+    } --[[table: 0000019BC7DA8BC0]],
+    EntityName = "Human 2"
+  } --[[table: 0000019BC7DA9740]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -3.9000000953674316,
+        position_y = 20.299999237060547,
+        position_z = 16.100000381469727,
+        rotation_x = -13,
+        rotation_y = -31.600000381469727,
+        rotation_z = 1.2000000476837158,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA9E40]],
+      {
+        ModelID = "HUMAN",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA9A40]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA8D40]]
+    } --[[table: 0000019BC7DA8C40]],
+    EntityName = "Human 3"
+  } --[[table: 0000019BC7DA99C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 23,
+        position_y = -0.89999997615814209,
+        position_z = 2.5,
+        rotation_x = 0,
+        rotation_y = 78.5,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA9840]],
+      {
+        ModelID = "AKALI",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA9940]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA97C0]]
+    } --[[table: 0000019BC7DA8EC0]],
+    EntityName = "Akali 1"
+  } --[[table: 0000019BC7DA9AC0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 15.899999618530273,
+        position_y = 0.89999997615814209,
+        position_z = 23.399999618530273,
+        rotation_x = 0,
+        rotation_y = -112.5,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DA8FC0]],
+      {
+        ModelID = "AKALI",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DA9B40]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DA9CC0]]
+    } --[[table: 0000019BC7DA9640]],
+    EntityName = "Akali 2"
+  } --[[table: 0000019BC7DA98C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 13.300000190734863,
+        position_y = 1.1000000238418579,
+        position_z = 22.600000381469727,
+        rotation_x = 0,
+        rotation_y = 82.800003051757812,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAA0C0]],
+      {
+        ModelID = "AKALI",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 0000019BC7DAA140]],
+      {
+        Name = "Physics",
+        halfExtents_x = 0.44999998807907104,
+        halfExtents_y = 1,
+        halfExtents_z = 0.44999998807907104,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DAA1C0]]
+    } --[[table: 0000019BC7DA9FC0]],
+    EntityName = "Akali 3"
+  } --[[table: 0000019BC7DA9DC0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 0,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAB6C0]],
+      {
+        Name = "TextureRenderer",
+        TextureID = "Help Manual",
+        enabled = false,
+        position_x = 0.73000001907348633,
+        position_y = 0.2199999988079071,
+        size_x = 0.5,
+        size_y = 0.5
+      } --[[table: 0000019BC7DAB9C0]],
+      {
+        Name = "Script",
+        fileName = "displayTexture.lua",
+        filePath = "..\\data\\luaScripts\\"
+      } --[[table: 0000019BC7DAC340]]
+    } --[[table: 0000019BC7DAAA40]],
+    EntityName = "Help Manual"
+  } --[[table: 0000019BC7DAC3C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 0,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAB4C0]],
+      {
+        Name = "TextureRenderer",
+        TextureID = "End Screen",
+        enabled = false,
+        position_x = 0,
+        position_y = 0,
+        size_x = 1,
+        size_y = 1
+      } --[[table: 0000019BC7DAB040]],
+      {
+        Name = "Script",
+        fileName = "endScreen.lua",
+        filePath = "..\\data\\luaScripts\\"
+      } --[[table: 0000019BC7DABBC0]]
+    } --[[table: 0000019BC7DAB340]],
+    EntityName = "End Screen"
+  } --[[table: 0000019BC7DAAFC0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -298,
+        position_y = 40,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DABC40]],
+      {
+        Name = "Physics",
+        halfExtents_x = 1,
+        halfExtents_y = 100,
+        halfExtents_z = 300,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DAB2C0]]
+    } --[[table: 0000019BC7DAC540]],
+    EntityName = "Wall Left"
+  } --[[table: 0000019BC7DABCC0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 298,
+        position_y = 40,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAB740]],
+      {
+        Name = "Physics",
+        halfExtents_x = 1,
+        halfExtents_y = 100,
+        halfExtents_z = 300,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DAAF40]]
+    } --[[table: 0000019BC7DAB540]],
+    EntityName = "Wall Right"
+  } --[[table: 0000019BC7DAA9C0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 40,
+        position_z = -298,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAC840]],
+      {
+        Name = "Physics",
+        halfExtents_x = 300,
+        halfExtents_y = 100,
+        halfExtents_z = 1,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DABAC0]]
+    } --[[table: 0000019BC7DAC0C0]],
+    EntityName = "Wall Front"
+  } --[[table: 0000019BC7DAC440]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 40,
+        position_z = 298,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000019BC7DAAAC0]],
+      {
+        Name = "Physics",
+        halfExtents_x = 300,
+        halfExtents_y = 100,
+        halfExtents_z = 1,
+        isStatic = true,
+        mass = 1,
+        shape = "box"
+      } --[[table: 0000019BC7DABE40]]
+    } --[[table: 0000019BC7DAC4C0]],
+    EntityName = "Wall Back"
+  } --[[table: 0000019BC7DAB0C0]]
+} --[[table: 0000019BC7DA6340]]

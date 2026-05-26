@@ -5,7 +5,9 @@
 #include <filesystem>
 #include "ecs/AllComponentsInclude.h"
 
+
 using namespace ECS;
+using std::to_string;
 
 int Entity::m_entityCount = 0;
 
@@ -19,8 +21,26 @@ ECS::Entity::Entity()
 
 //----------------------------------------------
 
+ECS::Entity::~Entity()
+{
+
+	int size = m_components.size();
+	for (int i = size - 1; i >= 0; i--)
+	{
+		delete m_components[i];
+	}
+
+	m_components.clear();
+	m_componentsMap.clear();
+	m_scripts.clear();
+	m_scriptsMap.clear();
+}
+
+//----------------------------------------------
+
 void ECS::Entity::Start()
 {
+	cout << "ENTITY STARTED\n";
 	for (auto& comp : m_components)
 	{
 		comp->Start();
@@ -36,6 +56,7 @@ void ECS::Entity::Start()
 
 void ECS::Entity::Update(float deltaTime)
 {
+
 	for (auto& comp : m_components)
 	{
 		comp->Update(deltaTime);
@@ -173,17 +194,25 @@ std::string ECS::Entity::GetName() const
 
 void ECS::Entity::ImGui()
 {
+
+	ImGui::Text("Entity ID: %d", GetID());
+
 	static char buf[32];
 	ImGui::InputText("Name", buf, IM_COUNTOF(buf));
+
 
 	if (ImGui::Button("Set Name"))
 		name = buf;
 
+	int id = 0;
 	for (auto& comp : m_components)
 	{
+		ImGui::PushID(id);
 		comp->ImGui();
+		ImGui::PopID();
+		id++;
 	}
-	int id = 0;
+	
 	for (auto& script : m_scripts) {
 		ImGui::PushID(id);
 		script.ImGui();
@@ -206,7 +235,7 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 		comp.setScript(filePath);
 		
 		m_scriptsMap[scriptName] = m_scripts.size() - 1;
-		//scripts[scriptName].Start();
+
 	}
 
 	return GetScriptComponent(scriptName);
@@ -262,3 +291,32 @@ int Entity::GetID() const
 }
 
 //----------------------------------------------
+
+void Entity::ResetIDCounter()
+{
+	m_entityCount = 0;
+}
+
+//----------------------------------------------
+
+void Entity::handleMessage(telegram& message) {
+
+	recievedMessage = message;
+
+	if (HasScriptComponent(message.scriptCompName)) {
+		
+		ScriptComponent& const scriptComponent = GetScriptComponent(message.scriptCompName);
+		scriptComponent.runFunction(message.scriptFunctionName);
+
+	}
+
+
+}
+//----------------------------------------------
+
+telegram Entity::retreiveMessage() {
+	telegram message = recievedMessage;
+	recievedMessage = telegram();
+	return message;
+
+}

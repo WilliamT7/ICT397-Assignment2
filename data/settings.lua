@@ -1,5 +1,5 @@
 settings = {
-    scene = "animationTest.lua",
+    scene = "FSMTest.lua",
     mouseVisible = true,
-    imGuiVisible = false
+    imGuiVisible = true
 }

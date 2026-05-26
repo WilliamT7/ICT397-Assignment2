@@ -11,6 +11,17 @@
 
 namespace Graphics
 {
+	TextureOpenGL::~TextureOpenGL()
+	{
+		if (m_ID != 0)
+		{
+			glDeleteTextures(1, &m_ID);
+			m_ID = 0;
+		}
+	}
+
+	//----------------------------------------------
+
 	bool TextureOpenGL::GenerateTexture()
 	{
 		int width, height, nChannels;

@@ -19,7 +19,9 @@ ECS::ScriptComponent::ScriptComponent() {
 	scripting = std::make_unique<SolScripting>();
 }
 
-ECS::ScriptComponent::~ScriptComponent() = default;
+ECS::ScriptComponent::~ScriptComponent() {
+	scripting.reset();
+}
 
 ECS::ScriptComponent::ScriptComponent(ScriptComponent&&) noexcept = default;
 
@@ -29,6 +31,10 @@ ECS::ScriptComponent& ECS::ScriptComponent::operator=(ScriptComponent&&) noexcep
 
 void ECS::ScriptComponent::Start() {
 
+	cout << "Attempinting to run start() on " << luaFile.getFileName() << "\n";
+	cout << scriptAssigned << "\n";
+	cout << hasStart << "\n";
+
 	if (scriptAssigned && hasStart) {
 		scripting->runLoaded(luaFile, "start", entity);
 	}
@@ -36,6 +42,21 @@ void ECS::ScriptComponent::Start() {
 
 //-----------------------------------------------------------
 
+void ECS::ScriptComponent::runFunction(const string& const functionName) {
+
+	bool hasFunction = findFunction(luaFile, functionName);
+
+	if (hasFunction) {
+		scripting->runLoaded(luaFile, functionName, entity);
+	}
+	else {
+		cout << "I dont have " << functionName << " sorry :(\n";
+	}
+
+
+
+}
+//-----------------------------------------------------------
 
 void ECS::ScriptComponent::Update(float deltaTime) {
 
@@ -45,6 +66,8 @@ void ECS::ScriptComponent::Update(float deltaTime) {
 	}
 
 }
+
+//------------------------------------------------------------
 
 void ECS::ScriptComponent::Render(Graphics::Graphics* graphics)
 {
@@ -80,6 +103,7 @@ void ECS::ScriptComponent::setScript(string filePath) {
 	hasUpdate = findFunction(luaFile, "update");
 	hasStart = findFunction(luaFile, "start");
 	hasRender = findFunction(luaFile, "render");
+	Start();
 
 	if (!hasUpdate) {
 

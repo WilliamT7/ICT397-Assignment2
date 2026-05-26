@@ -14,7 +14,7 @@ namespace ECS
 
 		// make new scene
 		Scene* sc = new Scene();
-		sc->Init(phys);
+		sc->Init(phys, fileName);
 
 		// read in file from fileName
 		try
@@ -32,6 +32,7 @@ namespace ECS
 
 		// load it into the scene
 		sc->DeserialiseScene(sceneTable);
+
 
 		// return the scene
 		return sc;
@@ -73,6 +74,34 @@ namespace ECS
 		if (ImGui::Button("Save Scene"))
 		{
 			SceneLoader::GenerateSceneFile(scene, lua, buf);
+		}
+		if (ImGui::Button("Load Scene"))
+		{
+			std::string fileName = "demo.lua";
+
+			scene->Clear();
+
+			std::string path = "../data/scenes/";
+			std::string fullpath = path + fileName;
+
+
+			// read in file from fileName
+			try
+			{
+				lua.script_file(fullpath);
+			}
+			catch (const sol::error& e)
+			{
+				std::cout << "[C++]: Error: SOL: Unable to open " << fullpath << std::endl;
+				return;
+			}
+
+			// grab the scene table
+			sol::table sceneTable = lua["scene"];
+
+			// load it into the scene
+			scene->DeserialiseScene(sceneTable);
+			scene->SetRunning(true);
 		}
 
 		ImGui::End();

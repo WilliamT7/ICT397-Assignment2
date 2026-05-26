@@ -2,6 +2,7 @@
 
 function start() 
 
+	print("START")
 	fsm = getFSM(obj)
 	
 	chaseState = fsm:createState("Chase")

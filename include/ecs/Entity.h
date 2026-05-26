@@ -24,6 +24,7 @@
 #include "Component.h"
 #include "ScriptComponent.h"
 #include "graphics/Graphics.h"
+#include "messaging/telegram.h"
 
 //----------------------------------------------
 
@@ -46,8 +47,10 @@ namespace ECS
 		Entity(const Entity&) = delete;
 		Entity& operator=(const Entity&) = delete;
 
-		Entity(Entity&&) noexcept = default;
-		Entity& operator=(Entity&&) noexcept = default;
+		Entity(Entity&&) = delete;
+		Entity& operator=(Entity&&) = delete;
+
+		~Entity();
 
 		/** Add Component
 		* @author - Kay Bradsell
@@ -181,10 +184,16 @@ namespace ECS
 
 		int GetID() const;
 
+		telegram retreiveMessage();
+
+		void handleMessage(telegram& message);
+
 		ScriptComponent& AddScriptComponent(std::string filePath);
 		ScriptComponent& GetScriptComponent(std::string scriptName);
 		bool HasScriptComponent(std::string scriptName) const;
 		std::string static GetScriptName(std::string filePath);
+
+		static void ResetIDCounter();
 
 	private:
 		std::vector<Component*> m_components;
@@ -194,6 +203,8 @@ namespace ECS
 
 		std::string name = "Object";
 		bool m_deleteFlag = false;
+
+		telegram recievedMessage; //im sorry kay :(
 
 		static int m_entityCount;
 		int m_entityID;
@@ -248,6 +259,7 @@ void ECS::Entity::RemoveComponent()
 {
 	if (HasComponent<T>())
 	{
+		//TODO: FIX!!!!
 		auto it = m_componentsMap.find(typeid(T));
 		m_components[it->second] = std::move(m_components.back());
 		m_components.pop_back();

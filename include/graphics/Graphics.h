@@ -224,6 +224,16 @@ namespace Graphics
 		**/
 		virtual Model* CreateRuntimeModel(const std::string& modelName, const std::vector<Mesh>& meshes) = 0;
 
+		/** DestroyRuntimeModel
+		* @author - William Thorpe
+		* @brief - Destroys the runtime model
+		* @param - const std::string& modelName
+		* @pre - model created at runtime with a name exists
+		* @post - Destroys that model and frees it from this world
+		* @return none
+		 **/
+		virtual void DestroyRuntimeModel(const std::string& modelName) = 0;
+
 		/** CreateRuntimeLightingTexture
 		* @author - William Thorpe
 		* @brief - Creates a texture at runtime, given the data for the texture.
@@ -236,6 +246,17 @@ namespace Graphics
 		* @return - Texture* - returns a pointer to the created texture.
 		**/
 		virtual Texture* CreateRuntimeLightingTexture(const unsigned char* data, int width, int height, int channels) = 0;
+
+
+		/** DestroyRuntimeTexture
+		* @author - William Thorpe
+		* @brief - Destroys the runtime texture
+		* @param - const std::string& textureName
+		* @pre - texture created at runtime with a name exists
+		* @post - Destroys that texture and frees it from this world
+		* @return none
+		 **/
+		virtual void DestroyRuntimeTexture(const std::string& textureName) = 0;
 
 		/** SetWireframeMode
 		* @author - William Thorpe

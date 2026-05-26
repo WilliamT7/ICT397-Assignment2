@@ -44,9 +44,14 @@ namespace Graphics
 			delete pair.second;
 		}
 
-		for (auto& pair : m_meshVAOs)
+		for (auto& pair : m_meshBuffers)
 		{
-			glDeleteVertexArrays(1, &pair.second);
+			if (pair.second.VAO != 0)
+				glDeleteVertexArrays(1, &pair.second.VAO);
+			if (pair.second.VBO != 0)
+				glDeleteBuffers(1, &pair.second.VBO);
+			if (pair.second.EBO != 0)
+				glDeleteBuffers(1, &pair.second.EBO);
 		}
 	}
 
@@ -243,7 +248,7 @@ namespace Graphics
 	void GraphicsOpenGL::SetupMesh(Mesh* mesh)
 	{
 		if (!mesh) return;
-		if (m_meshVAOs.find(mesh) != m_meshVAOs.end())
+		if (m_meshBuffers.find(mesh) != m_meshBuffers.end())
 			return; // already setup
 
 		unsigned int VAO, VBO, EBO;
@@ -279,7 +284,7 @@ namespace Graphics
 		glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, weights));
 
 		glBindVertexArray(0);
-		m_meshVAOs[mesh] = VAO;
+		m_meshBuffers[mesh] = { VAO, VBO, EBO };
 	}
 
 	//----------------------------------------------
@@ -326,7 +331,7 @@ namespace Graphics
 		glActiveTexture(GL_TEXTURE0);
 
 		// Draw
-		glBindVertexArray(m_meshVAOs[mesh]);
+		glBindVertexArray(m_meshBuffers[mesh].VAO);
 		glDrawElements(GL_TRIANGLES, mesh->GetIndices().size(), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
 	}
@@ -466,11 +471,7 @@ namespace Graphics
 
 	Model* GraphicsOpenGL::CreateRuntimeModel(const std::string& modelName, const std::vector<Mesh>& meshes)
 	{
-		auto found = m_models.find(modelName);
-		if (found != m_models.end())
-		{
-			return found->second; // already exists, return it
-		}
+		DestroyRuntimeModel(modelName);
 
 		Model* model = new Model(meshes);
 		m_models[modelName] = model;
@@ -487,19 +488,46 @@ namespace Graphics
 
 	//----------------------------------------------
 
+	void GraphicsOpenGL::DestroyRuntimeModel(const std::string& modelName)
+	{
+		auto found = m_models.find(modelName);
+		if (found == m_models.end())
+			return;
+
+		Model* model = found->second;
+		if (model != nullptr)
+		{
+			for (auto& mesh : model->GetMeshes())
+			{
+				auto buffers = m_meshBuffers.find(&mesh);
+				if (buffers != m_meshBuffers.end())
+				{
+					if (buffers->second.VAO != 0)
+						glDeleteVertexArrays(1, &buffers->second.VAO);
+					if (buffers->second.VBO != 0)
+						glDeleteBuffers(1, &buffers->second.VBO);
+					if (buffers->second.EBO != 0)
+						glDeleteBuffers(1, &buffers->second.EBO);
+
+					m_meshBuffers.erase(buffers);
+				}
+			}
+
+			delete model;
+		}
+
+		m_models.erase(found);
+	}
+
+	//----------------------------------------------
+
 	Texture* GraphicsOpenGL::CreateRuntimeLightingTexture(const unsigned char* data, int width, int height, int channels)
 	{
 		if (!data || width <= 0 || height <= 0)
 			return nullptr;
 
-		std::string baseName = "terrain_lightmap";
-		std::string textureName = baseName;
-		int i = 0;
-
-		while (m_textures.find(textureName) != m_textures.end())
-		{
-			textureName = baseName + "_" + std::to_string(i++);
-		}
+		std::string textureName = "terrain_lightmap";
+		DestroyRuntimeTexture(textureName);
 
 		TextureOpenGL* tex = new TextureOpenGL(
 			"",                // no file path, this is runtime-generated
@@ -521,6 +549,18 @@ namespace Graphics
 
 		m_textures[textureName] = tex;
 		return tex;
+	}
+
+	//----------------------------------------------
+
+	void GraphicsOpenGL::DestroyRuntimeTexture(const std::string& textureName)
+	{
+		auto found = m_textures.find(textureName);
+		if (found == m_textures.end())
+			return;
+
+		delete found->second;
+		m_textures.erase(found);
 	}
 
 	//----------------------------------------------

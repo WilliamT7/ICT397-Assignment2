@@ -61,7 +61,8 @@ void ECS::MeshRendererComponent::Update(float deltaTime)
 void ECS::MeshRendererComponent::Render(Graphics::Graphics* graphics)
 {
 	g = graphics;
-    if (!transform) return;
+	if (!transform)
+		transform = entity->GetComponent<TransformComponent>();
 
     // Load the model if not already
 	if (!model)
@@ -100,12 +101,6 @@ void ECS::MeshRendererComponent::ChangeModel()
 	}
 
 	model = g->LoadModel(ModelID, it->second);
-
-	if (!model)
-	{
-		std::cerr << "[C++]: ERROR: Failed to load model '" << ModelID << "'\n";
-		return;
-	}
 }
 
 //----------------------------------------------
