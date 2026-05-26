@@ -6,7 +6,9 @@
 #include "ecs/Entity.h"
 #include "graphics/ShaderType.h"
 #include "physics/BulletPhysicsWorld.h"
-#include <ecs/PhysicsTriggerComponent.h>
+#include "messaging/MessageDispatcher.h"
+#include <ecs/PhysicsTriggerComponent.h> //woah <> thats cool it works
+#include "other/singleton.h"
 
 #include "ecs/SceneLoader.h"
 #include "imgui_impl_opengl3.h" // for now
@@ -17,8 +19,15 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 {
 	//PHYSICS AGAIN :D
 	m_physicsWorld = physicsWorld;
+
 	LoadSceneScene(fileName);
 	m_running = true;
+
+	//Link message disptacher with entity list
+	//TODO deal with cases to do with loading a new scene
+	MessageDispatcher* messageManager = Singleton<MessageDispatcher>::getInstance();
+	messageManager->linkEntityList(&entities);
+
 }
 
 //----------------------------------------------
@@ -32,6 +41,7 @@ void ECS::Scene::Clear()
 	//}
 	entities.clear();
 	entities.shrink_to_fit();
+	ECS::Entity::ResetIDCounter();
 	//m_physicsWorld = new BulletPhysicsWorld();
 }
 
@@ -130,7 +140,11 @@ void ECS::Scene::Update(float deltaTime)
 		m_physicsWorld->Step(deltaTime);
 	}
 
+
 	ProcessTriggers();
+
+
+	updateMessageDispatcher(deltaTime);
 
 	int size = entities.size();
 	
@@ -252,6 +266,19 @@ void ECS::Scene::InjectPhysicsWorld(Entity* entity)
 
 
 
+
+//----------------------------------------------
+
+ECS::Entity* ECS::Scene::GetEntity(int ID)
+{
+	for (auto& entity : entities)
+	{
+		if (entity->GetID() == ID)
+			return entity.get();
+	}
+
+	return nullptr;
+}
 
 //----------------------------------------------
 
@@ -426,7 +453,8 @@ void ECS::Scene::ImGui()
 			case 8:
 				entity->AddComponent<PhysicsTriggerComponent>();
 				break;
-      case 9:
+
+			case 9:
 				entity->AddComponent<FSMComponent>();
 				break;
 

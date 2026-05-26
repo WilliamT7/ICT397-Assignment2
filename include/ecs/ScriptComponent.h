@@ -83,6 +83,9 @@ namespace ECS {
 		ScriptFile const getScript();
 
 
+		void runFunction(const string& const functionName);
+
+
 
 		/** getScriptPointer
 		* @author - Seb D'Alessandro

@@ -240,6 +240,14 @@ void SolScripting::exposeEngineFunctions(sol::state_view& solView) {
 
 	exposeSolScripting(solView);
 
+	exposeAIBehaviours(solView);
+
+	//Singleton accessors
+
+	exposeTime(solView);
+
+	exposeMessageDispatcher(solView);
+
 	// Scene functions like spawn prefabs
 	exposeSceneFunctionality(solView);
 
@@ -303,7 +311,7 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 		exposeCamera(solView);
 	}
 
-
+	exposeLighting(solView); //Why?
 	if (entity->HasComponent<ECS::LightingComponent>()) {
 
 		exposeLighting(solView);

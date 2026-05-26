@@ -215,6 +215,8 @@ namespace ECS
 		**/
 		Vector3 GetHalfExtents() const;
 
+		void SetPosition(const Vector3& position);
+
 	private:
 		std::shared_ptr<IPhysicsBody> physicsBody = nullptr;
 		TransformComponent* transform = nullptr;

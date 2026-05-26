@@ -13,9 +13,6 @@
     <ClCompile Include="..\src\graphics\Bone.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\graphics\Graphics.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\graphics\Graphics_OpenGL.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
@@ -181,14 +178,44 @@
     <ClCompile Include="..\src\ecs\FSMComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\messaging\messageIO.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messaging\messageList.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messaging\telegram.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messaging\MessageDispatcher.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\ecs\PhysicsTriggerComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\other\ThreadPool.cpp">
+    <ClCompile Include="..\src\messaging\messageDisLua.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AI\AIMovement.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AI\AIHelper.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Graphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\Vector3.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\other\time.cpp">
       <Filter>Source Files\Other</Filter>
     </ClCompile>
     <ClCompile Include="..\include\graphics\GUI.cpp">
       <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\EntitySearch.cpp">
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -435,20 +462,41 @@
     <ClInclude Include="..\include\FSM\State.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Messaging\messageIO.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Messaging\messageList.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\messaging\telegram.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\messaging\MessageDispatcher.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
     <ClInclude Include="..\include\ecs\PhysicsTriggerComponent.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\other\ctpl_stl.h">
-      <Filter>Header Files\Other</Filter>
+    <ClInclude Include="..\include\luaReader\functionSearch.h">
+      <Filter>Header Files\Lua</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\other\ThreadPool.h">
+    <ClInclude Include="..\include\messaging\messageDisLua.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AI\AIHelper.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AI\AIMovement.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\other\time.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
     <ClInclude Include="..\include\graphics\GUI.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\luaReader\functionSearch.h">
-      <Filter>Header Files\Lua</Filter>
+    <ClInclude Include="..\include\ecs\EntitySearch.h">
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -540,6 +588,18 @@
     </Filter>
     <Filter Include="Source Files\FSM">
       <UniqueIdentifier>{46e33651-664c-44cc-a5ff-51d066034940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Messaging">
+      <UniqueIdentifier>{1a15be32-cfdf-40f4-a27b-b70c872e9a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Messaging">
+      <UniqueIdentifier>{26ca0653-f03a-44ed-b925-cc6d06471978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI">
+      <UniqueIdentifier>{79a7a421-ff63-4bf7-959c-451dc99d6741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI">
+      <UniqueIdentifier>{25c1a287-4ed7-49b9-a131-5fd583a96c30}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

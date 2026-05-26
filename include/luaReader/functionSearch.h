@@ -22,4 +22,4 @@
 * @param functionName - name of the function to search for
 * @return bool - true if function was found, false if not
 */
-bool findFunction(ScriptFile& const file, const string& functionName);
+bool findFunction(const ScriptFile& const file, const string& functionName);

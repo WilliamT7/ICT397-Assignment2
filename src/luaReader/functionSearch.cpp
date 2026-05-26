@@ -3,7 +3,7 @@
 
 //-------------------------------------------------
 
-bool findFunction(ScriptFile& const file, const string& functionName) {
+bool findFunction(const ScriptFile& const file, const string& functionName) {
 
 	bool found = false;
 	const int TOTAL_FUNCTIONS = file.totalFunctions();

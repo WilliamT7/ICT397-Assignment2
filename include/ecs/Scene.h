@@ -26,7 +26,7 @@
 #include <physics/BulletPhysicsWorld.h>
 #include <vector>
 #include <thread>
-#include "other/ThreadPool.h"
+
 
 //----------------------------------------------
 
@@ -186,13 +186,15 @@ namespace ECS
 		**/
 		void ProcessTriggers();
 
+		Entity* GetEntity(int ID);
+
 	private:
 		std::vector<std::unique_ptr<Entity>> entities;
 
 		//physic things
 		BulletPhysicsWorld* m_physicsWorld = nullptr;
 		bool m_physicsEnabled = true;
-		ThreadPool m_pool;
+
 		bool m_running = false;
 
 		bool m_mustLoad = false;

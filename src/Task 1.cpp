@@ -9,6 +9,11 @@
 #include "graphics/HardCodedTextures.h"
 #include "graphics/AnimationManager.h";
 #include "luareader/LuaExposedEngineFunctionality.h"
+#include "messaging/messageIO.h"
+#include "other/singleton.h"
+#include "other/time.h"
+
+using std::cout;
 
 void Update();
 void Display();
@@ -19,9 +24,6 @@ Window* window = NULL;
 Graphics::Graphics* graphicsHandler = NULL;
 
 ECS::Scene* scene = NULL;
-
-float deltaTime = 0.0f;
-float lastFrame = 0.0f;
 
 bool imGuiToggle = false;
 
@@ -72,6 +74,9 @@ int main(int argc, char **argv)
     //Link Engine functionality with lua
     initaliseLuaEngineLinks(window, scene);
 
+    //Read in messages that scripts can send to eachother
+    readMessages("../data/messaging/messages.txt");
+
     // Main Loop :D
     window->MainLoop(Update, Display);
 
@@ -87,11 +92,13 @@ void Update()
     window->GetMousePosition(x, y);
     //std::cout << "Mouse X: " << x << " | Mouse Y: " << y << std::endl;
 
-    float currentFrame = window->GetTime();
-    deltaTime = currentFrame - lastFrame;
-    lastFrame = currentFrame;
+    engineTime* engineClock = Singleton<engineTime>::getInstance();
 
-    scene->Update(deltaTime);
+    engineClock->currentFrame = window->GetTime();
+    engineClock->deltaTime = engineClock->currentFrame - engineClock->previousFrame;
+    engineClock->previousFrame = engineClock->currentFrame;
+
+    scene->Update(engineClock->deltaTime);
 
 }
 
