@@ -50,12 +50,7 @@ function launchNewestBullet()
     if bulletTransform ~= nil then
         bulletTransform:setPosition(spawnPosition.x, spawnPosition.y, spawnPosition.z)
 
-        -- Make bullet visually face the same direction as the camera
         bulletTransform:setRotation(0.0, -camera.yaw, camera.pitch)
-
-        -- If the bullet model points sideways/backwards, try:
-        -- bulletTransform:setRotation(camera.pitch, camera.yaw + 90.0, 0.0)
-        -- bulletTransform:setRotation(camera.pitch, camera.yaw + 180.0, 0.0)
     end
 
     bulletPhysics:setPosition(spawnPosition)
