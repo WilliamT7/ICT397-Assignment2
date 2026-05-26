@@ -2,28 +2,7 @@ local maxSpeed = 20.0
 local camSensitivity = 0.1
 local playerHeight = 10
 
-function update()
-
-	local entity = GetEntity(0)
-    local entitylighting = getLighting(entity)
-    local diffuse = entitylighting.diffuse
-
-    local red = diffuse.r + 0.01
-    local green = diffuse.g - 0.01
-    local blue = diffuse.b + 0.02
-
-    if red > 1 then
-        red = red - 1
-    end
-    if green < 0 then
-        green = green + 1
-    end
-    if blue > 1 then
-        blue = blue - 1
-    end
-
-    entitylighting:setDiffuse(red, green, blue)
-	
+function update()	
 	--toggle mouse
 	local currentVisibility = GetMouseVisible()
 	if (GetKeyPress(16)) then-- P
@@ -43,6 +22,21 @@ function update()
 		cameraRotate(camera)
 		cameraFollow(physics, camera)
 	end
+
+	if (GetKeyPress(6)) then
+		KillPlayer()
+	end
+end
+
+function KillPlayer()
+	killmsg = telegram.new()
+	killmsg.sender = obj:getID()
+	killmsg.receiver = 0
+	killmsg.dispatchTime = 0.0
+	killmsg.messageID = 2
+	killmsg.scriptName = "gamemanager"
+	killmsg.functionName = "playerDied"
+	sendMessage(killmsg)
 end
 
 

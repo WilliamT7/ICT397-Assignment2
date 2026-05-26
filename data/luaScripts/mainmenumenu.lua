@@ -1,5 +1,5 @@
-local start = "FSMTest.lua"
-local load = "performancecheck.lua"
+local start = "game.lua"
+local load = "savedGame.lua"
 
 function render()
     GUIBegin("Super Goober Bros World 2 HD")
