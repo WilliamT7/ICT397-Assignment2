@@ -1,22 +1,45 @@
 local speed = 5
 local lifeTime = 5.00
 local deltaTime = 0.01
+local spawnMin = -500
+local spawnMax = 500
+local spawnY = 0
 
 function start() 
     
 -- pick a direction Vector2().normalize so x and y are rand  1-10
-    local randomX = math.random(-10, 10)
-    local randomY = math.random(0, 10)
-    local randomZ = math.random(-10, 10)
-    local randomDir = Vector3.new(randomX, randomY, randomZ)
-    randomDir:normalize()
+    -- local randomX = math.random(-10, 10)
+    -- local randomY = math.random(0, 10)
+    -- local randomZ = math.random(-10, 10)
+    -- local randomDir = Vector3.new(randomX, randomY, randomZ)
+    -- randomDir:normalize()
+
+    local transform = getTransform(obj)
+
+    if transform ~= nil then
+        local randomX = math.random(spawnMin, spawnMax)
+        local randomZ = math.random(spawnMin, spawnMax)
+
+        transform:setPosition(randomX, spawnY, randomZ)
+
+        local physics = getPhysics(obj)
+
+        if physics ~= nil then
+            physics:setPosition(Vector3.new(randomX, spawnY, randomZ))
+            physics:setLinearVelocity(Vector3.new(0, 0, 0))
+            physics:setAngularVelocity(Vector3.new(0, 0, 0))
+        end
+    end
 
     vars = getScriptComponent(obj, "testpokeyvars")
 
     if vars ~= nil then
-        vars:setGlobal("moveX", tostring(randomDir.x))
-        vars:setGlobal("moveY", tostring(randomDir.y))
-        vars:setGlobal("moveZ", tostring(randomDir.z))
+        --vars:setGlobal("moveX", tostring(randomDir.x))
+        --vars:setGlobal("moveY", tostring(randomDir.y))
+        --vars:setGlobal("moveZ", tostring(randomDir.z))
+        vars:setGlobal("moveX", tostring(0))
+        vars:setGlobal("moveY", tostring(0))
+        vars:setGlobal("moveZ", tostring(0))
         vars:setGlobal("liveTime", tostring(0))
     end
 
@@ -37,13 +60,13 @@ function update()
 
         if currentPos ~= nil then
 
-            if vars ~= nil then
-                local x = vars:getGlobal("moveX").value
-                local y = vars:getGlobal("moveY").value
-                local z = vars:getGlobal("moveZ").value
+            -- if vars ~= nil then
+            --     local x = vars:getGlobal("moveX").value
+            --     local y = vars:getGlobal("moveY").value
+            --     local z = vars:getGlobal("moveZ").value
 
-                transform:setPosition(currentPos.x + x * speed, currentPos.y + y * speed, currentPos.z + z * speed)
-            end
+            --     transform:setPosition(currentPos.x + x * speed, currentPos.y + y * speed, currentPos.z + z * speed)
+            -- end
             
             animation:play("walk")
         else

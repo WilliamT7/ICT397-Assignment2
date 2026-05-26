@@ -9,9 +9,9 @@ entity =
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
-        scale_x = 10,
-        scale_y = 10,
-        scale_z = 10
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
       } --[[table: 0000021755630250]],
       {
         ModelID = "SPIKY",
@@ -20,6 +20,16 @@ entity =
       } --[[table: 0000021755631250]],
       {
         Name = "Animation"
+      },
+      {
+        Name = "Physics",
+        halfExtents_x = 1,
+        halfExtents_y = 3,
+        halfExtents_z = 1,
+        isStatic = false,
+        useGravity = true,
+        mass = 1,
+        shape = "box"
       },
       {
         Name = "Script",

@@ -17,10 +17,10 @@ scene = {
         Name = "Script",
         fileName = "gamemanagervars.lua",
         filePath = "..\\data\\luaScripts\\",
-        currentWave = "0",
-	numEnemiesLeft = "0",
-	elapsedTime = "0.0",
-	numEnemiesSpawned = "0"
+        currentWave = "19",
+        numEnemiesLeft = "0",
+        elapsedTime = "0.0",
+        numEnemiesSpawned = "0"
       },
       {
         Name = "Script",
