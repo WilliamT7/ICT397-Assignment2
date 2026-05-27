@@ -129,6 +129,15 @@ namespace Graphics
 		**/
 		virtual void SetVector4(const std::string& name, const Vector4& value) const = 0;
 
+		/** Set Mat4
+		* @author - Kay Bradsell
+		* @brief - Sets uniform mat4 in shader
+		* @param - std::string name
+		* @param - glm::mat4 value
+		*
+		* @pre - Shader has been compiled, and Use()
+		* @post - Applies mat4 to uniform from name
+		**/
 		virtual void SetMat4(const std::string& name, glm::mat4 value) const = 0;
 	};
 }
