@@ -206,6 +206,8 @@ namespace ECS
 		std::vector<MeshRendererComponent*> m_meshes;
 		std::vector<TerrainComponent*> m_terrains;
 		std::vector<TextureRendererComponent*> m_textures;
+		std::vector<Entity*> m_triggerEntities;
+		std::vector<Entity*> m_physicsEntities;
 
 		/** Process Scene Load
 		* @author - Kay Bradsell
