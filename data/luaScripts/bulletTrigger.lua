@@ -20,7 +20,7 @@ function update()
         local otherID = trigger:getEnterID(i)
         local other = GetEntity(otherID)
 
-        if otherName ~= "Bullet" then
+        if otherName ~= "Bullet" and otherName ~= "Player" then
             print("[Bullet]: Hit " .. otherName .. ", destroying bullet")
 
             if other ~= nil and otherName == "Spiky" then
