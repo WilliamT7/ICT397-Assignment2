@@ -75,6 +75,16 @@ public:
     **/
 	void SetLinearVelocity(const Vector3& velocity) override;
 
+	/** SetLinearDamping.
+	* @author - William Thorpe
+	* @brief - Sets the linear damping of the body.
+	* @param damping - Linear damping value.
+	* @pre - damping should be a non-negative value supported by Bullet.
+	* @post - Updates the Bullet rigid body's linear damping while preserving angular damping.
+	* @return - None.
+	**/
+	void SetLinearDamping(float damping) override;
+
 	/** SetAngularVelocity
 	* @author - William Thorpe
 	* @brief - Sets the angular velocity of the body.

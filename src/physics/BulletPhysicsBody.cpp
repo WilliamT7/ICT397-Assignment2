@@ -94,6 +94,15 @@ void BulletPhysicsBody::SetLinearVelocity(const Vector3& velocity)
     m_body->setAngularFactor(btVector3(0, 0, 0));
 }
 
+void BulletPhysicsBody::SetLinearDamping(float damping)
+{
+    if (!m_body)
+        return;
+
+    m_body->setDamping(damping, m_body->getAngularDamping());
+    m_body->activate(true);
+}
+
 void BulletPhysicsBody::SetAngularVelocity(const Vector3& angularVelocity)
 {
     if (!m_body) return;

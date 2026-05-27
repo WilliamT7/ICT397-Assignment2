@@ -116,6 +116,16 @@ namespace ECS
 		**/
 		void SetHalfExtents(const Vector3& halfExtents);
 
+		/** ReceivesEvents
+		* @author - William Thorpe
+		* @brief - Checks whether this trigger actively scans for trigger events.
+		* @param - None.
+		* @pre - None.
+		* @post - Returns true if this trigger should process enter, stay, and exit events.
+		* @return - True when the trigger actively receives events.
+		**/
+		bool ReceivesEvents() const;
+
 
 		/** GetEnterCount
 		* @author - William Thorpe
@@ -247,8 +257,25 @@ namespace ECS
 		**/
 		void OnTriggerExit(Entity* other);
 
+		/** RemoveOverlap
+		* @author - William Thorpe
+		* @brief - Removes an entity from this trigger's tracked overlap lists.
+		* @param - Entity* entityToRemove - The entity to remove from the trigger overlap state.
+		* @pre - entityToRemove may be null; null values are ignored.
+		* @post - The entity is removed from previous, current, enter, stay, and exit overlap tracking.
+		* @return - None.
+		**/
 		void RemoveOverlap(Entity* entityToRemove);
 
+		/** RemoveEntityFromAllTriggers
+		* @author - William Thorpe
+		* @brief - Removes an entity from every PhysicsTriggerComponent in a scene entity list.
+		* @param - Entity* entityToRemove - The entity to remove from trigger overlap state.
+		* @param - std::vector<std::unique_ptr<Entity>>& entities - The scene entities to scan for triggers.
+		* @pre - entities should contain valid entity pointers; entityToRemove may be null.
+		* @post - All trigger components on the provided entities no longer track entityToRemove as overlapping.
+		* @return - None.
+		**/
 		static void RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<std::unique_ptr<Entity>>& entities);
 
 	private:
@@ -256,6 +283,7 @@ namespace ECS
 
 		Vector3 m_halfExtents = Vector3(1.0f, 1.0f, 1.0f);
 		bool m_enabled = true;
+		bool m_receivesEvents = true;
 
 		std::vector<Entity*> m_previousOverlaps;
 		std::vector<Entity*> m_currentOverlaps;

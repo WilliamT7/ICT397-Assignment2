@@ -136,6 +136,16 @@ namespace ECS
         **/
 		void SetLinearVelocity(const Vector3& velocity);
 
+		/** SetLinearDamping
+		* @author - William Thorpe
+		* @brief - Sets linear damping on the linked physics body.
+		* @param - float damping - The linear damping value to apply.
+		* @pre - The physics body should be valid and linked to this component.
+		* @post - Updates the linked physics body's linear damping, reducing linear velocity over time.
+		* @return - None.
+        **/
+		void SetLinearDamping(float damping);
+
 		/** CreateBodyFromSettings
 		* @author - William Thorpe
 		* @brief - Creates a physics body based on the component's current settings and adds it to the linked physics world.

@@ -282,11 +282,14 @@ void exposeTerrain(sol::state_view& solView) {
 		"TerrainComponent",
 		sol::constructors<ECS::TerrainComponent>(),
 		"toggleWireframe",
-		&ECS::TerrainComponent::ToggleWireframe
+		&ECS::TerrainComponent::ToggleWireframe,
+		"getHeightAtWorldPosition",
+		&ECS::TerrainComponent::GetHeightAtWorldPosition
 	);
 
 	solView.set_function("getTerrain", &ECS::Entity::GetComponent<ECS::TerrainComponent>);
 	solView.set_function("toggleWireframe", &ECS::TerrainComponent::ToggleWireframe);
+	solView.set_function("getHeightAtWorldPosition", &ECS::TerrainComponent::GetHeightAtWorldPosition);
 
 }
 
@@ -301,6 +304,8 @@ void exposePhysics(sol::state_view& solView) {
 		&ECS::PhysicsComponent::GetLinearVelocity,
 		"setLinearVelocity",
 		&ECS::PhysicsComponent::SetLinearVelocity,
+		"setLinearDamping",
+		&ECS::PhysicsComponent::SetLinearDamping,
 		"clearBody",
 		&ECS::PhysicsComponent::ClearBody,
 		"addForce",
@@ -319,6 +324,7 @@ void exposePhysics(sol::state_view& solView) {
 	solView.set_function("getPhysics", &ECS::Entity::GetComponent<ECS::PhysicsComponent>);
 	solView.set_function("getLinearVelocity", &ECS::PhysicsComponent::GetLinearVelocity);
 	solView.set_function("setLinearVelocity", &ECS::PhysicsComponent::SetLinearVelocity);
+	solView.set_function("setLinearDamping", &ECS::PhysicsComponent::SetLinearDamping);
 	solView.set_function("clearBody", &ECS::PhysicsComponent::ClearBody);
 	solView.set_function("addForce", &ECS::PhysicsComponent::AddForce);
 	solView.set_function("getPosition", &ECS::PhysicsComponent::GetPosition);

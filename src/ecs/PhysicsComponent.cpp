@@ -96,6 +96,12 @@ void ECS::PhysicsComponent::SetLinearVelocity(const Vector3& velocity)
         physicsBody->SetLinearVelocity(velocity);
 }
 
+void ECS::PhysicsComponent::SetLinearDamping(float damping)
+{
+    if (physicsBody)
+        physicsBody->SetLinearDamping(damping);
+}
+
 void ECS::PhysicsComponent::ClearBody()
 {
     if (physicsWorld != nullptr && physicsBody != nullptr)

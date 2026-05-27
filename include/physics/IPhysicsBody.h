@@ -76,6 +76,16 @@ public:
     **/
     virtual void SetLinearVelocity(const Vector3& velocity) = 0;
 
+    /** SetLinearDamping.
+    * @author - William Thorpe
+    * @brief - Sets the linear damping of the body.
+    * @param damping - Linear damping value.
+    * @pre - damping should be a non-negative value supported by the physics backend.
+    * @post - Updates the body's linear damping, reducing linear velocity over time.
+    * @return - None.
+    **/
+    virtual void SetLinearDamping(float damping) = 0;
+
 	/** GetAngularVelocity.
 	* @author - William Thorpe
 	* @brief - Gets the current angular velocity of the body.
