@@ -8,7 +8,7 @@
  *			Note: Graphics class is abstract.
  *			DO NOT CONSTRUCT GRAPHICS - USE SUBCLASSES
  *
- * @version 3.0
+ * @version 3.3
  * @date 20/02/2026 Kay Bradsell
  *				1.0 Creation
  * @date 23/02/2026 Kay Bradsell
@@ -23,6 +23,10 @@
  *				3.0 Refactored Graphics
  * @date 12/04/2026 Kay Bradsell
  *				3.1 Added 2D Mode
+ * @date 20/04/2026 Kay Bradsell
+ *				3.2 Added Post Processing
+ * @date 28/04/2026 Kay Bradsell
+ *				3.3 Added Animations
 *********************************************/
 
 #pragma once
@@ -137,6 +141,7 @@ namespace Graphics
 		* @param - Model*
 		* @param - Shader*
 		* @param - TransformComponent&
+		* @param - Animator*
 		*
 		* @pre - Model and Shader have been loaded, Graphics object has been constructed, and transform has valid data
 		* @post - Draws model to world
@@ -278,8 +283,22 @@ namespace Graphics
 		**/
 		virtual void Set2DMode(bool enabled) = 0;
 
+		/** Begin Render
+		* @author - Kay Bradsell
+		* @brief - Sets up Graphics to capture all renders to to a buffer
+		*
+		* @pre - none
+		* @post - any draw calls will draw to this buffer
+		**/
 		virtual void BeginRender() = 0;
 
+		/** End Render
+		* @author - Kay Bradsell
+		* @brief - Displays buffer with post processing shader to screen
+		*
+		* @pre - render has begin (BeginRender())
+		* @post - draws to full window size a quad with the texture + post processing shader
+		**/
 		virtual void EndRender() = 0;
 
 	protected:
