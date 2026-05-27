@@ -49,6 +49,13 @@ struct Colour
 		b = other.b;
 	}
 
+	/** Colour default constructor
+	* @author - Kay Bradsell
+	* @brief - Default constructor
+	*
+	* @pre - none
+	* @post - constructs Colour object with 0 values
+	**/
 	Colour()
 	{
 		r = 0;

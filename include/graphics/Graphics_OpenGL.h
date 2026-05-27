@@ -5,11 +5,17 @@
  *			and provides factory for OpenGL Shaders, Textures,
  *			and Meshes.
  *
- * @version
+ * @version 2.3
  * @date 15/03/2026 Kay Bradsell
  *				1.0 Split from Graphics.h
  * @date 30/03/2026 Kay Bradsell
  *				2.0 Refactored
+ * @date 12/04/2026 Kay Bradsell
+ *				2.1 Added 2D Mode
+ * @date 20/04/2026 Kay Bradsell
+ *				2.2 Added Post Processing
+ * @date 28/04/2026 Kay Bradsell
+ *				2.3 Added Animations
 *********************************************/
 
 #pragma once
@@ -136,6 +142,7 @@ namespace Graphics
 		* @param - Model*
 		* @param - Shader*
 		* @param - TransformComponent&
+		* @param - Animator*
 		*
 		* @pre - Model and Shader have been loaded, Graphics object has been constructed, and transform has valid data
 		* @post - Draws model to world
@@ -256,8 +263,22 @@ namespace Graphics
 		**/
 		void Set2DMode(bool enabled);
 
+		/** Begin Render
+		* @author - Kay Bradsell
+		* @brief - Sets up Graphics to capture all renders to to a buffer
+		*
+		* @pre - none
+		* @post - any draw calls will draw to this buffer
+		**/
 		void BeginRender();
 
+		/** End Render
+		* @author - Kay Bradsell
+		* @brief - Displays buffer with post processing shader to screen
+		*
+		* @pre - render has begin (BeginRender())
+		* @post - draws to full window size a quad with the texture + post processing shader
+		**/
 		void EndRender();
 
 	private:
@@ -298,6 +319,7 @@ namespace Graphics
 		* @param - Mesh*
 		* @param - Shader*
 		* @param - TransformComponent&
+		* @param - Animator*
 		* @note - different to DrawModel as a Model is comprised of Meshes, so it calls this for every Mesh in that Model
 		*
 		* @pre - Mesh, Shader, and Transform all have valid data, Graphics has been constructed

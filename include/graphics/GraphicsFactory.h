@@ -41,8 +41,8 @@ namespace Graphics
 		* @param - GraphicsType type
 		* @return - Graphics*
 		* 
-		* @pre - 
-		* @post - 
+		* @pre - none
+		* @post - creates and returns a Graphics* based on the GraphicsType
 		**/
 		static Graphics* Create(GraphicsType type);
 	};
