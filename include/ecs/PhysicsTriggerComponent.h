@@ -157,6 +157,16 @@ namespace ECS
 		**/
 		std::string GetEnterName(int index) const;
 
+		/** GetEnterID
+		* @author - William Thorpe
+		* @brief - Gets the ID of the entity that entered the trigger at the specified index
+		* @param - int index
+		* @pre - index is within the range of entities that entered the trigger
+		* @post - Returns the ID of the entity that entered the trigger at the specified index.
+		* @return - The ID of the entity that entered the trigger at the specified index, or -1 if not found.
+		**/
+		int GetEnterID(int index) const;
+
 		/** GetStayName
 		* @author - William Thorpe
 		* @brief - Gets the name of the entity that stayed in the trigger at the specified index
@@ -167,6 +177,16 @@ namespace ECS
 		**/
 		std::string GetStayName(int index) const;
 
+		/** GetStayID
+		* @author - William Thorpe
+		* @brief - Gets the ID of the entity that stayed in the trigger at the specified index
+		* @param - int index
+		* @pre - index is within the range of entities that stayed in the trigger
+		* @post - Returns the ID of the entity that stayed in the trigger at the specified index.
+		* @return - The ID of the entity that stayed in the trigger at the specified index, or -1 if not found.
+		**/
+		int GetStayID(int index) const;
+
 		/** GetExitName
 		* @author - William Thorpe
 		* @brief - Gets the name of the entity that exited the trigger at the specified index
@@ -176,6 +196,16 @@ namespace ECS
 		* @return - The name of the entity that exited the trigger at the specified index.
 		**/
 		std::string GetExitName(int index) const;
+
+		/** GetExitID
+		* @author - William Thorpe
+		* @brief - Gets the ID of the entity that exited the trigger at the specified index
+		* @param - int index
+		* @pre - index is within the range of entities that exited the trigger
+		* @post - Returns the ID of the entity that exited the trigger at the specified index.
+		* @return - The ID of the entity that exited the trigger at the specified index, or -1 if not found.
+		**/
+		int GetExitID(int index) const;
 
 		/** Check if this component is overlapping with another entity
 		* @author - William Thorpe

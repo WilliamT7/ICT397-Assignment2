@@ -17,9 +17,17 @@ function update()
 
     for i = 0, trigger:getEnterCount() - 1 do
         local otherName = trigger:getEnterName(i)
+        local otherID = trigger:getEnterID(i)
+        local other = GetEntity(otherID)
 
         if otherName ~= "Bullet" then
             print("[Bullet]: Hit " .. otherName .. ", destroying bullet")
+
+            if other ~= nil and otherName == "Spiky" then
+                print("[Bullet]: Destroying Spiky " .. otherID)
+                destroy(other)
+            end
+
             destroy(obj)
             return
         end

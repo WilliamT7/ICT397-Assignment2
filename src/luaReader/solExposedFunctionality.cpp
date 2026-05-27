@@ -350,11 +350,21 @@ void exposePhysicsTrigger(sol::state_view& solView) {
 		"getStayName",
 		&ECS::PhysicsTriggerComponent::GetStayName,
 		"getExitName",
-		&ECS::PhysicsTriggerComponent::GetExitName
+		&ECS::PhysicsTriggerComponent::GetExitName,
+
+		"getEnterID",
+		&ECS::PhysicsTriggerComponent::GetEnterID,
+		"getStayID",
+		&ECS::PhysicsTriggerComponent::GetStayID,
+		"getExitID",
+		&ECS::PhysicsTriggerComponent::GetExitID
 	);
 
 	solView.set_function("getPhysicsTrigger", &ECS::Entity::GetComponent<ECS::PhysicsTriggerComponent>);
 	solView.set_function("setTriggerHalfExtents", &ECS::PhysicsTriggerComponent::SetHalfExtents);
+	solView.set_function("getEnterID", &ECS::PhysicsTriggerComponent::GetEnterID);
+	solView.set_function("getStayID", &ECS::PhysicsTriggerComponent::GetStayID);
+	solView.set_function("getExitID", &ECS::PhysicsTriggerComponent::GetExitID);
 }
 
 //------------------------------------------------------------------------------------------

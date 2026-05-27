@@ -233,6 +233,26 @@ std::string ECS::PhysicsTriggerComponent::GetEnterName(int index) const
 	return "";
 }
 
+int ECS::PhysicsTriggerComponent::GetEnterID(int index) const
+{
+	int currentIndex = 0;
+
+	for (Entity* current : m_currentOverlaps)
+	{
+		if (!Contains(m_previousOverlaps, current))
+		{
+			if (currentIndex == index)
+			{
+				return current != nullptr ? current->GetID() : -1;
+			}
+
+			currentIndex++;
+		}
+	}
+
+	return -1;
+}
+
 std::string ECS::PhysicsTriggerComponent::GetStayName(int index) const
 {
 	int currentIndex = 0;
@@ -253,6 +273,26 @@ std::string ECS::PhysicsTriggerComponent::GetStayName(int index) const
 	return "";
 }
 
+int ECS::PhysicsTriggerComponent::GetStayID(int index) const
+{
+	int currentIndex = 0;
+
+	for (Entity* current : m_currentOverlaps)
+	{
+		if (Contains(m_previousOverlaps, current))
+		{
+			if (currentIndex == index)
+			{
+				return current != nullptr ? current->GetID() : -1;
+			}
+
+			currentIndex++;
+		}
+	}
+
+	return -1;
+}
+
 std::string ECS::PhysicsTriggerComponent::GetExitName(int index) const
 {
 	int currentIndex = 0;
@@ -271,6 +311,26 @@ std::string ECS::PhysicsTriggerComponent::GetExitName(int index) const
 	}
 
 	return "";
+}
+
+int ECS::PhysicsTriggerComponent::GetExitID(int index) const
+{
+	int currentIndex = 0;
+
+	for (Entity* previous : m_previousOverlaps)
+	{
+		if (!Contains(m_currentOverlaps, previous))
+		{
+			if (currentIndex == index)
+			{
+				return previous != nullptr ? previous->GetID() : -1;
+			}
+
+			currentIndex++;
+		}
+	}
+
+	return -1;
 }
 
 void ECS::PhysicsTriggerComponent::ImGui()
