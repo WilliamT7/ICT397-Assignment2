@@ -105,3 +105,16 @@ function update()
         vars:setGlobal("liveTime", tostring(lt + deltaTime))
     end
 end
+
+function OnBulletHit()
+    local killmsg = telegram.new()
+    killmsg.sender = obj:getID()
+    killmsg.receiver = 0
+    killmsg.dispatchTime = 0.0
+    killmsg.messageID = 3
+    killmsg.scriptName = "gamemanager"
+    killmsg.functionName = "EnemyDied"
+    sendMessage(killmsg)
+
+    destroy(obj)
+end

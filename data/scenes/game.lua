@@ -16,7 +16,7 @@ scene = {
       {
         Name = "Script",
         fileName = "gamemanagervars.lua",
-        filePath = "..\\data\\luaScripts\\",
+        filePath = "..\\data\\luaScripts\\managers\\",
         currentWave = "19",
         numEnemiesLeft = "0",
         elapsedTime = "0.0",
@@ -25,8 +25,13 @@ scene = {
       {
         Name = "Script",
         fileName = "gamemanager.lua",
-        filePath = "..\\data\\luaScripts\\"
-      } --[[table: 00000295FD652EB0]]
+        filePath = "..\\data\\luaScripts\\managers\\"
+      } --[[table: 00000295FD652EB0]],
+      {
+        Name = "Script",
+        fileName = "scenesaveload.lua",
+        filePath = "..\\data\\luaScripts\\scene\\"
+      }
     } --[[table: 00000295FD652E30]],
     EntityName = "Game Manager"
   } --[[table: 00000295FD652B30]],
@@ -111,28 +116,28 @@ scene = {
       {
         Name = "Script",
         fileName = "playerInput.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\player\\"
       } --[[table: 00000295FD6529B0]],
       {
         Name = "Script",
         fileName = "bulletSpawner.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\weapons\\"
       } --[[table: 00000295FD6530B0]],
       {
         Name = "Script",
         fileName = "physicsTriggers.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\physicstriggers\\"
       } --[[table: 00000295FD6524B0]],
       {
         Name = "Script",
         fileName = "playerstatsvars.lua",
-        filePath = "..\\data\\luaScripts\\",
+        filePath = "..\\data\\luaScripts\\player\\",
         hp = "10"
       },
       {
         Name = "Script",
         fileName = "playerstats.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\player\\"
       }
     } --[[table: 00000295FD652F30]],
     EntityName = "Player"
@@ -163,7 +168,7 @@ scene = {
       {
         Name = "Script",
         fileName = "terraintoggle.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\terrain\\"
       } --[[table: 00000295FD6525B0]]
     } --[[table: 00000295FD653130]],
     EntityName = "Terrain"
@@ -1008,7 +1013,7 @@ scene = {
       {
         Name = "Script",
         fileName = "displayTexture.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\ui\\"
       } --[[table: 00000295FCAC1F60]]
     } --[[table: 00000295FCAC1D60]],
     EntityName = "Help Manual"
@@ -1039,7 +1044,7 @@ scene = {
       {
         Name = "Script",
         fileName = "endScreen.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\ui\\"
       } --[[table: 00000295FD640550]]
     } --[[table: 00000295FCAC0360]],
     EntityName = "End Screen"

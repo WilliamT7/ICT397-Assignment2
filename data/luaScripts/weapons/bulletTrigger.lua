@@ -18,14 +18,21 @@ function update()
     for i = 0, trigger:getEnterCount() - 1 do
         local otherName = trigger:getEnterName(i)
         local otherID = trigger:getEnterID(i)
-        local other = GetEntity(otherID)
 
         if otherName ~= "Bullet" and otherName ~= "Player" then
             print("[Bullet]: Hit " .. otherName .. ", destroying bullet")
 
-            if other ~= nil and otherName == "Spiky" then
-                print("[Bullet]: Destroying Spiky " .. otherID)
-                destroy(other)
+            if otherName == "Spiky" then
+                print("[Bullet]: Telling Spiky " .. otherID .. " it was hit")
+
+                local hitMessage = telegram.new()
+                hitMessage.sender = obj:getID()
+                hitMessage.receiver = otherID
+                hitMessage.dispatchTime = 0.0
+                hitMessage.messageID = 5
+                hitMessage.scriptName = "testpokeyscript"
+                hitMessage.functionName = "OnBulletHit"
+                sendMessage(hitMessage)
             end
 
             destroy(obj)

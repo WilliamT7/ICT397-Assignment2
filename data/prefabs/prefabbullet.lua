@@ -39,7 +39,7 @@ entity =
       {
         Name = "Script",
         fileName = "bulletTrigger.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\weapons\\"
       }
     } --[[table: 0000021755632650]],
     EntityName = "Bullet"

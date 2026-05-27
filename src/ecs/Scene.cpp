@@ -386,11 +386,12 @@ void ECS::Scene::ImGui()
 	auto& entity = entities[selectedEntity];
 	if (ImGui::TreeNode("Add Component"))
 	{
-		static char ScriptFileBuffer[32];
+		static char ScriptFileBuffer[128];
 		const string scriptPath = "..\\data\\luaScripts\\";
 
 		if (items[selectedItem] == "Script") {
-			ImGui::Text(("Default path: " + scriptPath).c_str()); //nothing to see here
+			ImGui::Text(("Default path: " + scriptPath).c_str());
+			ImGui::Text("Use folder/name, for example: player\\playerInput");
 			ImGui::Text("Note: .lua is automatically added to the end of input text");
 			ImGui::InputText("Script Name", ScriptFileBuffer, IM_COUNTOF(ScriptFileBuffer));
 		}
@@ -447,7 +448,7 @@ void ECS::Scene::ImGui()
 				break;
 
 			case 7:
-				entity->AddScriptComponent("..\\data\\luaScripts\\" + string(ScriptFileBuffer) + ".lua");
+				entity->AddScriptComponent(scriptPath + string(ScriptFileBuffer) + ".lua");
 				break;
 
 			case 8:

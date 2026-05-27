@@ -62,12 +62,12 @@ scene = {
       {
         Name = "Script",
         fileName = "playerInput.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\player\\"
       } --[[table: 00000224784F16A0]],
       {
         Name = "Script",
         fileName = "scenesaveload.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\scene\\"
       },
       {
         Name = "Physics",
@@ -107,7 +107,7 @@ scene = {
       {
         Name = "Script",
         fileName = "terraintoggle.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\terrain\\"
       } --[[table: 000002175562BE50]]
     } --[[table: 000002175562D2D0]],
     EntityName = "Terrain"
@@ -129,14 +129,14 @@ scene = {
       {
         Name = "Script",
         fileName = "infinitepokeyspawnervars.lua",
-        filePath = "..\\data\\luaScripts\\",
+        filePath = "..\\data\\luaScripts\\enemies\\",
         amountSpawned = "0",
         elapsedTime = "0.0"
       },
       {
         Name = "Script",
         fileName = "infinitepokeyspawner.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\enemies\\"
       }
     } --[[table: 000002175562FB50]],
     EntityName = "SpikySpawner"

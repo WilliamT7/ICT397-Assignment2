@@ -42,7 +42,7 @@ entity =
       {
         Name = "Script",
         fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\",
+        filePath = "..\\data\\luaScripts\\enemies\\",
         moveX = "0",
         moveY = "0",
         moveZ = "0",
@@ -51,7 +51,7 @@ entity =
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\"
+        filePath = "..\\data\\luaScripts\\enemies\\"
       }
     } --[[table: 000002175562FB50]],
     EntityName = "Spiky"
