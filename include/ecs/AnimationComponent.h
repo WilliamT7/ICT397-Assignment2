@@ -107,7 +107,7 @@ namespace ECS
 		**/
 		void DeserialiseComponentTable(sol::table& data);
 	private:
-		MeshRendererComponent* mesh = nullptr; // grab model and shader from here i presume
+		MeshRendererComponent* mesh = nullptr;
 		Graphics::Animator m_animator;
 		std::string m_currentAnimationName;
 	};

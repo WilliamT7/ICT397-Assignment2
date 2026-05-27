@@ -57,25 +57,27 @@ namespace Graphics
 		std::unordered_map<std::string, std::shared_ptr<Animation>> m_animations;
 		std::unordered_map<std::string, std::string> m_animationPaths;
 
-		/**
+		/** Load Animation
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Given an animation name and model, load it in, and return it
+		* @param - std::string name
+		* @param - Model* model
+		* @return - std::shared_ptr<Animation>
 		*
-		* @pre -
-		* @post -
+		* @pre - name is a valid animation name, and model has been loaded in
+		* @post - loads in and returns the animation data.
 		**/
 		std::shared_ptr<Animation> LoadAnimation(const std::string& name, Model* model);
 
-		/**
+		/** Make Kay
 		* @author - Kay Bradsell
-		* @brief -
-		* @param -
-		* @return -
+		* @brief - Makes an animation key from name and model name
+		* @param - std::string name
+		* @param - Model* model
+		* @return - std::string
 		*
-		* @pre -
-		* @post -
+		* @pre - model is valid 
+		* @post - returns animationName:modelName as string
 		**/
 		static std::string MakeKey(const std::string& name, Model* model);
 	};
