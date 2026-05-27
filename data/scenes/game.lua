@@ -71,7 +71,7 @@ scene = {
       {
         Name = "Transform",
         position_x = -13.11982250213623,
-        position_y = -1.5963525772094727,
+        position_y = 30,
         position_z = -41.106319427490234,
         rotation_x = 0,
         rotation_y = -90,
@@ -86,7 +86,7 @@ scene = {
         near_plane = 0.10000000149011612,
         pitch = -18.700033187866211,
         position_x = -13.11982250213623,
-        position_y = 8.4036474227905273,
+        position_y = 40,
         position_z = -41.106319427490234,
         yaw = 1714.424072265625
       } --[[table: 00000295FD652FB0]],
@@ -140,9 +140,9 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = -800,
+        position_x = -2000,
         position_y = -167.69999694824219,
-        position_z = -548.20001220703125,
+        position_z = -2000,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -154,9 +154,9 @@ scene = {
         Name = "Terrain",
         is_wireframe = false,
         mode = "fault",
-        scale_x = 10,
+        scale_x = 12,
         scale_y = 1,
-        scale_z = 10,
+        scale_z = 12,
         seed = 0
       } --[[table: 00000295FD652530]],
       {
@@ -1047,7 +1047,7 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = -298,
+        position_x = -1500,
         position_y = 40,
         position_z = 0,
         rotation_x = 0,
@@ -1061,7 +1061,7 @@ scene = {
         Name = "Physics",
         halfExtents_x = 1,
         halfExtents_y = 100,
-        halfExtents_z = 300,
+        halfExtents_z = 1500,
         isStatic = true,
         mass = 1,
         shape = "box",
@@ -1074,7 +1074,7 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = 298,
+        position_x = 1500,
         position_y = 40,
         position_z = 0,
         rotation_x = 0,
@@ -1088,7 +1088,7 @@ scene = {
         Name = "Physics",
         halfExtents_x = 1,
         halfExtents_y = 100,
-        halfExtents_z = 300,
+        halfExtents_z = 1500,
         isStatic = true,
         mass = 1,
         shape = "box",
@@ -1103,7 +1103,7 @@ scene = {
         Name = "Transform",
         position_x = 0,
         position_y = 40,
-        position_z = -298,
+        position_z = -1500,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -1113,7 +1113,7 @@ scene = {
       } --[[table: 00000295FD6411D0]],
       {
         Name = "Physics",
-        halfExtents_x = 300,
+        halfExtents_x = 1500,
         halfExtents_y = 100,
         halfExtents_z = 1,
         isStatic = true,
@@ -1130,7 +1130,7 @@ scene = {
         Name = "Transform",
         position_x = 0,
         position_y = 40,
-        position_z = 298,
+        position_z = 1500,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -1140,7 +1140,7 @@ scene = {
       } --[[table: 00000295FD640C50]],
       {
         Name = "Physics",
-        halfExtents_x = 300,
+        halfExtents_x = 1500,
         halfExtents_y = 100,
         halfExtents_z = 1,
         isStatic = true,
