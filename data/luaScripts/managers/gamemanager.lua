@@ -14,6 +14,17 @@ function update()
 	end
 end
 
+function render()
+	vars = getScriptComponent(obj, "gamemanagervars")
+	local wave = tonumber(vars:getGlobal("currentWave").value)
+	local enemiesLeft = tonumber(vars:getGlobal("numEnemiesLeft").value)
+
+	GUIBegin("Wave Information")
+	GUIWriteText("WAVE: #"..wave)
+	GUIWriteText("ENEMIES LEFT: "..enemiesLeft)
+	GUIEnd()
+end
+
 function PlayerDied()
 	LoadScene("GameOver.lua")
 end
