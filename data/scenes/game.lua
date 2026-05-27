@@ -26,12 +26,7 @@ scene = {
         Name = "Script",
         fileName = "gamemanager.lua",
         filePath = "..\\data\\luaScripts\\managers\\"
-      } --[[table: 00000295FD652EB0]],
-      {
-        Name = "Script",
-        fileName = "scenesaveload.lua",
-        filePath = "..\\data\\luaScripts\\scene\\"
-      }
+      } --[[table: 00000295FD652EB0]]
     } --[[table: 00000295FD652E30]],
     EntityName = "Game Manager"
   } --[[table: 00000295FD652B30]],
