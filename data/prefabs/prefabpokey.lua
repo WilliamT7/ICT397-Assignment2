@@ -24,7 +24,7 @@ entity =
       {
         Name = "Physics",
         halfExtents_x = 1,
-        halfExtents_y = 3,
+        halfExtents_y = 2,
         halfExtents_z = 1,
         isStatic = false,
         useGravity = true,
@@ -51,6 +51,11 @@ entity =
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
+        filePath = "..\\data\\luaScripts\\enemies\\"
+      },
+      {
+        Name = "Script",
+        fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
       }
     } --[[table: 000002175562FB50]],

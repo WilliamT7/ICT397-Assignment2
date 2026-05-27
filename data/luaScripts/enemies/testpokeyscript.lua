@@ -5,6 +5,7 @@ local spawnMin = -1500
 local spawnMax = 1500
 local spawnHeightOffset = 255
 local terrainSearchMaxID = 100
+local isDead = false
 
 function start() 
     local transform = getTransform(obj)
@@ -107,6 +108,31 @@ function update()
 end
 
 function OnBulletHit()
+    if isDead then
+        return
+    end
+
+    isDead = true
+
+    local transform = getTransform(obj)
+    local deathPosition = nil
+
+    if transform ~= nil then
+        deathPosition = transform.position
+    end
+
+    if deathPosition ~= nil then
+        local commmsg = telegram.new()
+        commmsg.sender = obj:getID()
+        commmsg.receiver = obj:getID()
+        commmsg.dispatchTime = 0.0
+        commmsg.messageID = 11
+        commmsg.scriptName = "pokeycomm"
+        commmsg.functionName = "OnPokeyDied"
+        commmsg.data = deathPosition
+        sendMessage(commmsg)
+    end
+
     local killmsg = telegram.new()
     killmsg.sender = obj:getID()
     killmsg.receiver = 0
