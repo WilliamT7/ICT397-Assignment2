@@ -349,7 +349,7 @@ void ECS::PhysicsTriggerComponent::ImGui()
 void ECS::PhysicsTriggerComponent::DeserialiseComponentTable(sol::table& data)
 {
 	m_enabled = data["enabled"];
-	m_receivesEvents = data["receivesEvents"].get_or(true);
+	m_receivesEvents = data["receivesEvents"];
 
 	m_halfExtents.x = data["halfExtents_x"];
 	m_halfExtents.y = data["halfExtents_y"];
