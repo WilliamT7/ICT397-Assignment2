@@ -42,11 +42,9 @@ void ECS::PhysicsTriggerComponent::CheckAgainst(Entity* other)
 	if (!IsOverlapping(other))
 		return;
 
-	bool wasCurrent = Contains(m_currentOverlaps, other);
 	bool wasPrevious = Contains(m_previousOverlaps, other);
 
-	if (!wasCurrent)
-		m_currentOverlaps.push_back(other);
+	m_currentOverlaps.push_back(other);
 
 	if (!wasPrevious)
 		OnTriggerEnter(other);
@@ -68,6 +66,11 @@ void ECS::PhysicsTriggerComponent::EndTriggerCheck()
 void ECS::PhysicsTriggerComponent::SetHalfExtents(const Vector3& halfExtents)
 {
 	m_halfExtents = halfExtents;
+}
+
+bool ECS::PhysicsTriggerComponent::ReceivesEvents() const
+{
+	return m_enabled && m_receivesEvents;
 }
 
 bool ECS::PhysicsTriggerComponent::IsOverlapping(Entity* other) const
@@ -338,6 +341,7 @@ void ECS::PhysicsTriggerComponent::ImGui()
 	if (ImGui::CollapsingHeader("Physics Trigger", ImGuiTreeNodeFlags_None))
 	{
 		ImGui::Checkbox("Enabled", &m_enabled);
+		ImGui::Checkbox("Receives Events", &m_receivesEvents);
 		ImGui::DragFloat3("Half Extents", &m_halfExtents.x, 0.1f);
 	}
 }
@@ -345,6 +349,7 @@ void ECS::PhysicsTriggerComponent::ImGui()
 void ECS::PhysicsTriggerComponent::DeserialiseComponentTable(sol::table& data)
 {
 	m_enabled = data["enabled"];
+	m_receivesEvents = data["receivesEvents"].get_or(true);
 
 	m_halfExtents.x = data["halfExtents_x"];
 	m_halfExtents.y = data["halfExtents_y"];
@@ -357,6 +362,7 @@ sol::table ECS::PhysicsTriggerComponent::SerialiseComponent(sol::state& lua) con
 
 	t["Name"] = "PhysicsTrigger";
 	t["enabled"] = m_enabled;
+	t["receivesEvents"] = m_receivesEvents;
 
 	t["halfExtents_x"] = m_halfExtents.x;
 	t["halfExtents_y"] = m_halfExtents.y;

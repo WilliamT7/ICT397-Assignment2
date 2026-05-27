@@ -1,6 +1,8 @@
-local maxSpeed = 20.0
+local maxSpeed = 60.0
 local camSensitivity = 0.1
 local playerHeight = 10
+local playerLinearDamping = 0.35
+local maxUpwardVelocity = 8.0
 
 function update()	
 	--toggle mouse
@@ -17,6 +19,9 @@ function update()
 		return
 	end
 
+	physics:setLinearDamping(playerLinearDamping)
+	clampUpwardVelocity(physics)
+
 	if camera ~= nil then
 		playerMovement(physics, camera)
 		cameraRotate(camera)
@@ -25,6 +30,15 @@ function update()
 
 	if (GetKeyPress(6)) then
 		KillPlayer()
+	end
+end
+
+function clampUpwardVelocity(physics)
+	local vel = physics:getLinearVelocity()
+
+	if vel.y > maxUpwardVelocity then
+		vel.y = maxUpwardVelocity
+		physics:setLinearVelocity(vel)
 	end
 end
 
@@ -87,9 +101,16 @@ function playerMovement(physics, camera)
 		local vel = physics:getLinearVelocity()
 		vel.x = 0
 		vel.z = 0
+		if vel.y > maxUpwardVelocity then
+			vel.y = maxUpwardVelocity
+		end
 		physics:setLinearVelocity(vel)
 		physics:setAngularVelocity(Vector3.new(0, 0, 0))
 		return
+	end
+
+	if currentVel.y > maxUpwardVelocity then
+		currentVel.y = maxUpwardVelocity
 	end
 
 	currentVel.x = direction.x * moveSpeed

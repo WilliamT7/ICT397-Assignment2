@@ -1,24 +1,18 @@
 local speed = 5
 local lifeTime = 5.00
 local deltaTime = 0.01
-local spawnMin = -500
-local spawnMax = 500
-local spawnY = 0
+local spawnMin = -1500
+local spawnMax = 1500
+local spawnHeightOffset = 255
+local terrainSearchMaxID = 100
 
 function start() 
-    
--- pick a direction Vector2().normalize so x and y are rand  1-10
-    -- local randomX = math.random(-10, 10)
-    -- local randomY = math.random(0, 10)
-    -- local randomZ = math.random(-10, 10)
-    -- local randomDir = Vector3.new(randomX, randomY, randomZ)
-    -- randomDir:normalize()
-
     local transform = getTransform(obj)
 
     if transform ~= nil then
         local randomX = math.random(spawnMin, spawnMax)
         local randomZ = math.random(spawnMin, spawnMax)
+        local spawnY = getSpawnHeight()
 
         transform:setPosition(randomX, spawnY, randomZ)
 
@@ -45,7 +39,25 @@ function start()
 
 end
 
- 
+function getSpawnHeight()
+    local terrainEntity = findTerrainEntity()
+
+    local terrainTransform = getTransform(terrainEntity)
+
+    return terrainTransform.position.y + spawnHeightOffset
+end
+
+function findTerrainEntity()
+    for id = 0, terrainSearchMaxID do
+        local entity = GetEntity(id)
+
+        if entity ~= nil and entity:getName() == "Terrain" then
+            return entity
+        end
+    end
+
+    return nil
+end
 
 
 function update() 
@@ -78,17 +90,17 @@ function update()
         local liveTime = vars:getGlobal("liveTime").value
         local lt = tonumber(liveTime)
 
-        if lt > lifeTime then
-            killmsg = telegram.new()
-            killmsg.sender = obj:getID()
-            killmsg.receiver = 0
-            killmsg.dispatchTime = 0.0
-            killmsg.messageID = 3
-            killmsg.scriptName = "gamemanager"
-            killmsg.functionName = "EnemyDied"
-            sendMessage(killmsg)
-            destroy(obj)
-        end
+        -- if lt > lifeTime then
+        --     killmsg = telegram.new()
+        --     killmsg.sender = obj:getID()
+        --     killmsg.receiver = 0
+        --     killmsg.dispatchTime = 0.0
+        --     killmsg.messageID = 3
+        --     killmsg.scriptName = "gamemanager"
+        --     killmsg.functionName = "EnemyDied"
+        --     sendMessage(killmsg)
+        --     destroy(obj)
+        -- end
 
         vars:setGlobal("liveTime", tostring(lt + deltaTime))
     end

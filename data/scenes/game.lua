@@ -103,6 +103,7 @@ scene = {
       {
         Name = "PhysicsTrigger",
         enabled = true,
+        receivesEvents = true,
         halfExtents_x = 1.2,
         halfExtents_y = 10.0,
         halfExtents_z = 1.2

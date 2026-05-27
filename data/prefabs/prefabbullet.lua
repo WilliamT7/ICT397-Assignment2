@@ -31,6 +31,7 @@ entity =
       {
       Name = "PhysicsTrigger",
       enabled = true,
+      receivesEvents = true,
       halfExtents_x = 0.6,
       halfExtents_y = 0.6,
       halfExtents_z = 0.6

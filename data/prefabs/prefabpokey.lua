@@ -32,6 +32,14 @@ entity =
         shape = "box"
       },
       {
+        Name = "PhysicsTrigger",
+        enabled = true,
+        receivesEvents = false,
+        halfExtents_x = 3,
+        halfExtents_y = 20,
+        halfExtents_z = 3
+      },
+      {
         Name = "Script",
         fileName = "testpokeyvars.lua",
         filePath = "..\\data\\luaScripts\\",
