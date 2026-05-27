@@ -148,6 +148,15 @@ namespace Graphics
 		**/
 		void SetVector4(const std::string& name, const Vector4& value) const override;
 
+		/** Set Mat4
+		* @author - Kay Bradsell
+		* @brief - Applies glm::mat4 to uniform
+		* @param - std::string name
+		* @return - glm::mat4 value
+		*
+		* @pre - Shader has been compiled, and Use()
+		* @post - Applies mat4 to uniform from name
+		**/
 		void SetMat4(const std::string& name, glm::mat4 value) const override;
 
 		/** Set Transform
