@@ -6,7 +6,6 @@ local maxUpwardVelocity = 4.0
 
 function update()	
 	--toggle mouse
-	SetMouseVisible(false)
 	local currentVisibility = GetMouseVisible()
 	if (GetKeyPress(16)) then-- P
 		SetMouseVisible(not currentVisibility)
