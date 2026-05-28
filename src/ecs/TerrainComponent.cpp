@@ -253,9 +253,9 @@ namespace ECS
         float dirtMax = worldMinHeight + (heightRange * 0.35f);
 
         float grassMin = worldMinHeight + (heightRange * 0.25f);
-        float grassMax = worldMinHeight + (heightRange * 0.70f);
+        float grassMax = worldMinHeight + (heightRange * 0.84f);
 
-        float rockMin = worldMinHeight + (heightRange * 0.60f);
+        float rockMin = worldMinHeight + (heightRange * 0.76f);
         float rockMax = worldMaxHeight;
 
         float blendWidth = heightRange * 0.08f;
