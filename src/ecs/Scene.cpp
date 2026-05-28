@@ -183,6 +183,10 @@ void ECS::Scene::DeserialiseScene(sol::table& sceneData)
 
 		entity.get()->DeserialiseComponentTable(entityData);
 		std::cout << "ID: " << entity.get()->GetID() << std::endl;
+<<<<<<< Updated upstream
+=======
+		entity.get()->Start();
+>>>>>>> Stashed changes
 	}
 
 	InjectPhysicsWorld(); 
@@ -460,7 +464,8 @@ void ECS::Scene::ImGui()
 				break;
 
 			case 9:
-				entity->AddComponent<FSMComponent>();
+				auto test = entity->AddComponent<FSMComponent>();
+				test->Start();
 				break;
 
 			}

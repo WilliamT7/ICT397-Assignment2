@@ -83,7 +83,10 @@ ScriptFile const ECS::ScriptComponent::getScript() {
 
 //------------------------------------------------------------
 
+#include "LuaReader/luaIO.h"
+
 ScriptFile* ECS::ScriptComponent::getScriptPointer() {
+	cout << luaFile.getFileName() << "\n";
 	return &luaFile;
 }
 

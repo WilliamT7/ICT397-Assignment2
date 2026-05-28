@@ -230,11 +230,12 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 	if (!HasScriptComponent(scriptName))
 	{
 		m_scripts.push_back(ScriptComponent());
+		m_scriptsMap[scriptName] = m_scripts.size() - 1;
 		auto& comp = m_scripts.back();
 		comp.entity = this;
 		comp.setScript(filePath);
 		
-		m_scriptsMap[scriptName] = m_scripts.size() - 1;
+		
 
 	}
 
@@ -258,6 +259,10 @@ ECS::ScriptComponent& ECS::Entity::GetScriptComponent(std::string scriptName)
 
 bool ECS::Entity::HasScriptComponent(std::string scriptName) const
 {	
+	for (auto& curScript : m_scriptsMap) {
+		
+	}
+
 	return m_scriptsMap.find(scriptName) != m_scriptsMap.end();
 }
 

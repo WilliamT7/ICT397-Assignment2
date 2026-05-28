@@ -14,7 +14,7 @@ void ScriptState::update() {
 
 	if (updateScript != nullptr) {
 		SolScripting scripting;
-		scripting.run(*updateScript, updateFunctionName, entityAssociated);
+		scripting.runLoaded(*updateScript, updateFunctionName, entityAssociated);
 	}
 }
 
@@ -24,6 +24,9 @@ ScriptState::ScriptState(string nStateName, ECS::Entity* entity) {
 	stateName = nStateName;
 	entityAssociated = entity;
 
+	cout << "State name " << nStateName << "\n";
+	cout << "Entity associated: " << entityAssociated << "\n";
+
 }
 
 //---------------------------------
@@ -32,7 +35,7 @@ void ScriptState::enter() {
 
 	if (enterScript != nullptr) {
 		SolScripting scripting;
-		scripting.run(*enterScript, enterFunctionName, entityAssociated);
+		scripting.runLoaded(*enterScript, enterFunctionName, entityAssociated);
 	}
 }
 
@@ -42,7 +45,7 @@ void ScriptState::exit() {
 
 	if (exitScript != nullptr) {
 		SolScripting scripting;
-		scripting.run(*exitScript, exitFunctionName, entityAssociated);
+		scripting.runLoaded(*exitScript, exitFunctionName, entityAssociated);
 	}
 
 }
