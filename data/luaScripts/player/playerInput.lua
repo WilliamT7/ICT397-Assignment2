@@ -28,9 +28,6 @@ function update()
 		cameraFollow(physics, camera)
 	end
 
-	if (GetKeyPress(6)) then
-		KillPlayer()
-	end
 end
 
 function clampUpwardVelocity(physics)
