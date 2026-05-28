@@ -1,11 +1,12 @@
 local maxSpeed = 90.0
 local camSensitivity = 0.1
-local playerHeight = 10
+local playerHeight = 5
 local playerLinearDamping = 0.6
 local maxUpwardVelocity = 4.0
 
 function update()	
 	--toggle mouse
+	SetMouseVisible(false)
 	local currentVisibility = GetMouseVisible()
 	if (GetKeyPress(16)) then-- P
 		SetMouseVisible(not currentVisibility)

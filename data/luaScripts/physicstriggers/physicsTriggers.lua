@@ -10,7 +10,16 @@ function update()
 		print("[Lua Trigger Enter]: Player entered by " .. otherName)
 
 		if otherName == "KiddyPool" then
-			print("YOUVE ACTIVATED MY TRAP CARD")
+			local ID = obj:getID()
+			dmgmsg = telegram.new()
+			dmgmsg.sender = ID
+			dmgmsg.receiver = ID
+			dmgmsg.dispatchTime = 0.0
+			dmgmsg.messageID = 4
+			dmgmsg.scriptName = "playerstats"
+			dmgmsg.functionName = "TakeDamage"
+			dmgmsg.data = 999
+			sendMessage(dmgmsg)
 		end
 	end
 

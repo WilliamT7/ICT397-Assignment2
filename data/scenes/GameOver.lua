@@ -31,12 +31,7 @@ scene = {
         specular_g = 0.67786425352096558,
         specular_r = 0.7598038911819458,
         type = "DIRECTIONAL"
-      } --[[table: 00000247532BA320]],
-      {
-        Name = "Script",
-        fileName = "scenesaveload.lua",
-        filePath = "..\\data\\luaScripts\\scene\\"
-      } --[[table: 00000247532BA3A0]]
+      } --[[table: 00000247532BA320]]
     } --[[table: 00000247532BB0A0]],
     EntityName = "Directional Lighting"
   } --[[table: 00000247532BA020]],
