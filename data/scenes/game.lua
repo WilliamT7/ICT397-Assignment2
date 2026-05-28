@@ -26,7 +26,12 @@ scene = {
         Name = "Script",
         fileName = "gamemanager.lua",
         filePath = "..\\data\\luaScripts\\managers\\"
-      } --[[table: 00000295FD652EB0]]
+      } --[[table: 00000295FD652EB0]],
+      {
+        Name = "Script",
+        fileName = "scenesaveload.lua",
+        filePath = "..\\data\\luaScripts\\scene\\"
+      } --[[table: 00000247532BA3A0]]
     } --[[table: 00000295FD652E30]],
     EntityName = "Game Manager"
   } --[[table: 00000295FD652B30]],
@@ -1157,7 +1162,7 @@ scene = {
       {
         Name = "Transform",
         position_x = -2.7000000476837158,
-        position_y = -2.5999999046325684,
+        position_y = 2,
         position_z = -35.599998474121094,
         rotation_x = 0,
         rotation_y = 0,
