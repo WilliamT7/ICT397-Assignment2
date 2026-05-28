@@ -230,6 +230,8 @@ bool ECS::Scene::Spawn(std::string prefabName)
 	InjectPhysicsWorld(spawnedEntity);
 
 	spawnedEntity->Start();
+
+	return true;
 }
 
 //----------------------------------------------
