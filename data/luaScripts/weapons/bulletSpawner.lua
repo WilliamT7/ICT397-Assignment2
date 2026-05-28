@@ -1,6 +1,6 @@
 local bulletSpeed = 120.0
 local bulletSpawnDistance = 2.0
-local bulletCooldown = 2.0
+local bulletCooldown = 1.0
 local bulletCooldownTimer = bulletCooldown
 local maxEntitySearchID = 1000
 
