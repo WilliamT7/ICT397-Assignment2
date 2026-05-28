@@ -1053,9 +1053,9 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = -1800,
+        position_x = -1500,
         position_y = 0,
-        position_z = 0,
+        position_z = 300,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -1080,9 +1080,9 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = 1800,
+        position_x = 2100,
         position_y = 0,
-        position_z = 0,
+        position_z = 300,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -1107,9 +1107,9 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = 0,
+        position_x = 300,
         position_y = 0,
-        position_z = -1800,
+        position_z = -1500,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -1134,9 +1134,9 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = 0,
+        position_x = 300,
         position_y = 0,
-        position_z = 1800,
+        position_z = 2100,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
