@@ -1,8 +1,8 @@
-local maxSpeed = 60.0
+local maxSpeed = 90.0
 local camSensitivity = 0.1
 local playerHeight = 10
-local playerLinearDamping = 0.35
-local maxUpwardVelocity = 8.0
+local playerLinearDamping = 0.6
+local maxUpwardVelocity = 4.0
 
 function update()	
 	--toggle mouse

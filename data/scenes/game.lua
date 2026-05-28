@@ -71,7 +71,7 @@ scene = {
       {
         Name = "Transform",
         position_x = -13.11982250213623,
-        position_y = 30,
+        position_y = 4,
         position_z = -41.106319427490234,
         rotation_x = 0,
         rotation_y = -90,
@@ -86,7 +86,7 @@ scene = {
         near_plane = 0.10000000149011612,
         pitch = -18.700033187866211,
         position_x = -13.11982250213623,
-        position_y = 40,
+        position_y = 14,
         position_z = -41.106319427490234,
         yaw = 1714.424072265625
       } --[[table: 00000295FD652FB0]],
@@ -158,7 +158,7 @@ scene = {
         scale_x = 12,
         scale_y = 1,
         scale_z = 12,
-        seed = 0
+        seed = 42
       } --[[table: 00000295FD652530]],
       {
         Name = "Script",
@@ -1048,8 +1048,8 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = -1500,
-        position_y = 40,
+        position_x = -1800,
+        position_y = 0,
         position_z = 0,
         rotation_x = 0,
         rotation_y = 0,
@@ -1060,9 +1060,9 @@ scene = {
       } --[[table: 00000295FD6417D0]],
       {
         Name = "Physics",
-        halfExtents_x = 1,
-        halfExtents_y = 100,
-        halfExtents_z = 1500,
+        halfExtents_x = 3,
+        halfExtents_y = 250,
+        halfExtents_z = 1800,
         isStatic = true,
         mass = 1,
         shape = "box",
@@ -1075,8 +1075,8 @@ scene = {
     Components = {
       {
         Name = "Transform",
-        position_x = 1500,
-        position_y = 40,
+        position_x = 1800,
+        position_y = 0,
         position_z = 0,
         rotation_x = 0,
         rotation_y = 0,
@@ -1087,9 +1087,9 @@ scene = {
       } --[[table: 00000295FD641950]],
       {
         Name = "Physics",
-        halfExtents_x = 1,
-        halfExtents_y = 100,
-        halfExtents_z = 1500,
+        halfExtents_x = 3,
+        halfExtents_y = 250,
+        halfExtents_z = 1800,
         isStatic = true,
         mass = 1,
         shape = "box",
@@ -1103,8 +1103,8 @@ scene = {
       {
         Name = "Transform",
         position_x = 0,
-        position_y = 40,
-        position_z = -1500,
+        position_y = 0,
+        position_z = -1800,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -1114,9 +1114,9 @@ scene = {
       } --[[table: 00000295FD6411D0]],
       {
         Name = "Physics",
-        halfExtents_x = 1500,
-        halfExtents_y = 100,
-        halfExtents_z = 1,
+        halfExtents_x = 1800,
+        halfExtents_y = 250,
+        halfExtents_z = 3,
         isStatic = true,
         mass = 1,
         shape = "box",
@@ -1130,8 +1130,8 @@ scene = {
       {
         Name = "Transform",
         position_x = 0,
-        position_y = 40,
-        position_z = 1500,
+        position_y = 0,
+        position_z = 1800,
         rotation_x = 0,
         rotation_y = 0,
         rotation_z = 0,
@@ -1141,9 +1141,9 @@ scene = {
       } --[[table: 00000295FD640C50]],
       {
         Name = "Physics",
-        halfExtents_x = 1500,
-        halfExtents_y = 100,
-        halfExtents_z = 1,
+        halfExtents_x = 1800,
+        halfExtents_y = 250,
+        halfExtents_z = 3,
         isStatic = true,
         mass = 1,
         shape = "box",
