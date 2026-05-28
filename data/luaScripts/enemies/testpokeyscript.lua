@@ -11,6 +11,7 @@ function start()
     local transform = getTransform(obj)
 
     if transform ~= nil then
+        math.randomseed(obj:getID() + os.time())
         local randomX = math.random(spawnMin, spawnMax)
         local randomZ = math.random(spawnMin, spawnMax)
         local spawnY = getSpawnHeight()
