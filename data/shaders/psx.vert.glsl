@@ -33,11 +33,14 @@ void main()
     mat4 modelMatrix = model * transform;
 
     TexCoord = aTexCoord;
+	
+	vec4 worldPos = modelMatrix * vec4(aPos, 1.0);
+	FragPos = worldPos.xyz;
+
     Normal = mat3(transpose(inverse(modelMatrix))) * aNorm;
 
-    vec4 clipPos = projection * view * modelMatrix * vec4(aPos, 1.0);
+    vec4 clipPos = projection * view * worldPos;
     vec4 snapPos = snapToPosition(clipPos);
 
-    FragPos = snapPos.xyz / snapPos.w;
     gl_Position = snapPos;
 }
