@@ -1,4 +1,4 @@
-local bulletSpeed = 60.0
+local bulletSpeed = 80.0
 local bulletSpawnDistance = 2.0
 local bulletCooldown = 2.0
 local bulletCooldownTimer = bulletCooldown
