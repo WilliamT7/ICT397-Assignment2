@@ -324,6 +324,8 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 	if (m_camera)
 		graphics->UseCamera(*m_camera);
 
+	graphics->RenderSkybox();
+
 	for (int i = 0; i < m_lights.size(); i++)
 		graphics->AddLight(*m_lights[i], *m_lighttransforms[i]);
 

@@ -79,8 +79,8 @@ namespace Graphics
 		CreateShader(ShaderType::TWODIMENSION, "2dtransform.vert.glsl", "2dtextures.frag.glsl");
 		CreateShader(ShaderType::PSX, "psx.vert.glsl", "texturesandlight.frag.glsl");
 		CreateShader(ShaderType::PSXANIM, "psxanim.vert.glsl", "texturesandlight.frag.glsl");
-		CreateShader(ShaderType::TERRAIN, "transform.vert.glsl", "terrain_multitexture.frag.glsl");
-		CreateShader(ShaderType::NOLIGHT, "transform.vert.glsl", "texturesnolight.frag.glsl");	
+		CreateShader(ShaderType::TERRAIN, "psx.vert.glsl", "terrain_multitexture.frag.glsl");
+		CreateShader(ShaderType::NOLIGHT, "nolight.vert.glsl", "texturesnolight.frag.glsl");	
 		CreateShader(ShaderType::CRTFILTER, "quad.vert.glsl", "crtfilter.frag.glsl");
 
 		ImGui_ImplOpenGL3_Init("#version 330");
@@ -124,6 +124,8 @@ namespace Graphics
 		else
 			std::cout << "[C++]: Notice: OpenGL: Successfully loaded in framebuffer!\n";
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+		m_skybox = LoadModel("skybox", "..\\data\\models\\skybox\\skybox1.obj");
 	}
 
 	//----------------------------------------------
@@ -419,6 +421,8 @@ namespace Graphics
 			glm::vec3(up.x, up.y, up.z));
 
 		m_projection3D = glm::perspective<float>(glm::radians(45.0f), static_cast<float>(m_width) / static_cast<float>(m_height), camera.near_plane, camera.far_plane);
+
+		m_camPos = camera.position;
 	}
 
 	//----------------------------------------------
@@ -581,11 +585,13 @@ namespace Graphics
 		{
 			m_3DMode = false;
 			glDisable(GL_DEPTH_TEST);
+			glDepthMask(GL_FALSE);
 		}
 		else // return to 3D
 		{
 			m_3DMode = true;
 			glEnable(GL_DEPTH_TEST);
+			glDepthMask(GL_TRUE);
 		}
 	}
 
@@ -614,6 +620,23 @@ namespace Graphics
 		glDisable(GL_DEPTH_TEST);
 		glBindTexture(GL_TEXTURE_2D, textureColourbuffer);
 		glDrawArrays(GL_TRIANGLES, 0, 6);
+	}
+
+	//----------------------------------------------
+	
+	void GraphicsOpenGL::RenderSkybox()
+	{
+		if (!m_skybox)
+			return;
+			
+		glDepthMask(GL_FALSE);
+		ECS::TransformComponent transform;
+		transform.position = m_camPos;
+		transform.scale = Vector3(10, 10, 10);
+
+		DrawModel(m_skybox, GetShader(ShaderType::NOLIGHT), transform, nullptr);
+
+		glDepthMask(GL_TRUE);
 	}
 
 	//----------------------------------------------

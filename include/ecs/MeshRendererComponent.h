@@ -139,6 +139,7 @@ namespace ECS
 		TransformComponent* transform = nullptr;
 		AnimationComponent* animator = nullptr;
 		Graphics::Graphics* g = nullptr;
+		bool skybox = false;
 	};
 }
 

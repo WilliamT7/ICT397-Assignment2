@@ -190,6 +190,7 @@
     <None Include="..\data\shaders\2dtextures.frag.glsl" />
     <None Include="..\data\shaders\2dtransform.vert.glsl" />
     <None Include="..\data\shaders\crtfilter.frag.glsl" />
+    <None Include="..\data\shaders\nolight.vert.glsl" />
     <None Include="..\data\shaders\psx.vert.glsl" />
     <None Include="..\data\shaders\psxanim.vert.glsl" />
     <None Include="..\data\shaders\quad.vert.glsl" />

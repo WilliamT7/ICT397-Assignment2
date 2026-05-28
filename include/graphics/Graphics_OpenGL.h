@@ -281,6 +281,8 @@ namespace Graphics
 		**/
 		void EndRender();
 
+		void RenderSkybox();
+
 	private:
 		glm::mat4 m_model, m_view, m_projection2D, m_projection3D;
 		bool m_3DMode = true;
@@ -289,6 +291,9 @@ namespace Graphics
 		unsigned int framebuffer;
 		unsigned int textureColourbuffer;
 		unsigned int rbo; // render buffer object
+
+		Model* m_skybox = nullptr;
+		Vector3 m_camPos;
 
 		std::unordered_map<ShaderType, ShaderOpenGL*> m_shaders;
 		std::unordered_map<std::string, TextureOpenGL*> m_textures;

@@ -301,6 +301,8 @@ namespace Graphics
 		**/
 		virtual void EndRender() = 0;
 
+		virtual void RenderSkybox() = 0;
+
 	protected:
 		struct LightAndPos
 		{
