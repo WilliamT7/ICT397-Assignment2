@@ -132,6 +132,8 @@ public:
 	**/
 	bool GetMouseVisible() const;
 
+	void GetWindowSize(int& width, int& height);
+
 private:
 	/** Framebuffer Size Callback
 	* @author - Kay Bradsell

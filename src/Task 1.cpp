@@ -45,6 +45,7 @@ int main(int argc, char **argv)
 
     // Make Window
     window->CreateWindow(width, height, "ICT397 Engine", graphicsHandler);
+    window->GetWindowSize(width, height);
     graphicsHandler->Init(width, height);
   
     //Load scripts into scriptManager singleton

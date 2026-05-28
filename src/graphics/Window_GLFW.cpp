@@ -19,9 +19,17 @@ void GLFWWindow::Init()
 
 bool GLFWWindow::CreateWindow(int width, int height, const char* name, Graphics::Graphics* renderer)
 {
-	this->width = width;
-	this->height = height;
-	window = glfwCreateWindow(width, height, name, NULL, NULL);
+	GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+	const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+
+	glfwWindowHint(GLFW_RED_BITS, mode->redBits);
+	glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
+	glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
+	glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
+
+	this->width = mode->width;
+	this->height = mode->height;
+	window = glfwCreateWindow(mode->width, mode->height, name, monitor, NULL);
 	if (window == NULL)
 	{
 		std::cout << "[C++]: ERROR: GLFW: Unable to initialise window.\n";
@@ -284,6 +292,14 @@ Key GLFWWindow::ConvertGLFWToKey(int key)
 	default:
 		return Key::KEY_UNKNOWN;
 	}
+}
+
+//----------------------------------------------
+
+void GLFWWindow::GetWindowSize(int& width, int& height)
+{
+	width = this->width;
+	height = this->height;
 }
 
 //----------------------------------------------

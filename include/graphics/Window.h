@@ -212,6 +212,8 @@ public:
 	* @post - returns the float time
 	*/
 	virtual float GetTime() const = 0;
+
+	virtual void GetWindowSize(int& width, int& height) = 0;
 protected:
 
 	/** Init Keys
