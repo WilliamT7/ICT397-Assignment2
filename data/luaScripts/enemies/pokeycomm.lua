@@ -1,8 +1,8 @@
 local minEntitySearchID = 5
 local maxEntitySearchID = 200
 
-local playerViewRadius = 250
-local deathAlertRadius = 500
+local playerViewRadius = 500
+local deathAlertRadius = 1000
 local playerCheckInterval = 0.5
 local playerAlertCooldown = 2.0
 
