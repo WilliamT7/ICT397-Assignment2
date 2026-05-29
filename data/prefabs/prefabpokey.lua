@@ -49,7 +49,8 @@ entity =
         moveX = "0",
         moveY = "0",
         moveZ = "0",
-        liveTime = "0"
+        liveTime = "0",
+		movementSpeed = "25"
       },
       {
         Name = "Script",

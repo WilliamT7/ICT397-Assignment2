@@ -317,8 +317,8 @@ void Entity::handleMessage(telegram& message) {
 //----------------------------------------------
 
 telegram Entity::retreiveMessage() {
+
 	telegram message = recievedMessage;
-	recievedMessage = telegram();
 	return message;
 
 }

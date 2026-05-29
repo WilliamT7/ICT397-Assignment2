@@ -17,15 +17,12 @@ local fsm = nil
 function start()
 
 	fsm = getFSM(obj)
+	
 	wanderState = fsm:createState("Wander")
 	wanderState:setUpdateCode("pokeycomm", "wanderUpdate")
-	--chaseState:setEnterCode("FSMTest", "scream")
-	--chaseState:setExitCode("FSMTest", "die")
 	fsm:saveState()
 	
 	followState = fsm:createState("Follow_Pokey")
-	--runState:setEnterCode("FSMTest", "cry")
-	--runState:setExitCode("FSMTest", "die")
 	fsm:saveState()
 	
 	attackState = fsm:createState("Attack")
@@ -36,7 +33,14 @@ function start()
 	dieState:setEnterCode("pokeycomm", "dieEnter")
 	fsm:saveState()
 	
+	investigateState = fsm:createState("Investigate")
+	investigateState:setEnterCode("pokeycomm", "investigateEnter")
+	investigateState:setUpdateCode("pokeycomm", "investigateUpdate")
+	fsm:saveState()
+	
 	fsm:setState("Wander")
+	
+	
 
 
 end
@@ -46,17 +50,13 @@ end
 function update()
 
 
+end
+
+
+function scanEnvironment()
+
 	fsm = getFSM(obj)
 	
-	playerCheckTimer = playerCheckTimer + getDeltaTime()
-    playerAlertTimer = playerAlertTimer + getDeltaTime()
-
-    if playerCheckTimer < playerCheckInterval then
-        return
-    end
-
-    playerCheckTimer = 0.0
-
     local player = findPlayer()
 
     if player == nil then
@@ -80,36 +80,38 @@ function update()
             print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
             alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10)
 			fsm:setState("Attack")
-			print("found player im attacking them :)")
+			print("I am attacking")
         end
     else
         hasSeenPlayer = false
     end
 
-end
+
+end 
 
 --FSM functionality--------------------------
 
 --Wander---------
 function wanderUpdate()
+	
 
+	fsm = getFSM(obj)
+	playerCheckTimer = playerCheckTimer + getDeltaTime()
+    playerAlertTimer = playerAlertTimer + getDeltaTime()
 
+	
+	if not (playerCheckTimer < playerCheckInterval) then
+	
+		playerCheckTimer = 0.0
+		scanEnvironment()
+	end
+	
 
 end
 
 
 --Attack-----------------------
 function attackUpdate()
-
-	
-	playerCheckTimer = playerCheckTimer + getDeltaTime()
-    playerAlertTimer = playerAlertTimer + getDeltaTime()
-
-    if playerCheckTimer < playerCheckInterval then
-        return
-    end
-
-    playerCheckTimer = 0.0
 
     local player = findPlayer()
 
@@ -125,10 +127,11 @@ function attackUpdate()
         return
     end
 	
-	velocity = Vector3.new(5, 0, 5)
+	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 	
-	print("moving towards player")
-	moved = moveTo(pokeyPosition, playerPosition, velocity, 2, 0)
+
+	moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
 	
 
 
@@ -138,17 +141,7 @@ end
 --Die---------
 function dieEnter()
 
-	print("im dead :(")
-
-end
-
-
-
-
----------------------------------------
-
-function OnPokeyDied() --Die enter
-    local message = obj:retrieveMessage()
+	local message = obj:retrieveMessage()
     local alertPosition = message.data
 
     if alertPosition == nil then
@@ -161,18 +154,81 @@ function OnPokeyDied() --Die enter
 
     print("[PokeyComm]: Pokey " .. obj:getID() .. " died and is alerting nearby pokeys")
     alertNearbyPokeys(alertPosition, alertPosition, deathAlertRadius, 11)
+
+end
+
+--Investigate------------------------------
+
+function investigateUpdate()
+	
+	local message = obj:retrieveMessage()
+	local alertPosition = message.data
+	
+	scanEnvironment()
+
+	fsm = getFSM(obj)
+	currentState = fsm:getCurrentState()
+	print(currentState)
+	
+	if (currentState ~= "Attack") then
+		moveEntityTo(obj, alertPosition, getDeltaTime(), 2, 100)
+	
+	end 
+	
+
+
+end
+
+
+
+
+function investigateEnter()
+
+
+	print("fuck someone died")
+	local message = obj:retrieveMessage()
+	local alertPosition = message.data
+
+
+	if alertPosition ~= nil then
+		lastKnownPlayerPosition = alertPosition
+		
+		print("[PokeyComm]: Pokey " .. obj:getID() .." received alert from Pokey " .. message.sender .." at " .. positionToString(alertPosition))
+	else
+		print("[PokeyComm]: Pokey " .. obj:getID() .. " received alert from Pokey " .. message.sender)
+	end
+
+
+
+end
+
+
+
+
+
+
+---------------------------------------
+
+function OnPokeyDied()
+
+	fsm = getFSM(obj)
+	fsm:setState("Die")
+	
 end
 
 function OnPokeyAlert()
-    local message = obj:retrieveMessage()
-    local alertPosition = message.data
+	
+	fsm = getFSM(obj)
+	
+	currentState = fsm:getCurrentState()
+		
+	if (currentState == "Wander") then
+		
+		fsm:setState("Investigate")
 
-    if alertPosition ~= nil then
-        lastKnownPlayerPosition = alertPosition
-        print("[PokeyComm]: Pokey " .. obj:getID() .." received alert from Pokey " .. message.sender .." at " .. positionToString(alertPosition))
-    else
-        print("[PokeyComm]: Pokey " .. obj:getID() .. " received alert from Pokey " .. message.sender)
-    end
+	end
+	
+
 end
 
 function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID)
