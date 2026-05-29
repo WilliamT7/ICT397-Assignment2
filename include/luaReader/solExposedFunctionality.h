@@ -191,3 +191,14 @@ void exposeTime(sol::state_view& solView);
 */
 void exposeMessageDispatcher(sol::state_view& solView);
 
+
+/* exposeAniamtor
+* @author - Seb D'Alessandro, Kay Bradsell
+* @brief - Exposes functionality from animator
+* @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
+* @post - Exposes functionality from animator
+* @param solView - lua context to add solscripting too
+* @return - void
+*/
+void exposeAnimator(sol::state_view& solView);
+

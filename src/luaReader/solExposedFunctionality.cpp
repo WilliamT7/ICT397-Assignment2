@@ -387,6 +387,25 @@ void exposeScriptGlobal(sol::state_view& solView) {
 
 //------------------------------------------------------------------------------------------
 
+void exposeAnimator(sol::state_view& solView) {
+
+	solView.new_usertype <ECS::AnimationComponent >(
+		"AnimationComponent",
+		sol::constructors<ECS::AnimationComponent>(),
+		"play",
+		&ECS::AnimationComponent::Play
+	);
+
+	solView.set_function("getAnimation", &ECS::Entity::GetComponent<ECS::AnimationComponent>);
+	solView.set_function("play", &ECS::AnimationComponent::Play);
+
+
+
+}
+
+//------------------------------------------------------------------------------------------
+
+
 void exposeFSM(sol::state_view& solView) {
 
 

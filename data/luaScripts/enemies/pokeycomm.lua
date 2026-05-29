@@ -15,6 +15,7 @@ local lastKnownPlayerPosition = nil
 
 local fsm = nil
 
+
 function start()
 
 	fsm = getFSM(obj)
@@ -174,7 +175,6 @@ function investigateUpdate()
 
 	fsm = getFSM(obj)
 	currentState = fsm:getCurrentState()
-	print(currentState)
 
 	if (currentState ~= "Attack") then
 		moveEntityTo(obj, alertPosition, getDeltaTime(), 2, 50)

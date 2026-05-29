@@ -286,66 +286,24 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 	//Script component
 	exposeScriptComponent(solView);
 
-	if (entity->HasComponent<ECS::TransformComponent>()) {
+	exposeTransform(solView);
 
-		exposeTransform(solView);
+	exposeAnimator(solView);
 
-	}
+	exposeCamera(solView);
 
-	if (entity->HasComponent<ECS::AnimationComponent>()) {
+	exposeLighting(solView); //Why? oh thats why
 
-		solView.new_usertype <ECS::AnimationComponent >(
-			"AnimationComponent",
-			sol::constructors<ECS::AnimationComponent>(),
-			"play",
-			&ECS::AnimationComponent::Play
-		);
+	exposePhysics(solView);
 
-		solView.set_function("getAnimation", &ECS::Entity::GetComponent<ECS::AnimationComponent>);
-		solView.set_function("play", &ECS::AnimationComponent::Play);
+	exposeTerrain(solView);
 
-	}
-
-	if (entity->HasComponent<ECS::CameraComponent>()) {
-
-		exposeCamera(solView);
-	}
-
-	exposeLighting(solView); //Why?
-	if (entity->HasComponent<ECS::LightingComponent>()) {
-
-		exposeLighting(solView);
-	}
-
-
-
-	if (entity->HasComponent<ECS::PhysicsComponent>()) {
-
-		exposePhysics(solView);
-
-	}
-
-
-	if (entity->HasComponent<ECS::TerrainComponent>()) {
-
-		exposeTerrain(solView);
-	}
-
-
-	if (entity->HasComponent<ECS::TextureRendererComponent>())
-	{
-		exposeTextureRenderer(solView);
-	}
-
-	if (entity->HasComponent<ECS::PhysicsTriggerComponent>())
-	{
-		exposePhysicsTrigger(solView);
-	}
-
-	if (entity->HasComponent<ECS::FSMComponent>())
-	{
-		exposeFSM(solView);
-	}
+	exposeTextureRenderer(solView);
+	
+	exposePhysicsTrigger(solView);
+	
+	exposeFSM(solView);
+	
 
 }
 
