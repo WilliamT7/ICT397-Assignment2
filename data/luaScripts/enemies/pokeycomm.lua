@@ -23,15 +23,17 @@ function start()
 	--chaseState:setExitCode("FSMTest", "die")
 	fsm:saveState()
 	
-	--followState = fsm:createState("Follow_Pokey")
+	followState = fsm:createState("Follow_Pokey")
 	--runState:setEnterCode("FSMTest", "cry")
 	--runState:setExitCode("FSMTest", "die")
 	fsm:saveState()
 	
 	attackState = fsm:createState("Attack")
+	attackState:setUpdateCode("pokeycomm", "attackUpdate")
 	fsm:saveState()
 	
 	dieState = fsm:createState("Die")
+	dieState:setEnterCode("pokeycomm", "dieEnter")
 	fsm:saveState()
 	
 	fsm:setState("Wander")
@@ -46,7 +48,7 @@ function update()
 
 	fsm = getFSM(obj)
 	
-    playerCheckTimer = playerCheckTimer + getDeltaTime()
+	playerCheckTimer = playerCheckTimer + getDeltaTime()
     playerAlertTimer = playerAlertTimer + getDeltaTime()
 
     if playerCheckTimer < playerCheckInterval then
@@ -69,30 +71,80 @@ function update()
         return
     end
 	
-	------------------------------------
-	currentState = fsm:getCurrentState()
 	
-
-    if isWithinRadius(pokeyPosition, playerPosition, playerViewRadius) then
+	 if isWithinRadius(pokeyPosition, playerPosition, playerViewRadius) then
         if not hasSeenPlayer and playerAlertTimer >= playerAlertCooldown then
             hasSeenPlayer = true
             playerAlertTimer = 0.0
 
             print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
             alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10)
+			fsm:setState("Attack")
+			print("found player im attacking them :)")
         end
     else
         hasSeenPlayer = false
     end
+
 end
 
 --FSM functionality--------------------------
+
+--Wander---------
 function wanderUpdate()
 
-	print("WANDER")
 
 
 end
+
+
+--Attack-----------------------
+function attackUpdate()
+
+	
+	playerCheckTimer = playerCheckTimer + getDeltaTime()
+    playerAlertTimer = playerAlertTimer + getDeltaTime()
+
+    if playerCheckTimer < playerCheckInterval then
+        return
+    end
+
+    playerCheckTimer = 0.0
+
+    local player = findPlayer()
+
+    if player == nil then
+        hasSeenPlayer = false
+        return
+    end
+
+    local pokeyPosition = getEntityPosition(obj)
+    local playerPosition = getEntityPosition(player)
+
+    if pokeyPosition == nil or playerPosition == nil then
+        return
+    end
+	
+	velocity = Vector3.new(5, 0, 5)
+	
+	print("moving towards player")
+	moved = moveTo(pokeyPosition, playerPosition, velocity, 2, 0)
+	
+
+
+end
+
+
+--Die---------
+function dieEnter()
+
+	print("im dead :(")
+
+end
+
+
+
+
 ---------------------------------------
 
 function OnPokeyDied() --Die enter

@@ -24,9 +24,6 @@ ScriptState::ScriptState(string nStateName, ECS::Entity* entity) {
 	stateName = nStateName;
 	entityAssociated = entity;
 
-	cout << "State name " << nStateName << "\n";
-	cout << "Entity associated: " << entityAssociated << "\n";
-
 }
 
 //---------------------------------
