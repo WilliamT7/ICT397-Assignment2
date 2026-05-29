@@ -3,6 +3,7 @@ local maxEntitySearchID = 200
 
 local playerViewRadius = 500
 local deathAlertRadius = 1000
+local pokeyFollowRadius = 250
 local playerCheckInterval = 0.5
 local playerAlertCooldown = 2.0
 
@@ -22,7 +23,8 @@ function start()
 	wanderState:setUpdateCode("pokeycomm", "wanderUpdate")
 	fsm:saveState()
 	
-	followState = fsm:createState("Follow_Pokey")
+	followState = fsm:createState("Follow Pokey")
+	followState:setUpdateCode("pokeycomm", "followPokeyUpdate")
 	fsm:saveState()
 	
 	attackState = fsm:createState("Attack")
@@ -64,14 +66,15 @@ function scanEnvironment()
         return
     end
 	
-	
+
 	 if isWithinRadius(pokeyPosition, playerPosition, playerViewRadius) then
         if not hasSeenPlayer and playerAlertTimer >= playerAlertCooldown then
             hasSeenPlayer = true
             playerAlertTimer = 0.0
 
             print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
-            alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10)
+            alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
+			print("set to attacK")
 			fsm:setState("Attack")
         end
     else
@@ -86,7 +89,6 @@ end
 --Wander---------
 function wanderUpdate()
 	
-
 	fsm = getFSM(obj)
 	playerCheckTimer = playerCheckTimer + getDeltaTime()
     playerAlertTimer = playerAlertTimer + getDeltaTime()
@@ -98,6 +100,9 @@ function wanderUpdate()
 		scanEnvironment()
 		
 	end
+	
+	local pokeyPosition = getEntityPosition(obj)
+	--alertNearbyPokeys(pokeyPosition, pokeyPosition, pokeyFollowRadius, 11, "onFollowRequest")
 	
 
 end
@@ -129,7 +134,6 @@ function attackUpdate()
 	
 	else
 		
-		print("Back to wandering I go")
 		fsm = getFSM(obj)
 		fsm:setState("Wander")
 		
@@ -155,7 +159,7 @@ function dieEnter()
     end
 
     print("[PokeyComm]: Pokey " .. obj:getID() .. " died and is alerting nearby pokeys")
-    alertNearbyPokeys(alertPosition, alertPosition, deathAlertRadius, 11)
+    alertNearbyPokeys(alertPosition, alertPosition, deathAlertRadius, 11, "OnPokeyAlert")
 
 end
 
@@ -170,9 +174,10 @@ function investigateUpdate()
 
 	fsm = getFSM(obj)
 	currentState = fsm:getCurrentState()
+	print(currentState)
 
 	if (currentState ~= "Attack") then
-		moveEntityTo(obj, alertPosition, getDeltaTime(), 2, 100)
+		moveEntityTo(obj, alertPosition, getDeltaTime(), 2, 50)
 	
 	end 
 	
@@ -181,21 +186,114 @@ function investigateUpdate()
 end
 
 
+--Follow pokey
+function followPokeyUpdate()
+
+	local message = obj:retrieveMessage()
+    local FollowPosition = message.data
+
+	local atPokeyLocation = true
+	local pokeyExists = GetEntity(message.sender) ~= nil
+	
+	fsm = getFSM(obj)
+	currentState = fsm:getCurrentState()
+	
+	--If entity doesnt exist, go back to wander lmao
+	local entity = GetEntity(message.sender)
+	if entity == nil or FollowPosition == nil then
+		
+		print("Cant find my buddy :(, back to wanderin i go")
+		fsm:setState("Wander")
+	
+	
+	--Dont go to pokey location if already there
+	else
+		
+		pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+		--movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
+		moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, 100)
+
+
+	
+	end
+	
+	--askForPokeyLocation(message.sender)
+	
+
+
+end
 
 
 ---------------------------------------
 
-function OnPokeyDied()
-
+function onFollowRequest()
+	
+	
 	fsm = getFSM(obj)
-	fsm:setState("Die")
+	currentState = fsm:getCurrentState()
+
+	if currentState == "Wander" then
+		fsm:setState("Follow Pokey")
+		local message = obj:retrieveMessage()
+		print("changed state to follow pokey")
+	end
+
+end
+
+
+function onFollowUpdate()
+		
+	myPosition = getEntityPosition(obj)
+	local alertMessage = telegram.new()
+	alertMessage.sender = obj:getID()
+	alertMessage.receiver = entity:getID()
+	lertMessage.dispatchTime = 0.0
+	alertMessage.messageID = messageID
+	alertMessage.scriptName = "pokeycomm"
+	alertMessage.functionName = "N/A"
+	alertMessage.data = myPosition 
+	
+	sendMessage(alertMessage)
+
+
+end
+
+
+
+function askForPokeyLocation(recieverID)
+
+	local alertMessage = telegram.new()
+	alertMessage.sender = obj:getID()
+	alertMessage.receiver = recieverID
+	alertMessage.dispatchTime = 0.0
+	alertMessage.messageID = messageID
+	alertMessage.scriptName = "pokeycomm"
+	alertMessage.functionName = "onFollowUpdate"
+	alertMessage.data = "Nothing to say"
+
+	sendMessage(alertMessage)
+
+
+end
+
+
+
+function OnPokeyDied()
+	
+	fsm = getFSM(obj)
+	currentState = fsm:getCurrentState()
+	
+	if currentState ~= "Die" then
+		fsm = getFSM(obj)
+		fsm:setState("Die")
+		print("i am dead rip")
+	end
 	
 end
 
 function OnPokeyAlert()
 	
 	fsm = getFSM(obj)
-	
 	currentState = fsm:getCurrentState()
 		
 	if (currentState == "Wander") then
@@ -207,7 +305,8 @@ function OnPokeyAlert()
 
 end
 
-function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID)
+
+function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, functionName)
     for id = minEntitySearchID, maxEntitySearchID do
         local entity = GetEntity(id)
 
@@ -215,7 +314,7 @@ function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID)
             local entityPosition = getEntityPosition(entity)
 
             if entityPosition ~= nil and isWithinRadius(searchOrigin, entityPosition, radius) then
-                print("[PokeyComm]: talking to pokey id " .. entity:getID())
+                --print("[PokeyComm]: talking to pokey id " .. entity:getID())
 
                 local alertMessage = telegram.new()
                 alertMessage.sender = obj:getID()
@@ -223,10 +322,11 @@ function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID)
                 alertMessage.dispatchTime = 0.0
                 alertMessage.messageID = messageID
                 alertMessage.scriptName = "pokeycomm"
-                alertMessage.functionName = "OnPokeyAlert"
+                alertMessage.functionName = functionName
                 alertMessage.data = alertPosition
 
                 sendMessage(alertMessage)
+				print("sent alert")
             end
         end
     end

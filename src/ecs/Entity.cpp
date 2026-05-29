@@ -304,12 +304,16 @@ void Entity::ResetIDCounter()
 void Entity::handleMessage(telegram& message) {
 
 	recievedMessage = message;
+	bool runFunction = message.scriptFunctionName != "N/A";
 
-	if (HasScriptComponent(message.scriptCompName)) {
+	if (HasScriptComponent(message.scriptCompName) && runFunction) {
 		
 		ScriptComponent& const scriptComponent = GetScriptComponent(message.scriptCompName);
 		scriptComponent.runFunction(message.scriptFunctionName);
 
+	}
+	else {
+		cout << "stupdity test\n";
 	}
 
 
