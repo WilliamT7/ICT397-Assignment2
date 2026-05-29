@@ -1,4 +1,4 @@
-local file = "game.lua"
+local file = "gamesave.lua"
 
 function render()
     GUIBegin("Scene Handler")

@@ -15359,5 +15359,27 @@ scene = {
       } --[[table: 000001BC6C0BD720]]
     } --[[table: 000001BC6C0BD3A0]],
     EntityName = "Temple"
-  } --[[table: 000001BC6C0BD2A0]]
+  } --[[table: 000001BC6C0BD2A0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -62.299999237060547,
+        position_y = 271.29998779296875,
+        position_z = -86.199996948242188,
+        rotation_x = 20.899999618530273,
+        rotation_y = 0,
+        rotation_z = 18.5,
+        scale_x = 20,
+        scale_y = 20,
+        scale_z = 20
+      } --[[table: 00000241BC696090]],
+      {
+        ModelID = "BLAHAJ",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 00000241BC695E90]]
+    } --[[table: 00000241BC694C90]],
+    EntityName = "Blahaj"
+  } --[[table: 00000241BC695310]]
 } --[[table: 000001BC6BE31010]]
