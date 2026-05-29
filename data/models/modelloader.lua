@@ -46,5 +46,9 @@ models = {
     {
         Name = "POOL",
         File = "kiddypool\\kiddypool.obj"
+    },
+    {
+        Name = "TEMPLE",
+        File = "Temple\\Temple.obj"
     }
 }
