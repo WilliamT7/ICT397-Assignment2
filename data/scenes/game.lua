@@ -193,9 +193,9 @@ scene = {
       {
         Name = "TextureRenderer",
         TextureID = "Help Manual",
-        enabled = false,
+        enabled = true,
         position_x = 0.73000001907348633,
-        position_y = 5.2199997901916504,
+        position_y = 0.2199997901916504,
         size_x = 0.5,
         size_y = 0.5
       } --[[table: 0000022B65089570]],
@@ -226,7 +226,7 @@ scene = {
         TextureID = "End Screen",
         enabled = false,
         position_x = 0,
-        position_y = 5,
+        position_y = 0,
         size_x = 1,
         size_y = 1
       } --[[table: 0000022B65089A70]],
