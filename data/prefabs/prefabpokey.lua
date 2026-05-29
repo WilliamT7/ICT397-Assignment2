@@ -39,6 +39,9 @@ entity =
         halfExtents_y = 20,
         halfExtents_z = 3
       },
+	  {
+		Name = "FSM"
+	  },
       {
         Name = "Script",
         fileName = "testpokeyvars.lua",

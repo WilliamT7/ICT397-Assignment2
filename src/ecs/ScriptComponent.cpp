@@ -29,11 +29,7 @@ ECS::ScriptComponent& ECS::ScriptComponent::operator=(ScriptComponent&&) noexcep
 
 //-----------------------------------------------------------
 
-void ECS::ScriptComponent::Start() {
-
-	cout << "Attempinting to run start() on " << luaFile.getFileName() << "\n";
-	cout << scriptAssigned << "\n";
-	cout << hasStart << "\n";
+void ECS::ScriptComponent::Start() {;
 
 	if (scriptAssigned && hasStart) {
 		scripting->runLoaded(luaFile, "start", entity);

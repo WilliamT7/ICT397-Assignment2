@@ -8,7 +8,7 @@ function update()
 	local currentWave = tonumber(vars:getGlobal("currentWave").value)
 	local numEnemiesSpawned = tonumber(vars:getGlobal("numEnemiesSpawned").value)
 
-	local amountToSpawn = currentWave * 5
+	local amountToSpawn = currentWave
 	if numEnemiesSpawned < amountToSpawn then
 		SpawnEnemy(vars)
 	end

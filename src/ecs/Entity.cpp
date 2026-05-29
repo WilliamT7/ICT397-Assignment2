@@ -128,6 +128,7 @@ void ECS::Entity::DeserialiseComponentTable(sol::table& components)
 		else
 		{
 			Component* comp = AddComponentByName(componentName);
+			comp->Start();
 
 			if (!comp)
 				std::cout << "[C++]: ERROR: Component name doesn't exist";
@@ -259,10 +260,6 @@ ECS::ScriptComponent& ECS::Entity::GetScriptComponent(std::string scriptName)
 
 bool ECS::Entity::HasScriptComponent(std::string scriptName) const
 {	
-	for (auto& curScript : m_scriptsMap) {
-		
-	}
-
 	return m_scriptsMap.find(scriptName) != m_scriptsMap.end();
 }
 

@@ -183,7 +183,7 @@ void ECS::Scene::DeserialiseScene(sol::table& sceneData)
 
 		entity.get()->DeserialiseComponentTable(entityData);
 		std::cout << "ID: " << entity.get()->GetID() << std::endl;
-		entity.get()->Start();
+
 
 	}
 
@@ -231,7 +231,6 @@ bool ECS::Scene::Spawn(std::string prefabName)
 
 	InjectPhysicsWorld(spawnedEntity);
 
-	spawnedEntity->Start();
 
 	return true;
 }
