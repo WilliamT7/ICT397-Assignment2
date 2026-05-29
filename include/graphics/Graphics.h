@@ -301,6 +301,13 @@ namespace Graphics
 		**/
 		virtual void EndRender() = 0;
 
+		/** Render Skybox
+		* @author - Kay Bradsell
+		* @brief - Renders the skybox only without depth information
+		*
+		* @pre - render has begun (BeginRender())
+		* @post - draws skybox model in background with no depth information.
+		**/
 		virtual void RenderSkybox() = 0;
 
 	protected:
