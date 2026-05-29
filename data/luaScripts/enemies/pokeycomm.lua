@@ -34,7 +34,6 @@ function start()
 	fsm:saveState()
 	
 	investigateState = fsm:createState("Investigate")
-	investigateState:setEnterCode("pokeycomm", "investigateEnter")
 	investigateState:setUpdateCode("pokeycomm", "investigateUpdate")
 	fsm:saveState()
 	
@@ -45,12 +44,6 @@ function start()
 
 end
 
-
-
-function update()
-
-
-end
 
 
 function scanEnvironment()
@@ -80,7 +73,6 @@ function scanEnvironment()
             print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
             alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10)
 			fsm:setState("Attack")
-			print("I am attacking")
         end
     else
         hasSeenPlayer = false
@@ -104,6 +96,7 @@ function wanderUpdate()
 	
 		playerCheckTimer = 0.0
 		scanEnvironment()
+		
 	end
 	
 
@@ -123,16 +116,25 @@ function attackUpdate()
     local pokeyPosition = getEntityPosition(obj)
     local playerPosition = getEntityPosition(player)
 
-    if pokeyPosition == nil or playerPosition == nil then
-        return
-    end
-	
-	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
-	movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
-	
+	if isWithinRadius(pokeyPosition, playerPosition, playerViewRadius) then
 
-	moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
+		if pokeyPosition == nil or playerPosition == nil then
+			return
+		end
 	
+		pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+		movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
+	
+		moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
+	
+	else
+		
+		print("Back to wandering I go")
+		fsm = getFSM(obj)
+		fsm:setState("Wander")
+		
+	
+	end
 
 
 end
@@ -168,8 +170,7 @@ function investigateUpdate()
 
 	fsm = getFSM(obj)
 	currentState = fsm:getCurrentState()
-	print(currentState)
-	
+
 	if (currentState ~= "Attack") then
 		moveEntityTo(obj, alertPosition, getDeltaTime(), 2, 100)
 	
@@ -178,31 +179,6 @@ function investigateUpdate()
 
 
 end
-
-
-
-
-function investigateEnter()
-
-
-	print("fuck someone died")
-	local message = obj:retrieveMessage()
-	local alertPosition = message.data
-
-
-	if alertPosition ~= nil then
-		lastKnownPlayerPosition = alertPosition
-		
-		print("[PokeyComm]: Pokey " .. obj:getID() .." received alert from Pokey " .. message.sender .." at " .. positionToString(alertPosition))
-	else
-		print("[PokeyComm]: Pokey " .. obj:getID() .. " received alert from Pokey " .. message.sender)
-	end
-
-
-
-end
-
-
 
 
 
