@@ -12,7 +12,37 @@ local hasSeenPlayer = false
 
 local lastKnownPlayerPosition = nil
 
+local fsm = nil
+
+function start()
+
+	fsm = getFSM(obj)
+	wanderState = fsm:createState("Wander")
+	wanderState:setUpdateCode("pokeycomm", "wanderUpdate")
+	--chaseState:setEnterCode("FSMTest", "scream")
+	--chaseState:setExitCode("FSMTest", "die")
+	fsm:saveState()
+	
+	--followState = fsm:createState("Follow_Pokey")
+	--runState:setEnterCode("FSMTest", "cry")
+	--runState:setExitCode("FSMTest", "die")
+	fsm:saveState()
+	
+	attackState = fsm:createState("Attack")
+	fsm:saveState()
+	
+	dieState = fsm:createState("Die")
+	fsm:saveState()
+	
+	fsm:setState("Wander")
+
+
+end
+
+
+
 function update()
+
     playerCheckTimer = playerCheckTimer + getDeltaTime()
     playerAlertTimer = playerAlertTimer + getDeltaTime()
 
@@ -35,6 +65,10 @@ function update()
     if pokeyPosition == nil or playerPosition == nil then
         return
     end
+	
+	------------------------------------
+	currentState = fsm:getCurrentState()
+	
 
     if isWithinRadius(pokeyPosition, playerPosition, playerViewRadius) then
         if not hasSeenPlayer and playerAlertTimer >= playerAlertCooldown then
@@ -49,7 +83,16 @@ function update()
     end
 end
 
-function OnPokeyDied()
+--FSM functionality--------------------------
+function wanderUpdate()
+
+	print("WANDER")
+
+
+end
+---------------------------------------
+
+function OnPokeyDied() --Die enter
     local message = obj:retrieveMessage()
     local alertPosition = message.data
 
