@@ -228,6 +228,9 @@ namespace ECS
 		void SetPosition(const Vector3& position);
 
 	private:
+		Vector3 GetBodyPositionFromTransform() const;
+		Vector3 GetTransformPositionFromBody(const Vector3& bodyPosition) const;
+
 		std::shared_ptr<IPhysicsBody> physicsBody = nullptr;
 		TransformComponent* transform = nullptr;
 		IPhysicsWorld* physicsWorld = nullptr;
@@ -236,6 +239,7 @@ namespace ECS
 		float m_mass = 1.0f;
 		bool m_isStatic = false;
 		Vector3 m_halfExtents = Vector3(1.0f, 1.0f, 1.0f); // Using halfExtents matches how box sizes are commonly represented in physics systems and simplifies calculations from the center, the more you know = )
+		Vector3 m_centerOffset = Vector3(0.0f, 0.0f, 0.0f);
 		bool m_useGravity = true;
 	};
 }
