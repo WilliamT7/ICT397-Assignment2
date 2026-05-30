@@ -292,6 +292,13 @@ namespace ECS
 		**/
 		std::string static GetScriptName(std::string filePath);
 
+		/** Reset ID Counter
+		* @author - Kay Bradsell
+		* @brief - resets the unique ID counter, should be called on Clear of scene
+		* 
+		* @pre - none
+		* @post - resets the unique ID counter for entity
+		*/
 		static void ResetIDCounter();
 
 	private:
