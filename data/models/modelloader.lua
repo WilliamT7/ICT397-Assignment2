@@ -50,5 +50,9 @@ models = {
     {
         Name = "TEMPLE",
         File = "Temple\\Temple.obj"
+    },
+    {
+        Name = "WELL",
+        File = "well\\well.gltf"
     }
 }

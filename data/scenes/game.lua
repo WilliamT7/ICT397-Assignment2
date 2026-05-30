@@ -15390,6 +15390,28 @@ scene = {
     Components = {
       {
         Name = "Transform",
+        position_x = -784,
+        position_y = -59.5,
+        position_z = 1980,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 2,
+        scale_y = 2,
+        scale_z = 2
+      } --[[table: 000001BC6BE39390]],
+      {
+        ModelID = "WELL",
+        Name = "MeshRenderer",
+        ShaderID = 2
+      } --[[table: 000001BC6BE39A10]]
+    } --[[table: 000001BC6BE3B110]],
+    EntityName = "Well"
+  } --[[table: 000001BC6BE3AF90]],
+  {
+    Components = {
+      {
+        Name = "Transform",
         position_x = -62.299999237060547,
         position_y = 271.29998779296875,
         position_z = -86.199996948242188,
