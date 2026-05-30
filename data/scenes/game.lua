@@ -220,6 +220,32 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
+      } --[[table: 000001BC6BE32090]],
+      {
+        Name = "TextureRenderer",
+        TextureID = "Crosshair",
+        enabled = true,
+        position_x = 0.495,
+        position_y = 0.5,
+        size_x = 0.005,
+        size_y = 0.010
+      } --[[table: 000001BC6BE32590]]
+    } --[[table: 000001BC6BE32E90]],
+    EntityName = "Crosshair"
+  } --[[table: 000001BC6BE2FB10]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 5,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
       } --[[table: 000001BC6BE32C90]],
       {
         Name = "TextureRenderer",

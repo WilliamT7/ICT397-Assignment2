@@ -18,5 +18,9 @@ textures = {
     {
         Name = "You Win",
         File = "YouWin.png"
+    },
+    {
+        Name = "Crosshair",
+        File = "crosshair.png"
     }
 }
