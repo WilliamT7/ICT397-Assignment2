@@ -52,7 +52,8 @@ entity =
         liveTime = "0",
 		movementSpeed = "25",
 		playerCheckTimer = "0.0",
-		playerAlertTimer = "0.0"
+		playerAlertTimer = "0.0",
+        playerAttackCooldown = "2.0"
 		
       },
       {

@@ -1,6 +1,7 @@
 local minEntitySearchID = 5
 local maxEntitySearchID = 200
 
+local playerAttackRadius = 20
 local playerViewRadius = 500
 local deathAlertRadius = 1000
 local pokeyFollowRadius = 250
@@ -12,6 +13,10 @@ local hasSeenPlayer = false
 local lastKnownPlayerPosition = nil
 
 local fsm = nil
+
+local deltaTime = 0.2
+local atkCooldown = 0.8
+local damage = 1
 
 --FSM setup
 function start()
@@ -98,6 +103,9 @@ function wanderUpdate()
 
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
+
+	local anim = getAnimation(obj)
+	anim:play("idle")
 	
 	if not (PlayerCheckTimer < playerCheckInterval) then
 	
@@ -120,6 +128,9 @@ function attackUpdate()
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 	
+	local anim = getAnimation(obj)
+	anim:play("attack")
+
 	if not (PlayerCheckTimer < playerCheckInterval) then
 		
 		pokeyVariables:setGlobal("playerCheckTimer", "0.0")
@@ -138,10 +149,37 @@ function attackUpdate()
 			if pokeyPosition == nil or playerPosition == nil then
 				return
 			end
-	
+
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 			moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
-	
+
+			if isWithinRadius(pokeyPosition, playerPosition, playerAttackRadius) then
+			
+				-- deal damage to the player
+				-- which means i need an attack cooldown ~u~
+				local atkElapsedTime = tonumber(pokeyVariables:getGlobal("playerAttackCooldown").value)
+				atkElapsedTime = atkElapsedTime + deltaTime
+				pokeyVariables:setGlobal("playerAttackCooldown", tostring(atkElapsedTime))
+
+				print("in attack range :) you're fucked")
+
+				if atkElapsedTime > atkCooldown then
+					print("DID ATTACK MWAHAHAHHAHAHA!")
+					pokeyVariables:setGlobal("playerAttackCooldown", tostring(0))
+
+					local ID = obj:getID()
+					dmgmsg = telegram.new()
+					dmgmsg.sender = ID
+					dmgmsg.receiver = findPlayer():getID()
+					dmgmsg.dispatchTime = 0.0
+					dmgmsg.messageID = 5
+					dmgmsg.scriptName = "playerstats"
+					dmgmsg.functionName = "TakeDamage"
+					dmgmsg.data = damage
+					sendMessage(dmgmsg)
+				end
+			end
+
 		else
 		
 			fsm = getFSM(obj)
@@ -178,6 +216,9 @@ function investigateUpdate()
 	
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
+
+	local anim = getAnimation(obj)
+	anim:play("walk")
 	
 	if not (PlayerCheckTimer < playerCheckInterval) then
 		
@@ -206,6 +247,9 @@ function followPokeyUpdate()
 
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
+
+	local anim = getAnimation(obj)
+	anim:play("walk")
 	
 	if not (PlayerCheckTimer < playerCheckInterval) then
 

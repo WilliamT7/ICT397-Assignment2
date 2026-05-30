@@ -82,9 +82,9 @@ function update()
             --     transform:setPosition(currentPos.x + x * speed, currentPos.y + y * speed, currentPos.z + z * speed)
             -- end
             
-            animation:play("walk")
+            --animation:play("walk")
         else
-            animation:play("idle")
+            --animation:play("idle")
         end
     end
 
