@@ -192,6 +192,32 @@ scene = {
       } --[[table: 000001BC6BE32090]],
       {
         Name = "TextureRenderer",
+        TextureID = "Ketchup",
+        enabled = true,
+        position_x = 0.63,
+        position_y = 0.0,
+        size_x = 0.5,
+        size_y = 0.5
+      } --[[table: 000001BC6BE32590]]
+    } --[[table: 000001BC6BE32E90]],
+    EntityName = "Gun"
+  } --[[table: 000001BC6BE2FB10]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 0,
+        position_y = 5,
+        position_z = 0,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 000001BC6BE32090]],
+      {
+        Name = "TextureRenderer",
         TextureID = "Help Manual",
         enabled = false,
         position_x = 0.73000001907348633,

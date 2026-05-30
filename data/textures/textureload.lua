@@ -22,5 +22,9 @@ textures = {
     {
         Name = "Crosshair",
         File = "crosshair.png"
+    },
+    {
+        Name = "Ketchup",
+        File = "ketchup.png"
     }
 }
