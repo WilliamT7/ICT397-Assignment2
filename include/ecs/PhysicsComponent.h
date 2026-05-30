@@ -268,5 +268,6 @@ namespace ECS
 		Vector3 m_halfExtents = Vector3(1.0f, 1.0f, 1.0f); // Using halfExtents matches how box sizes are commonly represented in physics systems and simplifies calculations from the center, the more you know = )
 		Vector3 m_centerOffset = Vector3(0.0f, 0.0f, 0.0f);
 		bool m_useGravity = true;
+		bool m_useCCD = false;
 	};
 }

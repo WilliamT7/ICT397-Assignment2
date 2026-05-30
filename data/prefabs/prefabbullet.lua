@@ -25,6 +25,7 @@ entity =
         halfExtents_z = 0.35,
         isStatic = false,
         useGravity = false,
+        useCCD = true,
         mass = 1,
         shape = "box"
       } --[[table: 0000021755633450]],

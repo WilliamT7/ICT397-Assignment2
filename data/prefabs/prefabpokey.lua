@@ -31,6 +31,7 @@ entity =
         centerOffset_z = 0,
         isStatic = false,
         useGravity = true,
+        useCCD = false,
         mass = 1,
         shape = "box"
       },

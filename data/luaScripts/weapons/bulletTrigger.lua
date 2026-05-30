@@ -1,4 +1,4 @@
-local lifeTime = 8.0
+local lifeTime = 4.0
 local age = 0.0
 
 function update()

@@ -315,7 +315,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE31310]]
     } --[[table: 000001BC6BE32D90]],
     EntityName = "Wall Left"
@@ -345,7 +346,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE31190]]
     } --[[table: 000001BC6BE31790]],
     EntityName = "Wall Right"
@@ -375,7 +377,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE31C90]]
     } --[[table: 000001BC6BE32310]],
     EntityName = "Wall Front"
@@ -405,7 +408,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE31290]]
     } --[[table: 000001BC6BE31390]],
     EntityName = "Wall Back"
@@ -440,7 +444,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE32A90]]
     } --[[table: 000001BC6BE33010]],
     EntityName = "KiddyPool"
@@ -475,7 +480,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE32710]]
     } --[[table: 000001BC6BE32B10]],
     EntityName = "KiddyPool"
@@ -510,7 +516,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE31990]]
     } --[[table: 000001BC6BE33090]],
     EntityName = "KiddyPool"
@@ -545,7 +552,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE31810]]
     } --[[table: 000001BC6BE32390]],
     EntityName = "KiddyPool"
@@ -580,7 +588,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE32990]]
     } --[[table: 000001BC6BE32210]],
     EntityName = "KiddyPool"
@@ -615,7 +624,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE31A90]]
     } --[[table: 000001BC6BE32B90]],
     EntityName = "KiddyPool"
@@ -650,7 +660,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE33710]]
     } --[[table: 000001BC6BE34B10]],
     EntityName = "Palm Tree"
@@ -685,7 +696,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE33190]]
     } --[[table: 000001BC6BE33690]],
     EntityName = "Palm Tree"
@@ -720,7 +732,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE33590]]
     } --[[table: 000001BC6BE33310]],
     EntityName = "Palm Tree"
@@ -755,7 +768,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE33410]]
     } --[[table: 000001BC6BE34E90]],
     EntityName = "Palm Tree"
@@ -790,7 +804,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE33B90]]
     } --[[table: 000001BC6BE33490]],
     EntityName = "Palm Tree"
@@ -825,7 +840,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE33990]]
     } --[[table: 000001BC6BE33A90]],
     EntityName = "Palm Tree"
@@ -860,7 +876,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE33D90]]
     } --[[table: 000001BC6BE34690]],
     EntityName = "Palm Tree"
@@ -895,7 +912,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE34190]]
     } --[[table: 000001BC6BE33E90]],
     EntityName = "Tree"
@@ -930,7 +948,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE34290]]
     } --[[table: 000001BC6BE34010]],
     EntityName = "Tree"
@@ -965,7 +984,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE34990]]
     } --[[table: 000001BC6BE34410]],
     EntityName = "Tree"
@@ -1000,7 +1020,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE35C10]]
     } --[[table: 000001BC6BE34B90]],
     EntityName = "Tree"
@@ -1035,7 +1056,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE36210]]
     } --[[table: 000001BC6BE37090]],
     EntityName = "Tree"
@@ -1070,7 +1092,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE36E90]]
     } --[[table: 000001BC6BE36D10]],
     EntityName = "Tree"
@@ -1105,7 +1128,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE35E10]]
     } --[[table: 000001BC6BE35710]],
     EntityName = "Tree"
@@ -1140,7 +1164,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE36290]]
     } --[[table: 000001BC6BE35810]],
     EntityName = "Tree"
@@ -1175,7 +1200,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE37110]]
     } --[[table: 000001BC6BE36810]],
     EntityName = "Tree"
@@ -1210,7 +1236,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE35A90]]
     } --[[table: 000001BC6BE35610]],
     EntityName = "Tree"
@@ -1245,7 +1272,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE36F90]]
     } --[[table: 000001BC6BE35990]],
     EntityName = "Tree"
@@ -1280,7 +1308,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE35F90]]
     } --[[table: 000001BC6BE35B90]],
     EntityName = "Tree"
@@ -1315,7 +1344,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE36390]]
     } --[[table: 000001BC6BE36B90]],
     EntityName = "Tree"
@@ -1350,7 +1380,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE36A90]]
     } --[[table: 000001BC6BE35290]],
     EntityName = "Tree"
@@ -1385,7 +1416,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE37510]]
     } --[[table: 000001BC6BE37890]],
     EntityName = "Tree"
@@ -1420,7 +1452,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE38790]]
     } --[[table: 000001BC6BE38D10]],
     EntityName = "Tree"
@@ -1455,7 +1488,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE37C90]]
     } --[[table: 000001BC6BE37D10]],
     EntityName = "Tree"
@@ -1490,7 +1524,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE38C90]]
     } --[[table: 000001BC6BE38810]],
     EntityName = "Tree"
@@ -1525,7 +1560,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE38D90]]
     } --[[table: 000001BC6BE37790]],
     EntityName = "Tree"
@@ -1560,7 +1596,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE37E90]]
     } --[[table: 000001BC6BE37710]],
     EntityName = "Tree"
@@ -1595,7 +1632,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE38890]]
     } --[[table: 000001BC6BE37410]],
     EntityName = "Tree"
@@ -1630,7 +1668,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE37810]]
     } --[[table: 000001BC6BE37610]],
     EntityName = "Tree"
@@ -1665,7 +1704,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE38510]]
     } --[[table: 000001BC6BE37C10]],
     EntityName = "Tree"
@@ -1700,7 +1740,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE38A90]]
     } --[[table: 000001BC6BE38490]],
     EntityName = "Tree"
@@ -1735,7 +1776,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3A690]]
     } --[[table: 000001BC6BE39E10]],
     EntityName = "Tree"
@@ -1770,7 +1812,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE39210]]
     } --[[table: 000001BC6BE3A910]],
     EntityName = "Tree"
@@ -1805,7 +1848,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3A590]]
     } --[[table: 000001BC6BE3AB10]],
     EntityName = "Tree"
@@ -1840,7 +1884,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3AB90]]
     } --[[table: 000001BC6BE39490]],
     EntityName = "Tree"
@@ -1875,7 +1920,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE39510]]
     } --[[table: 000001BC6BE3A110]],
     EntityName = "Tree"
@@ -1910,7 +1956,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE39610]]
     } --[[table: 000001BC6BE39810]],
     EntityName = "Tree"
@@ -1945,7 +1992,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3A210]]
     } --[[table: 000001BC6BE39310]],
     EntityName = "Tree"
@@ -1980,7 +2028,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3AC90]]
     } --[[table: 000001BC6BE3A310]],
     EntityName = "Tree"
@@ -2015,7 +2064,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE39D10]]
     } --[[table: 000001BC6BE39B90]],
     EntityName = "Tree"
@@ -2050,7 +2100,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3AF10]]
     } --[[table: 000001BC6BE3AE10]],
     EntityName = "Tree"
@@ -2085,7 +2136,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE39C10]]
     } --[[table: 000001BC6BE3B110]],
     EntityName = "Tree"
@@ -2120,7 +2172,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3B790]]
     } --[[table: 000001BC6BE3BD10]],
     EntityName = "Tree"
@@ -2155,7 +2208,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3CB10]]
     } --[[table: 000001BC6BE3B810]],
     EntityName = "Tree"
@@ -2190,7 +2244,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3BB90]]
     } --[[table: 000001BC6BE3B310]],
     EntityName = "Tree"
@@ -2225,7 +2280,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3B510]]
     } --[[table: 000001BC6BE3C690]],
     EntityName = "Tree"
@@ -2260,7 +2316,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3BE10]]
     } --[[table: 000001BC6BE3B990]],
     EntityName = "Tree"
@@ -2295,7 +2352,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3CC90]]
     } --[[table: 000001BC6BE3BC10]],
     EntityName = "Tree"
@@ -2330,7 +2388,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3C810]]
     } --[[table: 000001BC6BE3C190]],
     EntityName = "Tree"
@@ -2365,7 +2424,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3B190]]
     } --[[table: 000001BC6BE3D090]],
     EntityName = "Tree"
@@ -2400,7 +2460,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3C110]]
     } --[[table: 000001BC6BE3BB10]],
     EntityName = "Tree"
@@ -2435,7 +2496,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3C410]]
     } --[[table: 000001BC6BE3C610]],
     EntityName = "Tree"
@@ -2470,7 +2532,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3D490]]
     } --[[table: 000001BC6BE3C510]],
     EntityName = "Tree"
@@ -2505,7 +2568,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3DC90]]
     } --[[table: 000001BC6BE3EE90]],
     EntityName = "Tree"
@@ -2540,7 +2604,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3D310]]
     } --[[table: 000001BC6BE3EA90]],
     EntityName = "Tree"
@@ -2575,7 +2640,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3ED10]]
     } --[[table: 000001BC6BE3D290]],
     EntityName = "Tree"
@@ -2610,7 +2676,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3E990]]
     } --[[table: 000001BC6BE3E610]],
     EntityName = "Tree"
@@ -2645,7 +2712,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3D610]]
     } --[[table: 000001BC6BE3D390]],
     EntityName = "Tree"
@@ -2680,7 +2748,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3DB10]]
     } --[[table: 000001BC6BE3D810]],
     EntityName = "Tree"
@@ -2715,7 +2784,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3EF90]]
     } --[[table: 000001BC6BE3D910]],
     EntityName = "Tree"
@@ -2750,7 +2820,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3DD90]]
     } --[[table: 000001BC6BE3DA10]],
     EntityName = "Tree"
@@ -2785,7 +2856,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3E310]]
     } --[[table: 000001BC6BE3EE10]],
     EntityName = "Tree"
@@ -2820,7 +2892,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3E810]]
     } --[[table: 000001BC6BE3E590]],
     EntityName = "Tree"
@@ -2855,7 +2928,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3FC90]]
     } --[[table: 000001BC6BE3FD90]],
     EntityName = "Tree"
@@ -2890,7 +2964,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3F710]]
     } --[[table: 000001BC6BE41010]],
     EntityName = "Tree"
@@ -2925,7 +3000,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3FD10]]
     } --[[table: 000001BC6BE40410]],
     EntityName = "Tree"
@@ -2960,7 +3036,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE40F10]]
     } --[[table: 000001BC6BE40090]],
     EntityName = "Tree"
@@ -2995,7 +3072,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3F810]]
     } --[[table: 000001BC6BE40490]],
     EntityName = "Tree"
@@ -3030,7 +3108,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3F410]]
     } --[[table: 000001BC6BE41090]],
     EntityName = "Tree"
@@ -3065,7 +3144,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE3F290]]
     } --[[table: 000001BC6BE40B10]],
     EntityName = "Tree"
@@ -3100,7 +3180,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE42690]]
     } --[[table: 000001BC6BE41890]],
     EntityName = "Tree"
@@ -3135,7 +3216,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE41A90]]
     } --[[table: 000001BC6BE42390]],
     EntityName = "Tree"
@@ -3170,7 +3252,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE41910]]
     } --[[table: 000001BC6BE42C10]],
     EntityName = "Tree"
@@ -3205,7 +3288,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE42A10]]
     } --[[table: 000001BC6BE41690]],
     EntityName = "Tree"
@@ -3240,7 +3324,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE42410]]
     } --[[table: 000001BC6BE41410]],
     EntityName = "Tree"
@@ -3275,7 +3360,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE41E10]]
     } --[[table: 000001BC6BE43110]],
     EntityName = "Tree"
@@ -3310,7 +3396,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE42890]]
     } --[[table: 000001BC6BE42790]],
     EntityName = "Tree"
@@ -3345,7 +3432,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE42A90]]
     } --[[table: 000001BC6BE42E90]],
     EntityName = "Tree"
@@ -3380,7 +3468,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE42D10]]
     } --[[table: 000001BC6BE42190]],
     EntityName = "Tree"
@@ -3415,7 +3504,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE43090]]
     } --[[table: 000001BC6BE42F10]],
     EntityName = "Tree"
@@ -3450,7 +3540,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE45890]]
     } --[[table: 000001BC6BE45390]],
     EntityName = "Tree"
@@ -3485,7 +3576,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE48390]]
     } --[[table: 000001BC6BE48910]],
     EntityName = "Tree"
@@ -3520,7 +3612,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE48090]]
     } --[[table: 000001BC6BE47B90]],
     EntityName = "Tree"
@@ -3555,7 +3648,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE48110]]
     } --[[table: 000001BC6BE47D10]],
     EntityName = "Tree"
@@ -3590,7 +3684,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE47790]]
     } --[[table: 000001BC6BE48290]],
     EntityName = "Tree"
@@ -3625,7 +3720,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE48510]]
     } --[[table: 000001BC6BE49110]],
     EntityName = "Tree"
@@ -3660,7 +3756,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE47890]]
     } --[[table: 000001BC6BE47410]],
     EntityName = "Tree"
@@ -3695,7 +3792,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE47290]]
     } --[[table: 000001BC6BE47E10]],
     EntityName = "Tree"
@@ -3730,7 +3828,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE48690]]
     } --[[table: 000001BC6BE48A90]],
     EntityName = "Tree"
@@ -3765,7 +3864,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE47590]]
     } --[[table: 000001BC6BE48E10]],
     EntityName = "Tree"
@@ -3800,7 +3900,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE47690]]
     } --[[table: 000001BC6BE48B10]],
     EntityName = "Tree"
@@ -3835,7 +3936,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE4B090]]
     } --[[table: 000001BC6BE4AD10]],
     EntityName = "Tree"
@@ -3870,7 +3972,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE4AC90]]
     } --[[table: 000001BC6BE4A710]],
     EntityName = "Tree"
@@ -3905,7 +4008,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE4A810]]
     } --[[table: 000001BC6BE4AB90]],
     EntityName = "Tree"
@@ -3940,7 +4044,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE49810]]
     } --[[table: 000001BC6BE4A890]],
     EntityName = "Tree"
@@ -3975,7 +4080,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE49710]]
     } --[[table: 000001BC6BE4A990]],
     EntityName = "Tree"
@@ -4010,7 +4116,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE4AA10]]
     } --[[table: 000001BC6BE49B10]],
     EntityName = "Tree"
@@ -4045,7 +4152,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE49E10]]
     } --[[table: 000001BC6BE49390]],
     EntityName = "Tree"
@@ -4080,7 +4188,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE4AF90]]
     } --[[table: 000001BC6BE4AD90]],
     EntityName = "Tree"
@@ -4115,7 +4224,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE49C10]]
     } --[[table: 000001BC6BE49190]],
     EntityName = "Tree"
@@ -4150,7 +4260,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE4A390]]
     } --[[table: 000001BC6BE4A210]],
     EntityName = "Tree"
@@ -4185,7 +4296,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9C530]]
     } --[[table: 000001BC6BA9BAB0]],
     EntityName = "Tree"
@@ -4220,7 +4332,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9B8B0]]
     } --[[table: 000001BC6BA9B730]],
     EntityName = "Tree"
@@ -4255,7 +4368,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9C230]]
     } --[[table: 000001BC6BA9C1B0]],
     EntityName = "Tree"
@@ -4290,7 +4404,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9B230]]
     } --[[table: 000001BC6BA9BDB0]],
     EntityName = "Tree"
@@ -4325,7 +4440,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9BEB0]]
     } --[[table: 000001BC6BA9CB30]],
     EntityName = "Tree"
@@ -4360,7 +4476,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9C9B0]]
     } --[[table: 000001BC6BA9C2B0]],
     EntityName = "Tree"
@@ -4395,7 +4512,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9ADB0]]
     } --[[table: 000001BC6BA9B630]],
     EntityName = "Tree"
@@ -4430,7 +4548,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9BF30]]
     } --[[table: 000001BC6BA9C630]],
     EntityName = "Tree"
@@ -4465,7 +4584,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9BFB0]]
     } --[[table: 000001BC6BA9B9B0]],
     EntityName = "Tree"
@@ -4500,7 +4620,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9B6B0]]
     } --[[table: 000001BC6BA9B030]],
     EntityName = "Tree"
@@ -4535,7 +4656,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9E1B0]]
     } --[[table: 000001BC6BA9BB30]],
     EntityName = "Tree"
@@ -4570,7 +4692,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9E430]]
     } --[[table: 000001BC6BA9D330]],
     EntityName = "Tree"
@@ -4605,7 +4728,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9D730]]
     } --[[table: 000001BC6BA9CDB0]],
     EntityName = "Tree"
@@ -4640,7 +4764,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9EBB0]]
     } --[[table: 000001BC6BA9D130]],
     EntityName = "Tree"
@@ -4675,7 +4800,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9E530]]
     } --[[table: 000001BC6BA9CFB0]],
     EntityName = "Tree"
@@ -4710,7 +4836,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9D630]]
     } --[[table: 000001BC6BA9D830]],
     EntityName = "Tree"
@@ -4745,7 +4872,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9DBB0]]
     } --[[table: 000001BC6BA9E6B0]],
     EntityName = "Tree"
@@ -4780,7 +4908,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9D3B0]]
     } --[[table: 000001BC6BA9E330]],
     EntityName = "Tree"
@@ -4815,7 +4944,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9E030]]
     } --[[table: 000001BC6BA9D030]],
     EntityName = "Tree"
@@ -4850,7 +4980,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9D1B0]]
     } --[[table: 000001BC6BA9D6B0]],
     EntityName = "Tree"
@@ -4885,7 +5016,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9DC30]]
     } --[[table: 000001BC6BA9E930]],
     EntityName = "Tree"
@@ -4920,7 +5052,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA0830]]
     } --[[table: 000001BC6BA9F530]],
     EntityName = "Tree"
@@ -4955,7 +5088,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9F2B0]]
     } --[[table: 000001BC6BA9FCB0]],
     EntityName = "Tree"
@@ -4990,7 +5124,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9EF30]]
     } --[[table: 000001BC6BA9FDB0]],
     EntityName = "Tree"
@@ -5025,7 +5160,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA0AB0]]
     } --[[table: 000001BC6BA9F3B0]],
     EntityName = "Tree"
@@ -5060,7 +5196,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9F1B0]]
     } --[[table: 000001BC6BAA0130]],
     EntityName = "Tree"
@@ -5095,7 +5232,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9F730]]
     } --[[table: 000001BC6BAA03B0]],
     EntityName = "Tree"
@@ -5130,7 +5268,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9EEB0]]
     } --[[table: 000001BC6BAA0CB0]],
     EntityName = "Tree"
@@ -5165,7 +5304,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA0430]]
     } --[[table: 000001BC6BAA01B0]],
     EntityName = "Tree"
@@ -5200,7 +5340,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9FB30]]
     } --[[table: 000001BC6BA9FA30]],
     EntityName = "Tree"
@@ -5235,7 +5376,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA05B0]]
     } --[[table: 000001BC6BAA04B0]],
     EntityName = "Tree"
@@ -5270,7 +5412,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA2730]]
     } --[[table: 000001BC6BAA06B0]],
     EntityName = "Tree"
@@ -5305,7 +5448,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA1030]]
     } --[[table: 000001BC6BAA18B0]],
     EntityName = "Tree"
@@ -5340,7 +5484,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA1D30]]
     } --[[table: 000001BC6BAA1930]],
     EntityName = "Tree"
@@ -5375,7 +5520,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA1430]]
     } --[[table: 000001BC6BAA2B30]],
     EntityName = "Tree"
@@ -5410,7 +5556,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA0F30]]
     } --[[table: 000001BC6BAA14B0]],
     EntityName = "Tree"
@@ -5445,7 +5592,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA0E30]]
     } --[[table: 000001BC6BAA20B0]],
     EntityName = "Tree"
@@ -5480,7 +5628,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA2630]]
     } --[[table: 000001BC6BAA0FB0]],
     EntityName = "Tree"
@@ -5515,7 +5664,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA1630]]
     } --[[table: 000001BC6BAA17B0]],
     EntityName = "Tree"
@@ -5550,7 +5700,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA1E30]]
     } --[[table: 000001BC6BAA26B0]],
     EntityName = "Tree"
@@ -5585,7 +5736,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA15B0]]
     } --[[table: 000001BC6BAA24B0]],
     EntityName = "Tree"
@@ -5620,7 +5772,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA2030]]
     } --[[table: 000001BC6BAA1EB0]],
     EntityName = "Tree"
@@ -5655,7 +5808,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BAA2DB0]]
     } --[[table: 000001BC6BAA2A30]],
     EntityName = "Tree"
@@ -5690,7 +5844,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA75F30]]
     } --[[table: 000001BC6BA768B0]],
     EntityName = "Tree"
@@ -5725,7 +5880,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA76930]]
     } --[[table: 000001BC6BA757B0]],
     EntityName = "Tree"
@@ -5760,7 +5916,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8BD30]]
     } --[[table: 000001BC6BA76030]],
     EntityName = "Tree"
@@ -5795,7 +5952,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8CF30]]
     } --[[table: 000001BC6BA8DC30]],
     EntityName = "Tree"
@@ -5830,7 +5988,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8EAB0]]
     } --[[table: 000001BC6BA8D3B0]],
     EntityName = "Tree"
@@ -5865,7 +6024,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8EB30]]
     } --[[table: 000001BC6BA8E130]],
     EntityName = "Tree"
@@ -5900,7 +6060,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8D8B0]]
     } --[[table: 000001BC6BA8D330]],
     EntityName = "Tree"
@@ -5935,7 +6096,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8DEB0]]
     } --[[table: 000001BC6BA8D6B0]],
     EntityName = "Tree"
@@ -5970,7 +6132,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8CDB0]]
     } --[[table: 000001BC6BA8E3B0]],
     EntityName = "Tree"
@@ -6005,7 +6168,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8D230]]
     } --[[table: 000001BC6BA8D830]],
     EntityName = "Tree"
@@ -6040,7 +6204,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8DB30]]
     } --[[table: 000001BC6BA8E430]],
     EntityName = "Tree"
@@ -6075,7 +6240,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8E4B0]]
     } --[[table: 000001BC6BA8DDB0]],
     EntityName = "Tree"
@@ -6110,7 +6276,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8EA30]]
     } --[[table: 000001BC6BA8E730]],
     EntityName = "Tree"
@@ -6145,7 +6312,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA90430]]
     } --[[table: 000001BC6BA8FA30]],
     EntityName = "Tree"
@@ -6180,7 +6348,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8FD30]]
     } --[[table: 000001BC6BA8F130]],
     EntityName = "Tree"
@@ -6215,7 +6384,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8F8B0]]
     } --[[table: 000001BC6BA90330]],
     EntityName = "Tree"
@@ -6250,7 +6420,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA903B0]]
     } --[[table: 000001BC6BA8F930]],
     EntityName = "Tree"
@@ -6285,7 +6456,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA90BB0]]
     } --[[table: 000001BC6BA90B30]],
     EntityName = "Tree"
@@ -6320,7 +6492,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8F630]]
     } --[[table: 000001BC6BA905B0]],
     EntityName = "Tree"
@@ -6355,7 +6528,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8FAB0]]
     } --[[table: 000001BC6BA8F6B0]],
     EntityName = "Tree"
@@ -6390,7 +6564,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA8FE30]]
     } --[[table: 000001BC6BA8FBB0]],
     EntityName = "Tree"
@@ -6425,7 +6600,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA90CB0]]
     } --[[table: 000001BC6BA8F3B0]],
     EntityName = "Tree"
@@ -6460,7 +6636,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA90A30]]
     } --[[table: 000001BC6BA90230]],
     EntityName = "Tree"
@@ -6495,7 +6672,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA90E30]]
     } --[[table: 000001BC6BA8F330]],
     EntityName = "Tree"
@@ -6530,7 +6708,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA92230]]
     } --[[table: 000001BC6BA91C30]],
     EntityName = "Tree"
@@ -6565,7 +6744,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA90F30]]
     } --[[table: 000001BC6BA92830]],
     EntityName = "Tree"
@@ -6600,7 +6780,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA90DB0]]
     } --[[table: 000001BC6BA912B0]],
     EntityName = "Tree"
@@ -6635,7 +6816,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA910B0]]
     } --[[table: 000001BC6BA90FB0]],
     EntityName = "Tree"
@@ -6670,7 +6852,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA92A30]]
     } --[[table: 000001BC6BA915B0]],
     EntityName = "Tree"
@@ -6705,7 +6888,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA91630]]
     } --[[table: 000001BC6BA92330]],
     EntityName = "Tree"
@@ -6740,7 +6924,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA91DB0]]
     } --[[table: 000001BC6BA92630]],
     EntityName = "Tree"
@@ -6775,7 +6960,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA92BB0]]
     } --[[table: 000001BC6BA91EB0]],
     EntityName = "Tree"
@@ -6810,7 +6996,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA91F30]]
     } --[[table: 000001BC6BA91AB0]],
     EntityName = "Tree"
@@ -6845,7 +7032,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA923B0]]
     } --[[table: 000001BC6BA92D30]],
     EntityName = "Tree"
@@ -6880,7 +7068,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA93830]]
     } --[[table: 000001BC6BA93FB0]],
     EntityName = "Tree"
@@ -6915,7 +7104,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA948B0]]
     } --[[table: 000001BC6BA93CB0]],
     EntityName = "Tree"
@@ -6950,7 +7140,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA932B0]]
     } --[[table: 000001BC6BA94030]],
     EntityName = "Tree"
@@ -6985,7 +7176,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA93030]]
     } --[[table: 000001BC6BA949B0]],
     EntityName = "Tree"
@@ -7020,7 +7212,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA94230]]
     } --[[table: 000001BC6BA940B0]],
     EntityName = "Tree"
@@ -7055,7 +7248,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA94330]]
     } --[[table: 000001BC6BA945B0]],
     EntityName = "Tree"
@@ -7090,7 +7284,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA92F30]]
     } --[[table: 000001BC6BA94B30]],
     EntityName = "Tree"
@@ -7125,7 +7320,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA943B0]]
     } --[[table: 000001BC6BA94730]],
     EntityName = "Tree"
@@ -7160,7 +7356,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA930B0]]
     } --[[table: 000001BC6BA94CB0]],
     EntityName = "Tree"
@@ -7195,7 +7392,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA93430]]
     } --[[table: 000001BC6BA93230]],
     EntityName = "Tree"
@@ -7230,7 +7428,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA95330]]
     } --[[table: 000001BC6BA93630]],
     EntityName = "Tree"
@@ -7265,7 +7464,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA95430]]
     } --[[table: 000001BC6BA94FB0]],
     EntityName = "Tree"
@@ -7300,7 +7500,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA96330]]
     } --[[table: 000001BC6BA96830]],
     EntityName = "Tree"
@@ -7335,7 +7536,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA956B0]]
     } --[[table: 000001BC6BA95030]],
     EntityName = "Tree"
@@ -7370,7 +7572,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA963B0]]
     } --[[table: 000001BC6BA95CB0]],
     EntityName = "Tree"
@@ -7405,7 +7608,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA95AB0]]
     } --[[table: 000001BC6BA968B0]],
     EntityName = "Tree"
@@ -7440,7 +7644,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA964B0]]
     } --[[table: 000001BC6BA96130]],
     EntityName = "Tree"
@@ -7475,7 +7680,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA958B0]]
     } --[[table: 000001BC6BA95830]],
     EntityName = "Tree"
@@ -7510,7 +7716,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA96C30]]
     } --[[table: 000001BC6BA96530]],
     EntityName = "Tree"
@@ -7545,7 +7752,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA96730]]
     } --[[table: 000001BC6BA95FB0]],
     EntityName = "Tree"
@@ -7580,7 +7788,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA967B0]]
     } --[[table: 000001BC6BA96630]],
     EntityName = "Tree"
@@ -7615,7 +7824,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA97D30]]
     } --[[table: 000001BC6BA94EB0]],
     EntityName = "Tree"
@@ -7650,7 +7860,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA97430]]
     } --[[table: 000001BC6BA98B30]],
     EntityName = "Tree"
@@ -7685,7 +7896,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA96F30]]
     } --[[table: 000001BC6BA974B0]],
     EntityName = "Tree"
@@ -7720,7 +7932,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA96E30]]
     } --[[table: 000001BC6BA980B0]],
     EntityName = "Tree"
@@ -7755,7 +7968,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA98CB0]]
     } --[[table: 000001BC6BA96FB0]],
     EntityName = "Tree"
@@ -7790,7 +8004,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA97830]]
     } --[[table: 000001BC6BA97630]],
     EntityName = "Tree"
@@ -7825,7 +8040,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA97330]]
     } --[[table: 000001BC6BA987B0]],
     EntityName = "Tree"
@@ -7860,7 +8076,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA97530]]
     } --[[table: 000001BC6BA97130]],
     EntityName = "Tree"
@@ -7895,7 +8112,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA984B0]]
     } --[[table: 000001BC6BA988B0]],
     EntityName = "Tree"
@@ -7930,7 +8148,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA97EB0]]
     } --[[table: 000001BC6BA97DB0]],
     EntityName = "Tree"
@@ -7965,7 +8184,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA98930]]
     } --[[table: 000001BC6BA98030]],
     EntityName = "Tree"
@@ -8000,7 +8220,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA99AB0]]
     } --[[table: 000001BC6BA9A8B0]],
     EntityName = "Tree"
@@ -8035,7 +8256,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9AA30]]
     } --[[table: 000001BC6BA99630]],
     EntityName = "Tree"
@@ -8070,7 +8292,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9A2B0]]
     } --[[table: 000001BC6BA990B0]],
     EntityName = "Tree"
@@ -8105,7 +8328,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA997B0]]
     } --[[table: 000001BC6BA99830]],
     EntityName = "Tree"
@@ -8140,7 +8364,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA99530]]
     } --[[table: 000001BC6BA9A830]],
     EntityName = "Tree"
@@ -8175,7 +8400,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9A630]]
     } --[[table: 000001BC6BA992B0]],
     EntityName = "Tree"
@@ -8210,7 +8436,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9A4B0]]
     } --[[table: 000001BC6BA99A30]],
     EntityName = "Tree"
@@ -8245,7 +8472,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA99EB0]]
     } --[[table: 000001BC6BA99DB0]],
     EntityName = "Tree"
@@ -8280,7 +8508,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA9A5B0]]
     } --[[table: 000001BC6BA99F30]],
     EntityName = "Tree"
@@ -8315,7 +8544,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BA98DB0]]
     } --[[table: 000001BC6BA991B0]],
     EntityName = "Tree"
@@ -8350,7 +8580,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB8AD20]]
     } --[[table: 000001BC6BA98EB0]],
     EntityName = "Tree"
@@ -8385,7 +8616,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB8B520]]
     } --[[table: 000001BC6BB8B120]],
     EntityName = "Tree"
@@ -8420,7 +8652,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB8AB20]]
     } --[[table: 000001BC6BB8C0A0]],
     EntityName = "Tree"
@@ -8455,7 +8688,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BBA3020]]
     } --[[table: 000001BC6BBA3D20]],
     EntityName = "Tree"
@@ -8490,7 +8724,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BBA4420]]
     } --[[table: 000001BC6BBA40A0]],
     EntityName = "Tree"
@@ -8525,7 +8760,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB73620]]
     } --[[table: 000001BC6BB72AA0]],
     EntityName = "Tree"
@@ -8560,7 +8796,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB74A20]]
     } --[[table: 000001BC6BB743A0]],
     EntityName = "Tree"
@@ -8595,7 +8832,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB744A0]]
     } --[[table: 000001BC6BB74CA0]],
     EntityName = "Tree"
@@ -8630,7 +8868,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6B9C8600]]
     } --[[table: 000001BC6BB74FA0]],
     EntityName = "Tree"
@@ -8665,7 +8904,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6B9A0480]]
     } --[[table: 000001BC6B9A1380]],
     EntityName = "Tree"
@@ -8700,7 +8940,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6B9A2500]]
     } --[[table: 000001BC6B9A3D00]],
     EntityName = "Tree"
@@ -8735,7 +8976,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6B9A2800]]
     } --[[table: 000001BC6B9A2700]],
     EntityName = "Tree"
@@ -8770,7 +9012,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6B9C6880]]
     } --[[table: 000001BC6B9A3080]],
     EntityName = "Tree"
@@ -8805,7 +9048,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB03120]]
     } --[[table: 000001BC6BB18720]],
     EntityName = "Tree"
@@ -8840,7 +9084,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB02220]]
     } --[[table: 000001BC6BB033A0]],
     EntityName = "Tree"
@@ -8875,7 +9120,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB03EA0]]
     } --[[table: 000001BC6BB026A0]],
     EntityName = "Tree"
@@ -8910,7 +9156,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BB04020]]
     } --[[table: 000001BC6BB03AA0]],
     EntityName = "Tree"
@@ -8945,7 +9192,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC63933510]]
     } --[[table: 000001BC6392F910]],
     EntityName = "Tree"
@@ -8980,7 +9228,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC63940910]]
     } --[[table: 000001BC6393D790]],
     EntityName = "Tree"
@@ -9015,7 +9264,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC638E2070]]
     } --[[table: 000001BC63943A90]],
     EntityName = "Tree"
@@ -9050,7 +9300,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC638D2C70]]
     } --[[table: 000001BC638EFAF0]],
     EntityName = "Tree"
@@ -9085,7 +9336,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC634C47B0]]
     } --[[table: 000001BC638DC1F0]],
     EntityName = "Tree"
@@ -9120,7 +9372,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC634C4E30]]
     } --[[table: 000001BC634C4530]],
     EntityName = "Tree"
@@ -9155,7 +9408,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC634FB560]]
     } --[[table: 000001BC634C60B0]],
     EntityName = "Tree"
@@ -9190,7 +9444,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC634FB860]]
     } --[[table: 000001BC634FB7E0]],
     EntityName = "Tree"
@@ -9225,7 +9480,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC633DC3B0]]
     } --[[table: 000001BC634FB9E0]],
     EntityName = "Tree"
@@ -9260,7 +9516,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC633D6F30]]
     } --[[table: 000001BC633D6E30]],
     EntityName = "Tree"
@@ -9295,7 +9552,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC639B23A0]]
     } --[[table: 000001BC639CAE20]],
     EntityName = "Tree"
@@ -9330,7 +9588,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC63889EF0]]
     } --[[table: 000001BC638892F0]],
     EntityName = "Tree"
@@ -9365,7 +9624,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC63867700]]
     } --[[table: 000001BC5E360560]],
     EntityName = "Tree"
@@ -9400,7 +9660,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09E020]]
     } --[[table: 000001BC6C09E4A0]],
     EntityName = "Tree"
@@ -9435,7 +9696,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09E7A0]]
     } --[[table: 000001BC6C09DB20]],
     EntityName = "Tree"
@@ -9470,7 +9732,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09EF20]]
     } --[[table: 000001BC6C09EEA0]],
     EntityName = "Tree"
@@ -9505,7 +9768,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09DE20]]
     } --[[table: 000001BC6C09DBA0]],
     EntityName = "Tree"
@@ -9540,7 +9804,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09DEA0]]
     } --[[table: 000001BC6C09D720]],
     EntityName = "Tree"
@@ -9575,7 +9840,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09E0A0]]
     } --[[table: 000001BC6C09DF20]],
     EntityName = "Tree"
@@ -9610,7 +9876,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09F020]]
     } --[[table: 000001BC6C09D7A0]],
     EntityName = "Tree"
@@ -9645,7 +9912,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09EAA0]]
     } --[[table: 000001BC6C09E5A0]],
     EntityName = "Tree"
@@ -9680,7 +9948,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09D2A0]]
     } --[[table: 000001BC6C09D6A0]],
     EntityName = "Tree"
@@ -9715,7 +9984,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09ECA0]]
     } --[[table: 000001BC6C09E320]],
     EntityName = "Tree"
@@ -9750,7 +10020,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A10A0]]
     } --[[table: 000001BC6C09D3A0]],
     EntityName = "Tree"
@@ -9785,7 +10056,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09FA20]]
     } --[[table: 000001BC6C09F4A0]],
     EntityName = "Tree"
@@ -9820,7 +10092,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09F5A0]]
     } --[[table: 000001BC6C0A07A0]],
     EntityName = "Tree"
@@ -9855,7 +10128,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A0BA0]]
     } --[[table: 000001BC6C09F7A0]],
     EntityName = "Tree"
@@ -9890,7 +10164,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09F220]]
     } --[[table: 000001BC6C0A1020]],
     EntityName = "Tree"
@@ -9925,7 +10200,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A0520]]
     } --[[table: 000001BC6C0A0B20]],
     EntityName = "Tree"
@@ -9960,7 +10236,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A0CA0]]
     } --[[table: 000001BC6C09F520]],
     EntityName = "Tree"
@@ -9995,7 +10272,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09FDA0]]
     } --[[table: 000001BC6C0A0120]],
     EntityName = "Tree"
@@ -10030,7 +10308,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C09F9A0]]
     } --[[table: 000001BC6C09F8A0]],
     EntityName = "Tree"
@@ -10065,7 +10344,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A03A0]]
     } --[[table: 000001BC6C09F320]],
     EntityName = "Tree"
@@ -10100,7 +10380,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A0EA0]]
     } --[[table: 000001BC6C09F3A0]],
     EntityName = "Tree"
@@ -10135,7 +10416,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A2D20]]
     } --[[table: 000001BC6C0A06A0]],
     EntityName = "Tree"
@@ -10170,7 +10452,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A26A0]]
     } --[[table: 000001BC6C0A1920]],
     EntityName = "Tree"
@@ -10205,7 +10488,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A2BA0]]
     } --[[table: 000001BC6C0A2A20]],
     EntityName = "Tree"
@@ -10240,7 +10524,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A1320]]
     } --[[table: 000001BC6C0A2420]],
     EntityName = "Tree"
@@ -10275,7 +10560,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A2E20]]
     } --[[table: 000001BC6C0A16A0]],
     EntityName = "Tree"
@@ -10310,7 +10596,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A1420]]
     } --[[table: 000001BC6C0A27A0]],
     EntityName = "Tree"
@@ -10345,7 +10632,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A20A0]]
     } --[[table: 000001BC6C0A2AA0]],
     EntityName = "Tree"
@@ -10380,7 +10668,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A22A0]]
     } --[[table: 000001BC6C0A2820]],
     EntityName = "Tree"
@@ -10415,7 +10704,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A1A20]]
     } --[[table: 000001BC6C0A18A0]],
     EntityName = "Tree"
@@ -10450,7 +10740,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A1AA0]]
     } --[[table: 000001BC6C0A30A0]],
     EntityName = "Tree"
@@ -10485,7 +10776,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A24A0]]
     } --[[table: 000001BC6C0A23A0]],
     EntityName = "Tree"
@@ -10520,7 +10812,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A4F20]]
     } --[[table: 000001BC6C0A40A0]],
     EntityName = "Tree"
@@ -10555,7 +10848,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A3E20]]
     } --[[table: 000001BC6C0A3BA0]],
     EntityName = "Tree"
@@ -10590,7 +10884,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A3EA0]]
     } --[[table: 000001BC6C0A3720]],
     EntityName = "Tree"
@@ -10625,7 +10920,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A4120]]
     } --[[table: 000001BC6C0A3F20]],
     EntityName = "Tree"
@@ -10660,7 +10956,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A4EA0]]
     } --[[table: 000001BC6C0A37A0]],
     EntityName = "Tree"
@@ -10695,7 +10992,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A4AA0]]
     } --[[table: 000001BC6C0A4420]],
     EntityName = "Tree"
@@ -10730,7 +11028,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A32A0]]
     } --[[table: 000001BC6C0A3620]],
     EntityName = "Tree"
@@ -10765,7 +11064,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A46A0]]
     } --[[table: 000001BC6C0A4620]],
     EntityName = "Tree"
@@ -10800,7 +11100,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A3320]]
     } --[[table: 000001BC6C0A4CA0]],
     EntityName = "Tree"
@@ -10835,7 +11136,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A31A0]]
     } --[[table: 000001BC6C0A4D20]],
     EntityName = "Tree"
@@ -10870,7 +11172,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A5520]]
     } --[[table: 000001BC6C0A33A0]],
     EntityName = "Tree"
@@ -10905,7 +11208,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A6E20]]
     } --[[table: 000001BC6C0A6EA0]],
     EntityName = "Tree"
@@ -10940,7 +11244,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A6620]]
     } --[[table: 000001BC6C0A54A0]],
     EntityName = "Tree"
@@ -10975,7 +11280,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A5AA0]]
     } --[[table: 000001BC6C0A5C20]],
     EntityName = "Tree"
@@ -11010,7 +11316,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A5920]]
     } --[[table: 000001BC6C0A6C20]],
     EntityName = "Tree"
@@ -11045,7 +11352,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A6A20]]
     } --[[table: 000001BC6C0A56A0]],
     EntityName = "Tree"
@@ -11080,7 +11388,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A6420]]
     } --[[table: 000001BC6C0A5420]],
     EntityName = "Tree"
@@ -11115,7 +11424,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A5820]]
     } --[[table: 000001BC6C0A5220]],
     EntityName = "Tree"
@@ -11150,7 +11460,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A69A0]]
     } --[[table: 000001BC6C0A68A0]],
     EntityName = "Tree"
@@ -11185,7 +11496,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A6220]]
     } --[[table: 000001BC6C0A6F20]],
     EntityName = "Tree"
@@ -11220,7 +11532,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A6BA0]]
     } --[[table: 000001BC6C0A63A0]],
     EntityName = "Tree"
@@ -11255,7 +11568,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A85A0]]
     } --[[table: 000001BC6C0A52A0]],
     EntityName = "Tree"
@@ -11290,7 +11604,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A8E20]]
     } --[[table: 000001BC6C0A7820]],
     EntityName = "Tree"
@@ -11325,7 +11640,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A7D20]]
     } --[[table: 000001BC6C0A8920]],
     EntityName = "Tree"
@@ -11360,7 +11676,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A7A20]]
     } --[[table: 000001BC6C0A77A0]],
     EntityName = "Tree"
@@ -11395,7 +11712,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A73A0]]
     } --[[table: 000001BC6C0A71A0]],
     EntityName = "Tree"
@@ -11430,7 +11748,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A86A0]]
     } --[[table: 000001BC6C0A8120]],
     EntityName = "Tree"
@@ -11465,7 +11784,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A7BA0]]
     } --[[table: 000001BC6C0A81A0]],
     EntityName = "Tree"
@@ -11500,7 +11820,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A7FA0]]
     } --[[table: 000001BC6C0A82A0]],
     EntityName = "Tree"
@@ -11535,7 +11856,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A8820]]
     } --[[table: 000001BC6C0A8420]],
     EntityName = "Tree"
@@ -11570,7 +11892,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A89A0]]
     } --[[table: 000001BC6C0A90A0]],
     EntityName = "Tree"
@@ -11605,7 +11928,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A7620]]
     } --[[table: 000001BC6C0A9120]],
     EntityName = "Tree"
@@ -11640,7 +11964,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AA420]]
     } --[[table: 000001BC6C0AA920]],
     EntityName = "Tree"
@@ -11675,7 +12000,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A9FA0]]
     } --[[table: 000001BC6C0AA2A0]],
     EntityName = "Tree"
@@ -11710,7 +12036,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A9420]]
     } --[[table: 000001BC6C0A9CA0]],
     EntityName = "Tree"
@@ -11745,7 +12072,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AA120]]
     } --[[table: 000001BC6C0A9D20]],
     EntityName = "Tree"
@@ -11780,7 +12108,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A9820]]
     } --[[table: 000001BC6C0AAF20]],
     EntityName = "Tree"
@@ -11815,7 +12144,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A9320]]
     } --[[table: 000001BC6C0A98A0]],
     EntityName = "Tree"
@@ -11850,7 +12180,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A91A0]]
     } --[[table: 000001BC6C0AABA0]],
     EntityName = "Tree"
@@ -11885,7 +12216,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0A9220]]
     } --[[table: 000001BC6C0A93A0]],
     EntityName = "Tree"
@@ -11920,7 +12252,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AA720]]
     } --[[table: 000001BC6C0AA5A0]],
     EntityName = "Tree"
@@ -11955,7 +12288,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AAB20]]
     } --[[table: 000001BC6C0AADA0]],
     EntityName = "Tree"
@@ -11990,7 +12324,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0ABE20]]
     } --[[table: 000001BC6C0A9520]],
     EntityName = "Tree"
@@ -12025,7 +12360,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AB520]]
     } --[[table: 000001BC6C0AB8A0]],
     EntityName = "Tree"
@@ -12060,7 +12396,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AC720]]
     } --[[table: 000001BC6C0ACC20]],
     EntityName = "Tree"
@@ -12095,7 +12432,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0ACB20]]
     } --[[table: 000001BC6C0AB4A0]],
     EntityName = "Tree"
@@ -12130,7 +12468,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0ABDA0]]
     } --[[table: 000001BC6C0AC120]],
     EntityName = "Tree"
@@ -12165,7 +12504,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AB920]]
     } --[[table: 000001BC6C0AB820]],
     EntityName = "Tree"
@@ -12200,7 +12540,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AB220]]
     } --[[table: 000001BC6C0AB320]],
     EntityName = "Tree"
@@ -12235,7 +12576,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AC820]]
     } --[[table: 000001BC6C0AD120]],
     EntityName = "Tree"
@@ -12270,7 +12612,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AB9A0]]
     } --[[table: 000001BC6C0ACFA0]],
     EntityName = "Tree"
@@ -12305,7 +12648,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AC6A0]]
     } --[[table: 000001BC6C0ABC20]],
     EntityName = "Tree"
@@ -12340,7 +12684,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0ACCA0]]
     } --[[table: 000001BC6C0AC9A0]],
     EntityName = "Tree"
@@ -12375,7 +12720,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AE820]]
     } --[[table: 000001BC6C0AB3A0]],
     EntityName = "Tree"
@@ -12410,7 +12756,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AE120]]
     } --[[table: 000001BC6C0AD520]],
     EntityName = "Tree"
@@ -12445,7 +12792,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0ADCA0]]
     } --[[table: 000001BC6C0AE720]],
     EntityName = "Tree"
@@ -12480,7 +12828,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AE9A0]]
     } --[[table: 000001BC6C0ADD20]],
     EntityName = "Tree"
@@ -12515,7 +12864,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0ADDA0]]
     } --[[table: 000001BC6C0AD5A0]],
     EntityName = "Tree"
@@ -12550,7 +12900,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AF020]]
     } --[[table: 000001BC6C0AEC20]],
     EntityName = "Tree"
@@ -12585,7 +12936,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AE4A0]]
     } --[[table: 000001BC6C0AD2A0]],
     EntityName = "Tree"
@@ -12620,7 +12972,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AF120]]
     } --[[table: 000001BC6C0AE620]],
     EntityName = "Tree"
@@ -12655,7 +13008,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AE8A0]]
     } --[[table: 000001BC6C0AEF20]],
     EntityName = "Tree"
@@ -12690,7 +13044,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AD6A0]]
     } --[[table: 000001BC6C0AD4A0]],
     EntityName = "Tree"
@@ -12725,7 +13080,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AD9A0]]
     } --[[table: 000001BC6C0AD820]],
     EntityName = "Tree"
@@ -12760,7 +13116,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AF9A0]]
     } --[[table: 000001BC6C0AF1A0]],
     EntityName = "Tree"
@@ -12795,7 +13152,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AFAA0]]
     } --[[table: 000001BC6C0B07A0]],
     EntityName = "Tree"
@@ -12830,7 +13188,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AF4A0]]
     } --[[table: 000001BC6C0AF7A0]],
     EntityName = "Tree"
@@ -12865,7 +13224,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0AFDA0]]
     } --[[table: 000001BC6C0B0520]],
     EntityName = "Tree"
@@ -12900,7 +13260,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B0220]]
     } --[[table: 000001BC6C0B0EA0]],
     EntityName = "Tree"
@@ -12935,7 +13296,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B0320]]
     } --[[table: 000001BC6C0B0FA0]],
     EntityName = "Tree"
@@ -12970,7 +13332,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B0620]]
     } --[[table: 000001BC6C0B04A0]],
     EntityName = "Tree"
@@ -13005,7 +13368,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B0820]]
     } --[[table: 000001BC6C0B09A0]],
     EntityName = "Tree"
@@ -13040,7 +13404,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B0A20]]
     } --[[table: 000001BC6C0AF420]],
     EntityName = "Tree"
@@ -13075,7 +13440,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B1120]]
     } --[[table: 000001BC6C0B0DA0]],
     EntityName = "Tree"
@@ -13110,7 +13476,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B2620]]
     } --[[table: 000001BC6C0AF5A0]],
     EntityName = "Tree"
@@ -13145,7 +13512,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B1220]]
     } --[[table: 000001BC6C0B2BA0]],
     EntityName = "Tree"
@@ -13180,7 +13548,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B2520]]
     } --[[table: 000001BC6C0B2B20]],
     EntityName = "Tree"
@@ -13215,7 +13584,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B30A0]]
     } --[[table: 000001BC6C0B2DA0]],
     EntityName = "Tree"
@@ -13250,7 +13620,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B1320]]
     } --[[table: 000001BC6C0B26A0]],
     EntityName = "Tree"
@@ -13285,7 +13656,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B25A0]]
     } --[[table: 000001BC6C0B2CA0]],
     EntityName = "Tree"
@@ -13320,7 +13692,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B2E20]]
     } --[[table: 000001BC6C0B14A0]],
     EntityName = "Tree"
@@ -13355,7 +13728,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B1FA0]]
     } --[[table: 000001BC6C0B2220]],
     EntityName = "Tree"
@@ -13390,7 +13764,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B1620]]
     } --[[table: 000001BC6C0B1820]],
     EntityName = "Tree"
@@ -13425,7 +13800,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B17A0]]
     } --[[table: 000001BC6C0B16A0]],
     EntityName = "Tree"
@@ -13460,7 +13836,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B29A0]]
     } --[[table: 000001BC6C0B3120]],
     EntityName = "Tree"
@@ -13495,7 +13872,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B37A0]]
     } --[[table: 000001BC6C0B1C20]],
     EntityName = "Tree"
@@ -13530,7 +13908,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B4520]]
     } --[[table: 000001BC6C0B3820]],
     EntityName = "Tree"
@@ -13565,7 +13944,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B3BA0]]
     } --[[table: 000001BC6C0B3F20]],
     EntityName = "Tree"
@@ -13600,7 +13980,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B4820]]
     } --[[table: 000001BC6C0B3FA0]],
     EntityName = "Tree"
@@ -13635,7 +14016,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B4220]]
     } --[[table: 000001BC6C0B3520]],
     EntityName = "Tree"
@@ -13670,7 +14052,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B44A0]]
     } --[[table: 000001BC6C0B5020]],
     EntityName = "Tree"
@@ -13705,7 +14088,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B4DA0]]
     } --[[table: 000001BC6C0B4320]],
     EntityName = "Tree"
@@ -13740,7 +14124,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B47A0]]
     } --[[table: 000001BC6C0B31A0]],
     EntityName = "Tree"
@@ -13775,7 +14160,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B3DA0]]
     } --[[table: 000001BC6C0B48A0]],
     EntityName = "Tree"
@@ -13810,7 +14196,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B4D20]]
     } --[[table: 000001BC6C0B4E20]],
     EntityName = "Tree"
@@ -13845,7 +14232,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B3620]]
     } --[[table: 000001BC6C0B3320]],
     EntityName = "Tree"
@@ -13880,7 +14268,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B5A20]]
     } --[[table: 000001BC6C0B59A0]],
     EntityName = "Tree"
@@ -13915,7 +14304,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B70A0]]
     } --[[table: 000001BC6C0B58A0]],
     EntityName = "Tree"
@@ -13950,7 +14340,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B5AA0]]
     } --[[table: 000001BC6C0B54A0]],
     EntityName = "Tree"
@@ -13985,7 +14376,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B55A0]]
     } --[[table: 000001BC6C0B67A0]],
     EntityName = "Tree"
@@ -14020,7 +14412,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B64A0]]
     } --[[table: 000001BC6C0B57A0]],
     EntityName = "Tree"
@@ -14055,7 +14448,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B5820]]
     } --[[table: 000001BC6C0B5420]],
     EntityName = "Tree"
@@ -14090,7 +14484,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B6420]]
     } --[[table: 000001BC6C0B5C20]],
     EntityName = "Tree"
@@ -14125,7 +14520,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B66A0]]
     } --[[table: 000001BC6C0B69A0]],
     EntityName = "Tree"
@@ -14160,7 +14556,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B5220]]
     } --[[table: 000001BC6C0B6EA0]],
     EntityName = "Tree"
@@ -14195,7 +14592,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B6A20]]
     } --[[table: 000001BC6C0B6B20]],
     EntityName = "Tree"
@@ -14230,7 +14628,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B90A0]]
     } --[[table: 000001BC6C0B53A0]],
     EntityName = "Tree"
@@ -14265,7 +14664,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B8CA0]]
     } --[[table: 000001BC6C0B86A0]],
     EntityName = "Tree"
@@ -14300,7 +14700,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B7720]]
     } --[[table: 000001BC6C0B8BA0]],
     EntityName = "Tree"
@@ -14335,7 +14736,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B71A0]]
     } --[[table: 000001BC6C0B8F20]],
     EntityName = "Rock"
@@ -14370,7 +14772,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B8120]]
     } --[[table: 000001BC6C0B7F20]],
     EntityName = "Rock"
@@ -14405,7 +14808,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B81A0]]
     } --[[table: 000001BC6C0B78A0]],
     EntityName = "Rock"
@@ -14440,7 +14844,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B7520]]
     } --[[table: 000001BC6C0B7920]],
     EntityName = "Rock"
@@ -14475,7 +14880,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B8820]]
     } --[[table: 000001BC6C0B8D20]],
     EntityName = "Rock"
@@ -14510,7 +14916,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B80A0]]
     } --[[table: 000001BC6C0B7FA0]],
     EntityName = "Rock"
@@ -14545,7 +14952,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B8E20]]
     } --[[table: 000001BC6C0B8920]],
     EntityName = "Rock"
@@ -14580,7 +14988,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B7A20]]
     } --[[table: 000001BC6C0B79A0]],
     EntityName = "Rock"
@@ -14615,7 +15024,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B9CA0]]
     } --[[table: 000001BC6C0B7C20]],
     EntityName = "Rock"
@@ -14650,7 +15060,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B94A0]]
     } --[[table: 000001BC6C0B9DA0]],
     EntityName = "Rock"
@@ -14685,7 +15096,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B9A20]]
     } --[[table: 000001BC6C0B9E20]],
     EntityName = "Rock"
@@ -14720,7 +15132,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BA5A0]]
     } --[[table: 000001BC6C0BAFA0]],
     EntityName = "Rock"
@@ -14755,7 +15168,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BAE20]]
     } --[[table: 000001BC6C0B9820]],
     EntityName = "Rock"
@@ -14790,7 +15204,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B91A0]]
     } --[[table: 000001BC6C0B9AA0]],
     EntityName = "Rock"
@@ -14825,7 +15240,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BA2A0]]
     } --[[table: 000001BC6C0B9920]],
     EntityName = "Rock"
@@ -14860,7 +15276,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BA9A0]]
     } --[[table: 000001BC6C0BA820]],
     EntityName = "Rock"
@@ -14895,7 +15312,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0B97A0]]
     } --[[table: 000001BC6C0BA120]],
     EntityName = "Rock"
@@ -14930,7 +15348,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BA520]]
     } --[[table: 000001BC6C0BABA0]],
     EntityName = "Rock"
@@ -14965,7 +15384,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BAC20]]
     } --[[table: 000001BC6C0BA8A0]],
     EntityName = "Rock"
@@ -15000,7 +15420,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BCBA0]]
     } --[[table: 000001BC6C0BCE20]],
     EntityName = "Rock"
@@ -15035,7 +15456,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BCB20]]
     } --[[table: 000001BC6C0BC620]],
     EntityName = "Rock"
@@ -15070,7 +15492,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BC4A0]]
     } --[[table: 000001BC6C0BB520]],
     EntityName = "Rock2"
@@ -15105,7 +15528,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BBFA0]]
     } --[[table: 000001BC6C0BC2A0]],
     EntityName = "Rock2"
@@ -15140,7 +15564,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BBF20]]
     } --[[table: 000001BC6C0BB420]],
     EntityName = "Rock2"
@@ -15175,7 +15600,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BCC20]]
     } --[[table: 000001BC6C0BCD20]],
     EntityName = "Rock2"
@@ -15210,7 +15636,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BB820]]
     } --[[table: 000001BC6C0BC0A0]],
     EntityName = "Rock2"
@@ -15245,7 +15672,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BB2A0]]
     } --[[table: 000001BC6C0BCFA0]],
     EntityName = "Rock2"
@@ -15280,7 +15708,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BC220]]
     } --[[table: 000001BC6C0BC120]],
     EntityName = "Rock2"
@@ -15315,7 +15744,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BC3A0]]
     } --[[table: 000001BC6C0BBB20]],
     EntityName = "Rock2"
@@ -15350,7 +15780,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BE120]]
     } --[[table: 000001BC6C0BBC20]],
     EntityName = "Rock2"
@@ -15385,7 +15816,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6C0BE020]]
     } --[[table: 000001BC6C0BDFA0]],
     EntityName = "Rock2"
@@ -15442,7 +15874,8 @@ scene = {
         isStatic = true,
         mass = 1,
         shape = "box",
-        useGravity = true
+        useGravity = true,
+        useCCD = false
       } --[[table: 000001BC6BE39A10]]
     } --[[table: 000001BC6BE3B110]],
     EntityName = "Well"

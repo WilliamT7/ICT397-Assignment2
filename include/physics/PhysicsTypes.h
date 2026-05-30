@@ -23,4 +23,5 @@ struct RigidBodyDesc
     Vector3 position;
     bool isStatic = false;
 	bool useGravity = true;
+	bool useCCD = false;
 };

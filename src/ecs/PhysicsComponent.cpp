@@ -21,13 +21,9 @@ void ECS::PhysicsComponent::Start()
 
 void ECS::PhysicsComponent::Update(float deltaTime)
 {
-	if (physicsBody == nullptr || transform == nullptr)
+	if (physicsBody == nullptr || transform == nullptr || m_isStatic)
 	{
 		return;
-	}
-
-    if(m_isStatic == true) {
-        return;
 	}
 
 	// Sync transform position with physics body position
@@ -44,6 +40,7 @@ void ECS::PhysicsComponent::ImGui()
         ImGui::InputFloat("Mass", &m_mass);
         ImGui::Checkbox("Is Static", &m_isStatic);
         ImGui::Checkbox("Use Gravity", &m_useGravity);
+        ImGui::Checkbox("Use CCD", &m_useCCD);
         ImGui::InputFloat("Half Extents X", &m_halfExtents.x);
         ImGui::InputFloat("Half Extents Y", &m_halfExtents.y);
         ImGui::InputFloat("Half Extents Z", &m_halfExtents.z);
@@ -146,6 +143,7 @@ bool ECS::PhysicsComponent::CreateBodyFromSettings()
         desc.isStatic = m_isStatic;
         desc.position = GetBodyPositionFromTransform();
 		desc.useGravity = m_useGravity;
+		desc.useCCD = m_useCCD;
 
         physicsBody = physicsWorld->CreateBoxBody(
             desc,
@@ -210,6 +208,7 @@ void ECS::PhysicsComponent::DeserialiseComponentTable(sol::table& data)
     m_mass = data["mass"];
     m_isStatic = data["isStatic"];
     m_useGravity = data["useGravity"].get_or(true);
+	m_useCCD = data["useCCD"].get_or(false);
 
     m_halfExtents.x = data["halfExtents_x"];
     m_halfExtents.y = data["halfExtents_y"];
@@ -229,6 +228,7 @@ sol::table ECS::PhysicsComponent::SerialiseComponent(sol::state& lua) const
     t["mass"] = m_mass;
     t["isStatic"] = m_isStatic;
     t["useGravity"] = m_useGravity;
+	t["useCCD"] = m_useCCD;
     t["halfExtents_x"] = m_halfExtents.x;
     t["halfExtents_y"] = m_halfExtents.y;
     t["halfExtents_z"] = m_halfExtents.z;

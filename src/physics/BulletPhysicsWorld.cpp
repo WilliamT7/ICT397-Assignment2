@@ -114,7 +114,7 @@ std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateBoxBody(const RigidBodyD
     body->setFriction(0.8f);
     body->setRestitution(0.0f);
 
-    if (mass > 0.0f)
+    if (mass > 0.0f && desc.useCCD)
     {
         const float smallestHalfExtent = std::max(
             0.01f,
