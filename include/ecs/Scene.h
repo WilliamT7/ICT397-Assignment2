@@ -197,6 +197,15 @@ namespace ECS
 		**/
 		void ProcessTriggers();
 
+		/** Get Entity
+		* @author - Kay Bradsell
+		* @brief - Returns entity pointer from the entity unique ID
+		* @param - int ID
+		* @return - Entity*
+		*
+		* @pre - Scene has been constructed and entity with that ID exists
+		* @post - Returns the entity, or nullptr
+		**/
 		Entity* GetEntity(int ID);
 
 	private:
