@@ -1,5 +1,5 @@
 local start = "game.lua"
-local load = "savedGame.lua"
+local load = "gamesave.lua"
 
 function render()
     GUIBegin("Super Goober Bros World 2 HD")

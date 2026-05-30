@@ -135,9 +135,11 @@ public:
 	/** Get Window Size
 	* @author - Kay Bradsell
 	* @brief - Returns, in reference parameters, the current window width and height
+	* @param - int& width
+	* @param - int& height
 	*
-	* @pre - 
-	* @post - 
+	* @pre - window has been made
+	* @post - returns in parameter references the width and height of the window
 	**/
 	void GetWindowSize(int& width, int& height);
 
