@@ -1,6 +1,6 @@
 /*********************************************
 * @file - ScriptState.h
-* @brief - 
+* @brief - States that have scripting associated with enter, exit and update
 *
 * @version 1.0
 * @date 06/05/2026 Seb D'Alessandro

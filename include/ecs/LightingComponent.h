@@ -75,14 +75,62 @@ namespace ECS
 		float linear = 0.09f;
 		float quadratic = 0.032f;
 
+		/** Set Type
+		* @author - Seb D'Alessandro
+		* @brief - modifies the light type
+		* @param - LightType
+		*
+		* @pre - light has been constructed
+		* @post - modifies the light type to a new type
+		**/
 		void setType(LightType nType);
 
+		/** Set Direction
+		* @author - Seb D'Alessandro
+		* @brief - modifies the direction of the light (if it's directional)
+		* @param - float x
+		* @param - float y
+		* @param - float z
+		*
+		* @pre - light has been constructed
+		* @post - modifies the direction/rotation of the light to a new vector3
+		**/
 		void setDirection(float x, float y, float z);
 
+		/** Set Ambient
+		* @author - Seb D'Alessandro
+		* @brief - modifies the ambient colour for this light
+		* @param - float r
+		* @param - float g
+		* @param - float b
+		*
+		* @pre - light has been constructed
+		* @post - modifies the ambient light colour
+		**/
 		void setAmbient(float r, float g, float b);
 
+		/** Set Diffuse
+		* @author - Seb D'Alessandro
+		* @brief - modifies the diffuse colour for this light
+		* @param - float r
+		* @param - float g
+		* @param - float b
+		*
+		* @pre - light has been constructed
+		* @post - modifies the diffuse light colour
+		**/
 		void setdiffuse(float r, float g, float b);
 
+		/** Set Specular
+		* @author - Seb D'Alessandro
+		* @brief - modifies the specular colour for this light
+		* @param - float r
+		* @param - float g
+		* @param - float b
+		*
+		* @pre - light has been constructed
+		* @post - modifies the specular light colour
+		**/
 		void setSpecular(float r, float g, float b);
 
 	};

@@ -225,11 +225,28 @@ namespace ECS
 		**/
 		int GetID() const;
 
-		
+
+		/* retreiveMessage
+		* @author - Seb D'Alessandro
+		* @brief - Returns the most recent message recieved
+		* @pre - N/A
+		* @post - copy of the message is returned
+		* @return - telegram: message to return
+		*/
 		telegram retreiveMessage();
 
+
+		/* handleMessage
+		* @author - Seb D'Alessandro
+		* @brief - Handles an incoming message and stores it for later use
+		* @pre - N/A
+		* @post - message is copied into entity and a function associated with that message may be run if it exists
+		* @return - void
+		*/
 		void handleMessage(telegram& message);
-    /** Add Script Component
+
+
+		/** Add Script Component
 		* @author - Kay Bradsell
 		* @brief - Adds a script to this entity given it doesn't already exist
 		* @param - std::string filePath
@@ -275,6 +292,13 @@ namespace ECS
 		**/
 		std::string static GetScriptName(std::string filePath);
 
+		/** Reset ID Counter
+		* @author - Kay Bradsell
+		* @brief - resets the unique ID counter, should be called on Clear of scene
+		* 
+		* @pre - none
+		* @post - resets the unique ID counter for entity
+		*/
 		static void ResetIDCounter();
 
 	private:
@@ -286,7 +310,7 @@ namespace ECS
 		std::string name = "Object";
 		bool m_deleteFlag = false;
 
-		telegram recievedMessage; //im sorry kay :(
+		telegram recievedMessage; 
 
 		static int m_entityCount;
 		int m_entityID;

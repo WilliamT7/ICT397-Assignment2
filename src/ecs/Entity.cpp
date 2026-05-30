@@ -128,6 +128,7 @@ void ECS::Entity::DeserialiseComponentTable(sol::table& components)
 		else
 		{
 			Component* comp = AddComponentByName(componentName);
+			comp->Start();
 
 			if (!comp)
 				std::cout << "[C++]: ERROR: Component name doesn't exist";
@@ -230,11 +231,12 @@ ECS::ScriptComponent& ECS::Entity::AddScriptComponent(std::string filePath)
 	if (!HasScriptComponent(scriptName))
 	{
 		m_scripts.push_back(ScriptComponent());
+		m_scriptsMap[scriptName] = m_scripts.size() - 1;
 		auto& comp = m_scripts.back();
 		comp.entity = this;
 		comp.setScript(filePath);
 		
-		m_scriptsMap[scriptName] = m_scripts.size() - 1;
+		
 
 	}
 
@@ -302,21 +304,21 @@ void Entity::ResetIDCounter()
 void Entity::handleMessage(telegram& message) {
 
 	recievedMessage = message;
+	bool runFunction = message.scriptFunctionName != "N/A";
 
-	if (HasScriptComponent(message.scriptCompName)) {
+	if (HasScriptComponent(message.scriptCompName) && runFunction) {
 		
 		ScriptComponent& const scriptComponent = GetScriptComponent(message.scriptCompName);
 		scriptComponent.runFunction(message.scriptFunctionName);
 
 	}
 
-
 }
 //----------------------------------------------
 
 telegram Entity::retreiveMessage() {
+
 	telegram message = recievedMessage;
-	recievedMessage = telegram();
 	return message;
 
 }

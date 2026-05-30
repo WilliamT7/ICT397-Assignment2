@@ -30,6 +30,7 @@ bool GLFWWindow::CreateWindow(int width, int height, const char* name, Graphics:
 	this->width = mode->width;
 	this->height = mode->height;
 	window = glfwCreateWindow(mode->width, mode->height, name, NULL, NULL);
+	glfwSetWindowMonitor(window, NULL, 0, 0, mode->width, mode->height, mode->refreshRate);
 	if (window == NULL)
 	{
 		std::cout << "[C++]: ERROR: GLFW: Unable to initialise window.\n";

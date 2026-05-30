@@ -132,18 +132,18 @@ namespace Graphics
 
 	void GraphicsOpenGL::Resize(int width, int height)
 	{
-		m_width = width;
-		m_height = height;
+		m_width = (width > 0) ? width : 1;
+		m_height = (height > 0) ? height : 1;
 
-		glViewport(0, 0, width, height);
+		glViewport(0, 0, m_width, m_height);
 		m_projection2D = glm::ortho(0.0f, 1.0f, 0.0f, 1.0f, -1.0f, 1.0f);
-		m_projection3D = glm::perspective<float>(glm::radians(45.0f), static_cast<float>(width) / static_cast<float>(height), 0.1f, 1000.0f);
+		m_projection3D = glm::perspective<float>(glm::radians(45.0f), static_cast<float>(m_width) / static_cast<float>(m_height), 0.1f, 1000.0f);
 
 		// resizing frame buffers to match new width and height ><
 		glBindTexture(GL_TEXTURE_2D, textureColourbuffer);
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
 		glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
+		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, m_width, m_height);
 	}
 
 	//----------------------------------------------

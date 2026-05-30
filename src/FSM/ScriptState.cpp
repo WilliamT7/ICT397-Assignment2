@@ -14,7 +14,7 @@ void ScriptState::update() {
 
 	if (updateScript != nullptr) {
 		SolScripting scripting;
-		scripting.run(*updateScript, updateFunctionName, entityAssociated);
+		scripting.runLoaded(*updateScript, updateFunctionName, entityAssociated);
 	}
 }
 
@@ -32,7 +32,7 @@ void ScriptState::enter() {
 
 	if (enterScript != nullptr) {
 		SolScripting scripting;
-		scripting.run(*enterScript, enterFunctionName, entityAssociated);
+		scripting.runLoaded(*enterScript, enterFunctionName, entityAssociated);
 	}
 }
 
@@ -42,7 +42,7 @@ void ScriptState::exit() {
 
 	if (exitScript != nullptr) {
 		SolScripting scripting;
-		scripting.run(*exitScript, exitFunctionName, entityAssociated);
+		scripting.runLoaded(*exitScript, exitFunctionName, entityAssociated);
 	}
 
 }
@@ -72,7 +72,7 @@ void ScriptState::setUpdateCode(string fileName, string functionName) {
 void ScriptState::setExitCode(string fileName, string functionName) {
 	
 	if (entityAssociated->HasScriptComponent(fileName)) {
-		enterScript = entityAssociated->GetScriptComponent(fileName).getScriptPointer();
+		exitScript = entityAssociated->GetScriptComponent(fileName).getScriptPointer();
 		exitFunctionName = functionName;
 	}
 	else {
@@ -84,7 +84,7 @@ void ScriptState::setExitCode(string fileName, string functionName) {
 void ScriptState::setEnterCode(string fileName, string functionName) {
 	
 	if (entityAssociated->HasScriptComponent(fileName)) {
-		exitScript = entityAssociated->GetScriptComponent(fileName).getScriptPointer();
+		enterScript = entityAssociated->GetScriptComponent(fileName).getScriptPointer();
 		enterFunctionName = functionName;
 	}
 	else {

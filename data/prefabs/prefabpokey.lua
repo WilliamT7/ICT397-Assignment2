@@ -42,6 +42,9 @@ entity =
         halfExtents_y = 20,
         halfExtents_z = 3
       },
+	  {
+		Name = "FSM"
+	  },
       {
         Name = "Script",
         fileName = "testpokeyvars.lua",
@@ -49,7 +52,12 @@ entity =
         moveX = "0",
         moveY = "0",
         moveZ = "0",
-        liveTime = "0"
+        liveTime = "0",
+		movementSpeed = "25",
+		playerCheckTimer = "0.0",
+		playerAlertTimer = "0.0",
+        playerAttackCooldown = "2.0"
+		
       },
       {
         Name = "Script",

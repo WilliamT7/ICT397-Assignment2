@@ -46,7 +46,7 @@ void ECS::ScriptComponent::runFunction(const string& const functionName) {
 		scripting->runLoaded(luaFile, functionName, entity);
 	}
 	else {
-		cout << "I dont have " << functionName << " sorry :(\n";
+		cout << "[C++] I dont have " << functionName << " sorry :(\n";
 	}
 
 
@@ -80,6 +80,7 @@ ScriptFile const ECS::ScriptComponent::getScript() {
 //------------------------------------------------------------
 
 ScriptFile* ECS::ScriptComponent::getScriptPointer() {
+
 	return &luaFile;
 }
 

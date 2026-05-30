@@ -132,6 +132,13 @@ public:
 	**/
 	bool GetMouseVisible() const;
 
+	/** Get Window Size
+	* @author - Kay Bradsell
+	* @brief - Returns, in reference parameters, the current window width and height
+	*
+	* @pre - 
+	* @post - 
+	**/
 	void GetWindowSize(int& width, int& height);
 
 private:

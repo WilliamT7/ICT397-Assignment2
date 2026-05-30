@@ -183,7 +183,8 @@ void ECS::Scene::DeserialiseScene(sol::table& sceneData)
 
 		entity.get()->DeserialiseComponentTable(entityData);
 		std::cout << "ID: " << entity.get()->GetID() << std::endl;
-		entity.get()->Start();
+
+
 	}
 
 	InjectPhysicsWorld(); 
@@ -230,7 +231,6 @@ bool ECS::Scene::Spawn(std::string prefabName)
 
 	InjectPhysicsWorld(spawnedEntity);
 
-	spawnedEntity->Start();
 
 	return true;
 }
@@ -496,7 +496,8 @@ void ECS::Scene::ImGui()
 				break;
 
 			case 9:
-				entity->AddComponent<FSMComponent>();
+				auto test = entity->AddComponent<FSMComponent>();
+				test->Start();
 				break;
 
 			}

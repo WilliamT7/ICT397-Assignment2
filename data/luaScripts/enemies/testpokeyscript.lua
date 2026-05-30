@@ -3,7 +3,7 @@ local lifeTime = 5.00
 local deltaTime = 0.01
 local spawnMin = -1500
 local spawnMax = 1500
-local spawnHeightOffset = 255
+local spawnHeightOffset = 5
 local terrainSearchMaxID = 100
 local isDead = false
 
@@ -14,7 +14,7 @@ function start()
         math.randomseed(obj:getID() + os.time())
         local randomX = math.random(spawnMin, spawnMax)
         local randomZ = math.random(spawnMin, spawnMax)
-        local spawnY = getSpawnHeight()
+        local spawnY = getSpawnHeight(randomX, randomZ)
 
         transform:setPosition(randomX, spawnY, randomZ)
 
@@ -41,10 +41,24 @@ function start()
 
 end
 
-function getSpawnHeight()
+function getSpawnHeight(worldX, worldZ)
     local terrainEntity = findTerrainEntity()
 
+    if terrainEntity == nil then
+        return spawnHeightOffset
+    end
+
+    local terrain = getTerrain(terrainEntity)
+
+    if terrain ~= nil then
+        return terrain:getHeightAtWorldPosition(worldX, worldZ) + spawnHeightOffset
+    end
+
     local terrainTransform = getTransform(terrainEntity)
+
+    if terrainTransform == nil then
+        return spawnHeightOffset
+    end
 
     return terrainTransform.position.y + spawnHeightOffset
 end
@@ -82,9 +96,9 @@ function update()
             --     transform:setPosition(currentPos.x + x * speed, currentPos.y + y * speed, currentPos.z + z * speed)
             -- end
             
-            animation:play("walk")
+            --animation:play("walk")
         else
-            animation:play("idle")
+            --animation:play("idle")
         end
     end
 
