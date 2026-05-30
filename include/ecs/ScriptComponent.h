@@ -82,7 +82,14 @@ namespace ECS {
 		**/
 		ScriptFile const getScript();
 
-
+		/** runFunction
+		* @author - Seb D'Alessandro
+		* @brief - Runs a function in this scriptComponet specifed by functionName
+		* @pre - Script is assigned to scriptComponent
+		* @post - if function name exists, its run
+		* @return - void
+		*
+		**/
 		void runFunction(const string& const functionName);
 
 

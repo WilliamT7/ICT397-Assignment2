@@ -21,6 +21,15 @@ using std::string;
 
 //-------------------------------------------------
 
+
+/* sendMessage
+* @author - Seb D'Alessandro
+* @brief - sends a message to an entity based off ID, specifed in telegram
+* @pre - Recivever ID exists in scene
+* @post - If the entity exists, it recieves the message
+* @param message - message format (including what entity should recieve it)
+* @return - void
+*/
 void sendMessage(telegram message);
 
 

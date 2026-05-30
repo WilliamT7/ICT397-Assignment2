@@ -312,10 +312,6 @@ void Entity::handleMessage(telegram& message) {
 		scriptComponent.runFunction(message.scriptFunctionName);
 
 	}
-	else {
-		cout << "stupdity test\n";
-	}
-
 
 }
 //----------------------------------------------
