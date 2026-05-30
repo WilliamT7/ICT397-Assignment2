@@ -81,10 +81,34 @@ public:
 	*/
 	Window* const getWindowPointer() const;
 
+	/** Pass Scene Functionality
+	* @author - Kay Bradsell
+	* @brief - Passes a pointer to a scene to this window
+	* @param - Scene* scenePointer
+	*
+	* @pre - Scene has been constructed, as has this object
+	* @post - This object now holds pointer to used scene
+	**/
 	void passSceneFunctionality(ECS::Scene* scenePointer);
 
+	/** Scene Func Assigned
+	* @author - Kay Bradsell
+	* @brief - Returns if the scene pointer is being held
+	* @return - bool
+	*
+	* @pre - object has been constructed
+	* @post - returns true if this object holds a pointer to a valid scene, else false.
+	**/
 	bool sceneFuncAssigned() const;
 
+	/** Get Scene Pointer
+	* @author - Kay Bradsell
+	* @brief - Returns the pointer to a valid scene
+	* @return - Scene*
+	*
+	* @pre - This object has been constructed and has been passed a scene pointer
+	* @post - returns the Scene pointer
+	**/
 	ECS::Scene* const getScenePointer() const;
 
 
