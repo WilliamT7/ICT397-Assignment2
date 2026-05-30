@@ -157,6 +157,17 @@ namespace ECS
 		**/
 		bool Spawn(std::string prefabName);
 
+		/** Get Spawn
+		* @author - Kay Bradsell
+		* @brief - Spawns a prefab into the scene given the name and returns pointer to it
+		* @param - std::string prefabName
+		* @return - Entity*
+		*
+		* @pre - prefabName points to a valid prefab and scene has been initialised
+		* @post - Spawns a new entity with the data in the prefab
+		**/
+		Entity* GetSpawn(std::string prefabName);
+
 		/** InjectPhysicsWorld
 		* @author - William Thorpe
 		* @brief - Injects the physics world into the scene
@@ -186,6 +197,15 @@ namespace ECS
 		**/
 		void ProcessTriggers();
 
+		/** Get Entity
+		* @author - Kay Bradsell
+		* @brief - Returns entity pointer from the entity unique ID
+		* @param - int ID
+		* @return - Entity*
+		*
+		* @pre - Scene has been constructed and entity with that ID exists
+		* @post - Returns the entity, or nullptr
+		**/
 		Entity* GetEntity(int ID);
 
 	private:

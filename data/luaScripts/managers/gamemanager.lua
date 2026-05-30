@@ -1,3 +1,6 @@
+local enemiesPerWave = 20
+local totalWaves = 5
+
 function update()
 	vars = getScriptComponent(obj, "gamemanagervars")
 	local numEnemiesLeft = tonumber(vars:getGlobal("numEnemiesLeft").value)
@@ -8,7 +11,7 @@ function update()
 	local currentWave = tonumber(vars:getGlobal("currentWave").value)
 	local numEnemiesSpawned = tonumber(vars:getGlobal("numEnemiesSpawned").value)
 
-	local amountToSpawn = currentWave * 5
+	local amountToSpawn = currentWave * enemiesPerWave
 	if numEnemiesSpawned < amountToSpawn then
 		SpawnEnemy(vars)
 	end
@@ -35,7 +38,7 @@ function NewWave(vars)
 	vars:setGlobal("currentWave", tostring(currentWave))
 	vars:setGlobal("numEnemiesSpawned", tostring(0))
 
-	if currentWave > 20 then
+	if currentWave > totalWaves then
 		SetMouseVisible(true)
 		LoadScene("YouWin.lua")
 	end

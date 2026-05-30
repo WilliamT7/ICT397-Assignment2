@@ -28,7 +28,7 @@ void ECS::PhysicsComponent::Update(float deltaTime)
 
 	// Sync transform position with physics body position
 	Vector3 physicsPos = physicsBody->GetPosition();
-	transform->position = Vector3(physicsPos.x, physicsPos.y, physicsPos.z);
+	transform->position = GetTransformPositionFromBody(physicsPos);
 }
 
 void ECS::PhysicsComponent::ImGui()
@@ -43,6 +43,9 @@ void ECS::PhysicsComponent::ImGui()
         ImGui::InputFloat("Half Extents X", &m_halfExtents.x);
         ImGui::InputFloat("Half Extents Y", &m_halfExtents.y);
         ImGui::InputFloat("Half Extents Z", &m_halfExtents.z);
+        ImGui::InputFloat("Center Offset X", &m_centerOffset.x);
+        ImGui::InputFloat("Center Offset Y", &m_centerOffset.y);
+        ImGui::InputFloat("Center Offset Z", &m_centerOffset.z);
 
         if (physicsBody != nullptr)
         {
@@ -137,7 +140,7 @@ bool ECS::PhysicsComponent::CreateBodyFromSettings()
         RigidBodyDesc desc;
         desc.mass = m_isStatic ? 0.0f : m_mass;
         desc.isStatic = m_isStatic;
-        desc.position = { transform->position.x, transform->position.y, transform->position.z };
+        desc.position = GetBodyPositionFromTransform();
 		desc.useGravity = m_useGravity;
 
         physicsBody = physicsWorld->CreateBoxBody(
@@ -207,6 +210,10 @@ void ECS::PhysicsComponent::DeserialiseComponentTable(sol::table& data)
     m_halfExtents.x = data["halfExtents_x"];
     m_halfExtents.y = data["halfExtents_y"];
     m_halfExtents.z = data["halfExtents_z"];
+
+    m_centerOffset.x = data["centerOffset_x"].get_or(0.0f);
+    m_centerOffset.y = data["centerOffset_y"].get_or(0.0f);
+    m_centerOffset.z = data["centerOffset_z"].get_or(0.0f);
 }
 
 sol::table ECS::PhysicsComponent::SerialiseComponent(sol::state& lua) const
@@ -221,6 +228,30 @@ sol::table ECS::PhysicsComponent::SerialiseComponent(sol::state& lua) const
     t["halfExtents_x"] = m_halfExtents.x;
     t["halfExtents_y"] = m_halfExtents.y;
     t["halfExtents_z"] = m_halfExtents.z;
+    t["centerOffset_x"] = m_centerOffset.x;
+    t["centerOffset_y"] = m_centerOffset.y;
+    t["centerOffset_z"] = m_centerOffset.z;
 
     return t;
+}
+
+Vector3 ECS::PhysicsComponent::GetBodyPositionFromTransform() const
+{
+    if (transform == nullptr)
+        return m_centerOffset;
+
+    return Vector3(
+        transform->position.x + m_centerOffset.x,
+        transform->position.y + m_centerOffset.y,
+        transform->position.z + m_centerOffset.z
+    );
+}
+
+Vector3 ECS::PhysicsComponent::GetTransformPositionFromBody(const Vector3& bodyPosition) const
+{
+    return Vector3(
+        bodyPosition.x - m_centerOffset.x,
+        bodyPosition.y - m_centerOffset.y,
+        bodyPosition.z - m_centerOffset.z
+    );
 }

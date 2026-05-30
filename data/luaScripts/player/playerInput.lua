@@ -3,6 +3,7 @@ local camSensitivity = 0.1
 local playerHeight = 5
 local playerLinearDamping = 0.6
 local maxUpwardVelocity = 4.0
+local prefab = "prefabtree.lua"
 
 function update()	
 	--toggle mouse

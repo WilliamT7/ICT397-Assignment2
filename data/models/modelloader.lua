@@ -24,8 +24,12 @@ models = {
         File = "palm tree\\palm.obj"
     },
     {
-        Name = "SKY BOX",
-        File = "skybox\\skybox1.obj"
+        Name = "TREE",
+        File = "tree\\tree.obj"
+    },
+    {
+        Name = "ROCK2",
+        File = "rock2\\rock2.obj"
     },
     {
         Name = "AKALI",
@@ -42,5 +46,13 @@ models = {
     {
         Name = "POOL",
         File = "kiddypool\\kiddypool.obj"
+    },
+    {
+        Name = "TEMPLE",
+        File = "Temple\\Temple.obj"
+    },
+    {
+        Name = "WELL",
+        File = "well\\well.gltf"
     }
 }
