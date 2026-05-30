@@ -225,10 +225,37 @@ namespace ECS
 		**/
 		Vector3 GetHalfExtents() const;
 
+		/** SetPosition
+		* @author - William Thorpe
+		* @brief - Sets the linked physics body's world position.
+		* @param - const Vector3& position - The world position to move the physics body to.
+		* @pre - The physics body should be valid and linked to this component.
+		* @post - Moves the physics body to the specified world position. The entity transform will be synced during the physics component update.
+		* @return - None.
+		**/
 		void SetPosition(const Vector3& position);
 
 	private:
+
+		/** GetBodyPositionFromTransform
+		* @author - William Thorpe
+		* @brief - Converts the entity transform position into the physics body position using the centre offset.
+		* @param - None.
+		* @pre - None.
+		* @post - Returns the physics body position that matches the entity transform and configured offset.
+		* @return - The offset physics body position.
+		**/
 		Vector3 GetBodyPositionFromTransform() const;
+
+
+		/** GetTransformPositionFromBody
+		* @author - William Thorpe
+		* @brief - Converts a physics body position back into an entity transform position using the centre offset.
+		* @param - const Vector3& bodyPosition - The current physics body world position.
+		* @pre - bodyPosition should be a valid physics body position.
+		* @post - Returns the transform position that matches the physics body and configured offset.
+		* @return - The offset entity transform position.
+		**/
 		Vector3 GetTransformPositionFromBody(const Vector3& bodyPosition) const;
 
 		std::shared_ptr<IPhysicsBody> physicsBody = nullptr;
