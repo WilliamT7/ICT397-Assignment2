@@ -15,7 +15,7 @@ local lastKnownPlayerPosition = nil
 
 local fsm = nil
 
-
+--FSM setup
 function start()
 
 	fsm = getFSM(obj)
@@ -41,18 +41,27 @@ function start()
 	fsm:saveState()
 	
 	fsm:setState("Wander")
-	
-	
-
 
 end
 
 
+function update()
 
-function scanEnvironment()
+	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	curPlayerCheck = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
+	curPlayerAlertCheck = tonumber(pokeyVariables:getGlobal("playerAlertTimer").value)
 
-	fsm = getFSM(obj)
+	curPlayerCheck = curPlayerCheck + getDeltaTime()
+	curPlayerAlertCheck = curPlayerAlertCheck + getDeltaTime()
 	
+	pokeyVariables:setGlobal("playerCheckTimer", tostring(curPlayerCheck))
+	pokeyVariables:setGlobal("playerAlertTimer", tostring(curPlayerAlertCheck))
+
+end
+
+--Consider passing script comp as a parameter, rather than alertCooldownCheck
+function scanEnvironment(alertCooldownCheck)
+
     local player = findPlayer()
 
     if player == nil then
@@ -70,7 +79,9 @@ function scanEnvironment()
 
 	 if isWithinRadius(pokeyPosition, playerPosition, playerViewRadius) then
         if not hasSeenPlayer and playerAlertTimer >= playerAlertCooldown then
-            hasSeenPlayer = true
+            fsm = getFSM(obj)
+			hasSeenPlayer = true
+			print("fuck2")
             playerAlertTimer = 0.0
 
             print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
@@ -89,22 +100,20 @@ end
 
 --Wander---------
 function wanderUpdate()
-	
-	fsm = getFSM(obj)
-	playerCheckTimer = playerCheckTimer + getDeltaTime()
-    playerAlertTimer = playerAlertTimer + getDeltaTime()
 
+	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 	
-	if not (playerCheckTimer < playerCheckInterval) then
+	if not (PlayerCheckTimer < playerCheckInterval) then
 	
-		playerCheckTimer = 0.0
-		scanEnvironment()
+		curPlayerAlertCheck = tonumber(pokeyVariables:getGlobal("playerAlertTimer").value)
+		pokeyVariables:setGlobal("playerCheckTimer", "0.0")
+		scanEnvironment(curPlayerAlertCheck)
+		
+		local pokeyPosition = getEntityPosition(obj)
+		alertNearbyPokeys(pokeyPosition, pokeyPosition, pokeyFollowRadius, 11, "onFollowRequest")
 		
 	end
-	
-	local pokeyPosition = getEntityPosition(obj)
-	--alertNearbyPokeys(pokeyPosition, pokeyPosition, pokeyFollowRadius, 11, "onFollowRequest")
-	
 
 end
 
@@ -130,7 +139,6 @@ function attackUpdate()
 	
 		pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 		movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
-	
 		moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
 	
 	else
@@ -186,7 +194,7 @@ function investigateUpdate()
 end
 
 
---Follow pokey
+--Follow pokey---------
 function followPokeyUpdate()
 
 	local message = obj:retrieveMessage()
@@ -224,7 +232,7 @@ function followPokeyUpdate()
 end
 
 
----------------------------------------
+---------------------------------------------------------------------------------------------------------
 
 function onFollowRequest()
 	
@@ -240,6 +248,7 @@ function onFollowRequest()
 
 end
 
+--Pokey communication related------------------------------------------------------------------
 
 function onFollowUpdate()
 		
@@ -286,10 +295,10 @@ function OnPokeyDied()
 	if currentState ~= "Die" then
 		fsm = getFSM(obj)
 		fsm:setState("Die")
-		print("i am dead rip")
 	end
 	
 end
+
 
 function OnPokeyAlert()
 	
@@ -326,7 +335,6 @@ function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, funct
                 alertMessage.data = alertPosition
 
                 sendMessage(alertMessage)
-				print("sent alert")
             end
         end
     end
@@ -338,6 +346,8 @@ function isValidPokeyReceiver(entity)
         and entity:getName() == "Spiky"
         and entity:hasScript("pokeycomm")
 end
+
+--Helper functions------------------------------------------------------------------
 
 function findPlayer()
     for id = 0, maxEntitySearchID do

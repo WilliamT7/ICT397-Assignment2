@@ -50,7 +50,10 @@ entity =
         moveY = "0",
         moveZ = "0",
         liveTime = "0",
-		movementSpeed = "25"
+		movementSpeed = "25",
+		playerCheckTimer = "0.0",
+		playerAlertTimer = "0.0"
+		
       },
       {
         Name = "Script",
