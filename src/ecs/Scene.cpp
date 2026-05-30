@@ -559,7 +559,12 @@ void ECS::Scene::ProcessTriggers()
 		}
 
 		if (e->HasComponent<PhysicsComponent>())
-			m_physicsEntities.push_back(e);
+		{
+			PhysicsComponent* physics = e->GetComponent<PhysicsComponent>();
+
+			if (physics != nullptr && !physics->IsStatic())
+				m_physicsEntities.push_back(e);
+		}
 	}
 
 	for (Entity* triggerEntity : m_triggerEntities)

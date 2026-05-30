@@ -235,6 +235,16 @@ namespace ECS
 		**/
 		void SetPosition(const Vector3& position);
 
+		/** IsStatic
+		* @author - William Thorpe
+		* @brief - Checks if the linked physics body is static.
+		* @param - None.
+		* @pre - The physics body should be valid and linked to this component.
+		* @post - Returns true if the physics body is static, false otherwise.
+		* @return - A boolean indicating if the physics body is static.
+		**/
+		bool IsStatic() const;
+
 	private:
 
 		/** GetBodyPositionFromTransform

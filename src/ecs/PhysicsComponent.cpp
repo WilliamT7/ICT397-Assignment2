@@ -191,13 +191,16 @@ Vector3 ECS::PhysicsComponent::GetHalfExtents() const
     return m_halfExtents;
 }
 
+bool ECS::PhysicsComponent::IsStatic() const
+{
+    return m_isStatic;
+}
+
 void ECS::PhysicsComponent::SetPosition(const Vector3& position)
 {
     if (physicsBody == nullptr) {
         return;
-
     }
-
 
     physicsBody->SetPosition(position);
 }
