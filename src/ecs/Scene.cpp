@@ -183,7 +183,7 @@ void ECS::Scene::DeserialiseScene(sol::table& sceneData)
 
 		entity.get()->DeserialiseComponentTable(entityData);
 		std::cout << "ID: " << entity.get()->GetID() << std::endl;
-		
+		entity.get()->Start();
 	}
 
 	InjectPhysicsWorld(); 
@@ -233,6 +233,38 @@ bool ECS::Scene::Spawn(std::string prefabName)
 	spawnedEntity->Start();
 
 	return true;
+}
+
+//----------------------------------------------
+
+ECS::Entity* ECS::Scene::GetSpawn(std::string prefabName)
+{
+	sol::state lua;
+	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
+
+	std::string path = "../data/prefabs/";
+	std::string fullPath = path + prefabName;
+
+	try {
+		lua.script_file(fullPath);
+	}
+	catch (const sol::error& e) {
+		std::cout << "[C++]: Error: SOL: Unable to open" << fullPath << ".\n";
+		return nullptr;
+	}
+
+	sol::table entityData = lua["entity"];
+
+	entities.push_back(std::make_unique<Entity>());
+	Entity* spawnedEntity = entities.back().get();
+
+	spawnedEntity->DeserialiseComponentTable(entityData); //this section fixed the physics not being created 0 0
+
+	InjectPhysicsWorld(spawnedEntity);
+
+	spawnedEntity->Start();
+
+	return spawnedEntity;
 }
 
 //----------------------------------------------
@@ -299,8 +331,11 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 
 	graphics->ClearLights();
 
-	for (auto& entity : entities)
+	int size = entities.size();
+
+	for (int i = 0; i < size; i++)
 	{
+		auto& entity = entities[i];
 		if (auto* cam = entity->GetComponent<CameraComponent>())
 			m_camera = cam;
 
