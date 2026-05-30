@@ -15,7 +15,6 @@ local lastKnownPlayerPosition = nil
 
 local fsm = nil
 
-local deltaTime = 0.2
 local atkCooldown = 0.8
 local damage = 1
 
@@ -161,7 +160,7 @@ function attackUpdate()
 				-- deal damage to the player
 				-- which means i need an attack cooldown ~u~
 				local atkElapsedTime = tonumber(pokeyVariables:getGlobal("playerAttackCooldown").value)
-				atkElapsedTime = atkElapsedTime + deltaTime
+				atkElapsedTime = atkElapsedTime + getDeltaTime()
 				pokeyVariables:setGlobal("playerAttackCooldown", tostring(atkElapsedTime))
 
 				--print("in attack range :) you're fucked")
@@ -383,15 +382,7 @@ end
 --Helper functions------------------------------------------------------------------
 
 function findPlayer()
-    for id = 0, maxEntitySearchID do
-        local entity = GetEntity(id)
-
-        if entity ~= nil and entity:getName() == "Player" then
-            return entity
-        end
-    end
-
-    return nil
+    return GetEntityFromName("Player")
 end
 
 function getEntityPosition(entity)

@@ -208,6 +208,17 @@ namespace ECS
 		**/
 		Entity* GetEntity(int ID);
 
+		/** Get Entity From Name (since lua doesn't allow overloads)
+		* @author - Kay Bradsell
+		* @brief - Returns entity pointer from the entity name - note it returns the first match
+		* @param - std::string name
+		* @return - Entity*
+		*
+		* @pre - Scene has been constructed and entity with that name exists
+		* @post - Returns the entity, or nullptr
+		**/
+		Entity* GetEntityFromName(const std::string& name);
+
 	private:
 		std::vector<std::unique_ptr<Entity>> entities;
 

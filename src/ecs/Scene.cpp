@@ -317,6 +317,18 @@ ECS::Entity* ECS::Scene::GetEntity(int ID)
 
 //----------------------------------------------
 
+ECS::Entity* ECS::Scene::GetEntityFromName(const std::string& name)
+{
+	for (auto& entity : entities)
+	{
+		if (entity->GetName() == name)
+			return entity.get();
+	}
+	return nullptr;
+}
+
+//----------------------------------------------
+
 void ECS::Scene::Render(Graphics::Graphics* graphics)
 {
 	if (!m_running)

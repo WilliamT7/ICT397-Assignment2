@@ -468,6 +468,7 @@ void exposeSceneFunctionality(sol::state_view& solView)
 		solView.set_function("SaveScene", &ECS::Scene::SaveScene, luaEngineLink->getScenePointer());
 		solView.set_function("LoadScene", &ECS::Scene::LoadScene, luaEngineLink->getScenePointer());
 		solView.set_function("GetEntity", &ECS::Scene::GetEntity, luaEngineLink->getScenePointer());
+		solView.set_function("GetEntityFromName", &ECS::Scene::GetEntityFromName, luaEngineLink->getScenePointer());
 	}
 }
 
