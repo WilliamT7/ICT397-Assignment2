@@ -7,6 +7,7 @@ local deathAlertRadius = 1000
 local pokeyFollowRadius = 250
 local playerCheckInterval = 0.5
 local playerAlertCooldown = 2.0
+local pokeyFacingYawOffset = 90.0
 
 local hasSeenPlayer = false
 
@@ -59,6 +60,8 @@ function update()
 	
 	pokeyVariables:setGlobal("playerCheckTimer", tostring(curPlayerCheck))
 	pokeyVariables:setGlobal("playerAlertTimer", tostring(curPlayerAlertCheck))
+
+	facePlayer()
 
 end
 
@@ -409,6 +412,33 @@ function getEntityPosition(entity)
     end
 
     return nil
+end
+
+function facePlayer()
+    local player = findPlayer()
+
+    if player == nil then
+        return
+    end
+
+    local pokeyPosition = getEntityPosition(obj)
+    local playerPosition = getEntityPosition(player)
+    local transform = getTransform(obj)
+
+    if pokeyPosition == nil or playerPosition == nil or transform == nil then
+        return
+    end
+
+    local directionX = playerPosition.x - pokeyPosition.x
+    local directionZ = playerPosition.z - pokeyPosition.z
+
+    if directionX == 0 and directionZ == 0 then
+        return
+    end
+
+    local yaw = math.deg(math.atan(directionZ, directionX))
+
+    transform:setRotation(0.0, -yaw + pokeyFacingYawOffset, 0.0)
 end
 
 function isWithinRadius(posA, posB, radius)
