@@ -1,5 +1,6 @@
 //Built-in files---------------
 #include <iostream>
+#include <memory>
 
 //Project files--------------------
 #include "FSM/scriptState.h"
@@ -13,13 +14,13 @@ using std::cout;
 void ScriptState::update() {
 
 	if (updateScript != nullptr) {
-		SolScripting scripting;
-		scripting.runLoaded(*updateScript, updateFunctionName, entityAssociated);
+		scripting->runLoaded(*updateScript, updateFunctionName, entityAssociated);
 	}
 }
 
 //---------------------------------
-ScriptState::ScriptState(string nStateName, ECS::Entity* entity) {
+ScriptState::ScriptState(string nStateName, ECS::Entity* entity): scripting(std::make_unique<SolScripting>())
+{
 
 	stateName = nStateName;
 	entityAssociated = entity;
@@ -27,12 +28,46 @@ ScriptState::ScriptState(string nStateName, ECS::Entity* entity) {
 }
 
 //---------------------------------
+ScriptState::ScriptState(const ScriptState& other): scripting(std::make_unique<SolScripting>()) 
+{
+
+	stateName = other.stateName;
+	entityAssociated = other.entityAssociated;
+	updateScript = other.updateScript;
+	exitScript = other.exitScript;
+	enterScript = other.enterScript;
+	updateFunctionName = other.updateFunctionName;
+	exitFunctionName = other.exitFunctionName;
+	enterFunctionName = other.enterFunctionName;
+
+}
+
+//---------------------------------
+ScriptState& ScriptState::operator=(const ScriptState& other) {
+
+	if (this == &other) {
+		return *this;
+	}
+
+	stateName = other.stateName;
+	entityAssociated = other.entityAssociated;
+	updateScript = other.updateScript;
+	exitScript = other.exitScript;
+	enterScript = other.enterScript;
+	updateFunctionName = other.updateFunctionName;
+	exitFunctionName = other.exitFunctionName;
+	enterFunctionName = other.enterFunctionName;
+	scripting = std::make_unique<SolScripting>();
+
+	return *this;
+}
+
+//---------------------------------
 
 void ScriptState::enter() {
 
 	if (enterScript != nullptr) {
-		SolScripting scripting;
-		scripting.runLoaded(*enterScript, enterFunctionName, entityAssociated);
+		scripting->runLoaded(*enterScript, enterFunctionName, entityAssociated);
 	}
 }
 
@@ -41,8 +76,7 @@ void ScriptState::enter() {
 void ScriptState::exit() {
 
 	if (exitScript != nullptr) {
-		SolScripting scripting;
-		scripting.runLoaded(*exitScript, exitFunctionName, entityAssociated);
+		scripting->runLoaded(*exitScript, exitFunctionName, entityAssociated);
 	}
 
 }

@@ -10,11 +10,13 @@
 //Built-in files----------------------------
 #include <vector>
 #include <string>
+#include <memory>
 
 
 //Project files-----------------------------
 #include "FSM\State.h"
 #include "LuaReader\ScriptFile.h"
+#include "LuaReader\SolScripting.h"
 
 //Namespaces-------------------------------
 using std::vector;
@@ -39,6 +41,12 @@ public:
 	* @return - void
 	**/
 	ScriptState(string nStateName, ECS::Entity* entity);
+
+	ScriptState(const ScriptState& other);
+	ScriptState& operator=(const ScriptState& other);
+	ScriptState(ScriptState&& other) noexcept = default;
+	ScriptState& operator=(ScriptState&& other) noexcept = default;
+	~ScriptState() = default;
 
 	//Getters--------------------------------
 
@@ -148,6 +156,7 @@ private:
 	///Name of the function to run when calling enter()
 	string enterFunctionName = "";
 
+	std::unique_ptr<SolScripting> scripting = nullptr;
 };
 
 
