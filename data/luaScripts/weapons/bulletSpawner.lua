@@ -51,7 +51,7 @@ function launchNewestBullet()
     if bulletTransform ~= nil then
         bulletTransform:setPosition(spawnPosition.x, spawnPosition.y, spawnPosition.z)
 
-        bulletTransform:setRotation(0.0, -camera.yaw, camera.pitch)
+        bulletTransform:setRotation(0.0, -camera.yaw + 180.0, camera.pitch)
     end
 
     bulletPhysics:setPosition(spawnPosition)
