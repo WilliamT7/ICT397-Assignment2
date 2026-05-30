@@ -26,7 +26,11 @@ class ScriptState : public State {
 
 public:
 
-	ScriptState() = delete;
+	ScriptState() = default;
+
+	~ScriptState();
+
+	ScriptState(const ScriptState& other);
 
 
 	/** ScriptState
@@ -147,6 +151,8 @@ private:
 
 	///Name of the function to run when calling enter()
 	string enterFunctionName = "";
+
+	std::unique_ptr<SolScripting> scripting;
 
 };
 

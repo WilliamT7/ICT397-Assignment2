@@ -13,8 +13,7 @@ using std::cout;
 void ScriptState::update() {
 
 	if (updateScript != nullptr) {
-		SolScripting scripting;
-		scripting.runLoaded(*updateScript, updateFunctionName, entityAssociated);
+		scripting->runLoaded(*updateScript, updateFunctionName, entityAssociated);
 	}
 }
 
@@ -23,7 +22,30 @@ ScriptState::ScriptState(string nStateName, ECS::Entity* entity) {
 
 	stateName = nStateName;
 	entityAssociated = entity;
+	scripting = std::make_unique<SolScripting>();
+}
 
+//---------------------------------
+
+ScriptState::ScriptState(const ScriptState& other)
+{
+	stateName = other.stateName;
+	entityAssociated = other.entityAssociated;
+	scripting = std::make_unique<SolScripting>(*other.scripting); // don't copy, make new inst
+
+	updateScript = other.updateScript;
+	exitScript = other.exitScript;
+	enterScript = other.enterScript;
+	updateFunctionName = other.updateFunctionName;
+	exitFunctionName = other.exitFunctionName;
+	enterFunctionName = other.enterFunctionName;
+}
+
+//---------------------------------
+
+ScriptState::~ScriptState()
+{
+	scripting.reset();
 }
 
 //---------------------------------
@@ -31,8 +53,7 @@ ScriptState::ScriptState(string nStateName, ECS::Entity* entity) {
 void ScriptState::enter() {
 
 	if (enterScript != nullptr) {
-		SolScripting scripting;
-		scripting.runLoaded(*enterScript, enterFunctionName, entityAssociated);
+		scripting->runLoaded(*enterScript, enterFunctionName, entityAssociated);
 	}
 }
 
@@ -41,8 +62,7 @@ void ScriptState::enter() {
 void ScriptState::exit() {
 
 	if (exitScript != nullptr) {
-		SolScripting scripting;
-		scripting.runLoaded(*exitScript, exitFunctionName, entityAssociated);
+		scripting->runLoaded(*exitScript, exitFunctionName, entityAssociated);
 	}
 
 }
