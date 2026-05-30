@@ -1,5 +1,5 @@
 local minEntitySearchID = 5
-local maxEntitySearchID = 200
+local maxEntitySearchID = 10
 
 local playerAttackRadius = 20
 local playerViewRadius = 500
@@ -88,7 +88,7 @@ function scanEnvironment(pokeyVars)
             fsm = getFSM(obj)
 			hasSeenPlayer = true
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
-            print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
+            --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
             alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
 			fsm:setState("Attack")
         end
@@ -164,10 +164,10 @@ function attackUpdate()
 				atkElapsedTime = atkElapsedTime + deltaTime
 				pokeyVariables:setGlobal("playerAttackCooldown", tostring(atkElapsedTime))
 
-				print("in attack range :) you're fucked")
+				--print("in attack range :) you're fucked")
 
 				if atkElapsedTime > atkCooldown then
-					print("DID ATTACK MWAHAHAHHAHAHA!")
+					--print("DID ATTACK MWAHAHAHHAHAHA!")
 					pokeyVariables:setGlobal("playerAttackCooldown", tostring(0))
 
 					local ID = obj:getID()

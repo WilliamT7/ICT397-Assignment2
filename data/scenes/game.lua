@@ -15430,6 +15430,19 @@ scene = {
         ModelID = "WELL",
         Name = "MeshRenderer",
         ShaderID = 2
+      } --[[table: 000001BC6BE39A10]],
+      {
+        Name = "Physics",
+        centerOffset_x = 0,
+        centerOffset_y = 5,
+        centerOffset_z = 0,
+        halfExtents_x = 4,
+        halfExtents_y = 5,
+        halfExtents_z = 4,
+        isStatic = true,
+        mass = 1,
+        shape = "box",
+        useGravity = true
       } --[[table: 000001BC6BE39A10]]
     } --[[table: 000001BC6BE3B110]],
     EntityName = "Well"
