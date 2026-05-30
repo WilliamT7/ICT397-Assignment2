@@ -26,6 +26,10 @@ void ECS::PhysicsComponent::Update(float deltaTime)
 		return;
 	}
 
+    if(m_isStatic == true) {
+        return;
+	}
+
 	// Sync transform position with physics body position
 	Vector3 physicsPos = physicsBody->GetPosition();
 	transform->position = GetTransformPositionFromBody(physicsPos);

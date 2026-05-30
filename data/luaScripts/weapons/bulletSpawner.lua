@@ -2,7 +2,8 @@ local bulletSpeed = 120.0
 local bulletSpawnDistance = 2.0
 local bulletCooldown = 1.0
 local bulletCooldownTimer = bulletCooldown
-local maxEntitySearchID = 1000
+local minBulletSearchID = 430
+local maxEntitySearchID = 600
 
 function update()
     bulletCooldownTimer = bulletCooldownTimer + getDeltaTime()
@@ -83,7 +84,7 @@ function findNewestBullet()
     local newestBullet = nil
     local newestID = -1
 
-    for id = 0, maxEntitySearchID do
+    for id = minBulletSearchID, maxEntitySearchID do
         local entity = GetEntity(id)
 
         if entity ~= nil and entity:getName() == "Bullet" then
