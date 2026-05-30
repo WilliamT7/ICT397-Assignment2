@@ -1,9 +1,16 @@
 local maxSpeed = 90.0
-local camSensitivity = 0.1
+local camSensitivity = 0.05
 local playerHeight = 5
 local playerLinearDamping = 0.6
 local maxUpwardVelocity = 4.0
 local prefab = "prefabtree.lua"
+
+function render()
+	local fps = 1.0 / getDeltaTime()
+	GUIBegin("FPS Count")
+	GUIWriteText("FPS: "..fps)
+	GUIEnd()
+end
 
 function update()	
 	--toggle mouse

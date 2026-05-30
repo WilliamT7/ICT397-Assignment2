@@ -15,7 +15,7 @@ local lastKnownPlayerPosition = nil
 
 local fsm = nil
 
-local atkCooldown = 0.8
+local atkCooldown = 0.5
 local damage = 1
 
 --FSM setup
@@ -63,7 +63,6 @@ function update()
 	facePlayer()
 
 end
-
 
 function scanEnvironment(pokeyVars)
 	playerAlertTimer = tonumber(pokeyVars:getGlobal("playerAlertTimer").value)
