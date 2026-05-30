@@ -157,6 +157,14 @@ void exposeScriptGlobal(sol::state_view& solView);
 */
 void exposeFSM(sol::state_view& solView);
 
+/** Expose Scene Functionality
+* @author - Kay Bradsell
+* @brief - Exposes certain scene functions to lua
+* @param - sol::state_view&
+*
+* @pre - solView is constructed and ready, and Scene pointer has been given to LuaEngineFunctionality
+* @post - Scene functions are added to lua
+**/
 void exposeSceneFunctionality(sol::state_view& solView);
 
 
