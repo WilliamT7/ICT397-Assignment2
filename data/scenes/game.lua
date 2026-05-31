@@ -15901,5 +15901,27 @@ scene = {
       } --[[table: 00000241BC695E90]]
     } --[[table: 00000241BC694C90]],
     EntityName = "Blahaj"
+  } --[[table: 00000241BC695310]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 2758,
+        position_y = -139,
+        position_z = 1555,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 100,
+        scale_y = 100,
+        scale_z = 100
+      } --[[table: 00000241BC696090]],
+      {
+        ModelID = "WATER",
+        Name = "MeshRenderer",
+        ShaderID = 1
+      } --[[table: 00000241BC695E90]]
+    } --[[table: 00000241BC694C90]],
+    EntityName = "Water Feature"
   } --[[table: 00000241BC695310]]
 } --[[table: 000001BC6BE31010]]

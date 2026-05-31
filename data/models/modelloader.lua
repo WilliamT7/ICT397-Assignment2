@@ -54,5 +54,9 @@ models = {
     {
         Name = "WELL",
         File = "well\\well.gltf"
+    },
+    {
+        Name = "WATER",
+        File = "water\\water.obj"
     }
 }
