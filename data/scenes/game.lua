@@ -222,7 +222,7 @@ scene = {
         enabled = false,
         position_x = 0.73000001907348633,
         position_y = 0.21999979019165039,
-        size_x = 0.5,
+        size_x = 0.27,
         size_y = 0.5
       } --[[table: 000001BC6BE32590]],
       {

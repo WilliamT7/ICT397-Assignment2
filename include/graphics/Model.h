@@ -104,9 +104,44 @@ namespace Graphics
 		**/
 		Model(const std::vector<Mesh>& meshes);
 
+		/** Get Name
+		* @author - Kay Bradsell
+		* @brief - returns name for this model object
+		* @return - std::string
+		*
+		* @pre - model has been constructed
+		* @post - returns the name for this model
+		**/
 		const std::string& GetName() const;
+
+		/** Set Name
+		* @author - Kay Bradsell
+		* @brief - Changes the name of the model to a new string name
+		* @param - std::string name
+		*
+		* @pre - Model has been constructed
+		* @post - modifies the name to a new name
+		**/
 		void SetName(const std::string& name);
+
+		/** Get Bone Info Map
+		* @author - Kay Bradsell
+		* @brief - Returns the map of string name to bone info
+		* @return - std::map<std::string, BoneInfo>&
+		*
+		* @pre - Model has been constructed and has loaded in valid animation and bone weight data
+		* @post - returns the map of the name to bone info
+		**/
 		std::map<std::string, BoneInfo>& GetBoneInfoMap();
+
+		/** Get Bone Count
+		* @author - Kay Bradsell
+		* @brief - returns the amount of bones stored in this model
+		* @return - int
+		*
+		* @pre - Model has been constructed and has loaded in valid animation and bone data
+		* @post - returns the int count of bones in this model
+		**/
 		int GetBoneCount() const;
 
 	private:
@@ -158,11 +193,50 @@ namespace Graphics
 		* @post - Loads in all information from .mtl file into vector of Textures
 		**/
 		std::vector<Texture*> LoadMaterialTextures(aiMaterial* mat, aiTextureType type, const std::string& typeName);
-
+		
+		/** Set Vertex Bone Data to Default
+		* @author - Kay Bradsell
+		* @brief - resets all bone related data inside of a vertex
+		* @param - Vertex&
+		*
+		* @pre - vertex has been constructed
+		* @post - resets all bone data in that vertex
+		**/
 		void SetVertexBoneDataToDefault(Vertex& vertex);
+
+		/** Set Vertex Bone Data
+		* @author - Kay Bradsell
+		* @brief - changes the vertex bone data to new data
+		* @param - Vertex& vertex
+		* @param - int boneID
+		* @param - float weight
+		*
+		* @pre - vertex has been constructed, and boneID and weight are valid
+		* @post - sets the boneID and weight for the vertex
+		**/
 		void SetVertexBoneData(Vertex& vertex, int boneID, float weight);
+
+		/** Extract Bone Weight For Vertices
+		* @author - Kay Bradsell
+		* @brief - Extracts data from aiMesh and aiScene to read in bone data per vertex
+		* @param - std::vector<Vertex>&
+		* @param - aiMesh*
+		* @param - aiScene*
+		*
+		* @pre - all parameters have valid data
+		* @post - sets all the vertices to have the bone weight data from the mesh and scene
+		**/
 		void ExtractBoneWeightForVertices(std::vector<Vertex>& vertices, aiMesh* mesh, const aiScene* scene);
 
+		/** Convert Assimp Matrix to GLM
+		* @author - Kay Bradsell
+		* @brief - converts an aiMatrix4x4 to a glm::mat4
+		* @param - aiMatrix4x4
+		* @return - glm::mat4
+		*
+		* @pre - aiMatrix4x4 is a valid matrix
+		* @post - returns a glm::mat4 version of it.
+		**/
 		static glm::mat4 ConvertAssimpMatrixToGLM(const aiMatrix4x4& m);
 	};
 }
