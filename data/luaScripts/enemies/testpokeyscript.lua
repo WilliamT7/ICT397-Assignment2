@@ -1,4 +1,3 @@
-local speed = 5
 local lifeTime = 5.00
 local deltaTime = 0.01
 local spawnMin = -1500
@@ -83,11 +82,18 @@ function OnBulletHit()
 
     isDead = true
 
-    local transform = getTransform(obj)
     local deathPosition = nil
+    local physics = getPhysics(obj)
 
-    if transform ~= nil then
-        deathPosition = transform.position
+    if physics ~= nil then
+        deathPosition = physics:getPosition()
+    end
+
+    if deathPosition == nil then
+        local transform = getTransform(obj)
+        if transform ~= nil then
+            deathPosition = transform.position
+        end
     end
 
     if deathPosition ~= nil then

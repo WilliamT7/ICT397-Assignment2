@@ -15,7 +15,7 @@ scene = {
       } --[[table: 000001BC6BE30C10]],
       {
         Name = "Script",
-        currentWave = "4",
+        currentWave = "0",
         elapsedTime = "0.0",
         fileName = "gamemanagervars.lua",
         filePath = "..\\data\\luaScripts\\managers\\",

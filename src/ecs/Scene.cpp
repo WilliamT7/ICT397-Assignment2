@@ -569,8 +569,7 @@ void ECS::Scene::ProcessTriggers()
 
 	for (Entity* triggerEntity : m_triggerEntities)
 	{
-		PhysicsTriggerComponent* trigger =
-			triggerEntity->GetComponent<PhysicsTriggerComponent>();
+		PhysicsTriggerComponent* trigger = triggerEntity->GetComponent<PhysicsTriggerComponent>();
 
 		trigger->BeginTriggerCheck();
 

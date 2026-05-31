@@ -1,5 +1,5 @@
 local minEntitySearchID = 5
-local maxEntitySearchID = 10
+local maxEntitySearchID = 1000
 
 local playerAttackRadius = 20
 local playerViewRadius = 500
@@ -234,7 +234,8 @@ function investigateUpdate()
 		currentState = fsm:getCurrentState()
 
 		if (currentState ~= "Attack") then
-			moveEntityTo(obj, alertPosition, getDeltaTime(), 2, 50)
+			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
+			moveEntityTo(obj, alertPosition, getDeltaTime(), 2, movementSpeed)
 	
 		end 
 	end
@@ -273,8 +274,8 @@ function followPokeyUpdate()
 		else
 		
 			pokeyVariables = getScriptComponent(obj, "testpokeyvars")
-			--movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
-			moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, 100)
+			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
+			moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, movementSpeed)
 		end
 	end
 	--askForPokeyLocation(message.sender) maaybe i dont need this?
@@ -336,7 +337,7 @@ function OnPokeyAlert()
 	fsm = getFSM(obj)
 	currentState = fsm:getCurrentState()
 		
-	if (currentState == "Wander") then
+	if (currentState ~= "Attack" and currentState ~= "Die") then
 		
 		fsm:setState("Investigate")
 
@@ -346,6 +347,10 @@ end
 
 
 function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, functionName)
+	if searchOrigin == nil or alertPosition == nil then
+		return
+	end
+
     for id = minEntitySearchID, maxEntitySearchID do
         local entity = GetEntity(id)
 
