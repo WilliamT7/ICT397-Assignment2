@@ -1,4 +1,4 @@
-local enemiesPerWave = 10
+local enemiesPerWave = 15
 local totalWaves = 6
 
 function update()

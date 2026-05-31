@@ -28,3 +28,6 @@
 * @return bool - true if its arrived at the destination, false if not
 */
 bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int moveSpeed);
+
+bool moveEntityToWithVariation(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int moveSpeed);
+

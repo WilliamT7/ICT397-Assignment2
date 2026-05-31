@@ -64,6 +64,7 @@ function update()
 
 end
 
+
 function scanEnvironment(pokeyVars)
 	playerAlertTimer = tonumber(pokeyVars:getGlobal("playerAlertTimer").value)
     local player = findPlayer()
@@ -87,8 +88,8 @@ function scanEnvironment(pokeyVars)
 			hasSeenPlayer = true
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
             --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
-            alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
-			fsm:setState("Attack")
+            --alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
+			--fsm:setState("Attack")
         end
     else
         hasSeenPlayer = false
@@ -262,20 +263,19 @@ function followPokeyUpdate()
 		local pokeyExists = GetEntity(message.sender) ~= nil
 	
 		fsm = getFSM(obj)
-		currentState = fsm:getCurrentState()
 	
 		--If entity doesnt exist, go back to wander lmao
 		local entity = GetEntity(message.sender)
 		if entity == nil or FollowPosition == nil then
 		
-			print("Cant find my buddy :(, back to wanderin i go")
+			--print("Cant find my buddy :(, back to wanderin i go")
 			fsm:setState("Wander")
 	
 		else
 		
 			pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
-			moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, movementSpeed)
+			moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, 5)
 		end
 	end
 	--askForPokeyLocation(message.sender) maaybe i dont need this?
@@ -301,6 +301,8 @@ function onFollowRequest()
 end
 
 
+
+--UNUSED
 function onFollowUpdate()
 		
 	myPosition = getEntityPosition(obj)
@@ -353,21 +355,26 @@ function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, funct
 
     for id = minEntitySearchID, maxEntitySearchID do
         local entity = GetEntity(id)
-
+		
         if isValidPokeyReceiver(entity) then
+			local otherEntity = entity:getID()
             local entityPosition = getEntityPosition(entity)
+			pokeyRandomPos = randomisePosition(alertPosition, 15, otherEntity)
+			
 
             if entityPosition ~= nil and isWithinRadius(searchOrigin, entityPosition, radius) then
                 --print("[PokeyComm]: talking to pokey id " .. entity:getID())
+				local otherEntity = entity:getID()
+				pokeyRandomPos = randomisePosition(alertPosition, 25, otherEntity)
 
                 local alertMessage = telegram.new()
                 alertMessage.sender = obj:getID()
-                alertMessage.receiver = entity:getID()
+                alertMessage.receiver = otherEntity
                 alertMessage.dispatchTime = 0.0
                 alertMessage.messageID = messageID
                 alertMessage.scriptName = "pokeycomm"
                 alertMessage.functionName = functionName
-                alertMessage.data = alertPosition
+                alertMessage.data = pokeyRandomPos
 
                 sendMessage(alertMessage)
             end
@@ -445,4 +452,27 @@ end
 
 function positionToString(position)
     return tostring(position.x) .. "," .. tostring(position.y) .. "," .. tostring(position.z)
+end
+
+
+function randomisePosition(transformPosition, maxPosVaration, otherEntityID)
+
+	seed = math.randomseed(os.time()) + otherEntityID
+	RNGvariation = (seed % maxPosVaration) + 25
+
+	
+	randomX = transformPosition.x + RNGvariation
+	randomZ = transformPosition.z + RNGvariation
+
+	
+	randomisedVector = Vector3.new()
+	randomisedVector.x = randomX
+	randomisedVector.y = transformPosition.y
+	randomisedVector.z = randomZ
+	
+	
+	return randomisedVector
+	
+
+
 end
