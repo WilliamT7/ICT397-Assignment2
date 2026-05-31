@@ -29,5 +29,5 @@
 */
 bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int moveSpeed);
 
-bool moveEntityToWithVariation(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int moveSpeed);
+
 
