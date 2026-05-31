@@ -25,9 +25,6 @@ function update()
 
 	for i = 0, trigger:getStayCount() - 1 do
 		local otherName = trigger:getStayName(i)
-
-		-- Stay happens every frame, so keep this commented unless debugging.
-		-- print("[Lua Trigger Stay]: Player touching " .. otherName)
 	end
 
 	for i = 0, trigger:getExitCount() - 1 do
