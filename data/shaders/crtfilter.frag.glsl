@@ -9,7 +9,7 @@ const float scanLineDensity = 800.0;
 const float scanLineStrength = 0.07;
 
 // dithering taken from https://github.com/hughsk/glsl-dither/blob/master/4x4.glsl
-const float colourLevels = 4.0;
+const float colourLevels = 16.0;
 
 float dither4x4(vec2 position)
 {
