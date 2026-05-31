@@ -1,5 +1,5 @@
-local enemiesPerWave = 20
-local totalWaves = 5
+local enemiesPerWave = 10
+local totalWaves = 6
 
 function update()
 	vars = getScriptComponent(obj, "gamemanagervars")
