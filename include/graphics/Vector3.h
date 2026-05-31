@@ -111,6 +111,8 @@ struct Vector3
 	*/
 	Vector3 operator-(const Vector3& const otherVector) const;
 
+	Vector3 operator+(const Vector3& const otherVector) const;
+
 
 	/* *operator overload
 	* @author - Seb D'Alessandro
@@ -178,6 +180,8 @@ struct Vector3
 */
 ostream& operator <<(ostream& os, Vector3& const vector);
 
+
+float dotProduct(Vector3& const v1, Vector3& const v2);
 
 
 //------------------------------------------------

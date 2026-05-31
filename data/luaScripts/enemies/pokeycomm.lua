@@ -34,6 +34,7 @@ function start()
 	
 	attackState = fsm:createState("Attack")
 	attackState:setUpdateCode("pokeycomm", "attackUpdate")
+	attackState:setEnterCode("pokeycomm", "attackEnter")
 	fsm:saveState()
 	
 	dieState = fsm:createState("Die")
@@ -90,7 +91,7 @@ function scanEnvironment(pokeyVars)
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
             --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
             --alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
-			--fsm:setState("Attack")
+			fsm:setState("Attack")
         end
     else
         hasSeenPlayer = false
@@ -126,6 +127,31 @@ end
 
 
 --Attack-----------------------
+function attackEnter()
+
+	attackBehaviourChoice = (math.randomseed(os.time()) + otherEntityID) % 2
+	
+	
+	if (attackBehaviourChoice == 0) then
+		print("I am chasing")
+		
+		
+	elseif (attackBehaviourChoice == 1) then
+		print("I am pursueing")
+	
+	else
+	
+		print("fuck idk----------")
+		
+		
+	end
+	
+
+
+end
+
+
+
 function attackUpdate()
 
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
@@ -154,7 +180,8 @@ function attackUpdate()
 			end
 
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
-			moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
+			--moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
+			pursueEntity(player, obj, getDeltaTime(), 2, movementSpeed)
 
 			if isWithinRadius(pokeyPosition, playerPosition, playerAttackRadius) then
 			
@@ -284,9 +311,6 @@ function followPokeyUpdate()
 			
 		end
 	end
-	--askForPokeyLocation(message.sender) maaybe i dont need this?
-	
-
 
 end
 

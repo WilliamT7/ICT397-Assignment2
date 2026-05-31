@@ -30,4 +30,6 @@
 bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int moveSpeed);
 
 
+void pursueEntity(ECS::Entity& const entity, ECS::Entity& const pursuer, double timeElapsed, double offset, int moveSpeed);
+
 
