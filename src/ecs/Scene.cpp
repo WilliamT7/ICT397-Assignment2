@@ -562,7 +562,7 @@ void ECS::Scene::ProcessTriggers()
 		{
 			PhysicsComponent* physics = e->GetComponent<PhysicsComponent>();
 
-			if (physics != nullptr && !physics->IsStatic())
+			if (physics != nullptr && (!physics->IsStatic() || e->GetName() == "KiddyPool"))
 				m_physicsEntities.push_back(e);
 		}
 	}
