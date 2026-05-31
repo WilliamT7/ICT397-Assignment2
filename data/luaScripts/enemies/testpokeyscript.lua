@@ -6,7 +6,7 @@ local spawnHeightOffset = 5
 local terrainSearchMaxID = 100
 local isDead = false
 
-function start() 
+function randomisePosition()
     local transform = getTransform(obj)
 
     if transform ~= nil then
@@ -25,19 +25,6 @@ function start()
             physics:setAngularVelocity(Vector3.new(0, 0, 0))
         end
     end
-
-    vars = getScriptComponent(obj, "testpokeyvars")
-
-    if vars ~= nil then
-        --vars:setGlobal("moveX", tostring(randomDir.x))
-        --vars:setGlobal("moveY", tostring(randomDir.y))
-        --vars:setGlobal("moveZ", tostring(randomDir.z))
-        vars:setGlobal("moveX", tostring(0))
-        vars:setGlobal("moveY", tostring(0))
-        vars:setGlobal("moveZ", tostring(0))
-        vars:setGlobal("liveTime", tostring(0))
-    end
-
 end
 
 function getSpawnHeight(worldX, worldZ)

@@ -48,8 +48,17 @@ end
 function SpawnEnemy(vars)
 	local numSpawned = tonumber(vars:getGlobal("numEnemiesSpawned").value)
 	vars:setGlobal("numEnemiesSpawned", tostring(numSpawned + 1))
-	Spawn("prefabpokey.lua")
+	local entity = GetSpawn("prefabpokey.lua")
 	
+	local rmsg = telegram.new()
+	rmsg.sender = obj:getID()
+	rmsg.receiver = entity:getID()
+	rmsg.dispatchTime = 0.0
+	rmsg.messageID = 12
+	rmsg.scriptName = "testpokeyscript"
+	rmsg.functionName = "randomisePosition"
+	sendMessage(rmsg)
+
 	local numLeft = tonumber(vars:getGlobal("numEnemiesLeft").value)
 	vars:setGlobal("numEnemiesLeft", tostring(numLeft + 1))
 end
