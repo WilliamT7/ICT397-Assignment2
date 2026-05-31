@@ -89,8 +89,8 @@ function scanEnvironment(pokeyVars)
 			hasSeenPlayer = true
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
             --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
-            alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
-			fsm:setState("Attack")
+            --alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
+			--fsm:setState("Attack")
         end
     else
         hasSeenPlayer = false
@@ -236,12 +236,11 @@ function investigateUpdate()
 		currentState = fsm:getCurrentState()
 
 		if (currentState ~= "Attack") then
-			physics = getPhysics(obj)
-			physicsPos = physics:getPosition()
-			oldYPos = physicsPos.y
+
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 			moveEntityTo(obj, alertPosition, getDeltaTime(), 2, movementSpeed)
-			physicsPos.y = oldYPos
+			
+	
 	
 		end 
 	end
@@ -277,16 +276,10 @@ function followPokeyUpdate()
 			fsm:setState("Wander")
 	
 		else
-			physics = getPhysics(obj)
-			physicsPos = physics:getPosition()
-			oldYPos = physicsPos.y
-			
+
 			pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 			moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, 5)
-
-	
-			physicsPos.y = oldYPos
 
 			
 		end
@@ -481,7 +474,7 @@ function randomisePosition(transformPosition, maxPosVaration, otherEntityID)
 	
 	randomisedVector = Vector3.new()
 	randomisedVector.x = randomX
-	randomisedVector.y = transformPosition.y
+	randomisedVector.y = 0
 	randomisedVector.z = randomZ
 	
 	
