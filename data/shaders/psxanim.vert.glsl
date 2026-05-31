@@ -14,7 +14,7 @@ uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
 
-uniform float jitter = 0.5;
+uniform float jitter = 0.4;
 uniform vec2 resolution = vec2(320, 240);
 
 const int MAX_BONES = 100;
