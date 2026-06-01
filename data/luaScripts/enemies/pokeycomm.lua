@@ -23,11 +23,13 @@ local cachedPokeyIDs = nil
 local cachedPokeyWave = -1
 local cachedPlayerID = nil
 local facePlayerTimer = 0.0
+local pokeyVariables = nil
 
 --FSM setup
 function start()
 
 	fsm = getFSM(obj)
+	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 	
 	wanderState = fsm:createState("Wander")
 	wanderState:setUpdateCode("pokeycomm", "wanderUpdate")
@@ -54,10 +56,17 @@ function start()
 
 end
 
+function getPokeyVariables()
+	if pokeyVariables == nil then
+		pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	end
+
+	return pokeyVariables
+end
 
 function update()
 
-	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	pokeyVariables = getPokeyVariables()
 	curPlayerCheck = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 	curPlayerAlertCheck = tonumber(pokeyVariables:getGlobal("playerAlertTimer").value)
 
@@ -115,7 +124,7 @@ end
 --Wander---------
 function wanderUpdate()
 
-	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 
 	local anim = getAnimation(obj)
@@ -141,7 +150,7 @@ function attackEnter()
 
 	entityID = obj:getID()
 	attackBehaviourChoice = (math.randomseed(os.time()) + entityID) % 2
-	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	pokeyVariables = getPokeyVariables()
 
 	if (attackBehaviourChoice == 1) then
 		pokeyVariables:setGlobal("attackAI", "Chase")
@@ -157,7 +166,7 @@ end
 
 function attackUpdate()
 
-	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 	
 	local anim = getAnimation(obj)
@@ -245,7 +254,7 @@ end
 
 function investigateUpdate()
 	
-	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 
 	local anim = getAnimation(obj)
@@ -278,7 +287,7 @@ end
 --Follow pokey---------
 function followPokeyUpdate()
 
-	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 
 	local anim = getAnimation(obj)
@@ -303,7 +312,7 @@ function followPokeyUpdate()
 	
 		else
 
-			pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+			pokeyVariables = getPokeyVariables()
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 			moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, 5)
 
