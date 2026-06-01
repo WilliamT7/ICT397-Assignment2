@@ -1,5 +1,5 @@
 #include "../include/physics/BulletPhysicsBody.h"
-#include <btBulletDynamicsCommon.h>
+#include <../external/bullet3/src/btBulletDynamicsCommon.h>
 
 #include <iostream>
 

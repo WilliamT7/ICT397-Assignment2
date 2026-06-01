@@ -315,11 +315,13 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\external\Lua-Sol\Lua\include;$(ProjectDir)..\external\Lua-Sol\sol;$(ProjectDir)..\external\imgui-1.92.6;$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\assimp\include;$(ProjectDir)..\include\;$(ProjectDir)..\external\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;$(ProjectDir)..\external\glad\include;$(ProjectDir)..\external\stb_image;$(ProjectDir)..\external\glm-1.0.3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>lua54.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;assimp-vc143-mtd.lib;BulletDynamics.lib;BulletCollision.lib;LinearMath.lib;lua54.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\external\assimp;$(ProjectDir)..\external\bullet3\lib;$(ProjectDir)..\external\Lua-Sol\Lua\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

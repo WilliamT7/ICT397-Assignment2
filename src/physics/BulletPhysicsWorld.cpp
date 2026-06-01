@@ -1,8 +1,8 @@
 #include "../include/physics/BulletPhysicsWorld.h"
 #include "../include/physics/BulletPhysicsBody.h"
 
-#include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
-#include <btBulletDynamicsCommon.h>
+#include <../external/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
+#include <../external/bullet3/src/btBulletDynamicsCommon.h>
 #include <algorithm>
 
 namespace
