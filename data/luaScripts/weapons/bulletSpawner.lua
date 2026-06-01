@@ -2,28 +2,24 @@ local bulletSpeed = 120.0
 local bulletSpawnDistance = 2.0
 local bulletCooldown = 1.0
 local bulletCooldownTimer = bulletCooldown
-local minBulletSearchID = 430
-local maxEntitySearchID = 600
 
 function update()
     bulletCooldownTimer = bulletCooldownTimer + getDeltaTime()
 
     if GetMousePress(2) and bulletCooldownTimer >= bulletCooldown then
         bulletCooldownTimer = 0.0
-        Spawn("prefabbullet.lua")
-        launchNewestBullet()
+        local bullet = GetSpawn("prefabbullet.lua")
+        launchBullet(bullet)
     end
 end
 
-function launchNewestBullet()
+function launchBullet(bullet)
     local camera = getCamera(obj)
 
     if camera == nil then
         print("[BulletSpawner]: No CameraComponent found on this entity")
         return
     end
-
-    local bullet = findNewestBullet()
 
     if bullet == nil then
         print("[BulletSpawner]: Spawned bullet could not be found")
@@ -78,24 +74,4 @@ function getFacingDirection(camera)
     direction:normalize()
 
     return direction
-end
-
-function findNewestBullet()
-    local newestBullet = nil
-    local newestID = -1
-
-    for id = minBulletSearchID, maxEntitySearchID do
-        local entity = GetEntity(id)
-
-        if entity ~= nil and entity:getName() == "Bullet" then
-            local entityID = entity:getID()
-
-            if entityID > newestID then
-                newestBullet = entity
-                newestID = entityID
-            end
-        end
-    end
-
-    return newestBullet
 end
