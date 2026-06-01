@@ -1,5 +1,18 @@
 local lifeTime = 4.0
 local age = 0.0
+local trigger = nil
+
+function start()
+    trigger = getPhysicsTrigger(obj)
+end
+
+function getBulletTrigger()
+    if trigger == nil then
+        trigger = getPhysicsTrigger(obj)
+    end
+
+    return trigger
+end
 
 function update()
     age = age + getDeltaTime()
@@ -9,7 +22,7 @@ function update()
         return
     end
 
-    local trigger = getPhysicsTrigger(obj)
+    local trigger = getBulletTrigger()
 
     if trigger == nil then
         return
