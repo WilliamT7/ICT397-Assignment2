@@ -54,42 +54,6 @@ const SolScripting& SolScripting::operator=(const SolScripting& otherSolFacade) 
 	return *this;
 }
 
-
-//--------------------------------------------------
-
-void SolScripting::run(ScriptFile& const file, string functionName) {
-	
-	bool canRunFunction = file.isValid();
-	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
-	
-	if (canRunFunction && validFunctionParameters) {
-		
-		sol::state_view lua(LuaState);
-
-		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
-		lua_getglobal(LuaState, functionName.c_str());
-		updateGlobals(lua, file);
-		exposeEngineFunctions(lua);
-		lua_call(LuaState, 0, 0); //TODO CHANGE TO REFLECT PARAMETER PASSING/ RETURN VALUES
-
-		//Probaly do the lua stack instead later for parameter passing
-
-	}
-	else {
-		cout << "!!!SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
-		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
-	}
-
-	//Check parameters and see if we need to pass anything to Sol
-		//Parameter count = 0 we skip this
-		//If we do, and there isn't enough valid parameters that have been passed into solSciprint, throw a fit
-
-
-	//ONCE THE FUNCTION IS RUN, CLEAR THE PARAMETERS IN 
-
-
-}
-
 //----------------------------------------------
 bool SolScripting::load(ScriptFile& const file, ECS::Entity* entity) {
 
@@ -157,22 +121,6 @@ void SolScripting::runLoaded(ScriptFile& const file, string functionName, ECS::E
 	if (callResult != LUA_OK) {
 		cout << "[C++] SolScripting.cpp: Error running " << functionName << " in " << file.getFileName() << ": " << lua_tostring(LuaState, -1) << "\n";
 		lua_pop(LuaState, 1);
-	}
-}
-
-//----------------------------------------------
-
-void SolScripting::run(ScriptFile& const file) {
-
-	if (file.isValid()) {
-
-		sol::state_view lua(LuaState);
-
-		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
-		updateGlobals(lua, file);
-		exposeEngineFunctions(lua);
-		lua_call(LuaState, 0, 0);
-
 	}
 }
 
@@ -308,48 +256,5 @@ void SolScripting::exposeEntityComponents(sol::state_view& solView, ECS::Entity*
 }
 
 //-------------------------------------------------------------------
-
-string SolScripting::getString(int returnNo)  {
-
-	return returnValues.strings[returnNo];
-
-}
-//--------------------------------------------------------------------
-
-int SolScripting::getInteger(int returnNo)  {
-
-	return returnValues.integers[returnNo];
-}
-
-//--------------------------------------------------------------------
-
-float SolScripting::getFloat(int returnNo) {
-
-	return returnValues.floats[returnNo];
-
-}
-
-//--------------------------------------------------------------------
-
-void SolScripting::passString(string stringParameter) {
-
-	parameterValues.strings.push_back(stringParameter);
-
-}
-
-//--------------------------------------------------------------------
-
-void SolScripting::passInteger(int integerParameter) {
-
-	parameterValues.integers.push_back(integerParameter);
-}
-
-//--------------------------------------------------------------------
-
-void SolScripting::passFloat(float floatParameter) {
-
-	parameterValues.floats.push_back(floatParameter);
-}
-
 
 

@@ -143,9 +143,6 @@ void ECS::Scene::Update(float deltaTime)
 
 	ProcessTriggers();
 
-
-	updateMessageDispatcher(deltaTime);
-
 	int size = entities.size();
 	
 	// update was here

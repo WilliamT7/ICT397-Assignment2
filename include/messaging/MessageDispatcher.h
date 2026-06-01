@@ -40,29 +40,6 @@ public:
 	*/
 	void dispatchMessage(telegram& message);
 
-	/* updateTime
-	* @author - Seb D'Alessandro
-	* @brief - updates currentTime specifed by nTime
-	* @pre - N/A
-	* @post - currentTime ise set to nTime
-	* @param nTime - what to set currentTime to
-	* @return - void
-	*/
-	void updateTime(float nTime);
-
-
-	/* dispatchDelayedMessages
-	* @author - Seb D'Alessandro
-	* @brief - sends a message with a delay from messageQueue, if its time to send it
-	* @pre - N/A
-	* @post - N/A or sends a message if its time to send a message in a queue
-	* @param recieverIndex - entity by index of entitylist to send the message too
-	* @return - void
-	* 
-	* @note UNTESTED, USE WITH CAUTION
-	*/
-	void dispatchDelayedMessages(const int recieverIndex);
-
 
 	/* linkEnitityList
 	* @author - Seb D'Alessandro
@@ -80,12 +57,6 @@ private:
 
 	///List of entities to reference when sending a message to a specfic entity
 	vector<std::unique_ptr<ECS::Entity>>* entityList = nullptr;
-
-	///Current frame the scene is on
-	float currentTime;
-
-	///Queue of messages to send in order of disptach time
-	set<telegram> messageQueue;
 
 
 	/* sendMessage
@@ -113,16 +84,3 @@ private:
 
 };
 
-
-//Functions--------------------------------------------
-
-
-/* updateMessageDispatcher
-* @author - Seb D'Alessandro
-* @brief - Updates a messageDispatcher singleton's time
-* @pre - N/A
-* @post - Time from the messageDispatcher is updated
-* @param time - time to update the messageDispatcher
-* @return - void
-*/
-void updateMessageDispatcher(float time);

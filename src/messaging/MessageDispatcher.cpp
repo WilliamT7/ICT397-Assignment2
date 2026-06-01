@@ -12,21 +12,6 @@
 using std::cout;
 
 
-//Functions--------------------------
-void updateMessageDispatcher(float nTime) {
-
-	MessageDispatcher* messageManager = Singleton<MessageDispatcher>::getInstance();
-	messageManager->updateTime(nTime);
-
-}
-
-//Class methods-----------------------
-
-void MessageDispatcher::updateTime(float nTime) {
-
-	currentTime = nTime;
-}
-
 //-----------------------------------------------------
 
 void MessageDispatcher::dispatchMessage(telegram& message) {
@@ -34,38 +19,9 @@ void MessageDispatcher::dispatchMessage(telegram& message) {
 	const int recieverIndex = IDExist(message.reciever);
 	
 	if (recieverIndex != -1) {
-
-		if (message.dispatchTime <= 0.0) {
-			//Discharge message immeditaley
-			sendMessage(recieverIndex, message);
-
-		}
-		else {
-			//Calculate the time in which to send the message
-			engineTime* engineClock = Singleton<engineTime>::getInstance();
-			float currentTime = engineClock->currentFrame;
-			message.dispatchTime = currentTime + message.dispatchTime;
-			messageQueue.insert(message);
-
-
-		}
-	}
-}
-
-//------------------------------------------------------
-
-void MessageDispatcher::dispatchDelayedMessages(const int recieverIndex) {
-
-	engineTime* engineClock = Singleton<engineTime>::getInstance();
-	float currentTime = engineClock->currentFrame;
-
-	while (!messageQueue.empty() && (messageQueue.begin()->dispatchTime < currentTime ) && (messageQueue.end()->dispatchTime > 0) ) {
-		telegram message = *messageQueue.begin();
 		sendMessage(recieverIndex, message);
-		messageQueue.erase(messageQueue.begin());
 	}
 }
-
 
 //------------------------------------------------------
 
