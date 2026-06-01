@@ -20,6 +20,7 @@ local atkCooldown = 0.02
 local damage = 1
 local cachedPokeyIDs = nil
 local cachedPokeyWave = -1
+local cachedPlayerID = nil
 
 --FSM setup
 function start()
@@ -461,7 +462,23 @@ end
 --Helper functions------------------------------------------------------------------
 
 function findPlayer()
-    return GetEntityFromName("Player")
+    if cachedPlayerID ~= nil then
+        local cachedPlayer = GetEntity(cachedPlayerID)
+
+        if cachedPlayer ~= nil then
+            return cachedPlayer
+        end
+
+        cachedPlayerID = nil
+    end
+
+    local player = GetEntityFromName("Player")
+
+    if player ~= nil then
+        cachedPlayerID = player:getID()
+    end
+
+    return player
 end
 
 function getEntityPosition(entity)

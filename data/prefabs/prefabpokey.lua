@@ -24,10 +24,10 @@ entity =
       {
         Name = "Physics",
         halfExtents_x = 3,
-        halfExtents_y = 20,
+        halfExtents_y = 10,
         halfExtents_z = 3,
         centerOffset_x = 0,
-        centerOffset_y = 20,
+        centerOffset_y = 10,
         centerOffset_z = 0,
         isStatic = false,
         useGravity = true,
