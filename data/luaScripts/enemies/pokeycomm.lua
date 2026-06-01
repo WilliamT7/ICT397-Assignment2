@@ -24,12 +24,14 @@ local cachedPokeyWave = -1
 local cachedPlayerID = nil
 local facePlayerTimer = 0.0
 local pokeyVariables = nil
+local pokeyAnimation = nil
 
 --FSM setup
 function start()
 
 	fsm = getFSM(obj)
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+	pokeyAnimation = getAnimation(obj)
 	
 	wanderState = fsm:createState("Wander")
 	wanderState:setUpdateCode("pokeycomm", "wanderUpdate")
@@ -62,6 +64,22 @@ function getPokeyVariables()
 	end
 
 	return pokeyVariables
+end
+
+function getPokeyFSM()
+	if fsm == nil then
+		fsm = getFSM(obj)
+	end
+
+	return fsm
+end
+
+function getPokeyAnimation()
+	if pokeyAnimation == nil then
+		pokeyAnimation = getAnimation(obj)
+	end
+
+	return pokeyAnimation
 end
 
 function update()
@@ -105,7 +123,7 @@ function scanEnvironment(pokeyVars)
 
 	 if isWithinRadius(pokeyPosition, playerPosition, playerViewRadius) then
         if not hasSeenPlayer and playerAlertTimer >= playerAlertCooldown then
-            fsm = getFSM(obj)
+            fsm = getPokeyFSM()
 			hasSeenPlayer = true
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
             --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
@@ -127,7 +145,7 @@ function wanderUpdate()
 	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 
-	local anim = getAnimation(obj)
+	local anim = getPokeyAnimation()
 	anim:play("idle")
 	
 	if not (PlayerCheckTimer < playerCheckInterval) then
@@ -169,7 +187,7 @@ function attackUpdate()
 	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 	
-	local anim = getAnimation(obj)
+	local anim = getPokeyAnimation()
 	anim:play("attack")
 
 	if not (PlayerCheckTimer < playerCheckInterval) then
@@ -222,7 +240,7 @@ function attackUpdate()
 
 		else
 		
-			fsm = getFSM(obj)
+			fsm = getPokeyFSM()
 			fsm:setState("Wander")
 
 		end
@@ -257,7 +275,7 @@ function investigateUpdate()
 	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 
-	local anim = getAnimation(obj)
+	local anim = getPokeyAnimation()
 	anim:play("walk")
 	
 	if not (PlayerCheckTimer < playerCheckInterval) then
@@ -269,7 +287,7 @@ function investigateUpdate()
 	
 		scanEnvironment(pokeyVariables)
 
-		fsm = getFSM(obj)
+		fsm = getPokeyFSM()
 		currentState = fsm:getCurrentState()
 
 		if (currentState ~= "Attack") then
@@ -290,7 +308,7 @@ function followPokeyUpdate()
 	pokeyVariables = getPokeyVariables()
 	PlayerCheckTimer = tonumber(pokeyVariables:getGlobal("playerCheckTimer").value) 
 
-	local anim = getAnimation(obj)
+	local anim = getPokeyAnimation()
 	anim:play("walk")
 	
 	if not (PlayerCheckTimer < playerCheckInterval) then
@@ -301,7 +319,7 @@ function followPokeyUpdate()
 		local atPokeyLocation = true
 		local pokeyExists = GetEntity(message.sender) ~= nil
 	
-		fsm = getFSM(obj)
+		fsm = getPokeyFSM()
 	
 		--If entity doesnt exist, go back to wander lmao
 		local entity = GetEntity(message.sender)
@@ -327,7 +345,7 @@ end
 
 function onFollowRequest()
 	
-	fsm = getFSM(obj)
+	fsm = getPokeyFSM()
 	currentState = fsm:getCurrentState()
 
 	if currentState == "Wander" then
@@ -360,11 +378,11 @@ end
 
 function OnPokeyDied()
 	
-	fsm = getFSM(obj)
+	fsm = getPokeyFSM()
 	currentState = fsm:getCurrentState()
 	
 	if currentState ~= "Die" then
-		fsm = getFSM(obj)
+		fsm = getPokeyFSM()
 		fsm:setState("Die")
 	end
 	
@@ -373,7 +391,7 @@ end
 
 function OnPokeyAlert()
 	
-	fsm = getFSM(obj)
+	fsm = getPokeyFSM()
 	currentState = fsm:getCurrentState()
 		
 	if (currentState ~= "Attack" and currentState ~= "Die") then
