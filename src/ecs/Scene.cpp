@@ -9,6 +9,7 @@
 #include "messaging/MessageDispatcher.h"
 #include <ecs/PhysicsTriggerComponent.h> //woah <> thats cool it works
 #include "other/singleton.h"
+#include "ecs/ObjectPoolerManager.h"
 
 #include "ecs/SceneLoader.h"
 #include "imgui_impl_opengl3.h" // for now
@@ -34,15 +35,12 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 
 void ECS::Scene::Clear()
 {
-	//for (int i = 0; i < entities.size(); i++)
-	//{
-	//	std::cout << "DESTROYING ENTITY " << i << std::endl;
-	//	entities[i].get()->Destroy();
-	//}
+	m_activeEntities.clear();
+	m_poolOwner.clear();
+	ObjectPoolerManager::Get().ClearAll();
 	entities.clear();
 	entities.shrink_to_fit();
 	ECS::Entity::ResetIDCounter();
-	//m_physicsWorld = new BulletPhysicsWorld();
 }
 
 //----------------------------------------------
@@ -143,26 +141,36 @@ void ECS::Scene::Update(float deltaTime)
 
 	ProcessTriggers();
 
-	int size = entities.size();
-	
+	updateMessageDispatcher(deltaTime);
+
+	int size = m_activeEntities.size();
+
 	// update was here
 	for (int i = 0; i < size; i++)
 	{
 		//m_pool.Enqueue(UpdateEntity, entities[i].get(), deltaTime);
-		entities[i].get()->Update(deltaTime);
+		m_activeEntities[i]->Update(deltaTime);
 	}
 
 	//m_pool.Wait();
 
 	for (int i = size - 1; i >= 0; i--)
 	{
-		if (entities[i].get()->isDestroy())
+		if (m_activeEntities[i]->isDestroy())
 		{
-			Entity* destroyedEntity = entities[i].get();
+			Entity* destroyedEntity = m_activeEntities[i];
 
 			PhysicsTriggerComponent::RemoveEntityFromAllTriggers(destroyedEntity, entities);
 
+			auto it = m_poolOwner.find(destroyedEntity);
+			if (it != m_poolOwner.end())
+			{
+				it->second->Despawn(destroyedEntity);
+				m_poolOwner.erase(it);
+			}
+
 			entities.erase(entities.begin() + i);
+			m_activeEntities.erase(m_activeEntities.begin() + i);
 		}
 			
 	}
@@ -181,7 +189,7 @@ void ECS::Scene::DeserialiseScene(sol::table& sceneData)
 		entity.get()->DeserialiseComponentTable(entityData);
 		std::cout << "ID: " << entity.get()->GetID() << std::endl;
 
-
+		m_activeEntities.push_back(entity.get());
 	}
 
 	InjectPhysicsWorld(); 
@@ -193,9 +201,9 @@ sol::table ECS::Scene::SerialiseScene(sol::state& lua) const
 {
 	sol::table t = lua.create_table();
 
-	for (auto& entity : entities)
+	for (auto& entity : m_activeEntities)
 	{
-		t.add(entity.get()->SerialiseComponents(lua));
+		t.add(entity->SerialiseComponents(lua));
 	}
 
 	return t;
@@ -203,33 +211,19 @@ sol::table ECS::Scene::SerialiseScene(sol::state& lua) const
 
 //----------------------------------------------
 
-bool ECS::Scene::Spawn(std::string prefabName)
+ECS::Entity* ECS::Scene::NormalSpawn(sol::table& data)
 {
-	sol::state lua;
-	lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table, sol::lib::string, sol::lib::io);
-
-	std::string path = "../data/prefabs/";
-	std::string fullPath = path + prefabName;
-
-	try {
-		lua.script_file(fullPath);
-	}
-	catch (const sol::error& e) {
-		std::cout << "[C++]: Error: SOL: Unable to open" << fullPath << ".\n";
-		return false;
-	}
-
-	sol::table entityData = lua["entity"];
-
 	entities.push_back(std::make_unique<Entity>());
 	Entity* spawnedEntity = entities.back().get();
+	m_activeEntities.push_back(spawnedEntity);
 
-	spawnedEntity->DeserialiseComponentTable(entityData); //this section fixed the physics not being created 0 0
+	spawnedEntity->DeserialiseComponentTable(data); //this section fixed the physics not being created 0 0
 
 	InjectPhysicsWorld(spawnedEntity);
 
+	spawnedEntity->Start();
 
-	return true;
+	return spawnedEntity;
 }
 
 //----------------------------------------------
@@ -250,27 +244,48 @@ ECS::Entity* ECS::Scene::GetSpawn(std::string prefabName)
 		return nullptr;
 	}
 
-	sol::table entityData = lua["entity"];
+	sol::table dat = lua["data"];
 
-	entities.push_back(std::make_unique<Entity>());
-	Entity* spawnedEntity = entities.back().get();
+	int poolSize = dat["pooling"].get_or(0);
 
-	spawnedEntity->DeserialiseComponentTable(entityData); //this section fixed the physics not being created 0 0
+	std::cout << "\n\nPOOL SIZE " << poolSize << " !\n\n";
 
-	InjectPhysicsWorld(spawnedEntity);
+	// if no pool, spawn as normal and return
+	if (poolSize <= 0)
+	{
+		std::cout << "\n\nSKIP POOL!";
+		sol::table data = dat["entity"];
+		return NormalSpawn(data);
+	}
+	
+	ObjectPooler* pool = ObjectPoolerManager::Get().MakePool(lua, prefabName, poolSize);
 
-	spawnedEntity->Start();
+	std::cout << "\n\nGot pool? " << pool << ".";
 
-	return spawnedEntity;
+	Entity* spawned = pool->Spawn();
+
+	if (!spawned)
+	{
+		std::cout << "[Scene] Pool returned nullptr for " << prefabName << "\n";
+		return nullptr;
+	}
+
+	m_activeEntities.push_back(spawned);
+	m_poolOwner[spawned] = pool;
+	spawned->Start();
+
+	std::cout << "\n\nCALLED START FOR " << spawned->GetName();
+
+	return spawned;
 }
 
 //----------------------------------------------
 
 void ECS::Scene::InjectPhysicsWorld()
 {
-	for (auto& entity : entities)
+	for (auto& entity : m_activeEntities)
 	{
-		InjectPhysicsWorld(entity.get());
+		InjectPhysicsWorld(entity);
 	}
 }
 
@@ -296,17 +311,14 @@ void ECS::Scene::InjectPhysicsWorld(Entity* entity)
 	}
 }
 
-
-
-
 //----------------------------------------------
 
 ECS::Entity* ECS::Scene::GetEntity(int ID)
 {
-	for (auto& entity : entities)
+	for (auto& entity : m_activeEntities)
 	{
 		if (entity->GetID() == ID)
-			return entity.get();
+			return entity;
 	}
 
 	return nullptr;
@@ -316,10 +328,10 @@ ECS::Entity* ECS::Scene::GetEntity(int ID)
 
 ECS::Entity* ECS::Scene::GetEntityFromName(const std::string& name)
 {
-	for (auto& entity : entities)
+	for (auto& entity : m_activeEntities)
 	{
 		if (entity->GetName() == name)
-			return entity.get();
+			return entity;
 	}
 	return nullptr;
 }
@@ -340,11 +352,11 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 
 	graphics->ClearLights();
 
-	int size = entities.size();
+	int size = m_activeEntities.size();
 
 	for (int i = 0; i < size; i++)
 	{
-		auto& entity = entities[i];
+		auto& entity = m_activeEntities[i];
 		if (auto* cam = entity->GetComponent<CameraComponent>())
 			m_camera = cam;
 
@@ -398,9 +410,9 @@ void ECS::Scene::ImGui()
 	// SCENE
 	ImGui::Begin("Scene");
 
-	for (int i = 0; i < entities.size(); i++)
+	for (int i = 0; i < m_activeEntities.size(); i++)
 	{
-		std::string obj = (entities[i].get()->GetName() + "##" + std::to_string(i));
+		std::string obj = (m_activeEntities[i]->GetName() + "##" + std::to_string(i));
 		if (ImGui::Selectable(obj.c_str(), selectedEntity == i))
 			selectedEntity = i;
 	}
@@ -408,6 +420,7 @@ void ECS::Scene::ImGui()
 	if (ImGui::Button("Add New Object"))
 	{
 		entities.push_back(std::make_unique<Entity>());
+		m_activeEntities.push_back(entities.back().get());
 		entities.back().get()->AddComponent<TransformComponent>();
 	}
 
@@ -432,7 +445,7 @@ void ECS::Scene::ImGui()
 	};
 
 	// add component to entity
-	auto& entity = entities[selectedEntity];
+	auto& entity = m_activeEntities[selectedEntity];
 	if (ImGui::TreeNode("Add Component"))
 	{
 		static char ScriptFileBuffer[128];

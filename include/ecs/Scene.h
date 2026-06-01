@@ -24,6 +24,7 @@
 #include <ecs/AllComponentsInclude.h>
 #include <graphics/Graphics.h>
 #include <physics/BulletPhysicsWorld.h>
+#include "ecs/ObjectPoolerManager.h"
 #include <vector>
 #include <thread>
 
@@ -146,17 +147,6 @@ namespace ECS
 		**/
 		sol::table SerialiseScene(sol::state& lua) const;
 
-		/** Spawn
-		* @author - Kay Bradsell
-		* @brief - Spawns a prefab into the scene given the name
-		* @param - std::string prefabName
-		* @return - bool
-		*
-		* @pre - prefabName points to a valid prefab and scene has been initialised
-		* @post - Spawns a new entity with the data in the prefab
-		**/
-		bool Spawn(std::string prefabName);
-
 		/** Get Spawn
 		* @author - Kay Bradsell
 		* @brief - Spawns a prefab into the scene given the name and returns pointer to it
@@ -221,6 +211,8 @@ namespace ECS
 
 	private:
 		std::vector<std::unique_ptr<Entity>> entities;
+		std::unordered_map<Entity*, ObjectPooler*> m_poolOwner;
+		std::vector<Entity*> m_activeEntities;
 
 		//physic things
 		BulletPhysicsWorld* m_physicsWorld = nullptr;
@@ -248,6 +240,8 @@ namespace ECS
 		* @post - loads in the new scene
 		**/
 		void ProcessSceneLoad();
+
+		Entity* NormalSpawn(sol::table& data);
 	};
 }
 

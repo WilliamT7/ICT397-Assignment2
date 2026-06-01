@@ -37,6 +37,8 @@
     <ClCompile Include="..\src\ecs\FSMComponent.cpp" />
     <ClCompile Include="..\src\ecs\LightingComponent.cpp" />
     <ClCompile Include="..\src\ecs\MeshRendererComponent.cpp" />
+    <ClCompile Include="..\src\ecs\ObjectPooler.cpp" />
+    <ClCompile Include="..\src\ecs\ObjectPoolerManager.cpp" />
     <ClCompile Include="..\src\ecs\PhysicsComponent.cpp" />
     <ClCompile Include="..\src\ecs\PhysicsTriggerComponent.cpp" />
     <ClCompile Include="..\src\ecs\Scene.cpp" />
@@ -113,6 +115,8 @@
     <ClInclude Include="..\include\ecs\FSMComponent.h" />
     <ClInclude Include="..\include\ecs\LightingComponent.h" />
     <ClInclude Include="..\include\ecs\MeshRendererComponent.h" />
+    <ClInclude Include="..\include\ecs\ObjectPooler.h" />
+    <ClInclude Include="..\include\ecs\ObjectPoolerManager.h" />
     <ClInclude Include="..\include\ecs\PhysicsComponent.h" />
     <ClInclude Include="..\include\ecs\PhysicsTriggerComponent.h" />
     <ClInclude Include="..\include\ecs\Scene.h" />
