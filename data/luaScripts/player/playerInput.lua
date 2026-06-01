@@ -4,6 +4,7 @@ local playerHeight = 5
 local playerLinearDamping = 0.6
 local maxUpwardVelocity = 4.0
 local prefab = "prefabtree.lua"
+local playerExtraGravity = -90.0
 
 function render()
 	local fps = 1.0 / getDeltaTime()
@@ -29,6 +30,7 @@ function update()
 
 	physics:setLinearDamping(playerLinearDamping)
 	clampUpwardVelocity(physics)
+	physics:addForce(Vector3.new(0, playerExtraGravity, 0))
 
 	if camera ~= nil then
 		playerMovement(physics, camera)
