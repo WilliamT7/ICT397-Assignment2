@@ -90,7 +90,7 @@ function scanEnvironment(pokeyVars)
 			hasSeenPlayer = true
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
             --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
-            --alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
+            alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
 			fsm:setState("Attack")
         end
     else
