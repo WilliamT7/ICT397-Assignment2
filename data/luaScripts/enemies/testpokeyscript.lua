@@ -5,6 +5,8 @@ local spawnMax = 1500
 local spawnHeightOffset = 30
 local terrainSearchMaxID = 100
 local isDead = false
+local terrainEntity = nil
+local terrainComponent = nil
 
 function randomisePosition()
     local transform = getTransform(obj)
@@ -34,7 +36,7 @@ function getSpawnHeight(worldX, worldZ)
         return spawnHeightOffset
     end
 
-    local terrain = getTerrain(terrainEntity)
+    local terrain = getTerrainComponent(terrainEntity)
 
     if terrain ~= nil then
         return terrain:getHeightAtWorldPosition(worldX, worldZ) + spawnHeightOffset
@@ -50,15 +52,28 @@ function getSpawnHeight(worldX, worldZ)
 end
 
 function findTerrainEntity()
+    if terrainEntity ~= nil then
+        return terrainEntity
+    end
+
     for id = 0, terrainSearchMaxID do
         local entity = GetEntity(id)
 
         if entity ~= nil and entity:getName() == "Terrain" then
+            terrainEntity = entity
             return entity
         end
     end
 
     return nil
+end
+
+function getTerrainComponent(entity)
+    if terrainComponent == nil and entity ~= nil then
+        terrainComponent = getTerrain(entity)
+    end
+
+    return terrainComponent
 end
 
 
