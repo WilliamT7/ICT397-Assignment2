@@ -66,7 +66,7 @@ bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElap
 
 
 
-void pursueEntity(ECS::Entity& const evader, ECS::Entity& const pursuer, double timeElapsed, double offset, int moveSpeed) {
+void pursueEntity(ECS::Entity& const evader, ECS::Entity& const pursuer, double timeElapsed, double offset, int moveSpeed, float steeringFactor) {
 	
 	bool entityHasPhysics = evader.HasComponent<ECS::PhysicsComponent>();
 	bool pursuerHasPhysics = pursuer.HasComponent<ECS::PhysicsComponent>();
@@ -75,6 +75,7 @@ void pursueEntity(ECS::Entity& const evader, ECS::Entity& const pursuer, double 
 
 		ECS::PhysicsComponent* evaderphysics = evader.GetComponent<ECS::PhysicsComponent>();
 		ECS::PhysicsComponent* pursuerphysics = pursuer.GetComponent<ECS::PhysicsComponent>();
+		
 
 		Vector3 evaderPos = evaderphysics->GetPosition();
 		Vector3 pursuerPos = pursuerphysics->GetPosition();
@@ -100,8 +101,8 @@ void pursueEntity(ECS::Entity& const evader, ECS::Entity& const pursuer, double 
 		{
 			double lookAheadTime = (toEvader.length()) / (evaderVelocity.length() + pursuerVelocity.length());
 			Vector3 adjustedEvaderVelocity = evaderVelocity * lookAheadTime;
-			Vector3 adjustedEvadorPos = Vector3(evaderPos.x + adjustedEvaderVelocity.x, evaderPos.y + adjustedEvaderVelocity.y, evaderPos.z + adjustedEvaderVelocity.z);
-		
+			Vector3 adjustedEvadorPos = Vector3(evaderPos.x + adjustedEvaderVelocity.x * steeringFactor, evaderPos.y, evaderPos.z + adjustedEvaderVelocity.z * steeringFactor);
+
 			moveEntityTo(pursuer, adjustedEvadorPos, timeElapsed, offset, moveSpeed);
 		}
 	}

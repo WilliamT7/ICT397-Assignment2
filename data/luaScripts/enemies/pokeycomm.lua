@@ -129,23 +129,16 @@ end
 --Attack-----------------------
 function attackEnter()
 
-	attackBehaviourChoice = (math.randomseed(os.time()) + otherEntityID) % 2
-	
-	
-	if (attackBehaviourChoice == 0) then
-		print("I am chasing")
-		
-		
-	elseif (attackBehaviourChoice == 1) then
-		print("I am pursueing")
-	
+	entityID = obj:getID()
+	attackBehaviourChoice = (math.randomseed(os.time()) + entityID) % 2
+	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+
+	if (attackBehaviourChoice == 1) then
+		pokeyVariables:setGlobal("attackAI", "Chase")
 	else
-	
-		print("fuck idk----------")
-		
-		
+		pokeyVariables:setGlobal("attackAI", "Pursue")
+
 	end
-	
 
 
 end
@@ -178,11 +171,9 @@ function attackUpdate()
 			if pokeyPosition == nil or playerPosition == nil then
 				return
 			end
-
-			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
-			--moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
-			pursueEntity(player, obj, getDeltaTime(), 2, movementSpeed)
-
+			
+			moveToAttackPlayer(player, playerPosition, obj, getDeltaTime(), 2, pokeyVariables)
+			
 			if isWithinRadius(pokeyPosition, playerPosition, playerAttackRadius) then
 			
 				-- deal damage to the player
@@ -266,9 +257,7 @@ function investigateUpdate()
 
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 			moveEntityTo(obj, alertPosition, getDeltaTime(), 2, movementSpeed)
-			
-	
-	
+		
 		end 
 	end
 
@@ -332,21 +321,20 @@ end
 
 
 
---UNUSED
-function onFollowUpdate()
-		
-	myPosition = getEntityPosition(obj)
-	local alertMessage = telegram.new()
-	alertMessage.sender = obj:getID()
-	alertMessage.receiver = entity:getID()
-	lertMessage.dispatchTime = 0.0
-	alertMessage.messageID = messageID
-	alertMessage.scriptName = "pokeycomm"
-	alertMessage.functionName = "N/A"
-	alertMessage.data = myPosition 
-	
-	sendMessage(alertMessage)
 
+
+function moveToAttackPlayer(player, playerPosition, thisEntity, timeElapsed, offset, pokeyVariables)
+
+	attackAI = pokeyVariables:getGlobal("attackAI").value
+
+	movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
+	
+	if (attackAI == "Chase") then
+		moved = moveEntityTo(obj, playerPosition, timeElapsed, offset, movementSpeed)
+
+	else
+		pursueEntity(player, obj, timeElapsed, offset, movementSpeed, 1.5)
+	end
 
 end
 

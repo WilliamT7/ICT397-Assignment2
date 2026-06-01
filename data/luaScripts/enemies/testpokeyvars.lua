@@ -6,3 +6,4 @@ movementSpeed = 50
 playerCheckTimer = 0.0
 playerAlertTimer = 0.0
 playerAttackCooldown = 0.0
+attackAI = "Chase"

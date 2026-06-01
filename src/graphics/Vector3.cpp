@@ -20,6 +20,8 @@ const float Vector3::length() const {
 
 }
 
+//------------------------------------------
+
 Vector3 Vector3::operator+(const Vector3& const otherVector) const {
 
 	float newX = x + otherVector.x;

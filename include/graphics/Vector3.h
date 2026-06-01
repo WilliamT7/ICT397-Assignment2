@@ -110,7 +110,15 @@ struct Vector3
 	* @return - vector3: result of this vector - otherVector
 	*/
 	Vector3 operator-(const Vector3& const otherVector) const;
-
+	
+	/* +operator overload
+	* @author - Seb D'Alessandro
+	* @brief - + operator overload for adding two vectors
+	* @pre - N/A
+	* @post - result of this vector + otherVector
+	* @param otherVector - vector to add by
+	* @return - vector3: result of this vector + otherVector
+	*/
 	Vector3 operator+(const Vector3& const otherVector) const;
 
 
