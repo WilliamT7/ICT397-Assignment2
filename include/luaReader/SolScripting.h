@@ -114,8 +114,29 @@ public:
 	*/
 	void run(ScriptFile& const file, string functionName, ECS::Entity* entity);
 
+	/** load
+	* @author - William Thorpe
+	* @brief - Loads a lua script and exposes entity component functions
+	* @pre - file has the contents of a luafile and is considered valid (i.e. it exists), function name exists in file
+	* @post - Executes specifed function thats in file using lua/sol
+	* @param file - lua file to run
+	* @param functionName - name of the function to run
+	* @param Entity - The entity that has this scriptComponet
+	* @return - bool - returns true if the file was loaded successfully, false if it failed to load
+	*/
 	bool load(ScriptFile& const file, ECS::Entity* entity);
 
+
+	/** runLoaded
+	* @author - William Thorpe
+	* @brief - Runs a function from a lua script that has already been loaded with load()
+	* @pre - file has been loaded with load(), function name exists in file
+	* @post - Executes specifed function thats in file using lua/sol
+	* @param file - lua file to run
+	* @param functionName - name of the function to run
+	* @param Entity - The entity that has this scriptComponet
+	* @return - void
+	**/
 	void runLoaded(ScriptFile& const file, string functionName, ECS::Entity* entity);
 
 
