@@ -533,6 +533,12 @@
     <None Include="..\data\shaders\nolight.vert.glsl">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\data\shaders\water.vert.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\data\shaders\water.frag.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

@@ -172,7 +172,7 @@ namespace ECS
         }
 
         graphics->SetWireframeMode(m_isWireframe);
-        graphics->DrawModel(m_model, shader, *m_transform, nullptr);
+        graphics->DrawModel(m_model, ShaderID, *m_transform, nullptr);
         graphics->SetWireframeMode(false);
         shader->SetBool("u_Wireframe", false);
 

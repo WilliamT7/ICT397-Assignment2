@@ -100,6 +100,7 @@ void Update()
     engineClock->previousFrame = engineClock->currentFrame;
 
     scene->Update(engineClock->deltaTime);
+    graphicsHandler->UpdateTime(engineClock->deltaTime);
 
 }
 

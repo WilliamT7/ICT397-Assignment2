@@ -147,7 +147,7 @@ namespace Graphics
 		* @pre - Model and Shader have been loaded, Graphics object has been constructed, and transform has valid data
 		* @post - Draws model to world
 		**/
-		void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform, Animator* animator) override;
+		void DrawModel(Model* model, ShaderType shader, const ECS::TransformComponent& transform, Animator* animator) override;
 
 		/** Draw 2D Texture
 		* @author - Kay Bradsell
@@ -290,6 +290,15 @@ namespace Graphics
 		**/
 		void RenderSkybox();
 
+		/** Update Time
+		* @author - Kay Bradsell
+		* @brief - For any shaders that use time, updates deltaTime
+		*
+		* @pre - graphics has been constructed
+		* @post - updates time in graphics
+		**/
+		void UpdateTime(float deltaTime);
+
 	private:
 		glm::mat4 m_model, m_view, m_projection2D, m_projection3D;
 		bool m_3DMode = true;
@@ -314,6 +323,8 @@ namespace Graphics
 		};
 
 		std::unordered_map<Mesh*, MeshBuffers> m_meshBuffers;
+		float m_deltaTime = 0;
+		float m_continuousTime = 0;
 
 		/** Setup Mesh
 		* @author - Kay Bradsell
@@ -337,7 +348,7 @@ namespace Graphics
 		* @pre - Mesh, Shader, and Transform all have valid data, Graphics has been constructed
 		* @post - Draws the Mesh to world.
 		**/
-		void DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform, Animator* animator);
+		void DrawMesh(Mesh* mesh, ShaderType shader, const ECS::TransformComponent& transform, Animator* animator);
 
 		/** Set Lighting
 		* @author - Kay Bradsell
