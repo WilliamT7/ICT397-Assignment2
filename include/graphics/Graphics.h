@@ -146,7 +146,7 @@ namespace Graphics
 		* @pre - Model and Shader have been loaded, Graphics object has been constructed, and transform has valid data
 		* @post - Draws model to world
 		**/
-		virtual void DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform, Animator* animator) = 0;
+		virtual void DrawModel(Model* model, ShaderType shader, const ECS::TransformComponent& transform, Animator* animator) = 0;
 
 		/** Draw 2D Texture
 		* @author - Kay Bradsell
@@ -309,6 +309,15 @@ namespace Graphics
 		* @post - draws skybox model in background with no depth information.
 		**/
 		virtual void RenderSkybox() = 0;
+
+		/** Update Time
+		* @author - Kay Bradsell
+		* @brief - For any shaders that use time, updates deltaTime
+		*
+		* @pre - graphics has been constructed
+		* @post - updates time in graphics
+		**/
+		virtual void UpdateTime(float deltaTime) = 0;
 
 	protected:
 		struct LightAndPos
