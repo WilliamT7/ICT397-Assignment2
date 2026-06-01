@@ -110,6 +110,16 @@ struct Vector3
 	* @return - vector3: result of this vector - otherVector
 	*/
 	Vector3 operator-(const Vector3& const otherVector) const;
+	
+	/* +operator overload
+	* @author - Seb D'Alessandro
+	* @brief - + operator overload for adding two vectors
+	* @pre - N/A
+	* @post - result of this vector + otherVector
+	* @param otherVector - vector to add by
+	* @return - vector3: result of this vector + otherVector
+	*/
+	Vector3 operator+(const Vector3& const otherVector) const;
 
 
 	/* *operator overload
@@ -178,6 +188,8 @@ struct Vector3
 */
 ostream& operator <<(ostream& os, Vector3& const vector);
 
+
+float dotProduct(Vector3& const v1, Vector3& const v2);
 
 
 //------------------------------------------------

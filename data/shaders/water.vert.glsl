@@ -16,13 +16,19 @@ out float Height;
 out vec3 Normal;
 out vec3 FragPos;
 
-float waveHeight = 0.1;
-float waveWidth = 0.5;
+float waveHeight = 0.05;
+float waveWidth = 0.01;
 
 float getWave(vec2 pos)
 {
-	float t = time * 0.4;
-	return sin(waveWidth * pos.x + t) * cos(waveWidth * pos.y + t) * waveHeight;
+	float t = time * 0.9;
+
+	float w1 = sin(pos.x * 0.5 + t) * cos(pos.y * 0.5 + t);
+    float w2 = sin(pos.x * 1.2 + t * 1.3);
+    float w3 = cos(pos.y * 2.0 + t * 0.8);
+    float w4 = cos(pos.y * 1.7 + t * 0.3);
+
+    return (w1 * 0.5 + w2 * 0.2 + w3 * 0.1 + w4 * 0.2) * waveHeight;
 }
 
 void main()
@@ -39,7 +45,7 @@ void main()
 	float wd = getWave(pos.xz + vec2(0.0, -epsilon));
 	float wu = getWave(pos.xz + vec2(0.0, epsilon));
 
-	vec3 normal = normalize(vec3(wl - wr, 2.0 * epsilon, wd - wu));
+	vec3 normal = normalize(vec3((wl - wr) / (2.0 * epsilon), 1.0, (wd - wu) / (2.0 * epsilon)));
 
 	Height = pos.y;
 	TexCoord = aTexCoords;

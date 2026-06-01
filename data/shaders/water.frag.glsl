@@ -24,10 +24,10 @@ vec3 AddLighting(vec3 colour, DirLight light)
 	vec3 l = normalize(-light.direction);
 	vec3 view = normalize(viewPos - FragPos);
 
-	vec3 ambient = mix(colour, light.ambient, 0.2);
+	vec3 ambient = light.ambient * colour;
 
 	float diff = max(dot(normal, l), 0.0);
-	vec3 diffuse = light.diffuse * colour;
+	vec3 diffuse = light.diffuse * colour * diff * 1.5;
 
 	vec3 s = normalize(l + view);
 	float spec = pow(max(dot(normal, s), 0.0), 128.0);
@@ -36,10 +36,12 @@ vec3 AddLighting(vec3 colour, DirLight light)
 	return ambient + diffuse + specular;
 }
 
+
+
 void main()
 {
-	vec3 deep = vec3(0.29, 0.57, 0.75);
-	vec3 shallow = vec3(0.75, 0.92, 1.0);
+	vec3 deep = vec3(0.0, 0.05, 0.2);
+	vec3 shallow = vec3(0.7, 0.8, 1.0);
 
 	float t = clamp((Height + 0.25) * 2.0, 0.0, 1.0);
 

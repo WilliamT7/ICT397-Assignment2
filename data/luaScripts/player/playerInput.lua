@@ -1,4 +1,4 @@
-local maxSpeed = 150.0
+local maxSpeed = 100.0
 local camSensitivity = 0.05
 local playerHeight = 5
 local playerLinearDamping = 0.6

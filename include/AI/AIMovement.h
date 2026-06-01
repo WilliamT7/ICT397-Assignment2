@@ -31,3 +31,19 @@ bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElap
 
 
 
+/* PursueEntity
+* @author - Seb D'Alessandro
+* @brief - Moves the pursuer towards a predicted position from entity
+* @pre - evader and pursuer has a physics component
+* @post - Pursuer starts moving towards a predicted psotion based off velocity and postion of the evader
+* @param evader - the entity the pursuer is targeting
+* @param pursuer - thats entity pursueing the evader
+* @param timeElapsed - delta time
+* @param offset - offset from the targetPos
+* @param moveSpeed - how fast the entity moves towards targetPos
+* @param steeringFactor - how much should hte final predicted position be modifed
+* @return bool - true if its arrived at the destination, false if not
+*/
+void pursueEntity(ECS::Entity& const evader, ECS::Entity& const pursuer, double timeElapsed, double offset, int moveSpeed, float stearingFactor);
+
+

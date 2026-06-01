@@ -1,7 +1,6 @@
 //----------------------------------------------
 
 #include "ECS/Entity.h"
-#include <iostream>
 #include <filesystem>
 #include "ecs/AllComponentsInclude.h"
 
@@ -40,7 +39,7 @@ ECS::Entity::~Entity()
 
 void ECS::Entity::Start()
 {
-	cout << "ENTITY STARTED\n";
+
 	for (auto& comp : m_components)
 	{
 		comp->Start();

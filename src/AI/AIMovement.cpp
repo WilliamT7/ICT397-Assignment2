@@ -8,6 +8,8 @@
 bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElapsed, double offset, int moveSpeed) {
 	
 	bool atDestination = false;
+
+
 	
 	if (entity.HasComponent<ECS::PhysicsComponent>()) {
 
@@ -60,4 +62,48 @@ bool moveEntityTo(ECS::Entity& const entity, Vector3& targetPos, double timeElap
 	}
 
 	return atDestination;
+}
+
+
+
+void pursueEntity(ECS::Entity& const evader, ECS::Entity& const pursuer, double timeElapsed, double offset, int moveSpeed, float steeringFactor) {
+	
+	bool entityHasPhysics = evader.HasComponent<ECS::PhysicsComponent>();
+	bool pursuerHasPhysics = pursuer.HasComponent<ECS::PhysicsComponent>();
+
+	if (entityHasPhysics && pursuerHasPhysics) {
+
+		ECS::PhysicsComponent* evaderphysics = evader.GetComponent<ECS::PhysicsComponent>();
+		ECS::PhysicsComponent* pursuerphysics = pursuer.GetComponent<ECS::PhysicsComponent>();
+		
+
+		Vector3 evaderPos = evaderphysics->GetPosition();
+		Vector3 pursuerPos = pursuerphysics->GetPosition();
+		
+		//distance between evader and pursuer
+		Vector3 toEvader = evaderPos - pursuerPos;
+
+
+		//compute agent headings
+		Vector3 evaderVelocity = evaderphysics->GetLinearVelocity();
+		Vector3 pursuerVelocity = pursuerphysics->GetLinearVelocity();
+		pursuerVelocity.Normalize();
+		evaderVelocity.Normalize();
+
+		//compute angle between agents
+		double relativeHeading = dotProduct(pursuerVelocity, evaderVelocity);
+
+		if (((dotProduct(toEvader, pursuerVelocity) > 0) && relativeHeading < -0.95) || evaderVelocity.length() == 1)
+		{
+			moveEntityTo(pursuer, evaderPos, timeElapsed, offset, moveSpeed);
+		}
+		else
+		{
+			double lookAheadTime = (toEvader.length()) / (evaderVelocity.length() + pursuerVelocity.length());
+			Vector3 adjustedEvaderVelocity = evaderVelocity * lookAheadTime;
+			Vector3 adjustedEvadorPos = Vector3(evaderPos.x + adjustedEvaderVelocity.x * steeringFactor, evaderPos.y, evaderPos.z + adjustedEvaderVelocity.z * steeringFactor);
+
+			moveEntityTo(pursuer, adjustedEvadorPos, timeElapsed, offset, moveSpeed);
+		}
+	}
 }

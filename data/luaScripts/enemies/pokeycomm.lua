@@ -16,7 +16,7 @@ local lastKnownPlayerPosition = nil
 
 local fsm = nil
 
-local atkCooldown = 0.5
+local atkCooldown = 0.02
 local damage = 1
 
 --FSM setup
@@ -34,6 +34,7 @@ function start()
 	
 	attackState = fsm:createState("Attack")
 	attackState:setUpdateCode("pokeycomm", "attackUpdate")
+	attackState:setEnterCode("pokeycomm", "attackEnter")
 	fsm:saveState()
 	
 	dieState = fsm:createState("Die")
@@ -126,6 +127,24 @@ end
 
 
 --Attack-----------------------
+function attackEnter()
+
+	entityID = obj:getID()
+	attackBehaviourChoice = (math.randomseed(os.time()) + entityID) % 2
+	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
+
+	if (attackBehaviourChoice == 1) then
+		pokeyVariables:setGlobal("attackAI", "Chase")
+	else
+		pokeyVariables:setGlobal("attackAI", "Pursue")
+
+	end
+
+
+end
+
+
+
 function attackUpdate()
 
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")
@@ -152,10 +171,9 @@ function attackUpdate()
 			if pokeyPosition == nil or playerPosition == nil then
 				return
 			end
-
-			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
-			moved = moveEntityTo(obj, playerPosition, getDeltaTime(), 2, movementSpeed)
-
+			
+			moveToAttackPlayer(player, playerPosition, obj, getDeltaTime(), 2, pokeyVariables)
+			
 			if isWithinRadius(pokeyPosition, playerPosition, playerAttackRadius) then
 			
 				-- deal damage to the player
@@ -236,13 +254,10 @@ function investigateUpdate()
 		currentState = fsm:getCurrentState()
 
 		if (currentState ~= "Attack") then
-			physics = getPhysics(obj)
-			physicsPos = physics:getPosition()
-			oldYPos = physicsPos.y
+
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 			moveEntityTo(obj, alertPosition, getDeltaTime(), 2, movementSpeed)
-			physicsPos.y = oldYPos
-	
+		
 		end 
 	end
 
@@ -277,23 +292,14 @@ function followPokeyUpdate()
 			fsm:setState("Wander")
 	
 		else
-			physics = getPhysics(obj)
-			physicsPos = physics:getPosition()
-			oldYPos = physicsPos.y
-			
+
 			pokeyVariables = getScriptComponent(obj, "testpokeyvars")
 			movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
 			moved = moveEntityTo(obj, FollowPosition, getDeltaTime(), 2, 5)
 
-	
-			physicsPos.y = oldYPos
-
 			
 		end
 	end
-	--askForPokeyLocation(message.sender) maaybe i dont need this?
-	
-
 
 end
 
@@ -315,21 +321,20 @@ end
 
 
 
---UNUSED
-function onFollowUpdate()
-		
-	myPosition = getEntityPosition(obj)
-	local alertMessage = telegram.new()
-	alertMessage.sender = obj:getID()
-	alertMessage.receiver = entity:getID()
-	lertMessage.dispatchTime = 0.0
-	alertMessage.messageID = messageID
-	alertMessage.scriptName = "pokeycomm"
-	alertMessage.functionName = "N/A"
-	alertMessage.data = myPosition 
-	
-	sendMessage(alertMessage)
 
+
+function moveToAttackPlayer(player, playerPosition, thisEntity, timeElapsed, offset, pokeyVariables)
+
+	attackAI = pokeyVariables:getGlobal("attackAI").value
+
+	movementSpeed = tonumber(pokeyVariables:getGlobal("movementSpeed").value)
+	
+	if (attackAI == "Chase") then
+		moved = moveEntityTo(obj, playerPosition, timeElapsed, offset, movementSpeed)
+
+	else
+		pursueEntity(player, obj, timeElapsed, offset, movementSpeed, 1.5)
+	end
 
 end
 
@@ -481,7 +486,7 @@ function randomisePosition(transformPosition, maxPosVaration, otherEntityID)
 	
 	randomisedVector = Vector3.new()
 	randomisedVector.x = randomX
-	randomisedVector.y = transformPosition.y
+	randomisedVector.y = 0
 	randomisedVector.z = randomZ
 	
 	

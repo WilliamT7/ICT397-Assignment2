@@ -57,7 +57,8 @@ entity =
         movementSpeed = "90",
         playerCheckTimer = "0.0",
         playerAlertTimer = "0.0",
-        playerAttackCooldown = "2.0"
+        playerAttackCooldown = "2.0",
+		attackAI = "Chase"
 		
       },
       {

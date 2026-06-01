@@ -22,6 +22,19 @@ const float Vector3::length() const {
 
 //------------------------------------------
 
+Vector3 Vector3::operator+(const Vector3& const otherVector) const {
+
+	float newX = x + otherVector.x;
+	float newY = y + otherVector.y;
+	float newZ = z + otherVector.z;
+
+	return Vector3(newX, newY, newZ);
+
+}
+
+
+//------------------------------------------
+
 Vector3 Vector3::operator*(const float& number) const {
 
 	float nX = x * number;
@@ -80,7 +93,7 @@ ostream& operator <<(ostream& os, Vector3& const vector) {
 
 
 }
-
+//------------------------------------------
 
 Vector3 Vector3::operator*(const Vector3& const otherVector) const {
 
@@ -90,4 +103,14 @@ Vector3 Vector3::operator*(const Vector3& const otherVector) const {
 
 	return Vector3(nX, nY, nZ);
 
+}
+
+float dotProduct(Vector3& const v1, Vector3& const v2) {
+
+
+	float x = v1.x * v2.x;
+	float y = v1.y * v2.y;
+	float z = v1.z * v2.z;
+
+	return x + y + z;
 }
