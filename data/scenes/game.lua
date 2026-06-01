@@ -105,7 +105,7 @@ scene = {
         halfExtents_z = 0.44999998807907104,
         isStatic = false,
         mass = 1,
-        shape = "box",
+        shape = "capsule",
         useGravity = true
       } --[[table: 000001BC6BE2F490]],
       {

@@ -47,9 +47,19 @@ public:
 	* @post - Creates a box-shaped rigid body in the physics world with the specified settings and dimensions.
     * @return Created physics body.
     */
-    virtual std::shared_ptr<IPhysicsBody> CreateBoxBody(
-        const RigidBodyDesc& desc,
-        const Vector3& halfExtents) = 0;
+    virtual std::shared_ptr<IPhysicsBody> CreateBoxBody(const RigidBodyDesc& desc, const Vector3& halfExtents) = 0;
+
+    /** CreateCapsuleBody.
+    * @author - William Thorpe
+    * @brief - Creates a capsule rigid body.
+    * @param desc - Body settings.
+    * @param radius - Capsule radius.
+    * @param height - Cylinder height between the rounded ends.
+	* @pre - None.
+	* @post - Creates a capsule-shaped rigid body in the physics world with the specified settings.
+    * @return Created physics body.
+    */
+    virtual std::shared_ptr<IPhysicsBody> CreateCapsuleBody(const RigidBodyDesc& desc, float radius, float height) = 0;
 
     /** CreateHeightfieldBody.
     * @author - William Thorpe
@@ -66,15 +76,7 @@ public:
 	* @post - Creates a heightfield rigid body in the physics world using the provided height data and parameters, allowing for terrain simulation.
     * @return Created physics body.
     */
-    virtual std::shared_ptr<IPhysicsBody> CreateHeightfieldBody(
-        const RigidBodyDesc& desc,
-        const float* heightData,
-        int width,
-        int length,
-        float gridSpacingX,
-        float gridSpacingZ,
-        float minHeight,
-        float maxHeight) = 0;
+    virtual std::shared_ptr<IPhysicsBody> CreateHeightfieldBody(const RigidBodyDesc& desc, const float* heightData, int width, int length, float gridSpacingX, float gridSpacingZ, float minHeight, float maxHeight) = 0;
 
 
 	/** RemoveBody.

@@ -4,6 +4,8 @@
 #include "physics/PhysicsTypes.h"
 #include "physics/IPhysicsWorld.h"
 
+#include <algorithm>
+
 ECS::PhysicsComponent::PhysicsComponent()
 {
 }
@@ -37,13 +39,33 @@ void ECS::PhysicsComponent::ImGui()
     {
         ImGui::Text("Physics Component");
 
+        const char* shapeItems[] = { "box", "capsule" };
+        int shapeIndex = (m_shape == "capsule") ? 1 : 0;
+        if (ImGui::Combo("Shape", &shapeIndex, shapeItems, IM_ARRAYSIZE(shapeItems)))
+        {
+            m_shape = shapeItems[shapeIndex];
+        }
+
         ImGui::InputFloat("Mass", &m_mass);
         ImGui::Checkbox("Is Static", &m_isStatic);
         ImGui::Checkbox("Use Gravity", &m_useGravity);
         ImGui::Checkbox("Use CCD", &m_useCCD);
-        ImGui::InputFloat("Half Extents X", &m_halfExtents.x);
-        ImGui::InputFloat("Half Extents Y", &m_halfExtents.y);
-        ImGui::InputFloat("Half Extents Z", &m_halfExtents.z);
+        if (m_shape == "capsule")
+        {
+            if (ImGui::InputFloat("Radius", &m_halfExtents.x))
+            {
+                m_halfExtents.z = m_halfExtents.x;
+            }
+
+            ImGui::InputFloat("Half Height", &m_halfExtents.y);
+            m_halfExtents.z = m_halfExtents.x;
+        }
+        else
+        {
+            ImGui::InputFloat("Half Extents X", &m_halfExtents.x);
+            ImGui::InputFloat("Half Extents Y", &m_halfExtents.y);
+            ImGui::InputFloat("Half Extents Z", &m_halfExtents.z);
+        }
         ImGui::InputFloat("Center Offset X", &m_centerOffset.x);
         ImGui::InputFloat("Center Offset Y", &m_centerOffset.y);
         ImGui::InputFloat("Center Offset Z", &m_centerOffset.z);
@@ -54,7 +76,7 @@ void ECS::PhysicsComponent::ImGui()
             ImGui::Text("Body Attached: Yes");
             ImGui::Text("Position: %.2f, %.2f, %.2f", pos.x, pos.y, pos.z);
 
-            if (ImGui::Button("Rebuild Box Body"))
+            if (ImGui::Button("Rebuild Physics Body"))
             {
                 CreateBodyFromSettings();
             }
@@ -68,7 +90,7 @@ void ECS::PhysicsComponent::ImGui()
         {
             ImGui::Text("Body Attached: No");
 
-            if (ImGui::Button("Create Box Body"))
+            if (ImGui::Button("Create Physics Body"))
             {
                 CreateBodyFromSettings();
             }
@@ -148,6 +170,31 @@ bool ECS::PhysicsComponent::CreateBodyFromSettings()
         physicsBody = physicsWorld->CreateBoxBody(
             desc,
             { m_halfExtents.x, m_halfExtents.y, m_halfExtents.z }
+        );
+
+        return physicsBody != nullptr;
+    }
+
+    if (m_shape == "capsule")
+    {
+        RigidBodyDesc desc;
+        desc.mass = m_isStatic ? 0.0f : m_mass;
+        desc.isStatic = m_isStatic;
+        desc.position = GetBodyPositionFromTransform();
+        desc.useGravity = m_useGravity;
+        desc.useCCD = m_useCCD;
+
+        float radius = std::max(0.01f, m_halfExtents.x);
+        m_halfExtents.x = radius;
+        m_halfExtents.z = radius;
+        m_halfExtents.y = std::max(radius, m_halfExtents.y);
+        float totalHeight = std::max(radius * 2.0f, m_halfExtents.y * 2.0f);
+        float cylinderHeight = totalHeight - (radius * 2.0f);
+
+        physicsBody = physicsWorld->CreateCapsuleBody(
+            desc,
+            radius,
+            cylinderHeight
         );
 
         return physicsBody != nullptr;

@@ -143,15 +143,64 @@ std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateBoxBody(const RigidBodyD
     return std::make_shared<BulletPhysicsBody>(body);
 }
 
-std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateHeightfieldBody(
-    const RigidBodyDesc& desc,
-    const float* heightData,
-    int width,
-    int length,
-    float gridSpacingX,
-    float gridSpacingZ,
-    float minHeight,
-    float maxHeight)
+std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateCapsuleBody(const RigidBodyDesc& desc, float radius, float height)
+{
+    if (m_world == nullptr)
+        return nullptr;
+
+    radius = std::max(0.01f, radius);
+    height = std::max(0.0f, height);
+
+    btCollisionShape* shape = new btCapsuleShape(radius, height);
+    m_collisionShapes.push_back(shape);
+
+    btTransform startTransform;
+    startTransform.setIdentity();
+    startTransform.setOrigin(ToBtVector3(desc.position));
+
+    btScalar mass = desc.isStatic ? 0.0f : desc.mass;
+    btVector3 localInertia(0.0f, 0.0f, 0.0f);
+
+    if (mass > 0.0f)
+    {
+        shape->calculateLocalInertia(mass, localInertia);
+    }
+
+    btDefaultMotionState* motionState = new btDefaultMotionState(startTransform);
+
+    btRigidBody::btRigidBodyConstructionInfo rigidBodyInfo(
+        mass,
+        motionState,
+        shape,
+        localInertia
+    );
+
+    btRigidBody* body = new btRigidBody(rigidBodyInfo);
+    body->setFriction(0.8f);
+    body->setRestitution(0.0f);
+    body->setAngularFactor(btVector3(0.0f, 0.0f, 0.0f));
+
+    if (mass > 0.0f && desc.useCCD)
+    {
+        body->setCcdMotionThreshold(radius);
+        body->setCcdSweptSphereRadius(radius * 0.8f);
+    }
+
+    m_world->addRigidBody(body);
+
+    if (!desc.useGravity)
+    {
+        body->setGravity(btVector3(0.0f, 0.0f, 0.0f));
+        body->clearForces();
+
+        body->setActivationState(DISABLE_DEACTIVATION);
+        body->activate(true);
+    }
+
+    return std::make_shared<BulletPhysicsBody>(body);
+}
+
+std::shared_ptr<IPhysicsBody> BulletPhysicsWorld::CreateHeightfieldBody(const RigidBodyDesc& desc, const float* heightData, int width, int length, float gridSpacingX, float gridSpacingZ, float minHeight, float maxHeight)
 {
     if (m_world == nullptr || heightData == nullptr || width <= 1 || length <= 1)
         return nullptr;
