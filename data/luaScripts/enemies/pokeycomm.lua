@@ -18,6 +18,8 @@ local fsm = nil
 
 local atkCooldown = 0.02
 local damage = 1
+local cachedPokeyIDs = nil
+local cachedPokeyWave = -1
 
 --FSM setup
 function start()
@@ -371,13 +373,15 @@ function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, funct
 		return
 	end
 
-    for id = minEntitySearchID, maxEntitySearchID do
+    local pokeyIDs = getCachedPokeyIDs()
+	--_, means it doesnt care what the value is lol.
+    for _, id in ipairs(pokeyIDs) do
         local entity = GetEntity(id)
 		
         if isValidPokeyReceiver(entity) then
 			local otherEntity = entity:getID()
             local entityPosition = getEntityPosition(entity)
-			pokeyRandomPos = randomisePosition(alertPosition, 15, otherEntity)
+			local pokeyRandomPos = randomisePosition(alertPosition, 15, otherEntity)
 			
 
             if entityPosition ~= nil and isWithinRadius(searchOrigin, entityPosition, radius) then
@@ -398,6 +402,52 @@ function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, funct
             end
         end
     end
+end
+
+function getCachedPokeyIDs()
+    local completedWave = getCompletedSpawnWave()
+
+    if completedWave ~= nil and completedWave ~= cachedPokeyWave then
+        refreshPokeyCache(completedWave)
+    end
+
+    if cachedPokeyIDs == nil then
+        cachedPokeyIDs = {}
+    end
+
+    return cachedPokeyIDs
+end
+
+function getCompletedSpawnWave()
+    local manager = GetEntityFromName("Game Manager")
+
+    if manager == nil then
+        return nil
+    end
+
+    local managerVars = getScriptComponent(manager, "gamemanagervars")
+    local currentWave = tonumber(managerVars:getGlobal("currentWave").value)
+    local numEnemiesSpawned = tonumber(managerVars:getGlobal("numEnemiesSpawned").value)
+
+    if currentWave > 0 and numEnemiesSpawned >= currentWave * 10 then
+        return currentWave
+    end
+
+    return nil
+end
+
+function refreshPokeyCache(wave)
+    cachedPokeyIDs = {}
+
+    for id = minEntitySearchID, maxEntitySearchID do
+        local entity = GetEntity(id)
+
+        if entity ~= nil and entity:getName() == "Spiky" then
+            table.insert(cachedPokeyIDs, entity:getID())
+        end
+    end
+
+    cachedPokeyWave = wave
 end
 
 
