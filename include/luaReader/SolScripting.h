@@ -112,14 +112,14 @@ public:
 
 
 	/* runByFileName
-	* @author - 
-	* @brief -
-	* @pre -
-	* @post -
-	* @param filename -
-	* @param functionName -
-	* @param entity
-	* @return bool -
+	* @author - Seb D'Alessandro
+	* @brief - runs a file by filename
+	* @pre - file exists 
+	* @post - code is run
+	* @param filename - name of the file to call code from
+	* @param functionName - function to call from filename
+	* @param entity - entity thats assosciated with the file/function to call
+	* @return - void
 	*/
 	void runByFileName(string fileName, string functionName, ECS::Entity* entity);
 

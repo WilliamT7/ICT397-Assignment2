@@ -27,15 +27,22 @@ using std::set;
 class MessageDispatcher {
 
 public:
-
+	
+	/* MessageDispatcher
+	* @author - Seb D'Alessandro
+	* @brief - Default constructor
+	* @pre - N/A
+	* @post - constructs a message dispatcher
+	* @return - void
+	*/
 	MessageDispatcher() = default;
 
 	/* dispatchMessage
 	* @author - Seb D'Alessandro
-	* @brief -
-	* @pre -
-	* @post -
-	* @param - message
+	* @brief - sends a message to an entity if it exists
+	* @pre - N/A
+	* @post - message is sent to an entity by ID
+	* @param message - message to send
 	* @return - void
 	*/
 	void dispatchMessage(telegram& message);
