@@ -2,7 +2,7 @@ local lifeTime = 5.00
 local deltaTime = 0.01
 local spawnMin = -1500
 local spawnMax = 1500
-local spawnHeightOffset = 5
+local spawnHeightOffset = 30
 local terrainSearchMaxID = 100
 local isDead = false
 
