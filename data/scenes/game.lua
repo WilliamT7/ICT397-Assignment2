@@ -15919,7 +15919,7 @@ scene = {
       {
         ModelID = "WATER",
         Name = "MeshRenderer",
-        ShaderID = 1
+        ShaderID = 4
       } --[[table: 00000241BC695E90]]
     } --[[table: 00000241BC694C90]],
     EntityName = "Water Feature"
