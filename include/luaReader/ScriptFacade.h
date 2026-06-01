@@ -18,28 +18,6 @@
 class ScriptFacade {
 
 public:
-	
-	/* run
-	* @author - Seb D'Alessandro
-	* @brief - Parameterised virtual consutrctor for specifying a scriptFile to execute0
-	* @pre - ScriptFile contains the location of a script file and the file name. Both of these are valid
-	* @post The file is executed using whatever scripting libary (lua, sol, etc)
-	* @param file - name of the file to execute
-	* @return - void
-	*/
-	virtual void run(ScriptFile& const file) = 0;
-
-
-	/* run
-	* @author - Seb D'Alessandro
-	* @brief - Parameterised virtual consutrctor for specifying a scriptFile and a name of a function to execute
-	* @pre - ScriptFile contains the location of a script file and the file name. Both of these are valid
-	* @post The function thats in the given file is executed using whatever scripting libary (lua, sol, etc)
-	* @param file - file to search for the function
-	* @param functionName - name of the function to execute
-	* @return - void
-	*/
-	virtual void run(ScriptFile& const file, string functionName) = 0;
 
 
 	//Parameter passing-----------------------------------

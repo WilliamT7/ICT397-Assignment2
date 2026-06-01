@@ -69,36 +69,6 @@ public:
 
 	/* run
 	* @author - Seb D'Alessandro
-	* @brief - Runs a lua file specifed by parameter
-	* @pre - file has the contents of a luafile and is considered valid (i.e. it exists)
-	* @post - Executes a scriptFile using lua/sol
-	* @param file - lua file to run
-	* @return - void
-	* 
-	* @note Reccomended for use for lua files that don't have functions (especially if they come from other .lua files)
-	*/
-	void run(ScriptFile& const file) override;
-
-
-	/* run
-	* @author - Seb D'Alessandro
-	* @brief - Runs a function within a lua script
-	* @pre - file has the contents of a luafile and is considered valid (i.e. it exists), function name exists in file
-	* @post - Executes specifed function thats in file using lua/sol
-	* @param file - lua file to run
-	* @param functionName - name of the function to run
-	* @return - void
-	*
-	* @note Reccomended if you have parameters you need to pass into a function
-	* @note this only runs the specified function, not the file
-	* @note The return value is grabbed via the "GetDataType" methods
-	* @note Will clear out parameters sent once the lua funciton is exectued
-	*/
-	void run(ScriptFile& const file, string functionName) override;
-
-
-	/* run
-	* @author - Seb D'Alessandro
 	* @brief - Runs a function within a lua script and exposes entity component functions
 	* @pre - file has the contents of a luafile and is considered valid (i.e. it exists), function name exists in file
 	* @post - Executes specifed function thats in file using lua/sol
