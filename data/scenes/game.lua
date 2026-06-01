@@ -11147,7 +11147,7 @@ scene = {
       {
         Name = "Transform",
         position_x = 1875.84130859375,
-        position_y = -10.780481338500977,
+        position_y = -7.780481338500977,
         position_z = 661.38702392578125,
         rotation_x = 0,
         rotation_y = 0,
@@ -14927,7 +14927,7 @@ scene = {
       {
         Name = "Transform",
         position_x = -156.04669189453125,
-        position_y = 18.267799377441406,
+        position_y = 17,
         position_z = -334.1737060546875,
         rotation_x = 0,
         rotation_y = 0,
@@ -15539,7 +15539,7 @@ scene = {
       {
         Name = "Transform",
         position_x = 36.305355072021484,
-        position_y = 57.271804809570312,
+        position_y = 56,
         position_z = -597.00885009765625,
         rotation_x = 0,
         rotation_y = 0,
@@ -15575,7 +15575,7 @@ scene = {
       {
         Name = "Transform",
         position_x = 78.490470886230469,
-        position_y = 59.338813781738281,
+        position_y = 58,
         position_z = -611.47344970703125,
         rotation_x = 0,
         rotation_y = 0,
@@ -15719,7 +15719,7 @@ scene = {
       {
         Name = "Transform",
         position_x = 607.4530029296875,
-        position_y = 47.536407470703125,
+        position_y = 48.5,
         position_z = -596.503662109375,
         rotation_x = 0,
         rotation_y = 0,
