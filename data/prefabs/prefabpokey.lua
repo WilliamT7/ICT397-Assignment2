@@ -23,17 +23,17 @@ entity =
       },
       {
         Name = "Physics",
-        halfExtents_x = 1,
+        halfExtents_x = 0.8,
         halfExtents_y = 2,
-        halfExtents_z = 1,
+        halfExtents_z = 0.8,
         centerOffset_x = 0,
-        centerOffset_y = 1,
+        centerOffset_y = 2,
         centerOffset_z = 0,
         isStatic = false,
         useGravity = true,
         useCCD = false,
         mass = 1,
-        shape = "box"
+        shape = "capsule"
       },
       {
         Name = "PhysicsTrigger",
