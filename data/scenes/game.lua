@@ -15923,5 +15923,36 @@ scene = {
       } --[[table: 00000241BC695E90]]
     } --[[table: 00000241BC694C90]],
     EntityName = "Water Feature"
-  } --[[table: 00000241BC695310]]
+  } --[[table: 00000241BC695310]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = 2078.37,
+        position_y = -138.28,
+        position_z = 2010.94,
+        rotation_x = 0,
+        rotation_y = 0,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      },
+      {
+        Name = "Physics",
+        centerOffset_x = 0,
+        centerOffset_y = 0,
+        centerOffset_z = 0,
+        halfExtents_x = 18,
+        halfExtents_y = 1,
+        halfExtents_z = 84,
+        isStatic = true,
+        mass = 1,
+        shape = "box",
+        useGravity = true,
+        useCCD = false
+      }
+    },
+    EntityName = "KiddyPool"
+  }
 } --[[table: 000001BC6BE31010]]
