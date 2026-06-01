@@ -23,25 +23,17 @@ entity =
       },
       {
         Name = "Physics",
-        halfExtents_x = 0.8,
-        halfExtents_y = 2,
-        halfExtents_z = 0.8,
+        halfExtents_x = 3,
+        halfExtents_y = 20,
+        halfExtents_z = 3,
         centerOffset_x = 0,
-        centerOffset_y = 2,
+        centerOffset_y = 20,
         centerOffset_z = 0,
         isStatic = false,
         useGravity = true,
         useCCD = false,
         mass = 1,
         shape = "capsule"
-      },
-      {
-        Name = "PhysicsTrigger",
-        enabled = true,
-        receivesEvents = false,
-        halfExtents_x = 3,
-        halfExtents_y = 20,
-        halfExtents_z = 3
       },
 	  {
 		Name = "FSM"
