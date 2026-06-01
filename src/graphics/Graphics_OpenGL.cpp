@@ -74,14 +74,16 @@ namespace Graphics
 		// now more set up
 		glEnable(GL_DEPTH_TEST);
 
-		// make shader
+		// make shader I NEED TO CHANGE THIS OMFG
 		CreateShader(ShaderType::DEFAULT, "transform.vert.glsl", "texturesandlight.frag.glsl");
 		CreateShader(ShaderType::TWODIMENSION, "2dtransform.vert.glsl", "2dtextures.frag.glsl");
 		CreateShader(ShaderType::PSX, "psx.vert.glsl", "texturesandlight.frag.glsl");
 		CreateShader(ShaderType::PSXANIM, "psxanim.vert.glsl", "texturesandlight.frag.glsl");
+		CreateShader(ShaderType::WATER, "water.vert.glsl", "water.frag.glsl");
 		CreateShader(ShaderType::TERRAIN, "psx.vert.glsl", "terrain_multitexture.frag.glsl");
 		CreateShader(ShaderType::NOLIGHT, "nolight.vert.glsl", "texturesnolight.frag.glsl");	
 		CreateShader(ShaderType::CRTFILTER, "quad.vert.glsl", "crtfilter.frag.glsl");
+		
 
 		ImGui_ImplOpenGL3_Init("#version 330");
 
@@ -237,7 +239,7 @@ namespace Graphics
 
 	//----------------------------------------------
 
-	void GraphicsOpenGL::DrawModel(Model* model, Shader* shader, const ECS::TransformComponent& transform, Animator* animator)
+	void GraphicsOpenGL::DrawModel(Model* model, ShaderType shader, const ECS::TransformComponent& transform, Animator* animator)
 	{
 		for (auto& mesh : model->GetMeshes())
 		{
@@ -291,9 +293,10 @@ namespace Graphics
 
 	//----------------------------------------------
 
-	void GraphicsOpenGL::DrawMesh(Mesh* mesh, Shader* shader, const ECS::TransformComponent& transform, Animator* animator)
+	void GraphicsOpenGL::DrawMesh(Mesh* mesh, ShaderType shader, const ECS::TransformComponent& transform, Animator* animator)
 	{
-		ShaderOpenGL* s = static_cast<ShaderOpenGL*>(shader);
+		Shader* sh = GetShader(shader);
+		ShaderOpenGL* s = static_cast<ShaderOpenGL*>(sh);
 		if (!s) return;
 
 		s->Use();
@@ -314,6 +317,18 @@ namespace Graphics
 			s->SetWorldView(m_model, glm::mat4(1.0f), m_projection2D);
 
 		SetLighting(s);
+
+		// update time
+		s->SetFloat("time", m_continuousTime);
+
+		if (shader == ShaderType::WATER)
+		{
+			glEnable(GL_BLEND);
+			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+			glDepthMask(GL_FALSE);
+			
+		}
 
 		// Bind textures
 		unsigned int diffuseNr = 1;
@@ -336,6 +351,11 @@ namespace Graphics
 		glBindVertexArray(m_meshBuffers[mesh].VAO);
 		glDrawElements(GL_TRIANGLES, mesh->GetIndices().size(), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
+
+		if (shader == ShaderType::WATER)
+		{
+			glDepthMask(GL_TRUE);
+		}
 	}
 
 	//----------------------------------------------
@@ -634,9 +654,17 @@ namespace Graphics
 		transform.position = m_camPos;
 		transform.scale = Vector3(10, 10, 10);
 
-		DrawModel(m_skybox, GetShader(ShaderType::NOLIGHT), transform, nullptr);
+		DrawModel(m_skybox, ShaderType::NOLIGHT, transform, nullptr);
 
 		glDepthMask(GL_TRUE);
+	}
+
+	//----------------------------------------------
+	
+	void GraphicsOpenGL::UpdateTime(float deltaTime)
+	{
+		m_deltaTime = deltaTime;
+		m_continuousTime += deltaTime;
 	}
 
 	//----------------------------------------------

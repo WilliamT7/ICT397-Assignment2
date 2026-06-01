@@ -377,11 +377,11 @@ void ECS::Scene::Render(Graphics::Graphics* graphics)
 	for (int i = 0; i < m_lights.size(); i++)
 		graphics->AddLight(*m_lights[i], *m_lighttransforms[i]);
 
-	for (auto* mesh : m_meshes)
-		mesh->Render(graphics);
-
 	for (auto* terrain : m_terrains)
 		terrain->Render(graphics);
+
+	for (auto* mesh : m_meshes)
+		mesh->Render(graphics);
 
 	for (auto* texture : m_textures)
 		texture->Render(graphics);

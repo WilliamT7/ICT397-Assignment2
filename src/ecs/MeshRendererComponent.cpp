@@ -74,7 +74,7 @@ void ECS::MeshRendererComponent::Render(Graphics::Graphics* graphics)
 	Graphics::Animator* anim = nullptr;
 	if (animator)
 		anim = animator->GetAnimator();
-	graphics->DrawModel(model, graphics->GetShader(ShaderID), *transform, anim);
+	graphics->DrawModel(model, ShaderID, *transform, anim);
 }
 
 //----------------------------------------------
@@ -124,6 +124,7 @@ void ECS::MeshRendererComponent::ImGui()
 		"NOLIGHT",
 		"PSX",
 		"PSXANIM",
+		"WATER"
 	};
 	int shaderSelectedItem = (int)ShaderID;
 

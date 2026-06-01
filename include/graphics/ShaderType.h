@@ -20,6 +20,7 @@ enum class ShaderType
 	NOLIGHT,
 	PSX,
 	PSXANIM,
+	WATER,
 	TWODIMENSION,
 	CRTFILTER,
 	TERRAIN,

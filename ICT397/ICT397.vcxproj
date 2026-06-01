@@ -198,6 +198,8 @@
     <None Include="..\data\shaders\texturesandlight.frag.glsl" />
     <None Include="..\data\shaders\texturesnolight.frag.glsl" />
     <None Include="..\data\shaders\transform.vert.glsl" />
+    <None Include="..\data\shaders\water.frag.glsl" />
+    <None Include="..\data\shaders\water.vert.glsl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

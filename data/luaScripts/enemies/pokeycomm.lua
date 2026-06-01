@@ -16,7 +16,7 @@ local lastKnownPlayerPosition = nil
 
 local fsm = nil
 
-local atkCooldown = 0.5
+local atkCooldown = 0.02
 local damage = 1
 
 --FSM setup
