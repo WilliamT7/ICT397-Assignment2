@@ -8,6 +8,7 @@ local pokeyFollowRadius = 250
 local playerCheckInterval = 0.5
 local playerAlertCooldown = 2.0
 local pokeyFacingYawOffset = 90.0
+local facePlayerInterval = 0.1
 
 
 local hasSeenPlayer = false
@@ -21,6 +22,7 @@ local damage = 1
 local cachedPokeyIDs = nil
 local cachedPokeyWave = -1
 local cachedPlayerID = nil
+local facePlayerTimer = 0.0
 
 --FSM setup
 function start()
@@ -65,7 +67,12 @@ function update()
 	pokeyVariables:setGlobal("playerCheckTimer", tostring(curPlayerCheck))
 	pokeyVariables:setGlobal("playerAlertTimer", tostring(curPlayerAlertCheck))
 
-	facePlayer()
+	facePlayerTimer = facePlayerTimer + getDeltaTime()
+
+	if facePlayerTimer >= facePlayerInterval then
+		facePlayerTimer = 0.0
+		facePlayer()
+	end
 
 end
 
