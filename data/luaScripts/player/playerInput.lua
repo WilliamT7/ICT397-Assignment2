@@ -5,6 +5,33 @@ local playerLinearDamping = 0.6
 local maxUpwardVelocity = 4.0
 local prefab = "prefabtree.lua"
 local playerExtraGravity = -90.0
+local playerPhysics = nil
+local playerCamera = nil
+
+function start()
+	playerPhysics = getPhysics(obj)
+	playerCamera = getCamera(obj)
+
+	if playerPhysics ~= nil then
+		playerPhysics:setLinearDamping(playerLinearDamping)
+	end
+end
+
+function getPlayerPhysics()
+	if playerPhysics == nil then
+		playerPhysics = getPhysics(obj)
+	end
+
+	return playerPhysics
+end
+
+function getPlayerCamera()
+	if playerCamera == nil then
+		playerCamera = getCamera(obj)
+	end
+
+	return playerCamera
+end
 
 function render()
 	local fps = 1.0 / getDeltaTime()
@@ -20,15 +47,14 @@ function update()
 		SetMouseVisible(not currentVisibility)
 	end
 
-	local physics = getPhysics(obj)
-	local camera = getCamera(obj)
+	local physics = getPlayerPhysics()
+	local camera = getPlayerCamera()
 
 	if physics == nil then
 		print("No PhysicsComponent found on this entity")
 		return
 	end
 
-	physics:setLinearDamping(playerLinearDamping)
 	clampUpwardVelocity(physics)
 	physics:addForce(Vector3.new(0, playerExtraGravity, 0))
 
