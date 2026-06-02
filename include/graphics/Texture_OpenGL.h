@@ -37,6 +37,13 @@ namespace Graphics
 		TextureOpenGL(const std::string& path, const std::string& typeName, int wrapS, int wrapT, int minF, int magF) :
 			m_path(path), m_type(typeName), m_wrapS(wrapS), m_wrapT(wrapT), m_minFilter(minF), m_magFilter(magF) {}
 
+		/** ~TextureOpenGL
+		* @author - Kay Bradsell
+		* @brief - destructor
+		*
+		* @pre - TextureOpenGL has been constructed
+		* @post - safely deletes all data
+		**/
 		~TextureOpenGL() override;
 
 		/** Generate Texture

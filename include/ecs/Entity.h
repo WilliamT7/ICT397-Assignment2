@@ -204,6 +204,13 @@ namespace ECS
 		**/
 		void Destroy();
 
+		/** Abort Destroy
+		* @author - Kay Bradsell
+		* @brief - marks the entity to not be deleted
+		*
+		* @pre - entity exists
+		* @post - marks the entity not to be deleted (cancels out Destroy())
+		**/
 		void AbortDestroy();
 
 		/** is Destroy?

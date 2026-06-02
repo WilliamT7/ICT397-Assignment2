@@ -26,6 +26,13 @@ namespace Graphics
 	class Mesh
 	{
 	public:
+		/** Mesh
+		* @author - Kay Bradsell
+		* @brief - Default constructor
+		*
+		* @pre - none
+		* @post - makes Mesh with null values
+		**/
 		Mesh() = default;
 
 		/** Mesh Constructor

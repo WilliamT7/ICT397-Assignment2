@@ -213,6 +213,15 @@ public:
 	*/
 	virtual float GetTime() const = 0;
 
+	/** Get Window Size
+	* @author - Kay Bradsell
+	* @brief - via reference parameters, returns the width and height of this window
+	* @param - int& width
+	* @param - int& height
+	*
+	* @pre - Window has been constructed and initialised
+	* @post - returns the width and height of the window
+	**/
 	virtual void GetWindowSize(int& width, int& height) = 0;
 protected:
 
