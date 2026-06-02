@@ -273,6 +273,7 @@ ECS::Entity* ECS::Scene::GetSpawn(std::string prefabName)
 
 	m_activeEntities.push_back(spawned);
 	m_poolOwner[spawned] = pool;
+	InjectPhysicsWorld(spawned);
 	spawned->Start();
 
 	return spawned;
