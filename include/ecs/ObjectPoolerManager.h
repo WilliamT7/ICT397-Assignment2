@@ -11,9 +11,13 @@
 
 #pragma once
 
+ //----------------------------------------------
+
 #include <unordered_map>
 #include <string>
 #include "ecs/ObjectPooler.h"
+
+//----------------------------------------------
 
 namespace ECS
 {
@@ -67,3 +71,5 @@ namespace ECS
 		std::unordered_map<std::string, ObjectPooler> m_poolers;
 	};
 }
+
+//----------------------------------------------

@@ -1,5 +1,7 @@
 #include "ecs/ObjectPoolerManager.h"
 
+//----------------------------------------------
+
 namespace ECS
 {
 	ObjectPoolerManager& ObjectPoolerManager::Get()
@@ -7,6 +9,8 @@ namespace ECS
 		static ObjectPoolerManager instance;
 		return instance;
 	}
+
+	//----------------------------------------------
 
 	ObjectPooler* ObjectPoolerManager::GetPool(const std::string& name)
 	{
@@ -16,6 +20,8 @@ namespace ECS
 
 		return &it->second;
 	}
+
+	//----------------------------------------------
 
 	ObjectPooler* ObjectPoolerManager::MakePool(sol::state& lua, const std::string& name, int amt)
 	{
@@ -31,6 +37,8 @@ namespace ECS
 		return GetPool(name);
 	}
 
+	//----------------------------------------------
+
 	void ObjectPoolerManager::ClearAll()
 	{
 		for (auto& poolPair : m_poolers)
@@ -41,3 +49,5 @@ namespace ECS
 		m_poolers.clear(); // delete all pools
 	}
 }
+
+//----------------------------------------------

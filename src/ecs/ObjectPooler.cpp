@@ -1,6 +1,8 @@
 #include "ecs/ObjectPooler.h"
 #include <iostream>
 
+//----------------------------------------------
+
 namespace ECS
 {
 	ObjectPooler::ObjectPooler(sol::state& lua, const std::string& name, int poolAmount)
@@ -9,6 +11,8 @@ namespace ECS
 
 		Load(lua, poolAmount);
 	}
+
+	//----------------------------------------------
 
 	void ObjectPooler::Clear()
 	{
@@ -30,6 +34,8 @@ namespace ECS
 		}
 	}
 
+	//----------------------------------------------
+
 	Entity* ObjectPooler::Spawn()
 	{
 		if (m_inactive.empty())
@@ -49,6 +55,8 @@ namespace ECS
 
 		return m_objects[index].get();
 	}
+
+	//----------------------------------------------
 
 	void ObjectPooler::Despawn(Entity* e)
 	{
@@ -78,6 +86,8 @@ namespace ECS
 		m_inactive.push(index);
 	}
 
+	//----------------------------------------------
+
 	void ObjectPooler::Load(sol::state& lua, int amt)
 	{
 		std::string path = "../data/prefabs/";
@@ -102,6 +112,8 @@ namespace ECS
 		}
 	}
 
+	//----------------------------------------------
+
 	std::unique_ptr<Entity> ObjectPooler::LoadInPrefab(sol::table& data)
 	{
 		std::unique_ptr<Entity> e = std::make_unique<Entity>();
@@ -111,3 +123,5 @@ namespace ECS
 		return e;
 	}
 }
+
+//----------------------------------------------

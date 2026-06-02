@@ -12,11 +12,15 @@
 
 #pragma once
 
+ //----------------------------------------------
+
 #include <vector>
 #include <queue>
 #include <string>
 #include <unordered_map>
 #include "ecs/Entity.h"
+
+//----------------------------------------------
 
 namespace ECS
 {
@@ -96,3 +100,5 @@ namespace ECS
 		std::unique_ptr<Entity> LoadInPrefab(sol::table& data);
 	};
 }
+
+//----------------------------------------------
