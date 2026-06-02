@@ -35,9 +35,10 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 
 void ECS::Scene::Clear()
 {
-	m_activeEntities.clear();
 	m_poolOwner.clear();
 	ObjectPoolerManager::Get().ClearAll();
+
+	m_activeEntities.clear();
 	entities.clear();
 	entities.shrink_to_fit();
 	ECS::Entity::ResetIDCounter();

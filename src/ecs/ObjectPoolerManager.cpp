@@ -38,5 +38,7 @@ namespace ECS
 		{
 			poolPair.second.Clear();
 		}
+
+		m_poolers.clear(); // delete all pools
 	}
 }
