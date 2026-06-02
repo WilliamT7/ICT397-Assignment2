@@ -22,7 +22,6 @@ namespace ECS
 		auto it = m_poolers.find(name);
 		if (it != m_poolers.end())
 		{
-			std::cout << "[C++]: Notice: PoolManager: POOL " << name << " ALREADY EXISTS 4HEAD!";
 			return &it->second;
 		}
 

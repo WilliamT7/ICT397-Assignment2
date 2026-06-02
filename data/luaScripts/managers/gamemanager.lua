@@ -60,8 +60,6 @@ function SpawnEnemy(vars)
 		return
 	end
 
-	print(entity:getName())
-
 	local rmsg = telegram.new()
 	rmsg.sender = obj:getID()
 	rmsg.receiver = entity:getID()

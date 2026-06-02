@@ -32,8 +32,6 @@ namespace ECS
 
 	Entity* ObjectPooler::Spawn()
 	{
-		std::cout << "Spawning entity...";
-
 		if (m_inactive.empty())
 		{
 			std::cout << "[C++]: Warning: ObjectPooler: NO MORE ENTITIES FREE! INCREASE LIMIT IN PREFAB!";

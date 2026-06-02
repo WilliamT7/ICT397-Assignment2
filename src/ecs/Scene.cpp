@@ -250,19 +250,14 @@ ECS::Entity* ECS::Scene::GetSpawn(std::string prefabName)
 
 	int poolSize = dat["pooling"].get_or(0);
 
-	std::cout << "\n\nPOOL SIZE " << poolSize << " !\n\n";
-
 	// if no pool, spawn as normal and return
 	if (poolSize <= 0)
 	{
-		std::cout << "\n\nSKIP POOL!";
 		sol::table data = dat["entity"];
 		return NormalSpawn(data);
 	}
 	
 	ObjectPooler* pool = ObjectPoolerManager::Get().MakePool(lua, prefabName, poolSize);
-
-	std::cout << "\n\nGot pool? " << pool << ".";
 
 	Entity* spawned = pool->Spawn();
 
