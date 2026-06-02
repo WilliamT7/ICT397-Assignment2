@@ -1,5 +1,5 @@
 local enemiesPerWave = 20
-local totalWaves = 6
+local totalWaves = 10
 
 function start()
 	local b = GetSpawn("prefabbullet.lua")
