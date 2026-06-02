@@ -41,6 +41,7 @@ function render()
 end
 
 function update()	
+
 	--toggle mouse
 	local currentVisibility = GetMouseVisible()
 	if (GetKeyPress(16)) then-- P
