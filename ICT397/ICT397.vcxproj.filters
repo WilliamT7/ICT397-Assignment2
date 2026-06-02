@@ -217,6 +217,12 @@
     <ClCompile Include="..\src\ecs\EntitySearch.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\ecs\ObjectPooler.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ecs\ObjectPoolerManager.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ecs\AllComponentsInclude.h">
@@ -496,6 +502,12 @@
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ecs\EntitySearch.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\ObjectPooler.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ecs\ObjectPoolerManager.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
   </ItemGroup>

@@ -276,7 +276,7 @@ namespace ECS
 		* @post - All trigger components on the provided entities no longer track entityToRemove as overlapping.
 		* @return - None.
 		**/
-		static void RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<std::unique_ptr<Entity>>& entities);
+		static void RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<ECS::Entity*>& entities);
 
 	private:
 		TransformComponent* transform = nullptr;

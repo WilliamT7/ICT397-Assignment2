@@ -28,6 +28,8 @@ void exposeEntity(sol::state_view& solView) {
 		&ECS::Entity::AddComponentByName,
 		"destroy",
 		&ECS::Entity::Destroy,
+		"abortDestroy",
+		&ECS::Entity::AbortDestroy,
 		"getName",
 		&ECS::Entity::GetName,
 		"getID",
@@ -40,6 +42,7 @@ void exposeEntity(sol::state_view& solView) {
 	solView.set_function("hasScript", &ECS::Entity::HasScriptComponent);
 	solView.set_function("addComponent", &ECS::Entity::AddComponentByName);
 	solView.set_function("destroy", &ECS::Entity::Destroy);
+	solView.set_function("abortDestroy", &ECS::Entity::AbortDestroy);
 	solView.set_function("getName", &ECS::Entity::GetName);
 	solView.set_function("getID", &ECS::Entity::GetID);
 	solView.set_function("retrieveMessage", &ECS::Entity::retreiveMessage);
@@ -463,7 +466,6 @@ void exposeSceneFunctionality(sol::state_view& solView)
 	//Scene functionality------------------------------
 	if (assigned) {
 		// cool functions
-		solView.set_function("Spawn", &ECS::Scene::Spawn, luaEngineLink->getScenePointer());
 		solView.set_function("GetSpawn", &ECS::Scene::GetSpawn, luaEngineLink->getScenePointer());
 		solView.set_function("SaveScene", &ECS::Scene::SaveScene, luaEngineLink->getScenePointer());
 		solView.set_function("LoadScene", &ECS::Scene::LoadScene, luaEngineLink->getScenePointer());

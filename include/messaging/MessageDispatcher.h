@@ -56,14 +56,14 @@ public:
 	* @param entityList - list of entities to link
 	* @return - void
 	*/
-	void linkEntityList(vector<std::unique_ptr<ECS::Entity>>* entityList);
+	void linkEntityList(vector<ECS::Entity*>& entityList);
 
 
 private:
 
 
 	///List of entities to reference when sending a message to a specfic entity
-	vector<std::unique_ptr<ECS::Entity>>* entityList = nullptr;
+	vector<ECS::Entity*>* entityList = nullptr;
 
 
 	/* sendMessage

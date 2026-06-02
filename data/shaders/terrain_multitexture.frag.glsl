@@ -37,6 +37,7 @@ uniform vec3 u_lightMapColor;
 uniform bool u_Wireframe;
 
 float GetLayerWeight(float height, float minH, float maxH, float blendWidth);
+vec4 SampleLayerTexture(int layer, vec2 uv);
 
 void main()
 {
@@ -60,7 +61,7 @@ void main()
         if (u_layerEnabled[i])
         {
             vec2 tiledUV = TexCoord * u_layerTiling[i] + vec2(i * 0.13, i * 0.27);
-            layerColor[i] = texture(u_layerTex[i], tiledUV);
+            layerColor[i] = SampleLayerTexture(i, tiledUV);
             weights[i] = GetLayerWeight(h, u_layerMinHeight[i], u_layerMaxHeight[i], u_blendWidth);
             totalWeight += weights[i];
         }
@@ -81,7 +82,7 @@ void main()
         {
             if (u_layerEnabled[i])
             {
-                baseColor = texture(u_layerTex[i], TexCoord * u_layerTiling[i]);
+                baseColor = SampleLayerTexture(i, TexCoord * u_layerTiling[i]);
                 break;
             }
         }
@@ -110,4 +111,16 @@ float GetLayerWeight(float height, float minH, float maxH, float blendWidth)
     float lower = smoothstep(minH - blendWidth, minH + blendWidth, height);
     float upper = 1.0 - smoothstep(maxH - blendWidth, maxH + blendWidth, height);
     return clamp(lower * upper, 0.0, 1.0);
+}
+
+vec4 SampleLayerTexture(int layer, vec2 uv)
+{
+    if (layer == 0)
+        return texture(u_layerTex[0], uv);
+    if (layer == 1)
+        return texture(u_layerTex[1], uv);
+    if (layer == 2)
+        return texture(u_layerTex[2], uv);
+
+    return texture(u_layerTex[3], uv);
 }

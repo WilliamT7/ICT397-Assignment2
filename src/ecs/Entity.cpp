@@ -279,6 +279,13 @@ void ECS::Entity::Destroy()
 
 //----------------------------------------------
 
+void ECS::Entity::AbortDestroy()
+{
+	m_deleteFlag = false;
+}
+
+//----------------------------------------------
+
 bool ECS::Entity::isDestroy()
 {
 	return m_deleteFlag;
@@ -304,6 +311,10 @@ void Entity::handleMessage(telegram& message) {
 
 	recievedMessage = message;
 	bool runFunction = message.scriptFunctionName != "N/A";
+
+	if (!HasScriptComponent(message.scriptCompName)) {
+		cout << "[C++] handleMessage(), cant find scriptComponent :L\n";
+	}
 
 	if (HasScriptComponent(message.scriptCompName) && runFunction) {
 		

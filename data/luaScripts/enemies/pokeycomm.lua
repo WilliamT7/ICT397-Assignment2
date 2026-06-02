@@ -28,6 +28,12 @@ local pokeyAnimation = nil
 
 --FSM setup
 function start()
+	hasSeenPlayer = false
+	lastKnownPlayerPosition = nil
+	cachedPokeyIDs = nil
+	cachedPokeyWave = -1
+	cachedPlayerID = nil
+	facePlayerTimer = 0.0
 
 	fsm = getFSM(obj)
 	pokeyVariables = getScriptComponent(obj, "testpokeyvars")

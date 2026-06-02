@@ -151,17 +151,17 @@ void ECS::PhysicsTriggerComponent::RemoveOverlap(Entity* entityToRemove)
 	);
 }
 
-void ECS::PhysicsTriggerComponent::RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<std::unique_ptr<Entity>>& entities)
+void ECS::PhysicsTriggerComponent::RemoveEntityFromAllTriggers(Entity* entityToRemove, std::vector<ECS::Entity*>& entities)
 {
 	if (entityToRemove == nullptr)
 		return;
 
 	for (auto& entity : entities)
 	{
-		if (entity.get() == nullptr)
+		if (entity == nullptr)
 			continue;
 
-		if (entity.get() == entityToRemove)
+		if (entity == entityToRemove)
 			continue;
 
 		if (entity->HasComponent<PhysicsTriggerComponent>())

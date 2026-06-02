@@ -8,6 +8,15 @@ local isDead = false
 local terrainEntity = nil
 local terrainComponent = nil
 
+function start()
+	
+	isDead = false
+	terrainEntity = nil
+	terrainComponent = nil
+
+
+end
+
 function randomisePosition()
     local transform = getTransform(obj)
 
@@ -98,6 +107,7 @@ function OnBulletHit()
         end
     end
 
+	
     if deathPosition ~= nil then
         local commmsg = telegram.new()
         commmsg.sender = obj:getID()

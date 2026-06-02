@@ -1,5 +1,10 @@
-local enemiesPerWave = 10
-local totalWaves = 6
+local enemiesPerWave = 20
+local totalWaves = 10
+
+function start()
+	local b = GetSpawn("prefabbullet.lua")
+	b:Destroy()
+end
 
 function update()
 	vars = getScriptComponent(obj, "gamemanagervars")
@@ -49,7 +54,12 @@ function SpawnEnemy(vars)
 	local numSpawned = tonumber(vars:getGlobal("numEnemiesSpawned").value)
 	vars:setGlobal("numEnemiesSpawned", tostring(numSpawned + 1))
 	local entity = GetSpawn("prefabpokey.lua")
-	
+
+	if (entity == nil) then
+		print("WOOPS!")
+		return
+	end
+
 	local rmsg = telegram.new()
 	rmsg.sender = obj:getID()
 	rmsg.receiver = entity:getID()

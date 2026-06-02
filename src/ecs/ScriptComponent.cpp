@@ -56,7 +56,6 @@ void ECS::ScriptComponent::runFunction(const string& const functionName) {
 
 void ECS::ScriptComponent::Update(float deltaTime) {
 
-
 	if (scriptAssigned && hasUpdate) {
 		scripting->runLoaded(luaFile, "update", entity);
 	}

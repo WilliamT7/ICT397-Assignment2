@@ -4,6 +4,7 @@ local trigger = nil
 
 function start()
     trigger = getPhysicsTrigger(obj)
+    age = 0.0
 end
 
 function getBulletTrigger()

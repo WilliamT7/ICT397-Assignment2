@@ -21,13 +21,16 @@ void MessageDispatcher::dispatchMessage(telegram& message) {
 	if (recieverIndex != -1) {
 		sendMessage(recieverIndex, message);
 	}
+	else {
+		cout << "[C++] MessageDispatcher Failed to send message to entity " << message.reciever << "\n";
+	}
 }
 
 //------------------------------------------------------
 
-void MessageDispatcher::linkEntityList(vector<std::unique_ptr<ECS::Entity>>* nEntityList) {
+void MessageDispatcher::linkEntityList(vector<ECS::Entity*>& nEntityList) {
 
-	entityList = nEntityList;
+	entityList = &nEntityList;
 }
 
 

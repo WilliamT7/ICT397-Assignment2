@@ -17,7 +17,6 @@ ECS::FSMComponent::FSMComponent() {
 
 //-----------------------------------
 void ECS::FSMComponent::Update(float deltaTime) {
-
 	Fsm.update();
 }
 

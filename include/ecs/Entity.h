@@ -204,6 +204,8 @@ namespace ECS
 		**/
 		void Destroy();
 
+		void AbortDestroy();
+
 		/** is Destroy?
 		* @author - Kay Bradsell
 		* @brief - Checks and returns if the entity is marked for deletion
