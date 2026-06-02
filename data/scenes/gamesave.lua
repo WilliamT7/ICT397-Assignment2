@@ -12,29 +12,29 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50BF70]],
+      } --[[table: 0000025F41964820]],
       {
         Name = "Script",
         currentWave = "10",
         elapsedTime = "0.0",
         fileName = "gamemanagervars.lua",
         filePath = "..\\data\\luaScripts\\managers\\",
-        numEnemiesLeft = "200",
+        numEnemiesLeft = "68",
         numEnemiesSpawned = "200"
-      } --[[table: 00000280FF50B1F0]],
+      } --[[table: 0000025F419644E0]],
       {
         Name = "Script",
         fileName = "gamemanager.lua",
         filePath = "..\\data\\luaScripts\\managers\\"
-      } --[[table: 00000280FF50C770]],
+      } --[[table: 0000025F41964BA0]],
       {
         Name = "Script",
         fileName = "scenesaveload.lua",
         filePath = "..\\data\\luaScripts\\scene\\"
-      } --[[table: 00000280FF50C870]]
-    } --[[table: 00000280FF50BD70]],
+      } --[[table: 0000025F41964320]]
+    } --[[table: 0000025F41964260]],
     EntityName = "Game Manager"
-  } --[[table: 00000280FF50BCF0]],
+  } --[[table: 0000025F419650A0]],
   {
     Components = {
       {
@@ -48,7 +48,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50C370]],
+      } --[[table: 0000025F41965CA0]],
       {
         Name = "Lighting",
         ambient_b = 0.33333331346511841,
@@ -67,34 +67,34 @@ scene = {
         specular_g = 0.67786425352096558,
         specular_r = 0.7598038911819458,
         type = "DIRECTIONAL"
-      } --[[table: 00000280FF50CB30]]
-    } --[[table: 00000280FF50CD30]],
+      } --[[table: 0000025F419657A0]]
+    } --[[table: 0000025F41966060]],
     EntityName = "Directional Lighting"
-  } --[[table: 00000280FF50CE70]],
+  } --[[table: 0000025F41965DA0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 503.28750610351562,
-        position_y = 37.841632843017578,
-        position_z = -303.08511352539062,
+        position_x = 891.8284912109375,
+        position_y = -12.266983985900879,
+        position_z = 1147.673828125,
         rotation_x = 0,
         rotation_y = -90,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50C930]],
+      } --[[table: 0000025F419656E0]],
       {
         Name = "Camera",
         far_plane = 2000,
         near_plane = 0.10000000149011612,
-        pitch = -88.549995422363281,
-        position_x = 503.28750610351562,
-        position_y = 42.841632843017578,
-        position_z = -303.08511352539062,
-        yaw = 1748.1990966796875
-      } --[[table: 00000280FF50C7B0]],
+        pitch = -88.750007629394531,
+        position_x = 891.8284912109375,
+        position_y = -7.2669839859008789,
+        position_z = 1147.673828125,
+        yaw = 1752.7540283203125
+      } --[[table: 0000025F41965720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -108,7 +108,7 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50CF30]],
+      } --[[table: 0000025F419651E0]],
       {
         Name = "PhysicsTrigger",
         enabled = true,
@@ -116,36 +116,36 @@ scene = {
         halfExtents_y = 10,
         halfExtents_z = 1.2000000476837158,
         receivesEvents = true
-      } --[[table: 00000280FF50C7F0]],
+      } --[[table: 0000025F41965FA0]],
       {
         Name = "Script",
         fileName = "playerInput.lua",
         filePath = "..\\data\\luaScripts\\player\\"
-      } --[[table: 00000280FF50CEB0]],
+      } --[[table: 0000025F41965A60]],
       {
         Name = "Script",
         fileName = "bulletSpawner.lua",
         filePath = "..\\data\\luaScripts\\weapons\\"
-      } --[[table: 00000280FF50C830]],
+      } --[[table: 0000025F41965FE0]],
       {
         Name = "Script",
         fileName = "physicsTriggers.lua",
         filePath = "..\\data\\luaScripts\\physicstriggers\\"
-      } --[[table: 00000280FF50C3F0]],
+      } --[[table: 0000025F41965260]],
       {
         Name = "Script",
         fileName = "playerstatsvars.lua",
         filePath = "..\\data\\luaScripts\\player\\",
-        hp = "10"
-      } --[[table: 00000280FF50D130]],
+        hp = "7"
+      } --[[table: 0000025F419653A0]],
       {
         Name = "Script",
         fileName = "playerstats.lua",
         filePath = "..\\data\\luaScripts\\player\\"
-      } --[[table: 00000280FF50C8F0]]
-    } --[[table: 00000280FF50C730]],
+      } --[[table: 0000025F41965420]]
+    } --[[table: 0000025F419659A0]],
     EntityName = "Player"
-  } --[[table: 00000280FF50C3B0]],
+  } --[[table: 0000025F41965C20]],
   {
     Components = {
       {
@@ -159,7 +159,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50C970]],
+      } --[[table: 0000025F419668A0]],
       {
         Name = "Terrain",
         is_wireframe = false,
@@ -168,15 +168,15 @@ scene = {
         scale_y = 1,
         scale_z = 12,
         seed = 42
-      } --[[table: 00000280FF50C2B0]],
+      } --[[table: 0000025F41966EA0]],
       {
         Name = "Script",
         fileName = "terraintoggle.lua",
         filePath = "..\\data\\luaScripts\\terrain\\"
-      } --[[table: 00000280FF50C9B0]]
-    } --[[table: 00000280FF50C4F0]],
+      } --[[table: 0000025F41966FA0]]
+    } --[[table: 0000025F419667A0]],
     EntityName = "Terrain"
-  } --[[table: 00000280FF50C630]],
+  } --[[table: 0000025F419655E0]],
   {
     Components = {
       {
@@ -190,7 +190,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50CF70]],
+      } --[[table: 0000025F41966A60]],
       {
         Name = "TextureRenderer",
         TextureID = "Ketchup",
@@ -199,10 +199,10 @@ scene = {
         position_y = 0,
         size_x = 0.5,
         size_y = 0.5
-      } --[[table: 00000280FF50C430]]
-    } --[[table: 00000280FF50CC30]],
+      } --[[table: 0000025F41966FE0]]
+    } --[[table: 0000025F41966560]],
     EntityName = "Gun"
-  } --[[table: 00000280FF50CAF0]],
+  } --[[table: 0000025F41966E20]],
   {
     Components = {
       {
@@ -216,7 +216,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50C270]],
+      } --[[table: 0000025F419670A0]],
       {
         Name = "TextureRenderer",
         TextureID = "Help Manual",
@@ -225,15 +225,15 @@ scene = {
         position_y = 0.21999979019165039,
         size_x = 0.27000001072883606,
         size_y = 0.5
-      } --[[table: 00000280FF50CDB0]],
+      } --[[table: 0000025F41966260]],
       {
         Name = "Script",
         fileName = "displayTexture.lua",
         filePath = "..\\data\\luaScripts\\ui\\"
-      } --[[table: 00000280FF50CC70]]
-    } --[[table: 00000280FF50C470]],
+      } --[[table: 0000025F41966B20]]
+    } --[[table: 0000025F419661A0]],
     EntityName = "Help Manual"
-  } --[[table: 00000280FF50CA70]],
+  } --[[table: 0000025F41966AE0]],
   {
     Components = {
       {
@@ -247,7 +247,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50D0F0]],
+      } --[[table: 0000025F41967720]],
       {
         Name = "TextureRenderer",
         TextureID = "Crosshair",
@@ -256,10 +256,10 @@ scene = {
         position_y = 0.5,
         size_x = 0.004999999888241291,
         size_y = 0.0099999997764825821
-      } --[[table: 00000280FF50D070]]
-    } --[[table: 00000280FF50C4B0]],
+      } --[[table: 0000025F41967220]]
+    } --[[table: 0000025F41968120]],
     EntityName = "Crosshair"
-  } --[[table: 00000280FF50CCF0]],
+  } --[[table: 0000025F41966420]],
   {
     Components = {
       {
@@ -273,7 +273,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50CD70]],
+      } --[[table: 0000025F41967C60]],
       {
         Name = "TextureRenderer",
         TextureID = "End Screen",
@@ -282,15 +282,15 @@ scene = {
         position_y = 0,
         size_x = 1,
         size_y = 1
-      } --[[table: 00000280FF50CDF0]],
+      } --[[table: 0000025F41967460]],
       {
         Name = "Script",
         fileName = "endScreen.lua",
         filePath = "..\\data\\luaScripts\\ui\\"
-      } --[[table: 00000280FF50C1F0]]
-    } --[[table: 00000280FF50C1B0]],
+      } --[[table: 0000025F41967660]]
+    } --[[table: 0000025F419679A0]],
     EntityName = "End Screen"
-  } --[[table: 00000280FF50C170]],
+  } --[[table: 0000025F419673E0]],
   {
     Components = {
       {
@@ -304,7 +304,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50D630]],
+      } --[[table: 0000025F41967C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -318,10 +318,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50D670]]
-    } --[[table: 00000280FF50D730]],
+      } --[[table: 0000025F419678A0]]
+    } --[[table: 0000025F41967AE0]],
     EntityName = "Wall Left"
-  } --[[table: 00000280FF50C5B0]],
+  } --[[table: 0000025F41967820]],
   {
     Components = {
       {
@@ -335,7 +335,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50D430]],
+      } --[[table: 0000025F41967A60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -349,10 +349,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50D370]]
-    } --[[table: 00000280FF50D830]],
+      } --[[table: 0000025F41967B60]]
+    } --[[table: 0000025F41967A20]],
     EntityName = "Wall Right"
-  } --[[table: 00000280FF50DFB0]],
+  } --[[table: 0000025F41967CE0]],
   {
     Components = {
       {
@@ -366,7 +366,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50D4F0]],
+      } --[[table: 0000025F41968B20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -380,10 +380,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50DFF0]]
-    } --[[table: 00000280FF50D270]],
+      } --[[table: 0000025F41968F20]]
+    } --[[table: 0000025F41968EA0]],
     EntityName = "Wall Front"
-  } --[[table: 00000280FF50DDB0]],
+  } --[[table: 0000025F41968E60]],
   {
     Components = {
       {
@@ -397,7 +397,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280FF50DDF0]],
+      } --[[table: 0000025F41969020]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -411,10 +411,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50D6B0]]
-    } --[[table: 00000280FF50D230]],
+      } --[[table: 0000025F41969060]]
+    } --[[table: 0000025F419681E0]],
     EntityName = "Wall Back"
-  } --[[table: 00000280FF50D530]],
+  } --[[table: 0000025F41968FE0]],
   {
     Components = {
       {
@@ -428,12 +428,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50D170]],
+      } --[[table: 0000025F419684E0]],
       {
         ModelID = "POOL",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50D1B0]],
+      } --[[table: 0000025F41968520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -447,10 +447,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50DC30]]
-    } --[[table: 00000280FF50D2B0]],
+      } --[[table: 0000025F41968560]]
+    } --[[table: 0000025F41968320]],
     EntityName = "KiddyPool"
-  } --[[table: 00000280FF50DF30]],
+  } --[[table: 0000025F419682E0]],
   {
     Components = {
       {
@@ -464,12 +464,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50D870]],
+      } --[[table: 0000025F419686A0]],
       {
         ModelID = "POOL",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50DEF0]],
+      } --[[table: 0000025F419695E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -483,10 +483,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50DB30]]
-    } --[[table: 00000280FF50D2F0]],
+      } --[[table: 0000025F41969C60]]
+    } --[[table: 0000025F41968620]],
     EntityName = "KiddyPool"
-  } --[[table: 00000280FF50E130]],
+  } --[[table: 0000025F419685E0]],
   {
     Components = {
       {
@@ -500,12 +500,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50D9B0]],
+      } --[[table: 0000025F41969F20]],
       {
         ModelID = "POOL",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50D330]],
+      } --[[table: 0000025F41969FA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -519,10 +519,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50DE30]]
-    } --[[table: 00000280FF50D8F0]],
+      } --[[table: 0000025F41969360]]
+    } --[[table: 0000025F41969660]],
     EntityName = "KiddyPool"
-  } --[[table: 00000280FF50D8B0]],
+  } --[[table: 0000025F4196A120]],
   {
     Components = {
       {
@@ -536,12 +536,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50DAB0]],
+      } --[[table: 0000025F419697A0]],
       {
         ModelID = "POOL",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50DCF0]],
+      } --[[table: 0000025F41969220]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -555,10 +555,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50D7B0]]
-    } --[[table: 00000280FF50E0F0]],
+      } --[[table: 0000025F419694A0]]
+    } --[[table: 0000025F41969420]],
     EntityName = "KiddyPool"
-  } --[[table: 00000280FF50D930]],
+  } --[[table: 0000025F419691E0]],
   {
     Components = {
       {
@@ -572,12 +572,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50DD30]],
+      } --[[table: 0000025F41969AA0]],
       {
         ModelID = "POOL",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50E070]],
+      } --[[table: 0000025F41969B20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -591,10 +591,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50D9F0]]
-    } --[[table: 00000280FF50DA70]],
+      } --[[table: 0000025F4196ADA0]]
+    } --[[table: 0000025F41969960]],
     EntityName = "KiddyPool"
-  } --[[table: 00000280FF50D970]],
+  } --[[table: 0000025F41969860]],
   {
     Components = {
       {
@@ -608,12 +608,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50DAF0]],
+      } --[[table: 0000025F4196A9E0]],
       {
         ModelID = "POOL",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50DE70]],
+      } --[[table: 0000025F4196A1A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -627,10 +627,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50D470]]
-    } --[[table: 00000280FF50DC70]],
+      } --[[table: 0000025F4196A3E0]]
+    } --[[table: 0000025F4196A520]],
     EntityName = "KiddyPool"
-  } --[[table: 00000280FF50DA30]],
+  } --[[table: 0000025F4196AEA0]],
   {
     Components = {
       {
@@ -644,12 +644,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50DBF0]],
+      } --[[table: 0000025F4196A220]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50DCB0]],
+      } --[[table: 0000025F4196B020]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -663,10 +663,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50DD70]]
-    } --[[table: 00000280FF50D4B0]],
+      } --[[table: 0000025F4196A7E0]]
+    } --[[table: 0000025F4196AFA0]],
     EntityName = "Palm Tree"
-  } --[[table: 00000280FF50DEB0]],
+  } --[[table: 0000025F4196A760]],
   {
     Components = {
       {
@@ -680,12 +680,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50D5B0]],
+      } --[[table: 0000025F4196A560]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50EFB0]],
+      } --[[table: 0000025F4196AB20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -699,10 +699,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E870]]
-    } --[[table: 00000280FF50E030]],
+      } --[[table: 0000025F4196A5E0]]
+    } --[[table: 0000025F4196A3A0]],
     EntityName = "Palm Tree"
-  } --[[table: 00000280FF50D570]],
+  } --[[table: 0000025F4196B0A0]],
   {
     Components = {
       {
@@ -716,12 +716,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50EFF0]],
+      } --[[table: 0000025F4196B5E0]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50E6B0]],
+      } --[[table: 0000025F4196BF60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -735,10 +735,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E930]]
-    } --[[table: 00000280FF50E2B0]],
+      } --[[table: 0000025F4196C120]]
+    } --[[table: 0000025F4196B6E0]],
     EntityName = "Palm Tree"
-  } --[[table: 00000280FF50E4B0]],
+  } --[[table: 0000025F4196AA60]],
   {
     Components = {
       {
@@ -752,12 +752,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50E2F0]],
+      } --[[table: 0000025F4196B720]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50EF30]],
+      } --[[table: 0000025F4196BA60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -771,10 +771,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E970]]
-    } --[[table: 00000280FF50ECF0]],
+      } --[[table: 0000025F4196B6A0]]
+    } --[[table: 0000025F4196B2E0]],
     EntityName = "Palm Tree"
-  } --[[table: 00000280FF50EEF0]],
+  } --[[table: 0000025F4196B160]],
   {
     Components = {
       {
@@ -788,12 +788,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50E570]],
+      } --[[table: 0000025F4196B7A0]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50E470]],
+      } --[[table: 0000025F4196B7E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -807,10 +807,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50EEB0]]
-    } --[[table: 00000280FF50F070]],
+      } --[[table: 0000025F4196BBA0]]
+    } --[[table: 0000025F4196C020]],
     EntityName = "Palm Tree"
-  } --[[table: 00000280FF50F030]],
+  } --[[table: 0000025F4196BFE0]],
   {
     Components = {
       {
@@ -824,12 +824,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50EE30]],
+      } --[[table: 0000025F4196B9A0]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50E830]],
+      } --[[table: 0000025F4196BCA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -843,10 +843,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E8B0]]
-    } --[[table: 00000280FF50E9B0]],
+      } --[[table: 0000025F4196C6E0]]
+    } --[[table: 0000025F4196B960]],
     EntityName = "Palm Tree"
-  } --[[table: 00000280FF50E530]],
+  } --[[table: 0000025F4196B8A0]],
   {
     Components = {
       {
@@ -860,12 +860,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50E430]],
+      } --[[table: 0000025F4196CD60]],
       {
         ModelID = "PALM TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50EAF0]],
+      } --[[table: 0000025F4196CE20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -879,10 +879,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E5B0]]
-    } --[[table: 00000280FF50E630]],
+      } --[[table: 0000025F4196CF20]]
+    } --[[table: 0000025F4196CB20]],
     EntityName = "Palm Tree"
-  } --[[table: 00000280FF50F0F0]],
+  } --[[table: 0000025F4196CBE0]],
   {
     Components = {
       {
@@ -896,12 +896,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50F130]],
+      } --[[table: 0000025F4196D060]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50EB70]],
+      } --[[table: 0000025F4196D0E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -915,10 +915,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E9F0]]
-    } --[[table: 00000280FF50EF70]],
+      } --[[table: 0000025F4196C160]]
+    } --[[table: 0000025F4196D020]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50E8F0]],
+  } --[[table: 0000025F4196C420]],
   {
     Components = {
       {
@@ -932,12 +932,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50EA30]],
+      } --[[table: 0000025F4196C7A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50E1F0]],
+      } --[[table: 0000025F4196C260]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -951,10 +951,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50EDF0]]
-    } --[[table: 00000280FF50E330]],
+      } --[[table: 0000025F4196C360]]
+    } --[[table: 0000025F4196C1E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50E1B0]],
+  } --[[table: 0000025F4196C760]],
   {
     Components = {
       {
@@ -968,12 +968,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50E370]],
+      } --[[table: 0000025F4196C5A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50ED30]],
+      } --[[table: 0000025F4196D260]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -987,10 +987,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E670]]
-    } --[[table: 00000280FF50EBB0]],
+      } --[[table: 0000025F4196E020]]
+    } --[[table: 0000025F4196C560]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50E5F0]],
+  } --[[table: 0000025F4196C520]],
   {
     Components = {
       {
@@ -1004,12 +1004,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50E770]],
+      } --[[table: 0000025F4196DA20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50E3F0]],
+      } --[[table: 0000025F4196DA60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1023,10 +1023,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50E7B0]]
-    } --[[table: 00000280FF50E3B0]],
+      } --[[table: 0000025F4196DBE0]]
+    } --[[table: 0000025F4196D5A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50EA70]],
+  } --[[table: 0000025F4196E060]],
   {
     Components = {
       {
@@ -1040,12 +1040,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50EC70]],
+      } --[[table: 0000025F4196DC20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50ECB0]],
+      } --[[table: 0000025F4196E120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1059,10 +1059,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50ED70]]
-    } --[[table: 00000280FF50EBF0]],
+      } --[[table: 0000025F4196D6A0]]
+    } --[[table: 0000025F4196DE60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50EAB0]],
+  } --[[table: 0000025F4196D460]],
   {
     Components = {
       {
@@ -1076,12 +1076,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF510030]],
+      } --[[table: 0000025F4196D320]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50FAB0]],
+      } --[[table: 0000025F4196D3A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1095,10 +1095,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F4F0]]
-    } --[[table: 00000280FF510070]],
+      } --[[table: 0000025F4196D4A0]]
+    } --[[table: 0000025F4196D720]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50EE70]],
+  } --[[table: 0000025F4196DCA0]],
   {
     Components = {
       {
@@ -1112,12 +1112,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50F870]],
+      } --[[table: 0000025F4196E1A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5100F0]],
+      } --[[table: 0000025F4196E9A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1131,10 +1131,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F4B0]]
-    } --[[table: 00000280FF50F3B0]],
+      } --[[table: 0000025F4196F020]]
+    } --[[table: 0000025F4196DDA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5100B0]],
+  } --[[table: 0000025F4196DD60]],
   {
     Components = {
       {
@@ -1148,12 +1148,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50FEB0]],
+      } --[[table: 0000025F4196EBE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50F170]],
+      } --[[table: 0000025F4196EAE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1167,10 +1167,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50FBF0]]
-    } --[[table: 00000280FF510130]],
+      } --[[table: 0000025F4196E9E0]]
+    } --[[table: 0000025F4196E820]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50F2F0]],
+  } --[[table: 0000025F4196E3A0]],
   {
     Components = {
       {
@@ -1184,12 +1184,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50F230]],
+      } --[[table: 0000025F4196EC60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50F470]],
+      } --[[table: 0000025F4196EB20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1203,10 +1203,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F1B0]]
-    } --[[table: 00000280FF50F7B0]],
+      } --[[table: 0000025F4196F0E0]]
+    } --[[table: 0000025F4196E3E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50F6B0]],
+  } --[[table: 0000025F4196E860]],
   {
     Components = {
       {
@@ -1220,12 +1220,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50F8F0]],
+      } --[[table: 0000025F4196E2A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50F1F0]],
+      } --[[table: 0000025F4196E2E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1239,10 +1239,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F270]]
-    } --[[table: 00000280FF50F8B0]],
+      } --[[table: 0000025F4196E320]]
+    } --[[table: 0000025F4196E1E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50FB70]],
+  } --[[table: 0000025F4196E5A0]],
   {
     Components = {
       {
@@ -1256,12 +1256,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50F370]],
+      } --[[table: 0000025F4196FFA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50FFB0]],
+      } --[[table: 0000025F419700E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1275,10 +1275,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F3F0]]
-    } --[[table: 00000280FF50FCF0]],
+      } --[[table: 0000025F4196F7E0]]
+    } --[[table: 0000025F4196F1E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50F770]],
+  } --[[table: 0000025F4196F7A0]],
   {
     Components = {
       {
@@ -1292,12 +1292,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50FA70]],
+      } --[[table: 0000025F41970120]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50F6F0]],
+      } --[[table: 0000025F4196F3E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1311,10 +1311,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F430]]
-    } --[[table: 00000280FF50F670]],
+      } --[[table: 0000025F4196F420]]
+    } --[[table: 0000025F4196F360]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50F830]],
+  } --[[table: 0000025F4196FFE0]],
   {
     Components = {
       {
@@ -1328,12 +1328,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50F5B0]],
+      } --[[table: 0000025F4196F520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50FBB0]],
+      } --[[table: 0000025F4196F5A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1347,10 +1347,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F5F0]]
-    } --[[table: 00000280FF50F930]],
+      } --[[table: 0000025F4196F9E0]]
+    } --[[table: 0000025F4196F4E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50F570]],
+  } --[[table: 0000025F41970020]],
   {
     Components = {
       {
@@ -1364,12 +1364,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50F9B0]],
+      } --[[table: 0000025F419701A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50FDB0]],
+      } --[[table: 0000025F41970720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1383,10 +1383,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50F9F0]]
-    } --[[table: 00000280FF50FDF0]],
+      } --[[table: 0000025F41970FA0]]
+    } --[[table: 0000025F4196F9A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50F970]],
+  } --[[table: 0000025F4196F920]],
   {
     Components = {
       {
@@ -1400,12 +1400,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50FCB0]],
+      } --[[table: 0000025F41970BE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50FC70]],
+      } --[[table: 0000025F41970E20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1419,10 +1419,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50FD30]]
-    } --[[table: 00000280FF50FB30]],
+      } --[[table: 0000025F419704A0]]
+    } --[[table: 0000025F41970A60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50FC30]],
+  } --[[table: 0000025F419703E0]],
   {
     Components = {
       {
@@ -1436,12 +1436,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF50FEF0]],
+      } --[[table: 0000025F419704E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF50FFF0]],
+      } --[[table: 0000025F41970560]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1455,10 +1455,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF50FF30]]
-    } --[[table: 00000280FF50FE70]],
+      } --[[table: 0000025F419709E0]]
+    } --[[table: 0000025F41970F60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF50FE30]],
+  } --[[table: 0000025F41970EE0]],
   {
     Components = {
       {
@@ -1472,12 +1472,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511070]],
+      } --[[table: 0000025F41970E60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5104F0]],
+      } --[[table: 0000025F41970C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1491,10 +1491,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5108B0]]
-    } --[[table: 00000280FF510DF0]],
+      } --[[table: 0000025F41970FE0]]
+    } --[[table: 0000025F41970260]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510530]],
+  } --[[table: 0000025F419705E0]],
   {
     Components = {
       {
@@ -1508,12 +1508,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5103B0]],
+      } --[[table: 0000025F41971EA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF510A70]],
+      } --[[table: 0000025F419720A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1527,10 +1527,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF510FF0]]
-    } --[[table: 00000280FF5105B0]],
+      } --[[table: 0000025F41971660]]
+    } --[[table: 0000025F41972060]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5102B0]],
+  } --[[table: 0000025F41971760]],
   {
     Components = {
       {
@@ -1544,12 +1544,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511130]],
+      } --[[table: 0000025F41971820]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF511030]],
+      } --[[table: 0000025F419711E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1563,10 +1563,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF510770]]
-    } --[[table: 00000280FF510170]],
+      } --[[table: 0000025F419712A0]]
+    } --[[table: 0000025F41972120]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510730]],
+  } --[[table: 0000025F41971520]],
   {
     Components = {
       {
@@ -1580,12 +1580,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5101B0]],
+      } --[[table: 0000025F41971360]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF510D30]],
+      } --[[table: 0000025F419713A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1599,10 +1599,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5101F0]]
-    } --[[table: 00000280FF5106B0]],
+      } --[[table: 0000025F41971960]]
+    } --[[table: 0000025F41971860]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5102F0]],
+  } --[[table: 0000025F41971AA0]],
   {
     Components = {
       {
@@ -1616,12 +1616,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5108F0]],
+      } --[[table: 0000025F419729E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF510B30]],
+      } --[[table: 0000025F41972A60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1635,10 +1635,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF510270]]
-    } --[[table: 00000280FF510B70]],
+      } --[[table: 0000025F41972B20]]
+    } --[[table: 0000025F41971A60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5109B0]],
+  } --[[table: 0000025F41971A20]],
   {
     Components = {
       {
@@ -1652,12 +1652,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF510930]],
+      } --[[table: 0000025F41972F60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5106F0]],
+      } --[[table: 0000025F41972C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1671,10 +1671,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5107F0]]
-    } --[[table: 00000280FF5107B0]],
+      } --[[table: 0000025F41972FA0]]
+    } --[[table: 0000025F419722E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510330]],
+  } --[[table: 0000025F41972BE0]],
   {
     Components = {
       {
@@ -1688,12 +1688,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF510970]],
+      } --[[table: 0000025F41973020]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF510C30]],
+      } --[[table: 0000025F41972220]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1707,10 +1707,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5109F0]]
-    } --[[table: 00000280FF510830]],
+      } --[[table: 0000025F41972360]]
+    } --[[table: 0000025F419724E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510430]],
+  } --[[table: 0000025F41972F20]],
   {
     Components = {
       {
@@ -1724,12 +1724,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF510EB0]],
+      } --[[table: 0000025F419726A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF510AB0]],
+      } --[[table: 0000025F41972520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1743,10 +1743,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF510AF0]]
-    } --[[table: 00000280FF5104B0]],
+      } --[[table: 0000025F419725A0]]
+    } --[[table: 0000025F41972720]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510470]],
+  } --[[table: 0000025F419723E0]],
   {
     Components = {
       {
@@ -1760,12 +1760,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF510C70]],
+      } --[[table: 0000025F419736A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5110B0]],
+      } --[[table: 0000025F419737E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1779,10 +1779,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF510CB0]]
-    } --[[table: 00000280FF510BF0]],
+      } --[[table: 0000025F41973F60]]
+    } --[[table: 0000025F41973E60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510670]],
+  } --[[table: 0000025F41973260]],
   {
     Components = {
       {
@@ -1796,12 +1796,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF510E30]],
+      } --[[table: 0000025F41973BE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF510E70]],
+      } --[[table: 0000025F41973320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1815,10 +1815,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5110F0]]
-    } --[[table: 00000280FF510DB0]],
+      } --[[table: 0000025F419734A0]]
+    } --[[table: 0000025F41973820]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510D70]],
+  } --[[table: 0000025F419731E0]],
   {
     Components = {
       {
@@ -1832,12 +1832,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF510FB0]],
+      } --[[table: 0000025F41973AA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5114B0]],
+      } --[[table: 0000025F41974020]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1851,10 +1851,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511330]]
-    } --[[table: 00000280FF510F70]],
+      } --[[table: 0000025F41973BA0]]
+    } --[[table: 0000025F41973A60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF510F30]],
+  } --[[table: 0000025F41973CA0]],
   {
     Components = {
       {
@@ -1868,12 +1868,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5116F0]],
+      } --[[table: 0000025F41973460]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5115F0]],
+      } --[[table: 0000025F419740A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1887,10 +1887,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5113F0]]
-    } --[[table: 00000280FF511FB0]],
+      } --[[table: 0000025F41974420]]
+    } --[[table: 0000025F41974060]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5120B0]],
+  } --[[table: 0000025F41973420]],
   {
     Components = {
       {
@@ -1904,12 +1904,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511B70]],
+      } --[[table: 0000025F419744E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF511470]],
+      } --[[table: 0000025F41974560]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1923,10 +1923,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5112F0]]
-    } --[[table: 00000280FF511530]],
+      } --[[table: 0000025F41974AE0]]
+    } --[[table: 0000025F41974CE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511670]],
+  } --[[table: 0000025F41974A60]],
   {
     Components = {
       {
@@ -1940,12 +1940,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511DB0]],
+      } --[[table: 0000025F419742A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF511BF0]],
+      } --[[table: 0000025F41974460]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1959,10 +1959,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511370]]
-    } --[[table: 00000280FF511FF0]],
+      } --[[table: 0000025F419745E0]]
+    } --[[table: 0000025F41974BA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5115B0]],
+  } --[[table: 0000025F419741E0]],
   {
     Components = {
       {
@@ -1976,12 +1976,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511430]],
+      } --[[table: 0000025F41974FA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5116B0]],
+      } --[[table: 0000025F41974FE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -1995,10 +1995,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511F70]]
-    } --[[table: 00000280FF5118B0]],
+      } --[[table: 0000025F41975020]]
+    } --[[table: 0000025F41974F60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511630]],
+  } --[[table: 0000025F41974EE0]],
   {
     Components = {
       {
@@ -2012,12 +2012,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512070]],
+      } --[[table: 0000025F419758A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5120F0]],
+      } --[[table: 0000025F41975920]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2031,10 +2031,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5114F0]]
-    } --[[table: 00000280FF511730]],
+      } --[[table: 0000025F419759E0]]
+    } --[[table: 0000025F41975960]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511D30]],
+  } --[[table: 0000025F41975820]],
   {
     Components = {
       {
@@ -2048,12 +2048,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511270]],
+      } --[[table: 0000025F41975A60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF511570]],
+      } --[[table: 0000025F419751A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2067,10 +2067,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511EF0]]
-    } --[[table: 00000280FF511770]],
+      } --[[table: 0000025F41976020]]
+    } --[[table: 0000025F419760E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511DF0]],
+  } --[[table: 0000025F419752A0]],
   {
     Components = {
       {
@@ -2084,12 +2084,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512130]],
+      } --[[table: 0000025F41975B60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5117B0]],
+      } --[[table: 0000025F41975320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2103,10 +2103,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511170]]
-    } --[[table: 00000280FF511F30]],
+      } --[[table: 0000025F41975E60]]
+    } --[[table: 0000025F41975560]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511E30]],
+  } --[[table: 0000025F41975FE0]],
   {
     Components = {
       {
@@ -2120,12 +2120,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5111B0]],
+      } --[[table: 0000025F41975420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF511C30]],
+      } --[[table: 0000025F41975460]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2139,10 +2139,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511930]]
-    } --[[table: 00000280FF5118F0]],
+      } --[[table: 0000025F419754A0]]
+    } --[[table: 0000025F41975BA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511830]],
+  } --[[table: 0000025F41976060]],
   {
     Components = {
       {
@@ -2156,12 +2156,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511A70]],
+      } --[[table: 0000025F419770A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF511AB0]],
+      } --[[table: 0000025F41976320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2175,10 +2175,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511AF0]]
-    } --[[table: 00000280FF511A30]],
+      } --[[table: 0000025F41976160]]
+    } --[[table: 0000025F41977020]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5119B0]],
+  } --[[table: 0000025F41975520]],
   {
     Components = {
       {
@@ -2192,12 +2192,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF511C70]],
+      } --[[table: 0000025F419763E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF511CB0]],
+      } --[[table: 0000025F41976C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2211,10 +2211,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF511CF0]]
-    } --[[table: 00000280FF511E70]],
+      } --[[table: 0000025F41976AE0]]
+    } --[[table: 0000025F419763A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511BB0]],
+  } --[[table: 0000025F41976DE0]],
   {
     Components = {
       {
@@ -2228,12 +2228,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512BF0]],
+      } --[[table: 0000025F419766E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5127B0]],
+      } --[[table: 0000025F41976720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2247,10 +2247,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF512F30]]
-    } --[[table: 00000280FF512BB0]],
+      } --[[table: 0000025F41976760]]
+    } --[[table: 0000025F41976660]],
     EntityName = "Tree"
-  } --[[table: 00000280FF511EB0]],
+  } --[[table: 0000025F419765E0]],
   {
     Components = {
       {
@@ -2264,12 +2264,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512CF0]],
+      } --[[table: 0000025F41976C60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512EF0]],
+      } --[[table: 0000025F41976CA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2283,10 +2283,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5127F0]]
-    } --[[table: 00000280FF512930]],
+      } --[[table: 0000025F41976D20]]
+    } --[[table: 0000025F41976B20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF512D30]],
+  } --[[table: 0000025F419769A0]],
   {
     Components = {
       {
@@ -2300,12 +2300,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512670]],
+      } --[[table: 0000025F41977420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512FB0]],
+      } --[[table: 0000025F419776A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2319,10 +2319,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5124B0]]
-    } --[[table: 00000280FF512970]],
+      } --[[table: 0000025F419779A0]]
+    } --[[table: 0000025F41977FA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF512770]],
+  } --[[table: 0000025F41977F20]],
   {
     Components = {
       {
@@ -2336,12 +2336,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5124F0]],
+      } --[[table: 0000025F41977360]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512B70]],
+      } --[[table: 0000025F41977A60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2355,10 +2355,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5122F0]]
-    } --[[table: 00000280FF512830]],
+      } --[[table: 0000025F419771E0]]
+    } --[[table: 0000025F419771A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5121B0]],
+  } --[[table: 0000025F41978020]],
   {
     Components = {
       {
@@ -2372,12 +2372,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5126B0]],
+      } --[[table: 0000025F41977DA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512DB0]],
+      } --[[table: 0000025F419774E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2391,10 +2391,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5129B0]]
-    } --[[table: 00000280FF512DF0]],
+      } --[[table: 0000025F41977A20]]
+    } --[[table: 0000025F41977C60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5128B0]],
+  } --[[table: 0000025F419772E0]],
   {
     Components = {
       {
@@ -2408,12 +2408,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512CB0]],
+      } --[[table: 0000025F41977E20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512430]],
+      } --[[table: 0000025F41978560]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2427,10 +2427,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5129F0]]
-    } --[[table: 00000280FF5130B0]],
+      } --[[table: 0000025F419789A0]]
+    } --[[table: 0000025F41977CE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF512C30]],
+  } --[[table: 0000025F41977B60]],
   {
     Components = {
       {
@@ -2444,12 +2444,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512A30]],
+      } --[[table: 0000025F419788E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512FF0]],
+      } --[[table: 0000025F41978220]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2463,10 +2463,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF512470]]
-    } --[[table: 00000280FF512570]],
+      } --[[table: 0000025F419790A0]]
+    } --[[table: 0000025F41978E60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF512D70]],
+  } --[[table: 0000025F41978760]],
   {
     Components = {
       {
@@ -2480,12 +2480,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512E30]],
+      } --[[table: 0000025F41978620]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512270]],
+      } --[[table: 0000025F41979060]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2499,10 +2499,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5125F0]]
-    } --[[table: 00000280FF513030]],
+      } --[[table: 0000025F419790E0]]
+    } --[[table: 0000025F41978D20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF512230]],
+  } --[[table: 0000025F41978360]],
   {
     Components = {
       {
@@ -2516,12 +2516,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512530]],
+      } --[[table: 0000025F41979D20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513130]],
+      } --[[table: 0000025F419791A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2535,10 +2535,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF512E70]]
-    } --[[table: 00000280FF5130F0]],
+      } --[[table: 0000025F419792E0]]
+    } --[[table: 0000025F41979A60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5125B0]],
+  } --[[table: 0000025F41979B60]],
   {
     Components = {
       {
@@ -2552,12 +2552,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5121F0]],
+      } --[[table: 0000025F4197A960]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512730]],
+      } --[[table: 0000025F4197AAE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2571,10 +2571,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF512870]]
-    } --[[table: 00000280FF5126F0]],
+      } --[[table: 0000025F4197AFE0]]
+    } --[[table: 0000025F4197ADA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF512630]],
+  } --[[table: 0000025F4197A220]],
   {
     Components = {
       {
@@ -2588,12 +2588,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF512B30]],
+      } --[[table: 0000025F4197AEA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF512C70]],
+      } --[[table: 0000025F4197A320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2607,10 +2607,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF512EB0]]
-    } --[[table: 00000280FF512AF0]],
+      } --[[table: 0000025F4197B4E0]]
+    } --[[table: 0000025F4197ACA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF512AB0]],
+  } --[[table: 0000025F4197A2A0]],
   {
     Components = {
       {
@@ -2624,12 +2624,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF513B70]],
+      } --[[table: 0000025F4197C0A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5139B0]],
+      } --[[table: 0000025F4197B160]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2643,10 +2643,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513FF0]]
-    } --[[table: 00000280FF513D70]],
+      } --[[table: 0000025F4197B3E0]]
+    } --[[table: 0000025F4197B660]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5135F0]],
+  } --[[table: 0000025F4197BCE0]],
   {
     Components = {
       {
@@ -2660,12 +2660,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF513730]],
+      } --[[table: 0000025F4197C820]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5136F0]],
+      } --[[table: 0000025F4197D120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2679,10 +2679,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513E70]]
-    } --[[table: 00000280FF513A30]],
+      } --[[table: 0000025F4197C8A0]]
+    } --[[table: 0000025F4197D060]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5133B0]],
+  } --[[table: 0000025F4197C7E0]],
   {
     Components = {
       {
@@ -2696,12 +2696,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF513B30]],
+      } --[[table: 0000025F4197D660]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513BB0]],
+      } --[[table: 0000025F4197D720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2715,10 +2715,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513A70]]
-    } --[[table: 00000280FF514030]],
+      } --[[table: 0000025F4197DAE0]]
+    } --[[table: 0000025F4197DE20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF513170]],
+  } --[[table: 0000025F4197C1A0]],
   {
     Components = {
       {
@@ -2732,12 +2732,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF513DF0]],
+      } --[[table: 0000025F4197DB60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513770]],
+      } --[[table: 0000025F4197E460]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2751,10 +2751,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5135B0]]
-    } --[[table: 00000280FF5140F0]],
+      } --[[table: 0000025F4197E4E0]]
+    } --[[table: 0000025F4197E120]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5131B0]],
+  } --[[table: 0000025F4197D9A0]],
   {
     Components = {
       {
@@ -2768,12 +2768,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5137F0]],
+      } --[[table: 0000025F4197E820]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513830]],
+      } --[[table: 0000025F4197E8A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2787,10 +2787,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513530]]
-    } --[[table: 00000280FF513230]],
+      } --[[table: 0000025F4197EA60]]
+    } --[[table: 0000025F4197EF20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5137B0]],
+  } --[[table: 0000025F4197EA20]],
   {
     Components = {
       {
@@ -2804,12 +2804,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5138B0]],
+      } --[[table: 0000025F4195E9E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5131F0]],
+      } --[[table: 0000025F4195EB20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2823,10 +2823,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513AB0]]
-    } --[[table: 00000280FF513330]],
+      } --[[table: 0000025F4195EBA0]]
+    } --[[table: 0000025F4195E960]],
     EntityName = "Tree"
-  } --[[table: 00000280FF513870]],
+  } --[[table: 0000025F4195E720]],
   {
     Components = {
       {
@@ -2840,12 +2840,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5138F0]],
+      } --[[table: 0000025F4195EF20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513930]],
+      } --[[table: 0000025F4195E4A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2859,10 +2859,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513370]]
-    } --[[table: 00000280FF5132F0]],
+      } --[[table: 0000025F4195F060]]
+    } --[[table: 0000025F4195E3A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF513AF0]],
+  } --[[table: 0000025F4195E220]],
   {
     Components = {
       {
@@ -2876,12 +2876,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF513EB0]],
+      } --[[table: 0000025F4195F8A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513C30]],
+      } --[[table: 0000025F4195FAA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2895,10 +2895,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513C70]]
-    } --[[table: 00000280FF513970]],
+      } --[[table: 0000025F4195F960]]
+    } --[[table: 0000025F4195F5E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF513BF0]],
+  } --[[table: 0000025F4195E560]],
   {
     Components = {
       {
@@ -2912,12 +2912,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF513CF0]],
+      } --[[table: 0000025F4195FCA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513DB0]],
+      } --[[table: 0000025F4195FCE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2931,10 +2931,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF513D30]]
-    } --[[table: 00000280FF513CB0]],
+      } --[[table: 0000025F4195F160]]
+    } --[[table: 0000025F4195FC60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5140B0]],
+  } --[[table: 0000025F4195FC20]],
   {
     Components = {
       {
@@ -2948,12 +2948,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF513670]],
+      } --[[table: 0000025F4195FEA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF513270]],
+      } --[[table: 0000025F4195FEE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -2967,10 +2967,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5134B0]]
-    } --[[table: 00000280FF513470]],
+      } --[[table: 0000025F4195FFE0]]
+    } --[[table: 0000025F4195FE60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5133F0]],
+  } --[[table: 0000025F4195F620]],
   {
     Components = {
       {
@@ -2984,12 +2984,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5134F0]],
+      } --[[table: 0000025F4195F3A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514570]],
+      } --[[table: 0000025F4195F4A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3003,10 +3003,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF514870]]
-    } --[[table: 00000280FF513630]],
+      } --[[table: 0000025F41960660]]
+    } --[[table: 0000025F4195F660]],
     EntityName = "Tree"
-  } --[[table: 00000280FF513F30]],
+  } --[[table: 0000025F4195F320]],
   {
     Components = {
       {
@@ -3020,12 +3020,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF514FF0]],
+      } --[[table: 0000025F41960EE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514370]],
+      } --[[table: 0000025F41960AE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3039,10 +3039,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF514EB0]]
-    } --[[table: 00000280FF514E30]],
+      } --[[table: 0000025F41961060]]
+    } --[[table: 0000025F41960620]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5150B0]],
+  } --[[table: 0000025F41960820]],
   {
     Components = {
       {
@@ -3056,12 +3056,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF514770]],
+      } --[[table: 0000025F41960CA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514730]],
+      } --[[table: 0000025F419610A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3075,10 +3075,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515030]]
-    } --[[table: 00000280FF514330]],
+      } --[[table: 0000025F419610E0]]
+    } --[[table: 0000025F41960C60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514AB0]],
+  } --[[table: 0000025F419602E0]],
   {
     Components = {
       {
@@ -3092,12 +3092,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5148B0]],
+      } --[[table: 0000025F41960520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514230]],
+      } --[[table: 0000025F419605A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3111,10 +3111,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF514D30]]
-    } --[[table: 00000280FF5148F0]],
+      } --[[table: 0000025F419606A0]]
+    } --[[table: 0000025F41960B60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514C30]],
+  } --[[table: 0000025F41960460]],
   {
     Components = {
       {
@@ -3128,12 +3128,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF514FB0]],
+      } --[[table: 0000025F3703E360]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514930]],
+      } --[[table: 0000025F3703E420]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3147,10 +3147,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF514B70]]
-    } --[[table: 00000280FF5142B0]],
+      } --[[table: 0000025F3703E4E0]]
+    } --[[table: 0000025F419609E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514B30]],
+  } --[[table: 0000025F41960860]],
   {
     Components = {
       {
@@ -3164,12 +3164,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5146F0]],
+      } --[[table: 0000025F3703ED60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5141B0]],
+      } --[[table: 0000025F3703F0E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3183,10 +3183,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5147B0]]
-    } --[[table: 00000280FF514BB0]],
+      } --[[table: 0000025F3703FA20]]
+    } --[[table: 0000025F3703E6E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514DF0]],
+  } --[[table: 0000025F3703E960]],
   {
     Components = {
       {
@@ -3200,12 +3200,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF514F30]],
+      } --[[table: 0000025F3703FE60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514A70]],
+      } --[[table: 0000025F37041060]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3219,10 +3219,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF514C70]]
-    } --[[table: 00000280FF5144B0]],
+      } --[[table: 0000025F370401A0]]
+    } --[[table: 0000025F3703FCE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5147F0]],
+  } --[[table: 0000025F3703FB60]],
   {
     Components = {
       {
@@ -3236,12 +3236,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF514470]],
+      } --[[table: 0000025F370405E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514530]],
+      } --[[table: 0000025F37040A60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3255,10 +3255,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF514970]]
-    } --[[table: 00000280FF5144F0]],
+      } --[[table: 0000025F37040BE0]]
+    } --[[table: 0000025F370409A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514830]],
+  } --[[table: 0000025F37040160]],
   {
     Components = {
       {
@@ -3272,12 +3272,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF514A30]],
+      } --[[table: 0000025F37041C60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514AF0]],
+      } --[[table: 0000025F370412E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3291,10 +3291,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5141F0]]
-    } --[[table: 00000280FF5149F0]],
+      } --[[table: 0000025F370415A0]]
+    } --[[table: 0000025F370416A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5149B0]],
+  } --[[table: 0000025F370414A0]],
   {
     Components = {
       {
@@ -3308,12 +3308,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF514CF0]],
+      } --[[table: 0000025F37042A20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF514D70]],
+      } --[[table: 0000025F37042A60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3327,10 +3327,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF514430]]
-    } --[[table: 00000280FF514CB0]],
+      } --[[table: 0000025F37042460]]
+    } --[[table: 0000025F37041160]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514E70]],
+  } --[[table: 0000025F37041F60]],
   {
     Components = {
       {
@@ -3344,12 +3344,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5143F0]],
+      } --[[table: 0000025F37043260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5145B0]],
+      } --[[table: 0000025F37043C60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3363,10 +3363,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5145F0]]
-    } --[[table: 00000280FF514F70]],
+      } --[[table: 0000025F37043C20]]
+    } --[[table: 0000025F37043220]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514EF0]],
+  } --[[table: 0000025F370424E0]],
   {
     Components = {
       {
@@ -3380,12 +3380,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5157B0]],
+      } --[[table: 0000025F37043920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF515DF0]],
+      } --[[table: 0000025F37043B60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3399,10 +3399,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515C70]]
-    } --[[table: 00000280FF5154B0]],
+      } --[[table: 0000025F370434E0]]
+    } --[[table: 0000025F37043D20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF514670]],
+  } --[[table: 0000025F37043320]],
   {
     Components = {
       {
@@ -3416,12 +3416,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516030]],
+      } --[[table: 0000025F370440A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5154F0]],
+      } --[[table: 0000025F37043160]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3435,10 +3435,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515330]]
-    } --[[table: 00000280FF515FF0]],
+      } --[[table: 0000025F370431A0]]
+    } --[[table: 0000025F37043F60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5158B0]],
+  } --[[table: 0000025F370436E0]],
   {
     Components = {
       {
@@ -3452,12 +3452,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516130]],
+      } --[[table: 0000025F370442E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5153B0]],
+      } --[[table: 0000025F370448E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3471,10 +3471,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515FB0]]
-    } --[[table: 00000280FF515AF0]],
+      } --[[table: 0000025F370443A0]]
+    } --[[table: 0000025F370442A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF516070]],
+  } --[[table: 0000025F37044220]],
   {
     Components = {
       {
@@ -3488,12 +3488,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5159F0]],
+      } --[[table: 0000025F37045260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5152B0]],
+      } --[[table: 0000025F37045360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3507,10 +3507,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5156B0]]
-    } --[[table: 00000280FF515E70]],
+      } --[[table: 0000025F37045460]]
+    } --[[table: 0000025F37045E20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5159B0]],
+  } --[[table: 0000025F37046120]],
   {
     Components = {
       {
@@ -3524,12 +3524,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF515BF0]],
+      } --[[table: 0000025F37045AE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5157F0]],
+      } --[[table: 0000025F37045D20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3543,10 +3543,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515F30]]
-    } --[[table: 00000280FF515BB0]],
+      } --[[table: 0000025F37045DA0]]
+    } --[[table: 0000025F37045820]],
     EntityName = "Tree"
-  } --[[table: 00000280FF515AB0]],
+  } --[[table: 0000025F37045760]],
   {
     Components = {
       {
@@ -3560,12 +3560,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5160F0]],
+      } --[[table: 0000025F370470E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF515530]],
+      } --[[table: 0000025F370464A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3579,10 +3579,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515470]]
-    } --[[table: 00000280FF5152F0]],
+      } --[[table: 0000025F37046720]]
+    } --[[table: 0000025F37046F60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF515D30]],
+  } --[[table: 0000025F37046D60]],
   {
     Components = {
       {
@@ -3596,12 +3596,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF515670]],
+      } --[[table: 0000025F37047620]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5153F0]],
+      } --[[table: 0000025F37047E20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3615,10 +3615,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515830]]
-    } --[[table: 00000280FF5158F0]],
+      } --[[table: 0000025F37047D20]]
+    } --[[table: 0000025F37047560]],
     EntityName = "Tree"
-  } --[[table: 00000280FF515C30]],
+  } --[[table: 0000025F37047BE0]],
   {
     Components = {
       {
@@ -3632,12 +3632,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5155B0]],
+      } --[[table: 0000025F370483E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF515630]],
+      } --[[table: 0000025F37048E20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3651,10 +3651,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515B30]]
-    } --[[table: 00000280FF515A30]],
+      } --[[table: 0000025F370489A0]]
+    } --[[table: 0000025F37048220]],
     EntityName = "Tree"
-  } --[[table: 00000280FF515170]],
+  } --[[table: 0000025F37048DA0]],
   {
     Components = {
       {
@@ -3668,12 +3668,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF515730]],
+      } --[[table: 0000025F37048660]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5151F0]],
+      } --[[table: 0000025F37048920]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3687,10 +3687,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515230]]
-    } --[[table: 00000280FF5151B0]],
+      } --[[table: 0000025F370486E0]]
+    } --[[table: 0000025F370485A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF515430]],
+  } --[[table: 0000025F370488E0]],
   {
     Components = {
       {
@@ -3704,12 +3704,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF515D70]],
+      } --[[table: 0000025F37049FE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF515970]],
+      } --[[table: 0000025F370497E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3723,10 +3723,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515B70]]
-    } --[[table: 00000280FF515370]],
+      } --[[table: 0000025F3704A060]]
+    } --[[table: 0000025F370498E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF515770]],
+  } --[[table: 0000025F37048A60]],
   {
     Components = {
       {
@@ -3740,12 +3740,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF515DB0]],
+      } --[[table: 0000025F37049260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF515EF0]],
+      } --[[table: 0000025F370492A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3759,10 +3759,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF515F70]]
-    } --[[table: 00000280FF515CF0]],
+      } --[[table: 0000025F37049320]]
+    } --[[table: 0000025F37049220]],
     EntityName = "Tree"
-  } --[[table: 00000280FF515270]],
+  } --[[table: 0000025F370491E0]],
   {
     Components = {
       {
@@ -3776,12 +3776,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516DF0]],
+      } --[[table: 0000025F3704AA60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516670]],
+      } --[[table: 0000025F3704ACE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3795,10 +3795,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517130]]
-    } --[[table: 00000280FF5161F0]],
+      } --[[table: 0000025F3704AF60]]
+    } --[[table: 0000025F3704ACA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5163B0]],
+  } --[[table: 0000025F37049660]],
   {
     Components = {
       {
@@ -3812,12 +3812,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5164B0]],
+      } --[[table: 0000025F3704BF20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516AB0]],
+      } --[[table: 0000025F3704B1A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3831,10 +3831,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF516C30]]
-    } --[[table: 00000280FF516730]],
+      } --[[table: 0000025F3704B6E0]]
+    } --[[table: 0000025F3704A6A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5161B0]],
+  } --[[table: 0000025F3704A1A0]],
   {
     Components = {
       {
@@ -3848,12 +3848,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516870]],
+      } --[[table: 0000025F3704BE60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516EF0]],
+      } --[[table: 0000025F3704B2E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3867,10 +3867,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF516CB0]]
-    } --[[table: 00000280FF516270]],
+      } --[[table: 0000025F3704B4E0]]
+    } --[[table: 0000025F3704B620]],
     EntityName = "Tree"
-  } --[[table: 00000280FF516230]],
+  } --[[table: 0000025F3704B860]],
   {
     Components = {
       {
@@ -3884,12 +3884,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517030]],
+      } --[[table: 0000025F3704CD20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5162B0]],
+      } --[[table: 0000025F3704CDA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3903,10 +3903,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5165F0]]
-    } --[[table: 00000280FF516FF0]],
+      } --[[table: 0000025F3704C2A0]]
+    } --[[table: 0000025F3704CC60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF516B30]],
+  } --[[table: 0000025F3704C820]],
   {
     Components = {
       {
@@ -3920,12 +3920,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516470]],
+      } --[[table: 0000025F3704CF20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516370]],
+      } --[[table: 0000025F3702C420]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3939,10 +3939,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5170B0]]
-    } --[[table: 00000280FF516830]],
+      } --[[table: 0000025F3702D020]]
+    } --[[table: 0000025F3704CE60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517070]],
+  } --[[table: 0000025F3704CBE0]],
   {
     Components = {
       {
@@ -3956,12 +3956,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516630]],
+      } --[[table: 0000025F3702C1E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516F30]],
+      } --[[table: 0000025F3702CA20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -3975,10 +3975,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5163F0]]
-    } --[[table: 00000280FF5162F0]],
+      } --[[table: 0000025F3702CBE0]]
+    } --[[table: 0000025F3702C9E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF516AF0]],
+  } --[[table: 0000025F3702D060]],
   {
     Components = {
       {
@@ -3992,12 +3992,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516E30]],
+      } --[[table: 0000025F3702DC20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516F70]],
+      } --[[table: 0000025F3702D5E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4011,10 +4011,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF516330]]
-    } --[[table: 00000280FF5166F0]],
+      } --[[table: 0000025F3702DBA0]]
+    } --[[table: 0000025F3702D520]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5170F0]],
+  } --[[table: 0000025F3702DB60]],
   {
     Components = {
       {
@@ -4028,12 +4028,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516770]],
+      } --[[table: 0000025F3702DFE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5168B0]],
+      } --[[table: 0000025F3702ED20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4047,10 +4047,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5167B0]]
-    } --[[table: 00000280FF516B70]],
+      } --[[table: 0000025F3702E360]]
+    } --[[table: 0000025F3702D620]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5165B0]],
+  } --[[table: 0000025F3702DEA0]],
   {
     Components = {
       {
@@ -4064,12 +4064,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5169B0]],
+      } --[[table: 0000025F3702EE60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516930]],
+      } --[[table: 0000025F3702E5A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4083,10 +4083,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF516970]]
-    } --[[table: 00000280FF5168F0]],
+      } --[[table: 0000025F3702E6A0]]
+    } --[[table: 0000025F3702EBA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5167F0]],
+  } --[[table: 0000025F3702EDE0]],
   {
     Components = {
       {
@@ -4100,12 +4100,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516BF0]],
+      } --[[table: 0000025F3702F320]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF516C70]],
+      } --[[table: 0000025F3702F820]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4119,10 +4119,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF516CF0]]
-    } --[[table: 00000280FF516A30]],
+      } --[[table: 0000025F3702FA60]]
+    } --[[table: 0000025F3702F1E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5169F0]],
+  } --[[table: 0000025F3702FF60]],
   {
     Components = {
       {
@@ -4136,12 +4136,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF516EB0]],
+      } --[[table: 0000025F37030460]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF517F30]],
+      } --[[table: 0000025F370309E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4155,10 +4155,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517970]]
-    } --[[table: 00000280FF516E70]],
+      } --[[table: 0000025F370304E0]]
+    } --[[table: 0000025F370307E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF516DB0]],
+  } --[[table: 0000025F37030D20]],
   {
     Components = {
       {
@@ -4172,12 +4172,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517570]],
+      } --[[table: 0000025F37030CA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF517470]],
+      } --[[table: 0000025F37030DE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4191,10 +4191,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517EB0]]
-    } --[[table: 00000280FF518070]],
+      } --[[table: 0000025F37030F60]]
+    } --[[table: 0000025F37030BA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517FB0]],
+  } --[[table: 0000025F37030B20]],
   {
     Components = {
       {
@@ -4208,12 +4208,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517E30]],
+      } --[[table: 0000025F370314A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF517830]],
+      } --[[table: 0000025F37031EA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4227,10 +4227,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517870]]
-    } --[[table: 00000280FF5179B0]],
+      } --[[table: 0000025F37031860]]
+    } --[[table: 0000025F37031BA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517530]],
+  } --[[table: 0000025F370313A0]],
   {
     Components = {
       {
@@ -4244,12 +4244,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517430]],
+      } --[[table: 0000025F37031BE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF517AF0]],
+      } --[[table: 0000025F37031C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4263,10 +4263,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5177B0]]
-    } --[[table: 00000280FF517630]],
+      } --[[table: 0000025F37032820]]
+    } --[[table: 0000025F37031160]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518030]],
+  } --[[table: 0000025F370311E0]],
   {
     Components = {
       {
@@ -4280,12 +4280,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517670]],
+      } --[[table: 0000025F370321A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5180B0]],
+      } --[[table: 0000025F370321E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4299,10 +4299,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5174B0]]
-    } --[[table: 00000280FF5179F0]],
+      } --[[table: 0000025F370327A0]]
+    } --[[table: 0000025F370326E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517770]],
+  } --[[table: 0000025F37032BE0]],
   {
     Components = {
       {
@@ -4316,12 +4316,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5177F0]],
+      } --[[table: 0000025F370331A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5175B0]],
+      } --[[table: 0000025F370338E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4335,10 +4335,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5174F0]]
-    } --[[table: 00000280FF517EF0]],
+      } --[[table: 0000025F37033420]]
+    } --[[table: 0000025F370339A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5173F0]],
+  } --[[table: 0000025F370340A0]],
   {
     Components = {
       {
@@ -4352,12 +4352,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517DF0]],
+      } --[[table: 0000025F37035020]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5180F0]],
+      } --[[table: 0000025F37034960]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4371,10 +4371,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5176F0]]
-    } --[[table: 00000280FF5178B0]],
+      } --[[table: 0000025F370342A0]]
+    } --[[table: 0000025F37034CA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5172F0]],
+  } --[[table: 0000025F37033920]],
   {
     Components = {
       {
@@ -4388,12 +4388,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF518130]],
+      } --[[table: 0000025F37034F60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5178F0]],
+      } --[[table: 0000025F370350E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4407,10 +4407,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517170]]
-    } --[[table: 00000280FF517730]],
+      } --[[table: 0000025F37035120]]
+    } --[[table: 0000025F37034D60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5173B0]],
+  } --[[table: 0000025F370345E0]],
   {
     Components = {
       {
@@ -4424,12 +4424,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517930]],
+      } --[[table: 0000025F37035B60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF517A30]],
+      } --[[table: 0000025F37035DA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4443,10 +4443,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517A70]]
-    } --[[table: 00000280FF5171F0]],
+      } --[[table: 0000025F37035860]]
+    } --[[table: 0000025F37035E20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517230]],
+  } --[[table: 0000025F37035660]],
   {
     Components = {
       {
@@ -4460,12 +4460,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517B70]],
+      } --[[table: 0000025F370370A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF517BB0]],
+      } --[[table: 0000025F37037120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4479,10 +4479,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517BF0]]
-    } --[[table: 00000280FF517B30]],
+      } --[[table: 0000025F37036260]]
+    } --[[table: 0000025F37036DA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517AB0]],
+  } --[[table: 0000025F37036A60]],
   {
     Components = {
       {
@@ -4496,12 +4496,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF517CB0]],
+      } --[[table: 0000025F37036520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF517D30]],
+      } --[[table: 0000025F37036C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4515,10 +4515,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF517D70]]
-    } --[[table: 00000280FF517C70]],
+      } --[[table: 0000025F370365A0]]
+    } --[[table: 0000025F37036B20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517F70]],
+  } --[[table: 0000025F370364E0]],
   {
     Components = {
       {
@@ -4532,12 +4532,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5182B0]],
+      } --[[table: 0000025F37037A60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5181F0]],
+      } --[[table: 0000025F37037B20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4551,10 +4551,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518AB0]]
-    } --[[table: 00000280FF518730]],
+      } --[[table: 0000025F37038660]]
+    } --[[table: 0000025F370375A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF517E70]],
+  } --[[table: 0000025F37037460]],
   {
     Components = {
       {
@@ -4568,12 +4568,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF518A30]],
+      } --[[table: 0000025F37038A20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5190B0]],
+      } --[[table: 0000025F37038320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4587,10 +4587,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518EF0]]
-    } --[[table: 00000280FF5182F0]],
+      } --[[table: 0000025F37038F60]]
+    } --[[table: 0000025F370389E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518870]],
+  } --[[table: 0000025F37039060]],
   {
     Components = {
       {
@@ -4604,12 +4604,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF518D70]],
+      } --[[table: 0000025F37038BE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF518E70]],
+      } --[[table: 0000025F37039B20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4623,10 +4623,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518370]]
-    } --[[table: 00000280FF5189B0]],
+      } --[[table: 0000025F37039D60]]
+    } --[[table: 0000025F37038420]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518FB0]],
+  } --[[table: 0000025F37038B60]],
   {
     Components = {
       {
@@ -4640,12 +4640,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF518770]],
+      } --[[table: 0000025F370392E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF518BB0]],
+      } --[[table: 0000025F37039860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4659,10 +4659,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5183F0]]
-    } --[[table: 00000280FF518A70]],
+      } --[[table: 0000025F370394E0]]
+    } --[[table: 0000025F3703A0A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5183B0]],
+  } --[[table: 0000025F370394A0]],
   {
     Components = {
       {
@@ -4676,12 +4676,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5186B0]],
+      } --[[table: 0000025F3703AD60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF518B70]],
+      } --[[table: 0000025F3703AFA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4695,10 +4695,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5188B0]]
-    } --[[table: 00000280FF518BF0]],
+      } --[[table: 0000025F3703ABA0]]
+    } --[[table: 0000025F37039BE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518430]],
+  } --[[table: 0000025F37039FE0]],
   {
     Components = {
       {
@@ -4712,12 +4712,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519030]],
+      } --[[table: 0000025F3703A820]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF518DB0]],
+      } --[[table: 0000025F3703AEA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4731,10 +4731,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518C30]]
-    } --[[table: 00000280FF518470]],
+      } --[[table: 0000025F3703A1E0]]
+    } --[[table: 0000025F3703A6E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5189F0]],
+  } --[[table: 0000025F3703A3A0]],
   {
     Components = {
       {
@@ -4748,12 +4748,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5190F0]],
+      } --[[table: 0000025F3703B760]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF518C70]],
+      } --[[table: 0000025F3703B360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4767,10 +4767,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518CB0]]
-    } --[[table: 00000280FF5184F0]],
+      } --[[table: 0000025F3703B8A0]]
+    } --[[table: 0000025F3703B2A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518FF0]],
+  } --[[table: 0000025F3703B260]],
   {
     Components = {
       {
@@ -4784,12 +4784,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF518230]],
+      } --[[table: 0000025F3703BEE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5187F0]],
+      } --[[table: 0000025F3703BFE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4803,10 +4803,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518D30]]
-    } --[[table: 00000280FF5187B0]],
+      } --[[table: 0000025F3703C8E0]]
+    } --[[table: 0000025F3703BE60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518530]],
+  } --[[table: 0000025F3703BE20]],
   {
     Components = {
       {
@@ -4820,12 +4820,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5185F0]],
+      } --[[table: 0000025F3703CD60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF518630]],
+      } --[[table: 0000025F3703CDA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4839,10 +4839,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518DF0]]
-    } --[[table: 00000280FF5185B0]],
+      } --[[table: 0000025F3703CEE0]]
+    } --[[table: 0000025F3703CD20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518570]],
+  } --[[table: 0000025F3703C760]],
   {
     Components = {
       {
@@ -4856,12 +4856,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5186F0]],
+      } --[[table: 0000025F3703D760]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF518830]],
+      } --[[table: 0000025F3703DB60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4875,10 +4875,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF519130]]
-    } --[[table: 00000280FF518670]],
+      } --[[table: 0000025F3703D820]]
+    } --[[table: 0000025F3703D6E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518EB0]],
+  } --[[table: 0000025F3703CF60]],
   {
     Components = {
       {
@@ -4892,12 +4892,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF518170]],
+      } --[[table: 0000025F3703DAA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5181B0]],
+      } --[[table: 0000025F3D453930]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4911,10 +4911,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF518270]]
-    } --[[table: 00000280FF518F70]],
+      } --[[table: 0000025F3D453470]]
+    } --[[table: 0000025F3703DA20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF518970]],
+  } --[[table: 0000025F3703DCA0]],
   {
     Components = {
       {
@@ -4928,12 +4928,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519930]],
+      } --[[table: 0000025F3D454630]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF519230]],
+      } --[[table: 0000025F3D454970]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4947,10 +4947,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5195F0]]
-    } --[[table: 00000280FF519FF0]],
+      } --[[table: 0000025F3D454770]]
+    } --[[table: 0000025F3D453C70]],
     EntityName = "Tree"
-  } --[[table: 00000280FF519F70]],
+  } --[[table: 0000025F3D453A30]],
   {
     Components = {
       {
@@ -4964,12 +4964,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519430]],
+      } --[[table: 0000025F3D456E70]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF519370]],
+      } --[[table: 0000025F3D4564F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -4983,10 +4983,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A0B0]]
-    } --[[table: 00000280FF519830]],
+      } --[[table: 0000025F3D4565B0]]
+    } --[[table: 0000025F3D455BB0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51A070]],
+  } --[[table: 0000025F3D454CF0]],
   {
     Components = {
       {
@@ -5000,12 +5000,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519630]],
+      } --[[table: 0000025F3D457A70]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF519EF0]],
+      } --[[table: 0000025F3D457FF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5019,10 +5019,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5193B0]]
-    } --[[table: 00000280FF519270]],
+      } --[[table: 0000025F3D457830]]
+    } --[[table: 0000025F3D4566F0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF519AB0]],
+  } --[[table: 0000025F3D456630]],
   {
     Components = {
       {
@@ -5036,12 +5036,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519E30]],
+      } --[[table: 0000025F3D457330]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF519F30]],
+      } --[[table: 0000025F3D458DB0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5055,10 +5055,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A130]]
-    } --[[table: 00000280FF519670]],
+      } --[[table: 0000025F3D458470]]
+    } --[[table: 0000025F3D4572F0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51A0F0]],
+  } --[[table: 0000025F3D457270]],
   {
     Components = {
       {
@@ -5072,12 +5072,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5191B0]],
+      } --[[table: 0000025F3D4385B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5196B0]],
+      } --[[table: 0000025F3D438630]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5091,10 +5091,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF519E70]]
-    } --[[table: 00000280FF5193F0]],
+      } --[[table: 0000025F3D438FB0]]
+    } --[[table: 0000025F3D438F70]],
     EntityName = "Tree"
-  } --[[table: 00000280FF519730]],
+  } --[[table: 0000025F3D438DF0]],
   {
     Components = {
       {
@@ -5108,12 +5108,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5198B0]],
+      } --[[table: 0000025F3D438930]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5195B0]],
+      } --[[table: 0000025F3D439470]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5127,10 +5127,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5194B0]]
-    } --[[table: 00000280FF5192F0]],
+      } --[[table: 0000025F3D439530]]
+    } --[[table: 0000025F3D438830]],
     EntityName = "Tree"
-  } --[[table: 00000280FF519170]],
+  } --[[table: 0000025F3D438770]],
   {
     Components = {
       {
@@ -5144,12 +5144,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519BF0]],
+      } --[[table: 0000025F3D439CF0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5196F0]],
+      } --[[table: 0000025F3D439EB0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5163,10 +5163,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A030]]
-    } --[[table: 00000280FF5192B0]],
+      } --[[table: 0000025F3D439FB0]]
+    } --[[table: 0000025F3D439C70]],
     EntityName = "Tree"
-  } --[[table: 00000280FF519C70]],
+  } --[[table: 0000025F3D439630]],
   {
     Components = {
       {
@@ -5180,12 +5180,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519A30]],
+      } --[[table: 0000025F3D43AD30]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF519D30]],
+      } --[[table: 0000025F3D43AF70]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5199,10 +5199,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF519530]]
-    } --[[table: 00000280FF519330]],
+      } --[[table: 0000025F3D43A170]]
+    } --[[table: 0000025F3D43AC70]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5191F0]],
+  } --[[table: 0000025F3D43A830]],
   {
     Components = {
       {
@@ -5216,12 +5216,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519770]],
+      } --[[table: 0000025F3D43B870]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF519DF0]],
+      } --[[table: 0000025F3D43B9F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5235,10 +5235,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF519B70]]
-    } --[[table: 00000280FF519570]],
+      } --[[table: 0000025F3D43BE30]]
+    } --[[table: 0000025F3D43B830]],
     EntityName = "Tree"
-  } --[[table: 00000280FF519DB0]],
+  } --[[table: 0000025F3D43A530]],
   {
     Components = {
       {
@@ -5252,12 +5252,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5199B0]],
+      } --[[table: 0000025F3D43C7B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF519EB0]],
+      } --[[table: 0000025F3D43CAF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5271,10 +5271,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF519BB0]]
-    } --[[table: 00000280FF519970]],
+      } --[[table: 0000025F3D43C930]]
+    } --[[table: 0000025F3D43C630]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5199F0]],
+  } --[[table: 0000025F3D43BF30]],
   {
     Components = {
       {
@@ -5288,12 +5288,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF519CF0]],
+      } --[[table: 0000025F3D43C370]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51A4B0]],
+      } --[[table: 0000025F3D43DBF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5307,10 +5307,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51B0B0]]
-    } --[[table: 00000280FF519CB0]],
+      } --[[table: 0000025F3D43E070]]
+    } --[[table: 0000025F3D43C270]],
     EntityName = "Tree"
-  } --[[table: 00000280FF519D70]],
+  } --[[table: 0000025F3D43C970]],
   {
     Components = {
       {
@@ -5324,12 +5324,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51A8B0]],
+      } --[[table: 0000025F3D43DFF0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51A8F0]],
+      } --[[table: 0000025F3D43D170]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5343,10 +5343,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A370]]
-    } --[[table: 00000280FF51A870]],
+      } --[[table: 0000025F3D43E9B0]]
+    } --[[table: 0000025F3D43DF30]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51ADF0]],
+  } --[[table: 0000025F3D43DDB0]],
   {
     Components = {
       {
@@ -5360,12 +5360,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51A5F0]],
+      } --[[table: 0000025F3D43E4B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51A9B0]],
+      } --[[table: 0000025F3D43E830]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5379,10 +5379,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A4F0]]
-    } --[[table: 00000280FF51AFB0]],
+      } --[[table: 0000025F3D43E5B0]]
+    } --[[table: 0000025F3D43E3B0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51ACB0]],
+  } --[[table: 0000025F3D43E1F0]],
   {
     Components = {
       {
@@ -5396,12 +5396,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51A3B0]],
+      } --[[table: 0000025F3D43FEB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51AAB0]],
+      } --[[table: 0000025F3D43FF30]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5415,10 +5415,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51AEF0]]
-    } --[[table: 00000280FF51A6B0]],
+      } --[[table: 0000025F3D43F570]]
+    } --[[table: 0000025F3D43FAB0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51A170]],
+  } --[[table: 0000025F3D43FA30]],
   {
     Components = {
       {
@@ -5432,12 +5432,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51AB70]],
+      } --[[table: 0000025F3D4401F0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51AD30]],
+      } --[[table: 0000025F3D440470]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5451,10 +5451,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51AFF0]]
-    } --[[table: 00000280FF51AF30]],
+      } --[[table: 0000025F3D440CB0]]
+    } --[[table: 0000025F3D4410B0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51AF70]],
+  } --[[table: 0000025F3D440BF0]],
   {
     Components = {
       {
@@ -5468,12 +5468,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51ABB0]],
+      } --[[table: 0000025F3D4414F0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51A6F0]],
+      } --[[table: 0000025F3D4419F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5487,10 +5487,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A530]]
-    } --[[table: 00000280FF51A5B0]],
+      } --[[table: 0000025F3D441A30]]
+    } --[[table: 0000025F3D4414B0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51B0F0]],
+  } --[[table: 0000025F3D440730]],
   {
     Components = {
       {
@@ -5504,12 +5504,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51A2B0]],
+      } --[[table: 0000025F3D442770]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51A7B0]],
+      } --[[table: 0000025F3D442FF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5523,10 +5523,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A630]]
-    } --[[table: 00000280FF51A570]],
+      } --[[table: 0000025F3D442330]]
+    } --[[table: 0000025F3D442C30]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51AA70]],
+  } --[[table: 0000025F3D4416B0]],
   {
     Components = {
       {
@@ -5540,12 +5540,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51A930]],
+      } --[[table: 0000025F3D443270]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51AA30]],
+      } --[[table: 0000025F3D443FF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5559,10 +5559,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A970]]
-    } --[[table: 00000280FF51A9F0]],
+      } --[[table: 0000025F3D444070]]
+    } --[[table: 0000025F3D442830]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51A830]],
+  } --[[table: 0000025F3D4424F0]],
   {
     Components = {
       {
@@ -5576,12 +5576,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51ABF0]],
+      } --[[table: 0000025F3D4444F0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51AC70]],
+      } --[[table: 0000025F3D444BF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5595,10 +5595,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51ACF0]]
-    } --[[table: 00000280FF51A3F0]],
+      } --[[table: 0000025F3D444DF0]]
+    } --[[table: 0000025F3D444830]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51AAF0]],
+  } --[[table: 0000025F3D444230]],
   {
     Components = {
       {
@@ -5612,12 +5612,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B030]],
+      } --[[table: 0000025F3D4446B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51B070]],
+      } --[[table: 0000025F3D4460F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5631,10 +5631,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51AEB0]]
-    } --[[table: 00000280FF51ADB0]],
+      } --[[table: 0000025F3D4452F0]]
+    } --[[table: 0000025F3D444630]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51AD70]],
+  } --[[table: 0000025F3D4445B0]],
   {
     Components = {
       {
@@ -5648,12 +5648,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51A1F0]],
+      } --[[table: 0000025F3D4456B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51A330]],
+      } --[[table: 0000025F3D446F30]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5667,10 +5667,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51A230]]
-    } --[[table: 00000280FF51A1B0]],
+      } --[[table: 0000025F3D4464F0]]
+    } --[[table: 0000025F3D4455B0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51A470]],
+  } --[[table: 0000025F3D445AB0]],
   {
     Components = {
       {
@@ -5684,12 +5684,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B1F0]],
+      } --[[table: 0000025F3D447FB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51BBB0]],
+      } --[[table: 0000025F3D447230]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5703,10 +5703,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51BFF0]]
-    } --[[table: 00000280FF51C030]],
+      } --[[table: 0000025F3D447730]]
+    } --[[table: 0000025F3D447CF0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51A2F0]],
+  } --[[table: 0000025F3D447EF0]],
   {
     Components = {
       {
@@ -5720,12 +5720,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B230]],
+      } --[[table: 0000025F3D4486B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C0F0]],
+      } --[[table: 0000025F3D448770]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5739,10 +5739,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51BAF0]]
-    } --[[table: 00000280FF51B870]],
+      } --[[table: 0000025F3D44A0B0]]
+    } --[[table: 0000025F3D448730]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51B4F0]],
+  } --[[table: 0000025F3D4485F0]],
   {
     Components = {
       {
@@ -5756,12 +5756,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B730]],
+      } --[[table: 0000025F3D449EB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51BAB0]],
+      } --[[table: 0000025F3D449770]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5775,10 +5775,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51B6B0]]
-    } --[[table: 00000280FF51BEB0]],
+      } --[[table: 0000025F3D449F70]]
+    } --[[table: 0000025F3D449E30]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51B170]],
+  } --[[table: 0000025F3D449C30]],
   {
     Components = {
       {
@@ -5792,12 +5792,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B270]],
+      } --[[table: 0000025F3D44A930]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51B470]],
+      } --[[table: 0000025F3D44AAB0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5811,10 +5811,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51C070]]
-    } --[[table: 00000280FF51B7B0]],
+      } --[[table: 0000025F3D44AC30]]
+    } --[[table: 0000025F3D44A7B0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51B6F0]],
+  } --[[table: 0000025F3D44B070]],
   {
     Components = {
       {
@@ -5828,12 +5828,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B8F0]],
+      } --[[table: 0000025F3D44B5F0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C130]],
+      } --[[table: 0000025F3D44B6B0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5847,10 +5847,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51B1B0]]
-    } --[[table: 00000280FF51B8B0]],
+      } --[[table: 0000025F3D44C7B0]]
+    } --[[table: 0000025F3D44A430]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51BB70]],
+  } --[[table: 0000025F3D44A270]],
   {
     Components = {
       {
@@ -5864,12 +5864,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B930]],
+      } --[[table: 0000025F3D44D830]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51B9B0]],
+      } --[[table: 0000025F3D44ED30]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5883,10 +5883,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51B7F0]]
-    } --[[table: 00000280FF51BCF0]],
+      } --[[table: 0000025F3D44EEB0]]
+    } --[[table: 0000025F3D44C8F0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51B770]],
+  } --[[table: 0000025F3D44CAB0]],
   {
     Components = {
       {
@@ -5900,12 +5900,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B9F0]],
+      } --[[table: 0000025F3D44F630]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51BB30]],
+      } --[[table: 0000025F3D44FAF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5919,10 +5919,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51BBF0]]
-    } --[[table: 00000280FF51B370]],
+      } --[[table: 0000025F3D450270]]
+    } --[[table: 0000025F3D44FE70]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51B830]],
+  } --[[table: 0000025F3D44F430]],
   {
     Components = {
       {
@@ -5936,12 +5936,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B330]],
+      } --[[table: 0000025F3D450430]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51B3B0]],
+      } --[[table: 0000025F3D4509F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5955,10 +5955,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51BC30]]
-    } --[[table: 00000280FF51B970]],
+      } --[[table: 0000025F3D450BF0]]
+    } --[[table: 0000025F3D4502B0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51BCB0]],
+  } --[[table: 0000025F3D450FF0]],
   {
     Components = {
       {
@@ -5972,12 +5972,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B4B0]],
+      } --[[table: 0000025F3D451AB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51B530]],
+      } --[[table: 0000025F3D451730]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -5991,10 +5991,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51B570]]
-    } --[[table: 00000280FF51BC70]],
+      } --[[table: 0000025F3D4514F0]]
+    } --[[table: 0000025F3D451330]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51B430]],
+  } --[[table: 0000025F3D452070]],
   {
     Components = {
       {
@@ -6008,12 +6008,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51B630]],
+      } --[[table: 0000025F3CA33C60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51BD30]],
+      } --[[table: 0000025F3CA33CE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6027,10 +6027,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51B670]]
-    } --[[table: 00000280FF51B5F0]],
+      } --[[table: 0000025F3CA340A0]]
+    } --[[table: 0000025F3CA33FA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51BE30]],
+  } --[[table: 0000025F3D4526B0]],
   {
     Components = {
       {
@@ -6044,12 +6044,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51BF30]],
+      } --[[table: 0000025F3CA331A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51BF70]],
+      } --[[table: 0000025F3CA33220]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6063,10 +6063,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51BFB0]]
-    } --[[table: 00000280FF51BEF0]],
+      } --[[table: 0000025F3CA332E0]]
+    } --[[table: 0000025F3CA33160]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51BE70]],
+  } --[[table: 0000025F3CA331E0]],
   {
     Components = {
       {
@@ -6080,12 +6080,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51C730]],
+      } --[[table: 0000025F3CA34560]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51CAB0]],
+      } --[[table: 0000025F3CA345A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6099,10 +6099,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51C6B0]]
-    } --[[table: 00000280FF51CEB0]],
+      } --[[table: 0000025F3CA345E0]]
+    } --[[table: 0000025F3CA341E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51C170]],
+  } --[[table: 0000025F3CA34DA0]],
   {
     Components = {
       {
@@ -6116,12 +6116,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51C230]],
+      } --[[table: 0000025F3CA352E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C470]],
+      } --[[table: 0000025F3CA36020]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6135,10 +6135,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51D030]]
-    } --[[table: 00000280FF51C7B0]],
+      } --[[table: 0000025F3CA359A0]]
+    } --[[table: 0000025F3CA35E60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51C6F0]],
+  } --[[table: 0000025F3CA349E0]],
   {
     Components = {
       {
@@ -6152,12 +6152,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51C870]],
+      } --[[table: 0000025F3CA35360]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D0F0]],
+      } --[[table: 0000025F3CA35A20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6171,10 +6171,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51D130]]
-    } --[[table: 00000280FF51C8B0]],
+      } --[[table: 0000025F3CA35520]]
+    } --[[table: 0000025F3CA359E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51CB70]],
+  } --[[table: 0000025F3CA35320]],
   {
     Components = {
       {
@@ -6188,12 +6188,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51D0B0]],
+      } --[[table: 0000025F3CA36260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51CFB0]],
+      } --[[table: 0000025F3CA36DE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6207,10 +6207,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51C270]]
-    } --[[table: 00000280FF51CCF0]],
+      } --[[table: 0000025F3CA36F60]]
+    } --[[table: 0000025F3CA361A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51C770]],
+  } --[[table: 0000025F3CA355A0]],
   {
     Components = {
       {
@@ -6224,12 +6224,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51CAF0]],
+      } --[[table: 0000025F3CA36560]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C8F0]],
+      } --[[table: 0000025F3CA362A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6243,10 +6243,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51C330]]
-    } --[[table: 00000280FF51C670]],
+      } --[[table: 0000025F3CA36460]]
+    } --[[table: 0000025F3CA37020]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51C830]],
+  } --[[table: 0000025F3CA36420]],
   {
     Components = {
       {
@@ -6260,12 +6260,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51C4B0]],
+      } --[[table: 0000025F3CA373A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C970]],
+      } --[[table: 0000025F3CA37420]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6279,10 +6279,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51C9B0]]
-    } --[[table: 00000280FF51C930]],
+      } --[[table: 0000025F3CA37820]]
+    } --[[table: 0000025F3CA372A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51C1B0]],
+  } --[[table: 0000025F3CA369A0]],
   {
     Components = {
       {
@@ -6296,12 +6296,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51CEF0]],
+      } --[[table: 0000025F3CA37BE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C2F0]],
+      } --[[table: 0000025F3CA37760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6315,10 +6315,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51CBB0]]
-    } --[[table: 00000280FF51C4F0]],
+      } --[[table: 0000025F3CA37C20]]
+    } --[[table: 0000025F3CA37460]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51CD30]],
+  } --[[table: 0000025F3CA37A20]],
   {
     Components = {
       {
@@ -6332,12 +6332,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51C3B0]],
+      } --[[table: 0000025F3CA37B20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51CBF0]],
+      } --[[table: 0000025F3CA38760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6351,10 +6351,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51CC30]]
-    } --[[table: 00000280FF51C370]],
+      } --[[table: 0000025F3CA387E0]]
+    } --[[table: 0000025F3CA37AE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51CB30]],
+  } --[[table: 0000025F3CA37A60]],
   {
     Components = {
       {
@@ -6368,12 +6368,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51CDB0]],
+      } --[[table: 0000025F3CA38FA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C530]],
+      } --[[table: 0000025F3CA388E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6387,10 +6387,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51CDF0]]
-    } --[[table: 00000280FF51CFF0]],
+      } --[[table: 0000025F3CA38220]]
+    } --[[table: 0000025F3CA38C20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51CCB0]],
+  } --[[table: 0000025F3CA38C60]],
   {
     Components = {
       {
@@ -6404,12 +6404,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51D070]],
+      } --[[table: 0000025F3CA396A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51C570]],
+      } --[[table: 0000025F3CA394E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6423,10 +6423,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51C5B0]]
-    } --[[table: 00000280FF51CE70]],
+      } --[[table: 0000025F3CA399E0]]
+    } --[[table: 0000025F3CA38DA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51CE30]],
+  } --[[table: 0000025F3CA38D60]],
   {
     Components = {
       {
@@ -6440,12 +6440,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51C630]],
+      } --[[table: 0000025F3CA39A60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D6B0]],
+      } --[[table: 0000025F3CA39B60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6459,10 +6459,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51D8B0]]
-    } --[[table: 00000280FF51C5F0]],
+      } --[[table: 0000025F3CA398E0]]
+    } --[[table: 0000025F3CA39F60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51CF70]],
+  } --[[table: 0000025F3CA39660]],
   {
     Components = {
       {
@@ -6476,12 +6476,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51D630]],
+      } --[[table: 0000025F3CA391E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D9F0]],
+      } --[[table: 0000025F3CA39260]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6495,10 +6495,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51DBF0]]
-    } --[[table: 00000280FF51DDB0]],
+      } --[[table: 0000025F3CA392E0]]
+    } --[[table: 0000025F3CA3A120]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51DFF0]],
+  } --[[table: 0000025F3CA3A0A0]],
   {
     Components = {
       {
@@ -6512,12 +6512,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51DB30]],
+      } --[[table: 0000025F3CA3A9A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51DAB0]],
+      } --[[table: 0000025F3CA3AA60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6531,10 +6531,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51DA30]]
-    } --[[table: 00000280FF51D470]],
+      } --[[table: 0000025F3CA3AE60]]
+    } --[[table: 0000025F3CA3A860]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51D430]],
+  } --[[table: 0000025F3CA3A660]],
   {
     Components = {
       {
@@ -6548,12 +6548,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51DFB0]],
+      } --[[table: 0000025F3CA449E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D4F0]],
+      } --[[table: 0000025F3CA44A60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6567,10 +6567,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51D230]]
-    } --[[table: 00000280FF51E030]],
+      } --[[table: 0000025F3CA44BE0]]
+    } --[[table: 0000025F3CA450A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51D4B0]],
+  } --[[table: 0000025F3CA44820]],
   {
     Components = {
       {
@@ -6584,12 +6584,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51D530]],
+      } --[[table: 0000025F3CA444E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E070]],
+      } --[[table: 0000025F3CA45F20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6603,10 +6603,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51D570]]
-    } --[[table: 00000280FF51D270]],
+      } --[[table: 0000025F3CA45A20]]
+    } --[[table: 0000025F3CA44420]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51DC70]],
+  } --[[table: 0000025F3CA44D20]],
   {
     Components = {
       {
@@ -6620,12 +6620,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51DA70]],
+      } --[[table: 0000025F3CA45DA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51DAF0]],
+      } --[[table: 0000025F3CA455A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6639,10 +6639,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51D370]]
-    } --[[table: 00000280FF51E0B0]],
+      } --[[table: 0000025F3CA451A0]]
+    } --[[table: 0000025F3CA45B60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51D330]],
+  } --[[table: 0000025F3CA45AA0]],
   {
     Components = {
       {
@@ -6656,12 +6656,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E0F0]],
+      } --[[table: 0000025F3CA45CA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D770]],
+      } --[[table: 0000025F3CA45DE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6675,10 +6675,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51DD70]]
-    } --[[table: 00000280FF51D1B0]],
+      } --[[table: 0000025F3CA45EA0]]
+    } --[[table: 0000025F3CA45BA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51D930]],
+  } --[[table: 0000025F3CA45E60]],
   {
     Components = {
       {
@@ -6692,12 +6692,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51D3B0]],
+      } --[[table: 0000025F3CA46860]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D3F0]],
+      } --[[table: 0000025F3CA46D20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6711,10 +6711,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51DC30]]
-    } --[[table: 00000280FF51D730]],
+      } --[[table: 0000025F3CA466E0]]
+    } --[[table: 0000025F3CA45620]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51D6F0]],
+  } --[[table: 0000025F3CA452A0]],
   {
     Components = {
       {
@@ -6728,12 +6728,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51D2B0]],
+      } --[[table: 0000025F3CA469A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D2F0]],
+      } --[[table: 0000025F3CA465E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6747,10 +6747,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51D170]]
-    } --[[table: 00000280FF51D7B0]],
+      } --[[table: 0000025F3CA46820]]
+    } --[[table: 0000025F3CA463A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51DE70]],
+  } --[[table: 0000025F3CA47020]],
   {
     Components = {
       {
@@ -6764,12 +6764,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51D970]],
+      } --[[table: 0000025F3CA46320]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51D8F0]],
+      } --[[table: 0000025F3CA47520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6783,10 +6783,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51DB70]]
-    } --[[table: 00000280FF51D870]],
+      } --[[table: 0000025F3CA47BE0]]
+    } --[[table: 0000025F3CA46AA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51D830]],
+  } --[[table: 0000025F3CA462A0]],
   {
     Components = {
       {
@@ -6800,12 +6800,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51DCB0]],
+      } --[[table: 0000025F3CA475E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51DCF0]],
+      } --[[table: 0000025F3CA47F20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6819,10 +6819,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51DEB0]]
-    } --[[table: 00000280FF51D1F0]],
+      } --[[table: 0000025F3CA47C20]]
+    } --[[table: 0000025F3CA47EA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51DF70]],
+  } --[[table: 0000025F3CA477A0]],
   {
     Components = {
       {
@@ -6836,12 +6836,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E3F0]],
+      } --[[table: 0000025F3CA47FA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E330]],
+      } --[[table: 0000025F3CA47FE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6855,10 +6855,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51EF30]]
-    } --[[table: 00000280FF51E770]],
+      } --[[table: 0000025F3CA48060]]
+    } --[[table: 0000025F3CA478A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51DF30]],
+  } --[[table: 0000025F3CA47F60]],
   {
     Components = {
       {
@@ -6872,12 +6872,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E570]],
+      } --[[table: 0000025F3CA47AE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51EDB0]],
+      } --[[table: 0000025F3CA472E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6891,10 +6891,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51E370]]
-    } --[[table: 00000280FF51E270]],
+      } --[[table: 0000025F3CA47360]]
+    } --[[table: 0000025F3CA472A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51E9B0]],
+  } --[[table: 0000025F3CA471A0]],
   {
     Components = {
       {
@@ -6908,12 +6908,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51ECF0]],
+      } --[[table: 0000025F3CA48520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51EDF0]],
+      } --[[table: 0000025F3CA48C60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6927,10 +6927,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51EFB0]]
-    } --[[table: 00000280FF51E5F0]],
+      } --[[table: 0000025F3CA48CE0]]
+    } --[[table: 0000025F3CA484E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51EF70]],
+  } --[[table: 0000025F3CA484A0]],
   {
     Components = {
       {
@@ -6944,12 +6944,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E3B0]],
+      } --[[table: 0000025F3CA489A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E7F0]],
+      } --[[table: 0000025F3CA48B60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6963,10 +6963,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51E1B0]]
-    } --[[table: 00000280FF51EA30]],
+      } --[[table: 0000025F3CA48FA0]]
+    } --[[table: 0000025F3CA48F60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51E170]],
+  } --[[table: 0000025F3CA488A0]],
   {
     Components = {
       {
@@ -6980,12 +6980,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E930]],
+      } --[[table: 0000025F3CA49EA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51EEF0]],
+      } --[[table: 0000025F3CA49BE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -6999,10 +6999,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51E830]]
-    } --[[table: 00000280FF51EE30]],
+      } --[[table: 0000025F3CA49C20]]
+    } --[[table: 0000025F3CA499A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51E430]],
+  } --[[table: 0000025F3CA49960]],
   {
     Components = {
       {
@@ -7016,12 +7016,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E1F0]],
+      } --[[table: 0000025F3CA4B120]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E6F0]],
+      } --[[table: 0000025F3CA4A7E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7035,10 +7035,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51E970]]
-    } --[[table: 00000280FF51E2F0]],
+      } --[[table: 0000025F3CA4ACE0]]
+    } --[[table: 0000025F3CA4B0E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51E4F0]],
+  } --[[table: 0000025F3CA49360]],
   {
     Components = {
       {
@@ -7052,12 +7052,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E4B0]],
+      } --[[table: 0000025F3CA4A4A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E230]],
+      } --[[table: 0000025F3CA4AF20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7071,10 +7071,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51EBB0]]
-    } --[[table: 00000280FF51EC70]],
+      } --[[table: 0000025F3CA4A860]]
+    } --[[table: 0000025F3CA4AEA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51EE70]],
+  } --[[table: 0000025F3CA4A360]],
   {
     Components = {
       {
@@ -7088,12 +7088,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51EAB0]],
+      } --[[table: 0000025F3CA4AAA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E530]],
+      } --[[table: 0000025F3CA4AAE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7107,10 +7107,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51E2B0]]
-    } --[[table: 00000280FF51EA70]],
+      } --[[table: 0000025F3CA4ABE0]]
+    } --[[table: 0000025F3CA4AA60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51E8F0]],
+  } --[[table: 0000025F3CA4A960]],
   {
     Components = {
       {
@@ -7124,12 +7124,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E630]],
+      } --[[table: 0000025F3CA4BF60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E670]],
+      } --[[table: 0000025F3CA4B3E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7143,10 +7143,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51EC30]]
-    } --[[table: 00000280FF51E5B0]],
+      } --[[table: 0000025F3CA4B1A0]]
+    } --[[table: 0000025F3CA4BE60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51ED30]],
+  } --[[table: 0000025F3CA4BE20]],
   {
     Components = {
       {
@@ -7160,12 +7160,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF51E870]],
+      } --[[table: 0000025F3CA4C2A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF51E8B0]],
+      } --[[table: 0000025F3CA4CDA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7179,10 +7179,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF51EB70]]
-    } --[[table: 00000280FF51E7B0]],
+      } --[[table: 0000025F3CA4CF20]]
+    } --[[table: 0000025F3CA4B160]],
     EntityName = "Tree"
-  } --[[table: 00000280FF51E6B0]],
+  } --[[table: 0000025F3CA4B660]],
   {
     Components = {
       {
@@ -7196,12 +7196,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FEC30]],
+      } --[[table: 0000025F3CA4D020]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FE9B0]],
+      } --[[table: 0000025F3CA4D060]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7215,10 +7215,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FE770]]
-    } --[[table: 00000280FF4FE4B0]],
+      } --[[table: 0000025F3CA4C2E0]]
+    } --[[table: 0000025F3CA4CFA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FEEB0]],
+  } --[[table: 0000025F3CA4CCA0]],
   {
     Components = {
       {
@@ -7232,12 +7232,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FF030]],
+      } --[[table: 0000025F3CA4C520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FE630]],
+      } --[[table: 0000025F3CA4D360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7251,10 +7251,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FEE70]]
-    } --[[table: 00000280FF4FE6B0]],
+      } --[[table: 0000025F3CA4E160]]
+    } --[[table: 0000025F3CA4C460]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE870]],
+  } --[[table: 0000025F3CA4C7A0]],
   {
     Components = {
       {
@@ -7268,12 +7268,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FE430]],
+      } --[[table: 0000025F3CA50EA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FEB30]],
+      } --[[table: 0000025F3CA50FA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7287,10 +7287,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FE730]]
-    } --[[table: 00000280FF4FECB0]],
+      } --[[table: 0000025F3CA51FA0]]
+    } --[[table: 0000025F3CA4FF20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE530]],
+  } --[[table: 0000025F3CA4F7E0]],
   {
     Components = {
       {
@@ -7304,12 +7304,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FE5F0]],
+      } --[[table: 0000025F3CA52260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FEFB0]],
+      } --[[table: 0000025F3CA32B60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7323,10 +7323,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FE670]]
-    } --[[table: 00000280FF4FE3B0]],
+      } --[[table: 0000025F3CA32720]]
+    } --[[table: 0000025F3CA52D60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE170]],
+  } --[[table: 0000025F3CA52760]],
   {
     Components = {
       {
@@ -7340,12 +7340,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FF070]],
+      } --[[table: 0000025F393748A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FE4F0]],
+      } --[[table: 0000025F39374AA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7359,10 +7359,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FE8F0]]
-    } --[[table: 00000280FF4FEDF0]],
+      } --[[table: 0000025F39374EA0]]
+    } --[[table: 0000025F39374DA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE570]],
+  } --[[table: 0000025F393741E0]],
   {
     Components = {
       {
@@ -7376,12 +7376,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FE3F0]],
+      } --[[table: 0000025F39375920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FEA70]],
+      } --[[table: 0000025F39375F20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7395,10 +7395,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FEFF0]]
-    } --[[table: 00000280FF4FE6F0]],
+      } --[[table: 0000025F39375C20]]
+    } --[[table: 0000025F39374F60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE2B0]],
+  } --[[table: 0000025F39374F20]],
   {
     Components = {
       {
@@ -7412,12 +7412,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FF130]],
+      } --[[table: 0000025F39375420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF0B0]],
+      } --[[table: 0000025F39375720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7431,10 +7431,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FE7F0]]
-    } --[[table: 00000280FF4FE1F0]],
+      } --[[table: 0000025F393759A0]]
+    } --[[table: 0000025F393753E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE7B0]],
+  } --[[table: 0000025F39375FA0]],
   {
     Components = {
       {
@@ -7448,12 +7448,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FE270]],
+      } --[[table: 0000025F393761A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FED30]],
+      } --[[table: 0000025F393766E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7467,10 +7467,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FE970]]
-    } --[[table: 00000280FF4FE830]],
+      } --[[table: 0000025F39376BA0]]
+    } --[[table: 0000025F393764A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE2F0]],
+  } --[[table: 0000025F393757E0]],
   {
     Components = {
       {
@@ -7484,12 +7484,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FE330]],
+      } --[[table: 0000025F39377A60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF0F0]],
+      } --[[table: 0000025F39377320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7503,10 +7503,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FEAF0]]
-    } --[[table: 00000280FF4FEAB0]],
+      } --[[table: 0000025F39377520]]
+    } --[[table: 0000025F39376D20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FE470]],
+  } --[[table: 0000025F39376920]],
   {
     Components = {
       {
@@ -7520,12 +7520,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FECF0]],
+      } --[[table: 0000025F39378AA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FEBB0]],
+      } --[[table: 0000025F39378DE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7539,10 +7539,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FED70]]
-    } --[[table: 00000280FF4FEB70]],
+      } --[[table: 0000025F39378460]]
+    } --[[table: 0000025F39377CE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FEC70]],
+  } --[[table: 0000025F39377CA0]],
   {
     Components = {
       {
@@ -7556,12 +7556,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FEF70]],
+      } --[[table: 0000025F39378FA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF5F0]],
+      } --[[table: 0000025F39378C60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7575,10 +7575,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FF630]]
-    } --[[table: 00000280FF4FEF30]],
+      } --[[table: 0000025F39378CA0]]
+    } --[[table: 0000025F39378BE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FEE30]],
+  } --[[table: 0000025F393789E0]],
   {
     Components = {
       {
@@ -7592,12 +7592,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FFDB0]],
+      } --[[table: 0000025F393794A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500070]],
+      } --[[table: 0000025F39379620]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7611,10 +7611,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FF6B0]]
-    } --[[table: 00000280FF4FF7B0]],
+      } --[[table: 0000025F39379E60]]
+    } --[[table: 0000025F3937A0A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FFFB0]],
+  } --[[table: 0000025F39378F60]],
   {
     Components = {
       {
@@ -7628,12 +7628,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FF9F0]],
+      } --[[table: 0000025F3937AB20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF3B0]],
+      } --[[table: 0000025F3937AFA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7647,10 +7647,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FFF30]]
-    } --[[table: 00000280FF500030]],
+      } --[[table: 0000025F3937A9A0]]
+    } --[[table: 0000025F3937A720]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FF4F0]],
+  } --[[table: 0000025F39379C60]],
   {
     Components = {
       {
@@ -7664,12 +7664,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FFD30]],
+      } --[[table: 0000025F3937ABE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF170]],
+      } --[[table: 0000025F3937B7E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7683,10 +7683,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FF1F0]]
-    } --[[table: 00000280FF500130]],
+      } --[[table: 0000025F3937BEE0]]
+    } --[[table: 0000025F3937A460]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FF4B0]],
+  } --[[table: 0000025F3937A3A0]],
   {
     Components = {
       {
@@ -7700,12 +7700,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FFDF0]],
+      } --[[table: 0000025F3937B920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF1B0]],
+      } --[[table: 0000025F3937BA60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7719,10 +7719,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5000B0]]
-    } --[[table: 00000280FF4FFC30]],
+      } --[[table: 0000025F3937B1A0]]
+    } --[[table: 0000025F3937C120]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FFBF0]],
+  } --[[table: 0000025F3937C0E0]],
   {
     Components = {
       {
@@ -7736,12 +7736,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FFCB0]],
+      } --[[table: 0000025F3937C920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF870]],
+      } --[[table: 0000025F3937C620]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7755,10 +7755,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FFE70]]
-    } --[[table: 00000280FF4FFB30]],
+      } --[[table: 0000025F3937CA20]]
+    } --[[table: 0000025F3937C560]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FF3F0]],
+  } --[[table: 0000025F3937C520]],
   {
     Components = {
       {
@@ -7772,12 +7772,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FF2F0]],
+      } --[[table: 0000025F3937D460]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF930]],
+      } --[[table: 0000025F3937D520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7791,10 +7791,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FFBB0]]
-    } --[[table: 00000280FF4FFE30]],
+      } --[[table: 0000025F3937D7E0]]
+    } --[[table: 0000025F3937D320]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FF2B0]],
+  } --[[table: 0000025F3937DA20]],
   {
     Components = {
       {
@@ -7808,12 +7808,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FFF70]],
+      } --[[table: 0000025F3937E0E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FF970]],
+      } --[[table: 0000025F3937D5A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7827,10 +7827,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FF330]]
-    } --[[table: 00000280FF4FF730]],
+      } --[[table: 0000025F3937DE20]]
+    } --[[table: 0000025F3937D820]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FF7F0]],
+  } --[[table: 0000025F3937DD60]],
   {
     Components = {
       {
@@ -7844,12 +7844,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FF9B0]],
+      } --[[table: 0000025F3937EC60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FFEB0]],
+      } --[[table: 0000025F3937E4A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7863,10 +7863,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FFA30]]
-    } --[[table: 00000280FF4FF8F0]],
+      } --[[table: 0000025F3937F4E0]]
+    } --[[table: 0000025F3937F020]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FF530]],
+  } --[[table: 0000025F3937EC20]],
   {
     Components = {
       {
@@ -7880,12 +7880,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FF430]],
+      } --[[table: 0000025F39380520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FFAB0]],
+      } --[[table: 0000025F39380760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7899,10 +7899,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FFAF0]]
-    } --[[table: 00000280FF4FFA70]],
+      } --[[table: 0000025F39380E60]]
+    } --[[table: 0000025F393806E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FF470]],
+  } --[[table: 0000025F3937F8A0]],
   {
     Components = {
       {
@@ -7916,12 +7916,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF4FFB70]],
+      } --[[table: 0000025F39380260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF4FFC70]],
+      } --[[table: 0000025F39380F20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7935,10 +7935,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF4FFCF0]]
-    } --[[table: 00000280FF4FF5B0]],
+      } --[[table: 0000025F39381760]]
+    } --[[table: 0000025F39380860]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5000F0]],
+  } --[[table: 0000025F39380EE0]],
   {
     Components = {
       {
@@ -7952,12 +7952,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5006B0]],
+      } --[[table: 0000025F39381B20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500B30]],
+      } --[[table: 0000025F39381D20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -7971,10 +7971,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF500670]]
-    } --[[table: 00000280FF5002B0]],
+      } --[[table: 0000025F39382D20]]
+    } --[[table: 0000025F39381C60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF4FFD70]],
+  } --[[table: 0000025F39381960]],
   {
     Components = {
       {
@@ -7988,12 +7988,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF500730]],
+      } --[[table: 0000025F39382FA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500770]],
+      } --[[table: 0000025F393824E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8007,10 +8007,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5007F0]]
-    } --[[table: 00000280FF500570]],
+      } --[[table: 0000025F39382760]]
+    } --[[table: 0000025F39382A60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5006F0]],
+  } --[[table: 0000025F393822E0]],
   {
     Components = {
       {
@@ -8024,12 +8024,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5009B0]],
+      } --[[table: 0000025F393621A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF501130]],
+      } --[[table: 0000025F393624E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8043,10 +8043,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF500DF0]]
-    } --[[table: 00000280FF500E30]],
+      } --[[table: 0000025F39362520]]
+    } --[[table: 0000025F39362460]],
     EntityName = "Tree"
-  } --[[table: 00000280FF500B70]],
+  } --[[table: 0000025F39362F20]],
   {
     Components = {
       {
@@ -8060,12 +8060,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF500A70]],
+      } --[[table: 0000025F39363BA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500C70]],
+      } --[[table: 0000025F39363520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8079,10 +8079,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5010B0]]
-    } --[[table: 00000280FF500430]],
+      } --[[table: 0000025F39363DE0]]
+    } --[[table: 0000025F393626A0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF500DB0]],
+  } --[[table: 0000025F393625E0]],
   {
     Components = {
       {
@@ -8096,12 +8096,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF501030]],
+      } --[[table: 0000025F39364B20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF501070]],
+      } --[[table: 0000025F39364B60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8115,10 +8115,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF500370]]
-    } --[[table: 00000280FF500F70]],
+      } --[[table: 0000025F39364BE0]]
+    } --[[table: 0000025F39364360]],
     EntityName = "Tree"
-  } --[[table: 00000280FF500470]],
+  } --[[table: 0000025F393635E0]],
   {
     Components = {
       {
@@ -8132,12 +8132,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF500330]],
+      } --[[table: 0000025F39365520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500E70]],
+      } --[[table: 0000025F39365860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8151,10 +8151,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5001B0]]
-    } --[[table: 00000280FF500170]],
+      } --[[table: 0000025F39365660]]
+    } --[[table: 0000025F39365CE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5010F0]],
+  } --[[table: 0000025F39365C60]],
   {
     Components = {
       {
@@ -8168,12 +8168,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF500BB0]],
+      } --[[table: 0000025F393666E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF5009F0]],
+      } --[[table: 0000025F393668E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8187,10 +8187,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5001F0]]
-    } --[[table: 00000280FF500AB0]],
+      } --[[table: 0000025F39366BE0]]
+    } --[[table: 0000025F39365E20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF500270]],
+  } --[[table: 0000025F393659A0]],
   {
     Components = {
       {
@@ -8204,12 +8204,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF5003B0]],
+      } --[[table: 0000025F393662E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500D30]],
+      } --[[table: 0000025F39366320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8223,10 +8223,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5003F0]]
-    } --[[table: 00000280FF5002F0]],
+      } --[[table: 0000025F393679E0]]
+    } --[[table: 0000025F39366220]],
     EntityName = "Tree"
-  } --[[table: 00000280FF500230]],
+  } --[[table: 0000025F39366DE0]],
   {
     Components = {
       {
@@ -8240,12 +8240,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF500AF0]],
+      } --[[table: 0000025F393671E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500EB0]],
+      } --[[table: 0000025F39367420]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8259,10 +8259,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF500A30]]
-    } --[[table: 00000280FF5005B0]],
+      } --[[table: 0000025F39367560]]
+    } --[[table: 0000025F39367D60]],
     EntityName = "Tree"
-  } --[[table: 00000280FF5004F0]],
+  } --[[table: 0000025F39367D20]],
   {
     Components = {
       {
@@ -8276,12 +8276,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF500830]],
+      } --[[table: 0000025F39369E60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500870]],
+      } --[[table: 0000025F393693E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8295,10 +8295,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF5008F0]]
-    } --[[table: 00000280FF500630]],
+      } --[[table: 0000025F39369820]]
+    } --[[table: 0000025F39369960]],
     EntityName = "Tree"
-  } --[[table: 00000280FF500D70]],
+  } --[[table: 0000025F393684E0]],
   {
     Components = {
       {
@@ -8312,12 +8312,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF500CB0]],
+      } --[[table: 0000025F3936AEA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF500CF0]],
+      } --[[table: 0000025F3936A920]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8331,10 +8331,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF500EF0]]
-    } --[[table: 00000280FF500970]],
+      } --[[table: 0000025F3936A3E0]]
+    } --[[table: 0000025F39369AA0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF500C30]],
+  } --[[table: 0000025F39369720]],
   {
     Components = {
       {
@@ -8348,12 +8348,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FD3E4060]],
+      } --[[table: 0000025F3936AB20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FD3E6C60]],
+      } --[[table: 0000025F3936A6E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8367,10 +8367,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FD3E9420]]
-    } --[[table: 00000280FD3E0F60]],
+      } --[[table: 0000025F3936A760]]
+    } --[[table: 0000025F3936AA60]],
     EntityName = "Tree"
-  } --[[table: 00000280FD3DDFE0]],
+  } --[[table: 0000025F3936A520]],
   {
     Components = {
       {
@@ -8384,12 +8384,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FD3F44E0]],
+      } --[[table: 0000025F3936B520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FD3F5920]],
+      } --[[table: 0000025F3936B9A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8403,10 +8403,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FD3F5BA0]]
-    } --[[table: 00000280FD3F1860]],
+      } --[[table: 0000025F3936B2A0]]
+    } --[[table: 0000025F3936BBE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FD3EF760]],
+  } --[[table: 0000025F3936AC20]],
   {
     Components = {
       {
@@ -8420,12 +8420,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FB7370F0]],
+      } --[[table: 0000025F3936BE60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FB736BF0]],
+      } --[[table: 0000025F3936C6A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8439,10 +8439,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FB7379B0]]
-    } --[[table: 00000280FB7354F0]],
+      } --[[table: 0000025F3936C2E0]]
+    } --[[table: 0000025F3936BFE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FB735470]],
+  } --[[table: 0000025F3936B820]],
   {
     Components = {
       {
@@ -8456,12 +8456,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FB722F70]],
+      } --[[table: 0000025F3936EA60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FB72B330]],
+      } --[[table: 0000025F3936E320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8475,10 +8475,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FB72DCB0]]
-    } --[[table: 00000280FB719E70]],
+      } --[[table: 0000025F3936EFA0]]
+    } --[[table: 0000025F3936D560]],
     EntityName = "Tree"
-  } --[[table: 00000280FB737430]],
+  } --[[table: 0000025F3936D520]],
   {
     Components = {
       {
@@ -8492,12 +8492,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FD172AB0]],
+      } --[[table: 0000025F3936EDE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FD175270]],
+      } --[[table: 0000025F3936E860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8511,10 +8511,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FD1785F0]]
-    } --[[table: 00000280FD171BB0]],
+      } --[[table: 0000025F3936F120]]
+    } --[[table: 0000025F3936ED20]],
     EntityName = "Tree"
-  } --[[table: 00000280FD1700F0]],
+  } --[[table: 0000025F3936E7E0]],
   {
     Components = {
       {
@@ -8528,12 +8528,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FD161330]],
+      } --[[table: 0000025F39370260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FBA8D770]],
+      } --[[table: 0000025F393702E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8547,10 +8547,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FBA8EAB0]]
-    } --[[table: 00000280FD15B0F0]],
+      } --[[table: 0000025F39370860]]
+    } --[[table: 0000025F3936FEE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FD1797F0]],
+  } --[[table: 0000025F3936E8E0]],
   {
     Components = {
       {
@@ -8564,12 +8564,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FBA9FDF0]],
+      } --[[table: 0000025F39370560]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FBAA21B0]],
+      } --[[table: 0000025F39371160]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8583,10 +8583,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FBAA69F0]]
-    } --[[table: 00000280FBA931F0]],
+      } --[[table: 0000025F39371CE0]]
+    } --[[table: 0000025F39370EE0]],
     EntityName = "Tree"
-  } --[[table: 00000280FBA90FB0]],
+  } --[[table: 0000025F39370AA0]],
   {
     Components = {
       {
@@ -8600,12 +8600,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FE0F4CF0]],
+      } --[[table: 0000025F39371460]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FE0F72F0]],
+      } --[[table: 0000025F39371720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8619,10 +8619,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FE0FA6B0]]
-    } --[[table: 00000280FE0F1FF0]],
+      } --[[table: 0000025F393714E0]]
+    } --[[table: 0000025F39371420]],
     EntityName = "Tree"
-  } --[[table: 00000280FBA8CF70]],
+  } --[[table: 0000025F39372020]],
   {
     Components = {
       {
@@ -8636,12 +8636,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FE10A530]],
+      } --[[table: 0000025F393726A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FE10E0F0]],
+      } --[[table: 0000025F393728A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8655,10 +8655,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FE0EFA30]]
-    } --[[table: 00000280FE1064B0]],
+      } --[[table: 0000025F39372B60]]
+    } --[[table: 0000025F39371B60]],
     EntityName = "Tree"
-  } --[[table: 00000280FE104770]],
+  } --[[table: 0000025F39371AE0]],
   {
     Components = {
       {
@@ -8672,12 +8672,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FF00CDB0]],
+      } --[[table: 0000025F39372DE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FF00FD70]],
+      } --[[table: 0000025F393726E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8691,10 +8691,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FF012470]]
-    } --[[table: 00000280FF0091B0]],
+      } --[[table: 0000025F39372920]]
+    } --[[table: 0000025F393721E0]],
     EntityName = "Tree"
-  } --[[table: 00000280FF006A70]],
+  } --[[table: 0000025F39372D20]],
   {
     Components = {
       {
@@ -8708,12 +8708,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FDBEE160]],
+      } --[[table: 0000025F39373B60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FDBF0860]],
+      } --[[table: 0000025F39373CE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8727,10 +8727,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FDBF1F20]]
-    } --[[table: 00000280FF01D0B0]],
+      } --[[table: 0000025F39373160]]
+    } --[[table: 0000025F39373F20]],
     EntityName = "Tree"
-  } --[[table: 00000280FF019B30]],
+  } --[[table: 0000025F39372320]],
   {
     Components = {
       {
@@ -8744,12 +8744,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FDBFE2E0]],
+      } --[[table: 0000025F3B0577F0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FDBFECE0]],
+      } --[[table: 0000025F3B0578F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8763,10 +8763,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FDC01C20]]
-    } --[[table: 00000280FDBFB5A0]],
+      } --[[table: 0000025F3B057E30]]
+    } --[[table: 0000025F3B0579B0]],
     EntityName = "Tree"
-  } --[[table: 00000280FDBF84A0]],
+  } --[[table: 0000025F3B0571F0]],
   {
     Components = {
       {
@@ -8780,12 +8780,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FE620AE0]],
+      } --[[table: 0000025F3B057EB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FE6234E0]],
+      } --[[table: 0000025F3B057330]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8799,10 +8799,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FE62A3E0]]
-    } --[[table: 00000280FE61DE60]],
+      } --[[table: 0000025F3B057930]]
+    } --[[table: 0000025F3B0580F0]],
     EntityName = "Tree"
-  } --[[table: 00000280FE6192A0]],
+  } --[[table: 0000025F3B057CF0]],
   {
     Components = {
       {
@@ -8816,12 +8816,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FBED92A0]],
+      } --[[table: 0000025F3B057D70]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FBED9CA0]],
+      } --[[table: 0000025F3B0573F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8835,10 +8835,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FBEDC620]]
-    } --[[table: 00000280FBED6820]],
+      } --[[table: 0000025F3B057430]]
+    } --[[table: 0000025F3B057EF0]],
     EntityName = "Tree"
-  } --[[table: 00000280FE6308E0]],
+  } --[[table: 0000025F3B0579F0]],
   {
     Components = {
       {
@@ -8852,12 +8852,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FBEE6920]],
+      } --[[table: 0000025F3B057BB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FAC4AD20]],
+      } --[[table: 0000025F3B058AF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8871,10 +8871,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FAC4EFA0]]
-    } --[[table: 00000280FBEE3560]],
+      } --[[table: 0000025F3B058D70]]
+    } --[[table: 0000025F3B057B70]],
     EntityName = "Tree"
-  } --[[table: 00000280FBEE34A0]],
+  } --[[table: 0000025F3B057B30]],
   {
     Components = {
       {
@@ -8888,12 +8888,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FAC3F760]],
+      } --[[table: 0000025F3B0590B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FAC45060]],
+      } --[[table: 0000025F3B058670]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8907,10 +8907,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FAC49F60]]
-    } --[[table: 00000280FAC3E2E0]],
+      } --[[table: 0000025F3B059EF0]]
+    } --[[table: 0000025F3B058FB0]],
     EntityName = "Tree"
-  } --[[table: 00000280FAC3A7A0]],
+  } --[[table: 0000025F3B058F30]],
   {
     Components = {
       {
@@ -8924,12 +8924,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FC2224B0]],
+      } --[[table: 0000025F3B059D30]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FC223930]],
+      } --[[table: 0000025F3B05A0B0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8943,10 +8943,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FC2256B0]]
-    } --[[table: 00000280FC220CB0]],
+      } --[[table: 0000025F3B05A130]]
+    } --[[table: 0000025F3B059C70]],
     EntityName = "Tree"
-  } --[[table: 00000280FC21F5B0]],
+  } --[[table: 0000025F3B059730]],
   {
     Components = {
       {
@@ -8960,12 +8960,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FC664B60]],
+      } --[[table: 0000025F3B059F30]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FC6708E0]],
+      } --[[table: 0000025F3B0598F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -8979,10 +8979,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FC67D7E0]]
-    } --[[table: 00000280FC20E770]],
+      } --[[table: 0000025F3B059F70]]
+    } --[[table: 0000025F3B0597F0]],
     EntityName = "Tree"
-  } --[[table: 00000280FC22C170]],
+  } --[[table: 0000025F3B0597B0]],
   {
     Components = {
       {
@@ -8996,12 +8996,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FC6629E0]],
+      } --[[table: 0000025F3B059A70]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FC663E60]],
+      } --[[table: 0000025F3B059AF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9015,10 +9015,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FC6631A0]]
-    } --[[table: 00000280FC6809A0]],
+      } --[[table: 0000025F3B05AD70]]
+    } --[[table: 0000025F3B059A30]],
     EntityName = "Tree"
-  } --[[table: 00000280FC67E9A0]],
+  } --[[table: 0000025F3B059970]],
   {
     Components = {
       {
@@ -9032,12 +9032,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FE9657F0]],
+      } --[[table: 0000025F3B05A670]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FE9685B0]],
+      } --[[table: 0000025F3B05AFF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9051,10 +9051,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FE96B8F0]]
-    } --[[table: 00000280FE957730]],
+      } --[[table: 0000025F3B05A5F0]]
+    } --[[table: 0000025F3B05AFB0]],
     EntityName = "Tree"
-  } --[[table: 00000280FE9546F0]],
+  } --[[table: 0000025F3B05ADF0]],
   {
     Components = {
       {
@@ -9068,12 +9068,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FC971A20]],
+      } --[[table: 0000025F3B05A9B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FC974720]],
+      } --[[table: 0000025F3B05A9F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9087,10 +9087,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FC9778A0]]
-    } --[[table: 00000280FC96EBE0]],
+      } --[[table: 0000025F3B05A2B0]]
+    } --[[table: 0000025F3B05A930]],
     EntityName = "Tree"
-  } --[[table: 00000280FE9719F0]],
+  } --[[table: 0000025F3B05B070]],
   {
     Components = {
       {
@@ -9104,12 +9104,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FECCAFF0]],
+      } --[[table: 0000025F3B05A7F0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FECCD4B0]],
+      } --[[table: 0000025F3B05BA70]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9123,10 +9123,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FECD10B0]]
-    } --[[table: 00000280FC981AE0]],
+      } --[[table: 0000025F3B05B3F0]]
+    } --[[table: 0000025F3B05A430]],
     EntityName = "Tree"
-  } --[[table: 00000280FC97E7A0]],
+  } --[[table: 0000025F3B05A1B0]],
   {
     Components = {
       {
@@ -9140,12 +9140,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FB4EFCE0]],
+      } --[[table: 0000025F3B05BDB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FB4F42E0]],
+      } --[[table: 0000025F3B05C0F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9159,10 +9159,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FB4DEE20]]
-    } --[[table: 00000280FECC22B0]],
+      } --[[table: 0000025F3B05B4F0]]
+    } --[[table: 0000025F3B05BC30]],
     EntityName = "Tree"
-  } --[[table: 00000280FECD69F0]],
+  } --[[table: 0000025F3B05B9B0]],
   {
     Components = {
       {
@@ -9176,12 +9176,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FCFD40F0]],
+      } --[[table: 0000025F3B05B5B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FCFD6CB0]],
+      } --[[table: 0000025F3B05CEF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9195,10 +9195,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FCFB8370]]
-    } --[[table: 00000280FCFC62B0]],
+      } --[[table: 0000025F3B05D130]]
+    } --[[table: 0000025F3B05BF70]],
     EntityName = "Tree"
-  } --[[table: 00000280FB4EBB20]],
+  } --[[table: 0000025F3B05B570]],
   {
     Components = {
       {
@@ -9212,12 +9212,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FDEA58F0]],
+      } --[[table: 0000025F3B05CBB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FDEA8170]],
+      } --[[table: 0000025F3B05CB30]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9231,10 +9231,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FDEAC970]]
-    } --[[table: 00000280E83968A0]],
+      } --[[table: 0000025F3B05C1B0]]
+    } --[[table: 0000025F3B05C7F0]],
     EntityName = "Tree"
-  } --[[table: 00000280E838CF60]],
+  } --[[table: 0000025F3B05C630]],
   {
     Components = {
       {
@@ -9248,12 +9248,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280FDB25530]],
+      } --[[table: 0000025F3B05CD30]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FDB26DF0]],
+      } --[[table: 0000025F3B05CD70]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9267,10 +9267,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280FB1A0D20]]
-    } --[[table: 00000280FDB22FB0]],
+      } --[[table: 0000025F3B05C3F0]]
+    } --[[table: 0000025F3B05C970]],
     EntityName = "Tree"
-  } --[[table: 00000280FDEB1EF0]],
+  } --[[table: 0000025F3B05CBF0]],
   {
     Components = {
       {
@@ -9284,12 +9284,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280E8CF62B0]],
+      } --[[table: 0000025F3B05D6B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280E8D04D70]],
+      } --[[table: 0000025F3B05D7F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9303,10 +9303,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280E8986A60]]
-    } --[[table: 00000280F6F88AF0]],
+      } --[[table: 0000025F3B05DF30]]
+    } --[[table: 0000025F3B05C530]],
     EntityName = "Tree"
-  } --[[table: 00000280F6F874B0]],
+  } --[[table: 0000025F3B05C270]],
   {
     Components = {
       {
@@ -9320,12 +9320,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280F7DA39F0]],
+      } --[[table: 0000025F3B05DFB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280F79FA030]],
+      } --[[table: 0000025F3B05DFF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9339,10 +9339,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280DE0C4600]]
-    } --[[table: 00000280FA8FB9F0]],
+      } --[[table: 0000025F3B05E070]]
+    } --[[table: 0000025F3B05DC70]],
     EntityName = "Tree"
-  } --[[table: 00000280F506D530]],
+  } --[[table: 0000025F3B05D370]],
   {
     Components = {
       {
@@ -9356,12 +9356,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280F93899B0]],
+      } --[[table: 0000025F3B05D770]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280FA4E2130]],
+      } --[[table: 0000025F3B05D7B0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9375,10 +9375,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080182220]]
-    } --[[table: 00000280FDDC9DA0]],
+      } --[[table: 0000025F3B05D870]]
+    } --[[table: 0000025F3B05DB30]],
     EntityName = "Tree"
-  } --[[table: 00000280FA2544B0]],
+  } --[[table: 0000025F3B05D5B0]],
   {
     Components = {
       {
@@ -9392,12 +9392,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080182FE0]],
+      } --[[table: 0000025F3B05EEB0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801830A0]],
+      } --[[table: 0000025F3B05FFB0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9411,10 +9411,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080182DE0]]
-    } --[[table: 00000280801824E0]],
+      } --[[table: 0000025F3B0618F0]]
+    } --[[table: 0000025F3B05EB30]],
     EntityName = "Tree"
-  } --[[table: 00000280801825E0]],
+  } --[[table: 0000025F3B05DBB0]],
   {
     Components = {
       {
@@ -9428,12 +9428,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080182AE0]],
+      } --[[table: 0000025F3B062230]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801822A0]],
+      } --[[table: 0000025F3B063970]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9447,10 +9447,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080182520]]
-    } --[[table: 00000280801824A0]],
+      } --[[table: 0000025F3B063E30]]
+    } --[[table: 0000025F3B062DF0]],
     EntityName = "Tree"
-  } --[[table: 0000028080182E20]],
+  } --[[table: 0000025F3B061DF0]],
   {
     Components = {
       {
@@ -9464,12 +9464,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801826A0]],
+      } --[[table: 0000025F3B068670]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080182B20]],
+      } --[[table: 0000025F3B068A30]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9483,10 +9483,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080182720]]
-    } --[[table: 0000028080182BE0]],
+      } --[[table: 0000025F3B048CF0]]
+    } --[[table: 0000025F3B066BB0]],
     EntityName = "Tree"
-  } --[[table: 0000028080182320]],
+  } --[[table: 0000025F3B064E30]],
   {
     Components = {
       {
@@ -9500,12 +9500,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080182620]],
+      } --[[table: 0000025F3B04A8B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080182FA0]],
+      } --[[table: 0000025F3B04B3F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9519,10 +9519,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801826E0]]
-    } --[[table: 00000280801823A0]],
+      } --[[table: 0000025F3B04BE70]]
+    } --[[table: 0000025F3B04A570]],
     EntityName = "Tree"
-  } --[[table: 0000028080182160]],
+  } --[[table: 0000025F3B049A30]],
   {
     Components = {
       {
@@ -9536,12 +9536,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080182D60]],
+      } --[[table: 0000025F3B04C370]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183020]],
+      } --[[table: 0000025F3B04DBF0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9555,10 +9555,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801828E0]]
-    } --[[table: 00000280801828A0]],
+      } --[[table: 0000025F3B04DEF0]]
+    } --[[table: 0000025F3B04C9B0]],
     EntityName = "Tree"
-  } --[[table: 0000028080182D20]],
+  } --[[table: 0000025F3B04B1B0]],
   {
     Components = {
       {
@@ -9572,12 +9572,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801823E0]],
+      } --[[table: 0000025F3B050C70]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080182A60]],
+      } --[[table: 0000025F3B050230]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9591,10 +9591,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080183060]]
-    } --[[table: 00000280801825A0]],
+      } --[[table: 0000025F3B0507B0]]
+    } --[[table: 0000025F3B04FEB0]],
     EntityName = "Tree"
-  } --[[table: 00000280801822E0]],
+  } --[[table: 0000025F3B04EDF0]],
   {
     Components = {
       {
@@ -9608,12 +9608,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183120]],
+      } --[[table: 0000025F3B052B30]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801830E0]],
+      } --[[table: 0000025F3B052530]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9627,10 +9627,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801827A0]]
-    } --[[table: 00000280801821A0]],
+      } --[[table: 0000025F3B052EB0]]
+    } --[[table: 0000025F3B052870]],
     EntityName = "Tree"
-  } --[[table: 0000028080182760]],
+  } --[[table: 0000025F3B051730]],
   {
     Components = {
       {
@@ -9644,12 +9644,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801821E0]],
+      } --[[table: 0000025F3B0536F0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080182DA0]],
+      } --[[table: 0000025F3B054F70]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9663,10 +9663,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080182460]]
-    } --[[table: 00000280801827E0]],
+      } --[[table: 0000025F3B0547B0]]
+    } --[[table: 0000025F3B053330]],
     EntityName = "Tree"
-  } --[[table: 0000028080182420]],
+  } --[[table: 0000025F3B053830]],
   {
     Components = {
       {
@@ -9680,12 +9680,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080182920]],
+      } --[[table: 0000025F3B056870]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080182C20]],
+      } --[[table: 0000025F3B056FB0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9699,10 +9699,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080182960]]
-    } --[[table: 0000028080182B60]],
+      } --[[table: 0000025F3B0563F0]]
+    } --[[table: 0000025F3B056370]],
     EntityName = "Tree"
-  } --[[table: 00000280801829A0]],
+  } --[[table: 0000025F3B056BF0]],
   {
     Components = {
       {
@@ -9716,12 +9716,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080182CE0]],
+      } --[[table: 0000025F3B0569B0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080182E60]],
+      } --[[table: 0000025F3B0569F0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9735,10 +9735,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080182EA0]]
-    } --[[table: 0000028080182CA0]],
+      } --[[table: 0000025F08D237C0]]
+    } --[[table: 0000025F3B0565B0]],
     EntityName = "Tree"
-  } --[[table: 0000028080182C60]],
+  } --[[table: 0000025F3B056930]],
   {
     Components = {
       {
@@ -9752,12 +9752,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183960]],
+      } --[[table: 0000025F24200470]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183C20]],
+      } --[[table: 0000025F28D4DDB0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9771,10 +9771,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801836E0]]
-    } --[[table: 0000028080182F60]],
+      } --[[table: 0000025F022E04B0]]
+    } --[[table: 0000025F1EA097E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080182F20]],
+  } --[[table: 0000025F1C06D600]],
   {
     Components = {
       {
@@ -9788,12 +9788,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183EA0]],
+      } --[[table: 0000025F20BB9260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801836A0]],
+      } --[[table: 0000025F21D5CCA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9807,10 +9807,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801839A0]]
-    } --[[table: 00000280801831A0]],
+      } --[[table: 0000025F22311FB0]]
+    } --[[table: 0000025F73B98C20]],
     EntityName = "Tree"
-  } --[[table: 00000280801832A0]],
+  } --[[table: 0000025F26C72860]],
   {
     Components = {
       {
@@ -9824,12 +9824,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183860]],
+      } --[[table: 0000025F43BF4920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183FE0]],
+      } --[[table: 0000025F43BF47E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9843,10 +9843,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080183A60]]
-    } --[[table: 00000280801838A0]],
+      } --[[table: 0000025F43BF43E0]]
+    } --[[table: 0000025F04577AF0]],
     EntityName = "Tree"
-  } --[[table: 00000280801834E0]],
+  } --[[table: 0000025F1CCA8CB0]],
   {
     Components = {
       {
@@ -9860,12 +9860,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183520]],
+      } --[[table: 0000025F43BF50A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183DA0]],
+      } --[[table: 0000025F43BF45E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9879,10 +9879,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080183920]]
-    } --[[table: 0000028080183BE0]],
+      } --[[table: 0000025F43BF4C60]]
+    } --[[table: 0000025F43BF5020]],
     EntityName = "Tree"
-  } --[[table: 00000280801832E0]],
+  } --[[table: 0000025F43BF5060]],
   {
     Components = {
       {
@@ -9896,12 +9896,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183CE0]],
+      } --[[table: 0000025F43BF41E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183420]],
+      } --[[table: 0000025F43BF4F20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9915,10 +9915,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801839E0]]
-    } --[[table: 00000280801840A0]],
+      } --[[table: 0000025F43BF4E60]]
+    } --[[table: 0000025F43BF4DE0]],
     EntityName = "Tree"
-  } --[[table: 0000028080183CA0]],
+  } --[[table: 0000025F43BF5120]],
   {
     Components = {
       {
@@ -9932,12 +9932,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801833A0]],
+      } --[[table: 0000025F43BF4A20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184020]],
+      } --[[table: 0000025F43BF4820]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9951,10 +9951,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080183460]]
-    } --[[table: 0000028080183360]],
+      } --[[table: 0000025F43BF4E20]]
+    } --[[table: 0000025F43BF46A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080183A20]],
+  } --[[table: 0000025F43BF4660]],
   {
     Components = {
       {
@@ -9968,12 +9968,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801838E0]],
+      } --[[table: 0000025F43BF4EE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183F20]],
+      } --[[table: 0000025F43BF42A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -9987,10 +9987,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801835E0]]
-    } --[[table: 00000280801834A0]],
+      } --[[table: 0000025F43BF41A0]]
+    } --[[table: 0000025F43BF4EA0]],
     EntityName = "Tree"
-  } --[[table: 0000028080183BA0]],
+  } --[[table: 0000025F43BF48A0]],
   {
     Components = {
       {
@@ -10004,12 +10004,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801835A0]],
+      } --[[table: 0000025F43BF4160]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184060]],
+      } --[[table: 0000025F43BF4F60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10023,10 +10023,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080183E20]]
-    } --[[table: 00000280801840E0]],
+      } --[[table: 0000025F43BF4FA0]]
+    } --[[table: 0000025F43BF50E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080183560]],
+  } --[[table: 0000025F43BF46E0]],
   {
     Components = {
       {
@@ -10040,12 +10040,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183160]],
+      } --[[table: 0000025F43BF4220]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801831E0]],
+      } --[[table: 0000025F43BF4C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10059,10 +10059,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080183660]]
-    } --[[table: 0000028080183620]],
+      } --[[table: 0000025F43BF49A0]]
+    } --[[table: 0000025F43BF4FE0]],
     EntityName = "Tree"
-  } --[[table: 00000280801833E0]],
+  } --[[table: 0000025F43BF4B20]],
   {
     Components = {
       {
@@ -10076,12 +10076,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183760]],
+      } --[[table: 0000025F43BF4B60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183260]],
+      } --[[table: 0000025F43BF4860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10095,10 +10095,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080183B60]]
-    } --[[table: 0000028080183B20]],
+      } --[[table: 0000025F43BF42E0]]
+    } --[[table: 0000025F43BF4460]],
     EntityName = "Tree"
-  } --[[table: 0000028080183AE0]],
+  } --[[table: 0000025F43BF4760]],
   {
     Components = {
       {
@@ -10112,12 +10112,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080183D20]],
+      } --[[table: 0000025F43BF43A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080183DE0]],
+      } --[[table: 0000025F43BF47A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10131,10 +10131,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801837E0]]
-    } --[[table: 0000028080183D60]],
+      } --[[table: 0000025F43BF4420]]
+    } --[[table: 0000025F43BF4720]],
     EntityName = "Tree"
-  } --[[table: 00000280801837A0]],
+  } --[[table: 0000025F43BF4CE0]],
   {
     Components = {
       {
@@ -10148,12 +10148,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184720]],
+      } --[[table: 0000025F43BF44E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184BA0]],
+      } --[[table: 0000025F43BF4520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10167,10 +10167,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801842A0]]
-    } --[[table: 0000028080184A20]],
+      } --[[table: 0000025F43BF4960]]
+    } --[[table: 0000025F43BF44A0]],
     EntityName = "Tree"
-  } --[[table: 00000280801843A0]],
+  } --[[table: 0000025F43BF4A60]],
   {
     Components = {
       {
@@ -10184,12 +10184,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801847A0]],
+      } --[[table: 0000025F43BF4BA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801850A0]],
+      } --[[table: 0000025F43BF4BE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10203,10 +10203,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184560]]
-    } --[[table: 0000028080184760]],
+      } --[[table: 0000025F43BF4D20]]
+    } --[[table: 0000025F43BF4AE0]],
     EntityName = "Tree"
-  } --[[table: 0000028080184B20]],
+  } --[[table: 0000025F43BF49E0]],
   {
     Components = {
       {
@@ -10220,12 +10220,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801841A0]],
+      } --[[table: 0000025F43BF5F20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184660]],
+      } --[[table: 0000025F43BF52E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10239,10 +10239,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184E20]]
-    } --[[table: 00000280801843E0]],
+      } --[[table: 0000025F43BF57E0]]
+    } --[[table: 0000025F43BF5FA0]],
     EntityName = "Tree"
-  } --[[table: 00000280801847E0]],
+  } --[[table: 0000025F43BF51E0]],
   {
     Components = {
       {
@@ -10256,12 +10256,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801848A0]],
+      } --[[table: 0000025F43BF5BE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184FE0]],
+      } --[[table: 0000025F43BF5EE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10275,10 +10275,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184860]]
-    } --[[table: 00000280801842E0]],
+      } --[[table: 0000025F43BF5BA0]]
+    } --[[table: 0000025F43BF53A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080185120]],
+  } --[[table: 0000025F43BF5A20]],
   {
     Components = {
       {
@@ -10292,12 +10292,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184D20]],
+      } --[[table: 0000025F43BF51A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801848E0]],
+      } --[[table: 0000025F43BF54A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10311,10 +10311,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184920]]
-    } --[[table: 0000028080184360]],
+      } --[[table: 0000025F43BF53E0]]
+    } --[[table: 0000025F43BF59A0]],
     EntityName = "Tree"
-  } --[[table: 00000280801845E0]],
+  } --[[table: 0000025F43BF5C20]],
   {
     Components = {
       {
@@ -10328,12 +10328,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184220]],
+      } --[[table: 0000025F43BF6020]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184260]],
+      } --[[table: 0000025F43BF5720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10347,10 +10347,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185020]]
-    } --[[table: 00000280801841E0]],
+      } --[[table: 0000025F43BF5220]]
+    } --[[table: 0000025F43BF5A60]],
     EntityName = "Tree"
-  } --[[table: 0000028080184D60]],
+  } --[[table: 0000025F43BF5CA0]],
   {
     Components = {
       {
@@ -10364,12 +10364,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184DE0]],
+      } --[[table: 0000025F43BF56A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801846A0]],
+      } --[[table: 0000025F43BF5420]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10383,10 +10383,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184160]]
-    } --[[table: 0000028080184320]],
+      } --[[table: 0000025F43BF5920]]
+    } --[[table: 0000025F43BF55E0]],
     EntityName = "Tree"
-  } --[[table: 00000280801844A0]],
+  } --[[table: 0000025F43BF54E0]],
   {
     Components = {
       {
@@ -10400,12 +10400,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184620]],
+      } --[[table: 0000025F43BF5960]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184AA0]],
+      } --[[table: 0000025F43BF5AA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10419,10 +10419,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184C20]]
-    } --[[table: 00000280801849A0]],
+      } --[[table: 0000025F43BF57A0]]
+    } --[[table: 0000025F43BF5E20]],
     EntityName = "Tree"
-  } --[[table: 00000280801845A0]],
+  } --[[table: 0000025F43BF5660]],
   {
     Components = {
       {
@@ -10436,12 +10436,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184AE0]],
+      } --[[table: 0000025F43BF60A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184EE0]],
+      } --[[table: 0000025F43BF6120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10455,10 +10455,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184B60]]
-    } --[[table: 0000028080184A60]],
+      } --[[table: 0000025F43BF52A0]]
+    } --[[table: 0000025F43BF5D60]],
     EntityName = "Tree"
-  } --[[table: 00000280801849E0]],
+  } --[[table: 0000025F43BF58E0]],
   {
     Components = {
       {
@@ -10472,12 +10472,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184CE0]],
+      } --[[table: 0000025F43BF5AE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080184DA0]],
+      } --[[table: 0000025F43BF5DE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10491,10 +10491,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080184E60]]
-    } --[[table: 0000028080184CA0]],
+      } --[[table: 0000025F43BF5860]]
+    } --[[table: 0000025F43BF59E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080184C60]],
+  } --[[table: 0000025F43BF5320]],
   {
     Components = {
       {
@@ -10508,12 +10508,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080184FA0]],
+      } --[[table: 0000025F43BF5460]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185060]],
+      } --[[table: 0000025F43BF5760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10527,10 +10527,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185720]]
-    } --[[table: 00000280801850E0]],
+      } --[[table: 0000025F43BF6060]]
+    } --[[table: 0000025F43BF5360]],
     EntityName = "Tree"
-  } --[[table: 0000028080184F60]],
+  } --[[table: 0000025F43BF5E60]],
   {
     Components = {
       {
@@ -10544,12 +10544,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185D20]],
+      } --[[table: 0000025F43BF5B60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186060]],
+      } --[[table: 0000025F43BF5EA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10563,10 +10563,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801857A0]]
-    } --[[table: 0000028080185A60]],
+      } --[[table: 0000025F43BF5560]]
+    } --[[table: 0000025F43BF5B20]],
     EntityName = "Tree"
-  } --[[table: 0000028080185960]],
+  } --[[table: 0000025F43BF5520]],
   {
     Components = {
       {
@@ -10580,12 +10580,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185C20]],
+      } --[[table: 0000025F43BF55A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801859A0]],
+      } --[[table: 0000025F43BF56E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10599,10 +10599,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801857E0]]
-    } --[[table: 00000280801854A0]],
+      } --[[table: 0000025F43BF69A0]]
+    } --[[table: 0000025F43BF60E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080185EA0]],
+  } --[[table: 0000025F43BF5F60]],
   {
     Components = {
       {
@@ -10616,12 +10616,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080186020]],
+      } --[[table: 0000025F43BF6E60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185620]],
+      } --[[table: 0000025F43BF6560]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10635,10 +10635,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185E60]]
-    } --[[table: 00000280801856A0]],
+      } --[[table: 0000025F43BF6A60]]
+    } --[[table: 0000025F43BF7120]],
     EntityName = "Tree"
-  } --[[table: 0000028080185860]],
+  } --[[table: 0000025F43BF64A0]],
   {
     Components = {
       {
@@ -10652,12 +10652,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185420]],
+      } --[[table: 0000025F43BF6C20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185B20]],
+      } --[[table: 0000025F43BF6C60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10671,10 +10671,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185460]]
-    } --[[table: 0000028080185CA0]],
+      } --[[table: 0000025F43BF65E0]]
+    } --[[table: 0000025F43BF6F20]],
     EntityName = "Tree"
-  } --[[table: 0000028080185520]],
+  } --[[table: 0000025F43BF6720]],
   {
     Components = {
       {
@@ -10688,12 +10688,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185660]],
+      } --[[table: 0000025F43BF65A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801853E0]],
+      } --[[table: 0000025F43BF6CE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10707,10 +10707,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185820]]
-    } --[[table: 00000280801858E0]],
+      } --[[table: 0000025F43BF6E20]]
+    } --[[table: 0000025F43BF6B60]],
     EntityName = "Tree"
-  } --[[table: 0000028080185C60]],
+  } --[[table: 0000025F43BF6420]],
   {
     Components = {
       {
@@ -10724,12 +10724,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801855A0]],
+      } --[[table: 0000025F43BF6D60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185560]],
+      } --[[table: 0000025F43BF6BA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10743,10 +10743,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185AE0]]
-    } --[[table: 00000280801859E0]],
+      } --[[table: 0000025F43BF6D20]]
+    } --[[table: 0000025F43BF64E0]],
     EntityName = "Tree"
-  } --[[table: 00000280801860A0]],
+  } --[[table: 0000025F43BF6AA0]],
   {
     Components = {
       {
@@ -10760,12 +10760,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185920]],
+      } --[[table: 0000025F43BF67A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185FE0]],
+      } --[[table: 0000025F43BF6860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10779,10 +10779,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185A20]]
-    } --[[table: 00000280801860E0]],
+      } --[[table: 0000025F43BF68E0]]
+    } --[[table: 0000025F43BF6260]],
     EntityName = "Tree"
-  } --[[table: 00000280801855E0]],
+  } --[[table: 0000025F43BF6160]],
   {
     Components = {
       {
@@ -10796,12 +10796,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185D60]],
+      } --[[table: 0000025F43BF6F60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185B60]],
+      } --[[table: 0000025F43BF6960]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10815,10 +10815,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185BA0]]
-    } --[[table: 0000028080185360]],
+      } --[[table: 0000025F43BF6FA0]]
+    } --[[table: 0000025F43BF62E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080185AA0]],
+  } --[[table: 0000025F43BF6BE0]],
   {
     Components = {
       {
@@ -10832,12 +10832,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185220]],
+      } --[[table: 0000025F43BF6620]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185260]],
+      } --[[table: 0000025F43BF70A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10851,10 +10851,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186120]]
-    } --[[table: 00000280801851E0]],
+      } --[[table: 0000025F43BF6920]]
+    } --[[table: 0000025F43BF68A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080185DE0]],
+  } --[[table: 0000025F43BF6820]],
   {
     Components = {
       {
@@ -10868,12 +10868,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080185F20]],
+      } --[[table: 0000025F43BF6DE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080185F60]],
+      } --[[table: 0000025F43BF66A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10887,10 +10887,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080185160]]
-    } --[[table: 00000280801852A0]],
+      } --[[table: 0000025F43BF6A20]]
+    } --[[table: 0000025F43BF7060]],
     EntityName = "Tree"
-  } --[[table: 0000028080185EE0]],
+  } --[[table: 0000025F43BF7020]],
   {
     Components = {
       {
@@ -10904,12 +10904,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801864A0]],
+      } --[[table: 0000025F43BF6EE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186AA0]],
+      } --[[table: 0000025F43BF70E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10923,10 +10923,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186C20]]
-    } --[[table: 0000028080185FA0]],
+      } --[[table: 0000025F43BF6FE0]]
+    } --[[table: 0000025F43BF6AE0]],
     EntityName = "Tree"
-  } --[[table: 0000028080185320]],
+  } --[[table: 0000025F43BF69E0]],
   {
     Components = {
       {
@@ -10940,12 +10940,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080186860]],
+      } --[[table: 0000025F43BF6320]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186EE0]],
+      } --[[table: 0000025F43BF6360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10959,10 +10959,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186B20]]
-    } --[[table: 0000028080186220]],
+      } --[[table: 0000025F43BF63A0]]
+    } --[[table: 0000025F43BF62A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080187120]],
+  } --[[table: 0000025F43BF6220]],
   {
     Components = {
       {
@@ -10976,12 +10976,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801869A0]],
+      } --[[table: 0000025F43BF7DA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801862A0]],
+      } --[[table: 0000025F43BF7E60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -10995,10 +10995,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186DE0]]
-    } --[[table: 00000280801868E0]],
+      } --[[table: 0000025F43BF7EE0]]
+    } --[[table: 0000025F43BF6520]],
     EntityName = "Tree"
-  } --[[table: 00000280801868A0]],
+  } --[[table: 0000025F43BF6460]],
   {
     Components = {
       {
@@ -11012,12 +11012,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080186AE0]],
+      } --[[table: 0000025F43BF72E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186CE0]],
+      } --[[table: 0000025F43BF75A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11031,10 +11031,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186760]]
-    } --[[table: 00000280801870A0]],
+      } --[[table: 0000025F43BF7D20]]
+    } --[[table: 0000025F43BF7660]],
     EntityName = "Tree"
-  } --[[table: 0000028080186920]],
+  } --[[table: 0000025F43BF7620]],
   {
     Components = {
       {
@@ -11048,12 +11048,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080186D20]],
+      } --[[table: 0000025F43BF7F60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187060]],
+      } --[[table: 0000025F43BF7520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11067,10 +11067,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801867E0]]
-    } --[[table: 0000028080186A60]],
+      } --[[table: 0000025F43BF7C60]]
+    } --[[table: 0000025F43BF78A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080186960]],
+  } --[[table: 0000025F43BF7320]],
   {
     Components = {
       {
@@ -11084,12 +11084,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080186420]],
+      } --[[table: 0000025F43BF74A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186BA0]],
+      } --[[table: 0000025F43BF7720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11103,10 +11103,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186820]]
-    } --[[table: 0000028080186CA0]],
+      } --[[table: 0000025F43BF7FE0]]
+    } --[[table: 0000025F43BF76A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080186520]],
+  } --[[table: 0000025F43BF8020]],
   {
     Components = {
       {
@@ -11120,12 +11120,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801865E0]],
+      } --[[table: 0000025F43BF7760]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186FA0]],
+      } --[[table: 0000025F43BF7B60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11139,10 +11139,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186660]]
-    } --[[table: 00000280801863A0]],
+      } --[[table: 0000025F43BF71E0]]
+    } --[[table: 0000025F43BF7B20]],
     EntityName = "Tree"
-  } --[[table: 0000028080186160]],
+  } --[[table: 0000025F43BF78E0]],
   {
     Components = {
       {
@@ -11156,12 +11156,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080186DA0]],
+      } --[[table: 0000025F43BF7420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186FE0]],
+      } --[[table: 0000025F43BF79E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11175,10 +11175,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186E20]]
-    } --[[table: 00000280801869E0]],
+      } --[[table: 0000025F43BF7C20]]
+    } --[[table: 0000025F43BF77A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080186D60]],
+  } --[[table: 0000025F43BF7DE0]],
   {
     Components = {
       {
@@ -11192,12 +11192,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801863E0]],
+      } --[[table: 0000025F43BF7AA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186E60]],
+      } --[[table: 0000025F43BF7E20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11211,10 +11211,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080187020]]
-    } --[[table: 00000280801864E0]],
+      } --[[table: 0000025F43BF7820]]
+    } --[[table: 0000025F43BF71A0]],
     EntityName = "Tree"
-  } --[[table: 00000280801862E0]],
+  } --[[table: 0000025F43BF7FA0]],
   {
     Components = {
       {
@@ -11228,12 +11228,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801861E0]],
+      } --[[table: 0000025F43BF8120]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801870E0]],
+      } --[[table: 0000025F43BF80A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11247,10 +11247,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080186F20]]
-    } --[[table: 00000280801861A0]],
+      } --[[table: 0000025F43BF7D60]]
+    } --[[table: 0000025F43BF7CE0]],
     EntityName = "Tree"
-  } --[[table: 0000028080186EA0]],
+  } --[[table: 0000025F43BF7920]],
   {
     Components = {
       {
@@ -11264,12 +11264,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080186260]],
+      } --[[table: 0000025F43BF7BA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080186460]],
+      } --[[table: 0000025F43BF7AE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11283,10 +11283,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801865A0]]
-    } --[[table: 00000280801866E0]],
+      } --[[table: 0000025F43BF7EA0]]
+    } --[[table: 0000025F43BF76E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080186320]],
+  } --[[table: 0000025F43BF7A20]],
   {
     Components = {
       {
@@ -11300,12 +11300,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080187860]],
+      } --[[table: 0000025F43BF7860]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187B20]],
+      } --[[table: 0000025F43BF80E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11319,10 +11319,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080187160]]
-    } --[[table: 0000028080187B60]],
+      } --[[table: 0000025F43BF7160]]
+    } --[[table: 0000025F43BF77E0]],
     EntityName = "Tree"
-  } --[[table: 00000280801879A0]],
+  } --[[table: 0000025F43BF8060]],
   {
     Components = {
       {
@@ -11336,12 +11336,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080187920]],
+      } --[[table: 0000025F43BF7460]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801876A0]],
+      } --[[table: 0000025F43BF74E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11355,10 +11355,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801876E0]]
-    } --[[table: 0000028080187720]],
+      } --[[table: 0000025F43BF7560]]
+    } --[[table: 0000025F43BF73A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080187220]],
+  } --[[table: 0000025F43BF75E0]],
   {
     Components = {
       {
@@ -11372,12 +11372,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080187960]],
+      } --[[table: 0000025F43BF84A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187C20]],
+      } --[[table: 0000025F43BF84E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11391,10 +11391,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801877A0]]
-    } --[[table: 0000028080187760]],
+      } --[[table: 0000025F43BF8E60]]
+    } --[[table: 0000025F43BF85A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080187360]],
+  } --[[table: 0000025F43BF8E20]],
   {
     Components = {
       {
@@ -11408,12 +11408,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080187EA0]],
+      } --[[table: 0000025F43BF9060]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187820]],
+      } --[[table: 0000025F43BF8260]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11427,10 +11427,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801879E0]]
-    } --[[table: 00000280801871A0]],
+      } --[[table: 0000025F43BF90A0]]
+    } --[[table: 0000025F43BF8720]],
     EntityName = "Tree"
-  } --[[table: 00000280801872A0]],
+  } --[[table: 0000025F43BF8CE0]],
   {
     Components = {
       {
@@ -11444,12 +11444,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801878E0]],
+      } --[[table: 0000025F43BF8DE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187FE0]],
+      } --[[table: 0000025F43BF82E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11463,10 +11463,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080187A60]]
-    } --[[table: 00000280801878A0]],
+      } --[[table: 0000025F43BF8AE0]]
+    } --[[table: 0000025F43BF8BA0]],
     EntityName = "Tree"
-  } --[[table: 00000280801874E0]],
+  } --[[table: 0000025F43BF88E0]],
   {
     Components = {
       {
@@ -11480,12 +11480,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801880A0]],
+      } --[[table: 0000025F43BF8620]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187A20]],
+      } --[[table: 0000025F43BF8860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11499,10 +11499,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188020]]
-    } --[[table: 0000028080187520]],
+      } --[[table: 0000025F43BF8B20]]
+    } --[[table: 0000025F43BF8520]],
     EntityName = "Tree"
-  } --[[table: 0000028080187320]],
+  } --[[table: 0000025F43BF8FA0]],
   {
     Components = {
       {
@@ -11516,12 +11516,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801873E0]],
+      } --[[table: 0000025F43BF8160]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801875E0]],
+      } --[[table: 0000025F43BF90E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11535,10 +11535,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080187AA0]]
-    } --[[table: 00000280801871E0]],
+      } --[[table: 0000025F43BF87A0]]
+    } --[[table: 0000025F43BF83E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080187260]],
+  } --[[table: 0000025F43BF87E0]],
   {
     Components = {
       {
@@ -11552,12 +11552,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080187420]],
+      } --[[table: 0000025F43BF89E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187C60]],
+      } --[[table: 0000025F43BF9120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11571,10 +11571,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080187460]]
-    } --[[table: 0000028080187D20]],
+      } --[[table: 0000025F43BF8D20]]
+    } --[[table: 0000025F43BF8C60]],
     EntityName = "Tree"
-  } --[[table: 0000028080187E60]],
+  } --[[table: 0000025F43BF8A20]],
   {
     Components = {
       {
@@ -11588,12 +11588,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801880E0]],
+      } --[[table: 0000025F43BF8FE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187F20]],
+      } --[[table: 0000025F43BF86A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11607,10 +11607,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080187660]]
-    } --[[table: 00000280801874A0]],
+      } --[[table: 0000025F43BF81A0]]
+    } --[[table: 0000025F43BF8EA0]],
     EntityName = "Tree"
-  } --[[table: 0000028080187EE0]],
+  } --[[table: 0000025F43BF8EE0]],
   {
     Components = {
       {
@@ -11624,12 +11624,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801875A0]],
+      } --[[table: 0000025F43BF83A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187620]],
+      } --[[table: 0000025F43BF8920]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11643,10 +11643,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080187CA0]]
-    } --[[table: 0000028080187AE0]],
+      } --[[table: 0000025F43BF8B60]]
+    } --[[table: 0000025F43BF8F20]],
     EntityName = "Tree"
-  } --[[table: 0000028080187F60]],
+  } --[[table: 0000025F43BF8D60]],
   {
     Components = {
       {
@@ -11660,12 +11660,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080187E20]],
+      } --[[table: 0000025F43BF89A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080187FA0]],
+      } --[[table: 0000025F43BF8760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11679,10 +11679,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188EE0]]
-    } --[[table: 0000028080187DE0]],
+      } --[[table: 0000025F43BF8360]]
+    } --[[table: 0000025F43BF81E0]],
     EntityName = "Tree"
-  } --[[table: 0000028080187DA0]],
+  } --[[table: 0000025F43BF8F60]],
   {
     Components = {
       {
@@ -11696,12 +11696,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080188D60]],
+      } --[[table: 0000025F43BF8C20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188E60]],
+      } --[[table: 0000025F43BF85E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11715,10 +11715,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801882E0]]
-    } --[[table: 00000280801889A0]],
+      } --[[table: 0000025F43BF82A0]]
+    } --[[table: 0000025F43BF8220]],
     EntityName = "Tree"
-  } --[[table: 0000028080188FA0]],
+  } --[[table: 0000025F43BF9020]],
   {
     Components = {
       {
@@ -11732,12 +11732,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080188A20]],
+      } --[[table: 0000025F43BF8420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188BA0]],
+      } --[[table: 0000025F43BF8460]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11751,10 +11751,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188CE0]]
-    } --[[table: 0000028080188220]],
+      } --[[table: 0000025F43BF9160]]
+    } --[[table: 0000025F43BF8820]],
     EntityName = "Tree"
-  } --[[table: 00000280801886A0]],
+  } --[[table: 0000025F43BF8960]],
   {
     Components = {
       {
@@ -11768,12 +11768,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080188760]],
+      } --[[table: 0000025F43BF9C60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188320]],
+      } --[[table: 0000025F43BF9760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11787,10 +11787,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189060]]
-    } --[[table: 0000028080188360]],
+      } --[[table: 0000025F43BF9260]]
+    } --[[table: 0000025F43BFA060]],
     EntityName = "Tree"
-  } --[[table: 0000028080188F20]],
+  } --[[table: 0000025F43BFA0A0]],
   {
     Components = {
       {
@@ -11804,12 +11804,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801883E0]],
+      } --[[table: 0000025F43BF92E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188860]],
+      } --[[table: 0000025F43BF9F60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11823,10 +11823,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801889E0]]
-    } --[[table: 00000280801883A0]],
+      } --[[table: 0000025F43BF96E0]]
+    } --[[table: 0000025F43BF9DA0]],
     EntityName = "Tree"
-  } --[[table: 0000028080188460]],
+  } --[[table: 0000025F43BF9AE0]],
   {
     Components = {
       {
@@ -11840,12 +11840,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080188420]],
+      } --[[table: 0000025F43BF91E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188A60]],
+      } --[[table: 0000025F43BF9660]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11859,10 +11859,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188620]]
-    } --[[table: 0000028080188520]],
+      } --[[table: 0000025F43BF93E0]]
+    } --[[table: 0000025F43BF9620]],
     EntityName = "Tree"
-  } --[[table: 0000028080188820]],
+  } --[[table: 0000025F43BF9D20]],
   {
     Components = {
       {
@@ -11876,12 +11876,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080188F60]],
+      } --[[table: 0000025F43BF9EA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801881E0]],
+      } --[[table: 0000025F43BFA020]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11895,10 +11895,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188AA0]]
-    } --[[table: 0000028080188D20]],
+      } --[[table: 0000025F43BF9DE0]]
+    } --[[table: 0000025F43BFA120]],
     EntityName = "Tree"
-  } --[[table: 0000028080189020]],
+  } --[[table: 0000025F43BFA0E0]],
   {
     Components = {
       {
@@ -11912,12 +11912,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801890A0]],
+      } --[[table: 0000025F43BF9B20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188720]],
+      } --[[table: 0000025F43BF9E20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11931,10 +11931,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801890E0]]
-    } --[[table: 0000028080188560]],
+      } --[[table: 0000025F43BF97A0]]
+    } --[[table: 0000025F43BF94A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080189120]],
+  } --[[table: 0000025F43BF9CA0]],
   {
     Components = {
       {
@@ -11948,12 +11948,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801888A0]],
+      } --[[table: 0000025F43BF9EE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188260]],
+      } --[[table: 0000025F43BF96A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -11967,10 +11967,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188DA0]]
-    } --[[table: 00000280801888E0]],
+      } --[[table: 0000025F43BF9B60]]
+    } --[[table: 0000025F43BF9F20]],
     EntityName = "Tree"
-  } --[[table: 0000028080188C20]],
+  } --[[table: 0000025F43BF9E60]],
   {
     Components = {
       {
@@ -11984,12 +11984,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801881A0]],
+      } --[[table: 0000025F43BF9360]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188920]],
+      } --[[table: 0000025F43BF91A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12003,10 +12003,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188BE0]]
-    } --[[table: 00000280801885A0]],
+      } --[[table: 0000025F43BF9D60]]
+    } --[[table: 0000025F43BF9BE0]],
     EntityName = "Tree"
-  } --[[table: 0000028080188B60]],
+  } --[[table: 0000025F43BF9FE0]],
   {
     Components = {
       {
@@ -12020,12 +12020,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801887E0]],
+      } --[[table: 0000025F43BF9420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080188660]],
+      } --[[table: 0000025F43BF9460]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12039,10 +12039,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080188960]]
-    } --[[table: 0000028080188C60]],
+      } --[[table: 0000025F43BF97E0]]
+    } --[[table: 0000025F43BF9320]],
     EntityName = "Tree"
-  } --[[table: 0000028080188DE0]],
+  } --[[table: 0000025F43BF92A0]],
   {
     Components = {
       {
@@ -12056,12 +12056,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080189F20]],
+      } --[[table: 0000025F43BF9820]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080189A60]],
+      } --[[table: 0000025F43BF95A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12075,10 +12075,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189C20]]
-    } --[[table: 0000028080188EA0]],
+      } --[[table: 0000025F43BF9860]]
+    } --[[table: 0000025F43BF9560]],
     EntityName = "Tree"
-  } --[[table: 0000028080188E20]],
+  } --[[table: 0000025F43BF9520]],
   {
     Components = {
       {
@@ -12092,12 +12092,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080189460]],
+      } --[[table: 0000025F43BF9920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801894A0]],
+      } --[[table: 0000025F43BF9960]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12111,10 +12111,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801896A0]]
-    } --[[table: 00000280801894E0]],
+      } --[[table: 0000025F43BF99E0]]
+    } --[[table: 0000025F43BF98A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080189760]],
+  } --[[table: 0000025F43BF99A0]],
   {
     Components = {
       {
@@ -12128,12 +12128,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080189820]],
+      } --[[table: 0000025F43BFAE20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080189720]],
+      } --[[table: 0000025F43BFA1A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12147,10 +12147,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189FE0]]
-    } --[[table: 00000280801896E0]],
+      } --[[table: 0000025F43BFA6E0]]
+    } --[[table: 0000025F43BF9AA0]],
     EntityName = "Tree"
-  } --[[table: 00000280801897A0]],
+  } --[[table: 0000025F43BF9C20]],
   {
     Components = {
       {
@@ -12164,12 +12164,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080189AE0]],
+      } --[[table: 0000025F43BFACE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080189CA0]],
+      } --[[table: 0000025F43BFACA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12183,10 +12183,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189420]]
-    } --[[table: 00000280801899E0]],
+      } --[[table: 0000025F43BFA1E0]]
+    } --[[table: 0000025F43BFADA0]],
     EntityName = "Tree"
-  } --[[table: 0000028080189E60]],
+  } --[[table: 0000025F43BFA820]],
   {
     Components = {
       {
@@ -12200,12 +12200,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080189860]],
+      } --[[table: 0000025F43BFA8E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801893A0]],
+      } --[[table: 0000025F43BFA720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12219,10 +12219,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189520]]
-    } --[[table: 0000028080189AA0]],
+      } --[[table: 0000025F43BFAD20]]
+    } --[[table: 0000025F43BFA560]],
     EntityName = "Tree"
-  } --[[table: 00000280801897E0]],
+  } --[[table: 0000025F43BFAC60]],
   {
     Components = {
       {
@@ -12236,12 +12236,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801898A0]],
+      } --[[table: 0000025F43BFAFA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801898E0]],
+      } --[[table: 0000025F43BFA760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12255,10 +12255,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189F60]]
-    } --[[table: 00000280801895A0]],
+      } --[[table: 0000025F43BFA7E0]]
+    } --[[table: 0000025F43BFA8A0]],
     EntityName = "Tree"
-  } --[[table: 0000028080189660]],
+  } --[[table: 0000025F43BFAAE0]],
   {
     Components = {
       {
@@ -12272,12 +12272,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801892E0]],
+      } --[[table: 0000025F43BFA320]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080189A20]],
+      } --[[table: 0000025F43BFABE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12291,10 +12291,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189B20]]
-    } --[[table: 0000028080189620]],
+      } --[[table: 0000025F43BFB020]]
+    } --[[table: 0000025F43BFAAA0]],
     EntityName = "Tree"
-  } --[[table: 00000280801899A0]],
+  } --[[table: 0000025F43BFAD60]],
   {
     Components = {
       {
@@ -12308,12 +12308,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080189C60]],
+      } --[[table: 0000025F43BFAA20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080189CE0]],
+      } --[[table: 0000025F43BFAB60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12327,10 +12327,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189D20]]
-    } --[[table: 0000028080189BE0]],
+      } --[[table: 0000025F43BFAE60]]
+    } --[[table: 0000025F43BFADE0]],
     EntityName = "Tree"
-  } --[[table: 0000028080189BA0]],
+  } --[[table: 0000025F43BFA5E0]],
   {
     Components = {
       {
@@ -12344,12 +12344,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080189DA0]],
+      } --[[table: 0000025F43BFAEE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080189E20]],
+      } --[[table: 0000025F43BFAF60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12363,10 +12363,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189EA0]]
-    } --[[table: 0000028080189360]],
+      } --[[table: 0000025F43BFA860]]
+    } --[[table: 0000025F43BFA660]],
     EntityName = "Tree"
-  } --[[table: 0000028080189D60]],
+  } --[[table: 0000025F43BFAF20]],
   {
     Components = {
       {
@@ -12380,12 +12380,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A020]],
+      } --[[table: 0000025F43BFAEA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018A060]],
+      } --[[table: 0000025F43BFAA60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12399,10 +12399,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018A0E0]]
-    } --[[table: 0000028080189FA0]],
+      } --[[table: 0000025F43BFB060]]
+    } --[[table: 0000025F43BFA620]],
     EntityName = "Tree"
-  } --[[table: 0000028080189EE0]],
+  } --[[table: 0000025F43BFA920]],
   {
     Components = {
       {
@@ -12416,12 +12416,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801891A0]],
+      } --[[table: 0000025F43BFB0A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801891E0]],
+      } --[[table: 0000025F43BFB0E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12435,10 +12435,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080189220]]
-    } --[[table: 0000028080189160]],
+      } --[[table: 0000025F43BFB120]]
+    } --[[table: 0000025F43BFAC20]],
     EntityName = "Tree"
-  } --[[table: 000002808018A120]],
+  } --[[table: 0000025F43BFA2A0]],
   {
     Components = {
       {
@@ -12452,12 +12452,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A1E0]],
+      } --[[table: 0000025F43BFA3A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018ABA0]],
+      } --[[table: 0000025F43BFA3E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12471,10 +12471,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018AFE0]]
-    } --[[table: 000002808018A620]],
+      } --[[table: 0000025F43BFA420]]
+    } --[[table: 0000025F43BFABA0]],
     EntityName = "Tree"
-  } --[[table: 000002808018A8A0]],
+  } --[[table: 0000025F43BFA360]],
   {
     Components = {
       {
@@ -12488,12 +12488,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A220]],
+      } --[[table: 0000025F43BFA520]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B0E0]],
+      } --[[table: 0000025F43BFA5A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12507,10 +12507,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018AAE0]]
-    } --[[table: 000002808018A860]],
+      } --[[table: 0000025F43BFA960]]
+    } --[[table: 0000025F43BFA4E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018A4E0]],
+  } --[[table: 0000025F43BFA4A0]],
   {
     Components = {
       {
@@ -12524,12 +12524,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A720]],
+      } --[[table: 0000025F43BFB4A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018AAA0]],
+      } --[[table: 0000025F43BFBDA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12543,10 +12543,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018A6A0]]
-    } --[[table: 000002808018AEA0]],
+      } --[[table: 0000025F43BFB420]]
+    } --[[table: 0000025F43BFB9E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018A160]],
+  } --[[table: 0000025F43BFB3A0]],
   {
     Components = {
       {
@@ -12560,12 +12560,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A260]],
+      } --[[table: 0000025F43BFBF20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018A460]],
+      } --[[table: 0000025F43BFB2E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12579,10 +12579,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B020]]
-    } --[[table: 000002808018A7A0]],
+      } --[[table: 0000025F43BFB7E0]]
+    } --[[table: 0000025F43BFBFA0]],
     EntityName = "Tree"
-  } --[[table: 000002808018A6E0]],
+  } --[[table: 0000025F43BFB1E0]],
   {
     Components = {
       {
@@ -12596,12 +12596,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A920]],
+      } --[[table: 0000025F43BFBBE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B120]],
+      } --[[table: 0000025F43BFBF60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12615,10 +12615,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018A1A0]]
-    } --[[table: 000002808018A8E0]],
+      } --[[table: 0000025F43BFBBA0]]
+    } --[[table: 0000025F43BFB3E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018AB60]],
+  } --[[table: 0000025F43BFBA20]],
   {
     Components = {
       {
@@ -12632,12 +12632,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A2E0]],
+      } --[[table: 0000025F43BFB1A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018AFA0]],
+      } --[[table: 0000025F43BFB4E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12651,10 +12651,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018A320]]
-    } --[[table: 000002808018ACE0]],
+      } --[[table: 0000025F43BFB460]]
+    } --[[table: 0000025F43BFB9A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018A760]],
+  } --[[table: 0000025F43BFBC20]],
   {
     Components = {
       {
@@ -12668,12 +12668,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018AB20]],
+      } --[[table: 0000025F43BFC020]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B060]],
+      } --[[table: 0000025F43BFB720]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12687,10 +12687,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018A960]]
-    } --[[table: 000002808018A660]],
+      } --[[table: 0000025F43BFB220]]
+    } --[[table: 0000025F43BFBA60]],
     EntityName = "Tree"
-  } --[[table: 000002808018A820]],
+  } --[[table: 0000025F43BFBCA0]],
   {
     Components = {
       {
@@ -12704,12 +12704,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A3A0]],
+      } --[[table: 0000025F43BFB6A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018A9A0]],
+      } --[[table: 0000025F43BFB560]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12723,10 +12723,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018A9E0]]
-    } --[[table: 000002808018A360]],
+      } --[[table: 0000025F43BFB920]]
+    } --[[table: 0000025F43BFB5E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018A4A0]],
+  } --[[table: 0000025F43BFB520]],
   {
     Components = {
       {
@@ -12740,12 +12740,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A3E0]],
+      } --[[table: 0000025F43BFB960]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018AF20]],
+      } --[[table: 0000025F43BFBAA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12759,10 +12759,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018AC60]]
-    } --[[table: 000002808018AD20]],
+      } --[[table: 0000025F43BFB7A0]]
+    } --[[table: 0000025F43BFBE20]],
     EntityName = "Tree"
-  } --[[table: 000002808018AEE0]],
+  } --[[table: 0000025F43BFB660]],
   {
     Components = {
       {
@@ -12776,12 +12776,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018A560]],
+      } --[[table: 0000025F43BFC0A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018A5A0]],
+      } --[[table: 0000025F43BFC120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12795,10 +12795,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018AF60]]
-    } --[[table: 000002808018A520]],
+      } --[[table: 0000025F43BFB2A0]]
+    } --[[table: 0000025F43BFBD60]],
     EntityName = "Tree"
-  } --[[table: 000002808018A420]],
+  } --[[table: 0000025F43BFB8E0]],
   {
     Components = {
       {
@@ -12812,12 +12812,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018AE20]],
+      } --[[table: 0000025F43BFBB20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018AE60]],
+      } --[[table: 0000025F43BFBE60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12831,10 +12831,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B860]]
-    } --[[table: 000002808018ADE0]],
+      } --[[table: 0000025F43BFB860]]
+    } --[[table: 0000025F43BFBAE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018A5E0]],
+  } --[[table: 0000025F43BFB320]],
   {
     Components = {
       {
@@ -12848,12 +12848,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018B420]],
+      } --[[table: 0000025F43BFC0E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018BAE0]],
+      } --[[table: 0000025F43BFB8A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12867,10 +12867,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B520]]
-    } --[[table: 000002808018B620]],
+      } --[[table: 0000025F43BFB160]]
+    } --[[table: 0000025F43BFC060]],
     EntityName = "Tree"
-  } --[[table: 000002808018BFA0]],
+  } --[[table: 0000025F43BFBEA0]],
   {
     Components = {
       {
@@ -12884,12 +12884,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018BF60]],
+      } --[[table: 0000025F43BFB760]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B7E0]],
+      } --[[table: 0000025F43BFB6E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12903,10 +12903,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B160]]
-    } --[[table: 000002808018BB20]],
+      } --[[table: 0000025F43BFD0A0]]
+    } --[[table: 0000025F43BFB620]],
     EntityName = "Tree"
-  } --[[table: 000002808018B8A0]],
+  } --[[table: 0000025F43BFB5A0]],
   {
     Components = {
       {
@@ -12920,12 +12920,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C060]],
+      } --[[table: 0000025F43BFC7A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B7A0]],
+      } --[[table: 0000025F43BFCAE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12939,10 +12939,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018BD20]]
-    } --[[table: 000002808018C020]],
+      } --[[table: 0000025F43BFC4E0]]
+    } --[[table: 0000025F43BFCD20]],
     EntityName = "Tree"
-  } --[[table: 000002808018B5E0]],
+  } --[[table: 0000025F43BFC2E0]],
   {
     Components = {
       {
@@ -12956,12 +12956,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018B720]],
+      } --[[table: 0000025F43BFC920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C120]],
+      } --[[table: 0000025F43BFCCA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -12975,10 +12975,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B2A0]]
-    } --[[table: 000002808018C0E0]],
+      } --[[table: 0000025F43BFD0E0]]
+    } --[[table: 0000025F43BFC7E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018BBE0]],
+  } --[[table: 0000025F43BFC860]],
   {
     Components = {
       {
@@ -12992,12 +12992,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018B1A0]],
+      } --[[table: 0000025F43BFD120]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B1E0]],
+      } --[[table: 0000025F43BFC5E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13011,10 +13011,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B760]]
-    } --[[table: 000002808018BA60]],
+      } --[[table: 0000025F43BFCC60]]
+    } --[[table: 0000025F43BFD020]],
     EntityName = "Tree"
-  } --[[table: 000002808018BF20]],
+  } --[[table: 0000025F43BFD060]],
   {
     Components = {
       {
@@ -13028,12 +13028,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018B2E0]],
+      } --[[table: 0000025F43BFC1E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018BC20]],
+      } --[[table: 0000025F43BFCF20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13047,10 +13047,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B360]]
-    } --[[table: 000002808018B260]],
+      } --[[table: 0000025F43BFCE60]]
+    } --[[table: 0000025F43BFCDE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018B220]],
+  } --[[table: 0000025F43BFC160]],
   {
     Components = {
       {
@@ -13064,12 +13064,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018B3E0]],
+      } --[[table: 0000025F43BFCA20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018BDA0]],
+      } --[[table: 0000025F43BFC820]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13083,10 +13083,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B4E0]]
-    } --[[table: 000002808018BD60]],
+      } --[[table: 0000025F43BFCE20]]
+    } --[[table: 0000025F43BFC6A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018B3A0]],
+  } --[[table: 0000025F43BFC660]],
   {
     Components = {
       {
@@ -13100,12 +13100,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018B5A0]],
+      } --[[table: 0000025F43BFCEE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B660]],
+      } --[[table: 0000025F43BFC360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13119,10 +13119,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018B6A0]]
-    } --[[table: 000002808018B8E0]],
+      } --[[table: 0000025F43BFC1A0]]
+    } --[[table: 0000025F43BFCEA0]],
     EntityName = "Tree"
-  } --[[table: 000002808018B560]],
+  } --[[table: 0000025F43BFC8A0]],
   {
     Components = {
       {
@@ -13136,12 +13136,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018B9A0]],
+      } --[[table: 0000025F43BFC260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018B9E0]],
+      } --[[table: 0000025F43BFCF60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13155,10 +13155,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018BA20]]
-    } --[[table: 000002808018B960]],
+      } --[[table: 0000025F43BFCFA0]]
+    } --[[table: 0000025F43BFC220]],
     EntityName = "Tree"
-  } --[[table: 000002808018B820]],
+  } --[[table: 0000025F43BFC6E0]],
   {
     Components = {
       {
@@ -13172,12 +13172,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018BCA0]],
+      } --[[table: 0000025F43BFC3A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018BCE0]],
+      } --[[table: 0000025F43BFCC20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13191,10 +13191,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018BDE0]]
-    } --[[table: 000002808018BC60]],
+      } --[[table: 0000025F43BFC9A0]]
+    } --[[table: 0000025F43BFCFE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018BB60]],
+  } --[[table: 0000025F43BFCB20]],
   {
     Components = {
       {
@@ -13208,12 +13208,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C3A0]],
+      } --[[table: 0000025F43BFCB60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C9A0]],
+      } --[[table: 0000025F43BFC8E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13227,10 +13227,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018C860]]
-    } --[[table: 000002808018BEA0]],
+      } --[[table: 0000025F43BFC4A0]]
+    } --[[table: 0000025F43BFC460]],
     EntityName = "Tree"
-  } --[[table: 000002808018BEE0]],
+  } --[[table: 0000025F43BFC760]],
   {
     Components = {
       {
@@ -13244,12 +13244,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C2E0]],
+      } --[[table: 0000025F43BFC9E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C220]],
+      } --[[table: 0000025F43BFCAA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13263,10 +13263,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018D0A0]]
-    } --[[table: 000002808018C160]],
+      } --[[table: 0000025F43BFCA60]]
+    } --[[table: 0000025F43BFC960]],
     EntityName = "Tree"
-  } --[[table: 000002808018C2A0]],
+  } --[[table: 0000025F43BFC720]],
   {
     Components = {
       {
@@ -13280,12 +13280,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C7A0]],
+      } --[[table: 0000025F43BFD260]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C360]],
+      } --[[table: 0000025F43BFDDE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13299,10 +13299,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018CA60]]
-    } --[[table: 000002808018C6A0]],
+      } --[[table: 0000025F43BFD560]]
+    } --[[table: 0000025F43BFCBE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018CCE0]],
+  } --[[table: 0000025F43BFCD60]],
   {
     Components = {
       {
@@ -13316,12 +13316,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C4A0]],
+      } --[[table: 0000025F43BFD220]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C320]],
+      } --[[table: 0000025F43BFDC20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13335,10 +13335,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018C4E0]]
-    } --[[table: 000002808018C720]],
+      } --[[table: 0000025F43BFD3A0]]
+    } --[[table: 0000025F43BFDFE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018D060]],
+  } --[[table: 0000025F43BFDFA0]],
   {
     Components = {
       {
@@ -13352,12 +13352,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C3E0]],
+      } --[[table: 0000025F43BFD2A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C520]],
+      } --[[table: 0000025F43BFD5A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13371,10 +13371,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018C760]]
-    } --[[table: 000002808018CA20]],
+      } --[[table: 0000025F43BFD9A0]]
+    } --[[table: 0000025F43BFDB60]],
     EntityName = "Tree"
-  } --[[table: 000002808018C9E0]],
+  } --[[table: 0000025F43BFD6A0]],
   {
     Components = {
       {
@@ -13388,12 +13388,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C560]],
+      } --[[table: 0000025F43BFD3E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C420]],
+      } --[[table: 0000025F43BFDD60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13407,10 +13407,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018CCA0]]
-    } --[[table: 000002808018CAA0]],
+      } --[[table: 0000025F43BFD160]]
+    } --[[table: 0000025F43BFD4A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018C620]],
+  } --[[table: 0000025F43BFD960]],
   {
     Components = {
       {
@@ -13424,12 +13424,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018D020]],
+      } --[[table: 0000025F43BFDC60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D120]],
+      } --[[table: 0000025F43BFD760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13443,10 +13443,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018C5A0]]
-    } --[[table: 000002808018CFE0]],
+      } --[[table: 0000025F43BFD2E0]]
+    } --[[table: 0000025F43BFE060]],
     EntityName = "Tree"
-  } --[[table: 000002808018CB20]],
+  } --[[table: 0000025F43BFE0A0]],
   {
     Components = {
       {
@@ -13460,12 +13460,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018C820]],
+      } --[[table: 0000025F43BFD320]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018CBA0]],
+      } --[[table: 0000025F43BFDF60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13479,10 +13479,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018C260]]
-    } --[[table: 000002808018C5E0]],
+      } --[[table: 0000025F43BFD6E0]]
+    } --[[table: 0000025F43BFDDA0]],
     EntityName = "Tree"
-  } --[[table: 000002808018C1E0]],
+  } --[[table: 0000025F43BFDAE0]],
   {
     Components = {
       {
@@ -13496,12 +13496,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018CC60]],
+      } --[[table: 0000025F43BFD1E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C660]],
+      } --[[table: 0000025F43BFD660]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13515,10 +13515,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018C8A0]]
-    } --[[table: 000002808018CAE0]],
+      } --[[table: 0000025F43BFD420]]
+    } --[[table: 0000025F43BFD620]],
     EntityName = "Tree"
-  } --[[table: 000002808018CBE0]],
+  } --[[table: 0000025F43BFDD20]],
   {
     Components = {
       {
@@ -13532,12 +13532,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018CF60]],
+      } --[[table: 0000025F43BFE0E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018C960]],
+      } --[[table: 0000025F43BFDE60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13551,10 +13551,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018CC20]]
-    } --[[table: 000002808018C920]],
+      } --[[table: 0000025F43BFDF20]]
+    } --[[table: 0000025F43BFD1A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018C8E0]],
+  } --[[table: 0000025F43BFD720]],
   {
     Components = {
       {
@@ -13568,12 +13568,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018CE20]],
+      } --[[table: 0000025F43BFD4E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018CEA0]],
+      } --[[table: 0000025F43BFDEA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13587,10 +13587,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018CEE0]]
-    } --[[table: 000002808018CDE0]],
+      } --[[table: 0000025F43BFD520]]
+    } --[[table: 0000025F43BFD9E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018CD60]],
+  } --[[table: 0000025F43BFD460]],
   {
     Components = {
       {
@@ -13604,12 +13604,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018D9E0]],
+      } --[[table: 0000025F43BFD7E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D3A0]],
+      } --[[table: 0000025F43BFD820]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13623,10 +13623,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018DF20]]
-    } --[[table: 000002808018E020]],
+      } --[[table: 0000025F43BFD860]]
+    } --[[table: 0000025F43BFE120]],
     EntityName = "Tree"
-  } --[[table: 000002808018D4E0]],
+  } --[[table: 0000025F43BFD7A0]],
   {
     Components = {
       {
@@ -13640,12 +13640,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018DD20]],
+      } --[[table: 0000025F43BFDBE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D160]],
+      } --[[table: 0000025F43BFDB20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13659,10 +13659,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018D1E0]]
-    } --[[table: 000002808018E120]],
+      } --[[table: 0000025F43BFDBA0]]
+    } --[[table: 0000025F43BFD920]],
     EntityName = "Tree"
-  } --[[table: 000002808018D4A0]],
+  } --[[table: 0000025F43BFDAA0]],
   {
     Components = {
       {
@@ -13676,12 +13676,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018DDE0]],
+      } --[[table: 0000025F43BFE1A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D1A0]],
+      } --[[table: 0000025F43BFE4A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13695,10 +13695,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018E0A0]]
-    } --[[table: 000002808018DC20]],
+      } --[[table: 0000025F43BFE3A0]]
+    } --[[table: 0000025F43BFE9A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018DBE0]],
+  } --[[table: 0000025F43BFEBA0]],
   {
     Components = {
       {
@@ -13712,12 +13712,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018DCA0]],
+      } --[[table: 0000025F43BFED20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D860]],
+      } --[[table: 0000025F43BFE6A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13731,10 +13731,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018DE60]]
-    } --[[table: 000002808018DB20]],
+      } --[[table: 0000025F43BFECE0]]
+    } --[[table: 0000025F43BFEF60]],
     EntityName = "Tree"
-  } --[[table: 000002808018D3E0]],
+  } --[[table: 0000025F43BFE2A0]],
   {
     Components = {
       {
@@ -13748,12 +13748,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018D2E0]],
+      } --[[table: 0000025F43BFE7E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D920]],
+      } --[[table: 0000025F43BFEFE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13767,10 +13767,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018DBA0]]
-    } --[[table: 000002808018DE20]],
+      } --[[table: 0000025F43BFE720]]
+    } --[[table: 0000025F43BFE620]],
     EntityName = "Tree"
-  } --[[table: 000002808018D2A0]],
+  } --[[table: 0000025F43BFE3E0]],
   {
     Components = {
       {
@@ -13784,12 +13784,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018DF60]],
+      } --[[table: 0000025F43BFF060]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D960]],
+      } --[[table: 0000025F43BFE7A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13803,10 +13803,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018D320]]
-    } --[[table: 000002808018D720]],
+      } --[[table: 0000025F43BFE420]]
+    } --[[table: 0000025F43BFEDA0]],
     EntityName = "Tree"
-  } --[[table: 000002808018D7A0]],
+  } --[[table: 0000025F43BFE5A0]],
   {
     Components = {
       {
@@ -13820,12 +13820,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018D5E0]],
+      } --[[table: 0000025F43BFEE20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018DEA0]],
+      } --[[table: 0000025F43BFEB20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13839,10 +13839,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018D8A0]]
-    } --[[table: 000002808018D7E0]],
+      } --[[table: 0000025F43BFE1E0]]
+    } --[[table: 0000025F43BFEDE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018D520]],
+  } --[[table: 0000025F43BFEC60]],
   {
     Components = {
       {
@@ -13856,12 +13856,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018D460]],
+      } --[[table: 0000025F43BFE6E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018D8E0]],
+      } --[[table: 0000025F43BFE220]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13875,10 +13875,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018DA20]]
-    } --[[table: 000002808018D820]],
+      } --[[table: 0000025F43BFEA20]]
+    } --[[table: 0000025F43BFE2E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018D420]],
+  } --[[table: 0000025F43BFE5E0]],
   {
     Components = {
       {
@@ -13892,12 +13892,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018D560]],
+      } --[[table: 0000025F43BFEE60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018DD60]],
+      } --[[table: 0000025F43BFE160]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13911,10 +13911,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018D5A0]]
-    } --[[table: 000002808018DAA0]],
+      } --[[table: 0000025F43BFEC20]]
+    } --[[table: 0000025F43BFEEE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018D360]],
+  } --[[table: 0000025F43BFE360]],
   {
     Components = {
       {
@@ -13928,12 +13928,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018DC60]],
+      } --[[table: 0000025F43BFF0E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018DCE0]],
+      } --[[table: 0000025F43BFECA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13947,10 +13947,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018D660]]
-    } --[[table: 000002808018DB60]],
+      } --[[table: 0000025F43BFED60]]
+    } --[[table: 0000025F43BFE4E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018DAE0]],
+  } --[[table: 0000025F43BFEEA0]],
   {
     Components = {
       {
@@ -13964,12 +13964,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E060]],
+      } --[[table: 0000025F43BFEF20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018E0E0]],
+      } --[[table: 0000025F43BFE460]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -13983,10 +13983,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018E6A0]]
-    } --[[table: 000002808018DFA0]],
+      } --[[table: 0000025F43BFE520]]
+    } --[[table: 0000025F43BFE760]],
     EntityName = "Tree"
-  } --[[table: 000002808018DEE0]],
+  } --[[table: 0000025F43BFE560]],
   {
     Components = {
       {
@@ -14000,12 +14000,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E960]],
+      } --[[table: 0000025F43BFE920]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018EC20]],
+      } --[[table: 0000025F43BFE9E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14019,10 +14019,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018E6E0]]
-    } --[[table: 000002808018E720]],
+      } --[[table: 0000025F43BFE960]]
+    } --[[table: 0000025F43BFE8E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018E360]],
+  } --[[table: 0000025F43BFF120]],
   {
     Components = {
       {
@@ -14036,12 +14036,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018EEA0]],
+      } --[[table: 0000025F43BFEAE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018E7A0]],
+      } --[[table: 0000025F43BFEB60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14055,10 +14055,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018E9A0]]
-    } --[[table: 000002808018E1A0]],
+      } --[[table: 0000025F43BFF8E0]]
+    } --[[table: 0000025F43BFEAA0]],
     EntityName = "Tree"
-  } --[[table: 000002808018E2A0]],
+  } --[[table: 0000025F43BFEA60]],
   {
     Components = {
       {
@@ -14072,12 +14072,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E860]],
+      } --[[table: 0000025F43BFF1A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018EFE0]],
+      } --[[table: 0000025F43BFF260]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14091,10 +14091,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018EA60]]
-    } --[[table: 000002808018E8A0]],
+      } --[[table: 0000025F43BFF1E0]]
+    } --[[table: 0000025F43C00120]],
     EntityName = "Tree"
-  } --[[table: 000002808018E4E0]],
+  } --[[table: 0000025F43BFF7A0]],
   {
     Components = {
       {
@@ -14108,12 +14108,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E520]],
+      } --[[table: 0000025F43BFFB20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018E420]],
+      } --[[table: 0000025F43BFFFA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14127,10 +14127,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F020]]
-    } --[[table: 000002808018EBE0]],
+      } --[[table: 0000025F43BFF620]]
+    } --[[table: 0000025F43BFFE60]],
     EntityName = "Tree"
-  } --[[table: 000002808018E2E0]],
+  } --[[table: 0000025F43BFF5A0]],
   {
     Components = {
       {
@@ -14144,12 +14144,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E160]],
+      } --[[table: 0000025F43BFF220]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018E4A0]],
+      } --[[table: 0000025F43BFF3A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14163,10 +14163,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018E320]]
-    } --[[table: 000002808018EA20]],
+      } --[[table: 0000025F43BFF320]]
+    } --[[table: 0000025F43BFF5E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018F060]],
+  } --[[table: 0000025F43BFF7E0]],
   {
     Components = {
       {
@@ -14180,12 +14180,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018ED20]],
+      } --[[table: 0000025F43BFF2A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018EFA0]],
+      } --[[table: 0000025F43BFF9A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14199,10 +14199,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018ECA0]]
-    } --[[table: 000002808018EBA0]],
+      } --[[table: 0000025F43C00020]]
+    } --[[table: 0000025F43BFF520]],
     EntityName = "Tree"
-  } --[[table: 000002808018EB60]],
+  } --[[table: 0000025F43BFFBA0]],
   {
     Components = {
       {
@@ -14216,12 +14216,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E3E0]],
+      } --[[table: 0000025F43BFFBE0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018E460]],
+      } --[[table: 0000025F43BFFA60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14235,10 +14235,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F0A0]]
-    } --[[table: 000002808018E560]],
+      } --[[table: 0000025F43BFF920]]
+    } --[[table: 0000025F43BFF720]],
     EntityName = "Tree"
-  } --[[table: 000002808018ECE0]],
+  } --[[table: 0000025F43BFF3E0]],
   {
     Components = {
       {
@@ -14252,12 +14252,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E7E0]],
+      } --[[table: 0000025F43BFF420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018E920]],
+      } --[[table: 0000025F43BFF660]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14271,10 +14271,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018EAA0]]
-    } --[[table: 000002808018E5E0]],
+      } --[[table: 0000025F43BFFDE0]]
+    } --[[table: 0000025F43BFFC20]],
     EntityName = "Tree"
-  } --[[table: 000002808018E5A0]],
+  } --[[table: 0000025F43BFF2E0]],
   {
     Components = {
       {
@@ -14288,12 +14288,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018E660]],
+      } --[[table: 0000025F43BFFAA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018E8E0]],
+      } --[[table: 0000025F43BFFEA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14307,10 +14307,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018EAE0]]
-    } --[[table: 000002808018EDA0]],
+      } --[[table: 0000025F43BFFF60]]
+    } --[[table: 0000025F43BFF9E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018E820]],
+  } --[[table: 0000025F43BFF960]],
   {
     Components = {
       {
@@ -14324,12 +14324,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F0E0]],
+      } --[[table: 0000025F43BFF460]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018EE60]],
+      } --[[table: 0000025F43BFFCE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14343,10 +14343,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018EEE0]]
-    } --[[table: 000002808018E220]],
+      } --[[table: 0000025F43BFFAE0]]
+    } --[[table: 0000025F43BFFEE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018EE20]],
+  } --[[table: 0000025F43BFF820]],
   {
     Components = {
       {
@@ -14360,12 +14360,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F320]],
+      } --[[table: 0000025F43BFF560]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018FE20]],
+      } --[[table: 0000025F43BFFC60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14379,10 +14379,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018FD20]]
-    } --[[table: 000002808018E260]],
+      } --[[table: 0000025F43BFFCA0]]
+    } --[[table: 0000025F43C000A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018E1E0]],
+  } --[[table: 0000025F43BFF4E0]],
   {
     Components = {
       {
@@ -14396,12 +14396,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F920]],
+      } --[[table: 0000025F43BFF760]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018F360]],
+      } --[[table: 0000025F43BFFFE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14415,10 +14415,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018FDE0]]
-    } --[[table: 000002808018F4A0]],
+      } --[[table: 0000025F43C00060]]
+    } --[[table: 0000025F43BFFD60]],
     EntityName = "Tree"
-  } --[[table: 000002808018FEA0]],
+  } --[[table: 0000025F43BFF860]],
   {
     Components = {
       {
@@ -14432,12 +14432,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018FE60]],
+      } --[[table: 0000025F43C003E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018F9A0]],
+      } --[[table: 0000025F43C00320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14451,10 +14451,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018FCA0]]
-    } --[[table: 000002808018F860]],
+      } --[[table: 0000025F43C00EA0]]
+    } --[[table: 0000025F43BFF6A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018F7A0]],
+  } --[[table: 0000025F43C000E0]],
   {
     Components = {
       {
@@ -14468,12 +14468,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018FA20]],
+      } --[[table: 0000025F43C00F20]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018FFE0]],
+      } --[[table: 0000025F43C00A20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14487,10 +14487,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F1A0]]
-    } --[[table: 000002808018F9E0]],
+      } --[[table: 0000025F43C00B20]]
+    } --[[table: 0000025F43C007A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018F8E0]],
+  } --[[table: 0000025F43C010A0]],
   {
     Components = {
       {
@@ -14504,12 +14504,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F5A0]],
+      } --[[table: 0000025F43C00420]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018F2A0]],
+      } --[[table: 0000025F43C00620]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14523,10 +14523,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018FF60]]
-    } --[[table: 000002808018FAA0]],
+      } --[[table: 0000025F43C01120]]
+    } --[[table: 0000025F43C00CE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018FCE0]],
+  } --[[table: 0000025F43C001E0]],
   {
     Components = {
       {
@@ -14540,12 +14540,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F520]],
+      } --[[table: 0000025F43C003A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018F560]],
+      } --[[table: 0000025F43C008A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14559,10 +14559,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F5E0]]
-    } --[[table: 000002808018FD60]],
+      } --[[table: 0000025F43C00B60]]
+    } --[[table: 0000025F43C00E20]],
     EntityName = "Tree"
-  } --[[table: 000002808018F660]],
+  } --[[table: 0000025F43C00D20]],
   {
     Components = {
       {
@@ -14576,12 +14576,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018FAE0]],
+      } --[[table: 0000025F43C009A0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018FF20]],
+      } --[[table: 0000025F43C006A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14595,10 +14595,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F460]]
-    } --[[table: 000002808018FC20]],
+      } --[[table: 0000025F43C00360]]
+    } --[[table: 0000025F43C001A0]],
     EntityName = "Tree"
-  } --[[table: 000002808018F7E0]],
+  } --[[table: 0000025F43C00C60]],
   {
     Components = {
       {
@@ -14612,12 +14612,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F3A0]],
+      } --[[table: 0000025F43C00AA0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018F420]],
+      } --[[table: 0000025F43C00BA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14631,10 +14631,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018FBE0]]
-    } --[[table: 0000028080190020]],
+      } --[[table: 0000025F43C00DA0]]
+    } --[[table: 0000025F43C00EE0]],
     EntityName = "Tree"
-  } --[[table: 000002808018FFA0]],
+  } --[[table: 0000025F43C00FE0]],
   {
     Components = {
       {
@@ -14648,12 +14648,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F6A0]],
+      } --[[table: 0000025F43C005E0]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080190060]],
+      } --[[table: 0000025F43C00760]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14667,10 +14667,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F6E0]]
-    } --[[table: 000002808018F4E0]],
+      } --[[table: 0000025F43C00E60]]
+    } --[[table: 0000025F43C009E0]],
     EntityName = "Tree"
-  } --[[table: 00000280801900A0]],
+  } --[[table: 0000025F43C00220]],
   {
     Components = {
       {
@@ -14684,12 +14684,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F760]],
+      } --[[table: 0000025F43C00F60]],
       {
         ModelID = "TREE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018F3E0]],
+      } --[[table: 0000025F43C00260]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14703,10 +14703,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F820]]
-    } --[[table: 000002808018FB60]],
+      } --[[table: 0000025F43C006E0]]
+    } --[[table: 0000025F43C010E0]],
     EntityName = "Tree"
-  } --[[table: 000002808018FC60]],
+  } --[[table: 0000025F43C00C20]],
   {
     Components = {
       {
@@ -14720,12 +14720,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 000002808018F1E0]],
+      } --[[table: 0000025F43C002A0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 000002808018F220]],
+      } --[[table: 0000025F43C002E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14739,10 +14739,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808018F2E0]]
-    } --[[table: 000002808018FDA0]],
+      } --[[table: 0000025F43C00FA0]]
+    } --[[table: 0000025F43C00D60]],
     EntityName = "Rock"
-  } --[[table: 00000280801900E0]],
+  } --[[table: 0000025F43C00820]],
   {
     Components = {
       {
@@ -14756,12 +14756,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801908A0]],
+      } --[[table: 0000025F43C00CA0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080190720]],
+      } --[[table: 0000025F43C00520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14775,10 +14775,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080190FE0]]
-    } --[[table: 0000028080190420]],
+      } --[[table: 0000025F43C01060]]
+    } --[[table: 0000025F43C00AE0]],
     EntityName = "Rock"
-  } --[[table: 0000028080191020]],
+  } --[[table: 0000025F43C00560]],
   {
     Components = {
       {
@@ -14792,12 +14792,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801905E0]],
+      } --[[table: 0000025F43C007E0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080190660]],
+      } --[[table: 0000025F43C00860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14811,10 +14811,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080190B60]]
-    } --[[table: 00000280801904A0]],
+      } --[[table: 0000025F43C00920]]
+    } --[[table: 0000025F43C00720]],
     EntityName = "Rock"
-  } --[[table: 0000028080190360]],
+  } --[[table: 0000025F43C008E0]],
   {
     Components = {
       {
@@ -14828,12 +14828,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080190BE0]],
+      } --[[table: 0000025F43C020A0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801908E0]],
+      } --[[table: 0000025F43C015A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14847,10 +14847,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080190CE0]]
-    } --[[table: 0000028080190F60]],
+      } --[[table: 0000025F43C01DA0]]
+    } --[[table: 0000025F43C01720]],
     EntityName = "Rock"
-  } --[[table: 00000280801901E0]],
+  } --[[table: 0000025F43C01AA0]],
   {
     Components = {
       {
@@ -14864,12 +14864,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080190F20]],
+      } --[[table: 0000025F43C01C60]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191060]],
+      } --[[table: 0000025F43C01CE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14883,10 +14883,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801903A0]]
-    } --[[table: 0000028080190320]],
+      } --[[table: 0000025F43C01160]]
+    } --[[table: 0000025F43C013A0]],
     EntityName = "Rock"
-  } --[[table: 0000028080190220]],
+  } --[[table: 0000025F43C01CA0]],
   {
     Components = {
       {
@@ -14900,12 +14900,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080190260]],
+      } --[[table: 0000025F43C01E60]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801907A0]],
+      } --[[table: 0000025F43C01920]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14919,10 +14919,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080190960]]
-    } --[[table: 0000028080190920]],
+      } --[[table: 0000025F43C01D20]]
+    } --[[table: 0000025F43C011E0]],
     EntityName = "Rock"
-  } --[[table: 0000028080190760]],
+  } --[[table: 0000025F43C01660]],
   {
     Components = {
       {
@@ -14936,12 +14936,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801910A0]],
+      } --[[table: 0000025F43C02060]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080190160]],
+      } --[[table: 0000025F43C017A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14955,10 +14955,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801902E0]]
-    } --[[table: 0000028080190E60]],
+      } --[[table: 0000025F43C01BA0]]
+    } --[[table: 0000025F43C01F60]],
     EntityName = "Rock"
-  } --[[table: 00000280801902A0]],
+  } --[[table: 0000025F43C014A0]],
   {
     Components = {
       {
@@ -14972,12 +14972,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080190EE0]],
+      } --[[table: 0000025F43C01820]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801901A0]],
+      } --[[table: 0000025F43C01220]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -14991,10 +14991,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080190B20]]
-    } --[[table: 0000028080190A20]],
+      } --[[table: 0000025F43C01860]]
+    } --[[table: 0000025F43C018A0]],
     EntityName = "Rock"
-  } --[[table: 00000280801909E0]],
+  } --[[table: 0000025F43C020E0]],
   {
     Components = {
       {
@@ -15008,12 +15008,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080190BA0]],
+      } --[[table: 0000025F43C01620]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801906A0]],
+      } --[[table: 0000025F43C018E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15027,10 +15027,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801904E0]]
-    } --[[table: 00000280801905A0]],
+      } --[[table: 0000025F43C01960]]
+    } --[[table: 0000025F43C01A20]],
     EntityName = "Rock"
-  } --[[table: 00000280801910E0]],
+  } --[[table: 0000025F43C01DE0]],
   {
     Components = {
       {
@@ -15044,12 +15044,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801903E0]],
+      } --[[table: 0000025F43C02120]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080190AA0]],
+      } --[[table: 0000025F43C019A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15063,10 +15063,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080190560]]
-    } --[[table: 0000028080190520]],
+      } --[[table: 0000025F43C02020]]
+    } --[[table: 0000025F43C01FA0]],
     EntityName = "Rock"
-  } --[[table: 0000028080190A60]],
+  } --[[table: 0000025F43C016A0]],
   {
     Components = {
       {
@@ -15080,12 +15080,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080190C60]],
+      } --[[table: 0000025F43C012E0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080190CA0]],
+      } --[[table: 0000025F43C012A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15099,10 +15099,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191120]]
-    } --[[table: 0000028080190AE0]],
+      } --[[table: 0000025F43C01560]]
+    } --[[table: 0000025F43C01EA0]],
     EntityName = "Rock"
-  } --[[table: 0000028080190FA0]],
+  } --[[table: 0000025F43C01260]],
   {
     Components = {
       {
@@ -15116,12 +15116,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080190DE0]],
+      } --[[table: 0000025F43C01AE0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080190E20]],
+      } --[[table: 0000025F43C01320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15135,10 +15135,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801912A0]]
-    } --[[table: 0000028080190DA0]],
+      } --[[table: 0000025F43C01EE0]]
+    } --[[table: 0000025F43C01B20]],
     EntityName = "Rock"
-  } --[[table: 0000028080190D60]],
+  } --[[table: 0000025F43C019E0]],
   {
     Components = {
       {
@@ -15152,12 +15152,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080191AA0]],
+      } --[[table: 0000025F43C016E0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191DE0]],
+      } --[[table: 0000025F43C01A60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15171,10 +15171,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191A20]]
-    } --[[table: 00000280801920A0]],
+      } --[[table: 0000025F43C01C20]]
+    } --[[table: 0000025F43C01360]],
     EntityName = "Rock"
-  } --[[table: 00000280801911A0]],
+  } --[[table: 0000025F43C01FE0]],
   {
     Components = {
       {
@@ -15188,12 +15188,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080191460]],
+      } --[[table: 0000025F43C01460]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191CA0]],
+      } --[[table: 0000025F43C01520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15207,10 +15207,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191D60]]
-    } --[[table: 0000028080191360]],
+      } --[[table: 0000025F43C02520]]
+    } --[[table: 0000025F43C01420]],
     EntityName = "Rock"
-  } --[[table: 0000028080191220]],
+  } --[[table: 0000025F43C013E0]],
   {
     Components = {
       {
@@ -15224,12 +15224,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080192120]],
+      } --[[table: 0000025F43C022A0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191160]],
+      } --[[table: 0000025F43C02160]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15243,10 +15243,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191A60]]
-    } --[[table: 00000280801914A0]],
+      } --[[table: 0000025F43C02720]]
+    } --[[table: 0000025F43C03120]],
     EntityName = "Rock"
-  } --[[table: 00000280801919A0]],
+  } --[[table: 0000025F43C029A0]],
   {
     Components = {
       {
@@ -15260,12 +15260,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080191FA0]],
+      } --[[table: 0000025F43C02FE0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191F60]],
+      } --[[table: 0000025F43C02F20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15279,10 +15279,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191760]]
-    } --[[table: 0000028080191EE0]],
+      } --[[table: 0000025F43C02B20]]
+    } --[[table: 0000025F43C026A0]],
     EntityName = "Rock"
-  } --[[table: 0000028080191BE0]],
+  } --[[table: 0000025F43C02A60]],
   {
     Components = {
       {
@@ -15296,12 +15296,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801916E0]],
+      } --[[table: 0000025F43C02B60]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801915E0]],
+      } --[[table: 0000025F43C02BE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15315,10 +15315,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801913E0]]
-    } --[[table: 0000028080191FE0]],
+      } --[[table: 0000025F43C02C60]]
+    } --[[table: 0000025F43C02F60]],
     EntityName = "Rock"
-  } --[[table: 0000028080191260]],
+  } --[[table: 0000025F43C025E0]],
   {
     Components = {
       {
@@ -15332,12 +15332,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080191B60]],
+      } --[[table: 0000025F43C02EE0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801914E0]],
+      } --[[table: 0000025F43C023A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15351,10 +15351,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191320]]
-    } --[[table: 0000028080191520]],
+      } --[[table: 0000025F43C024A0]]
+    } --[[table: 0000025F43C02760]],
     EntityName = "Rock"
-  } --[[table: 0000028080191660]],
+  } --[[table: 0000025F43C02560]],
   {
     Components = {
       {
@@ -15368,12 +15368,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080191DA0]],
+      } --[[table: 0000025F43C02460]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191C20]],
+      } --[[table: 0000025F43C02A20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15387,10 +15387,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801913A0]]
-    } --[[table: 0000028080192020]],
+      } --[[table: 0000025F43C02660]]
+    } --[[table: 0000025F43C02420]],
     EntityName = "Rock"
-  } --[[table: 00000280801915A0]],
+  } --[[table: 0000025F43C02E20]],
   {
     Components = {
       {
@@ -15404,12 +15404,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080191420]],
+      } --[[table: 0000025F43C027A0]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801916A0]],
+      } --[[table: 0000025F43C021E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15423,10 +15423,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191560]]
-    } --[[table: 00000280801918A0]],
+      } --[[table: 0000025F43C028E0]]
+    } --[[table: 0000025F43C02AA0]],
     EntityName = "Rock"
-  } --[[table: 0000028080191620]],
+  } --[[table: 0000025F43C03060]],
   {
     Components = {
       {
@@ -15440,12 +15440,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801917E0]],
+      } --[[table: 0000025F43C02260]],
       {
         ModelID = "ROCK",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191820]],
+      } --[[table: 0000025F43C022E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15459,10 +15459,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191EA0]]
-    } --[[table: 00000280801917A0]],
+      } --[[table: 0000025F43C02320]]
+    } --[[table: 0000025F43C02220]],
     EntityName = "Rock"
-  } --[[table: 0000028080191D20]],
+  } --[[table: 0000025F43C027E0]],
   {
     Components = {
       {
@@ -15476,12 +15476,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080191AE0]],
+      } --[[table: 0000025F43C023E0]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080191B20]],
+      } --[[table: 0000025F43C024E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15495,10 +15495,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080191C60]]
-    } --[[table: 0000028080191960]],
+      } --[[table: 0000025F43C03020]]
+    } --[[table: 0000025F43C02360]],
     EntityName = "Rock2"
-  } --[[table: 0000028080191920]],
+  } --[[table: 0000025F43C025A0]],
   {
     Components = {
       {
@@ -15512,12 +15512,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080193020]],
+      } --[[table: 0000025F43C02620]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801924E0]],
+      } --[[table: 0000025F43C030A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15531,10 +15531,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080192320]]
-    } --[[table: 0000028080191F20]],
+      } --[[table: 0000025F43C026E0]]
+    } --[[table: 0000025F43C02960]],
     EntityName = "Rock2"
-  } --[[table: 0000028080191E20]],
+  } --[[table: 0000025F43C02860]],
   {
     Components = {
       {
@@ -15548,12 +15548,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080193120]],
+      } --[[table: 0000025F43C02DA0]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192160]],
+      } --[[table: 0000025F43C02CA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15567,10 +15567,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080192920]]
-    } --[[table: 0000028080192AE0]],
+      } --[[table: 0000025F43C02CE0]]
+    } --[[table: 0000025F43C02BA0]],
     EntityName = "Rock2"
-  } --[[table: 0000028080192FE0]],
+  } --[[table: 0000025F43C030E0]],
   {
     Components = {
       {
@@ -15584,12 +15584,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080192C20]],
+      } --[[table: 0000025F43C03DA0]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801926E0]],
+      } --[[table: 0000025F43C03E60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15603,10 +15603,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080192E60]]
-    } --[[table: 00000280801926A0]],
+      } --[[table: 0000025F43C03EE0]]
+    } --[[table: 0000025F43C02E60]],
     EntityName = "Rock2"
-  } --[[table: 0000028080192760]],
+  } --[[table: 0000025F43C02D60]],
   {
     Components = {
       {
@@ -15620,12 +15620,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080192B20]],
+      } --[[table: 0000025F43C032E0]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192B60]],
+      } --[[table: 0000025F43C035A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15639,10 +15639,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801929E0]]
-    } --[[table: 0000028080193060]],
+      } --[[table: 0000025F43C03D20]]
+    } --[[table: 0000025F43C03660]],
     EntityName = "Rock2"
-  } --[[table: 00000280801921A0]],
+  } --[[table: 0000025F43C03620]],
   {
     Components = {
       {
@@ -15656,12 +15656,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080192DE0]],
+      } --[[table: 0000025F43C03F60]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192720]],
+      } --[[table: 0000025F43C03520]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15675,10 +15675,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801925A0]]
-    } --[[table: 00000280801930E0]],
+      } --[[table: 0000025F43C03C60]]
+    } --[[table: 0000025F43C038A0]],
     EntityName = "Rock2"
-  } --[[table: 00000280801921E0]],
+  } --[[table: 0000025F43C03320]],
   {
     Components = {
       {
@@ -15692,12 +15692,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801927E0]],
+      } --[[table: 0000025F43C034A0]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192820]],
+      } --[[table: 0000025F43C03FA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15711,10 +15711,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080192520]]
-    } --[[table: 0000028080192220]],
+      } --[[table: 0000025F43C036E0]]
+    } --[[table: 0000025F43C036A0]],
     EntityName = "Rock2"
-  } --[[table: 00000280801927A0]],
+  } --[[table: 0000025F43C04020]],
   {
     Components = {
       {
@@ -15728,12 +15728,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801928A0]],
+      } --[[table: 0000025F43C03FE0]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192260]],
+      } --[[table: 0000025F43C037E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15747,10 +15747,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080192A20]]
-    } --[[table: 00000280801923A0]],
+      } --[[table: 0000025F43C03160]]
+    } --[[table: 0000025F43C031E0]],
     EntityName = "Rock2"
-  } --[[table: 0000028080192860]],
+  } --[[table: 0000025F43C034E0]],
   {
     Components = {
       {
@@ -15764,12 +15764,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 00000280801928E0]],
+      } --[[table: 0000025F43C03EA0]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192960]],
+      } --[[table: 0000025F43C040E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15783,10 +15783,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801923E0]]
-    } --[[table: 00000280801922E0]],
+      } --[[table: 0000025F43C03DE0]]
+    } --[[table: 0000025F43C04060]],
     EntityName = "Rock2"
-  } --[[table: 0000028080192A60]],
+  } --[[table: 0000025F43C040A0]],
   {
     Components = {
       {
@@ -15800,12 +15800,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080192EE0]],
+      } --[[table: 0000025F43C03B20]],
       {
         ModelID = "ROCK2",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192BE0]],
+      } --[[table: 0000025F43C03E20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15819,10 +15819,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080192C60]]
-    } --[[table: 0000028080192BA0]],
+      } --[[table: 0000025F43C03760]]
+    } --[[table: 0000025F43C03560]],
     EntityName = "Rock2"
-  } --[[table: 0000028080192AA0]],
+  } --[[table: 0000025F43C03CA0]],
   {
     Components = {
       {
@@ -15836,15 +15836,15 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080192620]],
+      } --[[table: 0000025F43C037A0]],
       {
         ModelID = "TEMPLE",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801924A0]]
-    } --[[table: 0000028080192CA0]],
+      } --[[table: 0000025F43C03A20]]
+    } --[[table: 0000025F43C031A0]],
     EntityName = "Temple"
-  } --[[table: 0000028080192460]],
+  } --[[table: 0000025F43C04120]],
   {
     Components = {
       {
@@ -15858,12 +15858,12 @@ scene = {
         scale_x = 2,
         scale_y = 2,
         scale_z = 2
-      } --[[table: 0000028080192660]],
+      } --[[table: 0000025F43C03AA0]],
       {
         ModelID = "WELL",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 0000028080192CE0]],
+      } --[[table: 0000025F43C03360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15877,10 +15877,10 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080192D60]]
-    } --[[table: 0000028080192FA0]],
+      } --[[table: 0000025F43C03420]]
+    } --[[table: 0000025F43C03D60]],
     EntityName = "Well"
-  } --[[table: 00000280801925E0]],
+  } --[[table: 0000025F43C03820]],
   {
     Components = {
       {
@@ -15894,15 +15894,15 @@ scene = {
         scale_x = 20,
         scale_y = 20,
         scale_z = 20
-      } --[[table: 0000028080193C20]],
+      } --[[table: 0000025F43C039A0]],
       {
         ModelID = "BLAHAJ",
         Name = "MeshRenderer",
         ShaderID = 2
-      } --[[table: 00000280801939A0]]
-    } --[[table: 00000280801934A0]],
+      } --[[table: 0000025F43C03860]]
+    } --[[table: 0000025F43C032A0]],
     EntityName = "Blahaj"
-  } --[[table: 0000028080192F20]],
+  } --[[table: 0000025F43C03C20]],
   {
     Components = {
       {
@@ -15916,15 +15916,15 @@ scene = {
         scale_x = 100,
         scale_y = 100,
         scale_z = 100
-      } --[[table: 00000280801932E0]],
+      } --[[table: 0000025F43C03960]],
       {
         ModelID = "WATER",
         Name = "MeshRenderer",
         ShaderID = 4
-      } --[[table: 00000280801939E0]]
-    } --[[table: 00000280801934E0]],
+      } --[[table: 0000025F43C039E0]]
+    } --[[table: 0000025F43C03920]],
     EntityName = "Water Feature"
-  } --[[table: 00000280801936A0]],
+  } --[[table: 0000025F43C038E0]],
   {
     Components = {
       {
@@ -15938,7 +15938,7 @@ scene = {
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080193E60]],
+      } --[[table: 0000025F43C03BA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -15952,890 +15952,32 @@ scene = {
         shape = "box",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080193BE0]]
-    } --[[table: 0000028080193920]],
+      } --[[table: 0000025F43C043A0]]
+    } --[[table: 0000025F43C03CE0]],
     EntityName = "KiddyPool"
-  } --[[table: 0000028080193A60]],
+  } --[[table: 0000025F43C03B60]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1308.66357421875,
-        position_y = -1.6499977111816406,
-        position_z = 252.9964599609375,
-        rotation_x = 0,
-        rotation_y = 235.4752197265625,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080193F60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801937E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080193360]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801933A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080194060]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "9.0665129423136",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7110970020287"
-      } --[[table: 0000028080193660]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801935A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080193860]]
-    } --[[table: 0000028080193B20]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080193520]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1279.4478759765625,
-        position_y = 44.350002288818359,
-        position_z = 732.16162109375,
-        rotation_x = 0,
-        rotation_y = 120.12770843505859,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801936E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080193620]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080193160]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080193720]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080194120]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.2423312664022",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7110970020287"
-      } --[[table: 0000028080193320]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080193220]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801931E0]]
-    } --[[table: 00000280801940E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080193AA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 283.02902221679688,
-        position_y = 31.410907745361328,
-        position_z = -413.69369506835938,
-        rotation_x = 0,
-        rotation_y = 63.085659027099609,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801931A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080193D60]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080193B60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080193BA0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080193260]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.4935522079463",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 0000028080193DE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080193CE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801937A0]]
-    } --[[table: 0000028080193760]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080193AE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1471.985595703125,
-        position_y = 61.359352111816406,
-        position_z = -77,
-        rotation_x = 0,
-        rotation_y = 96.49432373046875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801938E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080193CA0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080193960]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080193D20]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080193DA0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.2114067077626",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 0000028080193E20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080193FE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801950A0]]
-    } --[[table: 0000028080193820]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080193C60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1278.8675537109375,
-        position_y = 49.439624786376953,
-        position_z = -1424.94873046875,
-        rotation_x = 0,
-        rotation_y = 57.762241363525391,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080194360]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080194EA0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280801941A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080194AA0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080194C20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.20528769493",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.6782126426689"
-      } --[[table: 0000028080194860]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080194EE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195020]]
-    } --[[table: 0000028080194D20]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080194AE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1224.7977294921875,
-        position_y = 3.3459815979003906,
-        position_z = 659.13397216796875,
-        rotation_x = 0,
-        rotation_y = 217.01756286621094,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080194B60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801949A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080194FE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801950E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080194220]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.1944756507865",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.6782126426689"
-      } --[[table: 0000028080194920]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080194260]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080194F20]]
-    } --[[table: 0000028080194D60]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801945E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 15.051262855529785,
-        position_y = 9.7701301574707031,
-        position_z = -11.775428771972656,
-        rotation_x = 0,
-        rotation_y = 120.75071716308594,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080194BE0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080195060]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080194760]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080194460]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801947E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.1773276329031",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 0000028080194A20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801942E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801946A0]]
-    } --[[table: 00000280801949E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080194160]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1079.211669921875,
-        position_y = 45.300319671630859,
-        position_z = -739.27703857421875,
-        rotation_x = 0,
-        rotation_y = 74.536163330078125,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080194620]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080194A60]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080194C60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080194CA0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801948A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.162064075469",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.1225409507746"
-      } --[[table: 0000028080194F60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080194660]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801944E0]]
-    } --[[table: 0000028080194DA0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801941E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1318,
-        position_y = 46.349998474121094,
-        position_z = -1018,
-        rotation_x = 0,
-        rotation_y = 68.520172119140625,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801946E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801943E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080194B20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080194720]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080194560]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.1454753875725",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 0000028080194520]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801947A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080194E20]]
-    } --[[table: 0000028080194420]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801943A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -875,
-        position_y = 41.349998474121094,
-        position_z = 140.00129699707031,
-        rotation_x = 0,
-        rotation_y = 107.78330993652344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080194BA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080194CE0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080194DE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080194E60]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801959E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.1292850971213",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 00000280801952A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195FE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195AA0]]
-    } --[[table: 0000028080194960]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801948E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 611.92120361328125,
-        position_y = 27.291244506835938,
-        position_z = -272.97216796875,
-        rotation_x = 0,
-        rotation_y = 254.89483642578125,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801953A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080196020]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080195420]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801954A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080195D20]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.4165492057799",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.34970569610596"
-      } --[[table: 0000028080195D60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195CE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801960A0]]
-    } --[[table: 0000028080195360]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080195A20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -925.7705078125,
-        position_y = 55.87969970703125,
-        position_z = -777.93310546875,
-        rotation_x = 0,
-        rotation_y = 71.558860778808594,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080196060]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801954E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080195F60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801952E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080195920]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.0961849689477",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "7.0936074256889"
-      } --[[table: 00000280801960E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080196120]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195E60]]
-    } --[[table: 0000028080195F20]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080195DE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1300.974609375,
-        position_y = -7.1402401924133301,
-        position_z = -62.009769439697266,
-        rotation_x = 0,
-        rotation_y = 253.40049743652344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080195160]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801955E0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280801958A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080195A60]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080195320]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "8.0793018341056",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 0000028080195520]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801956A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195560]]
-    } --[[table: 00000280801959A0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080195460]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1212.6522216796875,
+        position_x = -1136.8994140625,
         position_y = 32.349998474121094,
-        position_z = -370.9468994140625,
+        position_z = -234.19427490234375,
         rotation_x = 0,
-        rotation_y = 87.688560485839844,
+        rotation_y = 55.739265441894531,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080195620]],
+      } --[[table: 0000025F43C04420]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080195660]],
+      } --[[table: 0000025F43C049E0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801956E0]],
+      } --[[table: 0000025F43C04660]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -16849,10 +15991,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080195720]],
+      } --[[table: 0000025F43C045A0]],
       {
         Name = "FSM"
-      } --[[table: 0000028080195760]],
+      } --[[table: 0000025F43C04AA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -16863,45 +16005,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "8.0624945163719",
+        playerAlertTimer = "171.42641544518",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.0432949066156"
-      } --[[table: 00000280801957A0]],
+        playerCheckTimer = "166.77662515805"
+      } --[[table: 0000025F43C046E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801957E0]],
+      } --[[table: 0000025F43C049A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195FA0]]
-    } --[[table: 00000280801951A0]],
+      } --[[table: 0000025F43C04AE0]]
+    } --[[table: 0000025F43C04760]],
     EntityName = "Spiky"
-  } --[[table: 0000028080195B20]],
+  } --[[table: 0000025F43C04260]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 451.19100952148438,
-        position_y = 36.672943115234375,
-        position_z = -297.15542602539062,
+        position_x = -1063.89453125,
+        position_y = 50.369369506835938,
+        position_z = -1098.55810546875,
         rotation_x = 0,
-        rotation_y = 95.319290161132812,
+        rotation_y = 41.045059204101562,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080195AE0]],
+      } --[[table: 0000025F43C04320]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080195B60]],
+      } --[[table: 0000025F43C04A60]],
       {
         Name = "Animation"
-      } --[[table: 0000028080195BA0]],
+      } --[[table: 0000025F43C04DE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -16915,76 +16057,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080195BE0]],
+      } --[[table: 0000025F43C04BA0]],
       {
         Name = "FSM"
-      } --[[table: 0000028080195C20]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.4935522079463",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 0000028080195DA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195C60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080195CA0]]
-    } --[[table: 0000028080195860]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801958E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 196.80067443847656,
-        position_y = 29.653858184814453,
-        position_z = -410.2718505859375,
-        rotation_x = 0,
-        rotation_y = 70.404197692871094,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801962E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080196E60]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080196460]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080196160]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080196FA0]],
+      } --[[table: 0000025F43C04520]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -16995,45 +16071,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.5097818374628",
+        playerAlertTimer = "170.31852507762",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.43361949920655"
-      } --[[table: 0000028080196D60]],
+        playerCheckTimer = "168.80418443846"
+      } --[[table: 0000025F43C04BE0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080196DE0]],
+      } --[[table: 0000025F43C043E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801963A0]]
-    } --[[table: 0000028080195EE0]],
+      } --[[table: 0000025F43C04DA0]]
+    } --[[table: 0000025F43C042E0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080195EA0]],
+  } --[[table: 0000025F43C04720]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 257.80575561523438,
-        position_y = 25.627567291259766,
-        position_z = -153.82083129882812,
+        position_x = -812.74981689453125,
+        position_y = 38.859344482421875,
+        position_z = 562.01470947265625,
         rotation_x = 0,
-        rotation_y = 121.17390441894531,
+        rotation_y = 71.038299560546875,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801965A0]],
+      } --[[table: 0000025F43C047A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801962A0]],
+      } --[[table: 0000025F43C04EE0]],
       {
         Name = "Animation"
-      } --[[table: 0000028080196F60]],
+      } --[[table: 0000025F43C047E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17047,10 +16123,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080196B20]],
+      } --[[table: 0000025F43C04C20]],
       {
         Name = "FSM"
-      } --[[table: 00000280801969A0]],
+      } --[[table: 0000025F43C04620]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17061,45 +16137,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.1074166297909",
+        playerAlertTimer = "170.28869891333",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 00000280801965E0]],
+        playerCheckTimer = "168.77042436762"
+      } --[[table: 0000025F43C04CE0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801963E0]],
+      } --[[table: 0000025F43C04D20]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801964E0]]
-    } --[[table: 0000028080196AA0]],
+      } --[[table: 0000025F43C050E0]]
+    } --[[table: 0000025F43C04FA0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080196CE0]],
+  } --[[table: 0000025F43C04EA0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 172.847900390625,
-        position_y = 24.643714904785156,
-        position_z = 50.925308227539062,
+        position_x = -1145.9439697265625,
+        position_y = 33.350006103515625,
+        position_z = -280.57272338867188,
         rotation_x = 0,
-        rotation_y = 136.96366882324219,
+        rotation_y = 54.973918914794922,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080196E20]],
+      } --[[table: 0000025F43C04220]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080196820]],
+      } --[[table: 0000025F43C04820]],
       {
         Name = "Animation"
-      } --[[table: 0000028080196860]],
+      } --[[table: 0000025F43C04360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17113,10 +16189,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080197020]],
+      } --[[table: 0000025F43C04E20]],
       {
         Name = "FSM"
-      } --[[table: 0000028080196DA0]],
+      } --[[table: 0000025F43C048A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17127,45 +16203,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "1.5503530502317",
+        playerAlertTimer = "170.27169633077",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 0000028080196A60]],
+        playerCheckTimer = "168.75474405454"
+      } --[[table: 0000025F43C05120]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197060]],
+      } --[[table: 0000025F43C048E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801968A0]]
-    } --[[table: 0000028080196A20]],
+      } --[[table: 0000025F43C044E0]]
+    } --[[table: 0000025F43C05060]],
     EntityName = "Spiky"
-  } --[[table: 0000028080196520]],
+  } --[[table: 0000025F43C04460]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1483.49267578125,
-        position_y = -11.649998664855957,
-        position_z = 227.75381469726562,
+        position_x = -647.44921875,
+        position_y = -8.9286623001098633,
+        position_z = 1339.4708251953125,
         rotation_x = 0,
-        rotation_y = 241.7401123046875,
+        rotation_y = 97.102561950683594,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080197120]],
+      } --[[table: 0000025F43C04E60]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080196D20]],
+      } --[[table: 0000025F43C04860]],
       {
         Name = "Animation"
-      } --[[table: 0000028080196320]],
+      } --[[table: 0000025F43C04920]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17179,10 +16255,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080196EA0]],
+      } --[[table: 0000025F43C04960]],
       {
         Name = "FSM"
-      } --[[table: 0000028080196560]],
+      } --[[table: 0000025F43C04A20]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17193,45 +16269,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.9788889884939",
+        playerAlertTimer = "170.2554111497",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.9600563049312"
-      } --[[table: 0000028080196EE0]],
+        playerCheckTimer = "168.75474405454"
+      } --[[table: 0000025F43C04B20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080196220]],
+      } --[[table: 0000025F43C050A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801961E0]]
-    } --[[table: 00000280801970E0]],
+      } --[[table: 0000025F43C05020]]
+    } --[[table: 0000025F43C04F60]],
     EntityName = "Spiky"
-  } --[[table: 00000280801970A0]],
+  } --[[table: 0000025F43C04560]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1094.3048095703125,
-        position_y = 34.589160919189453,
-        position_z = 739.68829345703125,
+        position_x = -1300.611572265625,
+        position_y = 47.349998474121094,
+        position_z = -1366.0411376953125,
         rotation_x = 0,
-        rotation_y = 123.11563873291016,
+        rotation_y = 41.094650268554688,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801961A0]],
+      } --[[table: 0000025F43C05F20]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080196260]],
+      } --[[table: 0000025F43C05A20]],
       {
         Name = "Animation"
-      } --[[table: 0000028080196B60]],
+      } --[[table: 0000025F43C05B20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17245,10 +16321,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080196BA0]],
+      } --[[table: 0000025F43C05860]],
       {
         Name = "FSM"
-      } --[[table: 0000028080196360]],
+      } --[[table: 0000025F43C05160]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17259,45 +16335,177 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.9611113071432",
+        playerAlertTimer = "170.22285008601",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.4292588233942"
-      } --[[table: 0000028080196620]],
+        playerCheckTimer = "167.66987896132"
+      } --[[table: 0000025F43C05760]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801966A0]],
+      } --[[table: 0000025F43C055A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080196660]]
-    } --[[table: 0000028080196420]],
+      } --[[table: 0000025F43C05A60]]
+    } --[[table: 0000025F43C057A0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080196AE0]],
+  } --[[table: 0000025F43C04FE0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1320.4398193359375,
+        position_x = -1261.0101318359375,
+        position_y = 35.778076171875,
+        position_z = -277.66204833984375,
+        rotation_x = 0,
+        rotation_y = 56.492542266845703,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000025F43C05DA0]],
+      {
+        ModelID = "SPIKY",
+        Name = "MeshRenderer",
+        ShaderID = 3
+      } --[[table: 0000025F43C05220]],
+      {
+        Name = "Animation"
+      } --[[table: 0000025F43C05EE0]],
+      {
+        Name = "Physics",
+        centerOffset_x = 0,
+        centerOffset_y = 10,
+        centerOffset_z = 0,
+        halfExtents_x = 3,
+        halfExtents_y = 10,
+        halfExtents_z = 3,
+        isStatic = false,
+        mass = 1,
+        shape = "capsule",
+        useCCD = false,
+        useGravity = true
+      } --[[table: 0000025F43C05DE0]],
+      {
+        Name = "FSM"
+      } --[[table: 0000025F43C05C60]],
+      {
+        Name = "Script",
+        attackAI = "Chase",
+        fileName = "testpokeyvars.lua",
+        filePath = "..\\data\\luaScripts\\enemies\\",
+        liveTime = "0",
+        moveX = "0",
+        moveY = "0",
+        moveZ = "0",
+        movementSpeed = "90",
+        playerAlertTimer = "170.15444541141",
+        playerAttackCooldown = "2.0",
+        playerCheckTimer = "169.13781881499"
+      } --[[table: 0000025F43C054A0]],
+      {
+        Name = "Script",
+        fileName = "testpokeyscript.lua",
+        filePath = "..\\data\\luaScripts\\enemies\\"
+      } --[[table: 0000025F43C05920]],
+      {
+        Name = "Script",
+        fileName = "pokeycomm.lua",
+        filePath = "..\\data\\luaScripts\\enemies\\"
+      } --[[table: 0000025F43C058A0]]
+    } --[[table: 0000025F43C05820]],
+    EntityName = "Spiky"
+  } --[[table: 0000025F43C055E0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -923.58270263671875,
+        position_y = 35.349998474121094,
+        position_z = 607.215576171875,
+        rotation_x = 0,
+        rotation_y = 73.421432495117188,
+        rotation_z = 0,
+        scale_x = 1,
+        scale_y = 1,
+        scale_z = 1
+      } --[[table: 0000025F43C05620]],
+      {
+        ModelID = "SPIKY",
+        Name = "MeshRenderer",
+        ShaderID = 3
+      } --[[table: 0000025F43C057E0]],
+      {
+        Name = "Animation"
+      } --[[table: 0000025F43C056A0]],
+      {
+        Name = "Physics",
+        centerOffset_x = 0,
+        centerOffset_y = 10,
+        centerOffset_z = 0,
+        halfExtents_x = 3,
+        halfExtents_y = 10,
+        halfExtents_z = 3,
+        isStatic = false,
+        mass = 1,
+        shape = "capsule",
+        useCCD = false,
+        useGravity = true
+      } --[[table: 0000025F43C05AA0]],
+      {
+        Name = "FSM"
+      } --[[table: 0000025F43C05CE0]],
+      {
+        Name = "Script",
+        attackAI = "Chase",
+        fileName = "testpokeyvars.lua",
+        filePath = "..\\data\\luaScripts\\enemies\\",
+        liveTime = "0",
+        moveX = "0",
+        moveY = "0",
+        moveZ = "0",
+        movementSpeed = "90",
+        playerAlertTimer = "170.13898253609",
+        playerAttackCooldown = "2.0",
+        playerCheckTimer = "169.13781881499"
+      } --[[table: 0000025F43C06060]],
+      {
+        Name = "Script",
+        fileName = "testpokeyscript.lua",
+        filePath = "..\\data\\luaScripts\\enemies\\"
+      } --[[table: 0000025F43C05E20]],
+      {
+        Name = "Script",
+        fileName = "pokeycomm.lua",
+        filePath = "..\\data\\luaScripts\\enemies\\"
+      } --[[table: 0000025F43C051A0]]
+    } --[[table: 0000025F43C05960]],
+    EntityName = "Spiky"
+  } --[[table: 0000025F43C060E0]],
+  {
+    Components = {
+      {
+        Name = "Transform",
+        position_x = -1283.02099609375,
         position_y = 49.349998474121094,
-        position_z = -754.05975341796875,
+        position_z = 621.84613037109375,
         rotation_x = 0,
-        rotation_y = 76.061492919921875,
+        rotation_y = 76.408058166503906,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080196BE0]],
+      } --[[table: 0000025F43C056E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080196C20]],
+      } --[[table: 0000025F43C058E0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801967A0]],
+      } --[[table: 0000025F43C054E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17311,10 +16519,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801967E0]],
+      } --[[table: 0000025F43C059A0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801968E0]],
+      } --[[table: 0000025F43C051E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17325,45 +16533,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.9453463554373",
+        playerAlertTimer = "170.12210440803",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.944238662719"
-      } --[[table: 0000028080196960]],
+        playerCheckTimer = "169.10440087484"
+      } --[[table: 0000025F43C059E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080196C60]],
+      } --[[table: 0000025F43C05BE0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080196CA0]]
-    } --[[table: 0000028080196760]],
+      } --[[table: 0000025F43C05260]]
+    } --[[table: 0000025F43C05AE0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801966E0]],
+  } --[[table: 0000025F43C05E60]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -4.0647640228271484,
-        position_y = 10.784036636352539,
-        position_z = 11.527130126953125,
+        position_x = -1171.086181640625,
+        position_y = 37.349998474121094,
+        position_z = 965.76519775390625,
         rotation_x = 0,
-        rotation_y = 121.73433685302734,
+        rotation_y = 84.960670471191406,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080197DE0]],
+      } --[[table: 0000025F43C05EA0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080197FA0]],
+      } --[[table: 0000025F43C05560]],
       {
         Name = "Animation"
-      } --[[table: 0000028080197520]],
+      } --[[table: 0000025F43C05CA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17377,10 +16585,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080197BE0]],
+      } --[[table: 0000025F43C05D20]],
       {
         Name = "FSM"
-      } --[[table: 0000028080197C20]],
+      } --[[table: 0000025F43C05D60]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17391,45 +16599,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.9284923076621",
+        playerAlertTimer = "170.07181406189",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 0000028080197CA0]],
+        playerCheckTimer = "167.04336643385"
+      } --[[table: 0000025F43C05F60]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801977E0]],
+      } --[[table: 0000025F43C05FA0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197A20]]
-    } --[[table: 0000028080197860]],
+      } --[[table: 0000025F43C05720]]
+    } --[[table: 0000025F43C060A0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801972E0]],
+  } --[[table: 0000025F43C06020]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1099.333740234375,
-        position_y = -0.78175449371337891,
-        position_z = 519.80303955078125,
+        position_x = -1113.3853759765625,
+        position_y = 34.476005554199219,
+        position_z = 944.08636474609375,
         rotation_x = 0,
-        rotation_y = 215.94715881347656,
+        rotation_y = 84.202682495117188,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801974A0]],
+      } --[[table: 0000025F43C052E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080197420]],
+      } --[[table: 0000025F43C05320]],
       {
         Name = "Animation"
-      } --[[table: 0000028080197360]],
+      } --[[table: 0000025F43C05360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17443,10 +16651,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080197BA0]],
+      } --[[table: 0000025F43C053A0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801971E0]],
+      } --[[table: 0000025F43C053E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17457,45 +16665,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.9115574359885",
+        playerAlertTimer = "170.00507426425",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.21697425842284"
-      } --[[table: 0000028080197C60]],
+        playerCheckTimer = "166.95981407333"
+      } --[[table: 0000025F43C05420]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197560]],
+      } --[[table: 0000025F43C05460]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197620]]
-    } --[[table: 0000028080197D20]],
+      } --[[table: 0000025F43C05520]]
+    } --[[table: 0000025F43C052A0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080197820]],
+  } --[[table: 0000025F43C06120]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1424.9002685546875,
-        position_y = 48.349998474121094,
-        position_z = -1066.9512939453125,
+        position_x = -636.7392578125,
+        position_y = -9.46624755859375,
+        position_z = 1338.7874755859375,
         rotation_x = 0,
-        rotation_y = 68.342849731445312,
+        rotation_y = 97.126594543457031,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080197920]],
+      } --[[table: 0000025F43C06560]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080197220]],
+      } --[[table: 0000025F43C06CE0]],
       {
         Name = "Animation"
-      } --[[table: 0000028080197660]],
+      } --[[table: 0000025F43C068A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17509,10 +16717,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080197D60]],
+      } --[[table: 0000025F43C07120]],
       {
         Name = "FSM"
-      } --[[table: 0000028080197320]],
+      } --[[table: 0000025F43C06FA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17523,309 +16731,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.8952362537376",
+        playerAlertTimer = "169.98874736001",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.8773512840264"
-      } --[[table: 00000280801976A0]],
+        playerCheckTimer = "168.98777151277"
+      } --[[table: 0000025F43C06DE0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198060]],
+      } --[[table: 0000025F43C062A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197720]]
-    } --[[table: 0000028080197FE0]],
+      } --[[table: 0000025F43C067E0]]
+    } --[[table: 0000025F43C06DA0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080197F60]],
+  } --[[table: 0000025F43C06720]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -632,
-        position_y = 36.349998474121094,
-        position_z = 316,
-        rotation_x = 0,
-        rotation_y = 118.54495239257812,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801979E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801973A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080197F20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801980E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080197AE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.8787519931785",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 00000280801973E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197460]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197CE0]]
-    } --[[table: 00000280801980A0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801975A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -686.67083740234375,
-        position_y = 58.916473388671875,
-        position_z = -765.6260986328125,
-        rotation_x = 0,
-        rotation_y = 68.682838439941406,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080198120]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080197DA0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080197160]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080197B60]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080197E20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.8613495826712",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.8447983264915"
-      } --[[table: 0000028080197960]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801971A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080197260]]
-    } --[[table: 00000280801977A0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080197760]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1396.055419921875,
-        position_y = 41.349998474121094,
-        position_z = 844.49127197265625,
-        rotation_x = 0,
-        rotation_y = 121.12378692626953,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080197EA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080197A60]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080197AA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080197EE0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080198BE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.8450014591208",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.318357944488"
-      } --[[table: 0000028080198A20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801983E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198260]]
-    } --[[table: 00000280801979A0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801972A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 835.9305419921875,
-        position_y = 6.1671466827392578,
-        position_z = -702.83197021484375,
-        rotation_x = 0,
-        rotation_y = -39.744358062744141,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801989A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801986A0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280801988A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801986E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080198FA0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.8284101486198",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 0000028080198420]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198920]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801987E0]]
-    } --[[table: 0000028080198B60]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801989E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1047.744873046875,
+        position_x = -1071.29150390625,
         position_y = 49.349998474121094,
-        position_z = -843.62701416015625,
+        position_z = -1023.5695190429688,
         rotation_x = 0,
-        rotation_y = 70.730392456054688,
+        rotation_y = 42.118171691894531,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801985E0]],
+      } --[[table: 0000025F43C068E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080198FE0]],
+      } --[[table: 0000025F43C06FE0]],
       {
         Name = "Animation"
-      } --[[table: 0000028080198660]],
+      } --[[table: 0000025F43C06860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17839,10 +16783,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801987A0]],
+      } --[[table: 0000025F43C06920]],
       {
         Name = "FSM"
-      } --[[table: 0000028080198460]],
+      } --[[table: 0000025F43C07020]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -17853,45 +16797,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.8113775253287",
+        playerAlertTimer = "169.90539670157",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7947230339041"
-      } --[[table: 0000028080198620]],
+        playerCheckTimer = "167.3767900483"
+      } --[[table: 0000025F43C06AA0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198AA0]],
+      } --[[table: 0000025F43C06E20]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801982A0]]
-    } --[[table: 00000280801983A0]],
+      } --[[table: 0000025F43C065A0]]
+    } --[[table: 0000025F43C06520]],
     EntityName = "Spiky"
-  } --[[table: 0000028080198160]],
+  } --[[table: 0000025F43C064E0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -36.394893646240234,
-        position_y = -0.13116359710693359,
-        position_z = 1346.422119140625,
+        position_x = -457.85037231445312,
+        position_y = 21.390157699584961,
+        position_z = 82.378257751464844,
         rotation_x = 0,
-        rotation_y = 161.9017333984375,
+        rotation_y = 51.71612548828125,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080198F20]],
+      } --[[table: 0000025F43C069E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080199020]],
+      } --[[table: 0000025F43C06160]],
       {
         Name = "Animation"
-      } --[[table: 0000028080198360]],
+      } --[[table: 0000025F43C06D20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -17905,208 +16849,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080198720]],
+      } --[[table: 0000025F43C06E60]],
       {
         Name = "FSM"
-      } --[[table: 0000028080198F60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.7950975894921",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.7772655487055"
-      } --[[table: 0000028080198820]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198AE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198220]]
-    } --[[table: 0000028080198320]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801981E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -540.77728271484375,
-        position_y = -17.241500854492188,
-        position_z = 1399.8936767578125,
-        rotation_x = 0,
-        rotation_y = 148.50242614746094,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080198EE0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801984E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080198BA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801988E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080198520]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.7785518169396",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7780425548546"
-      } --[[table: 0000028080199060]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198B20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198760]]
-    } --[[table: 00000280801984A0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080198D20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 559.681640625,
-        position_y = 26.514060974121094,
-        position_z = -971.45465087890625,
-        rotation_x = 0,
-        rotation_y = -4.9660711288452148,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080198C60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080199120]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080198CA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080198CE0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080198D60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.7623434066764",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.16698169708251"
-      } --[[table: 0000028080198DA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198E20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080198E60]]
-    } --[[table: 00000280801985A0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080198C20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 434.22119140625,
-        position_y = 38.419712066650391,
-        position_z = -262.90750122070312,
-        rotation_x = 0,
-        rotation_y = 119.50715637207031,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801990E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801995A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080199420]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080199920]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801992A0]],
+      } --[[table: 0000025F43C061E0]],
       {
         Name = "Script",
         attackAI = "Pursue",
@@ -18117,45 +16863,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.5097818374628",
+        playerAlertTimer = "164.37717914752",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.43361949920655"
-      } --[[table: 0000028080199520]],
+        playerCheckTimer = "0.30039978027344"
+      } --[[table: 0000025F43C06F20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019A0A0]],
+      } --[[table: 0000025F43C06620]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199C20]]
-    } --[[table: 00000280801990A0]],
+      } --[[table: 0000025F43C063A0]]
+    } --[[table: 0000025F43C06C60]],
     EntityName = "Spiky"
-  } --[[table: 00000280801981A0]],
+  } --[[table: 0000025F43C06A20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1353.5186767578125,
-        position_y = 50.891197204589844,
-        position_z = 609.6324462890625,
+        position_x = -935.21728515625,
+        position_y = 35.349998474121094,
+        position_z = 610.82958984375,
         rotation_x = 0,
-        rotation_y = 116.15567016601562,
+        rotation_y = 73.625534057617188,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080199720]],
+      } --[[table: 0000025F43C06EE0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080199760]],
+      } --[[table: 0000025F43C06660]],
       {
         Name = "Animation"
-      } --[[table: 0000028080199F20]],
+      } --[[table: 0000025F43C06D60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18169,10 +16915,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080199460]],
+      } --[[table: 0000025F43C069A0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801999A0]],
+      } --[[table: 0000025F43C06EA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18183,45 +16929,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.7281360626212",
+        playerAlertTimer = "169.83804726768",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7110970020287"
-      } --[[table: 00000280801993E0]],
+        playerCheckTimer = "168.80418443846"
+      } --[[table: 0000025F43C07060]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199360]],
+      } --[[table: 0000025F43C06AE0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199FE0]]
-    } --[[table: 0000028080199560]],
+      } --[[table: 0000025F43C06220]]
+    } --[[table: 0000025F43C06960]],
     EntityName = "Spiky"
-  } --[[table: 00000280801996E0]],
+  } --[[table: 0000025F43C06320]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -906,
-        position_y = 27.349998474121094,
-        position_z = 936,
+        position_x = -1088.191162109375,
+        position_y = 37.794807434082031,
+        position_z = 321.21087646484375,
         rotation_x = 0,
-        rotation_y = 131.31329345703125,
+        rotation_y = 67.344276428222656,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080199BE0]],
+      } --[[table: 0000025F43C070A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801995E0]],
+      } --[[table: 0000025F43C063E0]],
       {
         Name = "Animation"
-      } --[[table: 000002808019A020]],
+      } --[[table: 0000025F43C066A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18235,10 +16981,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801998A0]],
+      } --[[table: 0000025F43C06260]],
       {
         Name = "FSM"
-      } --[[table: 0000028080199960]],
+      } --[[table: 0000025F43C06BA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18249,45 +16995,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.7120094299308",
+        playerAlertTimer = "169.82192325761",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.11720466613769"
-      } --[[table: 0000028080199AA0]],
+        playerCheckTimer = "168.80418443846"
+      } --[[table: 0000025F43C06B20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019A060]],
+      } --[[table: 0000025F43C06420]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199660]]
-    } --[[table: 0000028080199E60]],
+      } --[[table: 0000025F43C06BE0]]
+    } --[[table: 0000025F43C06C20]],
     EntityName = "Spiky"
-  } --[[table: 00000280801994E0]],
+  } --[[table: 0000025F43C06F60]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 120.91177368164062,
-        position_y = 21.697147369384766,
-        position_z = 107.000732421875,
+        position_x = -1335.2476806640625,
+        position_y = -0.24358177185058594,
+        position_z = 1445.8541259765625,
         rotation_x = 0,
-        rotation_y = 136.97772216796875,
+        rotation_y = 97.625907897949219,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080199D20]],
+      } --[[table: 0000025F43C061A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080199F60]],
+      } --[[table: 0000025F43C062E0]],
       {
         Name = "Animation"
-      } --[[table: 0000028080199C60]],
+      } --[[table: 0000025F43C06360]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18301,10 +17047,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801998E0]],
+      } --[[table: 0000025F43C06460]],
       {
         Name = "FSM"
-      } --[[table: 0000028080199EE0]],
+      } --[[table: 0000025F43C064A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18315,45 +17061,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.6950087547293",
+        playerAlertTimer = "169.75487566163",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 000002808019A0E0]],
+        playerCheckTimer = "168.75474405454"
+      } --[[table: 0000025F43C075A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199AE0]],
+      } --[[table: 0000025F43C075E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019A120]]
-    } --[[table: 0000028080199BA0]],
+      } --[[table: 0000025F43C08060]]
+    } --[[table: 0000025F43C070E0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080199B60]],
+  } --[[table: 0000025F43C06820]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -205.828857421875,
-        position_y = 36.960636138916016,
-        position_z = 964.03094482421875,
+        position_x = 822.7117919921875,
+        position_y = -2.9402637481689453,
+        position_z = -1389.3109130859375,
         rotation_x = 0,
-        rotation_y = 150.77824401855469,
+        rotation_y = 1.5605596303939819,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801991E0]],
+      } --[[table: 0000025F43C076A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080199DA0]],
+      } --[[table: 0000025F43C078E0]],
       {
         Name = "Animation"
-      } --[[table: 0000028080199CA0]],
+      } --[[table: 0000025F43C080A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18367,10 +17113,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080199860]],
+      } --[[table: 0000025F43C077E0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801997E0]],
+      } --[[table: 0000025F43C071E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18381,45 +17127,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.6792645454398",
+        playerAlertTimer = "169.68816876576",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.6782126426689"
-      } --[[table: 0000028080199EA0]],
+        playerCheckTimer = "0.46687316894531"
+      } --[[table: 0000025F43C080E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199220]],
+      } --[[table: 0000025F43C072A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199CE0]]
-    } --[[table: 00000280801997A0]],
+      } --[[table: 0000025F43C07820]]
+    } --[[table: 0000025F43C077A0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801991A0]],
+  } --[[table: 0000025F43C07D60]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 115.86270904541016,
-        position_y = 50.371391296386719,
-        position_z = -504.95339965820312,
+        position_x = -625.74560546875,
+        position_y = 68.839378356933594,
+        position_z = -1301.343017578125,
         rotation_x = 0,
-        rotation_y = 62.000942230224609,
+        rotation_y = 31.785114288330078,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080199D60]],
+      } --[[table: 0000025F43C078A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080199260]],
+      } --[[table: 0000025F43C07FA0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801994A0]],
+      } --[[table: 0000025F43C07860]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18433,76 +17179,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080199DE0]],
+      } --[[table: 0000025F43C07920]],
       {
         Name = "FSM"
-      } --[[table: 0000028080199E20]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "0.95027160644531",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.43361949920655"
-      } --[[table: 00000280801992E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080199620]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801996A0]]
-    } --[[table: 0000028080199B20]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080199A20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1324.6351318359375,
-        position_y = 48.350002288818359,
-        position_z = -1398.958984375,
-        rotation_x = 0,
-        rotation_y = 58.965579986572266,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019AF60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019ADA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019AC20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019A860]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019A7A0]],
+      } --[[table: 0000025F43C07FE0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18513,45 +17193,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.6454892158498",
+        playerAlertTimer = "169.67185068292",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.1225409507746"
-      } --[[table: 000002808019AE60]],
+        playerCheckTimer = "168.15370130704"
+      } --[[table: 0000025F43C07AA0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019AFA0]],
+      } --[[table: 0000025F43C07DA0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019AB60]]
-    } --[[table: 000002808019A720]],
+      } --[[table: 0000025F43C07660]]
+    } --[[table: 0000025F43C07560]],
     EntityName = "Spiky"
-  } --[[table: 000002808019B120]],
+  } --[[table: 0000025F43C07520]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1240.2657470703125,
-        position_y = -4.7210144996643066,
-        position_z = 554.72503662109375,
+        position_x = -692.919189453125,
+        position_y = -13.066970825195312,
+        position_z = 1393.5255126953125,
         rotation_x = 0,
-        rotation_y = 220.75431823730469,
+        rotation_y = 98.818351745605469,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808019AB20]],
+      } --[[table: 0000025F43C079E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808019B0E0]],
+      } --[[table: 0000025F43C08120]],
       {
         Name = "Animation"
-      } --[[table: 000002808019A3A0]],
+      } --[[table: 0000025F43C07CE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18565,10 +17245,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808019A760]],
+      } --[[table: 0000025F43C07E60]],
       {
         Name = "FSM"
-      } --[[table: 000002808019ABA0]],
+      } --[[table: 0000025F43C07220]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18579,45 +17259,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.6288452148428",
+        playerAlertTimer = "169.65515661407",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.1271653175348"
-      } --[[table: 000002808019AEE0]],
+        playerCheckTimer = "167.62041807338"
+      } --[[table: 0000025F43C07F20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B0A0]],
+      } --[[table: 0000025F43C07260]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019AC60]]
-    } --[[table: 000002808019AA20]],
+      } --[[table: 0000025F43C07D20]]
+    } --[[table: 0000025F43C07C60]],
     EntityName = "Spiky"
-  } --[[table: 000002808019A9E0]],
+  } --[[table: 0000025F43C07A20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 860.8369140625,
-        position_y = -10.604111671447754,
-        position_z = 1077.7275390625,
+        position_x = -473,
+        position_y = -15.649998664855957,
+        position_z = 1462,
         rotation_x = 0,
-        rotation_y = 194.57540893554688,
+        rotation_y = 102.96933746337891,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808019A7E0]],
+      } --[[table: 0000025F43C07320]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808019A820]],
+      } --[[table: 0000025F43C07B60]],
       {
         Name = "Animation"
-      } --[[table: 000002808019AF20]],
+      } --[[table: 0000025F43C072E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18631,10 +17311,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808019A460]],
+      } --[[table: 0000025F43C07DE0]],
       {
         Name = "FSM"
-      } --[[table: 000002808019AA60]],
+      } --[[table: 0000025F43C073A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18645,45 +17325,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.6115968227377",
+        playerAlertTimer = "169.62215280695",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.0545549392695"
-      } --[[table: 000002808019A3E0]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C07E20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019AAA0]],
+      } --[[table: 0000025F43C07AE0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019ADE0]]
-    } --[[table: 000002808019A560]],
+      } --[[table: 0000025F43C073E0]]
+    } --[[table: 0000025F43C07A60]],
     EntityName = "Spiky"
-  } --[[table: 000002808019A6E0]],
+  } --[[table: 0000025F43C07360]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -631.02215576171875,
-        position_y = 39.442054748535156,
-        position_z = 853.00030517578125,
+        position_x = -1313.2435302734375,
+        position_y = 47.349998474121094,
+        position_z = -1371.1297607421875,
         rotation_x = 0,
-        rotation_y = 135.5380859375,
+        rotation_y = 41.200336456298828,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808019AAE0]],
+      } --[[table: 0000025F43C07F60]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808019A1A0]],
+      } --[[table: 0000025F43C07B20]],
       {
         Name = "Animation"
-      } --[[table: 000002808019A5E0]],
+      } --[[table: 0000025F43C08020]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18697,10 +17377,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808019A420]],
+      } --[[table: 0000025F43C07960]],
       {
         Name = "FSM"
-      } --[[table: 000002808019A8A0]],
+      } --[[table: 0000025F43C07160]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18711,45 +17391,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.5957050323478",
+        playerAlertTimer = "169.52086186576",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 000002808019A8E0]],
+        playerCheckTimer = "169.00502586533"
+      } --[[table: 0000025F43C07760]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B060]],
+      } --[[table: 0000025F43C076E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019A660]]
-    } --[[table: 000002808019ABE0]],
+      } --[[table: 0000025F43C071A0]]
+    } --[[table: 0000025F43C07EA0]],
     EntityName = "Spiky"
-  } --[[table: 000002808019A920]],
+  } --[[table: 0000025F43C07EE0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 868.8372802734375,
-        position_y = 13.441862106323242,
-        position_z = 903.0245361328125,
+        position_x = 1430.9505615234375,
+        position_y = -10.059154510498047,
+        position_z = -1387.0494384765625,
         rotation_x = 0,
-        rotation_y = 196.92514038085938,
+        rotation_y = -12.007569313049316,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808019AD20]],
+      } --[[table: 0000025F43C074A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808019B020]],
+      } --[[table: 0000025F43C08360]],
       {
         Name = "Animation"
-      } --[[table: 000002808019AD60]],
+      } --[[table: 0000025F43C088A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18763,10 +17443,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808019A960]],
+      } --[[table: 0000025F43C08EA0]],
       {
         Name = "FSM"
-      } --[[table: 000002808019A1E0]],
+      } --[[table: 0000025F43C08160]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18777,45 +17457,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.5786192417135",
+        playerAlertTimer = "169.5046727674",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "7.0771322250359"
-      } --[[table: 000002808019A220]],
+        playerCheckTimer = "168.98777151277"
+      } --[[table: 0000025F43C08BE0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019A2A0]],
+      } --[[table: 0000025F43C09120]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019AE20]]
-    } --[[table: 000002808019ACE0]],
+      } --[[table: 0000025F43C087A0]]
+    } --[[table: 0000025F43C07460]],
     EntityName = "Spiky"
-  } --[[table: 000002808019ACA0]],
+  } --[[table: 0000025F43C079A0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -662.10430908203125,
-        position_y = -17.417915344238281,
-        position_z = 1436.8599853515625,
+        position_x = -1258.3837890625,
+        position_y = 35.559139251708984,
+        position_z = -269.67654418945312,
         rotation_x = 0,
-        rotation_y = 146.19660949707031,
+        rotation_y = 56.608421325683594,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808019A320]],
+      } --[[table: 0000025F43C08EE0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808019A4A0]],
+      } --[[table: 0000025F43C085A0]],
       {
         Name = "Animation"
-      } --[[table: 000002808019A520]],
+      } --[[table: 0000025F43C08C20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18829,10 +17509,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808019A5A0]],
+      } --[[table: 0000025F43C08760]],
       {
         Name = "FSM"
-      } --[[table: 000002808019A620]],
+      } --[[table: 0000025F43C081E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18843,45 +17523,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.5614995956412",
+        playerAlertTimer = "169.48821878598",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.5431261062617"
-      } --[[table: 000002808019A6A0]],
+        playerCheckTimer = "168.98777151277"
+      } --[[table: 0000025F43C085E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B460]],
+      } --[[table: 0000025F43C084A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B1A0]]
-    } --[[table: 000002808019A2E0]],
+      } --[[table: 0000025F43C08CE0]]
+    } --[[table: 0000025F43C08C60]],
     EntityName = "Spiky"
-  } --[[table: 000002808019A260]],
+  } --[[table: 0000025F43C08A60]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 440.11904907226562,
-        position_y = 42.415874481201172,
-        position_z = -186.71040344238281,
+        position_x = -1116.7266845703125,
+        position_y = 34.754447937011719,
+        position_z = 937.75421142578125,
         rotation_x = 0,
-        rotation_y = 151.86480712890625,
+        rotation_y = 84.033523559570312,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808019B9E0]],
+      } --[[table: 0000025F43C084E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808019B2A0]],
+      } --[[table: 0000025F43C08520]],
       {
         Name = "Animation"
-      } --[[table: 000002808019C120]],
+      } --[[table: 0000025F43C08E60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -18895,10 +17575,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808019B8A0]],
+      } --[[table: 0000025F43C08BA0]],
       {
         Name = "FSM"
-      } --[[table: 000002808019BA20]],
+      } --[[table: 0000025F43C090A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -18909,1893 +17589,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "4.5670118331903",
+        playerAlertTimer = "169.45444202591",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.51684951782227"
-      } --[[table: 000002808019BFA0]],
+        playerCheckTimer = "168.93783474134"
+      } --[[table: 0000025F43C08CA0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019BCA0]],
+      } --[[table: 0000025F43C089A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B5E0]]
-    } --[[table: 000002808019B960]],
+      } --[[table: 0000025F43C088E0]]
+    } --[[table: 0000025F43C08620]],
     EntityName = "Spiky"
-  } --[[table: 000002808019B4A0]],
+  } --[[table: 0000025F43C08E20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1056.490478515625,
-        position_y = 38.253303527832031,
-        position_z = 434.72164916992188,
-        rotation_x = 0,
-        rotation_y = 115.29134368896484,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019B920]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019B220]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019B620]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019BD20]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019B320]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.5285177230826",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.0100297927852"
-      } --[[table: 000002808019B660]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019C020]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B720]]
-    } --[[table: 000002808019BFE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019BF60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 518.48504638671875,
-        position_y = 14.486822128295898,
-        position_z = 1129.8770751953125,
-        rotation_x = 0,
-        rotation_y = 180.65036010742188,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019BA60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019B3A0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019BF20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019C0E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019BB60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.5113227367391",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.4680047035213"
-      } --[[table: 000002808019B360]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B520]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019BBE0]]
-    } --[[table: 000002808019C060]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019B4E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1062.414794921875,
-        position_y = 38.349998474121094,
-        position_z = 594.11029052734375,
-        rotation_x = 0,
-        rotation_y = 119.79190826416016,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019BBA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019C0A0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019BEE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019B3E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019B6A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.4943938255301",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.9941325187675"
-      } --[[table: 000002808019BC20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019BE60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019BC60]]
-    } --[[table: 000002808019B2E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019B860]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 500.25100708007812,
-        position_y = 49.202751159667969,
-        position_z = 170.95751953125,
-        rotation_x = 0,
-        rotation_y = 179.71730041503906,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019B420]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019B560]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019B5A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019B6E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019B760]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "1.3667421340941",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.34970569610596"
-      } --[[table: 000002808019B7A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019BEA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019B7E0]]
-    } --[[table: 000002808019B1E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019B160]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -915.42095947265625,
-        position_y = 60.742156982421875,
-        position_z = -1091.121337890625,
-        rotation_x = 0,
-        rotation_y = 60.828521728515625,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019BD60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019BDE0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019BE20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019D0A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019C9A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.4613125324241",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.9236674308772"
-      } --[[table: 000002808019D020]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019C9E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019C2A0]]
-    } --[[table: 000002808019BCE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019BDA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1412.0782470703125,
-        position_y = 53.367099761962891,
-        position_z = -886.537841796875,
-        rotation_x = 0,
-        rotation_y = 72.966087341308594,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019C6A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019D120]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019C6E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019CCE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019CF60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.4448337554923",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.944238662719"
-      } --[[table: 000002808019CB60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D060]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019C320]]
-    } --[[table: 000002808019CB20]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019CDE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 248.37290954589844,
-        position_y = 31.866561889648438,
-        position_z = -35.679492950439453,
-        rotation_x = 0,
-        rotation_y = 136.39936828613281,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019C1A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019C960]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019CE20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019C2E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019C4E0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.1074166297909",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 000002808019C860]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019CE60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019CC60]]
-    } --[[table: 000002808019C3E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019C720]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 267.65481567382812,
-        position_y = 57.123634338378906,
-        position_z = -812.18194580078125,
-        rotation_x = 0,
-        rotation_y = 24.677215576171875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019C760]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019CFA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019C620]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019CFE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019C3A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.4114532470693",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.050498008728027"
-      } --[[table: 000002808019C360]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019C1E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019CF20]]
-    } --[[table: 000002808019C420]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019C160]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1342.5650634765625,
-        position_y = 55.574325561523438,
-        position_z = 177.01947021484375,
-        rotation_x = 0,
-        rotation_y = 104.54794311523438,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019C220]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019C4A0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019CEA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019C5A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019C7A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.393429040908",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.3618483543391"
-      } --[[table: 000002808019C7E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019C820]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019C8A0]]
-    } --[[table: 000002808019C560]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019C5E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1076.58203125,
-        position_y = -15.96971321105957,
-        position_z = -518.96722412109375,
-        rotation_x = 0,
-        rotation_y = -69.268280029296875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019C920]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019CA20]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019CA60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019CAA0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019CAE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.3775300979604",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.21697425842284"
-      } --[[table: 000002808019CBA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019CBE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019CCA0]]
-    } --[[table: 000002808019C8E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019CEE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 649.365966796875,
-        position_y = 24.905570983886719,
-        position_z = -461.51486206054688,
-        rotation_x = 0,
-        rotation_y = -42.587406158447266,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019E0A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019DFA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019D220]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019D4A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019E0E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "2.2670927047724",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.23350429534912"
-      } --[[table: 000002808019DBE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D2A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019DF20]]
-    } --[[table: 000002808019CDA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019CD60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -63.731174468994141,
-        position_y = 77.716300964355469,
-        position_z = 759.89678955078125,
-        rotation_x = 0,
-        rotation_y = 151.94810485839844,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019DB60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019D460]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019D2E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019DDE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019DFE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.3443219661705",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.8281331062308"
-      } --[[table: 000002808019D620]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019DCA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D5E0]]
-    } --[[table: 000002808019D520]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019D960]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 81.2376708984375,
-        position_y = 52.827869415283203,
-        position_z = -873.14788818359375,
-        rotation_x = 0,
-        rotation_y = 36.240409851074219,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019D920]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019D260]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019D660]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019DD20]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019D320]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.3282282352438",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.050498008728027"
-      } --[[table: 000002808019D6A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D6E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D720]]
-    } --[[table: 000002808019E020]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019DF60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -514.32147216796875,
-        position_y = 54.350006103515625,
-        position_z = -1053.808837890625,
-        rotation_x = 0,
-        rotation_y = 53.506465911865234,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019D760]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019D360]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019DC20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019E120]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019D7A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.3101925849906",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.7931113243098"
-      } --[[table: 000002808019E060]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019DCE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D560]]
-    } --[[table: 000002808019DBA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019D5A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -772.45599365234375,
-        position_y = 38.731117248535156,
-        position_z = 80.446548461914062,
-        rotation_x = 0,
-        rotation_y = 106.68899536132812,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019D9A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019D160]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019DEA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019D3A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019D820]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.293271303176",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7780425548546"
-      } --[[table: 000002808019D860]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D8A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019D8E0]]
-    } --[[table: 000002808019DE20]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019DC60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -457.850341796875,
-        position_y = 21.385303497314453,
-        position_z = 82.320045471191406,
-        rotation_x = 0,
-        rotation_y = 111.80268096923828,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019DA20]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019D3E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019D420]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019DA60]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019DAE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.2783255577079",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.20035362243651"
-      } --[[table: 000002808019DD60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019DEE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E8A0]]
-    } --[[table: 000002808019D9E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019D1E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -866.02056884765625,
-        position_y = 11.889598846435547,
-        position_z = 1275.79833984375,
-        rotation_x = 0,
-        rotation_y = 139.06201171875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019E2A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019E320]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019F0A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019EFE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019EF20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.2621312141409",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.2403669357295"
-      } --[[table: 000002808019E2E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019EBE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E8E0]]
-    } --[[table: 000002808019E560]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019ECE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 594.69256591796875,
-        position_y = 29.438854217529297,
-        position_z = -911.35272216796875,
-        rotation_x = 0,
-        rotation_y = -8.7048978805541992,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019E220]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019E460]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019F020]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019E360]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019E860]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.2450261116018",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 000002808019E9A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E3A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E160]]
-    } --[[table: 000002808019E7A0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019E6A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -757.212890625,
-        position_y = 71.349998474121094,
-        position_z = -1343.7237548828125,
-        rotation_x = 0,
-        rotation_y = 50.339504241943359,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019EA60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019EAA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019F0E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019E1A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019E6E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.2285685539239",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.7268652915949"
-      } --[[table: 000002808019EAE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E7E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E4A0]]
-    } --[[table: 000002808019E5E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019E3E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 545.16656494140625,
-        position_y = 39.89093017578125,
-        position_z = -181.37939453125,
-        rotation_x = 0,
-        rotation_y = 200.33590698242188,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019EB20]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019E720]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019E4E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019E520]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019ED20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.1670565605162",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.11720466613769"
-      } --[[table: 000002808019E920]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E1E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019E960]]
-    } --[[table: 000002808019E420]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019F120]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 296.17181396484375,
-        position_y = 36.908840179443359,
-        position_z = -442.01953125,
-        rotation_x = 0,
-        rotation_y = 55.749565124511719,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019EFA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019EE60]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019E620]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019E660]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019E820]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.6834530830378",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.050498008728027"
-      } --[[table: 000002808019EBA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019EC20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019ED60]]
-    } --[[table: 000002808019F060]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019EB60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -878.11895751953125,
-        position_y = 27.349998474121094,
-        position_z = 780.63153076171875,
-        rotation_x = 0,
-        rotation_y = 128.09919738769531,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019EDE0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019EEA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019EE20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019EEE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019EF60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.178302049636",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.6782126426689"
-      } --[[table: 000002808019F8A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019FDE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019FA60]]
-    } --[[table: 000002808019EDA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019EC60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1071.486083984375,
-        position_y = 31.345058441162109,
-        position_z = 839.832763671875,
-        rotation_x = 0,
-        rotation_y = 125.95506286621094,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801A0120]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019F160]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019F6A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019F4E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019FBE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.1617779731742",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.6612915992728"
-      } --[[table: 000002808019FE60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019F2A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019F860]]
-    } --[[table: 000002808019FAE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019FFE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 434.71237182617188,
-        position_y = 43.622215270996094,
-        position_z = 734.3431396484375,
-        rotation_x = 0,
-        rotation_y = 176.23103332519531,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019F660]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019F360]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019F1A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019F720]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801A0060]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.1451301574698",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.34970569610596"
-      } --[[table: 000002808019F320]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019FEA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019F3A0]]
-    } --[[table: 00000280801A00A0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019FAA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 139.69955444335938,
-        position_y = 13.722591400146484,
-        position_z = -75.279327392578125,
-        rotation_x = 0,
-        rotation_y = 121.91318511962891,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019FCA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019F8E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019FEE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019F4A0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801A00E0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.1225409507746",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 000002808019FB60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019FFA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019F7A0]]
-    } --[[table: 000002808019FB20]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019F3E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1294.1209716796875,
-        position_y = -4.3643393516540527,
-        position_z = -587.301025390625,
-        rotation_x = 0,
-        rotation_y = -70.103553771972656,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019F760]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019F5A0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019F220]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019F560]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019F7E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.111247777938",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.0772175788873"
-      } --[[table: 000002808019F260]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019F2E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019F820]]
-    } --[[table: 000002808019F420]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019FF60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 837.4410400390625,
-        position_y = 24.907150268554688,
-        position_z = 571.130126953125,
-        rotation_x = 0,
-        rotation_y = 201.01545715332031,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801A0020]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019F620]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019F460]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808019FBA0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808019F5E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.0936074256889",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.21697425842284"
-      } --[[table: 000002808019F9A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019F9E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808019FA20]]
-    } --[[table: 000002808019F6E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019F960]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 313.69375610351562,
-        position_y = -3.8977179527282715,
-        position_z = 1315.099609375,
-        rotation_x = 0,
-        rotation_y = 173.34678649902344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808019FD20]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808019FD60]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808019FDA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801A0D20]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801A0220]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "7.0771322250359",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.5431261062617"
-      } --[[table: 00000280801A0F20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A0320]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A0C20]]
-    } --[[table: 000002808019FCE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808019FC60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -214.69708251953125,
+        position_x = -1052.1419677734375,
         position_y = 50.349998474121094,
-        position_z = -1008.381591796875,
+        position_z = -1065.60546875,
         rotation_x = 0,
-        rotation_y = 45.413539886474609,
+        rotation_y = 41.293529510498047,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A1120]],
+      } --[[table: 0000025F43C08D20]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A0D60]],
+      } --[[table: 0000025F43C08AE0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A0160]],
+      } --[[table: 0000025F43C08660]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -20809,10 +17641,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A0B20]],
+      } --[[table: 0000025F43C08FA0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A0DA0]],
+      } --[[table: 0000025F43C09060]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -20823,45 +17655,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.0597605705253",
+        playerAlertTimer = "169.421232702",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 00000280801A08A0]],
+        playerCheckTimer = "168.90388822722"
+      } --[[table: 0000025F43C083E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A0B60]],
+      } --[[table: 0000025F43C08720]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A0A20]]
-    } --[[table: 00000280801A06A0]],
+      } --[[table: 0000025F43C08F20]]
+    } --[[table: 0000025F43C086E0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A02E0]],
+  } --[[table: 0000025F43C08A20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -330.6378173828125,
-        position_y = 33.691196441650391,
-        position_z = -451.58724975585938,
+        position_x = -1451.99169921875,
+        position_y = 60.693214416503906,
+        position_z = -65,
         rotation_x = 0,
-        rotation_y = 79.789894104003906,
+        rotation_y = 62.643314361572266,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A0BE0]],
+      } --[[table: 0000025F43C08220]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A07A0]],
+      } --[[table: 0000025F43C08D60]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A0F60]],
+      } --[[table: 0000025F43C083A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -20875,10 +17707,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A0760]],
+      } --[[table: 0000025F43C087E0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A0C60]],
+      } --[[table: 0000025F43C08FE0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -20889,45 +17721,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.0444822311394",
+        playerAlertTimer = "169.33840775655",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 00000280801A0CA0]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C08820]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A0CE0]],
+      } --[[table: 0000025F43C082A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A0460]]
-    } --[[table: 00000280801A0BA0]],
+      } --[[table: 0000025F43C08320]]
+    } --[[table: 0000025F43C09020]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A0AA0]],
+  } --[[table: 0000025F43C081A0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1440.504638671875,
-        position_y = -1.1744871139526367,
-        position_z = -91.80206298828125,
+        position_x = -1362.7091064453125,
+        position_y = 48.380588531494141,
+        position_z = -1303.7596435546875,
         rotation_x = 0,
-        rotation_y = 257.48611450195312,
+        rotation_y = 42.604164123535156,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A09A0]],
+      } --[[table: 0000025F43C08DE0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A01A0]],
+      } --[[table: 0000025F43C08B60]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A0E60]],
+      } --[[table: 0000025F43C089E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -20941,10 +17773,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A0360]],
+      } --[[table: 0000025F43C08AA0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A0620]],
+      } --[[table: 0000025F43C08F60]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -20955,45 +17787,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.0279617309562",
+        playerAlertTimer = "169.28877735305",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "7.0279617309562"
-      } --[[table: 00000280801A04E0]],
+        playerCheckTimer = "167.78672361538"
+      } --[[table: 0000025F43C08860]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A06E0]],
+      } --[[table: 0000025F43C08920]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A08E0]]
-    } --[[table: 00000280801A0E20]],
+      } --[[table: 0000025F43C08960]]
+    } --[[table: 0000025F43C08460]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A0DE0]],
+  } --[[table: 0000025F43C08DA0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 150.97972106933594,
-        position_y = 30.556690216064453,
-        position_z = 166.30522155761719,
+        position_x = -729.95330810546875,
+        position_y = -10.007952690124512,
+        position_z = 1447.0606689453125,
         rotation_x = 0,
-        rotation_y = 143.090087890625,
+        rotation_y = 100.45925903320312,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A0660]],
+      } --[[table: 0000025F43C09220]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A01E0]],
+      } --[[table: 0000025F43C093A0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A03A0]],
+      } --[[table: 0000025F43C09320]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21007,10 +17839,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A05E0]],
+      } --[[table: 0000025F43C09EE0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A0420]],
+      } --[[table: 0000025F43C09C60]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21021,45 +17853,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "7.0111770629875",
+        playerAlertTimer = "169.27180624174",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 00000280801A04A0]],
+        playerCheckTimer = "168.77042436762"
+      } --[[table: 0000025F43C092A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A0FA0]],
+      } --[[table: 0000025F43C094A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A07E0]]
-    } --[[table: 00000280801A0720]],
+      } --[[table: 0000025F43C09360]]
+    } --[[table: 0000025F43C095A0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A1020]],
+  } --[[table: 0000025F43C097E0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 449.45980834960938,
-        position_y = 38.028797149658203,
-        position_z = -254.88623046875,
+        position_x = -1144.92919921875,
+        position_y = 33.349998474121094,
+        position_z = -274.01290893554688,
         rotation_x = 0,
-        rotation_y = 131.663330078125,
+        rotation_y = 55.084392547607422,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A0560]],
+      } --[[table: 0000025F43C09FE0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A0EA0]],
+      } --[[table: 0000025F43C09260]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A10E0]],
+      } --[[table: 0000025F43C09F20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21073,76 +17905,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A0260]],
+      } --[[table: 0000025F43C09DE0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A03E0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.9556484222407",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 00000280801A0820]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A02A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A05A0]]
-    } --[[table: 00000280801A0EE0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801A09E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -985.80914306640625,
-        position_y = 61.54339599609375,
-        position_z = -1455.8768310546875,
-        rotation_x = 0,
-        rotation_y = 52.202747344970703,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801A0AE0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801A1720]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280801A1FE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801A1160]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801A1D20]],
+      } --[[table: 0000025F43C09CA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21153,45 +17919,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.9774916172019",
+        playerAlertTimer = "169.23817706268",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.4292588233942"
-      } --[[table: 00000280801A2020]],
+        playerCheckTimer = "168.23672628569"
+      } --[[table: 0000025F43C094E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1D60]],
+      } --[[table: 0000025F43C09920]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1620]]
-    } --[[table: 00000280801A0A60]],
+      } --[[table: 0000025F43C09820]]
+    } --[[table: 0000025F43C09A60]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A0960]],
+  } --[[table: 0000025F43C09DA0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 83.096206665039062,
-        position_y = 30.579917907714844,
-        position_z = 1091.45556640625,
+        position_x = 1381.99560546875,
+        position_y = -49.461490631103516,
+        position_z = -1436.00439453125,
         rotation_x = 0,
-        rotation_y = 163.25640869140625,
+        rotation_y = -10.742304801940918,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A1BA0]],
+      } --[[table: 0000025F43C095E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A19E0]],
+      } --[[table: 0000025F43C09760]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A20A0]],
+      } --[[table: 0000025F43C096A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21205,10 +17971,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A1860]],
+      } --[[table: 0000025F43C09AA0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A1A60]],
+      } --[[table: 0000025F43C09CE0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21219,45 +17985,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.9604964256279",
+        playerAlertTimer = "169.22068309947",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.9430875778194"
-      } --[[table: 00000280801A1660]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C0A060]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A17A0]],
+      } --[[table: 0000025F43C099A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A17E0]]
-    } --[[table: 00000280801A1760]],
+      } --[[table: 0000025F43C098E0]]
+    } --[[table: 0000025F43C09960]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A1F20]],
+  } --[[table: 0000025F43C0A0E0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1197.9923095703125,
-        position_y = 4.2511682510375977,
-        position_z = 70.19482421875,
+        position_x = -1113.01220703125,
+        position_y = 41.444931030273438,
+        position_z = 596,
         rotation_x = 0,
-        rotation_y = 241.80348205566406,
+        rotation_y = 74.614646911621094,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A16A0]],
+      } --[[table: 0000025F43C09BA0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A1A20]],
+      } --[[table: 0000025F43C09AE0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A18A0]],
+      } --[[table: 0000025F43C093E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21271,10 +18037,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A11E0]],
+      } --[[table: 0000025F43C097A0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A11A0]],
+      } --[[table: 0000025F43C09420]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21285,45 +18051,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.944238662719",
+        playerAlertTimer = "169.20491385627",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.21697425842284"
-      } --[[table: 00000280801A1B20]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C09620]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1B60]],
+      } --[[table: 0000025F43C09B20]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2060]]
-    } --[[table: 00000280801A1C20]],
+      } --[[table: 0000025F43C0A020]]
+    } --[[table: 0000025F43C096E0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A1320]],
+  } --[[table: 0000025F43C09A20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1316.1591796875,
-        position_y = -0.71649265289306641,
-        position_z = -925.21044921875,
+        position_x = -625.93536376953125,
+        position_y = 68.855194091796875,
+        position_z = -1286.8958740234375,
         rotation_x = 0,
-        rotation_y = -52.518604278564453,
+        rotation_y = 31.940313339233398,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A13A0]],
+      } --[[table: 0000025F43C0A0A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A1AA0]],
+      } --[[table: 0000025F43C09E20]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A1EE0]],
+      } --[[table: 0000025F43C09F60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21337,10 +18103,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A12A0]],
+      } --[[table: 0000025F43C09860]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A14A0]],
+      } --[[table: 0000025F43C09D20]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21351,45 +18117,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.9271976947776",
+        playerAlertTimer = "169.17119717767",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.892874717712"
-      } --[[table: 00000280801A1360]],
+        playerCheckTimer = "169.17119717767"
+      } --[[table: 0000025F43C09B60]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1820]],
+      } --[[table: 0000025F43C09C20]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A15E0]]
-    } --[[table: 00000280801A16E0]],
+      } --[[table: 0000025F43C09FA0]]
+    } --[[table: 0000025F43C09160]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A1220]],
+  } --[[table: 0000025F43C09720]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 378.89358520507812,
-        position_y = 33.202796936035156,
-        position_z = -252.29701232910156,
+        position_x = -595.5860595703125,
+        position_y = 47.839469909667969,
+        position_z = -674.0343017578125,
         rotation_x = 0,
-        rotation_y = 111.4178466796875,
+        rotation_y = 39.2314453125,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A1F60]],
+      } --[[table: 0000025F43C098A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A1520]],
+      } --[[table: 0000025F43C091E0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A1420]],
+      } --[[table: 0000025F43C099E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21403,10 +18169,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A1460]],
+      } --[[table: 0000025F43C09D60]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A18E0]],
+      } --[[table: 0000025F43C09EA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21417,45 +18183,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "4.8663387298578",
+        playerAlertTimer = "169.10440087484",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 00000280801A1920]],
+        playerCheckTimer = "0.46687316894531"
+      } --[[table: 0000025F43C09520]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1960]],
+      } --[[table: 0000025F43C09560]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1AE0]]
-    } --[[table: 00000280801A1CE0]],
+      } --[[table: 0000025F43C0B120]]
+    } --[[table: 0000025F43C091A0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A13E0]],
+  } --[[table: 0000025F43C09E60]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 467.897216796875,
-        position_y = 60.172752380371094,
-        position_z = -559.206298828125,
+        position_x = -903.135009765625,
+        position_y = 41.765983581542969,
+        position_z = -408.9051513671875,
         rotation_x = 0,
-        rotation_y = 7.5749883651733398,
+        rotation_y = 49.068412780761719,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A1260]],
+      } --[[table: 0000025F43C0A160]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A1560]],
+      } --[[table: 0000025F43C0ADE0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A1E20]],
+      } --[[table: 0000025F43C0AEA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21469,76 +18235,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A15A0]],
+      } --[[table: 0000025F43C0A6A0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A1E60]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "2.816371440887",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 00000280801A19A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1C60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A1CA0]]
-    } --[[table: 00000280801A2120]],
-    EntityName = "Spiky"
-  } --[[table: 00000280801A20E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 88.879188537597656,
-        position_y = 17.195165634155273,
-        position_z = -320.93698120117188,
-        rotation_x = 0,
-        rotation_y = 87.330284118652344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280801A2420]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280801A2260]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280801A2920]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280801A28E0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280801A2460]],
+      } --[[table: 0000025F43C0A720]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21549,45 +18249,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "4.8498487472528",
+        playerAlertTimer = "169.08772945572",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 00000280801A2FA0]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0AC20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A29A0]],
+      } --[[table: 0000025F43C0A260]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2AE0]]
-    } --[[table: 00000280801A24A0]],
+      } --[[table: 0000025F43C0A420]]
+    } --[[table: 0000025F43C0B020]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A1FA0]],
+  } --[[table: 0000025F43C0A660]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1193.05615234375,
-        position_y = -41.515480041503906,
-        position_z = -1154.6285400390625,
+        position_x = 80.789901733398438,
+        position_y = 49.349998474121094,
+        position_z = -1261.24609375,
         rotation_x = 0,
-        rotation_y = -39.003082275390625,
+        rotation_y = 18.607423782348633,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A2F20]],
+      } --[[table: 0000025F43C0A9A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A27E0]],
+      } --[[table: 0000025F43C0AE60]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A2EA0]],
+      } --[[table: 0000025F43C0AF60]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21601,10 +18301,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A25A0]],
+      } --[[table: 0000025F43C0AAA0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A2960]],
+      } --[[table: 0000025F43C0A6E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21615,45 +18315,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.8615343570701",
+        playerAlertTimer = "169.05438471007",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.8334269523614"
-      } --[[table: 00000280801A2360]],
+        playerCheckTimer = "168.03734731844"
+      } --[[table: 0000025F43C0AAE0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2520]],
+      } --[[table: 0000025F43C0A1A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2D20]]
-    } --[[table: 00000280801A24E0]],
+      } --[[table: 0000025F43C0A220]]
+    } --[[table: 0000025F43C0A9E0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A22E0]],
+  } --[[table: 0000025F43C0A920]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -310,
-        position_y = 38.559627532958984,
-        position_z = 944.99462890625,
+        position_x = -432.12326049804688,
+        position_y = 49.350193023681641,
+        position_z = -915.62646484375,
         rotation_x = 0,
-        rotation_y = 146.9163818359375,
+        rotation_y = 32.68695068359375,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A2220]],
+      } --[[table: 0000025F43C0A1E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A2320]],
+      } --[[table: 0000025F43C0A960]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A2EE0]],
+      } --[[table: 0000025F43C0B060]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21667,10 +18367,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A2DA0]],
+      } --[[table: 0000025F43C0A760]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A2860]],
+      } --[[table: 0000025F43C0AF20]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21681,45 +18381,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.8447983264915",
+        playerAlertTimer = "169.03683328793",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.23350429534912"
-      } --[[table: 00000280801A23A0]],
+        playerCheckTimer = "168.01266193554"
+      } --[[table: 0000025F43C0ABA0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A23E0]],
+      } --[[table: 0000025F43C0A2A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2160]]
-    } --[[table: 00000280801A21E0]],
+      } --[[table: 0000025F43C0AFA0]]
+    } --[[table: 0000025F43C0AC60]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A2C60]],
+  } --[[table: 0000025F43C0A860]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -631.9312744140625,
-        position_y = 37.595401763916016,
-        position_z = 889.376953125,
+        position_x = -491.04278564453125,
+        position_y = 56.6141357421875,
+        position_z = -1352.0853271484375,
         rotation_x = 0,
-        rotation_y = 136.40188598632812,
+        rotation_y = 28.951448440551758,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A21A0]],
+      } --[[table: 0000025F43C0A560]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A25E0]],
+      } --[[table: 0000025F43C0A5A0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A2760]],
+      } --[[table: 0000025F43C0AFE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21733,10 +18433,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A2620]],
+      } --[[table: 0000025F43C0ACA0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A2720]],
+      } --[[table: 0000025F43C0A4E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21747,45 +18447,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.8281331062308",
+        playerAlertTimer = "169.02126360109",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.8281331062308"
-      } --[[table: 00000280801A29E0]],
+        playerCheckTimer = "169.02126360109"
+      } --[[table: 0000025F43C0B0A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A28A0]],
+      } --[[table: 0000025F43C0A8E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2A20]]
-    } --[[table: 00000280801A2560]],
+      } --[[table: 0000025F43C0B0E0]]
+    } --[[table: 0000025F43C0A2E0]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A2F60]],
+  } --[[table: 0000025F43C0AA20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 671.18780517578125,
-        position_y = 34.749610900878906,
-        position_z = 116.20998382568359,
+        position_x = -1255.629638671875,
+        position_y = 35.349952697753906,
+        position_z = -275.00701904296875,
         rotation_x = 0,
-        rotation_y = 202.20706176757812,
+        rotation_y = 56.475715637207031,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A2BE0]],
+      } --[[table: 0000025F43C0A3A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A2B20]],
+      } --[[table: 0000025F43C0A3E0]],
       {
         Name = "Animation"
-      } --[[table: 00000280801A2AA0]],
+      } --[[table: 0000025F43C0A7A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21799,10 +18499,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280801A26E0]],
+      } --[[table: 0000025F43C0A5E0]],
       {
         Name = "FSM"
-      } --[[table: 00000280801A27A0]],
+      } --[[table: 0000025F43C0A460]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21813,45 +18513,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "1.2501716613769",
+        playerAlertTimer = "169.00502586533",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.23350429534912"
-      } --[[table: 00000280801A2B60]],
+        playerCheckTimer = "169.00502586533"
+      } --[[table: 0000025F43C0A4A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2BA0]],
+      } --[[table: 0000025F43C0A7E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280801A2C20]]
-    } --[[table: 00000280801A26A0]],
+      } --[[table: 0000025F43C0A820]]
+    } --[[table: 0000025F43C0A360]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A2E60]],
+  } --[[table: 0000025F43C0A320]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -394.86068725585938,
-        position_y = 49.838413238525391,
-        position_z = 552.46844482421875,
+        position_x = -1404.0224609375,
+        position_y = 53.025371551513672,
+        position_z = 569.99871826171875,
         rotation_x = 0,
-        rotation_y = 133.5833740234375,
+        rotation_y = 75.876594543457031,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280801A2DE0]],
+      } --[[table: 0000025F43C0AB60]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280801A2E20]],
+      } --[[table: 0000025F43C0ABE0]],
       {
         Name = "Animation"
-      } --[[table: 000002808024D420]],
+      } --[[table: 0000025F43C0ACE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21865,10 +18565,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808024D720]],
+      } --[[table: 0000025F43C0AD20]],
       {
         Name = "FSM"
-      } --[[table: 000002808024D760]],
+      } --[[table: 0000025F43C0AD60]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21879,45 +18579,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.7947230339041",
+        playerAlertTimer = "168.93783474134",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.7931113243098"
-      } --[[table: 000002808024D7E0]],
+        playerCheckTimer = "0.30039978027344"
+      } --[[table: 0000025F43C0BA60]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024D5E0]],
+      } --[[table: 0000025F43C0BBE0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024D320]]
-    } --[[table: 00000280801A2D60]],
+      } --[[table: 0000025F43C0B9A0]]
+    } --[[table: 0000025F43C0AA60]],
     EntityName = "Spiky"
-  } --[[table: 00000280801A2CE0]],
+  } --[[table: 0000025F43C0A620]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 209.63734436035156,
-        position_y = 31.179027557373047,
-        position_z = -415.22442626953125,
+        position_x = -786.77716064453125,
+        position_y = 38.392185211181641,
+        position_z = 566.52423095703125,
         rotation_x = 0,
-        rotation_y = 68.764839172363281,
+        rotation_y = 70.903648376464844,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808024DB60]],
+      } --[[table: 0000025F43C0B4A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808024D620]],
+      } --[[table: 0000025F43C0B720]],
       {
         Name = "Animation"
-      } --[[table: 000002808024DF20]],
+      } --[[table: 0000025F43C0BFE0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21931,10 +18631,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808024DBA0]],
+      } --[[table: 0000025F43C0BAA0]],
       {
         Name = "FSM"
-      } --[[table: 000002808024E020]],
+      } --[[table: 0000025F43C0B560]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -21945,45 +18645,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "4.5001916885371",
+        playerAlertTimer = "168.83813095257",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.43361949920655"
-      } --[[table: 000002808024DEE0]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0BEE0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024DE20]],
+      } --[[table: 0000025F43C0BF20]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E120]]
-    } --[[table: 000002808024D360]],
+      } --[[table: 0000025F43C0BDE0]]
+    } --[[table: 0000025F43C0B660]],
     EntityName = "Spiky"
-  } --[[table: 000002808024D4A0]],
+  } --[[table: 0000025F43C0C020]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1057.016357421875,
-        position_y = 40.732940673828125,
-        position_z = 135.00660705566406,
+        position_x = -1373.447021484375,
+        position_y = 51.818870544433594,
+        position_z = 586.50048828125,
         rotation_x = 0,
-        rotation_y = 105.64521789550781,
+        rotation_y = 76.086311340332031,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808024D1A0]],
+      } --[[table: 0000025F43C0B4E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808024D4E0]],
+      } --[[table: 0000025F43C0B6A0]],
       {
         Name = "Animation"
-      } --[[table: 000002808024D820]],
+      } --[[table: 0000025F43C0BDA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -21997,10 +18697,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808024DC20]],
+      } --[[table: 0000025F43C0C060]],
       {
         Name = "FSM"
-      } --[[table: 000002808024DA20]],
+      } --[[table: 0000025F43C0B760]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -22011,2685 +18711,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.7605886459343",
+        playerAlertTimer = "168.78811597989",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7605886459343"
-      } --[[table: 000002808024D860]],
+        playerCheckTimer = "168.78811597989"
+      } --[[table: 0000025F43C0B5E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024DB20]],
+      } --[[table: 0000025F43C0BF60]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024D660]]
-    } --[[table: 000002808024D160]],
+      } --[[table: 0000025F43C0B1E0]]
+    } --[[table: 0000025F43C0B920]],
     EntityName = "Spiky"
-  } --[[table: 000002808024D7A0]],
+  } --[[table: 0000025F43C0B5A0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 528.448486328125,
-        position_y = 15.313922882080078,
-        position_z = -1237.4117431640625,
-        rotation_x = 0,
-        rotation_y = -1.6022353172302246,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024D9E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024DFE0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024D1E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024D3E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024E0A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.7445950508109",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7445950508109"
-      } --[[table: 000002808024DBE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024DF60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024D520]]
-    } --[[table: 000002808024D9A0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024D8E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1246.044677734375,
-        position_y = 38.901210784912109,
-        position_z = 1026.6968994140625,
-        rotation_x = 0,
-        rotation_y = 127.22770690917969,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024DC60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024D6E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024DE60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024DD20]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024D560]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.7281188964836",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.7281188964836"
-      } --[[table: 000002808024DCA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024DCE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E060]]
-    } --[[table: 000002808024D6A0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024D920]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 3.3935999870300293,
-        position_y = 6.8004493713378906,
-        position_z = -226.04806518554688,
-        rotation_x = 0,
-        rotation_y = 98.453498840332031,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024D5A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024DAA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024E0E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024D2A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024DA60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "0.55047416687013",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 000002808024DAE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024DDA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024DEA0]]
-    } --[[table: 000002808024D960]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024D220]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 233.35121154785156,
-        position_y = 35.617267608642578,
-        position_z = 54.223747253417969,
-        rotation_x = 0,
-        rotation_y = 142.9268798828125,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024E8E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024E9A0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024E760]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024E820]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024EDE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.1000723838803",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 000002808024E360]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E2A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F0A0]]
-    } --[[table: 000002808024E260]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024D2E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 716.900634765625,
-        position_y = -16.3572998046875,
-        position_z = 1380.1595458984375,
-        rotation_x = 0,
-        rotation_y = 187.31759643554688,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024E720]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024E620]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024E220]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024E3A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024E4A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.6782126426689",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.1585202217098"
-      } --[[table: 000002808024EFE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E460]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E1E0]]
-    } --[[table: 000002808024EFA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024E420]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -870.1483154296875,
-        position_y = 43.901248931884766,
-        position_z = 303.06793212890625,
-        rotation_x = 0,
-        rotation_y = 113.78449249267578,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024E2E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024ECE0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024E4E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024E320]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024F0E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.6612915992728",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.6612915992728"
-      } --[[table: 000002808024EE20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E6A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E860]]
-    } --[[table: 000002808024EBA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024F020]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 598.17877197265625,
-        position_y = 33.932502746582031,
-        position_z = 779.04888916015625,
-        rotation_x = 0,
-        rotation_y = 185.07525634765625,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024E8A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024EEE0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024EB20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024F060]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024E920]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.6441969871511",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.6441969871511"
-      } --[[table: 000002808024E9E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E7A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E7E0]]
-    } --[[table: 000002808024E3E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024F120]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -221.248291015625,
-        position_y = 66.758560180664062,
-        position_z = 789.126220703125,
-        rotation_x = 0,
-        rotation_y = 146.44607543945312,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024E960]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024E520]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024EB60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024E160]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024E5E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.62742447853",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.62742447853"
-      } --[[table: 000002808024E1A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024E560]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024EA20]]
-    } --[[table: 000002808024EBE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024E5A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1330.3759765625,
-        position_y = 6.2358112335205078,
-        position_z = 505.04226684570312,
-        rotation_x = 0,
-        rotation_y = 225.83700561523438,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024EE60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024EC20]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024EC60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024ECA0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024EDA0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.5903780460348",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.5903780460348"
-      } --[[table: 000002808024ED20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024ED60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024EEA0]]
-    } --[[table: 000002808024EAE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024E660]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1300,
-        position_y = 56.349990844726562,
-        position_z = 526,
-        rotation_x = 0,
-        rotation_y = 114.64665985107422,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024F720]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024FA20]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024F820]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024F4A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024F860]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.5729949474325",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 000002808024FFA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024FF20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F260]]
-    } --[[table: 000002808024F920]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024FFE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 276.67535400390625,
-        position_y = 36.723857879638672,
-        position_z = 1082.664794921875,
-        rotation_x = 0,
-        rotation_y = 170.74337768554688,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024FEE0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024F1E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024FA60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024F660]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024FD20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.5538661479941",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.5538661479941"
-      } --[[table: 000002808024F360]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802500A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F7A0]]
-    } --[[table: 000002808024FCE0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080250060]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 503.31781005859375,
-        position_y = 49.509979248046875,
-        position_z = -837.69622802734375,
-        rotation_x = 0,
-        rotation_y = -0.12299303710460663,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024F760]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024F5A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080250120]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024F520]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024F7E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.5400886535636",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 000002808024F1A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F8A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F160]]
-    } --[[table: 000002808024F3A0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802500E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1100.2286376953125,
-        position_y = 31.323158264160156,
-        position_z = -399.0128173828125,
-        rotation_x = 0,
-        rotation_y = 86.525375366210938,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024F3E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024F420]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024FBE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024FC60]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024FD60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.5281190872183",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.5269579887384"
-      } --[[table: 000002808024F2A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F2E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F460]]
-    } --[[table: 000002808024F220]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024FDE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1434.99951171875,
-        position_y = 2.2338180541992188,
-        position_z = 87.964958190917969,
-        rotation_x = 0,
-        rotation_y = 247.32951354980469,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024F320]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024F620]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024FE60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024F6A0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024F6E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.5143141746512",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.5143141746512"
-      } --[[table: 000002808024F960]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F9A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808024F9E0]]
-    } --[[table: 000002808024F5E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024FDA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -164.61038208007812,
-        position_y = 58.595382690429688,
-        position_z = 896.83184814453125,
-        rotation_x = 0,
-        rotation_y = 150.92332458496094,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808024FB60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808024FBA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808024FC20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808024FCA0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808024FE20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.5034635066978",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.5034635066978"
-      } --[[table: 000002808024FEA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080250220]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802501E0]]
-    } --[[table: 000002808024FB20]],
-    EntityName = "Spiky"
-  } --[[table: 000002808024FAE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 703.58465576171875,
-        position_y = 16.38722038269043,
-        position_z = -494.81655883789062,
-        rotation_x = 0,
-        rotation_y = -46.129329681396484,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080251020]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080250D60]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802509E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080250A20]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080250160]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "1.3999776840208",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 0000028080250DE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080250F20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802504E0]]
-    } --[[table: 00000280802503A0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802509A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -665.76019287109375,
-        position_y = 70.916748046875,
-        position_z = -1252.7877197265625,
-        rotation_x = 0,
-        rotation_y = 50.782489776611328,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080250A60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080250AA0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080250AE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802502A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080250F60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.4777479171744",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.4777479171744"
-      } --[[table: 0000028080250420]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080250FE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802503E0]]
-    } --[[table: 0000028080250360]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802506A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -760.60552978515625,
-        position_y = 28.255363464355469,
-        position_z = 1109.5206298828125,
-        rotation_x = 0,
-        rotation_y = 138.17706298828125,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080251060]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080250FA0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080250E60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802504A0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802510A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.4610233306876",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.4610233306876"
-      } --[[table: 00000280802510E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080251120]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080250260]]
-    } --[[table: 00000280802505E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080250D20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 331.51654052734375,
-        position_y = 54.285598754882812,
-        position_z = 105.52870178222656,
-        rotation_x = 0,
-        rotation_y = 157.264404296875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080250660]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080250520]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080250320]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080250720]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080250560]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "2.0503692626949",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 00000280802505A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080250EA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080250620]]
-    } --[[table: 00000280802502E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080250B20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1154,
-        position_y = 12.359561920166016,
-        position_z = 759.9879150390625,
-        rotation_x = 0,
-        rotation_y = 211.54512023925781,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080250CA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080250860]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802507A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802507E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080250820]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.4278492927544",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 0000028080250BA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080250CE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802508A0]]
-    } --[[table: 0000028080250B60]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080250760]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -410.00827026367188,
-        position_y = 53.874427795410156,
-        position_z = 608.29632568359375,
-        rotation_x = 0,
-        rotation_y = 134.92924499511719,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080250960]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080250C20]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080250C60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080250DA0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802512A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.4101715087883",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.4101715087883"
-      } --[[table: 0000028080251CE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802512E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252120]]
-    } --[[table: 0000028080250920]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080250BE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 967.04705810546875,
-        position_y = -16.266223907470703,
-        position_z = -1191.3201904296875,
-        rotation_x = 0,
-        rotation_y = -27.595756530761719,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802511A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802514E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080251760]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080251C20]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080251A20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.3935499191276",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.3935499191276"
-      } --[[table: 00000280802517A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080251B20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802515E0]]
-    } --[[table: 0000028080251160]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080251720]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 509.45538330078125,
-        position_y = 41.147804260253906,
-        position_z = -206.8048095703125,
-        rotation_x = 0,
-        rotation_y = 184.65885925292969,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802519E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080251FE0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802511E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802513A0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802520A0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.9335527420042",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 0000028080251BA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802517E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080251A60]]
-    } --[[table: 00000280802519A0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802518A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 593.90399169921875,
-        position_y = 33.928508758544922,
-        position_z = -95.9779052734375,
-        rotation_x = 0,
-        rotation_y = 204.3929443359375,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080252060]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080251520]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080251220]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080251260]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080251560]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "2.4162588119501",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 0000028080251E20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802513E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080251FA0]]
-    } --[[table: 00000280802516E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080251C60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 4.9632329940795898,
-        position_y = 11.757083892822266,
-        position_z = 1201.5771484375,
-        rotation_x = 0,
-        rotation_y = 161.69462585449219,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080251BE0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080251620]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080251F20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080252020]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080251920]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.343499183654",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.343499183654"
-      } --[[table: 0000028080251B60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080251660]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080251320]]
-    } --[[table: 0000028080251E60]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802515A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1457.9920654296875,
-        position_y = 54.803993225097656,
-        position_z = -275.22296142578125,
-        rotation_x = 0,
-        rotation_y = 90.7724609375,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080251CA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802516A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080251F60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080251D20]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080251460]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.3273334503166",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.3273334503166"
-      } --[[table: 0000028080251EE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080251820]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802518E0]]
-    } --[[table: 0000028080251420]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802514A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1150.1524658203125,
-        position_y = 12.350000381469727,
-        position_z = 1083.11474609375,
-        rotation_x = 0,
-        rotation_y = 205.07150268554688,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080251DE0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080251EA0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802530A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080252B20]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080252B60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.3094582557672",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.8001031875603"
-      } --[[table: 0000028080252FE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252360]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253020]]
-    } --[[table: 0000028080251D60]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080251DA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -155.49394226074219,
-        position_y = 11.920742034912109,
-        position_z = -241.71835327148438,
-        rotation_x = 0,
-        rotation_y = 95.194984436035156,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802524A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080252460]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080252220]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080252F20]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802528A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.2939705848687",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.20035362243651"
-      } --[[table: 0000028080253060]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802530E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253120]]
-    } --[[table: 0000028080252FA0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080252420]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1088.9781494140625,
-        position_y = 37.442070007324219,
-        position_z = 288,
-        rotation_x = 0,
-        rotation_y = 110.30644989013672,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080252720]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802526A0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802524E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080252760]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080252860]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.2774171829217",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.20035362243651"
-      } --[[table: 0000028080252A20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252160]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802521A0]]
-    } --[[table: 00000280802523E0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802523A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 173.82679748535156,
-        position_y = 59.657905578613281,
-        position_z = -715.93011474609375,
-        rotation_x = 0,
-        rotation_y = 38.222888946533203,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802529A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802522A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080252DE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802526E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080252CE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.260728836059",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.16698169708251"
-      } --[[table: 00000280802525A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252520]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252560]]
-    } --[[table: 0000028080252920]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802528E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 294.57220458984375,
-        position_y = 42.741138458251953,
-        position_z = -472.49142456054688,
-        rotation_x = 0,
-        rotation_y = 50.127178192138672,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802527A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080252620]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080252660]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080252F60]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802529E0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.9836483001707",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.43361949920655"
-      } --[[table: 0000028080252AA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252260]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252BE0]]
-    } --[[table: 00000280802521E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080252A60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 294.69842529296875,
-        position_y = 25.144184112548828,
-        position_z = -240.79864501953125,
-        rotation_x = 0,
-        rotation_y = 106.35843658447266,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080252320]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080252960]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080252C20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080252AE0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080252C60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.2002191543576",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.15017890930175"
-      } --[[table: 0000028080252CA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252E20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080252E60]]
-    } --[[table: 00000280802527E0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802522E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 426.02813720703125,
-        position_y = 50.340728759765625,
-        position_z = -66.376472473144531,
-        rotation_x = 0,
-        rotation_y = 162.0814208984375,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802532E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802539E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080253620]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080253520]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080253C60]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.083391666412",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 0000028080253BE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253720]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253F60]]
-    } --[[table: 00000280802534E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080252EE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 515.78173828125,
-        position_y = 37.794803619384766,
-        position_z = -262.81787109375,
-        rotation_x = 0,
-        rotation_y = 199.3114013671875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080253820]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080254060]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080253FA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802533A0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802538A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.6665158271788",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.050498008728027"
-      } --[[table: 00000280802531E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253EE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253560]]
-    } --[[table: 00000280802535E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080253360]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1344.9976806640625,
-        position_y = 42.620697021484375,
-        position_z = -581.9976806640625,
-        rotation_x = 0,
-        rotation_y = 81.328392028808594,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080253A60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080253AE0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802533E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802531A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080253FE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.1769232749933",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.6499152183527"
-      } --[[table: 00000280802540A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080254120]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253E60]]
-    } --[[table: 0000028080254020]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080253320]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1306.5364990234375,
-        position_y = 22.648075103759766,
-        position_z = 795.72625732421875,
-        rotation_x = 0,
-        rotation_y = 216.30955505371094,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080253220]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080253660]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802538E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080253A20]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802532A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.1603074073786",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "6.1603074073786"
-      } --[[table: 00000280802534A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802537E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253AA0]]
-    } --[[table: 00000280802539A0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080253460]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -8.6027488708496094,
-        position_y = 23.723606109619141,
-        position_z = 200.31986999511719,
-        rotation_x = 0,
-        rotation_y = 134.46543884277344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802535A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802536E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080253760]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080253BA0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080253260]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.1434645652766",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 0000028080253C20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802540E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802537A0]]
-    } --[[table: 0000028080253D20]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080253860]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1253.6806640625,
-        position_y = 2.5006179809570312,
-        position_z = -765.48480224609375,
-        rotation_x = 0,
-        rotation_y = -58.315387725830078,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080253B60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080253CA0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080253CE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080253D60]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080253DA0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.1271653175348",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.1225409507746"
-      } --[[table: 0000028080253E20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253EA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080253F20]]
-    } --[[table: 0000028080253960]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080253B20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 157.49468994140625,
-        position_y = 61.839408874511719,
-        position_z = 944.6312255859375,
-        rotation_x = 0,
-        rotation_y = 164.5389404296875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802543A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802549A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080254860]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080254E60]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080254FE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.1107649803155",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.5997910499568"
-      } --[[table: 00000280802550E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080254BA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080254CE0]]
-    } --[[table: 0000028080254160]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080254EE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 547.8070068359375,
-        position_y = 43.282341003417969,
-        position_z = -58.988758087158203,
-        rotation_x = 0,
-        rotation_y = 190.54376220703125,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080254F20]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802549E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080254C20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080255060]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802545E0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.0003929138179",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 0000028080254760]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080254A20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802544E0]]
-    } --[[table: 00000280802544A0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080254720]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 90,
+        position_x = -1078.0582275390625,
         position_y = 50.349998474121094,
-        position_z = -1426,
+        position_z = -1101.1953125,
         rotation_x = 0,
-        rotation_y = 20.136043548583984,
+        rotation_y = 41.216590881347656,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080254DE0]],
+      } --[[table: 0000025F43C0B520]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080254FA0]],
+      } --[[table: 0000025F43C0BE20]],
       {
         Name = "Animation"
-      } --[[table: 0000028080254560]],
+      } --[[table: 0000025F43C0BBA0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -24703,10 +18763,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080254BE0]],
+      } --[[table: 0000025F43C0B960]],
       {
         Name = "FSM"
-      } --[[table: 0000028080254C60]],
+      } --[[table: 0000025F43C0B620]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -24717,45 +18777,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.0772175788873",
+        playerAlertTimer = "168.72175264523",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 0000028080254D20]],
+        playerCheckTimer = "167.7196631448"
+      } --[[table: 0000025F43C0C0E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080254AA0]],
+      } --[[table: 0000025F43C0B6E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255020]]
-    } --[[table: 00000280802548A0]],
+      } --[[table: 0000025F43C0BCE0]]
+    } --[[table: 0000025F43C0B220]],
     EntityName = "Spiky"
-  } --[[table: 00000280802542E0]],
+  } --[[table: 0000025F43C0BCA0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 317.51205444335938,
-        position_y = 41.047473907470703,
-        position_z = -464.51828002929688,
+        position_x = -1389.9898681640625,
+        position_y = -2.8052401542663574,
+        position_z = 1390,
         rotation_x = 0,
-        rotation_y = 48.110969543457031,
+        rotation_y = 96.062019348144531,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080254CA0]],
+      } --[[table: 0000025F43C0C0A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080254620]],
+      } --[[table: 0000025F43C0B260]],
       {
         Name = "Animation"
-      } --[[table: 0000028080254F60]],
+      } --[[table: 0000025F43C0C120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -24769,10 +18829,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280802550A0]],
+      } --[[table: 0000025F43C0B860]],
       {
         Name = "FSM"
-      } --[[table: 0000028080254920]],
+      } --[[table: 0000025F43C0BAE0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -24783,45 +18843,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "4.0169787406919",
+        playerAlertTimer = "168.64417791538",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 0000028080254AE0]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C0B2E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255120]],
+      } --[[table: 0000025F43C0B7E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080254420]]
-    } --[[table: 0000028080254EA0]],
+      } --[[table: 0000025F43C0B3E0]]
+    } --[[table: 0000025F43C0B7A0]],
     EntityName = "Spiky"
-  } --[[table: 00000280802545A0]],
+  } --[[table: 0000025F43C0BD20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1385.82421875,
-        position_y = -0.79144191741943359,
-        position_z = 1162.4884033203125,
+        position_x = -1346.9111328125,
+        position_y = 47.994853973388672,
+        position_z = 656.3885498046875,
         rotation_x = 0,
-        rotation_y = 211.16429138183594,
+        rotation_y = 77.622795104980469,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080254D60]],
+      } --[[table: 0000025F43C0B420]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080254260]],
+      } --[[table: 0000025F43C0B460]],
       {
         Name = "Animation"
-      } --[[table: 00000280802547E0]],
+      } --[[table: 0000025F43C0B1A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -24835,10 +18895,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080254660]],
+      } --[[table: 0000025F43C0B8A0]],
       {
         Name = "FSM"
-      } --[[table: 0000028080254DA0]],
+      } --[[table: 0000025F43C0BD60]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -24849,507 +18909,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "6.0432949066156",
+        playerAlertTimer = "168.62715959718",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.0385799407955"
-      } --[[table: 00000280802542A0]],
+        playerCheckTimer = "168.62715959718"
+      } --[[table: 0000025F43C0B2A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080254E20]],
+      } --[[table: 0000025F43C0B3A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802541E0]]
-    } --[[table: 00000280802541A0]],
+      } --[[table: 0000025F43C0BB20]]
+    } --[[table: 0000025F43C0B820]],
     EntityName = "Spiky"
-  } --[[table: 0000028080254360]],
+  } --[[table: 0000025F43C0B160]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -64.894493103027344,
-        position_y = 0.61936187744140625,
-        position_z = 1273.208984375,
-        rotation_x = 0,
-        rotation_y = 160.19544982910156,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802546A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802546E0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802548E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080254960]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080254B20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "6.0272016525263",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.022350788116"
-      } --[[table: 0000028080254B60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255CA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802559A0]]
-    } --[[table: 0000028080254320]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080254820]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 363.987548828125,
-        position_y = 39.472846984863281,
-        position_z = -437.50619506835938,
-        rotation_x = 0,
-        rotation_y = 45.429115295410156,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080255E60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080255160]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080255B20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080255220]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080255AA0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.9836483001707",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.43361949920655"
-      } --[[table: 0000028080255BA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255760]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255A20]]
-    } --[[table: 00000280802559E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080255860]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1200.6175537109375,
-        position_y = 54.426261901855469,
-        position_z = 425.56906127929688,
-        rotation_x = 0,
-        rotation_y = 113.12853240966797,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080256060]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802554E0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802551A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080255260]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080255520]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.9925265312191",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.9925265312191"
-      } --[[table: 0000028080255E20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802556A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802558E0]]
-    } --[[table: 00000280802556E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080255C20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1444.01513671875,
-        position_y = -9.6406879425048828,
-        position_z = 266.99716186523438,
-        rotation_x = 0,
-        rotation_y = 238.87290954589844,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080255FA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080255EA0]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802552A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080255560]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080255420]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.9766736030573",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 0000028080255720]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802553A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255D20]]
-    } --[[table: 0000028080255FE0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080255AE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 326.54336547851562,
-        position_y = 51.244865417480469,
-        position_z = 65.638313293457031,
-        rotation_x = 0,
-        rotation_y = 154.47012329101562,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080255460]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080255EE0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080255D60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802552E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080255BE0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "2.3831720352168",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.34970569610596"
-      } --[[table: 0000028080255920]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255F20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802560E0]]
-    } --[[table: 0000028080255820]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802560A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 511.61422729492188,
-        position_y = 43.258377075195312,
-        position_z = -163.10357666015625,
-        rotation_x = 0,
-        rotation_y = 184.01416015625,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802553E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080255F60]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802557E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802555A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080255C60]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.4334845542906",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 0000028080255960]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255CE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080255DE0]]
-    } --[[table: 0000028080255DA0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080255B60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -873.9825439453125,
-        position_y = 72.540695190429688,
-        position_z = -1476.0174560546875,
-        rotation_x = 0,
-        rotation_y = 49.526714324951172,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080255320]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080255620]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080255660]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802557A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080256A20]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.926520824432",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 0000028080256CE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802564A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256760]]
-    } --[[table: 00000280802551E0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080256120]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -294,
+        position_x = -254,
         position_y = 50.349998474121094,
-        position_z = -1104,
+        position_z = -1188.018798828125,
         rotation_x = 0,
-        rotation_y = 44.783489227294922,
+        rotation_y = 26.131336212158203,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080256A60]],
+      } --[[table: 0000025F43C0B8E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280802564E0]],
+      } --[[table: 0000025F43C0B9E0]],
       {
         Name = "Animation"
-      } --[[table: 0000028080256460]],
+      } --[[table: 0000025F43C0BA20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25363,10 +18961,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280802563E0]],
+      } --[[table: 0000025F43C0CE60]],
       {
         Name = "FSM"
-      } --[[table: 0000028080256520]],
+      } --[[table: 0000025F43C0C2E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25377,45 +18975,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.9104571342463",
+        playerAlertTimer = "168.59984064269",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 00000280802569E0]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C0CB60]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256AA0]],
+      } --[[table: 0000025F43C0CA60]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256AE0]]
-    } --[[table: 00000280802565A0]],
+      } --[[table: 0000025F43C0CEE0]]
+    } --[[table: 0000025F43C0B360]],
     EntityName = "Spiky"
-  } --[[table: 0000028080256BE0]],
+  } --[[table: 0000025F43C0B320]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 455.791015625,
-        position_y = 39.518634796142578,
-        position_z = -237.25346374511719,
+        position_x = -1114.117919921875,
+        position_y = 34.537055969238281,
+        position_z = 932.07098388671875,
         rotation_x = 0,
-        rotation_y = 144.27053833007812,
+        rotation_y = 83.86529541015625,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080256320]],
+      } --[[table: 0000025F43C0C160]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080256420]],
+      } --[[table: 0000025F43C0C9A0]],
       {
         Name = "Animation"
-      } --[[table: 00000280802568E0]],
+      } --[[table: 0000025F43C0C2A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25429,10 +19027,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080256960]],
+      } --[[table: 0000025F43C0CDA0]],
       {
         Name = "FSM"
-      } --[[table: 0000028080256B20]],
+      } --[[table: 0000025F43C0C360]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25443,45 +19041,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "3.4334845542906",
+        playerAlertTimer = "168.57354450397",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 00000280802567A0]],
+        playerCheckTimer = "168.57354450397"
+      } --[[table: 0000025F43C0C720]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256FE0]],
+      } --[[table: 0000025F43C0C560]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256620]]
-    } --[[table: 00000280802565E0]],
+      } --[[table: 0000025F43C0CF20]]
+    } --[[table: 0000025F43C0C520]],
     EntityName = "Spiky"
-  } --[[table: 0000028080256560]],
+  } --[[table: 0000025F43C0CBE0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1135.98779296875,
-        position_y = -2.9717426300048828,
-        position_z = 473,
+        position_x = -195.85693359375,
+        position_y = 50.349998474121094,
+        position_z = -1164.54443359375,
         rotation_x = 0,
-        rotation_y = 219.28450012207031,
+        rotation_y = 25.192657470703125,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080256C60]],
+      } --[[table: 0000025F43C0CC60]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080256F60]],
+      } --[[table: 0000025F43C0CF60]],
       {
         Name = "Animation"
-      } --[[table: 0000028080256FA0]],
+      } --[[table: 0000025F43C0C7A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25495,10 +19093,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080257020]],
+      } --[[table: 0000025F43C0CCA0]],
       {
         Name = "FSM"
-      } --[[table: 0000028080256BA0]],
+      } --[[table: 0000025F43C0C9E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25509,45 +19107,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.8735713958735",
+        playerAlertTimer = "168.47134590315",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 00000280802570A0]],
+        playerCheckTimer = "168.47134590315"
+      } --[[table: 0000025F43C0C4E0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256820]],
+      } --[[table: 0000025F43C0C5A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256660]]
-    } --[[table: 0000028080256B60]],
+      } --[[table: 0000025F43C0C6A0]]
+    } --[[table: 0000025F43C0CC20]],
     EntityName = "Spiky"
-  } --[[table: 0000028080256C20]],
+  } --[[table: 0000025F43C0CB20]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -373,
-        position_y = 51.349998474121094,
-        position_z = -1352,
+        position_x = -1149.01220703125,
+        position_y = 41.444931030273438,
+        position_z = 310,
         rotation_x = 0,
-        rotation_y = 39.737476348876953,
+        rotation_y = 67.684043884277344,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280802568A0]],
+      } --[[table: 0000025F43C0CDE0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080256F20]],
+      } --[[table: 0000025F43C0C7E0]],
       {
         Name = "Animation"
-      } --[[table: 00000280802566E0]],
+      } --[[table: 0000025F43C0C820]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25561,10 +19159,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280802570E0]],
+      } --[[table: 0000025F43C0CFA0]],
       {
         Name = "FSM"
-      } --[[table: 00000280802562A0]],
+      } --[[table: 0000025F43C0CD20]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25575,45 +19173,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.8595271110531",
+        playerAlertTimer = "168.43758058715",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.25021266937256"
-      } --[[table: 00000280802563A0]],
+        playerCheckTimer = "0.30039978027344"
+      } --[[table: 0000025F43C0C920]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256360]],
+      } --[[table: 0000025F43C0C6E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802562E0]]
-    } --[[table: 00000280802566A0]],
+      } --[[table: 0000025F43C0C5E0]]
+    } --[[table: 0000025F43C0C8E0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080256CA0]],
+  } --[[table: 0000025F43C0C1A0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -42.749931335449219,
-        position_y = 17.77290153503418,
-        position_z = 149.23912048339844,
+        position_x = -1339.3309326171875,
+        position_y = -0.58367347717285156,
+        position_z = 1441.463623046875,
         rotation_x = 0,
-        rotation_y = 129.56454467773438,
+        rotation_y = 97.501312255859375,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080256860]],
+      } --[[table: 0000025F43C0CFE0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 0000028080256D20]],
+      } --[[table: 0000025F43C0C860]],
       {
         Name = "Animation"
-      } --[[table: 0000028080256920]],
+      } --[[table: 0000025F43C0C220]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25627,10 +19225,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080256D60]],
+      } --[[table: 0000025F43C0CD60]],
       {
         Name = "FSM"
-      } --[[table: 0000028080256EE0]],
+      } --[[table: 0000025F43C0C260]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25641,45 +19239,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.843341827392",
+        playerAlertTimer = "168.42025566266",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 0000028080256DA0]],
+        playerCheckTimer = "168.42025566266"
+      } --[[table: 0000025F43C0C320]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256DE0]],
+      } --[[table: 0000025F43C0C660]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080256E20]]
-    } --[[table: 0000028080256160]],
+      } --[[table: 0000025F43C0C3A0]]
+    } --[[table: 0000025F43C0C1E0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080257120]],
+  } --[[table: 0000025F43C0C620]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 810.08624267578125,
-        position_y = 12.682161331176758,
-        position_z = -710.1490478515625,
+        position_x = -622.1767578125,
+        position_y = 68.541969299316406,
+        position_z = -1272.424072265625,
         rotation_x = 0,
-        rotation_y = -36.988422393798828,
+        rotation_y = 32.029960632324219,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080256260]],
+      } --[[table: 0000025F43C0CEA0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280802573A0]],
+      } --[[table: 0000025F43C0C420]],
       {
         Name = "Animation"
-      } --[[table: 0000028080257CE0]],
+      } --[[table: 0000025F43C0C960]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25693,10 +19291,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280802575A0]],
+      } --[[table: 0000025F43C0C460]],
       {
         Name = "FSM"
-      } --[[table: 0000028080257D20]],
+      } --[[table: 0000025F43C0D020]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25707,45 +19305,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.8265509605403",
+        playerAlertTimer = "168.37100601363",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.23350429534912"
-      } --[[table: 00000280802577A0]],
+        playerCheckTimer = "167.36012029812"
+      } --[[table: 0000025F43C0CA20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257FE0]],
+      } --[[table: 0000025F43C0D060]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257620]]
-    } --[[table: 0000028080256220]],
+      } --[[table: 0000025F43C0CAE0]]
+    } --[[table: 0000025F43C0C8A0]],
     EntityName = "Spiky"
-  } --[[table: 00000280802561E0]],
+  } --[[table: 0000025F43C0CAA0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1188.550048828125,
-        position_y = 37.349990844726562,
-        position_z = 1030.01318359375,
+        position_x = 145.09391784667969,
+        position_y = 49.349998474121094,
+        position_z = -1216.0604248046875,
         rotation_x = 0,
-        rotation_y = 128.22508239746094,
+        rotation_y = 17.532009124755859,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 0000028080257360]],
+      } --[[table: 0000025F43C0C4A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280802575E0]],
+      } --[[table: 0000025F43C0D520]],
       {
         Name = "Animation"
-      } --[[table: 0000028080257820]],
+      } --[[table: 0000025F43C0DC20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25759,10 +19357,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 0000028080257FA0]],
+      } --[[table: 0000025F43C0D5E0]],
       {
         Name = "FSM"
-      } --[[table: 0000028080257BA0]],
+      } --[[table: 0000025F43C0DFA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25773,45 +19371,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.8090057373042",
+        playerAlertTimer = "168.30418443846",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.8001031875603"
-      } --[[table: 00000280802578A0]],
+        playerCheckTimer = "0.4833984375"
+      } --[[table: 0000025F43C0D620]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802574E0]],
+      } --[[table: 0000025F43C0E020]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257D60]]
-    } --[[table: 0000028080257160]],
+      } --[[table: 0000025F43C0DAA0]]
+    } --[[table: 0000025F43C0D120]],
     EntityName = "Spiky"
-  } --[[table: 0000028080257220]],
+  } --[[table: 0000025F43C0D0E0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 337.77023315429688,
-        position_y = 28.380889892578125,
-        position_z = -255.79994201660156,
+        position_x = -1137.4595947265625,
+        position_y = 33.349998474121094,
+        position_z = -277.1024169921875,
         rotation_x = 0,
-        rotation_y = 105.59269714355469,
+        rotation_y = 54.927059173583984,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 00000280802571E0]],
+      } --[[table: 0000025F43C0DBE0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 00000280802580E0]],
+      } --[[table: 0000025F43C0DDA0]],
       {
         Name = "Animation"
-      } --[[table: 0000028080257AE0]],
+      } --[[table: 0000025F43C0D7A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -25825,10 +19423,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 00000280802573E0]],
+      } --[[table: 0000025F43C0DCA0]],
       {
         Name = "FSM"
-      } --[[table: 0000028080258120]],
+      } --[[table: 0000025F43C0DB20]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -25839,1101 +19437,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "3.7654981613157",
+        playerAlertTimer = "168.26916313343",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.20035362243651"
-      } --[[table: 0000028080257F60]],
+        playerCheckTimer = "167.24330473113"
+      } --[[table: 0000025F43C0D860]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802578E0]],
+      } --[[table: 0000025F43C0DEE0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802571A0]]
-    } --[[table: 0000028080257860]],
+      } --[[table: 0000025F43C0DF20]]
+    } --[[table: 0000025F43C0D2E0]],
     EntityName = "Spiky"
-  } --[[table: 0000028080257520]],
+  } --[[table: 0000025F43C0E060]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 115.72544097900391,
-        position_y = 79.574462890625,
-        position_z = 641.3651123046875,
-        rotation_x = 0,
-        rotation_y = 157.69332885742188,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080257420]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080257B20]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802579A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080257920]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802579E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.7772655487055",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.20035362243651"
-      } --[[table: 00000280802572A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257DE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257BE0]]
-    } --[[table: 0000028080257DA0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080257260]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 447,
-        position_y = 14.444923400878906,
-        position_z = 1178.98779296875,
-        rotation_x = 0,
-        rotation_y = 177.86408996582031,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802577E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080257460]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080257A20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080257660]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080257560]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.760279655456",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.16698169708251"
-      } --[[table: 0000028080257320]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257A60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257EA0]]
-    } --[[table: 00000280802576A0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080257E20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1068.4932861328125,
-        position_y = 33.986053466796875,
-        position_z = -308.08502197265625,
-        rotation_x = 0,
-        rotation_y = 89.721900939941406,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802572E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802576E0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080257720]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080257AA0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080257B60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.7435350418087",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.7332110404962"
-      } --[[table: 0000028080257C20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257C60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080257CA0]]
-    } --[[table: 0000028080257960]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802574A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 511.98776245117188,
-        position_y = 22.028255462646484,
-        position_z = 903,
-        rotation_x = 0,
-        rotation_y = 180.51380920410156,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802582E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080258E60]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080258460]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080258160]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080258FA0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.7268652915949",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.15017890930175"
-      } --[[table: 0000028080258D60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802582A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080258B20]]
-    } --[[table: 0000028080258860]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080257F20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -705.056884765625,
-        position_y = -12.099041938781738,
-        position_z = 1389.5137939453125,
-        rotation_x = 0,
-        rotation_y = 144.48350524902344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802590A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080258FE0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080258220]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802584A0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802590E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.7106862068171",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.6996207237239"
-      } --[[table: 0000028080258BE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802584E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802581A0]]
-    } --[[table: 0000028080258CE0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080258720]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1484.9979248046875,
-        position_y = 13.777061462402344,
-        position_z = 910,
-        rotation_x = 0,
-        rotation_y = 219.04365539550781,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802589E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080258320]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080259120]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802588A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080258A60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.6936964988703",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.050498008728027"
-      } --[[table: 0000028080259020]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802581E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080258F20]]
-    } --[[table: 0000028080258960]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080258520]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -631,
-        position_y = 17.3974609375,
-        position_z = 1113.9676513671875,
-        rotation_x = 0,
-        rotation_y = 141.32383728027344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080258260]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080258360]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802583A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802583E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080258420]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.6773328781124",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.050498008728027"
-      } --[[table: 0000028080258560]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080258F60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802587A0]]
-    } --[[table: 0000028080259060]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080258B60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 817.5341796875,
-        position_y = 25.61627197265625,
-        position_z = 547.24359130859375,
-        rotation_x = 0,
-        rotation_y = 200.37889099121094,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080258AA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080258620]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080258660]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802586A0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080258AE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.6599745750423",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 00000280802586E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802587E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802589A0]]
-    } --[[table: 00000280802585E0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802585A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 575.14849853515625,
-        position_y = 36.865287780761719,
-        position_z = -436.5645751953125,
-        rotation_x = 0,
-        rotation_y = -28.409975051879883,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080258BA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080258C20]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080258C60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080258CA0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080258DA0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "2.5993361473079",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 0000028080258DE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080258E20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080258EA0]]
-    } --[[table: 0000028080258EE0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080258820]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1247.923095703125,
-        position_y = 12.39232063293457,
-        position_z = 1295.822265625,
-        rotation_x = 0,
-        rotation_y = 132.38497924804688,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802594A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080259360]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080259A20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802596E0]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080259760]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.6270551681512",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.6167888641352"
-      } --[[table: 0000028080259460]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802599A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802592A0]]
-    } --[[table: 0000028080259F60]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080259220]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1363,
-        position_y = 42.349998474121094,
-        position_z = 835,
-        rotation_x = 0,
-        rotation_y = 121.34436798095703,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802598A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 00000280802595A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080259420]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080259920]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080259320]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.6093659400934",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 0000028080259520]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080259620]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080259FE0]]
-    } --[[table: 00000280802592E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025A120]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 224.81758117675781,
-        position_y = 51.265411376953125,
-        position_z = 338.85836791992188,
-        rotation_x = 0,
-        rotation_y = 156.58509826660156,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 00000280802594E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080259560]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802595E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080259B60]],
-      {
-        Name = "FSM"
-      } --[[table: 0000028080259D60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.5933485031123",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.51684951782227"
-      } --[[table: 0000028080259260]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080259660]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802596A0]]
-    } --[[table: 0000028080259860]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802593E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1125.029541015625,
-        position_y = -39.633819580078125,
-        position_z = -1416.970458984375,
-        rotation_x = 0,
-        rotation_y = -29.181224822998047,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025A0E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080259160]],
-      {
-        Name = "Animation"
-      } --[[table: 00000280802597E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 00000280802591A0]],
-      {
-        Name = "FSM"
-      } --[[table: 00000280802598E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.5756802558894",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 0000028080259960]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080259DA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 00000280802599E0]]
-    } --[[table: 0000028080259A60]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080259F20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1470.9993896484375,
-        position_y = 61.349990844726562,
-        position_z = 214.998779296875,
-        rotation_x = 0,
-        rotation_y = 104.67467498779297,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080259BA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080259FA0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080259BE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025A020]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025A060]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.5605497360224",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 0000028080259C20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080259C60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080259CA0]]
-    } --[[table: 0000028080259B20]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080259AE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -942.99981689453125,
-        position_y = 31.775966644287109,
-        position_z = 671.01513671875,
-        rotation_x = 0,
-        rotation_y = 123.94365692138672,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080259E20]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 0000028080259E60]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080259EA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 0000028080259EE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025A0A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.5431261062617",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 00000280802591E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025A360]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025A2A0]]
-    } --[[table: 0000028080259DE0]],
-    EntityName = "Spiky"
-  } --[[table: 0000028080259CE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 557.0089111328125,
-        position_y = 6.2764949798583984,
-        position_z = 1492.002197265625,
-        rotation_x = 0,
-        rotation_y = 181.78352355957031,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025A7E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025ABE0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025A860]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025AA20]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025AE60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.5269579887384",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 000002808025AD20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025AB60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025A9A0]]
-    } --[[table: 000002808025AFA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025AF60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1371,
+        position_x = -1380.9991455078125,
         position_y = 48.349998474121094,
-        position_z = -1389.0003662109375,
+        position_z = -1381.9990234375,
         rotation_x = 0,
-        rotation_y = 59.824466705322266,
+        rotation_y = 41.938648223876953,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025AFE0]],
+      } --[[table: 0000025F43C0D6A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025A6A0]],
+      } --[[table: 0000025F43C0D220]],
       {
         Name = "Animation"
-      } --[[table: 000002808025A920]],
+      } --[[table: 0000025F43C0DA20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -26947,10 +19489,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025AAA0]],
+      } --[[table: 0000025F43C0DC60]],
       {
         Name = "FSM"
-      } --[[table: 000002808025B020]],
+      } --[[table: 0000025F43C0D8A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -26961,45 +19503,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.5097818374628",
+        playerAlertTimer = "168.07453775571",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.43361949920655"
-      } --[[table: 000002808025A6E0]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C0DEA0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025AC20]],
+      } --[[table: 0000025F43C0D2A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B060]]
-    } --[[table: 000002808025A2E0]],
+      } --[[table: 0000025F43C0D6E0]]
+    } --[[table: 0000025F43C0D320]],
     EntityName = "Spiky"
-  } --[[table: 000002808025A4A0]],
+  } --[[table: 0000025F43C0D5A0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1096.4971923828125,
-        position_y = -15.918771743774414,
-        position_z = -525.90643310546875,
+        position_x = -558.987060546875,
+        position_y = 4.3143749237060547,
+        position_z = 1168.022216796875,
         rotation_x = 0,
-        rotation_y = -69.210411071777344,
+        rotation_y = 90.803550720214844,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025A5E0]],
+      } --[[table: 0000025F43C0D720]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025ACE0]],
+      } --[[table: 0000025F43C0DF60]],
       {
         Name = "Animation"
-      } --[[table: 000002808025AEA0]],
+      } --[[table: 0000025F43C0D260]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27013,10 +19555,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025A520]],
+      } --[[table: 0000025F43C0DB60]],
       {
         Name = "FSM"
-      } --[[table: 000002808025A320]],
+      } --[[table: 0000025F43C0D1E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27027,45 +19569,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.4935522079463",
+        playerAlertTimer = "168.02466869518",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 000002808025A820]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C0D3A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025A9E0]],
+      } --[[table: 0000025F43C0D460]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025AE20]]
-    } --[[table: 000002808025A7A0]],
+      } --[[table: 0000025F43C0D920]]
+    } --[[table: 0000025F43C0D7E0]],
     EntityName = "Spiky"
-  } --[[table: 000002808025A4E0]],
+  } --[[table: 0000025F43C0D360]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -431.72482299804688,
-        position_y = 57.456253051757812,
-        position_z = -1044.4071044921875,
+        position_x = 794.99969482421875,
+        position_y = -31.650001525878906,
+        position_z = -1417,
         rotation_x = 0,
-        rotation_y = 51.510879516601562,
+        rotation_y = 2.1621649265289307,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025B120]],
+      } --[[table: 0000025F43C0D760]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025B0A0]],
+      } --[[table: 0000025F43C0DFE0]],
       {
         Name = "Animation"
-      } --[[table: 000002808025B0E0]],
+      } --[[table: 0000025F43C0D4E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27079,10 +19621,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025A420]],
+      } --[[table: 0000025F43C0D8E0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025AA60]],
+      } --[[table: 0000025F43C0D1A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27093,45 +19635,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.4680047035213",
+        playerAlertTimer = "167.88728475737",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.4680047035213"
-      } --[[table: 000002808025A3A0]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0DDE0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025ABA0]],
+      } --[[table: 0000025F43C0E0A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025A960]]
-    } --[[table: 000002808025A8E0]],
+      } --[[table: 0000025F43C0D9A0]]
+    } --[[table: 0000025F43C0DD20]],
     EntityName = "Spiky"
-  } --[[table: 000002808025A460]],
+  } --[[table: 0000025F43C0DCE0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -626.97100830078125,
-        position_y = 68.941474914550781,
-        position_z = -1287,
+        position_x = -619.98553466796875,
+        position_y = 68.359359741210938,
+        position_z = -1344,
         rotation_x = 0,
-        rotation_y = 48.894092559814453,
+        rotation_y = 31.247129440307617,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025AC60]],
+      } --[[table: 0000025F43C0D3E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025AD60]],
+      } --[[table: 0000025F43C0E0E0]],
       {
         Name = "Animation"
-      } --[[table: 000002808025A1A0]],
+      } --[[table: 0000025F43C0E120]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27145,10 +19687,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025A560]],
+      } --[[table: 0000025F43C0DBA0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025ACA0]],
+      } --[[table: 0000025F43C0D420]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27159,45 +19701,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.4292588233942",
+        playerAlertTimer = "167.83663845227",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.34970569610596"
-      } --[[table: 000002808025ADA0]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0DD60]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025ADE0]],
+      } --[[table: 0000025F43C0D4A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025AEE0]]
-    } --[[table: 000002808025A220]],
+      } --[[table: 0000025F43C0D560]]
+    } --[[table: 0000025F43C0DE20]],
     EntityName = "Spiky"
-  } --[[table: 000002808025A160]],
+  } --[[table: 0000025F43C0DAE0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -932.99676513671875,
-        position_y = 58.277503967285156,
-        position_z = -916,
+        position_x = -1380.9833984375,
+        position_y = 53.775859832763672,
+        position_z = -805.04888916015625,
         rotation_x = 0,
-        rotation_y = 66.7703857421875,
+        rotation_y = 49.331947326660156,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025AF20]],
+      } --[[table: 0000025F43C0E2A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025A260]],
+      } --[[table: 0000025F43C0E6E0]],
       {
         Name = "Animation"
-      } --[[table: 000002808025A620]],
+      } --[[table: 0000025F43C0E8A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27211,10 +19753,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025A660]],
+      } --[[table: 0000025F43C0E3E0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025B160]],
+      } --[[table: 0000025F43C0E760]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27225,45 +19767,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.4127955436702",
+        playerAlertTimer = "167.80338001412",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 000002808025B720]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0E860]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B860]],
+      } --[[table: 0000025F43C0E160]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B6A0]]
-    } --[[table: 000002808025A5A0]],
+      } --[[table: 0000025F43C0EBE0]]
+    } --[[table: 0000025F43C0EBA0]],
     EntityName = "Spiky"
-  } --[[table: 000002808025A1E0]],
+  } --[[table: 0000025F43C0D9E0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 828.389404296875,
-        position_y = 24.661449432373047,
-        position_z = 552.0401611328125,
+        position_x = -1132,
+        position_y = 48.941463470458984,
+        position_z = -1106.970947265625,
         rotation_x = 0,
-        rotation_y = 201.0125732421875,
+        rotation_y = 41.911983489990234,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025BD20]],
+      } --[[table: 0000025F43C0E7A0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025C020]],
+      } --[[table: 0000025F43C0ECA0]],
       {
         Name = "Animation"
-      } --[[table: 000002808025B5E0]],
+      } --[[table: 0000025F43C0E4A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27277,10 +19819,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025BB60]],
+      } --[[table: 0000025F43C0EB60]],
       {
         Name = "FSM"
-      } --[[table: 000002808025BEA0]],
+      } --[[table: 0000025F43C0E1E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27291,45 +19833,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.3951826095576",
+        playerAlertTimer = "167.76975441149",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.23350429534912"
-      } --[[table: 000002808025B4A0]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0E420]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025BCE0]],
+      } --[[table: 0000025F43C0E5A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025BBA0]]
-    } --[[table: 000002808025B1E0]],
+      } --[[table: 0000025F43C0EA20]]
+    } --[[table: 0000025F43C0EDE0]],
     EntityName = "Spiky"
-  } --[[table: 000002808025BE60]],
+  } --[[table: 0000025F43C0F020]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -17.032218933105469,
-        position_y = 7.5596294403076172,
-        position_z = 1190.99462890625,
+        position_x = -793,
+        position_y = -8.6406269073486328,
+        position_z = 1384.014404296875,
         rotation_x = 0,
-        rotation_y = 160.83906555175781,
+        rotation_y = 97.985107421875,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025B7A0]],
+      } --[[table: 0000025F43C0EE20]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025B360]],
+      } --[[table: 0000025F43C0E360]],
       {
         Name = "Animation"
-      } --[[table: 000002808025B9A0]],
+      } --[[table: 0000025F43C0E8E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27343,10 +19885,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025B5A0]],
+      } --[[table: 0000025F43C0EEA0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025B560]],
+      } --[[table: 0000025F43C0E1A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27357,45 +19899,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.3790154457088",
+        playerAlertTimer = "167.7196631448",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 000002808025B320]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0EC20]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025BF60]],
+      } --[[table: 0000025F43C0EE60]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B4E0]]
-    } --[[table: 000002808025B6E0]],
+      } --[[table: 0000025F43C0E720]]
+    } --[[table: 0000025F43C0E820]],
     EntityName = "Spiky"
-  } --[[table: 000002808025BD60]],
+  } --[[table: 0000025F43C0E5E0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 693.98040771484375,
-        position_y = -7.7089433670043945,
-        position_z = 1102.980224609375,
+        position_x = -454,
+        position_y = 51.350002288818359,
+        position_z = -998,
         rotation_x = 0,
-        rotation_y = 187.7733154296875,
+        rotation_y = 32.097122192382812,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025BC20]],
+      } --[[table: 0000025F43C0EAA0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025B820]],
+      } --[[table: 0000025F43C0EC60]],
       {
         Name = "Animation"
-      } --[[table: 000002808025BEE0]],
+      } --[[table: 0000025F43C0EF20]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27409,10 +19951,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025BDA0]],
+      } --[[table: 0000025F43C0ECE0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025B3E0]],
+      } --[[table: 0000025F43C0E4E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27423,45 +19965,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.3618483543391",
+        playerAlertTimer = "167.65356207058",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.26692390441895"
-      } --[[table: 000002808025BCA0]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C0E6A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B520]],
+      } --[[table: 0000025F43C0E920]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B1A0]]
-    } --[[table: 000002808025B7E0]],
+      } --[[table: 0000025F43C0E660]]
+    } --[[table: 0000025F43C0EEE0]],
     EntityName = "Spiky"
-  } --[[table: 000002808025B760]],
+  } --[[table: 0000025F43C0EFE0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -588.5648193359375,
-        position_y = 60.740966796875,
-        position_z = -1128.065673828125,
+        position_x = -1488.99267578125,
+        position_y = 49.771343231201172,
+        position_z = -339.00738525390625,
         rotation_x = 0,
-        rotation_y = 52.855155944824219,
+        rotation_y = 58.017673492431641,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025B260]],
+      } --[[table: 0000025F43C0F060]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025B620]],
+      } --[[table: 0000025F43C0EFA0]],
       {
         Name = "Animation"
-      } --[[table: 000002808025BFE0]],
+      } --[[table: 0000025F43C0E560]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27475,10 +20017,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025B8E0]],
+      } --[[table: 0000025F43C0F0A0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025BF20]],
+      } --[[table: 0000025F43C0ED20]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27489,45 +20031,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.3475952148433",
+        playerAlertTimer = "167.56981659098",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.3475952148433"
-      } --[[table: 000002808025B920]],
+        playerCheckTimer = "0.41688537597656"
+      } --[[table: 0000025F43C0ED60]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B960]],
+      } --[[table: 0000025F43C0E7E0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025B660]]
-    } --[[table: 000002808025B420]],
+      } --[[table: 0000025F43C0E9E0]]
+    } --[[table: 0000025F43C0EF60]],
     EntityName = "Spiky"
-  } --[[table: 000002808025BB20]],
+  } --[[table: 0000025F43C0E520]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 449.47335815429688,
-        position_y = 37.620029449462891,
-        position_z = -268.43939208984375,
+        position_x = -1053.4677734375,
+        position_y = 50.240169525146484,
+        position_z = -1050.555419921875,
         rotation_x = 0,
-        rotation_y = 122.38435363769531,
+        rotation_y = 41.506832122802734,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025C060]],
+      } --[[table: 0000025F43C0E220]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025B9E0]],
+      } --[[table: 0000025F43C0E260]],
       {
         Name = "Animation"
-      } --[[table: 000002808025BA20]],
+      } --[[table: 0000025F43C0E9A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27541,76 +20083,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025BA60]],
+      } --[[table: 0000025F43C0E2E0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025BAA0]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.2834029197692",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.23350429534912"
-      } --[[table: 000002808025BAE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025BBE0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025BC60]]
-    } --[[table: 000002808025BDE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025B460]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1110.8441162109375,
-        position_y = 52.90789794921875,
-        position_z = -775.93682861328125,
-        rotation_x = 0,
-        rotation_y = 73.619522094726562,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025C120]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025B2E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025CF60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025CA20]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025C360]],
+      } --[[table: 0000025F43C0EAE0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27621,45 +20097,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.318357944488",
+        playerAlertTimer = "167.46172475978",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.318357944488"
-      } --[[table: 000002808025C5E0]],
+        playerCheckTimer = "167.46172475978"
+      } --[[table: 0000025F43C0E320]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025CE60]],
+      } --[[table: 0000025F43C0E3A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C8A0]]
-    } --[[table: 000002808025C0E0]],
+      } --[[table: 0000025F43C0E460]]
+    } --[[table: 0000025F43C0F120]],
     EntityName = "Spiky"
-  } --[[table: 000002808025BE20]],
+  } --[[table: 0000025F43C0F0E0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -1377.4898681640625,
-        position_y = 6.5696449279785156,
-        position_z = 1344.4254150390625,
+        position_x = -594.50103759765625,
+        position_y = 66.23565673828125,
+        position_z = -1334.827880859375,
         rotation_x = 0,
-        rotation_y = 131.20030212402344,
+        rotation_y = 30.909904479980469,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025CFE0]],
+      } --[[table: 0000025F43C0F2E0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025D020]],
+      } --[[table: 0000025F43C0FF60]],
       {
         Name = "Animation"
-      } --[[table: 000002808025C560]],
+      } --[[table: 0000025F43C0F6E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27673,10 +20149,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025C4E0]],
+      } --[[table: 0000025F43C0F360]],
       {
         Name = "FSM"
-      } --[[table: 000002808025D060]],
+      } --[[table: 0000025F43C0F4E0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27687,45 +20163,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.3037405014033",
+        playerAlertTimer = "167.42700386207",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.3037405014033"
-      } --[[table: 000002808025D0E0]],
+        playerCheckTimer = "167.42700386207"
+      } --[[table: 0000025F43C0FFA0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C720]],
+      } --[[table: 0000025F43C0FFE0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025CEA0]]
-    } --[[table: 000002808025CF20]],
+      } --[[table: 0000025F43C0F320]]
+    } --[[table: 0000025F43C0FDA0]],
     EntityName = "Spiky"
-  } --[[table: 000002808025CFA0]],
+  } --[[table: 0000025F43C0FAE0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 745.31988525390625,
-        position_y = -7.2360200881958008,
-        position_z = 1163.183837890625,
+        position_x = -369.97714233398438,
+        position_y = 53.867301940917969,
+        position_z = -1451.977294921875,
         rotation_x = 0,
-        rotation_y = 189.46429443359375,
+        rotation_y = 25.890775680541992,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025C460]],
+      } --[[table: 0000025F43C10020]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025CDE0]],
+      } --[[table: 0000025F43C0F7A0]],
       {
         Name = "Animation"
-      } --[[table: 000002808025CA60]],
+      } --[[table: 0000025F43C0F5E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27739,10 +20215,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025C7A0]],
+      } --[[table: 0000025F43C0FA20]],
       {
         Name = "FSM"
-      } --[[table: 000002808025CD20]],
+      } --[[table: 0000025F43C0FAA0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27753,45 +20229,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.2863922119134",
+        playerAlertTimer = "167.41040373015",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.2863922119134"
-      } --[[table: 000002808025CEE0]],
+        playerCheckTimer = "0.30039978027344"
+      } --[[table: 0000025F43C0FC60]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C8E0]],
+      } --[[table: 0000025F43C0FE60]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C160]]
-    } --[[table: 000002808025D120]],
+      } --[[table: 0000025F43C0F720]]
+    } --[[table: 0000025F43C0FBE0]],
     EntityName = "Spiky"
-  } --[[table: 000002808025C7E0]],
+  } --[[table: 0000025F43C0FEA0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = -734.5916748046875,
-        position_y = -6.9694156646728516,
-        position_z = 1452.9013671875,
+        position_x = -853.01605224609375,
+        position_y = 38.942558288574219,
+        position_z = 533.000244140625,
         rotation_x = 0,
-        rotation_y = 144.82583618164062,
+        rotation_y = 70.593666076660156,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025C2E0]],
+      } --[[table: 0000025F43C0FB60]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025C260]],
+      } --[[table: 0000025F43C0FDE0]],
       {
         Name = "Animation"
-      } --[[table: 000002808025C320]],
+      } --[[table: 0000025F43C0F3E0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27805,10 +20281,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025CBA0]],
+      } --[[table: 0000025F43C0F7E0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025C3A0]],
+      } --[[table: 0000025F43C0FE20]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27819,45 +20295,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.2707424163812",
+        playerAlertTimer = "167.36012029812",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.2707424163812"
-      } --[[table: 000002808025C3E0]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C0FBA0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C5A0]],
+      } --[[table: 0000025F43C0FC20]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C6E0]]
-    } --[[table: 000002808025C1E0]],
+      } --[[table: 0000025F43C0F4A0]]
+    } --[[table: 0000025F43C0FA60]],
     EntityName = "Spiky"
-  } --[[table: 000002808025C2A0]],
+  } --[[table: 0000025F43C0F3A0]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 1480.939208984375,
-        position_y = 15.869108200073242,
-        position_z = -902.96319580078125,
+        position_x = -1182.9993896484375,
+        position_y = 33.349998474121094,
+        position_z = -303.998779296875,
         rotation_x = 0,
-        rotation_y = -58.437412261962891,
+        rotation_y = 55.021083831787109,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025C520]],
+      } --[[table: 0000025F43C0FCA0]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025C660]],
+      } --[[table: 0000025F43C0FB20]],
       {
         Name = "Animation"
-      } --[[table: 000002808025C960]],
+      } --[[table: 0000025F43C0F160]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27871,10 +20347,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025CB60]],
+      } --[[table: 0000025F43C0F820]],
       {
         Name = "FSM"
-      } --[[table: 000002808025C760]],
+      } --[[table: 0000025F43C0FEE0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27885,45 +20361,45 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.2556705474848",
+        playerAlertTimer = "167.29341316389",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.16698169708251"
-      } --[[table: 000002808025C820]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C100A0]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C6A0]],
+      } --[[table: 0000025F43C0F220]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025C860]]
-    } --[[table: 000002808025C620]],
+      } --[[table: 0000025F43C0FD20]]
+    } --[[table: 0000025F43C0F760]],
     EntityName = "Spiky"
-  } --[[table: 000002808025C420]],
+  } --[[table: 0000025F43C0F460]],
   {
     Components = {
       {
         Name = "Transform",
-        position_x = 981.9901123046875,
-        position_y = 3.8695507049560547,
-        position_z = 1491.9912109375,
+        position_x = -1193.99853515625,
+        position_y = 39.19378662109375,
+        position_z = 912,
         rotation_x = 0,
-        rotation_y = 194.97430419921875,
+        rotation_y = 83.553596496582031,
         rotation_z = 0,
         scale_x = 1,
         scale_y = 1,
         scale_z = 1
-      } --[[table: 000002808025C9A0]],
+      } --[[table: 0000025F43C0F560]],
       {
         ModelID = "SPIKY",
         Name = "MeshRenderer",
         ShaderID = 3
-      } --[[table: 000002808025CAA0]],
+      } --[[table: 0000025F43C0FF20]],
       {
         Name = "Animation"
-      } --[[table: 000002808025C9E0]],
+      } --[[table: 0000025F43C0F2A0]],
       {
         Name = "Physics",
         centerOffset_x = 0,
@@ -27937,10 +20413,10 @@ scene = {
         shape = "capsule",
         useCCD = false,
         useGravity = true
-      } --[[table: 000002808025CAE0]],
+      } --[[table: 0000025F43C100E0]],
       {
         Name = "FSM"
-      } --[[table: 000002808025CB20]],
+      } --[[table: 0000025F43C0F5A0]],
       {
         Name = "Script",
         attackAI = "Chase",
@@ -27951,1209 +20427,21 @@ scene = {
         moveY = "0",
         moveZ = "0",
         movementSpeed = "90",
-        playerAlertTimer = "5.2403669357295",
+        playerAlertTimer = "167.26008749174",
         playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.16698169708251"
-      } --[[table: 000002808025CC20]],
+        playerCheckTimer = "0.15045166015625"
+      } --[[table: 0000025F43C10120]],
       {
         Name = "Script",
         fileName = "testpokeyscript.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025CCA0]],
+      } --[[table: 0000025F43C0F1A0]],
       {
         Name = "Script",
         fileName = "pokeycomm.lua",
         filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025CCE0]]
-    } --[[table: 000002808025CBE0]],
+      } --[[table: 0000025F43C0F1E0]]
+    } --[[table: 0000025F43C0FD60]],
     EntityName = "Spiky"
-  } --[[table: 000002808025C920]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 515.3870849609375,
-        position_y = 23.787734985351562,
-        position_z = 971.64892578125,
-        rotation_x = 0,
-        rotation_y = 180.59056091308594,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025D1E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025DBA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025DFE0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025DCE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025D3A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.2264809608454",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.2264809608454"
-      } --[[table: 000002808025DDE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025DD20]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025D460]]
-    } --[[table: 000002808025CE20]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025CDA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 644.26611328125,
-        position_y = 23.430511474609375,
-        position_z = -428.13897705078125,
-        rotation_x = 0,
-        rotation_y = -48.328731536865234,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025D9A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025E120]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025DE60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025D360]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025D620]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "2.1666564941401",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.11720466613769"
-      } --[[table: 000002808025D4E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025D420]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025DB20]]
-    } --[[table: 000002808025DE20]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025DB60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -591.143798828125,
-        position_y = -6.6304512023925781,
-        position_z = 1454.8035888671875,
-        rotation_x = 0,
-        rotation_y = 148.10926818847656,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025D7E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025D3E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025D4A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025DFA0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025E020]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.1922564506526",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.1922564506526"
-      } --[[table: 000002808025D560]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E060]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025D5E0]]
-    } --[[table: 000002808025DAA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025D720]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1410.9822998046875,
-        position_y = -32.465282440185547,
-        position_z = -1173.018798828125,
-        rotation_x = 0,
-        rotation_y = -46.195472717285156,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025D5A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025DEA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025E0E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025DF20]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025D660]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.1751623153681",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.050498008728027"
-      } --[[table: 000002808025D760]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025D6A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025D860]]
-    } --[[table: 000002808025DEE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025D9E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1176,
-        position_y = 31.349998474121094,
-        position_z = -390,
-        rotation_x = 0,
-        rotation_y = 86.94293212890625,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025D1A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025DA20]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025D7A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025DA60]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025DAE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.1585202217098",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 000002808025D220]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025DD60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025DBE0]]
-    } --[[table: 000002808025DF60]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025D160]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -854.98150634765625,
-        position_y = -7.1886038780212402,
-        position_z = 1397.037353515625,
-        rotation_x = 0,
-        rotation_y = 141.37745666503906,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025D8A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025D8E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025DC20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025D960]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025DC60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.1424455642695",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 000002808025D320]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025D2A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025DCA0]]
-    } --[[table: 000002808025D820]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025DDA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 133.11247253417969,
-        position_y = 18.987735748291016,
-        position_z = -323.98861694335938,
-        rotation_x = 0,
-        rotation_y = 86.532188415527344,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025EAA0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025E360]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025ED20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025EFE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025E660]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "3.0837574005125",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.033828735351562"
-      } --[[table: 000002808025E7A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E720]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E8A0]]
-    } --[[table: 000002808025E620]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025E920]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 142.00985717773438,
-        position_y = 80.286140441894531,
-        position_z = 767.0096435546875,
-        rotation_x = 0,
-        rotation_y = 161.37387084960938,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025E2A0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025E320]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025F0A0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025F020]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025E6A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.1074166297909",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.017184257507324"
-      } --[[table: 000002808025EB20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E820]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E960]]
-    } --[[table: 000002808025E560]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025ECE0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 746.97503662109375,
-        position_y = -8.6766977310180664,
-        position_z = 1171.2086181640625,
-        rotation_x = 0,
-        rotation_y = 189.48356628417969,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025F060]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025E5A0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025EA20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025E760]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025EA60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.0834031105037",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.0834031105037"
-      } --[[table: 000002808025E3A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025EB60]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025EAE0]]
-    } --[[table: 000002808025E460]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025E2E0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 1273.99462890625,
-        position_y = 8.5276832580566406,
-        position_z = 1088,
-        rotation_x = 0,
-        rotation_y = 209.100341796875,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025EC20]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025E7E0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025EF20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025E860]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025EC60]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.0545549392695",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 000002808025ECA0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E1A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E8E0]]
-    } --[[table: 000002808025EBE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025EBA0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1250,
-        position_y = 29.721797943115234,
-        position_z = 1112.0216064453125,
-        rotation_x = 0,
-        rotation_y = 128.89779663085938,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025EE20]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025EDE0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025EE60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025F120]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025EEA0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.0385799407955",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.46688747406006"
-      } --[[table: 000002808025EEE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E4E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025EF60]]
-    } --[[table: 000002808025EDA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025E520]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 567.296875,
-        position_y = 10.526494979858398,
-        position_z = 1423.3623046875,
-        rotation_x = 0,
-        rotation_y = 182.15962219238281,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025E220]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025E260]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025E3E0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025E420]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025E4A0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.022350788116",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.022350788116"
-      } --[[table: 000002808025E5E0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025E6E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F7A0]]
-    } --[[table: 000002808025E1E0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025E160]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -99.409004211425781,
-        position_y = 24.089275360107422,
-        position_z = 1110.363525390625,
-        rotation_x = 0,
-        rotation_y = 156.92031860351562,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025F760]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025F5A0]],
-      {
-        Name = "Animation"
-      } --[[table: 0000028080260060]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025F4E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025F720]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "5.0057711601253",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "5.0057711601253"
-      } --[[table: 000002808025F1A0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F3E0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F6A0]]
-    } --[[table: 000002808025F360]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025FF20]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -266.95144653320312,
-        position_y = 9.9005699157714844,
-        position_z = -182.47994995117188,
-        rotation_x = 0,
-        rotation_y = 98.729415893554688,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025F6E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025FDA0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025F920]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025F9E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025F520]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.9885959625239",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 000002808025FF60]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025FFA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F160]]
-    } --[[table: 000002808025FDE0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025F8A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -908.27679443359375,
-        position_y = 58.33740234375,
-        position_z = -807.25067138671875,
-        rotation_x = 0,
-        rotation_y = 70.222480773925781,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025F5E0]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025F660]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025FB60]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025FD20]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025F220]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.9719190597531",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.9719190597531"
-      } --[[table: 000002808025FFE0]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F2A0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F860]]
-    } --[[table: 000002808025F560]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025F3A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = 254.59385681152344,
-        position_y = 62.377098083496094,
-        position_z = -682.8770751953125,
-        rotation_x = 0,
-        rotation_y = 32.775032043457031,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 0000028080260120]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025FD60]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025FB20]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025FBA0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025F620]],
-      {
-        Name = "Script",
-        attackAI = "Pursue",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "0.36698532104493",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.36698532104493"
-      } --[[table: 000002808025FE20]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F320]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F1E0]]
-    } --[[table: 00000280802600E0]],
-    EntityName = "Spiky"
-  } --[[table: 00000280802600A0]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -1405.977783203125,
-        position_y = 53.858695983886719,
-        position_z = -690.99993896484375,
-        rotation_x = 0,
-        rotation_y = 78.426322937011719,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025F420]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025FC20]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025F260]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025F7E0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025F8E0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.9401731491084",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "0.34970569610596"
-      } --[[table: 000002808025F960]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025F460]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 000002808025FC60]]
-    } --[[table: 000002808025FEA0]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025FE60]],
-  {
-    Components = {
-      {
-        Name = "Transform",
-        position_x = -902.02142333984375,
-        position_y = 69.798286437988281,
-        position_z = -1117.1939697265625,
-        rotation_x = 0,
-        rotation_y = 59.853446960449219,
-        rotation_z = 0,
-        scale_x = 1,
-        scale_y = 1,
-        scale_z = 1
-      } --[[table: 000002808025FA60]],
-      {
-        ModelID = "SPIKY",
-        Name = "MeshRenderer",
-        ShaderID = 3
-      } --[[table: 000002808025FCE0]],
-      {
-        Name = "Animation"
-      } --[[table: 000002808025FAA0]],
-      {
-        Name = "Physics",
-        centerOffset_x = 0,
-        centerOffset_y = 10,
-        centerOffset_z = 0,
-        halfExtents_x = 3,
-        halfExtents_y = 10,
-        halfExtents_z = 3,
-        isStatic = false,
-        mass = 1,
-        shape = "capsule",
-        useCCD = false,
-        useGravity = true
-      } --[[table: 000002808025FAE0]],
-      {
-        Name = "FSM"
-      } --[[table: 000002808025FEE0]],
-      {
-        Name = "Script",
-        attackAI = "Chase",
-        fileName = "testpokeyvars.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\",
-        liveTime = "0",
-        moveX = "0",
-        moveY = "0",
-        moveZ = "0",
-        movementSpeed = "90",
-        playerAlertTimer = "4.9236674308772",
-        playerAttackCooldown = "2.0",
-        playerCheckTimer = "4.9236674308772"
-      } --[[table: 0000028080260660]],
-      {
-        Name = "Script",
-        fileName = "testpokeyscript.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080260DA0]],
-      {
-        Name = "Script",
-        fileName = "pokeycomm.lua",
-        filePath = "..\\data\\luaScripts\\enemies\\"
-      } --[[table: 0000028080260620]]
-    } --[[table: 000002808025FA20]],
-    EntityName = "Spiky"
-  } --[[table: 000002808025FCA0]]
-} --[[table: 00000280FF50B1B0]]
+  } --[[table: 0000025F43C0F520]]
+} --[[table: 0000025F419647E0]]
