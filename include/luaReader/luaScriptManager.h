@@ -23,7 +23,7 @@ class LuaScriptManager {
 
 public:
 
-	/* luaScriptManager
+	/** luaScriptManager
 	* @author - Seb D'Alessandro
 	* @brief - Default constructor
 	* @pre - N/A
@@ -33,7 +33,7 @@ public:
 	LuaScriptManager();
 
 
-	/* LuaEngineFunctionality copy constructor
+	/** LuaEngineFunctionality copy constructor
 	* @author - Seb D'Alessandro
 	* @brief - Deleted copy constructor (please dont copy me)
 	* @pre - N/A
@@ -43,7 +43,7 @@ public:
 	*/
 	LuaScriptManager(LuaScriptManager& other) = delete;
 
-	/* =Operator overload
+	/** =Operator overload
 	* @author - Seb D'Alessandro
 	* @brief - Deleted assignment operator overload (please dont copy me)
 	* @pre - N/A
@@ -54,7 +54,7 @@ public:
 	LuaScriptManager& operator=(LuaScriptManager& other) = delete;
 
 
-	/* addLuaFile
+	/** addLuaFile
 	* @author - Seb D'Alessandro
 	* @brief - Adds a lua file to this object
 	* @pre - ScriptFile is instantiated with a path and a name to a valid lua file
@@ -64,7 +64,7 @@ public:
 	*/
 	void addLuaFile(const ScriptFile newFile);
 
-	/* totalFiles
+	/** totalFiles
 	* @author - Seb D'Alessandro
 	* @brief - Returns the total amount of files this object has
 	* @pre - N/A
@@ -74,7 +74,7 @@ public:
 	const int totalFiles() const;
 
 
-	/* operator[] overload
+	/** operator[] overload
 	* @author - Seb D'Alessandro
 	* @brief - Accesses indivudal lua files by index
 	* @pre - Theres atleast a lua file that exists in luaScriptManager
@@ -86,7 +86,7 @@ public:
 
 
 
-	/* searchForFile
+	/** searchForFile
 	* @author - Seb D'Alessandro
 	* @brief - Linearly searches for a script file in scriptManager
 	* @pre - Theres atleast a lua file that exists in luaScriptManager

@@ -20,7 +20,7 @@ using std::string;
 
 //----------------------------------
 
-/* scriptGlobal
+/** scriptGlobal
 * @author - Seb D'Alessandro
 * @brief - Stores general infomation about a global variable from a scripting lanauge
 */

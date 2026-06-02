@@ -16,7 +16,7 @@
 //Namespaces----------------------------
 using std::string;
 
-/* containsString
+/** containsString
 * @author - Seb D'Alessandro
 * @brief - Checks if a string contains another string
 * @pre - stringToFind and lineToCompare are constructed
@@ -32,7 +32,7 @@ int containsString(const string& const stringToFind, const string& const lineToC
 //-----------------------------------------------------------------------------------------
 
 
-/* totalSpecifedCharsIn
+/** totalSpecifedCharsIn
 * @author - Seb D'Alessandro
 * @brief - Counts the amount of instances of a character in a string
 * @pre - String isn't empty
@@ -46,7 +46,7 @@ int totalSpecifedCharsIn(const string& const stringToSearch, const char charToFi
 
 //-----------------------------------------------------------------------------------------
 
-/* replaceCharactersInString
+/** replaceCharactersInString
 * @author - Seb D'Alessandro
 * @brief - Replaces a character in a string with another
 * @pre - N/A, but surely you want to analyse a meaningful string
@@ -61,7 +61,7 @@ string replaceCharactersInString(const char targetCharacter, const char replacem
 
 //-----------------------------------------------------------------------------------------
 
-/* indexOfNonSpaceCharacter
+/** indexOfNonSpaceCharacter
 * @author - Seb D'Alessandro
 * @brief - Finds the index of the first non-space character in a string
 * @pre - String is constructed
@@ -74,7 +74,7 @@ int indexOfNonSpaceCharacter(const string& const stringToAnalyse);
 
 //-----------------------------------------------------------------------------------------
 
-/* stripSpaces
+/** stripSpaces
 * @author - Seb D'Alessandro
 * @brief - Removes all spaces from a string
 * @pre - startingIndex is positive, line is constructed
@@ -88,7 +88,7 @@ string stripSpaces(const string& const line, int startingIndex);
 
 //-----------------------------------------------------------------------------------------
 
-/* isNumber
+/** isNumber
 * @author - Seb D'Alessandro
 * @brief - Checks if a string is an integer
 * @pre - String is constructed

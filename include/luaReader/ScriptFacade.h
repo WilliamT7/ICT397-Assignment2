@@ -20,7 +20,7 @@ class ScriptFacade {
 
 public:
 	
-	/* run
+	/** run
 	* @author - Seb D'Alessandro
 	* @brief - Parameterised virtual consutrctor for specifying a scriptFile to execute0
 	* @pre - ScriptFile contains the location of a script file and the file name. Both of these are valid

@@ -20,7 +20,7 @@ class LuaEngineFunctionality {
 
 public:
 
-	/* LuaEngineFunctionality
+	/** LuaEngineFunctionality
 	* @author - Seb D'Alessandro
 	* @brief - Default constructor
 	* @pre - N/A
@@ -30,7 +30,7 @@ public:
 	*/
 	LuaEngineFunctionality() = default;
 
-	/* LuaEngineFunctionality copy constructor
+	/** LuaEngineFunctionality copy constructor
 	* @author - Seb D'Alessandro
 	* @brief - Deleted copy constructor (please dont copy me)
 	* @pre - N/A
@@ -40,7 +40,7 @@ public:
 	*/
 	LuaEngineFunctionality(LuaEngineFunctionality& other) = delete;
 	
-	/* =Operator overload
+	/** =Operator overload
 	* @author - Seb D'Alessandro
 	* @brief - Deleted assignment operator overload (please dont copy me)
 	* @pre - N/A
@@ -51,7 +51,7 @@ public:
 	LuaEngineFunctionality& operator=(LuaEngineFunctionality& other) = delete;
 
 
-	/* passWindowFunctionality
+	/** passWindowFunctionality
 	* @author - Seb D'Alessandro
 	* @brief - Passes a pointer to a window to this object (if none is assigned)
 	* @pre - No pointer to a window has been previously passed
@@ -62,7 +62,7 @@ public:
 	void passWindowFunctionality(Window* windowPointer);
 
 
-	/* windowFuncAssigned
+	/** windowFuncAssigned
 	* @author - Seb D'Alessandro
 	* @brief - Returns a bool that indicates if the windowPointer has been previously assigned or not to this object
 	* @pre - N/A
@@ -120,7 +120,7 @@ private:
 };
 
 
-/* initaliseLuaEngineLinks
+/** initaliseLuaEngineLinks
 * @author - Seb D'Alessandro
 * @brief - Initalises luaFunctionlaity Singleton 
 * @pre - LuaEngineFunctionlity singleton has not been initalised, window is constructed

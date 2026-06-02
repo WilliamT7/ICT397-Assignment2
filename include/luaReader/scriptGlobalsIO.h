@@ -22,7 +22,7 @@ using std::ostream;
 
 //--------------------------------------------
 
-/* <<operator overload
+/** <<operator overload
 * @author - Seb D'Alessandro
 * @brief - << Operator overload for outputing the contents of a global
 * @pre - N/A 
@@ -35,7 +35,7 @@ ostream& operator <<(ostream& os, const scriptGlobal& const global);
 
 //-------------------------------------------------------
 
-/* extractGlobal
+/** extractGlobal
 * @author - Seb D'Alessandro
 * @brief - Converts data given by line into a ScriptGlobal, then dumps it in
 * @pre - line has data approraite for a lua global
@@ -48,7 +48,7 @@ void extractGlobal(const string& const line, ScriptFile& const luaScript);
 
 //-------------------------------------------------------
 
-/* getGlobalType
+/** getGlobalType
 * @author - Seb D'Alessandro
 * @brief - Returns what type from supportedDatatypes variableValue would be
 * @pre - VariableValue is the value of a global
@@ -59,7 +59,7 @@ void extractGlobal(const string& const line, ScriptFile& const luaScript);
 supportedDatatypes getGlobalType(const string& const variableValue);
 
 //-------------------------------------------------------
-/* isGlobal
+/** isGlobal
 * @author - Seb D'Alessandro
 * @brief - Checks if a string roughly coressponds to a global in lua
 * @pre - currentLine is a string from a .lua file

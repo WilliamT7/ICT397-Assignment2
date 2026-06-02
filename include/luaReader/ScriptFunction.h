@@ -63,7 +63,7 @@ public:
 	const string& const getName() const;
 
 
-	/* getParameterCount
+	/** getParameterCount
 	* @author - Seb D'Alessandro
 	* @brief - Gets the total amount of parameters the function accepts
 	* @pre - N/A, 0 is assumed default
@@ -74,7 +74,7 @@ public:
 	int getParameterCount() const;
 
 
-	/* getReturnCount
+	/** getReturnCount
 	* @author - Seb D'Alessandro
 	* @brief - Gets the total amount of values returned by the function
 	* @pre - N/A, 0 is assumed default
@@ -96,7 +96,7 @@ public:
 	**/
 	supportedDatatypes getParamaterAt(const int index) const;
 
-	/* getReturnTypeAt
+	/** getReturnTypeAt
 	* @author - Seb D'Alessandro
 	* @brief - Gets the data type of a return value at a particular index
 	* @pre - Added an indication that this lua function returns a value
@@ -109,7 +109,7 @@ public:
 
 	//Setters------------------------
 
-	/* setFunctionName
+	/** setFunctionName
 	* @author - Seb D'Alessandro
 	* @brief - Sets the name of the luaFunction
 	* @pre - newFunctionName is preivously verified to be a function that exists from a particular lua file
@@ -122,7 +122,7 @@ public:
 	**/
 	void setFunctionName(string newFunctionName);
 
-	/* addParameter
+	/** addParameter
 	* @author - Seb D'Alessandro
 	* @brief - Adds a luaDatatype as a parameter to this object
 	* @pre - this object represents an existing lua function
@@ -134,7 +134,7 @@ public:
 	void addParameter(supportedDatatypes dataType);
 
 
-	/* addReturnType
+	/** addReturnType
 	* @author - Seb D'Alessandro
 	* @brief - Adds a luaDatatype as a return value to this object
 	* @pre - this object represents an existing lua function

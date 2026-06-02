@@ -12,23 +12,13 @@
 #include "messaging/telegram.h"
 #include "ECS/Entity.h"
 
-//Built-in files-------------------
-#include <set>
-
-//Namespaces----------------------
-using std::set;
-
-
-//---------------------------------
-//NOTE: maybe dont use delta time? somehow access current and previous frame and use that for time instead
-
 //Class---------------------------------
 
 class MessageDispatcher {
 
 public:
 	
-	/* MessageDispatcher
+	/** MessageDispatcher
 	* @author - Seb D'Alessandro
 	* @brief - Default constructor
 	* @pre - N/A
@@ -37,7 +27,7 @@ public:
 	*/
 	MessageDispatcher() = default;
 
-	/* dispatchMessage
+	/** dispatchMessage
 	* @author - Seb D'Alessandro
 	* @brief - sends a message to an entity if it exists
 	* @pre - N/A
@@ -48,7 +38,7 @@ public:
 	void dispatchMessage(telegram& message);
 
 
-	/* linkEnitityList
+	/** linkEnitityList
 	* @author - Seb D'Alessandro
 	* @brief - Stores a pointer of uniquePotiners of entitys in messageDispatcher specifed by parameter
 	* @pre - N/A
@@ -66,7 +56,7 @@ private:
 	vector<ECS::Entity*>* entityList = nullptr;
 
 
-	/* sendMessage
+	/** sendMessage
 	* @author - Seb D'Alessandro
 	* @brief - Sends a message to an entity at recieverIndex
 	* @pre - ReciverIndex is >0 < size of entity list
@@ -78,7 +68,7 @@ private:
 	void sendMessage(const int recieverIndex,  telegram& message);
 
 
-	/* IDExist
+	/** IDExist
 	* @author - Seb D'Alessandro
 	* @brief - Checks if an entity with a specifed ID exists in entity list and returns the index in which the entity is at
 	* @pre - N/A
