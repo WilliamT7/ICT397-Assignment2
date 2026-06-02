@@ -27,7 +27,7 @@ void ECS::Scene::Init(BulletPhysicsWorld* physicsWorld, const char* fileName)
 	//Link message disptacher with entity list
 	//TODO deal with cases to do with loading a new scene
 	MessageDispatcher* messageManager = Singleton<MessageDispatcher>::getInstance();
-	messageManager->linkEntityList(&entities);
+	messageManager->linkEntityList(m_activeEntities);
 
 }
 
@@ -160,7 +160,7 @@ void ECS::Scene::Update(float deltaTime)
 		{
 			Entity* destroyedEntity = m_activeEntities[i];
 
-			PhysicsTriggerComponent::RemoveEntityFromAllTriggers(destroyedEntity, entities);
+			PhysicsTriggerComponent::RemoveEntityFromAllTriggers(destroyedEntity, m_activeEntities);
 
 			auto it = m_poolOwner.find(destroyedEntity);
 			if (it != m_poolOwner.end())
@@ -168,8 +168,11 @@ void ECS::Scene::Update(float deltaTime)
 				it->second->Despawn(destroyedEntity);
 				m_poolOwner.erase(it);
 			}
+			else
+			{
+				entities.erase(entities.begin() + i);
+			}
 
-			entities.erase(entities.begin() + i);
 			m_activeEntities.erase(m_activeEntities.begin() + i);
 		}
 			

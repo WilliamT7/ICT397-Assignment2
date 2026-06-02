@@ -3,7 +3,7 @@
 
 //------------------------------------------------------------------
 
-int searchForEntityByID(const vector<std::unique_ptr<ECS::Entity>>& entityList, const int IDToSearch) {
+int searchForEntityByID(const vector<Entity*>& entityList, const int IDToSearch) {
 
 	const int totalEntities = entityList.size();
 	int foundIndex = -1;

@@ -25,9 +25,9 @@ void MessageDispatcher::dispatchMessage(telegram& message) {
 
 //------------------------------------------------------
 
-void MessageDispatcher::linkEntityList(vector<std::unique_ptr<ECS::Entity>>* nEntityList) {
+void MessageDispatcher::linkEntityList(vector<ECS::Entity*>& nEntityList) {
 
-	entityList = nEntityList;
+	entityList = &nEntityList;
 }
 
 

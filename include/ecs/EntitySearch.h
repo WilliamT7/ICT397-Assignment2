@@ -17,10 +17,10 @@
 
 //Namespaces---------------------------------
 using std::vector;
-
+using namespace ECS;
 
 //---------------------------------------------
 
-int searchForEntityByID(const vector<std::unique_ptr<ECS::Entity>>& entityList, const int IDToSearch);
+int searchForEntityByID(const vector<Entity*>& entityList, const int IDToSearch);
 
 //----------------------------------------------
