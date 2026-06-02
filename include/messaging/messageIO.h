@@ -24,7 +24,7 @@ using std::ostream;
 //------------------------------------------------
 
 
-/* readMessages
+/** readMessages
 * @author - Seb D'Alessandro
 * @brief - Reads messages from a given .txt file into a singleton containing a messageList object
 * @pre -  N/A 
@@ -36,7 +36,7 @@ bool readMessages(const string& const filePath);
 
 
 
-/* << operator overload
+/** << operator overload
 * @author - Seb D'Alessandro
 * @brief - Displays the contents of a MessageList object
 * @pre -  N/A

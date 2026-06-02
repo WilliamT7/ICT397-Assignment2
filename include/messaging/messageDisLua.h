@@ -22,7 +22,7 @@ using std::string;
 //-------------------------------------------------
 
 
-/* sendMessage
+/** sendMessage
 * @author - Seb D'Alessandro
 * @brief - sends a message to an entity based off ID, specifed in telegram
 * @pre - Recivever ID exists in scene

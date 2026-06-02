@@ -79,7 +79,7 @@ struct Vector3
 	}
 
 
-	/* length
+	/** length
 	* @author - Seb D'Alessandro
 	* @brief - calculates the length/magitude of the vector
 	* @pre - N/A
@@ -89,7 +89,7 @@ struct Vector3
 	const float length() const;
 	
 
-	/* isZero
+	/** isZero
 	* @author - Seb D'Alessandro
 	* @brief - checks if all axis's of the vector are 0
 	* @pre - N/A
@@ -101,7 +101,7 @@ struct Vector3
 
 	//Operator overloads--------------- omg i love them so much
 
-	/* -operator overload
+	/** -operator overload
 	* @author - Seb D'Alessandro
 	* @brief - - operator overload for subtracting two vectors
 	* @pre - N/A
@@ -111,7 +111,7 @@ struct Vector3
 	*/
 	Vector3 operator-(const Vector3& const otherVector) const;
 	
-	/* +operator overload
+	/** +operator overload
 	* @author - Seb D'Alessandro
 	* @brief - + operator overload for adding two vectors
 	* @pre - N/A
@@ -122,7 +122,7 @@ struct Vector3
 	Vector3 operator+(const Vector3& const otherVector) const;
 
 
-	/* *operator overload
+	/** *operator overload
 	* @author - Seb D'Alessandro
 	* @brief - * operator overload multiplying a vector by a float
 	* @pre - N/A
@@ -133,7 +133,7 @@ struct Vector3
 	Vector3 operator*(const float& number) const;
 	
 
-	/* -operator overload
+	/** -operator overload
 	* @author - Seb D'Alessandro
 	* @brief - - operator overload for getting the opposite version of this vector (e.g. turn postive values to negative, negative to positve)
 	* @pre - N/A
@@ -143,7 +143,7 @@ struct Vector3
 	Vector3 operator-() const;
 
 
-	/* ==operator overload
+	/** ==operator overload
 	* @author - Seb D'Alessandro
 	* @brief - == operator overload for comparing vectors
 	* @pre - N/A
@@ -154,7 +154,7 @@ struct Vector3
 	bool operator==(const Vector3& const otherVector) const;
 
 
-	/* +=operator overload
+	/** +=operator overload
 	* @author - Seb D'Alessandro
 	* @brief - += operator overload for adding two vectors
 	* @pre - N/A
@@ -165,7 +165,7 @@ struct Vector3
 	void operator+=(const Vector3& const otherVector);
 
 
-	/* *operator overload
+	/** *operator overload
 	* @author - Seb D'Alessandro
 	* @brief - * operator overload for multiplying two vectors
 	* @pre - N/A
@@ -179,16 +179,27 @@ struct Vector3
 
 //----------------------------------------------
 
-/* <<operator overload
+/** <<operator overload
 * @author - Seb D'Alessandro
 * @brief - << operator overload for vector3
 * @pre - N/A
 * @post - contents of the vector are output
+* @param os - ostream
+* @param vector3 - vector to output
 * @return - ostream: ostream
 */
 ostream& operator <<(ostream& os, Vector3& const vector);
 
 
+/** dotProduct
+* @author - Seb D'Alessandro
+* @brief - gets the dot product between two vectors
+* @pre - N/A
+* @post - dot product of v1 and v2 is calculated and returned
+* @param v1 - first vector 
+* @param v2 - second vector
+* @return - float: dot product of v1 and v2
+*/
 float dotProduct(Vector3& const v1, Vector3& const v2);
 
 

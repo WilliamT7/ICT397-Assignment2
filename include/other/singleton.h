@@ -16,7 +16,7 @@ class Singleton {
 public:
 
 
-	/* getInstance
+	/** getInstance
 	* @author - Seb D'Alessandro
 	* @brief - Gets an instance of the singleton
 	* @pre - N/A
@@ -34,7 +34,7 @@ public:
 private:
 
 
-	/* Singleton()
+	/** Singleton()
 	* @author - Seb D'Alessandro
 	* @brief - Default construtor
 	* @pre - getInstance is called
@@ -44,20 +44,20 @@ private:
 	Singleton();
 
 
-	/* ~Destructor
+	/** ~Destructor
 	* @author - Seb D'Alessandro
 	* @brief - DELETED destructor, singletons shouldn't destruct themselves
 	*/
 	~Singleton() = delete;
 
-	/* copy constructor
+	/** copy constructor
 	* @author - Seb D'Alessandro
 	* @brief - DELETED copy constructor, singletons shouldn't be copied
 	*/
 	Singleton(const Singleton& st) = delete;
 
 
-	/* operator = overload
+	/** operator = overload
 	* @author - Seb D'Alessandro
 	* @brief - DELETED copy constructor, singletons shouldn't be copied
 	*/

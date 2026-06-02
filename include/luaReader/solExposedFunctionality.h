@@ -13,7 +13,7 @@
 
 //--------------------------------
 
-/* exposeEntity
+/** exposeEntity
 * @author - Seb D'Alessandro
 * @brief - Exposes entity object to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -24,7 +24,7 @@
 void exposeEntity(sol::state_view& solView);
 
 
-/* exposeSolScripting
+/** exposeSolScripting
 * @author - Seb D'Alessandro
 * @brief - Exposes Solscripting object for solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -35,7 +35,7 @@ void exposeEntity(sol::state_view& solView);
 void exposeSolScripting(sol::state_view& solView);
 
 
-/* exposeWindowFunctionality
+/** exposeWindowFunctionality
 * @author - Seb D'Alessandro
 * @brief - Exposes general window functionality to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -46,7 +46,7 @@ void exposeSolScripting(sol::state_view& solView);
 void exposeWindowFunctionality(sol::state_view& solView);
 
 
-/* exposeVector
+/** exposeVector
 * @author - Seb D'Alessandro
 * @brief - Exposes vector struct to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -57,7 +57,7 @@ void exposeWindowFunctionality(sol::state_view& solView);
 void exposeVectors(sol::state_view& solView);
 
 
-/* exposeTextureRenderer
+/** exposeTextureRenderer
 * @author - Seb D'Alessandro
 * @brief - Exposes textureRenderer component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -68,7 +68,7 @@ void exposeVectors(sol::state_view& solView);
 void exposeTextureRenderer(sol::state_view& solView);
 
 
-/* exposeScriptComponent
+/** exposeScriptComponent
 * @author - Seb D'Alessandro
 * @brief - Exposes script component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -79,7 +79,7 @@ void exposeTextureRenderer(sol::state_view& solView);
 void exposeScriptComponent(sol::state_view& solView);
 
 
-/* exposeTransform
+/** exposeTransform
 * @author - Seb D'Alessandro
 * @brief - Exposes transform component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -90,7 +90,7 @@ void exposeScriptComponent(sol::state_view& solView);
 void exposeTransform(sol::state_view& solView);
 
 
-/* exposeCamera
+/** exposeCamera
 * @author - Seb D'Alessandro
 * @brief - Exposes camera component to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -101,7 +101,7 @@ void exposeTransform(sol::state_view& solView);
 void exposeCamera(sol::state_view& solView);
 
 
-/* exposeLighting
+/** exposeLighting
 * @author - Seb D'Alessandro
 * @brief - exposes lighting component to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -112,7 +112,7 @@ void exposeCamera(sol::state_view& solView);
 void exposeLighting(sol::state_view& solView);
 
 
-/* exposeTerrain
+/** exposeTerrain
 * @author - Seb D'Alessandro
 * @brief - Exposes terrain component to Lua	
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -123,8 +123,8 @@ void exposeLighting(sol::state_view& solView);
 void exposeTerrain(sol::state_view& solView);
 
 
-/* exposePhysics
-* @author - 
+/** exposePhysics
+* @author - Seb D'Alessandro? Maybe Will?
 * @brief - exposes physics component to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
 * @post - physics component is exposed to Lua
@@ -145,7 +145,7 @@ void exposePhysics(sol::state_view& solView);
 void exposePhysicsTrigger(sol::state_view& solView);
 
 
-/* exposeScriptGlobal
+/** exposeScriptGlobal
 * @author - Seb D'Alessandro
 * @brief - exposes a script global to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -156,7 +156,7 @@ void exposePhysicsTrigger(sol::state_view& solView);
 void exposeScriptGlobal(sol::state_view& solView);
 
 
-/* exposeFSM
+/** exposeFSM
 * @author - Seb D'Alessandro
 * @brief - exposes FSM to Lua
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -177,7 +177,7 @@ void exposeFSM(sol::state_view& solView);
 void exposeSceneFunctionality(sol::state_view& solView);
 
 
-/* exposeAIBehaviours
+/** exposeAIBehaviours
 * @author - Seb D'Alessandro
 * @brief - Exposes a range of AI behaviours to a solView for Lua to use
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -188,7 +188,7 @@ void exposeSceneFunctionality(sol::state_view& solView);
 void exposeAIBehaviours(sol::state_view& solView);
 
 
-/* exposeTime
+/** exposeTime
 * @author - Seb D'Alessandro
 * @brief - Exposes functions to get the time from the engine
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -198,7 +198,7 @@ void exposeAIBehaviours(sol::state_view& solView);
 */
 void exposeTime(sol::state_view& solView);
 
-/* exposeMessageDispatcher
+/** exposeMessageDispatcher
 * @author - Seb D'Alessandro
 * @brief - Exposes functionality to send messages
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
@@ -209,7 +209,7 @@ void exposeTime(sol::state_view& solView);
 void exposeMessageDispatcher(sol::state_view& solView);
 
 
-/* exposeAniamtor
+/** exposeAniamtor
 * @author - Seb D'Alessandro, Kay Bradsell
 * @brief - Exposes functionality from animator
 * @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)

@@ -56,7 +56,7 @@ typedef struct telegram {
 	string scriptFunctionName = "";
 
 
-	/* telegram
+	/** telegram
 	* @author - Seb D'Alessandro
 	* @brief - default constructor
 	* @pre - N/A
@@ -97,7 +97,7 @@ Known Incompatiable data types to attach to a telegram
 */
 
 
-/* operator== overload
+/** operator== overload
 * @author - Seb D'Alessandro
 * @brief - operator== overload for checking if two telegrams are the same
 * @pre - N/A
@@ -109,7 +109,7 @@ Known Incompatiable data types to attach to a telegram
 bool operator==(const telegram& telegramA, const telegram& telegramB);
 
 
-/* operator< overload
+/** operator< overload
 * @author - Seb D'Alessandro
 * @brief - operator< overload for checking which telegram is bigger
 * @pre - N/A

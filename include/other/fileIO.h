@@ -21,7 +21,7 @@ using std::ostream;
 
 
 //-----------------------------------
-/* directoryInfomation
+/** directoryInfomation
 * @author - Seb D'Alessandro
 * @brief Stores infomation about a directory from a file system
 */
@@ -34,7 +34,7 @@ typedef struct directoryInfomation {
 
 //-------------------------------------
 
-/* pathExists
+/** pathExists
 * @author - Seb D'Alessandro
 * @brief - Checks if a particular path exists
 * @pre - The name of the lua file exists somewhere
@@ -45,7 +45,7 @@ typedef struct directoryInfomation {
 bool pathExists(const string& const path);
 
 
-/* createDirectoryFile
+/** createDirectoryFile
 * @author - Seb D'Alessandro
 * @brief - Create a unique .txt file of all files from a directory specified in filePath
 * @pre - filePath is considered valid
@@ -59,7 +59,7 @@ bool pathExists(const string& const path);
 const string createDirectoryFile(const string& const filePath, const string& const baseFileName);
 
 
-/* scanDir
+/** scanDir
 * @author - Seb D'Alessandro
 * @brief - Recursively looks in a directory for any file with a specifed file extension
 * @pre - DirectoryInfo has the path attribute filled out
@@ -75,7 +75,7 @@ const string createDirectoryFile(const string& const filePath, const string& con
 bool scanDir(directoryInfomation& const directoryInfo, const string& const fileExtension, int recurseLimit);
 
 
-/* operator << overload
+/** operator << overload
 * @author - Seb D'Alessandro
 * @brief - Sends the contents of directoryInfomation structs to a output stream
 * @pre - N/A, Maybe you want dirInfo to be filled out?

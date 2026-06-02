@@ -27,7 +27,7 @@ class SolScripting : public ScriptFacade {
 public:
 
 
-	/* SolScripting
+	/** SolScripting
 	* @author - Seb D'Alessandro
 	* @brief - Default constructor
 	* @pre - N/A
@@ -36,7 +36,7 @@ public:
 	*/
 	SolScripting();
 
-	/* SolScripting Copy constructor
+	/** SolScripting Copy constructor
 	* @author - Seb D'Alessandro
 	* @brief - Copy constructor
 	* @pre - Another solscripting object is constructed
@@ -45,7 +45,7 @@ public:
 	*/
 	SolScripting(SolScripting& otherSolFacade);
 
-	/* =operator overload
+	/** =operator overload
 	* @author - Seb D'Alessandro
 	* @brief - Operator overload for SolScripting
 	* @pre - Another solscripting object is constructed
@@ -55,7 +55,7 @@ public:
 	const SolScripting& operator=(const SolScripting& otherSolFacade);
 
 
-	/* SolScripting destructor
+	/** SolScripting destructor
 	* @author - Seb D'Alessandro
 	* @brief - Destructor
 	* @pre - Object becomes out of scope
@@ -67,7 +67,7 @@ public:
 
 	//Run functions----------------------
 
-	/* run
+	/** run
 	* @author - Seb D'Alessandro
 	* @brief - Runs a function within a lua script and exposes entity component functions
 	* @pre - file has the contents of a luafile and is considered valid (i.e. it exists), function name exists in file
@@ -111,7 +111,7 @@ public:
 
 
 
-	/* runByFileName
+	/** runByFileName
 	* @author - Seb D'Alessandro
 	* @brief - runs a file by filename
 	* @pre - file exists 
@@ -126,7 +126,7 @@ public:
 
 private:
 
-	/* exposeEngineFunctions
+	/** exposeEngineFunctions
 	* @author - Seb D'Alessandro
 	* @brief - Exposes engine functions to lua/sol for use
 	* @pre - run() is executed (and no code has been run yet)
@@ -136,7 +136,7 @@ private:
 	*/
 	void exposeEngineFunctions(sol::state_view& solView);
 
-	/* updateGlobals
+	/** updateGlobals
 	* @author - Seb D'Alessandro
 	* @brief - Updates globals in a lua file, if they are modifed in scriptFile
 	* @pre - run() is executed (and no code has been run yet), sol/lua is initalised
@@ -147,7 +147,7 @@ private:
 	*/
 	void updateGlobals(sol::state_view& solView, ScriptFile& const file) const;
 
-	/* exposeEntityCompeonts
+	/** exposeEntityCompeonts
 	* @author - Seb D'Alessandro
 	* @brief - Updates globals in a lua file, if they are modifed in scriptFile
 	* @pre - run() is executed (and no code has been run yet), sol/lua is initalised

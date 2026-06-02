@@ -8,7 +8,10 @@
 *********************************************/
 #pragma once
 
-///Struct for storing time (frames and delta time)
+/** engineTime
+* @author - Seb D'Alessandro
+* @brief - Struct for storing time (frames and delta time)
+*/
 typedef struct engineTime {
 	
 	float currentFrame = 0.0f;
@@ -18,7 +21,7 @@ typedef struct engineTime {
 }engineTime;
 
 
-/* getCurrentFrame
+/** getCurrentFrame
 * @author - Seb D'Alessandro
 * @brief - gets the current frame from a engineClock singleton
 * @pre - N/A
@@ -28,7 +31,7 @@ typedef struct engineTime {
 float getCurrentFrame();
 
 
-/* getPreviousFrame
+/** getPreviousFrame
 * @author - Seb D'Alessandro
 * @brief - gets the previous frame from a engineClock singleton
 * @pre - N/A
@@ -38,7 +41,7 @@ float getCurrentFrame();
 float getPreviousFrame();
 
 
-/* getDeltaTime
+/** getDeltaTime
 * @author - Seb D'Alessandro
 * @brief - gets deltatime from a engineClock singleton
 * @pre - N/A
