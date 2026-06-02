@@ -210,16 +210,15 @@ void SolScripting::updateGlobals(sol::state_view& solView, ScriptFile& const fil
 	for (int curGlobal = 0; curGlobal < totalGlobals; curGlobal++) {
 
 		scriptGlobal global = file.getGlobal(curGlobal);
-		string globalName = global.name;
 
 		if (global.dataType == engineFloat) {
-			solView.set(globalName, stof(global.value));
+			solView.set(global.name, stof(global.value));
 		}
 		else if (global.dataType == engineInteger) {
-			solView[globalName] = stoi(global.value);
+			solView[global.name] = stoi(global.value);
 		}
 		else {
-			solView[globalName] = global.value;
+			solView[global.name] = global.value;
 		}
 	}
 }
