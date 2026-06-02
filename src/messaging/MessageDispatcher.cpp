@@ -21,6 +21,9 @@ void MessageDispatcher::dispatchMessage(telegram& message) {
 	if (recieverIndex != -1) {
 		sendMessage(recieverIndex, message);
 	}
+	else {
+		cout << "[C++] MessageDispatcher Failed to send message to entity " << message.reciever << "\n";
+	}
 }
 
 //------------------------------------------------------

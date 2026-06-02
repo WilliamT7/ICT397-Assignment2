@@ -312,6 +312,10 @@ void Entity::handleMessage(telegram& message) {
 	recievedMessage = message;
 	bool runFunction = message.scriptFunctionName != "N/A";
 
+	if (!HasScriptComponent(message.scriptCompName)) {
+		cout << "[C++] handleMessage(), cant find scriptComponent :L\n";
+	}
+
 	if (HasScriptComponent(message.scriptCompName) && runFunction) {
 		
 		ScriptComponent& const scriptComponent = GetScriptComponent(message.scriptCompName);
