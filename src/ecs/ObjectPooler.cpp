@@ -65,6 +65,17 @@ namespace ECS
 			return;
 		}
 
+		if (e->HasComponent<PhysicsComponent>())
+		{
+			PhysicsComponent* phys = e->GetComponent <PhysicsComponent>();
+
+			if (phys != nullptr)
+			{
+				phys->ClearForces();
+				phys->ClearBody();
+			}
+		}
+
 		size_t index = it->second;
 		m_inactive.push(index);
 	}
