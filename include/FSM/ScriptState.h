@@ -42,10 +42,50 @@ public:
 	**/
 	ScriptState(string nStateName, ECS::Entity* entity);
 
+
+	/** ScriptState Copy Constructor
+	* @author - William Thorpe
+	* @brief - Copy constructor for ScriptState
+	* @pre - Another ScriptState object is constructed
+	* @post - Object is constructed, LuaState for the other object is not initalised
+	* @return - void
+	**/
 	ScriptState(const ScriptState& other);
+
+	/** =operator overload
+	* @author - William Thorpe
+	* @brief - Copy assignment operator for ScriptState
+	* @pre - Another ScriptState object is constructed
+	* @post - Object is assigned, LuaState for the other object is not initalised
+	* @return - void
+	**/
 	ScriptState& operator=(const ScriptState& other);
+
+	/** Move constructor
+	* @author - William Thorpe
+	* @brief - Move constructor for ScriptState
+	* @pre - Another ScriptState object is constructed
+	* @post - Object is constructed, LuaState for the other object is not initalised
+	* @return - void
+	**/
 	ScriptState(ScriptState&& other) noexcept = default;
+
+	/** Move assignment operator
+	* @author - William Thorpe
+	* @brief - Move assignment operator for ScriptState
+	* @pre - Another ScriptState object is constructed
+	* @post - Object is assigned, LuaState for the other object is not initalised
+	* @return - void
+	**/
 	ScriptState& operator=(ScriptState&& other) noexcept = default;
+
+	/** ~ScriptState
+	* @author - William Thorpe
+	* @brief - Destructor for ScriptState
+	* @pre - Object becomes out of scope
+	* @post - Object is destoryed, luaState is deallocated
+	* @return - void
+	**/
 	~ScriptState() = default;
 
 	//Getters--------------------------------

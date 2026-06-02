@@ -133,6 +133,15 @@ void exposeTerrain(sol::state_view& solView);
 */
 void exposePhysics(sol::state_view& solView);
 
+
+/** exposePhysicsTrigger
+* @author - William Thorpe
+* @brief - exposes physics trigger component to Lua
+* @pre - solView is instantiated properly (e.g. luaL_newstate() and other relevant functions)
+* @post - physics trigger component is exposed to Lua
+* @param solView - lua context to add solscripting to
+* @return - void
+**/
 void exposePhysicsTrigger(sol::state_view& solView);
 
 
