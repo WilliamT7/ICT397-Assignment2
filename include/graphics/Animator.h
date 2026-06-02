@@ -18,6 +18,13 @@ namespace Graphics
 	class Animator
 	{
 	public:
+		/** Animator
+		* @author - Kay Bradsell
+		* @brief - Default constructor
+		*
+		* @pre - none
+		* @post - creates Animator with null values
+		**/
 		Animator() = default;
 
 		/** Animator constructor

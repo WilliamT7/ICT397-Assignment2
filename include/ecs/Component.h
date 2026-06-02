@@ -36,6 +36,13 @@ namespace ECS
 	class Component
 	{
 	public:
+		/** ~Component
+		* @author - Kay Bradsell
+		* @brief - default destructor
+		*
+		* @pre - component has been constructed
+		* @post - deletes the data within this component
+		**/
 		virtual ~Component() = default;
 
 		/** Start

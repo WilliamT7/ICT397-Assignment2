@@ -27,6 +27,13 @@ namespace ECS
 	class ObjectPooler
 	{
 	public:
+		/** Object Pooler
+		* @author - Kay Bradsell
+		* @brief - default constructor
+		*
+		* @pre - none
+		* @post - creates empty ObjectPooler object
+		**/
 		ObjectPooler() = default;
 
 		/** Object Pooler constructor

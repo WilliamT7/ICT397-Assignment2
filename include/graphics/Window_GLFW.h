@@ -24,6 +24,13 @@
 class GLFWWindow : public Window
 {
 public:
+	/** GLFWWindow
+	* @author - Kay Bradsell
+	* @brief - default constructor
+	*
+	* @pre - none
+	* @post - creates default GLFWWindow object with null values
+	**/
 	GLFWWindow() = default;
 
 	/** Init

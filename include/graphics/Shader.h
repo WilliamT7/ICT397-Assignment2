@@ -36,6 +36,13 @@ namespace Graphics
 	class Shader
 	{
 	public:
+		/** ~Shader
+		* @author - Kay Bradsell
+		* @brief - default destructor
+		*
+		* @pre - Shader has been constructed
+		* @post - deletes the data in this shader
+		**/
 		virtual ~Shader() = default;
 
 		/** Use

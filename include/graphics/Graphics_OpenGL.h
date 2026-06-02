@@ -43,6 +43,13 @@ namespace Graphics
 	class GraphicsOpenGL : public Graphics
 	{
 	public:
+		/** Graphics OpenGL
+		* @author - Kay Bradsell
+		* @brief - Default constructor
+		*
+		* @pre - none
+		* @post - constructs graphicsOpenGL
+		**/
 		GraphicsOpenGL() = default;
 		
 		/** ~Graphics OpenGL

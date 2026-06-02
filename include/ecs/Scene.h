@@ -38,6 +38,13 @@ namespace ECS
 	class Scene
 	{
 	public:
+		/** Scene
+		* @author - Kay Bradsell
+		* @brief - default constructor
+		*
+		* @pre - none
+		* @post - constructs scene with null values
+		**/
 		Scene() = default;
 
 		/** Clear

@@ -25,8 +25,22 @@ namespace ECS
 	class TextureRendererComponent : public Component
 	{
 	public:
-		// default constructors/destructors do they even need doxygen lmao
+		/** Texture Renderer Component
+		* @author - Kay Bradsell
+		* @brief - default constructor
+		*
+		* @pre - none
+		* @post - creates texture renderer component with null values
+		**/
 		TextureRendererComponent() = default;
+
+		/** ~Texture Renderer Component
+		* @author - Kay Bradsell
+		* @brief - default destructor
+		*
+		* @pre - has been constructed
+		* @post - deletes all data
+		**/
 		~TextureRendererComponent() = default;
 
 		/** Set Texture
