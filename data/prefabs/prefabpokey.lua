@@ -1,5 +1,5 @@
 data = {
-  pooling = 120,
+  pooling = 250,
   entity =
     {
       Components = {
