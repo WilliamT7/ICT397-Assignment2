@@ -1,6 +1,11 @@
 local enemiesPerWave = 20
 local totalWaves = 6
 
+function start()
+	local b = GetSpawn("prefabbullet.lua")
+	b:Destroy()
+end
+
 function update()
 	vars = getScriptComponent(obj, "gamemanagervars")
 	local numEnemiesLeft = tonumber(vars:getGlobal("numEnemiesLeft").value)

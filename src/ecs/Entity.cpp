@@ -279,6 +279,13 @@ void ECS::Entity::Destroy()
 
 //----------------------------------------------
 
+void ECS::Entity::AbortDestroy()
+{
+	m_deleteFlag = false;
+}
+
+//----------------------------------------------
+
 bool ECS::Entity::isDestroy()
 {
 	return m_deleteFlag;

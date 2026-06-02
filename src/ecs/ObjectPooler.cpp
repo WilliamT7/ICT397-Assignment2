@@ -56,6 +56,8 @@ namespace ECS
 	{
 		if (!e) return;
 
+		e->AbortDestroy();
+
 		auto it = m_lookup.find(e);
 		if (it == m_lookup.end())
 		{

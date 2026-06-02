@@ -141,8 +141,6 @@ void ECS::Scene::Update(float deltaTime)
 
 	ProcessTriggers();
 
-	updateMessageDispatcher(deltaTime);
-
 	int size = m_activeEntities.size();
 
 	// update was here
@@ -276,8 +274,6 @@ ECS::Entity* ECS::Scene::GetSpawn(std::string prefabName)
 	m_activeEntities.push_back(spawned);
 	m_poolOwner[spawned] = pool;
 	spawned->Start();
-
-	std::cout << "\n\nCALLED START FOR " << spawned->GetName();
 
 	return spawned;
 }

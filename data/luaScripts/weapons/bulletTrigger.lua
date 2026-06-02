@@ -4,6 +4,8 @@ local trigger = nil
 
 function start()
     trigger = getPhysicsTrigger(obj)
+    age = 0.0
+    print("Reset age")
 end
 
 function getBulletTrigger()
@@ -16,6 +18,7 @@ end
 
 function update()
     age = age + getDeltaTime()
+    print("Bullet age "..age)
 
     if age >= lifeTime then
         destroy(obj)
