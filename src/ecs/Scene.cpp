@@ -552,12 +552,12 @@ void ECS::Scene::ProcessTriggers()
 	m_triggerEntities.clear();
 	m_physicsEntities.clear();
 
-	m_triggerEntities.reserve(entities.size());
-	m_physicsEntities.reserve(entities.size());
+	m_triggerEntities.reserve(m_activeEntities.size());
+	m_physicsEntities.reserve(m_activeEntities.size());
 
-	for (auto& entity : entities)
+	for (auto& entity : m_activeEntities)
 	{
-		Entity* e = entity.get();
+		Entity* e = entity;
 
 		if (e->HasComponent<PhysicsTriggerComponent>())
 		{
