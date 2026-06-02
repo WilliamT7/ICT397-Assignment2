@@ -54,6 +54,8 @@ const SolScripting& SolScripting::operator=(const SolScripting& otherSolFacade) 
 	return *this;
 }
 
+
+
 //----------------------------------------------
 bool SolScripting::load(ScriptFile& const file, ECS::Entity* entity) {
 
@@ -124,39 +126,6 @@ void SolScripting::runLoaded(ScriptFile& const file, string functionName, ECS::E
 	}
 }
 
-
-//-----------------------------------------------------------------------------------------
-
-void SolScripting::run(ScriptFile& const file, string functionName, ECS::Entity* entity) {
-
-	bool canRunFunction = file.isValid();
-	bool validFunctionParameters = true; //TODO: check if enough parameters have been passed
-
-	if (canRunFunction && validFunctionParameters) {
-		sol::state_view lua(LuaState);
-
-		luaL_dofile(LuaState, (file.getPathName() + file.getFileName()).c_str());
-		lua_getglobal(LuaState, functionName.c_str());
-		updateGlobals(lua, file);
-		exposeEngineFunctions(lua);
-
-		exposeEntityComponents(lua, entity);
-		
-		lua.set("obj", entity);
-		lua_call(LuaState, 0, 0); //TODO CHANGE TO REFLECT PARAMETER PASSING/ RETURN VALUES
-
-		//Probaly do the lua stack instead later for parameter passing
-
-		
-	}
-	else {
-		cout << "[C++] SolScripting.cs: Can't find function: " << functionName << " in " << file.getFileName() << "\n";
-		cout << "(Or the file is marked as invalid ( valid?: " << file.isValid() << " ))\n";
-
-	}
-
-}
-
 //----------------------------------------------
 
 void SolScripting::runByFileName(string fileName, string functionName, ECS::Entity* entity) {
@@ -210,16 +179,15 @@ void SolScripting::updateGlobals(sol::state_view& solView, ScriptFile& const fil
 	for (int curGlobal = 0; curGlobal < totalGlobals; curGlobal++) {
 
 		scriptGlobal global = file.getGlobal(curGlobal);
-		string globalName = global.name;
 
 		if (global.dataType == engineFloat) {
-			solView.set(globalName, stof(global.value));
+			solView.set(global.name, stof(global.value));
 		}
 		else if (global.dataType == engineInteger) {
-			solView[globalName] = stoi(global.value);
+			solView[global.name] = stoi(global.value);
 		}
 		else {
-			solView[globalName] = global.value;
+			solView[global.name] = global.value;
 		}
 	}
 }
