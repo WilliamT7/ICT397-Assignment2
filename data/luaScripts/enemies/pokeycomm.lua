@@ -1,5 +1,5 @@
-local minEntitySearchID = 5
-local maxEntitySearchID = 1000
+local minEntitySearchID = 1200
+local maxEntitySearchID = 1500
 
 local playerAttackRadius = 20
 local playerViewRadius = 500
@@ -25,6 +25,7 @@ local cachedPlayerID = nil
 local facePlayerTimer = 0.0
 local pokeyVariables = nil
 local pokeyAnimation = nil
+local amountPerWave = 20
 
 --FSM setup
 function start()
@@ -132,7 +133,7 @@ function scanEnvironment(pokeyVars)
             fsm = getPokeyFSM()
 			hasSeenPlayer = true
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
-            --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
+            print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
             alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
 			fsm:setState("Attack")
         end
@@ -154,7 +155,7 @@ function wanderUpdate()
 	local anim = getPokeyAnimation()
 	anim:play("idle")
 	
-	if not (PlayerCheckTimer < playerCheckInterval) then
+	if (PlayerCheckTimer > playerCheckInterval) then
 	
 		curPlayerAlertCheck = tonumber(pokeyVariables:getGlobal("playerAlertTimer").value)
 		
@@ -410,23 +411,27 @@ end
 
 
 function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, functionName)
+	print("CHECK")
 	if searchOrigin == nil or alertPosition == nil then
+		print("COOL CHECK")
 		return
 	end
 
     local pokeyIDs = getCachedPokeyIDs()
 	--_, means it doesnt care what the value is lol.
     for _, id in ipairs(pokeyIDs) do
+	print("iterating pokeys")
         local entity = GetEntity(id)
 		
         if isValidPokeyReceiver(entity) then
 			local otherEntity = entity:getID()
             local entityPosition = getEntityPosition(entity)
 			local pokeyRandomPos = randomisePosition(alertPosition, 15, otherEntity)
+			print("I am a valid pokey :)")
 			
 
             if entityPosition ~= nil and isWithinRadius(searchOrigin, entityPosition, radius) then
-                --print("[PokeyComm]: talking to pokey id " .. entity:getID())
+                print("[PokeyComm]: talking to pokey id " .. entity:getID())
 				local otherEntity = entity:getID()
 				pokeyRandomPos = randomisePosition(alertPosition, 45, otherEntity)
 
@@ -470,7 +475,7 @@ function getCompletedSpawnWave()
     local currentWave = tonumber(managerVars:getGlobal("currentWave").value)
     local numEnemiesSpawned = tonumber(managerVars:getGlobal("numEnemiesSpawned").value)
 
-    if currentWave > 0 and numEnemiesSpawned >= currentWave * 10 then
+    if currentWave > 0 and numEnemiesSpawned >= currentWave * amountPerWave then
         return currentWave
     end
 
@@ -479,12 +484,14 @@ end
 
 function refreshPokeyCache(wave)
     cachedPokeyIDs = {}
+	print("REFRESHING!!!")
 
     for id = minEntitySearchID, maxEntitySearchID do
         local entity = GetEntity(id)
 
         if entity ~= nil and entity:getName() == "Spiky" then
             table.insert(cachedPokeyIDs, entity:getID())
+		print("got entity "..entity:getID())
         end
     end
 
