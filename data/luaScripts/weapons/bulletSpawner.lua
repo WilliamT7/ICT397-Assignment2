@@ -6,7 +6,7 @@ local bulletCooldownTimer = bulletCooldown
 function update()
     bulletCooldownTimer = bulletCooldownTimer + getDeltaTime()
 
-    if GetMouseDown(2) and bulletCooldownTimer >= bulletCooldown then
+    if GetMouseDown(0) and bulletCooldownTimer >= bulletCooldown then
         bulletCooldownTimer = 0.0
         local bullet = GetSpawn("prefabbullet.lua")
         launchBullet(bullet)
