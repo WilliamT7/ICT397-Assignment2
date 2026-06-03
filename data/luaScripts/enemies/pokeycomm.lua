@@ -133,7 +133,7 @@ function scanEnvironment(pokeyVars)
             fsm = getPokeyFSM()
 			hasSeenPlayer = true
 			pokeyVariables:setGlobal("playerAlertTimer", "0.0")
-            print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
+            --print("[PokeyComm]: Pokey " .. obj:getID() .. " saw player")
             alertNearbyPokeys(pokeyPosition, playerPosition, playerViewRadius, 10, "OnPokeyAlert")
 			fsm:setState("Attack")
         end
@@ -270,7 +270,7 @@ function dieEnter()
         return
     end
 
-    print("[PokeyComm]: Pokey " .. obj:getID() .. " died and is alerting nearby pokeys")
+    --print("[PokeyComm]: Pokey " .. obj:getID() .. " died and is alerting nearby pokeys")
     alertNearbyPokeys(alertPosition, alertPosition, deathAlertRadius, 11, "OnPokeyAlert")
 
 end
@@ -411,27 +411,23 @@ end
 
 
 function alertNearbyPokeys(searchOrigin, alertPosition, radius, messageID, functionName)
-	print("CHECK")
 	if searchOrigin == nil or alertPosition == nil then
-		print("COOL CHECK")
 		return
 	end
 
     local pokeyIDs = getCachedPokeyIDs()
 	--_, means it doesnt care what the value is lol.
     for _, id in ipairs(pokeyIDs) do
-	print("iterating pokeys")
         local entity = GetEntity(id)
 		
         if isValidPokeyReceiver(entity) then
 			local otherEntity = entity:getID()
             local entityPosition = getEntityPosition(entity)
 			local pokeyRandomPos = randomisePosition(alertPosition, 15, otherEntity)
-			print("I am a valid pokey :)")
 			
 
             if entityPosition ~= nil and isWithinRadius(searchOrigin, entityPosition, radius) then
-                print("[PokeyComm]: talking to pokey id " .. entity:getID())
+                --print("[PokeyComm]: talking to pokey id " .. entity:getID())
 				local otherEntity = entity:getID()
 				pokeyRandomPos = randomisePosition(alertPosition, 45, otherEntity)
 
@@ -484,14 +480,12 @@ end
 
 function refreshPokeyCache(wave)
     cachedPokeyIDs = {}
-	print("REFRESHING!!!")
 
     for id = minEntitySearchID, maxEntitySearchID do
         local entity = GetEntity(id)
 
         if entity ~= nil and entity:getName() == "Spiky" then
             table.insert(cachedPokeyIDs, entity:getID())
-		print("got entity "..entity:getID())
         end
     end
 
