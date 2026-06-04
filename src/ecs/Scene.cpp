@@ -169,7 +169,14 @@ void ECS::Scene::Update(float deltaTime)
 			}
 			else
 			{
-				entities.erase(entities.begin() + i);
+				for (auto it = entities.begin(); it != entities.end(); ++it)
+				{
+					if (it->get() == destroyedEntity)
+					{
+						entities.erase(it);
+						break;
+					}
+				}
 			}
 
 			m_activeEntities.erase(m_activeEntities.begin() + i);

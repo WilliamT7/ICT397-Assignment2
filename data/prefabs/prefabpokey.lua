@@ -54,9 +54,6 @@ data = {
         mass = 1,
         shape = "capsule"
       },
-	  {
-		Name = "FSM"
-	  },
       {
         Name = "Script",
         fileName = "testpokeyvars.lua",
