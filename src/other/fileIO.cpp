@@ -1,13 +1,12 @@
+//Built-in libaries-----------
+#include <iostream>
+
 //Project files---------------
 #include "other\fileIO.h"
 #include "other\stringTools.h"
 
 //Namespaces -----------------------------
 using std::ifstream;
-
-
-//TEMP
-#include <iostream>
 using std::cout;
 
 //----------------------------------------
@@ -35,39 +34,6 @@ bool scanDir(directoryInfomation& const directoryInfo, const string& const fileE
 		for (int currentDirectory = 0; currentDirectory < directoryInfo.directories.size(); currentDirectory++) {
 			scanDir(directoryInfo.directories[currentDirectory], fileExtension, recurseLimit - 1);
 		}
-
-
-		
-
-
-		//Create two files that display the files and directories in the current directory
-		//const string directoryListName = createDirectoryFile(directoryInfo.path, "ENGINE_DIRECTORY_LOOKUP");
-		//const string filesListName = createDirectoryFile(directoryInfo.path, "ENGINE_FILE_LOOKUP");
-
-		/*
-		ifstream directoryFile;
-		directoryFile.open(directoryListName);
-
-		successfullyCreatedDirFile = directoryFile.is_open();
-
-		string curLine;
-		
-		//while (successfullyCreatedDirFile && !directoryFile.eof()) {
-
-			getline(directoryFile, curLine);
-
-	
-
-					string fileNameStartingPoint = stripSpaces(curLine, DIRIndex);
-					string appendedPath = directoryInfo.path  + fileNameStartingPoint + "\\";
-
-					directoryInfomation newDirectoryInfo;
-					newDirectoryInfo.path = appendedPath;
-;					scanDir(newDirectoryInfo, fileExtension, recurseLimit - 1);
-					directoryInfo.directories.push_back(newDirectoryInfo);
-					
-
-		*/
 	}
 
 	return true;
@@ -81,6 +47,7 @@ void getFileNames(directoryInfomation& const directoryInfo, const string& const 
 
 	ifstream fileListFile;
 	fileListFile.open(filesListName);
+	
 
 	if (fileListFile.is_open()) {
 
@@ -91,7 +58,6 @@ void getFileNames(directoryInfomation& const directoryInfo, const string& const 
 
 			if (containsString(fileExtension, currentLine) != -1) {
 				directoryInfo.fileNames.push_back(currentLine);
-				cout << "Added " << currentLine << "\n";
 			}
 		}
 
@@ -104,7 +70,7 @@ void getFileNames(directoryInfomation& const directoryInfo, const string& const 
 	remove(filesListName.c_str());
 
 	if (failedFileCreation) {
-		std::cout << "[C++] Unable to create file to lookup file names for " << fileExtension << " files \n";
+		cout << "[C++] Unable to create file to lookup file names for " << fileExtension << " files \n";
 		exit(-1);
 	}
 
@@ -117,7 +83,6 @@ void getDirectoryNames(directoryInfomation& const directoryInfo) {
 
 	bool failedFileCreation = false;
 	const string directoryListName = createDirectoryFile(directoryInfo.path, "ENGINE_DIRECTORY_LOOKUP", "/b /d /a:d");
-	cout << "fileListName generated: " << directoryListName << "\n";
 
 	ifstream directoryListFile;
 	directoryListFile.open(directoryListName);
@@ -125,7 +90,6 @@ void getDirectoryNames(directoryInfomation& const directoryInfo) {
 	if (directoryListFile.is_open()) {
 
 		string currentLine = "";
-		std::cout << "Created: " << directoryListName << "\n";
 
 		while (!directoryListFile.eof()) {
 
@@ -146,7 +110,6 @@ void getDirectoryNames(directoryInfomation& const directoryInfo) {
 		failedFileCreation = true;
 	}
 
-	cout << "file: " << directoryListName << "\n";
 	directoryListFile.close();
 	remove(directoryListName.c_str());
 
@@ -169,14 +132,20 @@ const string createDirectoryFile(const string& const filePath, const string& con
 
 	//the extea "" are to account for files with spaces, otherwise System call would fail
 	string filepathCommandString = '\"' + filePath + '\"';
-
-	string commandString = "dir " + filepathCommandString + options + ">" + ('\"' + systemOutputFileName + '\"');
+	
+	string commandString = "dir " + filepathCommandString + " " + options + " > " + ('\"' + systemOutputFileName + '\"');
 
 	//System only takes const char* gotta convert it to c string
 	const char* CMDCommand = commandString.c_str();
 
 	//Create the actual directory file
-	system(CMDCommand);
+	int unsuccessfulCommandExecution = system(CMDCommand);
+
+
+	if (unsuccessfulCommandExecution) {
+		cout << "!!!!!!!!It's likely that " << filePath << " Doesnt have any files (execpt for possible directory(s)), hence File Not Found. PLEASE CHECK TO CONFIRM!!!!!!!!!\n";
+	}
+	
 
 	return systemOutputFileName;
 }
