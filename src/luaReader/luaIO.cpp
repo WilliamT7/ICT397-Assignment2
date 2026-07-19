@@ -28,6 +28,7 @@ void loadScripts(const string& const path, const int depth) {
 
     //Load all directories and .lua files that exist in path
     bool readDirectories = scanDir(dirInfo, ".lua", depth);
+    cout << dirInfo;
 
     //for each .lua file, read and extract em
     extractLuaFiles(dirInfo);

@@ -44,6 +44,10 @@ typedef struct directoryInfomation {
 */
 bool pathExists(const string& const path);
 
+//------------------------------------------------------------------
+
+
+//REWORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 /** createDirectoryFile
 * @author - Seb D'Alessandro
@@ -52,12 +56,14 @@ bool pathExists(const string& const path);
 * @post - A .txt file is created containing details about filepath's contents
 * @param filePath - name of a filepath / where to create the .txt file, used alongside baseFileName to generate a unique name
 * @param baseFileName - What to name the generated .txt file with the filepath
+* @param options - Addtional command line options to add to the System() command
 * @return - void
 *
 * @note THIS RUNS A SYSTEM() COMMAND!
 */
-const string createDirectoryFile(const string& const filePath, const string& const baseFileName);
+const string createDirectoryFile(const string& const filePath, const string& const baseFileName, const string& const options);
 
+//------------------------------------------------------------------
 
 /** scanDir
 * @author - Seb D'Alessandro
@@ -74,6 +80,18 @@ const string createDirectoryFile(const string& const filePath, const string& con
 */
 bool scanDir(directoryInfomation& const directoryInfo, const string& const fileExtension, int recurseLimit);
 
+//------------------------------------------------------------------
+
+void getFileNames(directoryInfomation& const directoryInfo, const string& const fileExtension);
+
+
+//------------------------------------------------------------------
+
+void getDirectoryNames(directoryInfomation& const directoryInfo);
+
+
+
+//------------------------------------------------------------------
 
 /** operator << overload
 * @author - Seb D'Alessandro
@@ -87,3 +105,4 @@ bool scanDir(directoryInfomation& const directoryInfo, const string& const fileE
 */
 ostream& operator <<(ostream& os, const directoryInfomation& const dirInfo);
 
+//------------------------------------------------------------------

@@ -5,6 +5,11 @@
 //Namespaces -----------------------------
 using std::ifstream;
 
+
+//TEMP
+#include <iostream>
+using std::cout;
+
 //----------------------------------------
 bool pathExists(const string& const path) {
 
@@ -20,39 +25,38 @@ bool pathExists(const string& const path) {
 
 bool scanDir(directoryInfomation& const directoryInfo, const string& const fileExtension, int recurseLimit) {
 
-	bool recurseLimitPostive = recurseLimit >= 0;
-
-	bool successfullyCreatedDirFile = false;
-
-	if (recurseLimitPostive) {
+	if (recurseLimit >= 0) {
 		
-		const string createdFileName = createDirectoryFile(directoryInfo.path, "ENGINE_DIRECTORY_LOOKUP");
+		const int previousDirectoryTotal = directoryInfo.directories.size();
 		
+		getFileNames(directoryInfo, fileExtension);
+		getDirectoryNames(directoryInfo);	
+
+		for (int currentDirectory = 0; currentDirectory < directoryInfo.directories.size(); currentDirectory++) {
+			scanDir(directoryInfo.directories[currentDirectory], fileExtension, recurseLimit - 1);
+		}
+
+
+		
+
+
+		//Create two files that display the files and directories in the current directory
+		//const string directoryListName = createDirectoryFile(directoryInfo.path, "ENGINE_DIRECTORY_LOOKUP");
+		//const string filesListName = createDirectoryFile(directoryInfo.path, "ENGINE_FILE_LOOKUP");
+
+		/*
 		ifstream directoryFile;
-		directoryFile.open(createdFileName);
+		directoryFile.open(directoryListName);
 
 		successfullyCreatedDirFile = directoryFile.is_open();
 
-		//When generating a .txt file with System(), the first 2 <DIR>s are . and .., we dont care about those
-		int redundantDIRCount = 2;
-
 		string curLine;
 		
-		while (successfullyCreatedDirFile && !directoryFile.eof()) {
+		//while (successfullyCreatedDirFile && !directoryFile.eof()) {
 
 			getline(directoryFile, curLine);
 
-			const int DIRIndex = containsString("<DIR>", curLine);
-			const int fileExensionIndex = containsString(fileExtension, curLine);
-
-
-			if (DIRIndex != -1) {
-				
-				if (redundantDIRCount != 0) {
-					redundantDIRCount--;
-
-				}
-				else {
+	
 
 					string fileNameStartingPoint = stripSpaces(curLine, DIRIndex);
 					string appendedPath = directoryInfo.path  + fileNameStartingPoint + "\\";
@@ -62,47 +66,111 @@ bool scanDir(directoryInfomation& const directoryInfo, const string& const fileE
 ;					scanDir(newDirectoryInfo, fileExtension, recurseLimit - 1);
 					directoryInfo.directories.push_back(newDirectoryInfo);
 					
-				}
 
-			}
-			
-			else if (fileExensionIndex != -1) {
-				
-				string fileName = "";
-				if (containsString(" AM ", curLine) != -1 || containsString(" PM ", curLine) != -1) {
-					fileName = curLine.substr(39);
-				}
-				else {
-					fileName = curLine.substr(36);
-				}
-				directoryInfo.fileNames.push_back(fileName);
-			}
-			
-
-		}
-
-		directoryFile.close();
-
-		//Delete the directory text file (would be creepy if it was left there lol)
-		const string DIRECTORY_FILE_PATH =  createdFileName;
-		remove(DIRECTORY_FILE_PATH.c_str());
+		*/
 	}
 
-	return recurseLimitPostive && successfullyCreatedDirFile;
+	return true;
 
 }
+//--------------------------------------------------------------------------------------------
+void getFileNames(directoryInfomation& const directoryInfo, const string& const fileExtension) {
+
+	bool failedFileCreation = false;
+	const string filesListName = createDirectoryFile(directoryInfo.path, "ENGINE_FILE_LOOKUP", "/b /d /a:-d");
+
+	ifstream fileListFile;
+	fileListFile.open(filesListName);
+
+	if (fileListFile.is_open()) {
+
+		string currentLine;
+		while (!fileListFile.eof()) {
+
+			getline(fileListFile, currentLine);
+
+			if (containsString(fileExtension, currentLine) != -1) {
+				directoryInfo.fileNames.push_back(currentLine);
+				cout << "Added " << currentLine << "\n";
+			}
+		}
+
+	}
+	else {
+		failedFileCreation = true;
+	}
+
+	fileListFile.close();
+	remove(filesListName.c_str());
+
+	if (failedFileCreation) {
+		std::cout << "[C++] Unable to create file to lookup file names for " << fileExtension << " files \n";
+		exit(-1);
+	}
+
+}
+
 //---------------------------------------------------------------------------------------------
 
-const string createDirectoryFile(const string& const filePath, const string& const baseFileName) {
 
+void getDirectoryNames(directoryInfomation& const directoryInfo) {
+
+	bool failedFileCreation = false;
+	const string directoryListName = createDirectoryFile(directoryInfo.path, "ENGINE_DIRECTORY_LOOKUP", "/b /d /a:d");
+	cout << "fileListName generated: " << directoryListName << "\n";
+
+	ifstream directoryListFile;
+	directoryListFile.open(directoryListName);
+
+	if (directoryListFile.is_open()) {
+
+		string currentLine = "";
+		std::cout << "Created: " << directoryListName << "\n";
+
+		while (!directoryListFile.eof()) {
+
+			getline(directoryListFile, currentLine);
+
+			if (currentLine.size() != 0) {
+
+				string appendedPath = directoryInfo.path + currentLine + '\\';
+				directoryInfomation newDirectoryInfo;
+				newDirectoryInfo.path = appendedPath;
+				directoryInfo.directories.push_back(newDirectoryInfo);
+
+			}
+		}
+
+	}
+	else {
+		failedFileCreation = true;
+	}
+
+	cout << "file: " << directoryListName << "\n";
+	directoryListFile.close();
+	remove(directoryListName.c_str());
+
+	if (failedFileCreation) {
+		std::cout << "[C++] Unable to create file to lookup directory names (this shouldnt happen thats werid)\n";
+		exit(-1);
+	}
+}
+
+
+//---------------------------------------------------------------------------------------------
+
+const string createDirectoryFile(const string& const filePath, const string& const baseFileName, const string& const options) {
+	
 	//To prevent "file(1)" when creating new files when using system() command
 	string outputFileIdentifer = replaceCharactersInString('\\', '_', filePath);
-	string systemOutputFileName = "ENGINE_DIRECTORY_LOOKUP" + outputFileIdentifer + ".txt";
+	outputFileIdentifer = replaceCharactersInString('.', '_', outputFileIdentifer);
+
+	string systemOutputFileName = baseFileName + outputFileIdentifer + ".txt";
 
 	//the extea "" are to account for files with spaces, otherwise System call would fail
 	string filepathCommandString = '\"' + filePath + '\"';
 
-	string commandString = "dir " + filepathCommandString + ">" + ('\"' + systemOutputFileName + '\"');
+	string commandString = "dir " + filepathCommandString + options + ">" + ('\"' + systemOutputFileName + '\"');
 
 	//System only takes const char* gotta convert it to c string
 	const char* CMDCommand = commandString.c_str();
@@ -129,8 +197,13 @@ ostream& operator <<(ostream& os, const directoryInfomation& const dirInfo) {
 	os << "Directories-------------------------------------------------------------\n";
 	os << "Directories that exist in " << dirInfo.path << ":\n";
 
-
 	for (int curDir = 0; curDir < dirInfo.directories.size(); curDir++) {
+		os << dirInfo.directories[curDir].path << "\n";
+	}
+
+	os << "Contents of each directory\n";
+	for (int curDir = 0; curDir < dirInfo.directories.size(); curDir++) {
+		os << dirInfo.directories[curDir].path << "\n";
 		os << dirInfo.directories[curDir] << "\n";
 	}
 
