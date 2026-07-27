@@ -23,11 +23,15 @@ using std::getline;
 //-----------------------------------------------------------------------------
 void loadScripts(const string& const path, const int depth) {
 
+    cout << "Scanning directories for .lua files\n";
+
     directoryInfomation dirInfo;
     dirInfo.path = path;
 
     //Load all directories and .lua files that exist in path
     bool readDirectories = scanDir(dirInfo, ".lua", depth);
+
+    cout << "Scanning done :)\n";
 
     //for each .lua file, read and extract em
     extractLuaFiles(dirInfo);
